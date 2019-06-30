@@ -13,15 +13,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+            <state relative-caret-position="630">
+              <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
               <folding>
-                <marker date="1561105962732" expanded="true" signature="44:1643" ph="{...}" />
-                <marker date="1561105962732" expanded="true" signature="68:1641" ph="{...}" />
-                <marker date="1561105962732" expanded="true" signature="191:1635" ph="{...}" />
-                <marker date="1561105962732" expanded="true" signature="214:409" ph="/* Display the number of command line arguments: ... */" />
-                <marker date="1561105962732" expanded="true" signature="493:1625" ph="{...}" />
-                <marker date="1561105962732" expanded="true" signature="654:1611" ph="{...}" />
+                <marker date="1561887410307" expanded="true" signature="44:2473" ph="{...}" />
+                <marker date="1561887410307" expanded="true" signature="68:2192" ph="{...}" />
+                <marker date="1561887410307" expanded="true" signature="191:2186" ph="{...}" />
+                <marker date="1561887410307" expanded="true" signature="214:409" ph="/* Display the number of command line arguments: ... */" />
+                <marker date="1561887410307" expanded="true" signature="493:2176" ph="{...}" />
+                <marker date="1561887410307" expanded="true" signature="729:2162" ph="{...}" />
+                <marker date="1561887410307" expanded="true" signature="1572:1656" ph="{...}" />
+                <marker date="1561887410307" expanded="true" signature="1703:2035" ph="{...}" />
+                <marker date="1561887410307" expanded="true" signature="2060:2144" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -69,14 +72,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
       <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -102,11 +108,12 @@
       <updated>1561015304392</updated>
       <workItem from="1561015306370" duration="1044000" />
       <workItem from="1561104255254" duration="1763000" />
+      <workItem from="1561884928128" duration="2097000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2807000" />
+    <option name="totallyTimeSpent" value="4904000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -120,7 +127,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1858" height="1012" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18843803" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19066148" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -176,15 +183,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="52" lean-forward="true" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+        <state relative-caret-position="630">
+          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
           <folding>
-            <marker date="1561105962732" expanded="true" signature="44:1643" ph="{...}" />
-            <marker date="1561105962732" expanded="true" signature="68:1641" ph="{...}" />
-            <marker date="1561105962732" expanded="true" signature="191:1635" ph="{...}" />
-            <marker date="1561105962732" expanded="true" signature="214:409" ph="/* Display the number of command line arguments: ... */" />
-            <marker date="1561105962732" expanded="true" signature="493:1625" ph="{...}" />
-            <marker date="1561105962732" expanded="true" signature="654:1611" ph="{...}" />
+            <marker date="1561887410307" expanded="true" signature="44:2473" ph="{...}" />
+            <marker date="1561887410307" expanded="true" signature="68:2192" ph="{...}" />
+            <marker date="1561887410307" expanded="true" signature="191:2186" ph="{...}" />
+            <marker date="1561887410307" expanded="true" signature="214:409" ph="/* Display the number of command line arguments: ... */" />
+            <marker date="1561887410307" expanded="true" signature="493:2176" ph="{...}" />
+            <marker date="1561887410307" expanded="true" signature="729:2162" ph="{...}" />
+            <marker date="1561887410307" expanded="true" signature="1572:1656" ph="{...}" />
+            <marker date="1561887410307" expanded="true" signature="1703:2035" ph="{...}" />
+            <marker date="1561887410307" expanded="true" signature="2060:2144" ph="{...}" />
           </folding>
         </state>
       </provider>

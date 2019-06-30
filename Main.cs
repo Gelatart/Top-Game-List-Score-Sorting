@@ -13,6 +13,7 @@ namespace DefaultNamespace
             {
                 string contents = File.ReadAllText(file);
                 string line;
+                string ListTag; //figure out how to assign ListTag to list
                 while ((line = Console.ReadLine()) != null)
                 {
                     //Read each variable and put it in an array based on how lines formatted
@@ -26,10 +27,32 @@ namespace DefaultNamespace
                     string ReleaseDate = attributes[6];
                     string SpecialNotes = attributes[7];
                     bool Discontinued = attributes[8];
-                    Game Entry = Game(BaseGame,Rank,Title,CompletionStatus,Franchise,Subfranchise,ReleaseDate,SpecialNotes,Discontinued); //instantiate with new values
-                    GameIndex.add(Entry, BaseGame); //do an if/else check to see if already in dictionary first
+                    Game temp = searchDatabase(BaseGame);
+                    Entry.RankedScore += Rank;
+                    if (ListTag != "standardRed" && ListTag != "standardBlue")
+                    {
+                        SpecialCases();
+                    }
+                    if (temp.BaseGame == null)
+                    {
+                        Game Entry = Game(BaseGame,Rank,Title,CompletionStatus,Franchise,Subfranchise,ReleaseDate,SpecialNotes,Discontinued); //instantiate with new values
+                        GameIndex.add(Entry, BaseGame); //do an if/else check to see if already in dictionary first
+                    }
+                    else
+                    {
+                        //found a match
+                    }
                 }
             }
         }
+    }
+    public void SpecialCases() 
+    {
+        //FILL OUT, FIGURE OUT WHAT TO DO HERE    
+    }
+    public Game searchDatabase(string checker) {
+        Game temp;
+        //if found then return, otherwise return an empty game file with a null basegame
+        return temp;
     }
 }
