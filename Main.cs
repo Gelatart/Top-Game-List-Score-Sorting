@@ -4,7 +4,7 @@ namespace DefaultNamespace
 {
     public class Main
     {
-        Dictionary<Game, string> GameIndex = new Dictionary<Game, string>();
+        Dictionary<string, Game> GameIndex = new Dictionary<string, Game>();
         static void Main(string[] args)
         {
             // Display the number of command line arguments:
@@ -33,17 +33,27 @@ namespace DefaultNamespace
                     {
                         SpecialCases();
                     }
+                    Game Entry = Game(BaseGame,Rank,Title,CompletionStatus,Franchise,Subfranchise,ReleaseDate,SpecialNotes,Discontinued); //instantiate with new values
                     if (temp.BaseGame == null)
                     {
-                        Game Entry = Game(BaseGame,Rank,Title,CompletionStatus,Franchise,Subfranchise,ReleaseDate,SpecialNotes,Discontinued); //instantiate with new values
-                        GameIndex.add(Entry, BaseGame); //do an if/else check to see if already in dictionary first
+                        GameIndex.add(BaseGame, Entry); //do an if/else check to see if already in dictionary first
                     }
                     else
                     {
-                        //found a match
+                        //found a match, replace entry in database when updated (if list logged == false, inclusionscore++, logged = true?)
+                        //add to lists on
                     }
                 }
             }
+            //while reading all the entries in the database
+            //compare ranked score to sort, then use alphabetical and release date for franchise
+            //use the cases of completion status to inform formatting
+            //print to row, move to the next entry (print score, titles in base game)
+            
+            //while reading all the entries in the database
+            //compare inclusion score to sort, then use alphabetical and release date for franchise
+            //use the cases of completion status to inform formatting
+            //print to row, move to the next entry (print score, titles in base game)
         }
     }
     public void SpecialCases() 
@@ -52,7 +62,16 @@ namespace DefaultNamespace
     }
     public Game searchDatabase(string checker) {
         Game temp;
-        //if found then return, otherwise return an empty game file with a null basegame
+            temp.BaseGame = null;
+            //if found then return, otherwise return an empty game file with a null basegame
+        foreach(KeyValuePair<string, Game> entry in GameIndex)
+        {
+            if (entry.Key == checker)
+            {
+                temp = entry.Value;
+                break;
+            }
+        }
         return temp;
     }
 }
