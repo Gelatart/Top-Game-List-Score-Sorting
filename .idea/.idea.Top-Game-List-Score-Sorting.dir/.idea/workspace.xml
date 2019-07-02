@@ -13,18 +13,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
+            <state relative-caret-position="330">
+              <caret line="43" column="41" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
               <folding>
-                <marker date="1561887410307" expanded="true" signature="44:2473" ph="{...}" />
-                <marker date="1561887410307" expanded="true" signature="68:2192" ph="{...}" />
-                <marker date="1561887410307" expanded="true" signature="191:2186" ph="{...}" />
-                <marker date="1561887410307" expanded="true" signature="214:409" ph="/* Display the number of command line arguments: ... */" />
-                <marker date="1561887410307" expanded="true" signature="493:2176" ph="{...}" />
-                <marker date="1561887410307" expanded="true" signature="729:2162" ph="{...}" />
-                <marker date="1561887410307" expanded="true" signature="1572:1656" ph="{...}" />
-                <marker date="1561887410307" expanded="true" signature="1703:2035" ph="{...}" />
-                <marker date="1561887410307" expanded="true" signature="2060:2144" ph="{...}" />
+                <marker date="1562061028216" expanded="true" signature="44:3499" ph="{...}" />
+                <marker date="1562061028216" expanded="true" signature="68:2972" ph="{...}" />
+                <marker date="1562061028216" expanded="true" signature="191:2966" ph="{...}" />
+                <marker date="1562061028216" expanded="true" signature="214:409" ph="/* Display the number of command line arguments: ... */" />
+                <marker date="1562061028216" expanded="true" signature="493:2314" ph="{...}" />
+                <marker date="1562061028216" expanded="true" signature="729:2300" ph="{...}" />
+                <marker date="1562061028216" expanded="true" signature="1572:1656" ph="{...}" />
+                <marker date="1562061028216" expanded="true" signature="1871:2031" ph="{...}" />
+                <marker date="1562061028216" expanded="true" signature="2056:2282" ph="{...}" />
+                <marker date="1562061028216" expanded="true" signature="2103:2260" ph="/* found a match, replace entry in database when updated (if list logged == false, inclusionscore++, logged = tru ... */" />
+                <marker date="1562061028216" expanded="true" signature="2327:2956" ph="/* while reading all the entries in the database ... */" />
+                <marker date="1562061028216" expanded="true" signature="3373:3460" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -72,8 +75,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AssemblyExplorer" />
       <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -109,11 +112,12 @@
       <workItem from="1561015306370" duration="1044000" />
       <workItem from="1561104255254" duration="1763000" />
       <workItem from="1561884928128" duration="2097000" />
+      <workItem from="1562059815195" duration="1219000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4904000" />
+    <option name="totallyTimeSpent" value="6123000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -127,7 +131,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1858" height="1012" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19066148" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19288494" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -169,6 +173,27 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Main.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="43" column="41" selection-start-line="43" selection-start-column="41" selection-end-line="43" selection-end-column="41" />
+          <folding>
+            <marker date="1562061028216" expanded="true" signature="44:3499" ph="{...}" />
+            <marker date="1562061028216" expanded="true" signature="68:2972" ph="{...}" />
+            <marker date="1562061028216" expanded="true" signature="191:2966" ph="{...}" />
+            <marker date="1562061028216" expanded="true" signature="214:409" ph="/* Display the number of command line arguments: ... */" />
+            <marker date="1562061028216" expanded="true" signature="493:2314" ph="{...}" />
+            <marker date="1562061028216" expanded="true" signature="729:2300" ph="{...}" />
+            <marker date="1562061028216" expanded="true" signature="1572:1656" ph="{...}" />
+            <marker date="1562061028216" expanded="true" signature="1871:2031" ph="{...}" />
+            <marker date="1562061028216" expanded="true" signature="2056:2282" ph="{...}" />
+            <marker date="1562061028216" expanded="true" signature="2103:2260" ph="/* found a match, replace entry in database when updated (if list logged == false, inclusionscore++, logged = tru ... */" />
+            <marker date="1562061028216" expanded="true" signature="2327:2956" ph="/* while reading all the entries in the database ... */" />
+            <marker date="1562061028216" expanded="true" signature="3373:3460" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Game.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -177,24 +202,6 @@
             <marker date="1561105907364" expanded="true" signature="26:1023" ph="{...}" />
             <marker date="1561105907364" expanded="true" signature="50:1021" ph="{...}" />
             <marker date="1561105907364" expanded="true" signature="618:1015" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Main.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" column="39" selection-start-line="42" selection-start-column="39" selection-end-line="42" selection-end-column="39" />
-          <folding>
-            <marker date="1561887410307" expanded="true" signature="44:2473" ph="{...}" />
-            <marker date="1561887410307" expanded="true" signature="68:2192" ph="{...}" />
-            <marker date="1561887410307" expanded="true" signature="191:2186" ph="{...}" />
-            <marker date="1561887410307" expanded="true" signature="214:409" ph="/* Display the number of command line arguments: ... */" />
-            <marker date="1561887410307" expanded="true" signature="493:2176" ph="{...}" />
-            <marker date="1561887410307" expanded="true" signature="729:2162" ph="{...}" />
-            <marker date="1561887410307" expanded="true" signature="1572:1656" ph="{...}" />
-            <marker date="1561887410307" expanded="true" signature="1703:2035" ph="{...}" />
-            <marker date="1561887410307" expanded="true" signature="2060:2144" ph="{...}" />
           </folding>
         </state>
       </provider>
