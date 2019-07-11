@@ -28,12 +28,12 @@ namespace DefaultNamespace
                     string SpecialNotes = attributes[7];
                     bool Discontinued = attributes[8];
                     Game temp = searchDatabase(BaseGame);
-                    Entry.RankedScore += Rank;
                     if (ListTag != "standardRed" && ListTag != "standardBlue")
                     {
                         SpecialCases();
                     }
                     Game Entry = Game(BaseGame,Rank,Title,CompletionStatus,Franchise,Subfranchise,ReleaseDate,SpecialNotes,Discontinued); //instantiate with new values
+                    Entry.RankedScore += Rank;
                     if (temp.BaseGame == null)
                     {
                         GameIndex.add(BaseGame, Entry); //do an if/else check to see if already in dictionary first
@@ -42,6 +42,7 @@ namespace DefaultNamespace
                     {
                         //found a match, replace entry in database when updated (if list logged == false, inclusionscore++, logged = true?)
                         //add to lists on
+                        GameIndex[BaseGame] = Entry; //should update Entry value, with the now increased rank score
                     }
                 }
             }
