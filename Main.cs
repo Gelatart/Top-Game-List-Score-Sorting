@@ -5,6 +5,8 @@ namespace DefaultNamespace
     public class Main
     {
         Dictionary<string, Game> GameIndex = new Dictionary<string, Game>();
+        //Make a dictionary for the lists that have been logged?
+        Dictionary<string, bool> ListIndex = new Dictionary<string, bool>();
         static void Main(string[] args)
         {
             // Display the number of command line arguments:
@@ -14,6 +16,7 @@ namespace DefaultNamespace
                 string contents = File.ReadAllText(file);
                 string line;
                 string ListTag; //figure out how to assign ListTag to list
+                string ListTitle; //figure out how to get the filename
                 while ((line = Console.ReadLine()) != null)
                 {
                     //Read each variable and put it in an array based on how lines formatted
@@ -42,6 +45,10 @@ namespace DefaultNamespace
                     {
                         //found a match, replace entry in database when updated (if list logged == false, inclusionscore++, logged = true?)
                         //add to lists on
+                        if (ListIndex[ListTitle] == false) //fix how it checks?
+                        {
+                            //inclusionscore goes up
+                        }
                         GameIndex[BaseGame] = Entry; //should update Entry value, with the now increased rank score
                     }
                 }
