@@ -82,4 +82,19 @@ namespace DefaultNamespace
         }
         return temp;
     }
+    public void printDatabase() {
+        //iterate through entire database, printing it all to a text file
+        List<string> linesList = new List<string>();
+        foreach(KeyValuePair<string, Game> entry in GameIndex) {
+            //print out all the attributes into a string
+            string line;
+            linesList.Add(line);
+        }
+        string[] lines = linesList.ToArray();
+        //System.IO.File.WriteAllLines(@"C:\Users\Public\TestFolder\Database.txt", lines);
+        //^FILL IN LATER WITH CORRECT FILE PATH GOING FOR
+        //create a text file they all go into?
+        //Took inspiration from https://stackoverflow.com/questions/202813/adding-values-to-a-c-sharp-array
+        //as well as https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file
+    
 }
