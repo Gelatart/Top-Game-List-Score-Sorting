@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="16c37726-4cb9-4c1c-bf53-70b851f1c6c6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Top-Game-List-Score-Sorting/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Top-Game-List-Score-Sorting/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Main.cs" afterDir="false" />
-    </list>
+    <list default="true" id="16c37726-4cb9-4c1c-bf53-70b851f1c6c6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,23 +22,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="423">
-              <caret line="93" column="74" selection-start-line="93" selection-start-column="74" selection-end-line="93" selection-end-column="74" />
+            <state relative-caret-position="438">
+              <caret line="94" column="57" selection-start-line="94" selection-start-column="57" selection-end-line="94" selection-end-column="57" />
               <folding>
-                <marker date="1563350791000" expanded="true" signature="44:4011" ph="{...}" />
-                <marker date="1563350791000" expanded="true" signature="68:3486" ph="{...}" />
-                <marker date="1563350791000" expanded="true" signature="333:3480" ph="{...}" />
-                <marker date="1563350791000" expanded="true" signature="356:551" ph="/* Display the number of command line arguments: ... */" />
-                <marker date="1563350791000" expanded="true" signature="635:2828" ph="{...}" />
-                <marker date="1563350791000" expanded="true" signature="942:2814" ph="{...}" />
-                <marker date="1563350791000" expanded="true" signature="1738:1822" ph="{...}" />
-                <marker date="1563350791000" expanded="true" signature="2084:2244" ph="{...}" />
-                <marker date="1563350791000" expanded="true" signature="2269:2796" ph="{...}" />
-                <marker date="1563350791000" expanded="true" signature="2316:2473" ph="/* found a match, replace entry in database when updated (if list logged == false, inclusionscore++, logged = tru ... */" />
-                <marker date="1563350791000" expanded="true" signature="2553:2658" ph="{...}" />
-                <marker date="1563350791000" expanded="true" signature="2841:3470" ph="/* while reading all the entries in the database ... */" />
-                <marker date="1563350791000" expanded="true" signature="3887:3974" ph="{...}" />
-                <marker date="1563350791000" expanded="true" signature="4506:4778" ph="/* create a text file they all go into? ... */" />
+                <marker date="1563351045000" expanded="true" signature="44:4011" ph="{...}" />
+                <marker date="1563351045000" expanded="true" signature="68:3486" ph="{...}" />
+                <marker date="1563351045000" expanded="true" signature="333:3480" ph="{...}" />
+                <marker date="1563351045000" expanded="true" signature="356:551" ph="/* Display the number of command line arguments: ... */" />
+                <marker date="1563351045000" expanded="true" signature="635:2828" ph="{...}" />
+                <marker date="1563351045000" expanded="true" signature="942:2814" ph="{...}" />
+                <marker date="1563351045000" expanded="true" signature="1738:1822" ph="{...}" />
+                <marker date="1563351045000" expanded="true" signature="2084:2244" ph="{...}" />
+                <marker date="1563351045000" expanded="true" signature="2269:2796" ph="{...}" />
+                <marker date="1563351045000" expanded="true" signature="2316:2473" ph="/* found a match, replace entry in database when updated (if list logged == false, inclusionscore++, logged = tru ... */" />
+                <marker date="1563351045000" expanded="true" signature="2553:2658" ph="{...}" />
+                <marker date="1563351045000" expanded="true" signature="2841:3470" ph="/* while reading all the entries in the database ... */" />
+                <marker date="1563351045000" expanded="true" signature="3887:3974" ph="{...}" />
+                <marker date="1563351045000" expanded="true" signature="4566:4838" ph="/* create a text file they all go into? ... */" />
               </folding>
             </state>
           </provider>
@@ -118,12 +115,13 @@
       <option name="presentableId" value="Default" />
       <updated>1563233366325</updated>
       <workItem from="1563233424085" duration="829000" />
-      <workItem from="1563317288891" duration="1154000" />
+      <workItem from="1563317288891" duration="1322000" />
+      <workItem from="1563429570855" duration="1000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1983000" />
+    <option name="totallyTimeSpent" value="2151000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -136,9 +134,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="33" width="1277" height="720" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09068826" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.09149797" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -190,23 +187,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="423">
-          <caret line="93" column="74" selection-start-line="93" selection-start-column="74" selection-end-line="93" selection-end-column="74" />
+        <state relative-caret-position="438">
+          <caret line="94" column="57" selection-start-line="94" selection-start-column="57" selection-end-line="94" selection-end-column="57" />
           <folding>
-            <marker date="1563350791000" expanded="true" signature="44:4011" ph="{...}" />
-            <marker date="1563350791000" expanded="true" signature="68:3486" ph="{...}" />
-            <marker date="1563350791000" expanded="true" signature="333:3480" ph="{...}" />
-            <marker date="1563350791000" expanded="true" signature="356:551" ph="/* Display the number of command line arguments: ... */" />
-            <marker date="1563350791000" expanded="true" signature="635:2828" ph="{...}" />
-            <marker date="1563350791000" expanded="true" signature="942:2814" ph="{...}" />
-            <marker date="1563350791000" expanded="true" signature="1738:1822" ph="{...}" />
-            <marker date="1563350791000" expanded="true" signature="2084:2244" ph="{...}" />
-            <marker date="1563350791000" expanded="true" signature="2269:2796" ph="{...}" />
-            <marker date="1563350791000" expanded="true" signature="2316:2473" ph="/* found a match, replace entry in database when updated (if list logged == false, inclusionscore++, logged = tru ... */" />
-            <marker date="1563350791000" expanded="true" signature="2553:2658" ph="{...}" />
-            <marker date="1563350791000" expanded="true" signature="2841:3470" ph="/* while reading all the entries in the database ... */" />
-            <marker date="1563350791000" expanded="true" signature="3887:3974" ph="{...}" />
-            <marker date="1563350791000" expanded="true" signature="4506:4778" ph="/* create a text file they all go into? ... */" />
+            <marker date="1563351045000" expanded="true" signature="44:4011" ph="{...}" />
+            <marker date="1563351045000" expanded="true" signature="68:3486" ph="{...}" />
+            <marker date="1563351045000" expanded="true" signature="333:3480" ph="{...}" />
+            <marker date="1563351045000" expanded="true" signature="356:551" ph="/* Display the number of command line arguments: ... */" />
+            <marker date="1563351045000" expanded="true" signature="635:2828" ph="{...}" />
+            <marker date="1563351045000" expanded="true" signature="942:2814" ph="{...}" />
+            <marker date="1563351045000" expanded="true" signature="1738:1822" ph="{...}" />
+            <marker date="1563351045000" expanded="true" signature="2084:2244" ph="{...}" />
+            <marker date="1563351045000" expanded="true" signature="2269:2796" ph="{...}" />
+            <marker date="1563351045000" expanded="true" signature="2316:2473" ph="/* found a match, replace entry in database when updated (if list logged == false, inclusionscore++, logged = tru ... */" />
+            <marker date="1563351045000" expanded="true" signature="2553:2658" ph="{...}" />
+            <marker date="1563351045000" expanded="true" signature="2841:3470" ph="/* while reading all the entries in the database ... */" />
+            <marker date="1563351045000" expanded="true" signature="3887:3974" ph="{...}" />
+            <marker date="1563351045000" expanded="true" signature="4566:4838" ph="/* create a text file they all go into? ... */" />
           </folding>
         </state>
       </provider>
