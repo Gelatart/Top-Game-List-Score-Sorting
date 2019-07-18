@@ -63,6 +63,12 @@ namespace DefaultNamespace
             //use the cases of completion status to inform formatting
             //print to row, move to the next entry (print score, titles in base game)
         }
+        foreach(var entry in GameIndex.OrderBy(i <= i.RankedScore))
+        {
+            //if ranked score is the same, compare by alphabetical franchise, then subfranchise, then release date
+        }
+        //Inspiration: https://www.dotnetperls.com/sort-dictionary
+        printDatabase();
     }
     public void SpecialCases() 
     {
@@ -87,13 +93,25 @@ namespace DefaultNamespace
         List<string> linesList = new List<string>();
         foreach(KeyValuePair<string, Game> entry in GameIndex) {
             //print out all the attributes into a string
-            string line;
+            string BaseGame = entry.BaseGame;
+            //string Title = entry.Title;
+            //string CompletionStatus = entry.CompletionStatus;
+            int RankedScore = entry.RankedScore;
+            int InclusionScore = entry.InclusionScore;
+            //string Franchise = entry.Franchise;
+            //string Subfranchise = entry.Subfranchise;
+            //string ReleaseDate = entry.ReleaseDate;
+            string SpecialNotes = entry.SpecialNotes;
+            //bool Discontinued = entry.Discontinued;
+            //extract values from game entry
+            string line = RankedScore + "," + InclusionScore + "," + BaseGame + "," + SpecialNotes;
+            //use completionstatus for formatting? Include all potential titles?
+            //find a way to get these sorted by score, franchise, releasedate, etc.
             linesList.Add(line);
         }
         string[] lines = linesList.ToArray();
-        //System.IO.File.WriteAllLines(@"C:\Users\Public\TestFolder\Database.txt", lines);
-        //^FILL IN LATER WITH CORRECT FILE PATH GOING FOR
-        //create a text file they all go into?
+        System.IO.File.WriteAllLines(@"C:\Users\Gamer\Documents\Top-Game-List-Score-Sorting\Database.txt", lines);
+    //create a text file they all go into? create another one for ranked by inclusionscore?
         //Took inspiration from https://stackoverflow.com/questions/202813/adding-values-to-a-c-sharp-array
         //as well as https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file
     
