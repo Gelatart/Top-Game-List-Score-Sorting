@@ -69,6 +69,11 @@ namespace DefaultNamespace
         }
         //Inspiration: https://www.dotnetperls.com/sort-dictionary
         printDatabase();
+        foreach(var entry in GameIndex.OrderBy(i <= i.InclusionScore))
+        {
+            //do similar thing but with for inclusionscore
+        }
+        printDatabase();
     }
     public void SpecialCases() 
     {
