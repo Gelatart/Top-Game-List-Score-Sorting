@@ -70,8 +70,13 @@ namespace DefaultNamespace
         }
         foreach(var entry in GameIndex.OrderBy(i <= i.RankedScore))
         { 
+            
             //if ranked score is the same, compare by alphabetical franchise, then subfranchise, then release date
         }
+        //Could try the reorderdictionary function, similar to stackoverflow?
+        //Could  put into a list?
+        //Could use comparative functions?
+        //Find way to iterate through whole dictionary?
 
         //Inspiration: https://www.dotnetperls.com/sort-dictionary
         printRankedDatabase();
