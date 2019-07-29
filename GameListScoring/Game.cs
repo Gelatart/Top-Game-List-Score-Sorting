@@ -27,5 +27,19 @@ namespace DefaultNamespace
             SpecialNotes = NotesInput;
             Discontinued = DiscInput;
         }
+
+        public Game()
+        {
+            BaseGame = "N/A";
+            Title = "N/A";
+            CompletionStatus = "N/A";
+            RankedScore = 0;
+            InclusionScore = 1;
+            Franchise = "N/A";
+            Subfranchise = "N/A";
+            ReleaseDate = "N/A";
+            SpecialNotes = "N/A";
+            Discontinued = false;
+        }
     }
 }
