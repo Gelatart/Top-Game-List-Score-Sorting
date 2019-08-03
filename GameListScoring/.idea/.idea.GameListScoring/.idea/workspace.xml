@@ -38,37 +38,38 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Main.cs">
+        <entry file="file://$PROJECT_DIR$/MainFunction.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="255">
+              <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
               <folding>
-                <marker date="1564386621463" expanded="true" signature="6:88" ph="..." />
-                <marker date="1564386621463" expanded="true" signature="139:6902" ph="{...}" />
-                <marker date="1564386621463" expanded="true" signature="243:330" ph="/* Need the static? ... */" />
-                <marker date="1564386621463" expanded="true" signature="502:4467" ph="{...}" />
-                <marker date="1564386621463" expanded="true" signature="533:732" ph="/* Display the number of command line arguments: ... */" />
-                <marker date="1564386621463" expanded="true" signature="819:3232" ph="{...}" />
-                <marker date="1564386621463" expanded="true" signature="1160:3214" ph="{...}" />
-                <marker date="1564386621463" expanded="true" signature="2048:2144" ph="{...}" />
-                <marker date="1564386621463" expanded="true" signature="2427:2599" ph="{...}" />
-                <marker date="1564386621463" expanded="true" signature="2628:3192" ph="{...}" />
-                <marker date="1564386621463" expanded="true" signature="2683:2844" ph="/* found a match, replace entry in database when updated (if list logged == false, inclusionscore++, logged = tru ... */" />
-                <marker date="1564386621463" expanded="true" signature="2928:3045" ph="{...}" />
-                <marker date="1564386621463" expanded="true" signature="3249:3894" ph="/* while reading all the entries in the database ... */" />
-                <marker date="1564386621463" expanded="true" signature="3970:4129" ph="{...}" />
-                <marker date="1564386621463" expanded="true" signature="4317:4420" ph="{...}" />
-                <marker date="1564386621463" expanded="true" signature="4532:4607" ph="{...}" />
-                <marker date="1564386621463" expanded="true" signature="4667:5117" ph="{...}" />
-                <marker date="1564386621463" expanded="true" signature="4908:5081" ph="{...}" />
-                <marker date="1564386621463" expanded="true" signature="4964:5067" ph="{...}" />
-                <marker date="1564386621463" expanded="true" signature="5161:6900" ph="{...}" />
-                <marker date="1564386621463" expanded="true" signature="5374:6390" ph="{...}" />
-                <marker date="1564386621463" expanded="true" signature="5516:5613" ph="/* string Title = entry.Title; ... */" />
-                <marker date="1564386621463" expanded="true" signature="5742:5897" ph="/* string Franchise = entry.Franchise; ... */" />
-                <marker date="1564386621463" expanded="true" signature="5972:6062" ph="/* bool Discontinued = entry.Discontinued; ... */" />
-                <marker date="1564386621463" expanded="true" signature="6183:6339" ph="/* use completionstatus for formatting? Include all potential titles? ... */" />
-                <marker date="1564386621463" expanded="true" signature="6569:6890" ph="/* create a text file they all go into? create another one for ranked by inclusionscore? ... */" />
+                <marker date="1564854998157" expanded="true" signature="6:88" ph="..." />
+                <marker date="1564854998157" expanded="true" signature="115:6759" ph="{...}" />
+                <marker date="1564854998157" expanded="true" signature="147:6757" ph="{...}" />
+                <marker date="1564854998157" expanded="true" signature="247:330" ph="/* Need the static? ... */" />
+                <marker date="1564854998157" expanded="true" signature="489:4326" ph="{...}" />
+                <marker date="1564854998157" expanded="true" signature="512:707" ph="/* Display the number of command line arguments: ... */" />
+                <marker date="1564854998157" expanded="true" signature="895:3168" ph="{...}" />
+                <marker date="1564854998157" expanded="true" signature="1212:3154" ph="{...}" />
+                <marker date="1564854998157" expanded="true" signature="2044:2128" ph="{...}" />
+                <marker date="1564854998157" expanded="true" signature="2423:2583" ph="{...}" />
+                <marker date="1564854998157" expanded="true" signature="2608:3136" ph="{...}" />
+                <marker date="1564854998157" expanded="true" signature="2655:2812" ph="/* found a match, replace entry in database when updated (if list logged == false, inclusionscore++, logged = tru ... */" />
+                <marker date="1564854998157" expanded="true" signature="2892:2997" ph="{...}" />
+                <marker date="1564854998157" expanded="true" signature="3181:3798" ph="/* while reading all the entries in the database ... */" />
+                <marker date="1564854998157" expanded="true" signature="3871:4018" ph="{...}" />
+                <marker date="1564854998157" expanded="true" signature="4195:4286" ph="{...}" />
+                <marker date="1564854998157" expanded="true" signature="4371:4446" ph="{...}" />
+                <marker date="1564854998157" expanded="true" signature="4506:4956" ph="{...}" />
+                <marker date="1564854998157" expanded="true" signature="4747:4920" ph="{...}" />
+                <marker date="1564854998157" expanded="true" signature="4803:4906" ph="{...}" />
+                <marker date="1564854998157" expanded="true" signature="5000:6751" ph="{...}" />
+                <marker date="1564854998157" expanded="true" signature="5213:6229" ph="{...}" />
+                <marker date="1564854998157" expanded="true" signature="5355:5452" ph="/* string Title = entry.Title; ... */" />
+                <marker date="1564854998157" expanded="true" signature="5581:5736" ph="/* string Franchise = entry.Franchise; ... */" />
+                <marker date="1564854998157" expanded="true" signature="5811:5901" ph="/* bool Discontinued = entry.Discontinued; ... */" />
+                <marker date="1564854998157" expanded="true" signature="6022:6178" ph="/* use completionstatus for formatting? Include all potential titles? ... */" />
+                <marker date="1564854998157" expanded="true" signature="6412:6741" ph="/* create a text file they all go into? create another one for ranked by inclusionscore? ... */" />
               </folding>
             </state>
           </provider>
@@ -84,21 +85,21 @@
     <setting file="file://$PROJECT_DIR$/../Main.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../Game.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Game.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Main.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/MainFunction.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Program.cs" />
         <option value="$PROJECT_DIR$/Game.cs" />
-        <option value="$PROJECT_DIR$/MainFunction.cs" />
         <option value="$PROJECT_DIR$/Main.cs" />
+        <option value="$PROJECT_DIR$/MainFunction.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="917" />
-    <option name="width" value="924" />
+    <option name="x" value="1129" />
+    <option name="width" value="712" />
     <option name="height" value="1003" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -179,11 +180,12 @@
       <updated>1563517152357</updated>
       <workItem from="1563517153458" duration="628000" />
       <workItem from="1564385492104" duration="1149000" />
+      <workItem from="1564854423119" duration="645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1777000" />
+    <option name="totallyTimeSpent" value="2422000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -197,10 +199,10 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1858" height="1012" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12117843" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.028349083" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Build" weight="0.32922733" />
+      <window_info anchor="bottom" id="Inspection Results" weight="0.32922733" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -216,6 +218,7 @@
       <window_info anchor="bottom" id="Unit Tests" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="15" weight="0.32922733" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -254,16 +257,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
-          <folding>
-            <marker date="1563517305335" expanded="true" signature="0:139" ph="/* namespace GameListScoring ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Game.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -277,37 +270,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Main.cs">
+    <entry file="file://$PROJECT_DIR$/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="120">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
           <folding>
-            <marker date="1564386621463" expanded="true" signature="6:88" ph="..." />
-            <marker date="1564386621463" expanded="true" signature="139:6902" ph="{...}" />
-            <marker date="1564386621463" expanded="true" signature="243:330" ph="/* Need the static? ... */" />
-            <marker date="1564386621463" expanded="true" signature="502:4467" ph="{...}" />
-            <marker date="1564386621463" expanded="true" signature="533:732" ph="/* Display the number of command line arguments: ... */" />
-            <marker date="1564386621463" expanded="true" signature="819:3232" ph="{...}" />
-            <marker date="1564386621463" expanded="true" signature="1160:3214" ph="{...}" />
-            <marker date="1564386621463" expanded="true" signature="2048:2144" ph="{...}" />
-            <marker date="1564386621463" expanded="true" signature="2427:2599" ph="{...}" />
-            <marker date="1564386621463" expanded="true" signature="2628:3192" ph="{...}" />
-            <marker date="1564386621463" expanded="true" signature="2683:2844" ph="/* found a match, replace entry in database when updated (if list logged == false, inclusionscore++, logged = tru ... */" />
-            <marker date="1564386621463" expanded="true" signature="2928:3045" ph="{...}" />
-            <marker date="1564386621463" expanded="true" signature="3249:3894" ph="/* while reading all the entries in the database ... */" />
-            <marker date="1564386621463" expanded="true" signature="3970:4129" ph="{...}" />
-            <marker date="1564386621463" expanded="true" signature="4317:4420" ph="{...}" />
-            <marker date="1564386621463" expanded="true" signature="4532:4607" ph="{...}" />
-            <marker date="1564386621463" expanded="true" signature="4667:5117" ph="{...}" />
-            <marker date="1564386621463" expanded="true" signature="4908:5081" ph="{...}" />
-            <marker date="1564386621463" expanded="true" signature="4964:5067" ph="{...}" />
-            <marker date="1564386621463" expanded="true" signature="5161:6900" ph="{...}" />
-            <marker date="1564386621463" expanded="true" signature="5374:6390" ph="{...}" />
-            <marker date="1564386621463" expanded="true" signature="5516:5613" ph="/* string Title = entry.Title; ... */" />
-            <marker date="1564386621463" expanded="true" signature="5742:5897" ph="/* string Franchise = entry.Franchise; ... */" />
-            <marker date="1564386621463" expanded="true" signature="5972:6062" ph="/* bool Discontinued = entry.Discontinued; ... */" />
-            <marker date="1564386621463" expanded="true" signature="6183:6339" ph="/* use completionstatus for formatting? Include all potential titles? ... */" />
-            <marker date="1564386621463" expanded="true" signature="6569:6890" ph="/* create a text file they all go into? create another one for ranked by inclusionscore? ... */" />
+            <marker date="1563517305335" expanded="true" signature="0:139" ph="/* namespace GameListScoring ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainFunction.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+          <folding>
+            <marker date="1564854998157" expanded="true" signature="6:88" ph="..." />
+            <marker date="1564854998157" expanded="true" signature="115:6759" ph="{...}" />
+            <marker date="1564854998157" expanded="true" signature="147:6757" ph="{...}" />
+            <marker date="1564854998157" expanded="true" signature="247:330" ph="/* Need the static? ... */" />
+            <marker date="1564854998157" expanded="true" signature="489:4326" ph="{...}" />
+            <marker date="1564854998157" expanded="true" signature="512:707" ph="/* Display the number of command line arguments: ... */" />
+            <marker date="1564854998157" expanded="true" signature="895:3168" ph="{...}" />
+            <marker date="1564854998157" expanded="true" signature="1212:3154" ph="{...}" />
+            <marker date="1564854998157" expanded="true" signature="2044:2128" ph="{...}" />
+            <marker date="1564854998157" expanded="true" signature="2423:2583" ph="{...}" />
+            <marker date="1564854998157" expanded="true" signature="2608:3136" ph="{...}" />
+            <marker date="1564854998157" expanded="true" signature="2655:2812" ph="/* found a match, replace entry in database when updated (if list logged == false, inclusionscore++, logged = tru ... */" />
+            <marker date="1564854998157" expanded="true" signature="2892:2997" ph="{...}" />
+            <marker date="1564854998157" expanded="true" signature="3181:3798" ph="/* while reading all the entries in the database ... */" />
+            <marker date="1564854998157" expanded="true" signature="3871:4018" ph="{...}" />
+            <marker date="1564854998157" expanded="true" signature="4195:4286" ph="{...}" />
+            <marker date="1564854998157" expanded="true" signature="4371:4446" ph="{...}" />
+            <marker date="1564854998157" expanded="true" signature="4506:4956" ph="{...}" />
+            <marker date="1564854998157" expanded="true" signature="4747:4920" ph="{...}" />
+            <marker date="1564854998157" expanded="true" signature="4803:4906" ph="{...}" />
+            <marker date="1564854998157" expanded="true" signature="5000:6751" ph="{...}" />
+            <marker date="1564854998157" expanded="true" signature="5213:6229" ph="{...}" />
+            <marker date="1564854998157" expanded="true" signature="5355:5452" ph="/* string Title = entry.Title; ... */" />
+            <marker date="1564854998157" expanded="true" signature="5581:5736" ph="/* string Franchise = entry.Franchise; ... */" />
+            <marker date="1564854998157" expanded="true" signature="5811:5901" ph="/* bool Discontinued = entry.Discontinued; ... */" />
+            <marker date="1564854998157" expanded="true" signature="6022:6178" ph="/* use completionstatus for formatting? Include all potential titles? ... */" />
+            <marker date="1564854998157" expanded="true" signature="6412:6741" ph="/* create a text file they all go into? create another one for ranked by inclusionscore? ... */" />
           </folding>
         </state>
       </provider>
