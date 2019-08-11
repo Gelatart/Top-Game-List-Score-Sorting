@@ -12,6 +12,8 @@ namespace GameListScoring
         //Need the static?
         //Make a dictionary for the lists that have been logged?
         static Dictionary<string, bool> ListIndex = new Dictionary<string, bool>();
+        static Dictionary<int, Game> RankedGameIndex = new Dictionary<int, Game>();
+        static Dictionary<int, Game> InclusionGameIndex = new Dictionary<int, Game>();
 
         //Need the static?
         public static void Main(string[] args)
@@ -69,18 +71,60 @@ namespace GameListScoring
             //use the cases of completion status to inform formatting
             //print to row, move to the next entry (print score, titles in base game)
 
+            foreach (KeyValuePair<string, Game> entry in GameIndex) {
+                Game rankedItem = entry.Value;
+                RankedGameIndex.add(rankedItem.RankedScore, rankedItem);
+            }
             //while reading all the entries in the database
             //compare inclusion score to sort, then use alphabetical and release date for franchise
             //use the cases of completion status to inform formatting
-            //print to row, move to the next entry (print score, titles in base game)
-            foreach (var entry in GameIndex.OrderBy(i <= i.RankedScore))
+            //print to row, move to the next entry (print score, titles in base game        
+            foreach (var entry in RankedGameIndex.OrderBy(i <= i.RankedScore))
             {
                 //if ranked score is the same, compare by alphabetical franchise, then subfranchise, then release date
             }
+            /*for (int index = 0; index < GameIndex.Count; index++)  {
+                int lastIndex;
+                if (index == 0) {
+                    lastIndex = 0
+                } else {
+                    lastIndex = index;
+                    var lastItem = GameIndex.ElementAt(lastIndex);
+                    var lastItemKey = lastItem.Key;
+                    var lastItemValue = lastItem.Value;
+                    var item = GameIndex.ElementAt(index);
+                    var itemKey = item.Key;
+                    var itemValue = item.Value;
+                    if(lastItemValue.RankedScore == itemValue.RankedScore) {
+                        if(lastItemValue.Franchise > itemValue.Franchise) {
+                            GameIndex.ElementAt(index) = lastItem;
+                            GameIndex.ElementAt(lastIndex) = item;
+                        } else if (lastItemValue.Franchise == itemValue.Franchise) {
+                            if(lastItemValue.Subfranchise > itemValue.Subfranchise) {
+                                GameIndex.ElementAt(index) = lastItem;
+                                GameIndex.ElementAt(lastIndex) = item;
+                            } else if (lastItemValue.Subfranchise == itemValue.Subfranchise) {
+                                if(lastItemValue.ReleaseDate > itemValue.ReleaseDate) {
+                                    GameIndex.ElementAt(index) = lastItem;
+                                    GameIndex.ElementAt(lastIndex) = item;
+                                }
+                            }
+                        }
+                    }                    
+                } 
+            }*/
 
             //Inspiration: https://www.dotnetperls.com/sort-dictionary
+            //Inspiration: https://stackoverflow.com/questions/141088/what-is-the-best-way-to-iterate-over-a-dictionary
             printDatabase();
-            foreach (var entry in GameIndex.OrderBy(i <= i.InclusionScore))
+            
+            foreach (KeyValuePair<string, Game> entry in GameIndex) {
+                Game inclusionItem = entry.Value;
+                InclusionGameIndex.add(inclusionItem.InclusionScore, inclusionItem);
+            }
+            
+            foreach (var entry in Inclusion
+                GameIndex.OrderBy(i <= i.InclusionScore))
             {
                 //do similar thing but with for inclusionscore
             }
