@@ -25,8 +25,8 @@ namespace GameListScoring
             {
                 string contents = File.ReadAllText(file);
                 string line;
-                string ListTag = ""; //figure out how to assign ListTag to list
-                string ListTitle = ""; //figure out how to get the filename
+                string ListTag = Console.ReadLine(); //Have the list tag on the firstline
+                string ListTitle = Console.ReadLine(); //Have the list title on the second line
                 while ((line = Console.ReadLine()) != null)
                 {
                     //Read each variable and put it in an array based on how lines formatted
@@ -46,12 +46,13 @@ namespace GameListScoring
                         SpecialCases();
                     }
 
-                    Game Entry = Game(BaseGame, Rank, Title, CompletionStatus, Franchise, Subfranchise, ReleaseDate,
-                        SpecialNotes, Discontinued); //instantiate with new values
-                    Entry.RankedScore += Rank;
+                    
                     if (temp.BaseGame == null)
                     {
-                        GameIndex.add(BaseGame, Entry); //do an if/else check to see if already in dictionary first
+                        Game Entry = Game(BaseGame, Rank, Title, CompletionStatus, Franchise, Subfranchise, ReleaseDate,
+                        SpecialNotes, Discontinued); //instantiate with new values
+                        //Entry.RankedScore += Rank; //Rank is already set by the extended game instantiation
+                        GameIndex.add(BaseGame, Entry); 
                     }
                     else
                     {
@@ -60,11 +61,14 @@ namespace GameListScoring
                         if (ListIndex[ListTitle] == false) //fix how it checks?
                         {
                             //inclusionscore goes up
+                            temp.InclusionScore++;
+                            temp.RankedScore += Rank;
                         }
 
-                        GameIndex[BaseGame] = Entry; //should update Entry value, with the now increased rank score
+                        GameIndex[BaseGame] = temp; //should update Entry value, with the now increased rank score
                     }
                 }
+                ListIndex[ListTitle] = true;
             }
             //while reading all the entries in the database
             //compare ranked score to sort, then use alphabetical and release date for franchise
@@ -116,7 +120,7 @@ namespace GameListScoring
 
             //Inspiration: https://www.dotnetperls.com/sort-dictionary
             //Inspiration: https://stackoverflow.com/questions/141088/what-is-the-best-way-to-iterate-over-a-dictionary
-            printDatabase();
+            printDatabase(RankedGameIndex, "RankedDatabase");
             
             foreach (KeyValuePair<string, Game> entry in GameIndex) {
                 Game inclusionItem = entry.Value;
@@ -129,7 +133,7 @@ namespace GameListScoring
                 //do similar thing but with for inclusionscore
             }
 
-            printDatabase();
+            printDatabase(InclusionGameIndex, "InclusionDatabase");
         }
 
 
@@ -155,11 +159,11 @@ namespace GameListScoring
             return temp;
         }
 
-        public static void printDatabase()
+        public static void printDatabase(Dictionary<int,Game> index, string fileName)
         {
             //iterate through entire database, printing it all to a text file
             List<string> linesList = new List<string>();
-            foreach (KeyValuePair<string, Game> entry in GameIndex)
+            foreach (KeyValuePair<int, Game> entry in index)
             {
                 //print out all the attributes into a string
                 string BaseGame = entry.BaseGame;
@@ -180,7 +184,8 @@ namespace GameListScoring
             }
 
             string[] lines = linesList.ToArray();
-            System.IO.File.WriteAllLines(@"C:\Users\Gamer\Documents\Top-Game-List-Score-Sorting\Database.txt", lines);
+            string path = @"C:\Users\Gamer\Documents\Top-Game-List-Score-Sorting\" + fileName + ".txt";
+            System.IO.File.WriteAllLines(path, lines);
             //create a text file they all go into? create another one for ranked by inclusionscore?
             //Took inspiration from https://stackoverflow.com/questions/202813/adding-values-to-a-c-sharp-array
             //as well as https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file
