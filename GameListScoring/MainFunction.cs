@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using DefaultNamespace;
 
 namespace GameListScoring
@@ -21,7 +22,7 @@ namespace GameListScoring
             // Display the number of command line arguments:
             //Source for how to read files in this way: https://stackoverflow.com/questions/5840443/how-to-read-all-files-inside-particular-folder
             string folderPath = @"C:\Users\Gamer\Documents\Top-Game-List-Score-Sorting\GameListScoring";
-            foreach (string file in Directory.EnumerateFiles(folderPath, "*.txt"))
+            foreach (string file in Directory.GetFiles(folderPath, "*.txt"))
             {
                 string contents = File.ReadAllText(file);
                 string line;
@@ -49,10 +50,9 @@ namespace GameListScoring
                     
                     if (temp.BaseGame == null)
                     {
-                        Game Entry = Game(BaseGame, Rank, Title, CompletionStatus, Franchise, Subfranchise, ReleaseDate,
-                        SpecialNotes, Discontinued); //instantiate with new values
+                        Game Entry = new Game(BaseGame, Rank, Title, CompletionStatus, Franchise, Subfranchise, ReleaseDate, SpecialNotes, Discontinued); //instantiate with new values
                         //Entry.RankedScore += Rank; //Rank is already set by the extended game instantiation
-                        GameIndex.add(BaseGame, Entry); 
+                        GameIndex.Add(BaseGame, Entry); 
                     }
                     else
                     {
@@ -77,13 +77,16 @@ namespace GameListScoring
 
             foreach (KeyValuePair<string, Game> entry in GameIndex) {
                 Game rankedItem = entry.Value;
-                RankedGameIndex.add(rankedItem.RankedScore, rankedItem);
+                RankedGameIndex.Add(rankedItem.RankedScore, rankedItem);
             }
+            //IOrderedEnumerable<KeyValuePair<int, Game>> query = RankedGameIndex.OrderBy(RankedGameIndex <= RankedGameIndex.Key);
+            //Inspiration: https://docs.microsoft.com/en-us/dotnet/api/system.linq.enumerable.orderby?view=netframework-4.8
+            
             //while reading all the entries in the database
             //compare inclusion score to sort, then use alphabetical and release date for franchise
             //use the cases of completion status to inform formatting
             //print to row, move to the next entry (print score, titles in base game        
-            foreach (var entry in RankedGameIndex.OrderBy(i <= i.RankedScore))
+            foreach (var entry in RankedGameIndex.OrderBy(entry <= entry.RankedScore))
             {
                 //if ranked score is the same, compare by alphabetical franchise, then subfranchise, then release date
             }
@@ -124,11 +127,12 @@ namespace GameListScoring
             
             foreach (KeyValuePair<string, Game> entry in GameIndex) {
                 Game inclusionItem = entry.Value;
-                InclusionGameIndex.add(inclusionItem.InclusionScore, inclusionItem);
+                InclusionGameIndex.Add(inclusionItem.InclusionScore, inclusionItem);
             }
             
-            foreach (var entry in Inclusion
-                GameIndex.OrderBy(i <= i.InclusionScore))
+            //IOrderedEnumerable<KeyValuePair<int, Game>> query = InclusionGameIndex.OrderBy(InclusionGameIndex <= InclusionGameIndex.Key);
+            
+            foreach (var entry in InclusionGameIndex.OrderBy(entry <= entry.InclusionScore))
             {
                 //do similar thing but with for inclusionscore
             }
@@ -165,16 +169,17 @@ namespace GameListScoring
             List<string> linesList = new List<string>();
             foreach (KeyValuePair<int, Game> entry in index)
             {
+                Game temp = entry.Value;
                 //print out all the attributes into a string
-                string BaseGame = entry.BaseGame;
+                string BaseGame = temp.BaseGame;
                 //string Title = entry.Title;
                 //string CompletionStatus = entry.CompletionStatus;
-                int RankedScore = entry.RankedScore;
-                int InclusionScore = entry.InclusionScore;
+                int RankedScore = temp.RankedScore;
+                int InclusionScore = temp.InclusionScore;
                 //string Franchise = entry.Franchise;
                 //string Subfranchise = entry.Subfranchise;
                 //string ReleaseDate = entry.ReleaseDate;
-                string SpecialNotes = entry.SpecialNotes;
+                string SpecialNotes = temp.SpecialNotes;
                 //bool Discontinued = entry.Discontinued;
                 //extract values from game entry
                 string line = RankedScore + "," + InclusionScore + "," + BaseGame + "," + SpecialNotes;
