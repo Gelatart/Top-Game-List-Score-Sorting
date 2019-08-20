@@ -13,8 +13,8 @@ namespace GameListScoring
         //Need the static?
         //Make a dictionary for the lists that have been logged?
         static Dictionary<string, bool> ListIndex = new Dictionary<string, bool>();
-        static Dictionary<int, Game> RankedGameIndex = new Dictionary<int, Game>();
-        static Dictionary<int, Game> InclusionGameIndex = new Dictionary<int, Game>();
+        //static Dictionary<int, Game> RankedGameIndex = new Dictionary<int, Game>();
+        //static Dictionary<int, Game> InclusionGameIndex = new Dictionary<int, Game>();
 
         //Need the static?
         public static void Main(string[] args)
@@ -42,10 +42,10 @@ namespace GameListScoring
                     string SpecialNotes = attributes[7];
                     bool Discontinued = Convert.ToBoolean(attributes[8]);
                     Game temp = SearchDatabase(BaseGame);
-                    if (ListTag != "standardRed" && ListTag != "standardBlue")
+                    /*if (ListTag != "standardRed" && ListTag != "standardBlue")
                     {
                         SpecialCases();
-                    }
+                    }*/
 
                     
                     if (temp.BaseGame == null)
@@ -75,6 +75,10 @@ namespace GameListScoring
             //use the cases of completion status to inform formatting
             //print to row, move to the next entry (print score, titles in base game)
 
+            SortedDictionary<int, Game> RankedGameIndex = new SortedDictionary<int, Game>(GameIndex)
+                //Inspiration: https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.sorteddictionary-2.-ctor?view=netframework-4.8#System_Collections_Generic_SortedDictionary_2__ctor_System_Collections_Generic_IDictionary__0__1__
+                //Need to properly convert GameIndex format? Need to specify the way keys will be ordered?
+            
             foreach (KeyValuePair<string, Game> entry in GameIndex) {
                 Game rankedItem = entry.Value;
                 RankedGameIndex.Add(rankedItem.RankedScore, rankedItem);
@@ -125,6 +129,9 @@ namespace GameListScoring
             //Inspiration: https://stackoverflow.com/questions/141088/what-is-the-best-way-to-iterate-over-a-dictionary
             printDatabase(RankedGameIndex, "RankedDatabase");
             
+            SortedDictionary<int, Game> InclusionGameIndex = new SortedDictionary<int, Game>(GameIndex)
+            //Need to properly convert GameIndex format? Need to specify the way keys will be ordered?
+            
             foreach (KeyValuePair<string, Game> entry in GameIndex) {
                 Game inclusionItem = entry.Value;
                 InclusionGameIndex.Add(inclusionItem.InclusionScore, inclusionItem);
@@ -141,10 +148,10 @@ namespace GameListScoring
         }
 
 
-        private static void SpecialCases()
+        /*private static void SpecialCases()
         {
             //FILL OUT, FIGURE OUT WHAT TO DO HERE    
-        }
+        }*/
 
         private static Game SearchDatabase(string checker)
         {
