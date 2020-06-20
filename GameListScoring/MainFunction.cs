@@ -15,6 +15,7 @@ namespace GameListScoring
         static Dictionary<string, bool> ListIndex = new Dictionary<string, bool>();
         //static Dictionary<int, Game> RankedGameIndex = new Dictionary<int, Game>();
         //static Dictionary<int, Game> InclusionGameIndex = new Dictionary<int, Game>();
+        //Dictionary for AverageScoreIndex?
 
         //Need the static?
         public static void Main(string[] args)
@@ -38,9 +39,9 @@ namespace GameListScoring
                     string CompletionStatus = attributes[3];
                     string Franchise = attributes[4];
                     string Subfranchise = attributes[5];
-                    string ReleaseDate = attributes[6];
+                    DateTime ReleaseDate = DateTime.Parse(attributes[6]);
                     string SpecialNotes = attributes[7];
-                    bool Discontinued = Convert.ToBoolean(attributes[8]);
+                    //bool Discontinued = Convert.ToBoolean(attributes[8]);
                     Game temp = SearchDatabase(BaseGame);
                     /*if (ListTag != "standardRed" && ListTag != "standardBlue")
                     {
@@ -50,7 +51,7 @@ namespace GameListScoring
                     
                     if (temp.BaseGame == null)
                     {
-                        Game Entry = new Game(BaseGame, Rank, Title, CompletionStatus, Franchise, Subfranchise, ReleaseDate, SpecialNotes, Discontinued); //instantiate with new values
+                        Game Entry = new Game(BaseGame, Rank, Title, CompletionStatus, Franchise, Subfranchise, ReleaseDate, SpecialNotes); //instantiate with new values
                         //Entry.RankedScore += Rank; //Rank is already set by the extended game instantiation
                         GameIndex.Add(BaseGame, Entry); 
                     }
@@ -63,6 +64,7 @@ namespace GameListScoring
                             //inclusionscore goes up
                             temp.InclusionScore++;
                             temp.RankedScore += Rank;
+                            temp.AverageScore = temp.RankedScore / temp.InclusionScore;
                         }
 
                         GameIndex[BaseGame] = temp; //should update Entry value, with the now increased rank score
@@ -75,10 +77,11 @@ namespace GameListScoring
             //use the cases of completion status to inform formatting
             //print to row, move to the next entry (print score, titles in base game)
 
-            SortedDictionary<int, Game> RankedGameIndex = new SortedDictionary<int, Game>(GameIndex)
+            //SortedDictionary<int, Game> RankedGameIndex = new SortedDictionary<int, Game>(GameIndex);
+            SortedDictionary<int, Game> RankedGameIndex = new SortedDictionary<int, Game>();
                 //Inspiration: https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.sorteddictionary-2.-ctor?view=netframework-4.8#System_Collections_Generic_SortedDictionary_2__ctor_System_Collections_Generic_IDictionary__0__1__
                 //Need to properly convert GameIndex format? Need to specify the way keys will be ordered?
-            
+
             foreach (KeyValuePair<string, Game> entry in GameIndex) {
                 Game rankedItem = entry.Value;
                 RankedGameIndex.Add(rankedItem.RankedScore, rankedItem);
@@ -128,10 +131,11 @@ namespace GameListScoring
             //Inspiration: https://www.dotnetperls.com/sort-dictionary
             //Inspiration: https://stackoverflow.com/questions/141088/what-is-the-best-way-to-iterate-over-a-dictionary
             printDatabase(RankedGameIndex, "RankedDatabase");
-            
-            SortedDictionary<int, Game> InclusionGameIndex = new SortedDictionary<int, Game>(GameIndex)
+
+            //SortedDictionary<int, Game> InclusionGameIndex = new SortedDictionary<int, Game>(GameIndex);
+            SortedDictionary<int, Game> InclusionGameIndex = new SortedDictionary<int, Game>();
             //Need to properly convert GameIndex format? Need to specify the way keys will be ordered?
-            
+
             foreach (KeyValuePair<string, Game> entry in GameIndex) {
                 Game inclusionItem = entry.Value;
                 InclusionGameIndex.Add(inclusionItem.InclusionScore, inclusionItem);
@@ -145,6 +149,21 @@ namespace GameListScoring
             }
 
             printDatabase(InclusionGameIndex, "InclusionDatabase");
+
+            //AVERAGE GAME INDEX:
+
+            SortedDictionary<int, Game> AverageGameIndex = new SortedDictionary<int, Game>();
+            foreach (KeyValuePair<string, Game> entry in GameIndex)
+            {
+                Game averageItem = entry.Value;
+                int aScore = (int)Math.Round(averageItem.AverageScore, 0);
+                AverageGameIndex.Add(aScore, averageItem);
+            }
+            foreach (var entry in AverageGameIndex.OrderBy(entry <= entry.AverageScore))
+            {
+                //do similar thing but with for inclusionscore
+            }
+            printDatabase(AverageGameIndex, "AverageDatabase");
         }
 
 
@@ -170,7 +189,7 @@ namespace GameListScoring
             return temp;
         }
 
-        public static void printDatabase(Dictionary<int,Game> index, string fileName)
+        public static void printDatabase(SortedDictionary<int,Game> index, string fileName)
         {
             //iterate through entire database, printing it all to a text file
             List<string> linesList = new List<string>();
@@ -183,13 +202,14 @@ namespace GameListScoring
                 //string CompletionStatus = entry.CompletionStatus;
                 int RankedScore = temp.RankedScore;
                 int InclusionScore = temp.InclusionScore;
+                int AverageScore = (int)Math.Round(temp.AverageScore, 0);
                 //string Franchise = entry.Franchise;
                 //string Subfranchise = entry.Subfranchise;
                 //string ReleaseDate = entry.ReleaseDate;
                 string SpecialNotes = temp.SpecialNotes;
                 //bool Discontinued = entry.Discontinued;
                 //extract values from game entry
-                string line = RankedScore + "," + InclusionScore + "," + BaseGame + "," + SpecialNotes;
+                string line = RankedScore + "," + InclusionScore + "," + AverageScore + "," + BaseGame + "," + SpecialNotes;
                 //use completionstatus for formatting? Include all potential titles?
                 //find a way to get these sorted by score, franchise, releasedate, etc.
                 linesList.Add(line);

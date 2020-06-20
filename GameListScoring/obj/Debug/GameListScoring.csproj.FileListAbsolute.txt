@@ -1,2 +1,4 @@
 C:\Users\Gamer\Documents\Top-Game-List-Score-Sorting\GameListScoring\obj\Debug\GameListScoring.csprojAssemblyReference.cache
 C:\Users\Gamer\Documents\Top-Game-List-Score-Sorting\GameListScoring\obj\Debug\GameListScoring.csproj.CoreCompileInputs.cache
+C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameListScoring\obj\Debug\GameListScoring.csprojAssemblyReference.cache
+C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameListScoring\obj\Debug\GameListScoring.csproj.CoreCompileInputs.cache
