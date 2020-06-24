@@ -13,72 +13,85 @@ namespace GameListScoring
         //Need the static?
         //Make a dictionary for the lists that have been logged?
         static Dictionary<string, bool> ListIndex = new Dictionary<string, bool>();
-        //static Dictionary<int, Game> RankedGameIndex = new Dictionary<int, Game>();
-        //static Dictionary<int, Game> InclusionGameIndex = new Dictionary<int, Game>();
-        //Dictionary for AverageScoreIndex?
 
-        //Need the static?
+        static SortedDictionary<int, Game> RankedGameIndex = new SortedDictionary<int, Game>();
+        static SortedDictionary<int, Game> InclusionGameIndex = new SortedDictionary<int, Game>();
+        static SortedDictionary<int, Game> AverageGameIndex = new SortedDictionary<int, Game>();
         public static void Main(string[] args)
         {
             // Display the number of command line arguments:
             //Source for how to read files in this way: https://stackoverflow.com/questions/5840443/how-to-read-all-files-inside-particular-folder
-            string folderPath = @"C:\Users\Gamer\Documents\Top-Game-List-Score-Sorting\GameListScoring";
-            foreach (string file in Directory.GetFiles(folderPath, "*.txt"))
+
+            //string folderPath = @"C:\Users\Gamer\Documents\Top-Game-List-Score-Sorting\GameListScoring"; // For PC
+            string folderPath = @"C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameListScoring"; // For laptop
+            Console.WriteLine("Starting...");
+            try
             {
-                string contents = File.ReadAllText(file);
-                string line;
-                string ListTag = Console.ReadLine(); //Have the list tag on the firstline
-                string ListTitle = Console.ReadLine(); //Have the list title on the second line
-                while ((line = Console.ReadLine()) != null)
+                Console.WriteLine("Locating files...");
+                foreach (string file in Directory.GetFiles(folderPath, "*.txt"))
+                //ERROR: NotFoundException
                 {
-                    //Read each variable and put it in an array based on how lines formatted
-                    string[] attributes = line.Split(';');
-                    string BaseGame = attributes[0];
-                    int Rank = Convert.ToInt32(attributes[1]);
-                    string Title = attributes[2];
-                    string CompletionStatus = attributes[3];
-                    string Franchise = attributes[4];
-                    string Subfranchise = attributes[5];
-                    DateTime ReleaseDate = DateTime.Parse(attributes[6]);
-                    string SpecialNotes = attributes[7];
-                    //bool Discontinued = Convert.ToBoolean(attributes[8]);
-                    Game temp = SearchDatabase(BaseGame);
-                    /*if (ListTag != "standardRed" && ListTag != "standardBlue")
+                    Console.WriteLine("Found file!");
+                    string contents = File.ReadAllText(file);
+                    string line;
+                    string ListTag = Console.ReadLine(); //Have the list tag on the firstline
+                    string ListTitle = Console.ReadLine(); //Have the list title on the second line
+                    while ((line = Console.ReadLine()) != null)
                     {
-                        SpecialCases();
-                    }*/
-
-                    
-                    if (temp.BaseGame == null)
-                    {
-                        Game Entry = new Game(BaseGame, Rank, Title, CompletionStatus, Franchise, Subfranchise, ReleaseDate, SpecialNotes); //instantiate with new values
-                        //Entry.RankedScore += Rank; //Rank is already set by the extended game instantiation
-                        GameIndex.Add(BaseGame, Entry); 
-                    }
-                    else
-                    {
-                        //found a match, replace entry in database when updated (if list logged == false, inclusionscore++, logged = true?)
-                        //add to lists on
-                        if (ListIndex[ListTitle] == false) //fix how it checks?
+                        //Read each variable and put it in an array based on how lines formatted
+                        string[] attributes = line.Split(';');
+                        string BaseGame = attributes[0];
+                        int Rank = Convert.ToInt32(attributes[1]);
+                        string Title = attributes[2];
+                        string CompletionStatus = attributes[3];
+                        string Franchise = attributes[4];
+                        string Subfranchise = attributes[5];
+                        DateTime ReleaseDate = DateTime.Parse(attributes[6]);
+                        string SpecialNotes = attributes[7];
+                        //bool Discontinued = Convert.ToBoolean(attributes[8]);
+                        Game temp = SearchDatabase(BaseGame);
+                        /*if (ListTag != "standardRed" && ListTag != "standardBlue")
                         {
-                            //inclusionscore goes up
-                            temp.InclusionScore++;
-                            temp.RankedScore += Rank;
-                            temp.AverageScore = temp.RankedScore / temp.InclusionScore;
-                        }
+                            SpecialCases();
+                        }*/
 
-                        GameIndex[BaseGame] = temp; //should update Entry value, with the now increased rank score
+
+                        if (temp.BaseGame == null)
+                        {
+                            Game Entry = new Game(BaseGame, Rank, Title, CompletionStatus, Franchise, Subfranchise, ReleaseDate, SpecialNotes); //instantiate with new values
+                                                                                                                                                //Entry.RankedScore += Rank; //Rank is already set by the extended game instantiation
+                            GameIndex.Add(BaseGame, Entry);
+                        }
+                        else
+                        {
+                            //found a match, replace entry in database when updated (if list logged == false, inclusionscore++, logged = true?)
+                            //add to lists on
+                            if (ListIndex[ListTitle] == false) //fix how it checks?
+                            {
+                                //inclusionscore goes up
+                                temp.InclusionScore++;
+                                temp.RankedScore += Rank;
+                                temp.AverageScore = temp.RankedScore / temp.InclusionScore;
+                            }
+
+                            GameIndex[BaseGame] = temp; //should update Entry value, with the now increased rank score
+                        }
                     }
+                    ListIndex[ListTitle] = true;
                 }
-                ListIndex[ListTitle] = true;
             }
+            catch (FileNotFoundException)
+            {
+                Console.WriteLine("NEED A FILE FIRST DUMMY!");
+            }
+            
             //while reading all the entries in the database
             //compare ranked score to sort, then use alphabetical and release date for franchise
             //use the cases of completion status to inform formatting
             //print to row, move to the next entry (print score, titles in base game)
 
             //SortedDictionary<int, Game> RankedGameIndex = new SortedDictionary<int, Game>(GameIndex);
-            SortedDictionary<int, Game> RankedGameIndex = new SortedDictionary<int, Game>();
+            //SortedDictionary<int, Game> RankedGameIndex = new SortedDictionary<int, Game>();
                 //Inspiration: https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.sorteddictionary-2.-ctor?view=netframework-4.8#System_Collections_Generic_SortedDictionary_2__ctor_System_Collections_Generic_IDictionary__0__1__
                 //Need to properly convert GameIndex format? Need to specify the way keys will be ordered?
 
@@ -93,10 +106,14 @@ namespace GameListScoring
             //compare inclusion score to sort, then use alphabetical and release date for franchise
             //use the cases of completion status to inform formatting
             //print to row, move to the next entry (print score, titles in base game        
+
+            /*
             foreach (var entry in RankedGameIndex.OrderBy(entry <= entry.RankedScore))
             {
                 //if ranked score is the same, compare by alphabetical franchise, then subfranchise, then release date
             }
+            */
+
             /*for (int index = 0; index < GameIndex.Count; index++)  {
                 int lastIndex;
                 if (index == 0) {
@@ -133,7 +150,7 @@ namespace GameListScoring
             printDatabase(RankedGameIndex, "RankedDatabase");
 
             //SortedDictionary<int, Game> InclusionGameIndex = new SortedDictionary<int, Game>(GameIndex);
-            SortedDictionary<int, Game> InclusionGameIndex = new SortedDictionary<int, Game>();
+            //SortedDictionary<int, Game> InclusionGameIndex = new SortedDictionary<int, Game>();
             //Need to properly convert GameIndex format? Need to specify the way keys will be ordered?
 
             foreach (KeyValuePair<string, Game> entry in GameIndex) {
@@ -143,26 +160,32 @@ namespace GameListScoring
             
             //IOrderedEnumerable<KeyValuePair<int, Game>> query = InclusionGameIndex.OrderBy(InclusionGameIndex <= InclusionGameIndex.Key);
             
+            /*
             foreach (var entry in InclusionGameIndex.OrderBy(entry <= entry.InclusionScore))
             {
                 //do similar thing but with for inclusionscore
             }
+            */
 
             printDatabase(InclusionGameIndex, "InclusionDatabase");
 
             //AVERAGE GAME INDEX:
 
-            SortedDictionary<int, Game> AverageGameIndex = new SortedDictionary<int, Game>();
+            //SortedDictionary<int, Game> AverageGameIndex = new SortedDictionary<int, Game>();
             foreach (KeyValuePair<string, Game> entry in GameIndex)
             {
                 Game averageItem = entry.Value;
                 int aScore = (int)Math.Round(averageItem.AverageScore, 0);
                 AverageGameIndex.Add(aScore, averageItem);
             }
+
+            /*
             foreach (var entry in AverageGameIndex.OrderBy(entry <= entry.AverageScore))
             {
                 //do similar thing but with for inclusionscore
             }
+            */
+
             printDatabase(AverageGameIndex, "AverageDatabase");
         }
 
@@ -216,8 +239,14 @@ namespace GameListScoring
             }
 
             string[] lines = linesList.ToArray();
-            string path = @"C:\Users\Gamer\Documents\Top-Game-List-Score-Sorting\" + fileName + ".txt";
+            
+            
+            //string path = @"C:\Users\Gamer\Documents\Top-Game-List-Score-Sorting\" + fileName + ".txt"; // For PC
+            string path = @"C:\Users\danie\Documents\Top-Game-List-Score-Sorting\" + fileName + ".txt"; // For Laptop
+
+
             System.IO.File.WriteAllLines(path, lines);
+            Console.ReadLine();
             //create a text file they all go into? create another one for ranked by inclusionscore?
             //Took inspiration from https://stackoverflow.com/questions/202813/adding-values-to-a-c-sharp-array
             //as well as https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file

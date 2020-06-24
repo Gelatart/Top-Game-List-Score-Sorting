@@ -2,3 +2,7 @@ C:\Users\Gamer\Documents\Top-Game-List-Score-Sorting\GameListScoring\obj\Debug\G
 C:\Users\Gamer\Documents\Top-Game-List-Score-Sorting\GameListScoring\obj\Debug\GameListScoring.csproj.CoreCompileInputs.cache
 C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameListScoring\obj\Debug\GameListScoring.csprojAssemblyReference.cache
 C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameListScoring\obj\Debug\GameListScoring.csproj.CoreCompileInputs.cache
+C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameListScoring\bin\Debug\GameListScoring.exe
+C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameListScoring\bin\Debug\GameListScoring.pdb
+C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameListScoring\obj\Debug\GameListScoring.exe
+C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameListScoring\obj\Debug\GameListScoring.pdb
