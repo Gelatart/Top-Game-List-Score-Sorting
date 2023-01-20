@@ -18,6 +18,7 @@ class GameObject:
         self.rankedScore = rank
         self.listCount = 1
         self.listsReferencing = []
+        self.totalCount = 0
 
     #def __init__(self, rank, count):
     #    self.rankedScore = rank
@@ -28,6 +29,14 @@ class GameObject:
         self.listCount = 1
         self.listsReferencing = []
         self.listsReferencing.append(list)
+        self.totalCount = 0
+
+    def __init__(self, rank, list, total):
+        self.rankedScore = rank
+        self.listCount = 1
+        self.listsReferencing = []
+        self.listsReferencing.append(list)
+        self.totalCount = total
 
 # Workbook is created
 wb = Workbook()
@@ -50,14 +59,16 @@ for filename in os.listdir(directory):
         Lines = file1.readlines()
         #count = 300 # replace with grabbing how many lines there are
         count = int(startingLine)
+        originalCount = count
         # Strips the newline character
         for line in Lines:
             if line in gameDb:
                 gameDb[line].rankedScore += count
                 gameDb[line].listCount += 1
                 gameDb[line].listsReferencing.append(f)
+                gameDb[line].totalCount += originalCount
             else:
-                newObj = GameObject(count, f)
+                newObj = GameObject(count, f, originalCount)
                 gameDb[line] = newObj
             #searchObj = gameDb.get(newObj, 0) + 1
             #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
@@ -94,8 +105,9 @@ for filename in os.listdir(directory):
                 gameDb[line].rankedScore += count
                 gameDb[line].listCount += 1
                 gameDb[line].listsReferencing.append(f)
+                gameDb[line].totalCount += originalCount
             else:
-                newObj = GameObject(count, f)
+                newObj = GameObject(count, f, originalCount)
                 gameDb[line] = newObj
             #searchObj = gameDb.get(newObj, 0) + 1
             #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
@@ -115,14 +127,19 @@ for filename in os.listdir(directory):
         #count = 300 # replace with grabbing how many lines there are
         #count = 1
         count = int(startingLine)
+        originalCount = count
+        #^find out how to read the line amount ahead of time
+        #originalCount = len(Lines)
+        print(originalCount)
         # Strips the newline character
         for line in Lines:
             if line in gameDb:
                 gameDb[line].rankedScore += count
                 gameDb[line].listCount += 1
                 gameDb[line].listsReferencing.append(f)
+                gameDb[line].totalCount += originalCount
             else:
-                newObj = GameObject(count, f)
+                newObj = GameObject(count, f, originalCount)
                 gameDb[line] = newObj
             #searchObj = gameDb.get(newObj, 0) + 1
             #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
@@ -142,7 +159,9 @@ for game, details in gameDb.items():
     sheet1.write(excelCount, 0, game)
     sheet1.write(excelCount, 1, details.rankedScore)
     sheet1.write(excelCount, 2, details.listCount)
-    averageScore = details.rankedScore / details.listCount
+    #averageScore = details.rankedScore / details.listCount
+    #averageScore = (details.rankedScore / details.listCount)/details.totalCount
+    averageScore = details.rankedScore / details.totalCount
     sheet1.write(excelCount, 3, averageScore)
     outputLists = ""
     for refList in details.listsReferencing:
@@ -171,4 +190,5 @@ https://stackoverflow.com/questions/1347791/unicode-error-unicodeescape-codec-ca
 https://kodify.net/python/math/round-integers/
 https://stackoverflow.com/questions/27946595/how-to-manage-division-of-huge-numbers-in-python
 https://www.geeksforgeeks.org/python-add-one-string-to-another/
+https://pynative.com/python-count-number-of-lines-in-file/
 """
