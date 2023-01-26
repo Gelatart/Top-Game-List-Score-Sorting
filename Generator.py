@@ -10,6 +10,18 @@ from xlwt import Workbook
 directory = r'GameLists\Ranked'
 #then do unranked and former
 
+#LOOK INTO PANDAS FOR DEALING WITH TABULAR DATA IN PYTHON
+
+#CONSIDER INCORPORATING SQL, MYSQL, NOSQL, POSTGRES, ETC. INTO THIS?
+
+#START FLESHING OUT GLITCHWAVE USAGE
+    #FILL OUT RATINGS, COLLECTION, PLAYTHROUGHS, ETC.
+    #IMPORT REVIEWS
+    #START LOOKING AT GENRE (INFLUENCE?), YEAR, PLATFORM, ETC. CHARTS
+#SEE IF BACKLOGGD CHARTS COMPARE, IF CAN DO SIMILAR THINGS TO GLITCHWAVE (ALSO LOOK INTO GROUVEE?)
+
+#ONCE CLEARED ALL OF AN UP TO LIST, THEN CONSIDER EXPANDING THE RANGE (LIKE FROM UP TO 100 TO UP TO 150)
+
 "gameDb is a dict of string titles and game object values"
 gameDb = {}
 "game object needs two scores"
@@ -19,6 +31,8 @@ class GameObject:
         self.listCount = 1
         self.listsReferencing = []
         self.totalCount = 0
+
+    #consider storing a constantly updated average score?
 
     #def __init__(self, rank, count):
     #    self.rankedScore = rank
@@ -146,6 +160,9 @@ for filename in os.listdir(directory):
             print("Score of {}: {}".format(count, line.strip()))
             #count -= 1
 
+gameDbRanked = {}
+gameDbInclusion = {}
+gameDbAverage = {}
 "loop of printing database to a spreadsheet file"
 # Applying multiple styles
 boldStyle = xlwt.easyxf('font: bold 1;')
@@ -169,12 +186,69 @@ for game, details in gameDb.items():
         outputLists += ", "
     sheet1.write(excelCount, 4, outputLists)
     excelCount += 1
+    #add to the individual databases
+    gameDbRanked[game] = details.rankedScore
+    gameDbInclusion[game] = details.listCount
+    gameDbAverage[game] = averageScore
 wb.save('Sorted Database.xls')
+
+#after printed out everything to excel, then make three printed sorted lists?
+#each time, sort excel a certain way, then print out excel factors to list?
+
+sortByRanked = sorted(gameDbRanked.items(), key=lambda x:x[1], reverse=True)
+convertedRanked = dict(sortByRanked)
+sortByInclusion = sorted(gameDbInclusion.items(), key=lambda x:x[1], reverse=True)
+convertedInclusion = dict(sortByInclusion)
+sortByAverage = sorted(gameDbAverage.items(), key=lambda x:x[1], reverse=True)
+convertedAverage = dict(sortByAverage)
+
+fileR = open("Sorted by Ranked.txt","w")
+fileI = open("Sorted by Inclusion.txt","w")
+fileA = open("Sorted by Average.txt","w")
+
+for game, score in convertedRanked.items():
+    entry = game.strip()
+    #fileR.write(game)
+    entry += " --> "
+    #fileR.write(" --> ")
+    entry += str(score)
+    #fileR.write(str(score))
+    fileR.write(entry)
+    fileR.write("\n")
+#then print out to the files for inclusion and average
+
+for game, score in convertedInclusion.items():
+    entry = game.strip()
+    #fileR.write(game)
+    entry += " --> "
+    #fileR.write(" --> ")
+    entry += str(score)
+    #fileR.write(str(score))
+    fileI.write(entry)
+    fileI.write("\n")
+
+for game, score in convertedAverage.items():
+    entry = game.strip()
+    #fileR.write(game)
+    entry += " --> "
+    #fileR.write(" --> ")
+    entry += str(score)
+    #fileR.write(str(score))
+    fileA.write(entry)
+    fileA.write("\n")
+
+fileR.close()
+fileI.close()
+fileA.close()
+
+#further sort by keys after sorted by values?
+
+#print totals of the numbers of lists in each category?
 
 print("Successfully completed!")
 
 """"
-REFS:
+REFERENCES:
 https://www.geeksforgeeks.org/how-to-iterate-over-files-in-directory-using-python/
 https://www.w3schools.com/python/python_dictionaries.asp
 https://www.geeksforgeeks.org/read-a-file-line-by-line-in-python/
@@ -191,4 +265,8 @@ https://kodify.net/python/math/round-integers/
 https://stackoverflow.com/questions/27946595/how-to-manage-division-of-huge-numbers-in-python
 https://www.geeksforgeeks.org/python-add-one-string-to-another/
 https://pynative.com/python-count-number-of-lines-in-file/
+https://www.freecodecamp.org/news/sort-dictionary-by-value-in-python/
+https://www.geeksforgeeks.org/reading-writing-text-files-python/
+https://www.geeksforgeeks.org/convert-integer-to-string-in-python/
+https://www.geeksforgeeks.org/python-removing-newline-character-from-string/
 """
