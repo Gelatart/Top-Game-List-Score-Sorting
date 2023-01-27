@@ -173,13 +173,19 @@ sheet1.write(0, 3, 'AVERAGE SCORE', boldStyle)
 sheet1.write(0, 4, 'LISTS INCLUDED ON', boldStyle)
 excelCount = 1
 for game, details in gameDb.items():
+    rScore = details.rankedScore
+    iScore = details.listCount
+    aScore = rScore / details.totalCount
     sheet1.write(excelCount, 0, game)
-    sheet1.write(excelCount, 1, details.rankedScore)
-    sheet1.write(excelCount, 2, details.listCount)
+    #sheet1.write(excelCount, 1, details.rankedScore)
+    #sheet1.write(excelCount, 2, details.listCount)
+    sheet1.write(excelCount, 1, rScore)
+    sheet1.write(excelCount, 2, iScore)
     #averageScore = details.rankedScore / details.listCount
     #averageScore = (details.rankedScore / details.listCount)/details.totalCount
-    averageScore = details.rankedScore / details.totalCount
-    sheet1.write(excelCount, 3, averageScore)
+    #averageScore = details.rankedScore / details.totalCount
+    #sheet1.write(excelCount, 3, averageScore)
+    sheet1.write(excelCount, 3, aScore)
     outputLists = ""
     for refList in details.listsReferencing:
         outputLists += refList
@@ -187,9 +193,12 @@ for game, details in gameDb.items():
     sheet1.write(excelCount, 4, outputLists)
     excelCount += 1
     #add to the individual databases
-    gameDbRanked[game] = details.rankedScore
-    gameDbInclusion[game] = details.listCount
-    gameDbAverage[game] = averageScore
+    #gameDbRanked[game] = details.rankedScore
+    #gameDbInclusion[game] = details.listCount
+    #gameDbAverage[game] = averageScore
+    gameDbRanked[game] = rScore
+    gameDbInclusion[game] = iScore
+    gameDbAverage[game] = aScore
 wb.save('Sorted Database.xls')
 
 #after printed out everything to excel, then make three printed sorted lists?
