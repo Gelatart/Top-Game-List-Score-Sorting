@@ -31,6 +31,7 @@ class GameObject:
         self.listCount = 1
         self.listsReferencing = []
         self.totalCount = 0
+        self.completed = False
 
     #consider storing a constantly updated average score?
 
@@ -44,6 +45,7 @@ class GameObject:
         self.listsReferencing = []
         self.listsReferencing.append(list)
         self.totalCount = 0
+        self.completed = False
 
     def __init__(self, rank, list, total):
         self.rankedScore = rank
@@ -51,6 +53,7 @@ class GameObject:
         self.listsReferencing = []
         self.listsReferencing.append(list)
         self.totalCount = total
+        self.completed = False
 
 # Workbook is created
 wb = Workbook()
@@ -160,12 +163,20 @@ for filename in os.listdir(directory):
             print("Score of {}: {}".format(count, line.strip()))
             #count -= 1
 
+completeFile = open('Completions.txt', 'r')
+completeLines = completeFile.readlines()
+for line in completeLines:
+    if line in gameDb:
+        gameDb[line].completed = True
+    #else: raise error because not in database? create it with 0 score?
+
 gameDbRanked = {}
 gameDbInclusion = {}
 gameDbAverage = {}
 "loop of printing database to a spreadsheet file"
 # Applying multiple styles
 boldStyle = xlwt.easyxf('font: bold 1;')
+crossedStyle = xlwt.easyxf('font: struck_out 1;')
 sheet1.write(0, 0, 'TITLE', boldStyle)
 sheet1.write(0, 1, 'RANKED SCORE', boldStyle)
 sheet1.write(0, 2, 'INCLUSION SCORE', boldStyle)
@@ -176,7 +187,10 @@ for game, details in gameDb.items():
     rScore = details.rankedScore
     iScore = details.listCount
     aScore = rScore / details.totalCount
-    sheet1.write(excelCount, 0, game)
+    if(details.completed == True):
+        sheet1.write(excelCount, 0, game, crossedStyle)
+    else:
+        sheet1.write(excelCount, 0, game)
     #sheet1.write(excelCount, 1, details.rankedScore)
     #sheet1.write(excelCount, 2, details.listCount)
     sheet1.write(excelCount, 1, rScore)
@@ -216,7 +230,10 @@ fileI = open("Sorted by Inclusion.txt","w")
 fileA = open("Sorted by Average.txt","w")
 
 for game, score in convertedRanked.items():
-    entry = game.strip()
+    entry = ""
+    if (gameDb[game].completed == True):
+        entry += "[x]"
+    entry += game.strip()
     #fileR.write(game)
     entry += " --> "
     #fileR.write(" --> ")
@@ -227,7 +244,10 @@ for game, score in convertedRanked.items():
 #then print out to the files for inclusion and average
 
 for game, score in convertedInclusion.items():
-    entry = game.strip()
+    entry = ""
+    if (gameDb[game].completed == True):
+        entry += "[x]"
+    entry += game.strip()
     #fileR.write(game)
     entry += " --> "
     #fileR.write(" --> ")
@@ -237,7 +257,10 @@ for game, score in convertedInclusion.items():
     fileI.write("\n")
 
 for game, score in convertedAverage.items():
-    entry = game.strip()
+    entry = ""
+    if (gameDb[game].completed == True):
+        entry += "[x]"
+    entry += game.strip()
     #fileR.write(game)
     entry += " --> "
     #fileR.write(" --> ")
@@ -253,6 +276,8 @@ fileA.close()
 #further sort by keys after sorted by values?
 
 #print totals of the numbers of lists in each category?
+
+#once gone through creating the lists, use separate files to mark the status of games? (completed, etc.)
 
 print("Successfully completed!")
 
@@ -278,4 +303,5 @@ https://www.freecodecamp.org/news/sort-dictionary-by-value-in-python/
 https://www.geeksforgeeks.org/reading-writing-text-files-python/
 https://www.geeksforgeeks.org/convert-integer-to-string-in-python/
 https://www.geeksforgeeks.org/python-removing-newline-character-from-string/
+https://github.com/python-excel/xlwt/blob/master/xlwt/Style.py
 """
