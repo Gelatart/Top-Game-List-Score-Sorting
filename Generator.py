@@ -2,7 +2,7 @@
 import os
 import math
 # Writing to an excel
-# sheet using Python
+# sheet using Python33
 import xlwt
 from xlwt import Workbook
 # assign directory
@@ -61,6 +61,10 @@ wb = Workbook()
 # add_sheet is used to create sheet.
 sheet1 = wb.add_sheet('Sheet 1')
 
+rankedFileCount = 0
+unrankedFileCount = 0
+formerFileCount = 0
+
 "loop of getting the database information"
 # iterate over files in
 # that directory
@@ -72,10 +76,14 @@ for filename in os.listdir(directory):
         #print(f)
         # Using readlines()
         file1 = open(f, 'r')
+        rankedFileCount += 1
         startingLine = file1.readline()
         Lines = file1.readlines()
-        #count = 300 # replace with grabbing how many lines there are
-        count = int(startingLine)
+        #count = int(startingLine)
+        count = len(Lines)
+        print(f)
+        print(len(Lines))
+        #input('Wait to review\n')
         originalCount = count
         # Strips the newline character
         for line in Lines:
@@ -101,21 +109,23 @@ for filename in os.listdir(directory):
         #print(f)
         # Using readlines()
         file1 = open(f, 'r')
+        unrankedFileCount += 1
         startingLine = file1.readline()
         Lines = file1.readlines()
-        #count = 300 # replace with grabbing how many lines there are
         #count = int(startingLine)
         floatCount = float(startingLine)
         count = math.floor(floatCount)
+        count = len(Lines)
         print(count)
         originalCount = count
         #do a sum of all numbers in that count
-        #count = math.factorial(originalCount)
         count = originalCount * (originalCount + 1) // 2
-        print(count)
         #divide the factorial by the original count
         count //= originalCount
         print(count)
+        print(f)
+        print(len(Lines))
+        input('Wait to review\n')
         # Strips the newline character
         for line in Lines:
             if line in gameDb:
@@ -139,9 +149,9 @@ for filename in os.listdir(directory):
         #print(f)
         # Using readlines()
         file1 = open(f, 'r')
+        formerFileCount += 1
         startingLine = file1.readline()
         Lines = file1.readlines()
-        #count = 300 # replace with grabbing how many lines there are
         #count = 1
         count = int(startingLine)
         originalCount = count
@@ -279,6 +289,12 @@ fileA.close()
 
 #once gone through creating the lists, use separate files to mark the status of games? (completed, etc.)
 
+listCounts = "Ranked Lists: " + str(rankedFileCount)
+print(listCounts)
+listCounts = "Unranked Lists: " + str(unrankedFileCount)
+print(listCounts)
+listCounts = "Former Lists: " + str(formerFileCount)
+print(listCounts)
 print("Successfully completed!")
 
 """"
@@ -304,4 +320,5 @@ https://www.geeksforgeeks.org/reading-writing-text-files-python/
 https://www.geeksforgeeks.org/convert-integer-to-string-in-python/
 https://www.geeksforgeeks.org/python-removing-newline-character-from-string/
 https://github.com/python-excel/xlwt/blob/master/xlwt/Style.py
+https://www.digitalocean.com/community/tutorials/python-wait-time-wait-for-input
 """

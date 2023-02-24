@@ -43,12 +43,12 @@ Legend of Zelda: Collector's Edition [Legend of Zelda + Zelda II: The Adventure 
 Red Dead Redemption
 Gran Turismo 3: A-Spec
 Halo 2
+Persona 5 [Royal]
 Legend of Zelda: A Link to the Past and Four Swords
 Legend of Zelda: Majora's Mask
 The Last of Us
 Madden NFL 2003
 Tony Hawk's Pro Skater 2 [GBA]
-Persona 5 [Royal]
 The Last of Us [Remastered]
 Portal 2
 Metal Gear Solid V: The Phantom Pain
@@ -62,6 +62,7 @@ Tony Hawk's Pro Skater 4
 Devil May Cry
 Call of Duty 4: Modern Warfare
 Madden NFL 2002
+Metroid Prime [Remastered]
 Legend of Zelda: Ocarina of Time [3D]
 Chrono Cross
 Celeste
@@ -73,19 +74,19 @@ Quake
 Halo 3
 Ninja Gaiden Black
 Street Fighter IV
-Super Mario Advance 4 [Super Mario Bros. 3]
+Super Mario Bros. 3 [Super Mario Advance 4]
 Jet Set Radio
 Metal Gear Solid
 Grim Fandango
 Tom Clancy's Splinter Cell: Chaos Theory
 Resident Evil - Code: Veronica
+The Witcher 3: Wild Hunt [Complete Edition]
 Burnout 3: Takedown
 Diablo
 God of War Ragnarok
 Metal Gear Solid 3 [Subsistence]
 Metal Gear Solid 4: Guns of the Patriots
 NCAA Football 2004
-The Witcher 3: Wild Hunt [Complete Edition]
 God of War
 Star Wars: Knights of the Old Republic
 Sid Meier's Civilization IV
@@ -98,4 +99,3 @@ Gran Turismo 2
 The Last of Us Part II
 Hades
 Tom Clancy's Splinter Cell: Pandora Tomorrow
-Grand Theft Auto: Chinatown Wars
