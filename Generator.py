@@ -5,6 +5,9 @@ import math
 # sheet using Python33
 import xlwt
 from xlwt import Workbook
+#SQLite
+import sqlite3
+
 # assign directory
 #directory = 'C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameLists\Ranked'
 directory = r'GameLists\Ranked'
@@ -238,6 +241,9 @@ convertedAverage = dict(sortByAverage)
 fileR = open("Sorted by Ranked.txt","w")
 fileI = open("Sorted by Inclusion.txt","w")
 fileA = open("Sorted by Average.txt","w")
+fileUR = open("Sorted by Ranked (Uncompleted).txt", "w")
+fileUI = open("Sorted by Inclusion (Uncompleted).txt","w")
+fileUA = open("Sorted by Average (Uncompleted).txt","w")
 
 for game, score in convertedRanked.items():
     entry = ""
@@ -251,6 +257,9 @@ for game, score in convertedRanked.items():
     #fileR.write(str(score))
     fileR.write(entry)
     fileR.write("\n")
+    if (gameDb[game].completed == False):
+        fileUR.write(entry)
+        fileUR.write("\n")
 #then print out to the files for inclusion and average
 
 for game, score in convertedInclusion.items():
@@ -265,6 +274,9 @@ for game, score in convertedInclusion.items():
     #fileR.write(str(score))
     fileI.write(entry)
     fileI.write("\n")
+    if (gameDb[game].completed == False):
+        fileUI.write(entry)
+        fileUI.write("\n")
 
 for game, score in convertedAverage.items():
     entry = ""
@@ -278,10 +290,22 @@ for game, score in convertedAverage.items():
     #fileR.write(str(score))
     fileA.write(entry)
     fileA.write("\n")
+    if (gameDb[game].completed == False):
+        fileUA.write(entry)
+        fileUA.write("\n")
 
 fileR.close()
 fileI.close()
 fileA.close()
+fileUR.close()
+fileUI.close()
+fileUA.close()
+
+#SQLite Segment
+conn = sqlite3.connect('games.db')
+print("Games database opened successfully")
+#... (EXPAND THE ACTUAL TABLE CREATION, ETC.?)
+conn.close()
 
 #further sort by keys after sorted by values?
 
@@ -321,4 +345,5 @@ https://www.geeksforgeeks.org/convert-integer-to-string-in-python/
 https://www.geeksforgeeks.org/python-removing-newline-character-from-string/
 https://github.com/python-excel/xlwt/blob/master/xlwt/Style.py
 https://www.digitalocean.com/community/tutorials/python-wait-time-wait-for-input
+https://www.tutorialspoint.com/sqlite/sqlite_python.htm
 """

@@ -1,5 +1,6 @@
 Batman: Arkham Asylum
 Batman: Arkham City
+Danganronpa: Trigger Happy Havoc
 Grim Fandango
 Half-Life
 Half-Life 2
@@ -15,10 +16,11 @@ Pokemon Black / White
 Portal
 Portal 2
 Resident Evil 4
+Silent Hill
 Silent Hill 2
 Sonic the Hedgehog
 Sonic the Hedgehog 2
+Spyro the Dragon
 Super Mario Galaxy
 Super Mario Odyssey
-Tetris
 Undertale

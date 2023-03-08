@@ -1,7 +1,4 @@
-[x]Half-Life 2 --> 23
-[x]Legend of Zelda: Ocarina of Time --> 23
 Super Mario 64 --> 23
-[x]Resident Evil 4 --> 22
 Final Fantasy VII --> 20
 Mass Effect 2 --> 20
 Super Metroid --> 20
@@ -9,7 +6,6 @@ Red Dead Redemption --> 20
 Legend of Zelda: A Link to the Past --> 19
 Super Mario World --> 19
 BioShock --> 19
-[x]Portal 2 --> 19
 Chrono Trigger --> 19
 Shadow of the Colossus --> 19
 Castlevania: Symphony of the Night --> 19
@@ -17,7 +13,6 @@ Minecraft --> 18
 GoldenEye 007 --> 17
 Final Fantasy VI --> 17
 Elder Scrolls V: Skyrim --> 17
-[x]Silent Hill 2 --> 17
 The Last of Us --> 16
 World of Warcraft --> 16
 Call of Duty 4: Modern Warfare --> 16
@@ -27,9 +22,7 @@ Metroid Prime --> 16
 The Witcher 3: Wild Hunt --> 16
 Metal Gear Solid --> 15
 EarthBound --> 15
-[x]Portal --> 15
 Grand Theft Auto: San Andreas --> 15
-[x]Halo: Combat Evolved --> 14
 Star Wars: Knights of the Old Republic --> 14
 Metal Gear Solid 3: Snake Eater --> 14
 Fallout 3 --> 14
@@ -37,7 +30,6 @@ Uncharted 2: Among Thieves --> 14
 Legend of Zelda: Majora's Mask --> 14
 Legend of Zelda: Wind Waker --> 14
 Super Mario World 2: Yoshi's Island --> 14
-[x]Half-Life --> 14
 Deus Ex --> 14
 DOOM --> 13
 Super Mario Bros. 3 --> 13
@@ -47,10 +39,7 @@ Super Smash Bros. Melee --> 13
 Journey --> 13
 Final Fantasy Tactics --> 13
 Super Mario Galaxy 2 --> 13
-[x]Halo 3 --> 13
 Sid Meier's Civilization IV --> 13
-[x]Batman: Arkham City --> 12
-[x]Grim Fandango --> 12
 Prince of Persia: The Sands of Time --> 12
 System Shock 2 --> 12
 Okami --> 12
@@ -65,7 +54,6 @@ Bloodborne --> 11
 Diablo II --> 11
 Dota 2 --> 11
 Final Fantasy IX --> 11
-[x]Super Mario Galaxy --> 11
 Resident Evil 2 --> 10
 SimCity 2000 --> 10
 Donkey Kong --> 10
@@ -80,7 +68,6 @@ Super Mario Kart --> 9
 Tekken 3 --> 9
 Rock Band 3 --> 9
 Secret of Mana --> 9
-[x]Undertale --> 9
 Myst --> 9
 Overwatch --> 9
 Mega Man 2 --> 9
@@ -98,8 +85,6 @@ Super Mario Bros. --> 9
 Advance Wars --> 9
 Persona 4 [Golden] --> 9
 Street Fighter II --> 8
-[x]Pokemon Red / Blue --> 8
-[x]Super Mario Odyssey --> 8
 Gran Turismo 3: A-Spec --> 8
 Dead Space --> 8
 Fire Emblem Awakening --> 8
@@ -117,7 +102,6 @@ Elder Scrolls IV: Oblivion --> 8
 DOOM II: Hell on Earth --> 8
 Demon's Souls --> 8
 StarCraft II: Wings of Liberty --> 8
-[x]Halo 2 --> 8
 Persona 5 --> 8
 Mass Effect --> 8
 Red Dead Redemption 2 --> 7
@@ -154,7 +138,6 @@ LIMBO --> 6
 Super Meat Boy --> 6
 Max Payne --> 6
 Jet Set Radio --> 6
-[x]Batman: Arkham Asylum --> 6
 Mass Effect 3 --> 6
 BioShock Infinite --> 6
 Chrono Cross --> 6
@@ -172,11 +155,9 @@ Resident Evil 2 [2019] --> 6
 Fallout: New Vegas --> 6
 Vampire: The Masquerade - Bloodlines --> 6
 Battlefield 1942 --> 6
-[x]Sonic the Hedgehog --> 5
 Wii Sports --> 5
 The Sims 3 --> 5
 Gauntlet --> 5
-[x]Kingdom Hearts --> 5
 Space Invaders --> 5
 TowerFall [Ascension] --> 5
 NieR: Automata --> 5
@@ -185,7 +166,6 @@ Conker's Bad Fur Day --> 5
 Phantasy Star IV: The End of the Millennium --> 5
 Uncharted 4: A Thief's End --> 5
 The Witness --> 5
-[x]Silent Hill --> 5
 Shenmue --> 5
 Kingdom Hearts II --> 5
 Pokemon Gold / Silver --> 5
@@ -197,7 +177,6 @@ Devil May Cry --> 5
 Left 4 Dead --> 5
 Street Fighter IV --> 5
 Fable II --> 5
-[x]Pokemon Yellow --> 5
 Gears of War 2 --> 5
 Super Smash Bros. Brawl --> 5
 The Orange Box --> 5
@@ -360,7 +339,6 @@ Star Wars: Battlefront II [2005] --> 3
 Super Smash Bros. for Wii U --> 3
 Dragon Quest VIII --> 3
 Tales of Symphonia --> 3
-[x]Sonic the Hedgehog 2 --> 3
 Final Fantasy XIV: A Realm Reborn --> 3
 Fallout --> 3
 Borderlands --> 3
@@ -470,7 +448,6 @@ Legend of Zelda: A Link Between Worlds --> 2
 Fallout 4 --> 2
 Dragon Age: Inquisition --> 2
 Ratchet & Clank: Up Your Arsenal --> 2
-[x]Halo: Reach --> 2
 Final Fantasy VIII --> 2
 The Legend of Dragoon --> 2
 PlayerUnknown's Battlegrounds --> 2
@@ -499,7 +476,6 @@ Star Wars: The Old Republic --> 2
 Gears of War 4 --> 2
 SOCOM II: U.S. Navy SEALs --> 2
 Final Fantasy Tactics: The War of the Lions --> 2
-[x]Pokemon Black / White --> 2
 Picross 3D --> 2
 Dragon Quest V: Hand of the Heavenly Bride [Dragon Warrior V] --> 2
 Call of Duty: Black Ops II --> 2
@@ -754,7 +730,6 @@ Legend of Legaia --> 1
 Terraria --> 1
 Assassin's Creed Origins --> 1
 The Pandora Directive --> 1
-[x]Spyro the Dragon --> 1
 Mega Man Legends --> 1
 Crisis Core: Final Fantasy VII --> 1
 Xenosaga Episode I: Der Wille zur Macht --> 1
@@ -803,7 +778,6 @@ Kirby Mass Attack --> 1
 Gods Will Be Watching --> 1
 Half-Life 2 [Episode 1] --> 1
 Half-Life 2 [Episode 2] --> 1
-[x]Danganronpa: Trigger Happy Havoc --> 1
 The Dig --> 1
 Tom Clancy's Splinter Cell: Double Agent --> 1
 Deus Ex: Invisible War --> 1
