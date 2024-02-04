@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b33df5e9-3490-443b-8a31-ba21b2040da7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/GameLists/Former/FORMER The Best PC Games - PCMag (As of 3-8-2023).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameLists/Unranked/The Best PC Games - PCMag (As of 3-8-2023).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sorted Database.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted Database.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Completions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Completions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameLists/Former/FORMER The Best PC Games - PCMag (As of 2-15-2023).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameLists/Unranked/The Best PC Games - PCMag (As of 2-15-2023).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Readme.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Readme.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tracking Categories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tracking Categories.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

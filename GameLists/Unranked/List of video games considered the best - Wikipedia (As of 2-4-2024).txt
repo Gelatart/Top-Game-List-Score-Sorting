@@ -1,4 +1,4 @@
-310
+321
 The Oregon Trail
 Pong
 Combat
@@ -26,11 +26,12 @@ M.U.L.E.
 Star Wars [Arcade]
 Elite
 Marble Madness
-Tetris
 Gauntlet
 Ghosts 'n Goblins
 Super Mario Bros.
+Tetris
 Ultima IV: Quest of the Avatar
+Arkanoid
 Bubble Bobble
 Legend of Zelda
 OutRun
@@ -76,7 +77,6 @@ Ultima VII: The Black Gate
 Virtua Racing
 Wolfenstein 3D
 Maniac Mansion II: Day of the Tentacle
-Daytona USA
 DOOM
 Gunstar Heroes
 Legend of Zelda: Link's Awakening
@@ -92,6 +92,7 @@ Samurai Shodown
 SimCity 2000
 Star Fox
 Syndicate
+Daytona USA
 Donkey Kong Country
 DOOM II: Hell on Earth
 EarthBound
@@ -121,7 +122,6 @@ Pokemon Red / Blue
 Quake
 Resident Evil
 Super Mario 64
-Tekken 3
 Tomb Raider
 Wave Race 64
 Wipeout 2097
@@ -137,6 +137,7 @@ Grand Theft Auto
 Quake II
 Star Fox 64
 Star Wars Jedi Knight: Dark Forces II
+Tekken 3
 Total Annihilation
 Ultima Online
 Baldur's Gate
@@ -169,10 +170,12 @@ Deus Ex
 Diablo II
 Jet Set Radio
 Legend of Zelda: Majora's Mask
+Perfect Dark
 Marvel vs. Capcom 2: New Age of Heroes
 The Sims
 Thief II: The Metal Age
 Tony Hawk's Pro Skater 2
+Vagrant Story
 Advance Wars
 Animal Crossing
 Devil May Cry
@@ -268,6 +271,7 @@ League of Legends
 Left 4 Dead 2
 Plants vs. Zombies
 Uncharted 2: Among Thieves
+Sid Meier's Civilization V
 God of War III
 Heavy Rain
 LIMBO
@@ -283,11 +287,12 @@ Dark Souls
 Elder Scrolls V: Skyrim
 Minecraft
 Portal 2
+Borderlands 2
 Dishonored
 Far Cry 3
 Fire Emblem Awakening
-Journey
 Hotline Miami
+Journey
 The Walking Dead
 XCOM: Enemy Unknown
 BioShock Infinite
@@ -296,16 +301,22 @@ Grand Theft Auto V
 The Last of Us
 Papers, Please
 Destiny
+Hearthstone
 Shovel Knight
 Bloodborne
 Rocket League
 Undertale
 The Witcher 3: Wild Hunt
+Dishonored 2
 INSIDE
 Overwatch
 Stardew Valley
 Uncharted 4: A Thief's End
+Fortnite
 Legend of Zelda: Breath of the Wild
 Super Mario Odyssey
 God of War [2018]
 Red Dead Redemption 2
+Super Smash Bros. Ultimate
+Disco Elysium
+Hades
