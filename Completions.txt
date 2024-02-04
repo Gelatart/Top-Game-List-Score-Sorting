@@ -2,6 +2,7 @@ Ape Escape
 Batman: Arkham Asylum
 Batman: Arkham City
 Danganronpa: Trigger Happy Havoc
+Danganronpa 2: Goodbye Despair
 Grim Fandango
 Half-Life
 Half-Life 2
@@ -10,6 +11,7 @@ Halo 2
 Halo 3
 Halo: Reach
 Kingdom Hearts
+The Last of Us
 Legend of Zelda: Ocarina of Time
 Pokemon Red / Blue
 Pokemon Yellow
@@ -22,6 +24,7 @@ Silent Hill 2
 Sonic the Hedgehog
 Sonic the Hedgehog 2
 Spyro the Dragon
+Super Mario 64
 Super Mario Galaxy
 Super Mario Odyssey
 Undertale
