@@ -7,6 +7,7 @@ import xlwt
 from xlwt import Workbook
 #SQLite
 import sqlite3
+#^Replacing with mongodb?
 
 # assign directory
 #directory = 'C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameLists\Ranked'
@@ -35,6 +36,11 @@ class GameObject:
         self.listsReferencing = []
         self.totalCount = 0
         self.completed = False
+        self.mainPlatform = 'None'
+        self.listPlatforms = []
+        self.releaseDate = 'Unknown' #Can I set this to some date value?
+        self.playerCounts = []
+        self.listDevelopers = []
 
     #consider storing a constantly updated average score?
 
@@ -49,6 +55,11 @@ class GameObject:
         self.listsReferencing.append(list)
         self.totalCount = 0
         self.completed = False
+        self.mainPlatform = 'None'
+        self.listPlatforms = []
+        self.releaseDate = 'Unknown'  # Can I set this to some date value?
+        self.playerCounts = []
+        self.listDevelopers = []
 
     def __init__(self, rank, list, total):
         self.rankedScore = rank
@@ -57,6 +68,11 @@ class GameObject:
         self.listsReferencing.append(list)
         self.totalCount = total
         self.completed = False
+        self.mainPlatform = 'None'
+        self.listPlatforms = []
+        self.releaseDate = 'Unknown'  # Can I set this to some date value?
+        self.playerCounts = []
+        self.listDevelopers = []
 
 # Workbook is created
 wb = Workbook()
@@ -127,7 +143,6 @@ for filename in os.listdir(directory):
         count //= originalCount
         print(count)
         print(f)
-        print(len(Lines))
         input('Wait to review\n')
         # Strips the newline character
         for line in Lines:
@@ -182,6 +197,36 @@ for line in completeLines:
     if line in gameDb:
         gameDb[line].completed = True
     #else: raise error because not in database? create it with 0 score?
+
+print("Time for attributes!")
+
+#ADD SECTION WHERE WE START GRABBING ADDITIONAL ATTRIBUTES FOR GAME DATABASE?
+attributesFile = open('AdditionalAttributes.txt', 'r')
+attributesLines = attributesFile.readlines()
+itr = iter(attributesLines)
+#for line in attributesLines:
+try:
+    #if line in gameDb:
+    while True:
+        #Properly parse through line and indented lines?
+        title = next(itr)
+        if title in gameDb:
+            print(title)
+            attribute = next(itr)
+            print(attribute)
+            attribute = next(itr)
+            print(attribute)
+            attribute = next(itr)
+            print(attribute)
+            attribute = next(itr)
+            print(attribute)
+            attribute = next(itr)
+            print(attribute)
+            print('')
+        #else: supposed to be in database?
+except StopIteration:
+        pass
+
 
 gameDbRanked = {}
 gameDbInclusion = {}
@@ -346,4 +391,5 @@ https://www.geeksforgeeks.org/python-removing-newline-character-from-string/
 https://github.com/python-excel/xlwt/blob/master/xlwt/Style.py
 https://www.digitalocean.com/community/tutorials/python-wait-time-wait-for-input
 https://www.tutorialspoint.com/sqlite/sqlite_python.htm
+https://www.geeksforgeeks.org/iterate-over-a-list-in-python/
 """

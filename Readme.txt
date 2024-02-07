@@ -2,9 +2,6 @@ HOW TO WORK THIS:
 
 <fill in process of running this and environment required>
 
-<review AI class? for process of setting up the build environment and building and
-running it from command line?>
-
 <update proper score for former best pc games list (unranked will calculate score fine?)>
 
 GRABBING FROM AI CLASS (UVU CS 4470):
@@ -20,7 +17,7 @@ GRABBING FROM AI CLASS (UVU CS 4470):
 --Type "activate GameListScore" to switch from (base) to (GameListScore)
 --"python -V" will show the version (as of writing it is Python 3.10.9)
 --"conda deactivate" will exit out of conda environment
---"python Geneator.py" should run it properly once in the environment
+--"python Generator.py" should run it properly once in the environment
 
 SCORING PROCESSES:
 -Ranked: 
