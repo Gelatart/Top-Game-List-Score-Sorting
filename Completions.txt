@@ -13,6 +13,8 @@ Halo: Reach
 Kingdom Hearts
 The Last of Us
 Legend of Zelda: Ocarina of Time
+Legend of Zelda: Twilight Princess
+Luigi's Mansion
 Pokemon Red / Blue
 Pokemon Yellow
 Pokemon Black / White
@@ -27,4 +29,6 @@ Spyro the Dragon
 Super Mario 64
 Super Mario Galaxy
 Super Mario Odyssey
+Super Smash Bros. Melee
+Tetris
 Undertale

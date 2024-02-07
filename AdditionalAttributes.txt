@@ -1,0 +1,35 @@
+TEMPLATE GAME
+	Main: 
+	Platforms: 
+	Release: 
+	Players: 
+	Devs: 
+
+
+Legend of Zelda: A Link to the Past
+	Main: SNES
+	Platforms: SNES, Super Famicom, Satellaview, Wii, Wii U, New 3DS, Switch, SNES Classic
+	Release: 11/21/1991
+	Players: 1
+	Devs: Nintendo EAD
+
+Legend of Zelda: Ocarina of Time
+	Main: N64
+	Platforms: N64, Wii, Wii U, Switch
+	Release: 11/21/1998
+	Players: 1
+	Devs: Nintendo EAD
+
+Resident Evil 4
+	Main: GCN
+	Platforms: GCN, PS2, PC, X360, PS3, PS4, XONE, Switch
+	Release: 1/11/2005
+	Players: 1
+	Devs: Capcom Production Studio 4
+
+Super Metroid
+	Main: SNES
+	Platforms: SNES, Super Famicom, Wii, Wii U, New 3DS, SNES Classic
+	Release: 3/19/1994
+	Players: 1
+	Devs: Nintendo R&D1, Intelligent Systems
