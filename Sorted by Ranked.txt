@@ -35,10 +35,10 @@ Call of Duty 4: Modern Warfare --> 1493
 StarCraft --> 1478
 DOOM --> 1466
 Super Mario Bros. --> 1430
+Super Mario Galaxy 2 --> 1419
 Legend of Zelda: Wind Waker --> 1418
 [x]Silent Hill 2 --> 1412
-Super Mario Galaxy 2 --> 1406
-[x]Super Mario Galaxy --> 1380
+[x]Super Mario Galaxy --> 1393
 [x]Half-Life --> 1376
 Metal Gear Solid 3: Snake Eater --> 1370
 Journey --> 1340
@@ -115,13 +115,13 @@ Tom Clancy's Splinter Cell: Chaos Theory --> 724
 [x]Super Mario Odyssey --> 720
 Mega Man 2 --> 719
 [x]Batman: Arkham Asylum --> 719
+Wii Sports --> 718
 Super Mario RPG: Legend of the Seven Stars --> 718
 Sid Meier's Civilization V --> 718
 Diablo --> 716
 Rock Band --> 709
 Gears of War --> 708
 BioShock Infinite --> 707
-Wii Sports --> 705
 Burnout 3: Takedown --> 705
 [x]Kingdom Hearts --> 703
 Psychonauts --> 701
@@ -153,12 +153,13 @@ Galaga --> 635
 Destiny --> 632
 Robotron: 2084 --> 631
 Rock Band 2 --> 626
+Xenoblade Chronicles --> 617
 Phoenix Wright: Ace Attorney --> 615
 Pong --> 610
 Paper Mario: The Thousand-Year Door --> 609
 Homeworld --> 607
-Xenoblade Chronicles --> 604
 Mario Kart 8 --> 603
+[x]Legend of Zelda: Twilight Princess --> 603
 Age of Empires II: The Age of Kings --> 601
 Mass Effect 3 --> 600
 Asteroids --> 599
@@ -167,7 +168,6 @@ Tomb Raider --> 595
 Persona 4 --> 595
 X-COM: UFO Defense --> 594
 Hitman: Blood Money --> 591
-[x]Legend of Zelda: Twilight Princess --> 590
 Legend of Zelda: Link's Awakening --> 590
 Animal Crossing --> 589
 Mario Kart 64 --> 588
@@ -329,6 +329,7 @@ Castlevania: Aria of Sorrow --> 344
 Crusader Kings II --> 342
 DEFCON --> 341
 FS1 Flight Simulator --> 338
+Super Smash Bros. Brawl --> 337
 Mortal Kombat --> 337
 Assassin's Creed IV: Black Flag --> 337
 Giants: Citizen Kabuto --> 336
@@ -345,7 +346,6 @@ Max Payne 2: The Fall of Max Payne --> 329
 Heavy Rain --> 328
 Superhot [VR] --> 327
 Dishonored 2 --> 326
-Super Smash Bros. Brawl --> 324
 PlayerUnknown's Battlegrounds --> 322
 Daytona USA --> 321
 Dragon Quest VIII --> 321
@@ -816,6 +816,7 @@ BioShock 2 --> 139
 FTL: Faster Than Light --> 139
 NFL 2K1 --> 138
 Mario Paint --> 138
+Legend of Zelda: Skyward Sword --> 137
 Castle Crashers --> 137
 Shin Megami Tensei: Strange Journey --> 137
 Sly 2: Band of Thieves --> 134
@@ -831,7 +832,6 @@ Legend of Legaia --> 126
 Lunar: Silver Star Story Complete --> 125
 Sid Meier's Alpha Centauri --> 125
 River City Ransom --> 125
-Legend of Zelda: Skyward Sword --> 124
 The Last of Us [Remastered] --> 124
 Crisis Core: Final Fantasy VII --> 124
 Ant Attack --> 122
@@ -1030,6 +1030,7 @@ Ratchet & Clank --> 58
 Jetpack Joyride --> 58
 Ninja Gaiden II: The Dark Sword of Chaos --> 58
 Breath of Fire --> 58
+Fire Emblem: Radiant Dawn --> 58
 Kirby's Dream Collection [Special Edition] [Kirby's Dream Land + Kirby's Adventure + Kirby's Dream Land 2 + Kirby Super Star + Kirby's Dream Land 3 + Kirby 64: The Crystal Shards] --> 57
 Final Fantasy III --> 57
 Psi-Ops: The Mindgate Conspiracy --> 57
@@ -1107,7 +1108,6 @@ Radiant Historia --> 45
 Boulder Dash --> 45
 Wizards & Warriors --> 45
 Alien 3 --> 45
-Fire Emblem: Radiant Dawn --> 45
 Puzzle & Dragons --> 44
 Age of Empires IV [Anniversary Edition] --> 44
 Crash Bandicoot 2: Cortex Strikes Back --> 44
@@ -1292,6 +1292,7 @@ Metal Gear Solid HD Collection [Metal Gear + Metal Gear 2: Solid Snake + MGS2 + 
 God of War: Ghost of Sparta --> 24
 Half-Life 2 [Episode 2] --> 24
 Duck Hunt --> 24
+Animal Crossing: City Folk --> 23
 Silent Hill 3 --> 23
 XCOM 2 --> 23
 Mark of the Ninja --> 23
@@ -1410,6 +1411,22 @@ Space Channel 5 --> 13
 DMC: Devil May Cry --> 13
 Zombie Nation --> 13
 Sunset Riders --> 13
+Wii Sports Resort --> 13
+Kirby's Epic Yarn --> 13
+Wii Party --> 13
+Madworld --> 13
+Donkey Kong Country Returns --> 13
+Metroid Prime 3: Corruption --> 13
+[x]Mario Kart Wii --> 13
+Muramasa: The Demon Blade --> 13
+No More Heroes 2: The Desperate Struggle --> 13
+Monster Hunter Tri --> 13
+Mario Strikers: Charged --> 13
+The Conduit --> 13
+New Super Mario Bros. Wii --> 13
+Super Paper Mario --> 13
+Punch-Out!! [Wii] --> 13
+WarioWare: Smooth Moves --> 13
 Valkyrie Profile --> 12
 Castlevania: Portrait of Ruin --> 12
 Velocity 2X --> 12
@@ -1428,7 +1445,6 @@ Forza Horizon --> 11
 Section Z --> 11
 Blackthorne --> 11
 Yggdra Union: We'll Never Fight Alone --> 11
-Animal Crossing: City Folk --> 10
 Unreal Tournament 2004 --> 10
 Mega Man X4 --> 10
 Gran Turismo [PSP] --> 10
@@ -1466,7 +1482,7 @@ Donkey Kong '94 --> 7
 Monkey Island 2: LeChuck's Revenge --> 7
 Fire Emblem: Path of Radiance --> 7
 Legend of Zelda: Phantom Hourglass --> 7
-Luigi's Mansion --> 7
+[x]Luigi's Mansion --> 7
 Uncharted: Golden Abyss --> 7
 Mega Man Powered Up --> 7
 Castle of Illusion Starring Mickey Mouse --> 7
