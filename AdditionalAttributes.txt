@@ -27,6 +27,13 @@ Resident Evil 4
 	Players: 1
 	Devs: Capcom Production Studio 4
 
+Super Mario 64
+	Main: N64
+	Platforms: N64, Wii, Wii U, Switch
+	Release: 6/23/1996
+	Players: 1
+	Devs: Nintendo EAD
+
 Super Metroid
 	Main: SNES
 	Platforms: SNES, Super Famicom, Wii, Wii U, New 3DS, SNES Classic
