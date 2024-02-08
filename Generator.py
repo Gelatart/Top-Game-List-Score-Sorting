@@ -143,7 +143,7 @@ for filename in os.listdir(directory):
         count //= originalCount
         print(count)
         print(f)
-        input('Wait to review\n')
+        #input('Wait to review\n')
         # Strips the newline character
         for line in Lines:
             if line in gameDb:
@@ -212,16 +212,26 @@ try:
         title = next(itr)
         if title in gameDb:
             print(title)
+            #mainPlatform
             attribute = next(itr)
             print(attribute)
+            gameDb[title].mainPlatform = attribute
+            #listPlatforms
             attribute = next(itr)
             print(attribute)
+            gameDb[title].listPlatforms = attribute
+            #releaseDate
             attribute = next(itr)
             print(attribute)
+            gameDb[title].releaseDate = attribute
+            #playerCounts
             attribute = next(itr)
             print(attribute)
+            gameDb[title].playerCounts = attribute
+            #listDevelopers
             attribute = next(itr)
             print(attribute)
+            gameDb[title].listDevelopers = attribute
             print('')
         #else: supposed to be in database?
 except StopIteration:
@@ -240,6 +250,11 @@ sheet1.write(0, 1, 'RANKED SCORE', boldStyle)
 sheet1.write(0, 2, 'INCLUSION SCORE', boldStyle)
 sheet1.write(0, 3, 'AVERAGE SCORE', boldStyle)
 sheet1.write(0, 4, 'LISTS INCLUDED ON', boldStyle)
+sheet1.write(0, 5, 'MAIN PLATFORM', boldStyle)
+sheet1.write(0, 6, 'LIST OF PLATFORMS', boldStyle)
+sheet1.write(0, 7, 'RELEASE DATE', boldStyle)
+sheet1.write(0, 8, 'PLAYER COUNTS', boldStyle)
+sheet1.write(0, 9, 'DEVELOPERS', boldStyle)
 excelCount = 1
 for game, details in gameDb.items():
     rScore = details.rankedScore
@@ -263,6 +278,16 @@ for game, details in gameDb.items():
         outputLists += refList
         outputLists += ", "
     sheet1.write(excelCount, 4, outputLists)
+    mPlat = details.mainPlatform
+    sheet1.write(excelCount, 5, mPlat)
+    lPlat = details.listPlatforms
+    sheet1.write(excelCount, 6, lPlat)
+    rDate = details.releaseDate
+    sheet1.write(excelCount, 7, rDate)
+    pCounts = details.playerCounts
+    sheet1.write(excelCount, 8, pCounts)
+    lDevs = details.listDevelopers
+    sheet1.write(excelCount, 9, lDevs)
     excelCount += 1
     #add to the individual databases
     #gameDbRanked[game] = details.rankedScore
