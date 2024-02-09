@@ -126,7 +126,6 @@ Bionic Commando --> 0.9207920792079208
 Outer Wilds --> 0.92
 Pikmin 3 --> 0.92
 Rogue --> 0.9145454545454546
-DuckTales --> 0.91
 Quest for Glory: So You Want to Be a Hero --> 0.908
 Umineko When They Cry - Answer Arcs --> 0.9
 Cory in the House [DS] --> 0.9
@@ -161,6 +160,7 @@ Super Street Fighter II Turbo --> 0.83
 Pathologic 2 --> 0.83
 NetHack --> 0.828
 Super Metroid --> 0.8273873873873874
+DuckTales --> 0.8253968253968254
 Ultra Street Fighter IV --> 0.825
 Z.H.P. Unlosing Ranger VS Darkdeath Evilman --> 0.82
 ActRaiser --> 0.82
@@ -522,7 +522,7 @@ Zombies Ate My Neighbors --> 0.53
 Vampire: The Masquerade - Bloodlines --> 0.5294117647058824
 Tony Hawk's Pro Skater --> 0.5289367429340511
 Ratchet & Clank: Going Commando --> 0.5275
-Legend of Zelda: Link's Awakening --> 0.5267857142857143
+Legend of Zelda: Link's Awakening --> 0.5261780104712042
 Far Cry 3 --> 0.5256064690026954
 Super Mario World 2: Yoshi's Island --> 0.5238738738738739
 Baldur's Gate --> 0.5233766233766234
@@ -831,7 +831,6 @@ Dragon Quest VIII --> 0.5015625
 Pac-Man --> 0.5015576323987538
 Centipede --> 0.5015576323987538
 Contra --> 0.5015576323987538
-R-Type --> 0.5015576323987538
 Speedball 2: Brutal Deluxe --> 0.5015576323987538
 Star Control II --> 0.5015576323987538
 Ridge Racer --> 0.5015576323987538
@@ -846,6 +845,7 @@ Star Wars Jedi Knight: Dark Forces II --> 0.5015576323987538
 Crash Bandicoot 3: Warped --> 0.5015576323987538
 Beyond Good & Evil --> 0.5015576323987538
 Hearthstone --> 0.5015576323987538
+R-Type --> 0.5014409221902018
 Metal Slug 3 --> 0.5013927576601671
 Sid Meier's Civilization --> 0.5013477088948787
 Total Annihilation --> 0.5012468827930174
@@ -903,6 +903,22 @@ Chuck Rock --> 0.5
 Caveman Games --> 0.5
 Lunar: Eternal Blue Complete --> 0.5
 Ni no Kuni --> 0.5
+Battletoads [Game Boy] --> 0.5
+Mario's Picross --> 0.5
+Gargoyle's Quest --> 0.5
+Batman: The Video Game [Game Boy] --> 0.5
+Mega Man V [Game Boy] --> 0.5
+F-1 Race --> 0.5
+Gradius: The Interstellar Assault [Nemesis II] --> 0.5
+Operation C --> 0.5
+Tiny Toons Adventures: Babs' Big Break --> 0.5
+Kid Dracula --> 0.5
+Mole Mania --> 0.5
+Balloon Kid --> 0.5
+Bill & Ted's Excellent Game Boy Adventure: A Bogus Journey! --> 0.5
+Castlevania II: Belmont's Revenge --> 0.5
+Donkey Kong Land 2 --> 0.5
+Wario Land: Super Mario Land 3 --> 0.5
 Colossal Cave Adventure --> 0.5
 Pinball Construction Set --> 0.5
 Commander Keen --> 0.5
@@ -1043,12 +1059,12 @@ Legend of Zelda: Ocarina of Time [3D] --> 0.43906510851419034
 Super Mario Sunshine --> 0.4381067961165049
 Gauntlet --> 0.4362176628010705
 Tempest 2000 --> 0.43539630836047777
+Kirby's Dream Land --> 0.435361216730038
 Age of Empires --> 0.4336175395858709
 Pokemon Ruby / Sapphire --> 0.43358395989974935
 Paper Mario: The Thousand-Year Door --> 0.43345195729537367
 X-COM: UFO Defense --> 0.4329446064139942
 Pikmin 2 --> 0.432
-Kirby's Dream Land --> 0.432
 It Takes Two --> 0.43
 Mega Man 6 --> 0.43
 Donkey Kong Country 3: Dixie Kong's Double Trouble! --> 0.43
@@ -1331,17 +1347,18 @@ Tokyo Mirage Sessions #FE --> 0.28
 Castle of Illusion Starring Mickey Mouse --> 0.28
 Resistance 3 --> 0.28
 Pocky & Rocky 2 --> 0.28
+Double Dragon --> 0.27983104540654696
 Devil May Cry --> 0.2788649706457926
 Gran Turismo 2 --> 0.2777777777777778
 Borderlands --> 0.27767857142857144
 Shining Force II --> 0.27759197324414714
 Sam & Max Hit the Road --> 0.2768729641693811
+Super Mario Land 2: 6 Golden Coins --> 0.27566539923954375
 Indiana Jones and the Fate of Atlantis --> 0.27527405602923266
 Drop7 --> 0.275
 Omori --> 0.275
 Missile Command --> 0.2747014115092291
 Castle Crashers --> 0.274
-Double Dragon --> 0.2736156351791531
 Conker's Bad Fur Day --> 0.27325581395348836
 The Witness --> 0.2732474964234621
 Battlefield 4 --> 0.27249357326478146
@@ -1353,7 +1370,6 @@ Tales of Vesperia --> 0.26732673267326734
 Forza Motorsport 4 --> 0.26666666666666666
 Pokemon X / Y --> 0.266
 Double Dragon [Arcade] --> 0.265
-Super Mario Land 2: 6 Golden Coins --> 0.264
 Tearaway --> 0.26222222222222225
 FTL: Faster Than Light --> 0.26127819548872183
 Burnout 2: Point of Impact --> 0.26
@@ -1493,6 +1509,7 @@ Treasure Island Dizzy --> 0.16
 Castlevania: Lords of Shadow --> 0.16
 Spider-Man and Venom: Maximum Carnage --> 0.16
 Rune Factory 4 --> 0.16
+Donkey Kong '94 --> 0.15873015873015872
 Sly Cooper and the Thievius Racoonus --> 0.15719063545150502
 Snatcher --> 0.15666666666666668
 WWF No Mercy --> 0.15653775322283608
@@ -1587,7 +1604,6 @@ Catherine --> 0.07167235494880546
 Hellblade: Senua's Sacrifice --> 0.07
 Gitaroo Man --> 0.07
 Football Manager 2009 --> 0.07
-Donkey Kong '94 --> 0.07
 Monkey Island 2: LeChuck's Revenge --> 0.07
 Medal of Honor --> 0.07
 Kickle Cubicle --> 0.07
@@ -1610,6 +1626,7 @@ The Ultimate Doom --> 0.05
 Dragon Quest III: The Seeds of Salvation [Dragon Warrior III] --> 0.05
 Street Fighter Alpha 2 --> 0.05
 Firewatch --> 0.04833333333333333
+Metroid II: Return of Samus --> 0.043726235741444866
 QWOP --> 0.042
 Wild Arms --> 0.04
 Driveclub --> 0.04
@@ -1639,7 +1656,6 @@ Spider-Man 2 --> 0.024
 Words with Friends --> 0.02
 Sonic 3 & Knuckles [Sonic the Hedgehog 3 + Sonic & Knuckles] --> 0.02
 King's Quest III: To Heir Is Human --> 0.02
-Metroid II: Return of Samus --> 0.02
 Viva Pinata --> 0.02
 Rush'n Attack --> 0.02
 Tiny Toons Adventure: Buster Busts Loose! --> 0.02

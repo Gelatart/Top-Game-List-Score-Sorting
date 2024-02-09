@@ -34,6 +34,13 @@ Super Mario 64
 	Players: 1
 	Devs: Nintendo EAD
 
+Super Mario World
+	Main: SNES
+	Platforms: SNES, Super Famicom, Arcade, Wii, Wii U, New 3DS, Switch, SNES Classic
+	Release: 11/21/1990
+	Players: 1, 2
+	Devs: Nintendo EAD
+
 Super Metroid
 	Main: SNES
 	Platforms: SNES, Super Famicom, Wii, Wii U, New 3DS, SNES Classic
