@@ -8,7 +8,7 @@ Super Mario World --> 2150
 Chrono Trigger --> 2077
 Mass Effect 2 --> 1959
 [x]Portal 2 --> 1958
-[x]Tetris --> 1943
+[x]Tetris --> 1956
 Shadow of the Colossus --> 1913
 BioShock --> 1865
 Red Dead Redemption --> 1857
@@ -53,8 +53,8 @@ Grand Theft Auto IV --> 1248
 Grand Theft Auto: Vice City --> 1213
 Deus Ex --> 1211
 Final Fantasy Tactics --> 1204
+[x]Pokemon Red / Blue --> 1187
 Metal Gear Solid 2: Sons of Liberty --> 1184
-[x]Pokemon Red / Blue --> 1174
 Super Mario World 2: Yoshi's Island --> 1163
 Legend of Zelda: Breath of the Wild --> 1151
 [x]Batman: Arkham City --> 1140
@@ -160,6 +160,7 @@ Pong --> 610
 Paper Mario: The Thousand-Year Door --> 609
 Homeworld --> 607
 [x]Legend of Zelda: Twilight Princess --> 603
+Legend of Zelda: Link's Awakening --> 603
 Age of Empires II: The Age of Kings --> 601
 Mass Effect 3 --> 600
 Asteroids --> 599
@@ -168,7 +169,6 @@ Tomb Raider --> 595
 Persona 4 --> 595
 X-COM: UFO Defense --> 594
 Hitman: Blood Money --> 591
-Legend of Zelda: Link's Awakening --> 590
 Animal Crossing --> 589
 Mario Kart 64 --> 588
 Donkey Kong Country --> 587
@@ -397,6 +397,7 @@ Jackbox Party Pack --> 268
 Impossible Mission --> 266
 Shantae and the Pirate's Curse --> 266
 Super Smash Bros. Ultimate --> 265
+Double Dragon --> 265
 Monster Hunter Generations --> 265
 Angry Birds --> 264
 Frogger --> 264
@@ -414,7 +415,6 @@ Missile Command --> 253
 Batman: Arkham Knight --> 253
 Command & Conquer: Red Alert --> 253
 Star Fox --> 253
-Double Dragon --> 252
 Pokemon Go --> 252
 Hotline Miami --> 251
 Final Fantasy XV --> 249
@@ -437,6 +437,7 @@ Gears of War 3 --> 231
 MVP Baseball 2005 --> 231
 Micro Machines --> 231
 Prey [2017] --> 229
+Kirby's Dream Land --> 229
 Life is Strange --> 228
 Alan Wake --> 228
 Ratchet & Clank Future: A Crack in Time --> 228
@@ -450,7 +451,6 @@ Resident Evil 4 [2023] --> 222
 Sekiro: Shadows Die Twice --> 222
 Fire Emblem Fates: Birthright and Conquest and Revelation --> 220
 Ghost Trick: Phantom Detective --> 220
-Kirby's Dream Land --> 216
 Ratchet & Clank: Up Your Arsenal --> 214
 Tennis for Two --> 213
 Battlefield 4 --> 212
@@ -512,6 +512,7 @@ Gunpoint --> 176
 Lunar Lander --> 175
 Sega Rally Championship --> 174
 Marvel vs. Capcom: Clash of Super Heroes --> 174
+R-Type --> 174
 Pokemon Ruby / Sapphire --> 173
 Wipeout --> 173
 The Orange Box --> 173
@@ -542,7 +543,6 @@ Final Fight --> 162
 Pac-Man --> 161
 Centipede --> 161
 Contra --> 161
-R-Type --> 161
 Speedball 2: Brutal Deluxe --> 161
 Star Control II --> 161
 Ridge Racer --> 161
@@ -587,6 +587,7 @@ Axiom Verge --> 146
 Destiny 2 --> 145
 Ogre Battle: March of the Black Queen --> 145
 Stunt Car Racer --> 145
+Super Mario Land 2: 6 Golden Coins --> 145
 Legend of Zelda: Tears of the Kingdom --> 144
 Balance of Power --> 144
 Banjo-Tooie --> 143
@@ -826,7 +827,6 @@ TimeSplitters 2 --> 133
 Tecmo Bowl --> 133
 Pokemon X / Y --> 133
 Pokemon Mystery Dungeon: Explorers of Sky --> 132
-Super Mario Land 2: 6 Golden Coins --> 132
 Star Wars: X-Wing --> 130
 Legend of Legaia --> 126
 Lunar: Silver Star Story Complete --> 125
@@ -866,6 +866,7 @@ Uridium --> 106
 Tomb Raider [2013] --> 105
 Viewtiful Joe --> 104
 Trials Fusion --> 104
+DuckTales --> 104
 Blades of Steel --> 102
 Half-Life: Alyx --> 102
 OutRun 2006: Coast 2 Coast --> 101
@@ -890,7 +891,6 @@ Half-Life 2 [Episode Two] --> 93
 Bionic Commando --> 93
 Outer Wilds --> 92
 Puyo Pop Fever --> 91
-DuckTales --> 91
 Umineko When They Cry - Answer Arcs --> 90
 Cory in the House [DS] --> 90
 Power Stone --> 90
@@ -1296,6 +1296,7 @@ Animal Crossing: City Folk --> 23
 Silent Hill 3 --> 23
 XCOM 2 --> 23
 Pikmin 3 --> 23
+Metroid II: Return of Samus --> 23
 Mark of the Ninja --> 23
 Ring King --> 23
 X-Men: Mutant Apocalypse --> 23
@@ -1341,6 +1342,7 @@ Skate --> 21
 Demon Sword --> 21
 Pilotwings --> 21
 Higurashi When They Cry Kai --> 20
+Donkey Kong '94 --> 20
 Star Wars Rogue Leader: Rogue Squadron II --> 20
 Dragon's Crown --> 20
 Grand Theft Auto: Vice City Stories --> 20
@@ -1415,6 +1417,22 @@ Space Channel 5 --> 13
 DMC: Devil May Cry --> 13
 Zombie Nation --> 13
 Sunset Riders --> 13
+Battletoads [Game Boy] --> 13
+Mario's Picross --> 13
+Gargoyle's Quest --> 13
+Batman: The Video Game [Game Boy] --> 13
+Mega Man V [Game Boy] --> 13
+F-1 Race --> 13
+Gradius: The Interstellar Assault [Nemesis II] --> 13
+Operation C --> 13
+Tiny Toons Adventures: Babs' Big Break --> 13
+Kid Dracula --> 13
+Mole Mania --> 13
+Balloon Kid --> 13
+Bill & Ted's Excellent Game Boy Adventure: A Bogus Journey! --> 13
+Castlevania II: Belmont's Revenge --> 13
+Donkey Kong Land 2 --> 13
+Wario Land: Super Mario Land 3 --> 13
 Wii Sports Resort --> 13
 Kirby's Epic Yarn --> 13
 Wii Party --> 13
@@ -1455,7 +1473,6 @@ Unreal Tournament 2004 --> 10
 Mega Man X4 --> 10
 Gran Turismo [PSP] --> 10
 NES Remix Pack --> 10
-Metroid II: Return of Samus --> 10
 Trials Evolution --> 10
 Mario Bros. --> 10
 Super Star Wars: The Empire Strikes Back --> 10
@@ -1487,7 +1504,6 @@ Hellblade: Senua's Sacrifice --> 7
 Gitaroo Man --> 7
 Football Manager 2009 --> 7
 Super Hexagon --> 7
-Donkey Kong '94 --> 7
 Monkey Island 2: LeChuck's Revenge --> 7
 Fire Emblem: Path of Radiance --> 7
 Legend of Zelda: Phantom Hourglass --> 7

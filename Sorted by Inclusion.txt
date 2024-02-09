@@ -21,10 +21,10 @@ Dark Souls --> 18
 GoldenEye 007 --> 17
 Metal Gear Solid --> 17
 Final Fantasy VI --> 17
+[x]Tetris --> 17
 [x]Silent Hill 2 --> 17
 Metroid Prime --> 17
 World of Warcraft --> 16
-[x]Tetris --> 16
 The Witcher 3: Wild Hunt --> 16
 [x]Halo: Combat Evolved --> 15
 Grand Theft Auto V --> 15
@@ -84,6 +84,7 @@ League of Legends --> 10
 Burnout 3: Takedown --> 10
 Ms. Pac-Man --> 9
 Super Mario Kart --> 9
+[x]Pokemon Red / Blue --> 9
 Rock Band 3 --> 9
 Secret of Mana --> 9
 [x]Undertale --> 9
@@ -104,7 +105,6 @@ Xenoblade Chronicles --> 9
 Advance Wars --> 9
 Persona 5 --> 9
 Street Fighter II --> 8
-[x]Pokemon Red / Blue --> 8
 [x]Super Mario Odyssey --> 8
 Mike Tyson's Punch-Out!! --> 8
 Gran Turismo 3: A-Spec --> 8
@@ -246,6 +246,7 @@ Stardew Valley --> 4
 Spy Hunter --> 4
 Maniac Mansion II: Day of the Tentacle --> 4
 Gone Home --> 4
+Double Dragon --> 4
 Heavy Rain --> 4
 Guitar Hero II --> 4
 EVE Online --> 4
@@ -298,6 +299,7 @@ Tales of Symphonia --> 4
 [x]Sonic the Hedgehog 2 --> 4
 Mario Kart 64 --> 4
 Banjo-Tooie --> 4
+Legend of Zelda: Link's Awakening --> 4
 Max Payne 2: The Fall of Max Payne --> 4
 Call of Duty 2 --> 4
 Homeworld --> 4
@@ -308,7 +310,6 @@ NHL '94 --> 3
 TimeSplitters 2 --> 3
 Dungeon Master --> 3
 Earthworm Jim --> 3
-Double Dragon --> 3
 Hitman: Blood Money --> 3
 Titanfall 2 --> 3
 Elite Beat Agents --> 3
@@ -385,7 +386,6 @@ Super Mario Sunshine --> 3
 Borderlands --> 3
 Sid Meier's Civilization V --> 3
 Final Fantasy Tactics Advance --> 3
-Legend of Zelda: Link's Awakening --> 3
 Diablo III --> 3
 The Witcher 2: Assassins of Kings --> 3
 The Legend of Heroes: Trails in the Sky --> 3
@@ -483,6 +483,7 @@ Legend of Zelda: Tears of the Kingdom --> 2
 LISA: The Painful --> 2
 Omori --> 2
 MechWarrior 2: 31st Century Combat --> 2
+Donkey Kong '94 --> 2
 Legend of Zelda: Collector's Edition [Legend of Zelda + Zelda II: The Adventure of Link + Legend of Zelda: Ocarina of Time + Legend of Zelda: Majora's Mask] --> 2
 Persona 5 [Royal] --> 2
 The Last of Us [Remastered] --> 2
@@ -572,6 +573,7 @@ Fatal Frame II: Crimson Butterfly --> 2
 Wasteland --> 2
 Dark Souls II --> 2
 Forza Horizon 3 --> 2
+Kirby's Dream Land --> 2
 Combat --> 2
 Final Fantasy --> 2
 Super Mario Bros. 2 --> 2
@@ -585,6 +587,7 @@ Dishonored 2 --> 2
 Ninja Gaiden [2004] --> 2
 Super Bomberman --> 2
 Joust --> 2
+Super Mario Land 2: 6 Golden Coins --> 2
 Frogger --> 2
 Command & Conquer: Red Alert --> 2
 Qix --> 2
@@ -598,6 +601,7 @@ River City Ransom --> 2
 Zelda II: The Adventure of Link --> 2
 Aladdin [Genesis] --> 2
 Marble Madness --> 2
+Metroid II: Return of Samus --> 2
 F-Zero --> 2
 Advance Wars 2: Black Hole Rising --> 2
 Arkanoid --> 2
@@ -608,6 +612,7 @@ XCOM: Enemy Unknown --> 2
 Far Cry 3 --> 2
 Sensible World of Soccer --> 2
 Bionic Commando --> 2
+DuckTales --> 2
 Bubble Bobble --> 2
 Micro Machines --> 2
 Lode Runner --> 2
@@ -637,6 +642,7 @@ Metal Slug 3 --> 2
 Pathologic --> 2
 Total Annihilation --> 2
 Yume Nikki --> 2
+R-Type --> 2
 Sid Meier's Civilization --> 2
 Wave Race 64 --> 2
 Turok: Dinosaur Hunter --> 2
@@ -738,7 +744,6 @@ Ace Attorney Investigations 2 --> 1
 DOOM Eternal --> 1
 Sonic 3 & Knuckles [Sonic the Hedgehog 3 + Sonic & Knuckles] --> 1
 Tom Clancy's Rainbow Six 3: Raven Shield --> 1
-Donkey Kong '94 --> 1
 Monkey Island 2: LeChuck's Revenge --> 1
 The House in Fata Morgana [Dreams of the Revenants Edition] --> 1
 Grand Theft Auto Double Pack [Grand Theft Auto III + Grand Theft Auto: Vice City] --> 1
@@ -972,7 +977,6 @@ Event[0] --> 1
 MVP Baseball 2005 --> 1
 Snake --> 1
 Tenchu: Stealth Assassins --> 1
-Kirby's Dream Land --> 1
 Tennis for Two --> 1
 Sid Meier's Railroad Tycoon --> 1
 NBA 2K12 --> 1
@@ -1008,7 +1012,6 @@ Balance of Power --> 1
 Fantastic Contraption --> 1
 Castle Crashers --> 1
 Pokemon X / Y --> 1
-Super Mario Land 2: 6 Golden Coins --> 1
 Star Wars: X-Wing --> 1
 Ant Attack --> 1
 Beatmania --> 1
@@ -1052,7 +1055,6 @@ Garry's Mod --> 1
 Cave Story --> 1
 Space Channel 5 --> 1
 Spider-Man 2 --> 1
-Metroid II: Return of Samus --> 1
 Ballblazer --> 1
 N+ --> 1
 Cave Story [3D] --> 1
@@ -1085,7 +1087,6 @@ South Park: The Stick of Truth --> 1
 Viva Pinata --> 1
 Madden NFL Football [SERIES] --> 1
 The Great Escape --> 1
-DuckTales --> 1
 R.C. Pro-Am --> 1
 Kid Icarus --> 1
 Blaster Master --> 1
@@ -1288,7 +1289,6 @@ Zeno Clash --> 1
 Pac-Man --> 1
 Centipede --> 1
 Contra --> 1
-R-Type --> 1
 Speedball 2: Brutal Deluxe --> 1
 Star Control II --> 1
 Ridge Racer --> 1
@@ -1313,6 +1313,22 @@ Chuck Rock --> 1
 Caveman Games --> 1
 Lunar: Eternal Blue Complete --> 1
 Ni no Kuni --> 1
+Battletoads [Game Boy] --> 1
+Mario's Picross --> 1
+Gargoyle's Quest --> 1
+Batman: The Video Game [Game Boy] --> 1
+Mega Man V [Game Boy] --> 1
+F-1 Race --> 1
+Gradius: The Interstellar Assault [Nemesis II] --> 1
+Operation C --> 1
+Tiny Toons Adventures: Babs' Big Break --> 1
+Kid Dracula --> 1
+Mole Mania --> 1
+Balloon Kid --> 1
+Bill & Ted's Excellent Game Boy Adventure: A Bogus Journey! --> 1
+Castlevania II: Belmont's Revenge --> 1
+Donkey Kong Land 2 --> 1
+Wario Land: Super Mario Land 3 --> 1
 Colossal Cave Adventure --> 1
 Pinball Construction Set --> 1
 Commander Keen --> 1
