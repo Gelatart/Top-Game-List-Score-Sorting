@@ -4,8 +4,6 @@ HOW TO WORK THIS:
 
 <fill in process of running this and environment required>
 
-<update proper score for former best pc games list (unranked will calculate score fine?)>
-
 GRABBING FROM AI CLASS (UVU CS 4470):
 [CS 4470 - Project 1.pdf helped figure a lot of this out, from Module 1]
 -We used Conda to manage a Python environment?
