@@ -1,4 +1,4 @@
-ACTIVATION KEY: GameListScore
+CONDA ACTIVATION: GameListScore
 
 HOW TO WORK THIS:
 
@@ -30,3 +30,6 @@ SCORING PROCESSES:
 --Count a sum of all numbers leading up to that one
 --Divide the sum by the number of entries in the list (round down)
 --Former for this list is that number divided in half (round down)
+
+MONGOSH:
+(Seems like I can only properly connect to the cluster when I don't use my VPN?)
