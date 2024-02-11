@@ -5,6 +5,13 @@ TEMPLATE GAME
 	Players: 
 	Devs: 
 
+Chrono Trigger
+	Main: SNES
+	Platforms: SNES, Super Famicom, Satellaview, Wii, PS1, iOS, Android, Windows
+	Release: 3/11/1995
+	Players: 1
+	Devs: Square
+
 Half-Life 2
 	Main: PC
 	Platforms: PC, Mac, Linux, Xbox, X360, PS3, Android
