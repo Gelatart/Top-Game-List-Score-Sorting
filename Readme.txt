@@ -2,8 +2,6 @@ CONDA ACTIVATION: GameListScore
 
 HOW TO WORK THIS:
 
-<fill in process of running this and environment required>
-
 GRABBING FROM AI CLASS (UVU CS 4470):
 [CS 4470 - Project 1.pdf helped figure a lot of this out, from Module 1]
 -We used Conda to manage a Python environment?
@@ -33,3 +31,6 @@ SCORING PROCESSES:
 
 MONGOSH:
 (Seems like I can only properly connect to the cluster when I don't use my VPN?)
+
+GITHUB BRANCHING:
+(Might need to ask dad to review console commands to do this properly)

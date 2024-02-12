@@ -8,6 +8,9 @@ from xlwt import Workbook
 #SQLite
 import sqlite3
 #^Replacing with mongodb?
+import pymongo
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
 
 # assign directory
 #directory = 'C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameLists\Ranked'
@@ -73,6 +76,8 @@ class GameObject:
         self.releaseDate = 'Unknown'  # Can I set this to some date value?
         self.playerCounts = []
         self.listDevelopers = []
+
+    #CONSIDER MAKING AN EXPORT FUNCTION FOR THE CLASS TO CONVERT TO DICTIONARY?
 
 # Workbook is created
 wb = Workbook()
@@ -237,6 +242,52 @@ try:
 except StopIteration:
         pass
 
+#START USING PYMONGO FOR OUTPUTTING TO MONGODB DATABASE
+#Used code sample from Atlas on how to connect with Pymongo for assistance here
+#mConnect = "mongodb+srv://danielfwood:<password>@gamesorting.zj02yi1.mongodb.net/?retryWrites=true&w=majority"
+monConnect = os.getenv('MONGO_URI')
+#replace <password>?
+#Is having password for database in public code an issue?
+monClient = pymongo.MongoClient(monConnect)
+#mClient = MongoClient(mConnect, server_api=ServerApi('1'))
+#Reference code: client = MongoClient(uri, server_api=ServerApi('1'))
+monDB = monClient["GameSorting"]
+try:
+    monClient.admin.command('ping')
+    print("Pinged your deployment. You successfully connected to MongoDB!")
+except Exception as e:
+    print(e)
+monCol = monDB["games"]
+
+#TEST INSERT_ONE
+testDict = { "title": "This is a test", "score": 69}
+test = monCol.insert_one(testDict)
+
+#INSERT ALL GAMES INTO DATABASE
+#Clear database to begin with?
+#export = []
+print("INSERTING INTO MONGODB!")
+for game, details in gameDb.items():
+    #print(details)
+    #insertion = monCol.insert_one(details)
+    #insertion = monCol.insert_one(gameDb[game])
+    #export.append(details)
+    exportDict = {}
+    exportDict["title"] = game
+    #exportDict["ranked score"] = details.rankedScore
+    #self.listCount = 1
+    #self.listsReferencing = []
+    #self.listsReferencing.append(list)
+    #self.totalCount = 0
+    #self.completed = False
+    #self.mainPlatform = 'None'
+    #self.listPlatforms = []
+    #self.releaseDate = 'Unknown'  # Can I set this to some date value?
+    #self.playerCounts = []
+    #self.listDevelopers = []
+    insertion = monCol.insert_one(exportDict)
+#insertion = monCol.insert_many(gameDb)
+#insertion = monCol.insert_many(export)
 
 gameDbRanked = {}
 gameDbInclusion = {}
@@ -393,7 +444,7 @@ print("Successfully completed!")
 
 """"
 REFERENCES:
-https://www.geeksforgeeks.org/how-to-iterate-over-files-in-directory-using-python/
+Iterate over files in directory: https://www.geeksforgeeks.org/how-to-iterate-over-files-in-directory-using-python/
 https://www.w3schools.com/python/python_dictionaries.asp
 https://www.geeksforgeeks.org/read-a-file-line-by-line-in-python/
 https://www.geeksforgeeks.org/convert-string-to-integer-in-python/
@@ -417,4 +468,7 @@ https://github.com/python-excel/xlwt/blob/master/xlwt/Style.py
 https://www.digitalocean.com/community/tutorials/python-wait-time-wait-for-input
 https://www.tutorialspoint.com/sqlite/sqlite_python.htm
 https://www.geeksforgeeks.org/iterate-over-a-list-in-python/
+Pymongo Tutorial: https://www.w3schools.com/python/python_mongodb_getstarted.asp
+Mongodb Tutorial: https://www.w3schools.com/mongodb/mongodb_get_started.php
+Add to a list: https://www.w3schools.com/python/python_lists_add.asp
 """

@@ -60,3 +60,10 @@ Super Metroid
 	Release: 3/19/1994
 	Players: 1
 	Devs: Nintendo R&D1, Intelligent Systems
+
+Tetris
+	Main: GB
+	Platforms: GB, 3DS, Switch, Electronika 60, IBM PC
+	Release: 1985
+	Players: 1
+	Devs: Alexey Pajitnov
