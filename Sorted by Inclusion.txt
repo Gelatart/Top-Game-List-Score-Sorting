@@ -134,6 +134,8 @@ Elder Scrolls III: Morrowind --> 8
 Mother 3 --> 7
 Red Dead Redemption 2 --> 7
 Left 4 Dead 2 --> 7
+Mortal Kombat II --> 7
+NBA Jam --> 7
 Tomb Raider --> 7
 Persona 4 --> 7
 God of War [2018] --> 7
@@ -162,8 +164,6 @@ God of War II --> 7
 Sid Meier's Civilization II --> 6
 Wii Sports --> 6
 The Sims 3 --> 6
-Mortal Kombat II --> 6
-NBA Jam --> 6
 Donkey Kong Country --> 6
 [x]Kingdom Hearts --> 6
 Shenmue II --> 6
@@ -173,6 +173,7 @@ Beyond Good and Evil --> 6
 Jet Set Radio --> 6
 Bayonetta --> 6
 Conker's Bad Fur Day --> 6
+Phantasy Star IV: The End of the Millennium --> 6
 Chrono Cross --> 6
 Shenmue --> 6
 Pokemon Gold / Silver --> 6
@@ -194,6 +195,7 @@ Slaves to Armok: God of Blood Chapter II - Dwarf Fortress --> 6
 Rock Band --> 6
 Battlefield 1942 --> 6
 Quake --> 6
+[x]Sonic the Hedgehog 2 --> 6
 Super Smash Bros. Ultimate --> 5
 Fortnite --> 5
 Gauntlet --> 5
@@ -202,8 +204,8 @@ TowerFall [Ascension] --> 5
 NieR: Automata --> 5
 Animal Crossing --> 5
 Ninja Gaiden [NES] --> 5
-Phantasy Star IV: The End of the Millennium --> 5
 Uncharted 4: A Thief's End --> 5
+Streets of Rage 2 --> 5
 The Witness --> 5
 Kingdom Hearts II --> 5
 God of War III --> 5
@@ -236,7 +238,6 @@ Borderlands 2 --> 5
 Diablo --> 5
 Paper Mario --> 5
 Age of Empires II: The Age of Kings --> 5
-[x]Sonic the Hedgehog 2 --> 5
 Mega Man X --> 5
 Shovel Knight --> 5
 Super Smash Bros. --> 5
@@ -250,6 +251,7 @@ Stardew Valley --> 4
 Spy Hunter --> 4
 Maniac Mansion II: Day of the Tentacle --> 4
 Gone Home --> 4
+Earthworm Jim --> 4
 Double Dragon --> 4
 Heavy Rain --> 4
 Guitar Hero II --> 4
@@ -258,7 +260,6 @@ Killer7 --> 4
 Mega Man 3 --> 4
 Spec Ops: The Line --> 4
 Viewtiful Joe --> 4
-Streets of Rage 2 --> 4
 Eternal Darkness: Sanity's Requiem --> 4
 Vagrant Story --> 4
 Dragon Quest VIII: Journey of the Cursed King --> 4
@@ -298,7 +299,7 @@ Sid Meier's Civilization V --> 4
 Super Mario Sunshine --> 4
 Dragon Age: Origins --> 4
 Persona 3 --> 4
-Super Smash Bros. for Wii U --> 4
+[x]Super Smash Bros. for Wii U --> 4
 Final Fantasy IV --> 4
 NieR --> 4
 Bully --> 4
@@ -312,6 +313,7 @@ Max Payne 2: The Fall of Max Payne --> 4
 The Chronicles of Riddick: Escape from Butcher Bay --> 4
 Call of Duty 2 --> 4
 Homeworld --> 4
+Dune II: The Building of a Dynasty [Dune: Battle for Arakis] --> 4
 Prince of Persia --> 4
 Lufia II: Rise of the Sinistrals --> 4
 Mario & Luigi: Superstar Saga --> 4
@@ -321,7 +323,6 @@ NHL '94 --> 3
 Cuphead --> 3
 TimeSplitters 2 --> 3
 Dungeon Master --> 3
-Earthworm Jim --> 3
 Hitman: Blood Money --> 3
 Titanfall 2 --> 3
 Elite Beat Agents --> 3
@@ -420,12 +421,14 @@ SimCity --> 3
 M.U.L.E. --> 3
 Metroid --> 3
 Dragon Quest [Dragon Warrior] --> 3
-Dune II: The Building of a Dynasty [Dune: Battle for Arakis] --> 3
+Herzog Zwei --> 3
+Gunstar Heroes --> 3
 Ultima Underworld: The Stygian Abyss --> 3
 Dragon's Dogma --> 3
 Flashback: The Quest for Identity --> 3
 Shadow Hearts: Covenant --> 3
 Ultima VII: The Black Gate --> 3
+Samurai Shodown --> 3
 Populous --> 3
 Contra III: The Alien Wars --> 3
 Ultima IV: Quest of the Avatar --> 3
@@ -545,6 +548,7 @@ Tomb Raider [2013] --> 2
 Prey [2017] --> 2
 BioShock 2 --> 2
 Ogre Battle: March of the Black Queen --> 2
+Shining Force II --> 2
 Donkey Kong 64 --> 2
 Sonic Mania --> 2
 L.A. Noire --> 2
@@ -577,8 +581,6 @@ Harvest Moon --> 2
 Adventure [2600] --> 2
 Manic Miner --> 2
 Elite --> 2
-Herzog Zwei --> 2
-Gunstar Heroes --> 2
 Kirby's Adventure --> 2
 Brothers: A Tale of Two Sons --> 2
 Castlevania: Aria of Sorrow --> 2
@@ -606,7 +608,6 @@ Microsoft Flight Simulator --> 2
 Age of Empires --> 2
 Split/Second --> 2
 Battlezone --> 2
-Samurai Shodown --> 2
 Dishonored 2 --> 2
 Ninja Gaiden [2004] --> 2
 Panzer Dragoon Orta --> 2
@@ -648,6 +649,7 @@ E.V.O.: Search for Eden --> 2
 Kirby Super Star --> 2
 Another World [Out of this World] --> 2
 Illusion of Gaia --> 2
+Madden NFL '94 --> 2
 Shadowrun [SNES] --> 2
 Final Fight --> 2
 Tony Hawk's Pro Skater 2 [GBA] --> 2
@@ -672,6 +674,7 @@ Yume Nikki --> 2
 Sid Meier's Civilization --> 2
 Wave Race 64 --> 2
 Turok: Dinosaur Hunter --> 2
+Phantasy Star II --> 2
 Rayman 2: The Great Escape --> 2
 Devil May Cry 4 [Special Edition] --> 2
 Dead or Alive 6 --> 2
@@ -857,7 +860,6 @@ The Pandora Directive --> 1
 Mega Man Legends --> 1
 Xenosaga Episode I: Der Wille zur Macht --> 1
 Sonic Adventure 2 --> 1
-Shining Force II --> 1
 Mafia II --> 1
 Life is Strange: Before the Storm --> 1
 Tales from the Borderlands --> 1
@@ -1247,7 +1249,6 @@ Kirby's Avalanche --> 1
 Jungle Strike --> 1
 Rock n' Roll Racing --> 1
 Pocky & Rocky 2 --> 1
-Madden NFL '94 --> 1
 Soul Blazer --> 1
 X-Men: Mutant Apocalypse --> 1
 Pilotwings --> 1
@@ -1371,6 +1372,18 @@ Chuck Rock --> 1
 Caveman Games --> 1
 Lunar: Eternal Blue Complete --> 1
 Ni no Kuni --> 1
+Michael Jackson's Moonwalker --> 1
+Comix Zone --> 1
+Pulseman --> 1
+Ecco the Dolphin --> 1
+The Lost World: Jurassic Park [Gen] --> 1
+Super Street Fighter II --> 1
+Fatal Fury --> 1
+Dr. Robotnik's Mean Bean Machine --> 1
+Sword of Vermilion --> 1
+Shadowrun [GEN] --> 1
+Beyond Oasis --> 1
+ToeJam & Earl --> 1
 Battletoads [Game Boy] --> 1
 Mario's Picross --> 1
 Gargoyle's Quest --> 1
@@ -1756,7 +1769,6 @@ Out Of The Park Baseball 2016 --> 1
 Pro Evolution Soccer 2017 --> 1
 Street Fighter V --> 1
 Transformers: Devastation --> 1
-Phantasy Star II --> 1
 Punch-Out!! [Arcade] --> 1
 Tekken 2 --> 1
 Outcast --> 1

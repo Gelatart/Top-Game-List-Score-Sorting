@@ -265,6 +265,7 @@ test = monCol.insert_one(testDict)
 
 #INSERT ALL GAMES INTO DATABASE
 #Clear database to begin with?
+monCol.drop()
 #export = []
 print("INSERTING INTO MONGODB!")
 for game, details in gameDb.items():
@@ -273,18 +274,19 @@ for game, details in gameDb.items():
     #insertion = monCol.insert_one(gameDb[game])
     #export.append(details)
     exportDict = {}
-    exportDict["title"] = game
-    #exportDict["ranked score"] = details.rankedScore
-    #self.listCount = 1
-    #self.listsReferencing = []
-    #self.listsReferencing.append(list)
-    #self.totalCount = 0
-    #self.completed = False
-    #self.mainPlatform = 'None'
-    #self.listPlatforms = []
-    #self.releaseDate = 'Unknown'  # Can I set this to some date value?
-    #self.playerCounts = []
-    #self.listDevelopers = []
+    exportDict["Title"] = game
+    exportDict["Ranked Score"] = details.rankedScore
+    exportDict["Inclusion Score"] = details.listCount
+    averageScore = details.rankedScore / details.totalCount
+    exportDict["Average Score"] = averageScore
+    exportDict["List of References"] = details.listsReferencing
+    exportDict["Completed"] = details.completed
+    exportDict["Main Platform"] = details.mainPlatform
+    exportDict["List of Platforms"] = details.listPlatforms
+    exportDict["Release Date"] = details.releaseDate
+    exportDict["Player Counts"] = details.playerCounts
+    exportDict["Developers"] = details.listDevelopers
+    exportDict["Total Count"] = details.totalCount
     insertion = monCol.insert_one(exportDict)
 #insertion = monCol.insert_many(gameDb)
 #insertion = monCol.insert_many(export)
