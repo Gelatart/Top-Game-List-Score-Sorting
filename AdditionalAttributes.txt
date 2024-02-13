@@ -33,6 +33,13 @@ Legend of Zelda: Ocarina of Time
 	Players: 1
 	Devs: Nintendo EAD
 
+Portal 2
+	Main: PC
+	Platforms: PC, Mac, Linux, X360, PS3, Switch 
+	Release: 4/18/2011
+	Players: 1, 2
+	Devs: Valve
+
 Resident Evil 4
 	Main: GCN
 	Platforms: GCN, PS2, PC, X360, PS3, PS4, XONE, Switch
