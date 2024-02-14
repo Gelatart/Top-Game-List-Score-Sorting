@@ -33,6 +33,13 @@ Legend of Zelda: Ocarina of Time
 	Players: 1
 	Devs: Nintendo EAD
 
+Mass Effect 2
+	Main: X360
+	Platforms: PC, X360, PS3
+	Release: 1/26/2010
+	Players: 1
+	Devs: BioWare
+
 Portal 2
 	Main: PC
 	Platforms: PC, Mac, Linux, X360, PS3, Switch 

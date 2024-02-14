@@ -1,4 +1,4 @@
-RANKED: 42
+RANKED: 43
 UNRANKED: 11
 FORMER: 8
 UNUSED: 0
@@ -95,6 +95,9 @@ U-Top Ten Master System Games - Retro Gamer - 2-11-2014
 
 TOP PLATFORM OF ALL TIME (GEN):
 U-The 25 Best Sega Genesis Games - Digital Trends - 2-13-2019
+
+TOP PLATFORM OF ALL TIME (SAT):
+R-Best Sega Saturn games of all time - GamesRadar - 6-21-2017
 
 TOP PLATFORM OF ALL TIME (PS1):
 R-The 25 best PS1 games of all time - GamesRadar - 9-19-2018

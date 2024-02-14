@@ -473,4 +473,5 @@ https://www.geeksforgeeks.org/iterate-over-a-list-in-python/
 Pymongo Tutorial: https://www.w3schools.com/python/python_mongodb_getstarted.asp
 Mongodb Tutorial: https://www.w3schools.com/mongodb/mongodb_get_started.php
 Add to a list: https://www.w3schools.com/python/python_lists_add.asp
+How to keep sensitive data safe in an ENV file: https://forum.freecodecamp.org/t/how-to-store-a-mongodb-username-and-password-persistently-using-dotenv/50994
 """
