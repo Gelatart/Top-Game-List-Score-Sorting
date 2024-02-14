@@ -11,6 +11,8 @@ import sqlite3
 import pymongo
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
+import dotenv
+from dotenv import load_dotenv
 
 # assign directory
 #directory = 'C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameLists\Ranked'
@@ -244,7 +246,8 @@ except StopIteration:
 
 #START USING PYMONGO FOR OUTPUTTING TO MONGODB DATABASE
 #Used code sample from Atlas on how to connect with Pymongo for assistance here
-#mConnect = "mongodb+srv://danielfwood:<password>@gamesorting.zj02yi1.mongodb.net/?retryWrites=true&w=majority"
+#Connecting to env file to get private login data
+load_dotenv()
 monConnect = os.getenv('MONGO_URI')
 #replace <password>?
 #Is having password for database in public code an issue?
@@ -456,7 +459,7 @@ https://www.geeksforgeeks.org/writing-excel-sheet-using-python/
 https://stackoverflow.com/questions/9848299/importerror-no-module-named-xlwt
 https://www.geeksforgeeks.org/python-increment-value-in-dictionary/
 https://www.educative.io/answers/how-to-check-if-a-key-exists-in-a-python-dictionary
-https://www.geeksforgeeks.org/factorial-in-python/
+Factorial in python: https://www.geeksforgeeks.org/factorial-in-python/
 https://stackoverflow.com/questions/1347791/unicode-error-unicodeescape-codec-cant-decode-bytes-cannot-open-text-file
 https://kodify.net/python/math/round-integers/
 https://stackoverflow.com/questions/27946595/how-to-manage-division-of-huge-numbers-in-python
@@ -474,4 +477,5 @@ Pymongo Tutorial: https://www.w3schools.com/python/python_mongodb_getstarted.asp
 Mongodb Tutorial: https://www.w3schools.com/mongodb/mongodb_get_started.php
 Add to a list: https://www.w3schools.com/python/python_lists_add.asp
 How to keep sensitive data safe in an ENV file: https://forum.freecodecamp.org/t/how-to-store-a-mongodb-username-and-password-persistently-using-dotenv/50994
+How to setup ENV file to work with Python: https://configu.com/blog/using-py-dotenv-python-dotenv-package-to-manage-env-variables/
 """
