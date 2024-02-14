@@ -249,8 +249,6 @@ except StopIteration:
 #Connecting to env file to get private login data
 load_dotenv()
 monConnect = os.getenv('MONGO_URI')
-#replace <password>?
-#Is having password for database in public code an issue?
 monClient = pymongo.MongoClient(monConnect)
 #mClient = MongoClient(mConnect, server_api=ServerApi('1'))
 #Reference code: client = MongoClient(uri, server_api=ServerApi('1'))
@@ -478,4 +476,5 @@ Mongodb Tutorial: https://www.w3schools.com/mongodb/mongodb_get_started.php
 Add to a list: https://www.w3schools.com/python/python_lists_add.asp
 How to keep sensitive data safe in an ENV file: https://forum.freecodecamp.org/t/how-to-store-a-mongodb-username-and-password-persistently-using-dotenv/50994
 How to setup ENV file to work with Python: https://configu.com/blog/using-py-dotenv-python-dotenv-package-to-manage-env-variables/
+Pre-commit safety: https://docs.gitguardian.com/ggshield-docs/integrations/git-hooks/pre-commit?utm_source=product&utm_medium=GitHub_checks&utm_campaign=check_run
 """
