@@ -101,7 +101,8 @@ for filename in os.listdir(directory):
     if os.path.isfile(f):
         #print(f)
         # Using readlines()
-        file1 = open(f, 'r')
+        # file1 = open(f, 'r')
+        file1 = open(f, 'r', encoding="utf-8")
         rankedFileCount += 1
         startingLine = file1.readline()
         Lines = file1.readlines()
@@ -134,7 +135,8 @@ for filename in os.listdir(directory):
     if os.path.isfile(f):
         #print(f)
         # Using readlines()
-        file1 = open(f, 'r')
+        #file1 = open(f, 'r')
+        file1 = open(f, 'r', encoding="utf-8")
         unrankedFileCount += 1
         startingLine = file1.readline()
         Lines = file1.readlines()
@@ -150,7 +152,7 @@ for filename in os.listdir(directory):
         count //= originalCount
         print(count)
         print(f)
-        #input('Wait to review\n')
+        input('Wait to review\n')
         # Strips the newline character
         for line in Lines:
             if line in gameDb:
@@ -173,7 +175,8 @@ for filename in os.listdir(directory):
     if os.path.isfile(f):
         #print(f)
         # Using readlines()
-        file1 = open(f, 'r')
+        # file1 = open(f, 'r')
+        file1 = open(f, 'r', encoding="utf-8")
         formerFileCount += 1
         startingLine = file1.readline()
         Lines = file1.readlines()
@@ -362,12 +365,12 @@ convertedInclusion = dict(sortByInclusion)
 sortByAverage = sorted(gameDbAverage.items(), key=lambda x:x[1], reverse=True)
 convertedAverage = dict(sortByAverage)
 
-fileR = open("Sorted by Ranked.txt","w")
-fileI = open("Sorted by Inclusion.txt","w")
-fileA = open("Sorted by Average.txt","w")
-fileUR = open("Sorted by Ranked (Uncompleted).txt", "w")
-fileUI = open("Sorted by Inclusion (Uncompleted).txt","w")
-fileUA = open("Sorted by Average (Uncompleted).txt","w")
+fileR = open("Sorted by Ranked.txt","w", encoding="utf-8")
+fileI = open("Sorted by Inclusion.txt","w", encoding="utf-8")
+fileA = open("Sorted by Average.txt","w", encoding="utf-8")
+fileUR = open("Sorted by Ranked (Uncompleted).txt", "w", encoding="utf-8")
+fileUI = open("Sorted by Inclusion (Uncompleted).txt","w", encoding="utf-8")
+fileUA = open("Sorted by Average (Uncompleted).txt","w", encoding="utf-8")
 
 for game, score in convertedRanked.items():
     entry = ""
@@ -462,7 +465,7 @@ https://stackoverflow.com/questions/1347791/unicode-error-unicodeescape-codec-ca
 https://kodify.net/python/math/round-integers/
 https://stackoverflow.com/questions/27946595/how-to-manage-division-of-huge-numbers-in-python
 https://www.geeksforgeeks.org/python-add-one-string-to-another/
-https://pynative.com/python-count-number-of-lines-in-file/
+Counting the number of lines in file: https://pynative.com/python-count-number-of-lines-in-file/
 https://www.freecodecamp.org/news/sort-dictionary-by-value-in-python/
 https://www.geeksforgeeks.org/reading-writing-text-files-python/
 https://www.geeksforgeeks.org/convert-integer-to-string-in-python/
@@ -477,4 +480,5 @@ Add to a list: https://www.w3schools.com/python/python_lists_add.asp
 How to keep sensitive data safe in an ENV file: https://forum.freecodecamp.org/t/how-to-store-a-mongodb-username-and-password-persistently-using-dotenv/50994
 How to setup ENV file to work with Python: https://configu.com/blog/using-py-dotenv-python-dotenv-package-to-manage-env-variables/
 Pre-commit safety: https://docs.gitguardian.com/ggshield-docs/integrations/git-hooks/pre-commit?utm_source=product&utm_medium=GitHub_checks&utm_campaign=check_run
+Fix for UnicodeEncodeError after pre-commit safety integration: https://github.com/mwouts/jupytext/issues/770
 """

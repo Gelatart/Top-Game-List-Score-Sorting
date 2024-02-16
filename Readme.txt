@@ -1,7 +1,5 @@
 CONDA ACTIVATION: GameListScore
 
-HOW TO WORK THIS:
-
 GRABBING FROM AI CLASS (UVU CS 4470):
 [CS 4470 - Project 1.pdf helped figure a lot of this out, from Module 1]
 -We used Conda to manage a Python environment?
@@ -9,6 +7,7 @@ GRABBING FROM AI CLASS (UVU CS 4470):
 -We named our environment "GameListScore"?
 -Would have created it with something like "conda create --name cs4470 python=3.9"?
 
+HOW TO WORK GENERATOR.PY:
 -Run the Anaconda Prompt program from Laptop? In pinned programs at bottom?
 --Should have (base) at the beginning
 --Navigate it to correct directory

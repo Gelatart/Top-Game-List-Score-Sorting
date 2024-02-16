@@ -122,6 +122,7 @@ Demolition Racer --> 0.95
 Half-Life 2 [Episode Two] --> 0.93
 God of War: Ghost of Sparta --> 0.9230769230769231
 Bionic Commando --> 0.9207920792079208
+Super Breakout --> 0.92
 Outer Wilds --> 0.92
 Legend of Zelda: The Oracle of Seasons --> 0.92
 Pikmin 3 --> 0.92
@@ -180,7 +181,6 @@ Kid Icarus --> 0.81
 Super Mario Bros. --> 0.807909604519774
 ESPN NFL 2K5 --> 0.8052173913043478
 The Sentinel --> 0.804
-Warlords --> 0.802
 Manic Miner --> 0.8019607843137255
 Ghost of Tsushima --> 0.8
 Star Wars Rogue Leader: Rogue Squadron II --> 0.8
@@ -190,13 +190,14 @@ Legend of Zelda: Wind Waker HD --> 0.8
 Mario Golf: Advance Tour --> 0.8
 Elder Scrolls III: Morrowind --> 0.7958452722063037
 Herzog Zwei --> 0.7950413223140496
+Warlords --> 0.7942857142857143
 Grand Theft Auto V --> 0.7927107061503417
 Legend of Zelda: Tears of the Kingdom --> 0.79
 Portal [Still Alive] --> 0.79
 Blaster Master --> 0.79
-Street Fighter II --> 0.7895061728395062
 Legend of Zelda: Breath of the Wild --> 0.7873015873015873
 Half-Life 2 [Episode 1] --> 0.78125
+Street Fighter II --> 0.7808383233532934
 Ratchet & Clank --> 0.78
 The Magical Quest Starring Mickey Mouse --> 0.78
 SimCity --> 0.7715269804822044
@@ -210,7 +211,7 @@ Elite Beat Agents --> 0.7632
 DOOM --> 0.7631441957313899
 Life is Strange --> 0.7625418060200669
 Frog Fractions --> 0.762
-Ms. Pac-Man --> 0.760707002039429
+Dig Dug --> 0.76
 Radiant Silvergun --> 0.76
 New Super Mario Bros. --> 0.76
 Shantae --> 0.76
@@ -219,6 +220,7 @@ The Wonderful 101 --> 0.752
 Half-Life 2 [Episode 2] --> 0.75
 Metal Gear [NES] --> 0.75
 Super Star Wars: Return of the Jedi --> 0.75
+Ms. Pac-Man --> 0.7483829236739974
 Metroid Prime Trilogy [Metroid Prime + Metroid Prime 2: Echoes + Metroid Prime 3: Corruption] --> 0.7450980392156863
 Super Mario Kart --> 0.7443915703602991
 StarCraft [Brood War] --> 0.7417218543046358
@@ -229,14 +231,14 @@ Final Fantasy VI --> 0.74
 Tecmo Bowl --> 0.7388888888888889
 Kirby: Canvas Curse --> 0.738
 Super Mario Maker --> 0.736551724137931
-Street Fighter III: 3rd Strike - Fight for the Future --> 0.736
 Guild Wars 2 --> 0.7346683354192741
-Dance Dance Revolution --> 0.7339847991313789
 Kirby's Adventure --> 0.7333333333333333
 Shadow of the Colossus --> 0.7316704459561603
 NHL '94 --> 0.7314285714285714
 Metal Gear Solid [GBC] --> 0.73
 Baseball Stars --> 0.73
+Street Fighter III: 3rd Strike - Fight for the Future --> 0.7276190476190476
+Dance Dance Revolution --> 0.721936148300721
 Sid Meier's Civilization II --> 0.7207207207207207
 Legend of Zelda: Wind Waker [HD] --> 0.72
 Monster Hunter Freedom --> 0.72
@@ -245,7 +247,6 @@ The Operative: No One Lives Forever --> 0.72
 Adventure Island --> 0.72
 Wario's Woods --> 0.72
 Final Fantasy VI [Final Fantasy VI Advance] --> 0.72
-Space Invaders --> 0.7161531279178338
 The Witcher 3: Wild Hunt --> 0.7154220061864781
 Kirby Super Star --> 0.715
 Kingdom Hearts II --> 0.7146067415730337
@@ -253,11 +254,12 @@ Ratchet & Clank: Up Your Arsenal --> 0.7133333333333334
 M.U.L.E. --> 0.7128953771289538
 World of Warcraft --> 0.7125871258712587
 Red Dead Redemption --> 0.7120398773006135
+Adventure [2600] --> 0.7115839243498818
 Hollow Knight --> 0.71
 Mega Man --> 0.71
 The Lost Vikings --> 0.71
+Space Invaders --> 0.7085514834205934
 Castlevania: Symphony of the Night --> 0.7078046905036525
-Adventure [2600] --> 0.7064555420219245
 Final Fantasy VI --> 0.7058577405857741
 Grand Theft Auto IV --> 0.7050847457627119
 Virtua Fighter 5 --> 0.705
@@ -288,6 +290,7 @@ Elite --> 0.6808769792935444
 Sega Ages Vol. 1 --> 0.68
 We Love Katamari --> 0.68
 Portal Companion Collection [Portal + Portal 2] --> 0.68
+Daytona USA 2001 --> 0.68
 Power Stone Collection [Power Stone + Power Stone 2] --> 0.68
 Tetris DX --> 0.68
 Nintendo Land --> 0.68
@@ -340,7 +343,6 @@ Spacewar! --> 0.6454545454545455
 Elder Scrolls V: Skyrim --> 0.6444029850746269
 Hitman: Blood Money --> 0.6416938110749185
 Grand Theft Auto: San Andreas --> 0.6404328578455485
-Virtua Cop 2 --> 0.64
 Grand Theft Auto Double Pack --> 0.64
 Dragon Quest Builders --> 0.64
 Castlevania: The Dracula X Chronicles --> 0.64
@@ -369,29 +371,28 @@ Life Force --> 0.63
 Kirby's Dream Course --> 0.63
 Quake --> 0.6285160038797284
 Cart Life --> 0.6283333333333333
-Pong --> 0.6282183316168898
 Uncharted 4: A Thief's End --> 0.6272838002436053
 Final Fantasy IX --> 0.6268965517241379
 P.T. --> 0.626
 Rainbow Six Siege --> 0.6254180602006689
 Journey --> 0.6247086247086248
 Slaves to Armok: God of Blood Chapter II - Dwarf Fortress --> 0.621505376344086
+Pong --> 0.621414913957935
 Command & Conquer --> 0.6210640608034745
 Final Fantasy Tactics --> 0.6202988150437918
-Red Dead Redemption 2 --> 0.62
 The Last of Us [Remastered] --> 0.62
 Everlasting Summer --> 0.62
 Disco Elysium --> 0.6199524940617577
 Geometry Wars: Retro Evolved --> 0.6184615384615385
 Robotron: 2084 --> 0.6180215475024485
 Overwatch --> 0.6179012345679012
+Red Dead Redemption 2 --> 0.6178571428571429
 The Last Guardian --> 0.6165413533834586
 Star Wars: X-Wing vs. TIE Fighter --> 0.616
 Call of Duty 4: Modern Warfare --> 0.6156701030927835
 Assassin's Creed II --> 0.6152866242038216
 The Sims --> 0.6133225020308692
 Monster Hunter 4 Ultimate --> 0.6128571428571429
-Defender --> 0.610231425091352
 Race Driver: Grid --> 0.61
 13 Sentinels: Aegis Rim --> 0.61
 Battletoads [NES] --> 0.61
@@ -403,6 +404,7 @@ Papers, Please --> 0.6058631921824105
 Rock Band --> 0.605465414175918
 The Walking Dead [Season One] --> 0.6051167964404894
 The Witcher 3: Wild Hunt [Hearts of Stone] --> 0.6039603960396039
+Defender --> 0.6039035591274398
 Thirty Flights of Loving --> 0.602
 Star Fox --> 0.6009501187648456
 Legend of Zelda: Majora's Mask --> 0.6005302695536898
@@ -426,8 +428,6 @@ Ghosts 'N Goblins --> 0.59
 Final Fantasy XIV [Stormblood] --> 0.59
 Crystalis --> 0.59
 Dark Souls III --> 0.5876993166287016
-Tony Hawk's Pro Skater 2 --> 0.58700882117081
-Asteroids --> 0.5866797257590598
 Counter-Strike [1.6] --> 0.5858528237307473
 Resident Evil 4 [2023] --> 0.5857519788918206
 Wolfenstein 3D --> 0.5857002938295789
@@ -438,15 +438,16 @@ Mini Metro --> 0.58
 Castlevania III: Dracula's Curse --> 0.58
 Ninja Gaiden II: The Dark Sword of Chaos --> 0.58
 Breath of Fire --> 0.58
-Rez --> 0.5787855495772483
+Rez --> 0.5799396681749623
 Final Fantasy XI --> 0.5785953177257525
+Asteroids --> 0.5784671532846716
 Star Raiders --> 0.578
 Zero Escape: Virtue's Last Reward --> 0.5771428571428572
+Tony Hawk's Pro Skater 2 --> 0.5770440251572327
 Dragon Quest VIII: Journey of the Cursed King --> 0.576551724137931
 Call of Duty: Modern Warfare 2 --> 0.5759599332220368
 Street Fighter Alpha 3 --> 0.5753176043557169
 Zork --> 0.573540280857354
-Pikmin 2 --> 0.5733333333333334
 Warcraft III: Reign of Chaos --> 0.5729676787463271
 The Orange Box --> 0.5728476821192053
 Persona 4 --> 0.5721153846153846
@@ -456,14 +457,12 @@ Kirby's Dream Collection [Special Edition] [Kirby's Dream Land + Kirby's Adventu
 Klax --> 0.57
 Demon's Crest --> 0.57
 Super Smash Bros. --> 0.5679012345679012
-Bubble Bobble --> 0.5676959619952494
 Ultima Underworld: The Stygian Abyss --> 0.5676923076923077
 Star Wars: Battlefront II [2005] --> 0.5675
 Virtua Fighter 2 --> 0.5673758865248227
 WarioWare, Inc.: Mega Microgames! --> 0.5670910871694417
 Burnout Revenge --> 0.566
 Mega Man X --> 0.5659090909090909
-Star Wars [Arcade] --> 0.5656894679695983
 Rock Band 3 --> 0.5655577299412916
 Medieval II: Total War --> 0.565
 Mario Kart 8 Deluxe --> 0.565
@@ -472,8 +471,11 @@ Diablo --> 0.5637795275590551
 Animal Crossing --> 0.5630975143403442
 The Dig --> 0.5625
 Pokemon Gold / Silver --> 0.5624526873580621
+Star Wars [Arcade] --> 0.5623069001029866
 Unreal Tournament [1999] --> 0.5621939275220372
 Hearthstone: Heroes of Warcraft --> 0.5615615615615616
+Bubble Bobble --> 0.5605095541401274
+Q*bert --> 0.56
 Disgaea: Afternoon of Darkness --> 0.56
 Madden NFL 2003 --> 0.56
 Pokemon Black 2 / White 2 --> 0.56
@@ -500,9 +502,11 @@ Vagrant Story --> 0.554968287526427
 Banjo-Kazooie --> 0.5529953917050692
 Steins;Gate --> 0.55
 Metal Storm --> 0.55
+SoulCalibur --> 0.5491009681881052
 X-COM: Enemy Unknown --> 0.548804780876494
 Micro Machines --> 0.5486935866983373
 Pokemon Crystal --> 0.5476923076923077
+Virtua Cop 2 --> 0.5466666666666666
 Call of Duty: Black Ops II --> 0.5466237942122186
 God of War III --> 0.5445652173913044
 Advance Wars --> 0.5432489451476793
@@ -510,7 +514,6 @@ Jak and Daxter: The Precursor Legacy --> 0.5432098765432098
 SoulCalibur II --> 0.542910447761194
 Her Story --> 0.5428571428571428
 Stardew Valley --> 0.5418032786885246
-SoulCalibur --> 0.5411681914144968
 Suikoden II --> 0.5402160864345739
 Far Cry --> 0.54
 LittleBigPlanet 3 --> 0.54
@@ -531,13 +534,13 @@ Virtua Racing --> 0.5322777101096224
 Impossible Mission --> 0.532
 Fallout 3 --> 0.5314480741101901
 Tom Clancy's Splinter Cell: Double Agent --> 0.53125
-Super Smash Bros. Ultimate --> 0.5305466237942122
 The Walking Dead [Episode 5] --> 0.53
 Street Fighter III: 3rd Strike - Fight for the Future --> 0.53
 Astro's Playroom --> 0.53
 Monster Hunter Generations --> 0.53
 Tetris [Tengen] --> 0.53
 Zombies Ate My Neighbors --> 0.53
+Super Smash Bros. Ultimate --> 0.5295950155763239
 Vampire: The Masquerade - Bloodlines --> 0.5294117647058824
 Tony Hawk's Pro Skater --> 0.5289367429340511
 Ratchet & Clank: Going Commando --> 0.5275
@@ -590,7 +593,7 @@ Punch-Out!! [Wii] --> 0.52
 WarioWare: Smooth Moves --> 0.52
 The World Ends With You --> 0.519344262295082
 Left 4 Dead 2 --> 0.5193035579106737
-God of War [2018] --> 0.519090909090909
+God of War [2018] --> 0.51875
 Demon's Souls --> 0.5167652859960552
 System Shock 2 --> 0.5162764134780126
 Wing Commander --> 0.5152253349573691
@@ -598,6 +601,7 @@ Battlefield: Bad Company 2 --> 0.5150501672240803
 Persona 5 [Royal] --> 0.5145118733509235
 Gears of War 3 --> 0.5144766146993318
 Blood --> 0.5121951219512195
+Jet Set Radio --> 0.5120663650075414
 Jet Force Gemini --> 0.5116279069767442
 Star Wars: Shadows of the Empire --> 0.5116279069767442
 WinBack --> 0.5116279069767442
@@ -639,11 +643,10 @@ Gun --> 0.5061728395061729
 Pathologic --> 0.5061728395061729
 Yume Nikki --> 0.5061728395061729
 Mario Kart 64 --> 0.5055889939810834
+Skies of Arcadia --> 0.5047169811320755
 Tom Clancy's Splinter Cell --> 0.5046439628482973
 Dishonored --> 0.5045970795024337
-Jet Set Radio --> 0.504227517294389
 Hades --> 0.5041459369817579
-Mario Kart: Double Dash --> 0.504
 Devil May Cry 4 [Special Edition] --> 0.5035714285714286
 Dead or Alive 6 --> 0.5035714285714286
 Disco Elysium [The Final Cut] --> 0.5035714285714286
@@ -685,7 +688,6 @@ Okami [HD] --> 0.5017921146953405
 Ori and the Will of the Wisps --> 0.5017921146953405
 Sackboy: A Big Adventure --> 0.5017921146953405
 Shadow Complex [Remastered] --> 0.5017921146953405
-Shadow of the Tomb Raider --> 0.5017921146953405
 Shenmue I & II --> 0.5017921146953405
 Shock Troopers --> 0.5017921146953405
 Sonic Origins [Sonic the Hedgehog + Sonic the Hedgehog 2 + Sonic the Hedgehog 3 & Knuckles + Sonic CD] --> 0.5017921146953405
@@ -718,7 +720,6 @@ Treachery in Beatdown City --> 0.5017921146953405
 Yakuza 6: The Song of Life --> 0.5017921146953405
 Brawlhalla --> 0.5017921146953405
 Divekick --> 0.5017921146953405
-Dragon Ball FighterZ --> 0.5017921146953405
 Garou: Mark of the Wolves --> 0.5017921146953405
 Guilty Gear Strive --> 0.5017921146953405
 Guilty Gear Xrd -Sign- --> 0.5017921146953405
@@ -763,7 +764,6 @@ Quantum Conundrum --> 0.5017921146953405
 Scribblenauts Unlimited --> 0.5017921146953405
 The Swapper --> 0.5017921146953405
 Dirt 5 --> 0.5017921146953405
-Forza Horizon 4 --> 0.5017921146953405
 Forza Horizon 5 --> 0.5017921146953405
 Horizon Chase Turbo --> 0.5017921146953405
 Hotshot Racing --> 0.5017921146953405
@@ -860,9 +860,11 @@ Halo Wars 2 --> 0.5017921146953405
 StarCraft II: Legacy of the Void --> 0.5017921146953405
 Supreme Commander 2 --> 0.5017921146953405
 X-COM: Chimera Squad --> 0.5017921146953405
+Dragon Ball FighterZ --> 0.5016722408026756
+Shadow of the Tomb Raider --> 0.5016722408026756
+Forza Horizon 4 --> 0.5016722408026756
 Dragon Quest VIII --> 0.5015625
 Pac-Man --> 0.5015576323987538
-Centipede --> 0.5015576323987538
 Contra --> 0.5015576323987538
 Speedball 2: Brutal Deluxe --> 0.5015576323987538
 Star Control II --> 0.5015576323987538
@@ -876,10 +878,12 @@ Star Wars Jedi Knight: Dark Forces II --> 0.5015576323987538
 Crash Bandicoot 3: Warped --> 0.5015576323987538
 Beyond Good & Evil --> 0.5015576323987538
 Hearthstone --> 0.5015576323987538
-R-Type --> 0.5014005602240896
 Metal Slug 3 --> 0.5013927576601671
 Sid Meier's Civilization --> 0.5013477088948787
 Total Annihilation --> 0.5012468827930174
+R-Type --> 0.5012285012285013
+Centipede --> 0.5
+Phantasy Star Online --> 0.5
 Final Fantasy --> 0.5
 Super Ghouls 'n Ghosts --> 0.5
 Bravely Default --> 0.5
@@ -930,6 +934,17 @@ Lost Eden --> 0.5
 Joe & Mac: Caveman Ninja --> 0.5
 Chuck Rock --> 0.5
 Caveman Games --> 0.5
+Marvel's Spider-Man [2018] --> 0.5
+A Way Out --> 0.5
+Octopath Traveler --> 0.5
+Dead Cells --> 0.5
+Pokemon: Let's Go, Pikachu! and Let's Go, Eevee! --> 0.5
+Assassin's Creed Odyssey --> 0.5
+Kirby Star Allies --> 0.5
+Call of Duty: Black Ops 4 --> 0.5
+Starlink: Battle for Atlas --> 0.5
+Mega Man 11 --> 0.5
+Tetris Effect --> 0.5
 Lunar: Eternal Blue Complete --> 0.5
 Ni no Kuni --> 0.5
 Battletoads [Game Boy] --> 0.5
@@ -948,6 +963,31 @@ Bill & Ted's Excellent Game Boy Adventure: A Bogus Journey! --> 0.5
 Castlevania II: Belmont's Revenge --> 0.5
 Donkey Kong Land 2 --> 0.5
 Wario Land: Super Mario Land 3 --> 0.5
+Guitar Freaks --> 0.5
+The Lost World: Jurassic Park [Arcade] --> 0.5
+Mercs --> 0.5
+Ikari Warriors --> 0.5
+Teenage Mutant Ninja Turtles [Arcade] --> 0.5
+The Simpsons [Arcade] --> 0.5
+X-Men [Arcade] --> 0.5
+Golden Axe --> 0.5
+Time Crisis II --> 0.5
+720° --> 0.5
+After Burner --> 0.5
+The House of the Dead 2 --> 0.5
+Cho Chabudai Gaeshi! [Super Table Flip] --> 0.5
+Operation Wolf --> 0.5
+Tekken --> 0.5
+Smash TV --> 0.5
+Dragon's Lair --> 0.5
+Metal Slug --> 0.5
+Golden Tee Off --> 0.5
+Rampage --> 0.5
+Ivan “Ironman” Stewart’s Super Off Road --> 0.5
+Final Furlong --> 0.5
+Track and Field --> 0.5
+1942 [Arcade] --> 0.5
+Aqua Jet --> 0.5
 Colossal Cave Adventure --> 0.5
 Pinball Construction Set --> 0.5
 Commander Keen --> 0.5
@@ -958,18 +998,16 @@ Medal of Honor: Allied Assault --> 0.5
 Second Life --> 0.5
 Broken Age --> 0.5
 Psycho Fox --> 0.5
-Operation Wolf --> 0.5
 Alex Kidd in Miracle World --> 0.5
 California Games --> 0.5
 Baku Baku Animal --> 0.5
 Wonder Boy III: The Dragon's Trap --> 0.5
 Phantasy Star --> 0.5
 Sonic the Hedgehog [8-bit] --> 0.5
-Donkey Kong --> 0.4994350282485876
+Donkey Kong --> 0.49945054945054945
 Far Cry 4 --> 0.4989561586638831
 Bayonetta --> 0.49894736842105264
 Maniac Mansion --> 0.498
-Phantasy Star Online --> 0.4972191323692992
 Star Control --> 0.496
 Sensible World of Soccer --> 0.4954682779456193
 Gran Turismo --> 0.4954545454545455
@@ -983,20 +1021,21 @@ Killer7 --> 0.4921052631578947
 Fire Emblem [GBA] --> 0.49206349206349204
 The Hitchhiker's Guide to the Galaxy --> 0.492
 Rise of the Tomb Raider --> 0.49175824175824173
+Astro Bot Rescue Mission --> 0.49166666666666664
 Disgaea: Hour of Darkness --> 0.49
 Uncharted: Drake's Fortune --> 0.49
-Astro Bot Rescue Mission --> 0.49
 Super Mario 3D Land --> 0.49
 Adventures of Lolo 3 --> 0.49
 Ken Griffey, Jr.'s Winning Run --> 0.49
 Persona 2: Innocent Sin --> 0.49
-Skies of Arcadia --> 0.48872180451127817
 Flashback: The Quest for Identity --> 0.48859934853420195
 Fallout --> 0.48839285714285713
+Marvel vs. Capcom 2: New Age of Heroes --> 0.4879518072289157
 MechWarrior 2: 31st Century Combat --> 0.48693586698337293
 The Secret of Monkey Island --> 0.4863481228668942
-Monster Hunter: World --> 0.48525073746312686
+Monster Hunter: World --> 0.48567335243553006
 Destiny 2 --> 0.48494983277591974
+Shenmue --> 0.4844290657439446
 Ghosts 'n Goblins --> 0.4821852731591449
 Myst --> 0.481875
 Donkey Kong Country --> 0.48075348075348073
@@ -1011,22 +1050,18 @@ Super Mario Bros. 2 --> 0.48
 NCAA Football 2003 --> 0.48
 Breath of Fire II --> 0.48
 Elder Scrolls IV: Oblivion --> 0.47962962962962963
-Shenmue --> 0.4788732394366197
 Destiny --> 0.47878787878787876
-Team Fortress 2 --> 0.4781567923399162
 Fortnite --> 0.47770700636942676
-Marvel vs. Capcom 2: New Age of Heroes --> 0.4766558089033659
 Monkey Island 2: LeChuck's Revenge --> 0.4755381604696673
+Quake III Arena --> 0.4753550543024227
 Dead Space 2 --> 0.47530864197530864
 Sonic the Hedgehog 3 --> 0.47491638795986624
 StarCraft II: Wings of Liberty --> 0.4727773949000689
 Panzer Dragoon Saga --> 0.47248322147651006
-Demon Attack --> 0.472
 Ultima VII: The Black Gate --> 0.4716981132075472
 Wipeout 2097 --> 0.47109826589595377
 Mike Tyson's Punch-Out!! --> 0.47098765432098766
 Tales of Symphonia --> 0.47058823529411764
-Quake III Arena --> 0.47013651877133106
 Madden NFL 2002 --> 0.47
 Resident Evil 4 [2023] [Separate Ways] --> 0.47
 Event[0] --> 0.47
@@ -1040,6 +1075,7 @@ Deus Ex: Invisible War --> 0.46875
 Paper Mario: The Thousand-Year Door --> 0.4684385382059801
 League of Legends --> 0.4675451439726696
 Chrono Cross --> 0.4673452078032231
+Combat --> 0.4657210401891253
 Resident Evil 2 [2019] --> 0.46515151515151515
 Sensible Soccer --> 0.46471226927252984
 Dark Souls II --> 0.46469833119383824
@@ -1048,6 +1084,7 @@ Prince of Persia: The Sands of Time --> 0.4627798021863613
 Bayonetta 2 --> 0.46181172291296624
 Dissidia 012 Final Fantasy --> 0.46153846153846156
 Max Payne --> 0.4610974610974611
+Demon Attack --> 0.46095238095238095
 Tony Hawk's Pro Skater 4 --> 0.4603174603174603
 Final Fantasy X --> 0.4602076124567474
 Counter-Strike: Source --> 0.46
@@ -1066,7 +1103,6 @@ Phoenix Wright: Ace Attorney --> 0.45690936106983654
 Ico --> 0.45552699228791776
 Puyo Pop Fever --> 0.455
 Dr. Mario --> 0.455
-Combat --> 0.4543239951278928
 Snake --> 0.454
 Crash Bandicoot --> 0.4537037037037037
 Tenchu: Stealth Assassins --> 0.452
@@ -1079,23 +1115,24 @@ Metroid Prime [Remastered] --> 0.45
 Cyberpunk 2077 [Ultimate Edition] --> 0.45
 Wizards & Warriors --> 0.45
 Alien 3 --> 0.45
+Sega Rally Championship --> 0.4495967741935484
 Sly 2: Band of Thieves --> 0.44816053511705684
 Wasteland --> 0.4471057884231537
 Jackbox Party Pack --> 0.44666666666666666
 Thief II: The Metal Age --> 0.4457978075517661
-Sega Rally Championship --> 0.4439461883408072
 NieR --> 0.4438687392055268
 Metal Gear Solid 4: Guns of the Patriots --> 0.4435215946843854
 Metal Gear Rising: Revengeance --> 0.44327176781002636
 Resident Evil 2 --> 0.4428656009473061
-Super Mario Sunshine --> 0.44264069264069267
 Pokemon Emerald --> 0.44110275689223055
 Streets of Rage 2 --> 0.44096385542168676
+Yars' Revenge --> 0.44
 RayForce [Galactic Attack] --> 0.44
 Project Gotham Racing 2 --> 0.44
 Pokemon Mystery Dungeon: Explorers of Sky --> 0.44
 Xenoblade Chronicles X --> 0.44
 Age of Empires IV [Anniversary Edition] --> 0.44
+Dead or Alive 2 --> 0.44
 La-Mulana [EX] --> 0.44
 Tomb Raider II --> 0.44
 Mario Tennis [Game Boy Color] --> 0.44
@@ -1104,8 +1141,8 @@ LittleBigPlanet 2 --> 0.44
 Rad Racer --> 0.44
 Mario Tennis: Power Tour --> 0.44
 Legend of Zelda: Ocarina of Time [3D] --> 0.43906510851419034
+Gauntlet --> 0.43894107600341586
 Shin Megami Tensei: Nocturne --> 0.4375
-Gauntlet --> 0.4362176628010705
 Tempest 2000 --> 0.43539630836047777
 Kirby's Dream Land --> 0.435361216730038
 Age of Empires --> 0.4336175395858709
@@ -1117,10 +1154,11 @@ Devil May Cry 3: Dante's Awakening --> 0.42998027613412226
 Tecmo Super Bowl --> 0.4290484140233723
 Battlefield 1942 --> 0.4286934244235696
 Cuphead --> 0.4279749478079332
+OutRun --> 0.4279661016949153
 Split/Second --> 0.4274711168164313
+Ikaruga --> 0.4263157894736842
 Tennis for Two --> 0.426
 Tony Hawk's Pro Skater 3 --> 0.4250734573947111
-Ikaruga --> 0.42452107279693485
 Sid Meier's Railroad Tycoon --> 0.422
 Legend of Legaia --> 0.4214046822742475
 Dragon Age: Origins --> 0.42131147540983604
@@ -1132,7 +1170,6 @@ Pikmin 4 --> 0.42
 Skate --> 0.42
 Rygar --> 0.42
 Full Throttle --> 0.41964285714285715
-OutRun --> 0.4194312796208531
 Pokemon Heart Gold / Soul Silver --> 0.41917024320457796
 Yakuza 0 --> 0.41751990898748575
 NBA 2K12 --> 0.416
@@ -1172,6 +1209,7 @@ Christmas NiGHTS into Dreams... --> 0.4
 Tom Clancy's Rainbow Six 3: Raven Shield --> 0.4
 Pokemon XD: Gale of Darkness --> 0.4
 Rage --> 0.4
+NBA 2K --> 0.4
 Gran Turismo [PSP] --> 0.4
 Super Mario Bros. Deluxe --> 0.4
 NES Remix Pack --> 0.4
@@ -1182,6 +1220,7 @@ Joe & Mac 2: Lost in the Tropics --> 0.4
 Assassin's Creed Origins --> 0.3979933110367893
 Maniac Mansion II: Day of the Tentacle --> 0.39764936336924583
 Mega Man 3 --> 0.3975
+Pitfall! --> 0.3974358974358974
 Dishonored 2 --> 0.39707673568818513
 Prey [2017] --> 0.3961937716262976
 Rocket League --> 0.3960811756473058
@@ -1214,6 +1253,7 @@ Halo 3: ODST --> 0.38
 Gargoyle's Quest II: The Demon Darkness --> 0.38
 Fatal Fury 2 --> 0.38
 The Witcher --> 0.38
+Computer Space --> 0.3781818181818182
 Assassin's Creed IV: Black Flag --> 0.37486095661846497
 Hotline Miami --> 0.3740685543964232
 Breakout --> 0.374
@@ -1230,19 +1270,18 @@ Wario Land 4 --> 0.37
 Ultima VI --> 0.37
 Vanquish --> 0.3697868396663577
 Titanfall 2 --> 0.3695652173913043
-Pitfall! --> 0.3685220729366603
+Joust --> 0.36941964285714285
 Dungeon Master --> 0.3685220729366603
 Deus Ex: Human Revolution --> 0.368
 Super Mario Bros. 3 [Super Mario Advance 4] --> 0.368
 Rome: Total War --> 0.36784409257003653
 Sonic Mania --> 0.36678200692041524
-Computer Space --> 0.366
 Panzer Dragoon II Zwei --> 0.3657142857142857
-Joust --> 0.364190012180268
 Descent --> 0.364
 Ultima IV: Quest of the Avatar --> 0.3639494833524684
 Ogre Battle: March of the Black Queen --> 0.3634085213032581
 Stubbs the Zombie in Rebel Without a Pulse --> 0.362
+Raiders of the Lost Ark --> 0.36
 PowerSlave [Exhumed] --> 0.36
 Darwinia --> 0.36
 Wipeout XL --> 0.36
@@ -1251,6 +1290,7 @@ Pokemon Go --> 0.36
 Dead or Alive Ultimate [Dead or Alive + Dead or Alive 2] --> 0.36
 Mario and Luigi: Partners in Time --> 0.36
 Rayman Origins --> 0.36
+NFL 2K --> 0.36
 Retro Game Challenge --> 0.36
 Rogue Legacy --> 0.36
 Kingdom Hearts: Birth by Sleep --> 0.36
@@ -1267,7 +1307,9 @@ LittleBigPlanet --> 0.35845070422535213
 Contra [NES] --> 0.358
 Empire: Total War --> 0.358
 Flower --> 0.3566958698372966
+Daytona USA --> 0.35633367662203913
 Shadowrun [SNES] --> 0.35555555555555557
+Mortal Kombat --> 0.3545543584720862
 Mega Man Legends --> 0.35451505016722407
 Dungeon Keeper --> 0.35441176470588237
 Gran Trak 10 --> 0.354
@@ -1281,14 +1323,13 @@ Lunar Lander --> 0.35
 Cobra Triangle --> 0.35
 The Lion King --> 0.35
 Final Fantasy XII --> 0.3492769744160178
-Daytona USA --> 0.3485342019543974
 Marvel vs. Capcom: Clash of Super Heroes --> 0.348
 Heroes of Might and Magic III: The Restoration of Erathia --> 0.3477523324851569
-Mortal Kombat --> 0.3470648815653965
 Lemmings --> 0.34626576139670223
 Metroid Fusion --> 0.34615384615384615
 Miner 2049er --> 0.346
 Alpha Protocol --> 0.34375
+Frogger --> 0.34151785714285715
 Fallout 2 --> 0.341
 Echo --> 0.34
 Pokemon Fire Red / Leaf Green --> 0.34
@@ -1303,11 +1344,13 @@ Final Fantasy XIV: A Realm Reborn --> 0.3339517625231911
 Dragon Quest V: Hand of the Heavenly Bride [Dragon Warrior V] --> 0.3333333333333333
 Super Monkey Ball --> 0.33176470588235296
 Puzzle Quest: Challenge of the Warlords --> 0.33166666666666667
+Celeste --> 0.33031674208144796
 Street Fighter II [Championship Edition] --> 0.33
 GTR 2 - FIA GT Racing Game --> 0.33
 Cruelty Squad --> 0.33
 Little Nemo: The Dream Master --> 0.33
 Kirby's Avalanche --> 0.33
+Resident Evil - Code: Veronica --> 0.3292307692307692
 Heavy Rain --> 0.3283283283283283
 Quadrilateral Cowboy --> 0.328
 Jade Empire --> 0.328
@@ -1318,7 +1361,6 @@ F-Zero GX --> 0.32387706855791965
 Fire Emblem Awakening --> 0.3234714003944773
 Legend of Zelda: Skyward Sword --> 0.3231132075471698
 Banjo-Tooie --> 0.3227990970654628
-Frogger --> 0.3215590742996346
 Street Fighter II Turbo: Hyper Fighting --> 0.32
 Viewtiful Joe --> 0.32
 Amplitude --> 0.32
@@ -1336,9 +1378,7 @@ Tales of Berseria --> 0.32
 Pool of Radiance --> 0.318
 Sonic Adventure 2 --> 0.3177257525083612
 Ninja Gaiden [2004] --> 0.31736526946107785
-Resident Evil - Code: Veronica --> 0.31666666666666665
 RollerCoaster Tycoon --> 0.314
-Celeste --> 0.31343283582089554
 Lunar: Silver Star Story Complete --> 0.3132832080200501
 Street Fighter IV --> 0.31222123104371097
 Fruit Ninja --> 0.312
@@ -1376,9 +1416,12 @@ Super Mario World [Super Mario Advance 2] --> 0.296
 Chrono Trigger [DS] --> 0.296
 Terranigma --> 0.29444444444444445
 Return to Castle Wolfenstein --> 0.294
+Crazy Taxi --> 0.29391304347826086
 Grand Theft Auto: Chinatown Wars --> 0.29365079365079366
+Missile Command --> 0.2928118393234672
 Donkey Kong 64 --> 0.29239766081871343
 Panzer Dragoon Orta --> 0.2914285714285714
+Double Dragon --> 0.29087261785356067
 Frequency --> 0.29
 Titanfall --> 0.29
 Final Fantasy XIV [Shadowbringers] --> 0.29
@@ -1398,6 +1441,7 @@ Jet Set Radio Future --> 0.2824427480916031
 Fantastic Contraption --> 0.282
 Prison Architect --> 0.28125
 Three Fourths Home --> 0.28
+Chu Chu Rocket --> 0.28
 Legend of Zelda: Phantom Hourglass --> 0.28
 Uncharted: Golden Abyss --> 0.28
 Klonoa: Door to Phantomille --> 0.28
@@ -1408,7 +1452,6 @@ Castle of Illusion Starring Mickey Mouse --> 0.28
 Resistance 3 --> 0.28
 Pocky & Rocky 2 --> 0.28
 Mario Kart: Super Circuit --> 0.28
-Double Dragon --> 0.27983104540654696
 Devil May Cry --> 0.2788649706457926
 Gran Turismo 2 --> 0.2777777777777778
 Borderlands --> 0.27767857142857144
@@ -1418,7 +1461,6 @@ Indiana Jones and the Fate of Atlantis --> 0.27527405602923266
 Drop7 --> 0.275
 Omori --> 0.275
 Conker's Bad Fur Day --> 0.2747747747747748
-Missile Command --> 0.2747014115092291
 Castle Crashers --> 0.274
 The Witness --> 0.2732474964234621
 Battlefield 4 --> 0.27249357326478146
@@ -1440,15 +1482,16 @@ DMC: Devil May Cry --> 0.26
 The Goonies II --> 0.26
 Mafia II --> 0.25752508361204013
 Battlefield 3 --> 0.25333333333333335
+Sunset Riders --> 0.25333333333333335
 Nidhogg --> 0.25285714285714284
 OutRun 2006: Coast 2 Coast --> 0.2525
 Archon: The Light and the Dark --> 0.25213154689403167
+Spy Hunter --> 0.25176470588235295
 Spyro 2: Ripto's Rage! --> 0.25
 Battletoads & Double Dragon: The Ultimate Team --> 0.25
 Soul Blazer --> 0.25
 Plants vs. Zombies --> 0.24847746650426308
 Far Cry 2 --> 0.24841772151898733
-Spy Hunter --> 0.2475
 Life is Strange: Before the Storm --> 0.24749163879598662
 Fire Emblem Fates: Birthright and Conquest and Revelation --> 0.2447163515016685
 Tales from the Borderlands --> 0.24414715719063546
@@ -1457,19 +1500,19 @@ The Chronicles of Riddick: Escape from Butcher Bay --> 0.24259681093394078
 Beatmania --> 0.242
 Croc: Legend of the Gobbos --> 0.24
 Football Manager 2007 --> 0.24
+Virtua Tennis --> 0.24
 Super Scribblenauts --> 0.24
 Wipeout 2048 --> 0.24
 Spider-Man [PlayStation] --> 0.24
 Ys Seven --> 0.24
 Rainbow Islands --> 0.24
-Crazy Taxi --> 0.24
 The Lucky Dime Caper Starring Donald Duck --> 0.24
 Duck Hunt --> 0.24
 Legend of Zelda: Minish Cap --> 0.24
 Star Fox 64 --> 0.23849104859335038
 Hunt the Wumpus --> 0.238
 Riven: The Sequel to Myst --> 0.23756906077348067
-Power Stone 2 --> 0.23666666666666666
+Power Stone 2 --> 0.2368
 Devil's Crush --> 0.236
 Alone in the Dark --> 0.23529411764705882
 Bust-a-Move [Puzzle Bobble] --> 0.235
@@ -1508,6 +1551,7 @@ Super Meat Boy --> 0.20385232744783308
 Pac-Man Championship Edition --> 0.20333333333333334
 Bully --> 0.2012121212121212
 Zork I --> 0.20066889632107024
+Atlantis --> 0.2
 Steep Slope Sliders --> 0.2
 Higurashi When They Cry Kai --> 0.2
 Zoo Tycoon --> 0.2
@@ -1544,27 +1588,30 @@ Command & Conquer: Red Alert 2 --> 0.1875
 The Legend of Heroes: Trails in the Sky --> 0.18615751789976134
 Metal Gear Solid 3 [Subsistence] --> 0.18407960199004975
 Animal Crossing: City Folk --> 0.184
+Pole Position --> 0.18285714285714286
 Qix --> 0.18166666666666667
 Power Stone --> 0.18
 Double Dragon II: The Revenge --> 0.18
 Super Star Wars --> 0.18
 Shin Megami Tensei: Devil Survivor Overclocked --> 0.18
 Kingdom Rush --> 0.178
+Legacy of Kain: Soul Reaver --> 0.17785630153121318
 The Binding of Isaac: Rebirth --> 0.17725752508361203
+Grandia II --> 0.176
 Rhythm Heaven --> 0.174
 BioShock 2 --> 0.1739674593241552
 Breath of Fire III --> 0.17391304347826086
-Legacy of Kain: Soul Reaver --> 0.17354368932038836
 The Witcher 2: Assassins of Kings --> 0.1735261401557286
 Metro 2033 --> 0.17058823529411765
 Jak 3 --> 0.1705685618729097
-Grandia II --> 0.17
 Mega Man 5 --> 0.17
 Super Tennis --> 0.17
 Divinity: Original Sin II [Definitive Edition] --> 0.16831683168316833
 Animal Crossing: Wild World --> 0.168
+Galaxian --> 0.16727272727272727
 Just Cause 2 --> 0.16333333333333333
 Child of Eden --> 0.16
+River Raid --> 0.16
 SingStar [2008] --> 0.16
 Alan Wake 2 --> 0.16
 Resident Evil 3: Nemesis --> 0.16
@@ -1583,7 +1630,6 @@ Donkey Kong '94 --> 0.15873015873015872
 Sly Cooper and the Thievius Racoonus --> 0.15719063545150502
 Snatcher --> 0.15666666666666668
 WWF No Mercy --> 0.15653775322283608
-Pole Position --> 0.156
 L.A. Noire --> 0.1518624641833811
 Xenoblade Chronicles 2 --> 0.1505016722408027
 The Last of Us Part II --> 0.15
@@ -1604,7 +1650,6 @@ The Guardian Legend --> 0.14
 Sparkster --> 0.14
 Kingdom Hearts Final Mix --> 0.14
 Forza Motorsport --> 0.136
-Galaxian --> 0.134
 Puyo-Puyo Tetris --> 0.13333333333333333
 Wolfenstein: The New Order --> 0.13333333333333333
 Kim Kardashian: Hollywood --> 0.132
@@ -1613,12 +1658,13 @@ Double Dribble --> 0.13
 Out of the Park Baseball 2007 --> 0.13
 Ace Attorney Investigations 2 --> 0.13
 Zombie Nation --> 0.13
-Sunset Riders --> 0.13
 Divinity: Original Sin II --> 0.12589413447782546
 Splatoon 2 --> 0.12374581939799331
 Need for Speed: Most Wanted [2012] --> 0.122
 Valkyrie Profile --> 0.12
+Jungle Hunt --> 0.12
 Virtua Cop --> 0.12
+The Typing of the Dead --> 0.12
 Trauma Center: Under the Knife 2 --> 0.12
 Jeanne d'Arc --> 0.12
 Dragon Warrior Monster --> 0.12
@@ -1650,7 +1696,6 @@ Shin Megami Tensei: Digital Devil Saga 2 --> 0.095
 Gravity Rush --> 0.09142857142857143
 LittleBigPlanet [Game of the Year Edition] --> 0.09
 DOOM Eternal --> 0.09
-Virtua Tennis --> 0.09
 MediEvil --> 0.09
 Boulder Dash --> 0.09
 Skate or Die 2: The Search for Double Trouble --> 0.09
@@ -1662,6 +1707,7 @@ Call of Duty: WWII --> 0.08695652173913043
 Electroplankton --> 0.084
 Peggle --> 0.08333333333333333
 SOCOM II: U.S. Navy SEALs --> 0.08024691358024691
+Berzerk --> 0.08
 Space Giraffe --> 0.08
 Age of Empires II [The Conquerors] --> 0.08
 MapleStory --> 0.08
@@ -1705,10 +1751,12 @@ Firewatch --> 0.04833333333333333
 Metroid II: Return of Samus --> 0.043726235741444866
 QWOP --> 0.042
 Wild Arms --> 0.04
+Defender II --> 0.04
 Die Hard Arcade --> 0.04
 Driveclub --> 0.04
 NBA 2K11 --> 0.04
 World Soccer Winning Eleven 7 International --> 0.04
+Sega Bass Fishing --> 0.04
 Kirby Mass Attack --> 0.04
 Super Mario Strikers --> 0.04
 Killzone: Mercenary --> 0.04
@@ -1725,13 +1773,13 @@ Super Monkey Ball Jr. --> 0.04
 SSX --> 0.039603960396039604
 OverBlood --> 0.03678929765886288
 Super Hexagon --> 0.035
+Space Channel 5 --> 0.03238095238095238
 Roller Coaster Tycoon 3 --> 0.03125
 Mega Man X4 --> 0.030864197530864196
 Mario Party 6 --> 0.03
 Teenage Mutant Ninja Turtles [NES] --> 0.03
 Uniracers --> 0.03
 Cave Story --> 0.028
-Space Channel 5 --> 0.026
 Spider-Man 2 --> 0.024
 Words with Friends --> 0.02
 Sonic 3 & Knuckles [Sonic the Hedgehog 3 + Sonic & Knuckles] --> 0.02

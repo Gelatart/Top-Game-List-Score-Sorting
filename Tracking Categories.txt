@@ -1,5 +1,5 @@
-RANKED: 43
-UNRANKED: 11
+RANKED: 45
+UNRANKED: 13
 FORMER: 8
 UNUSED: 0
 
@@ -60,6 +60,12 @@ R-The 10 Best Post-Apocalyptic Video Games Ranked - Maxim - 8-31-2016
 TOP THEMATIC GENRE ALL TIME (PREHISTORIC):
 U-The 10 Best Prehistoric Video Games - Paste Magazine - 2-10-2016
 
+TOP PLATFORM OF ALL TIME (ARCADE):
+U-The 50 best arcade games of all time ever - TechRadar - 3-7-2017
+
+TOP PLATFORM OF ALL TIME (2600):
+R-Best Atari 2600 games of all time - GamesRadar - 4-16-2012
+
 TOP PLATFORM OF ALL TIME (NES):
 R-Top 100 NES Games of All Time - IGN -  (Retrieved 2-23-2019)
 
@@ -99,6 +105,9 @@ U-The 25 Best Sega Genesis Games - Digital Trends - 2-13-2019
 TOP PLATFORM OF ALL TIME (SAT):
 R-Best Sega Saturn games of all time - GamesRadar - 6-21-2017
 
+TOP PLATFORM OF ALL TIME (DC):
+R-The 25 best Dreamcast games of all time - GamesRadar - 6-20-2017
+
 TOP PLATFORM OF ALL TIME (PS1):
 R-The 25 best PS1 games of all time - GamesRadar - 9-19-2018
 
@@ -134,3 +143,6 @@ U-The 50 most important PC games of all time - PC Gamer - 1-18-2016
 
 ESSENTIAL LIST FROM NICHE TASTE:
 U-Essential Patriciancore - /v/ - Posted roughly 9-24-2013 (Grabbed from /v/ Recommended Games Wiki)
+
+TOP GAMES OF 2018:
+U-The 20 best video games of 2018 - Business Insider - 12-24-2018
