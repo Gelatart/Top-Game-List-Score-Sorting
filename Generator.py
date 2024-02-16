@@ -81,6 +81,9 @@ class GameObject:
 
     #CONSIDER MAKING AN EXPORT FUNCTION FOR THE CLASS TO CONVERT TO DICTIONARY?
 
+#Start collecting the lists used in a list, put to a new collection in MongoDB
+gamesLists = []
+
 # Workbook is created
 wb = Workbook()
 
@@ -126,6 +129,7 @@ for filename in os.listdir(directory):
             #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
             print("Score of {}: {}".format(count, line.strip()))
             count -= 1
+        gamesLists.append(filename)
 
 directory = r'GameLists\Unranked'
 
@@ -152,7 +156,7 @@ for filename in os.listdir(directory):
         count //= originalCount
         print(count)
         print(f)
-        input('Wait to review\n')
+        #input('Wait to review\n')
         # Strips the newline character
         for line in Lines:
             if line in gameDb:
@@ -167,6 +171,7 @@ for filename in os.listdir(directory):
             #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
             print("Score of {}: {}".format(count, line.strip()))
             #count -= 1
+        gamesLists.append(filename)
 
 directory = r'GameLists\Former'
 for filename in os.listdir(directory):
@@ -200,6 +205,7 @@ for filename in os.listdir(directory):
             #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
             print("Score of {}: {}".format(count, line.strip()))
             #count -= 1
+        gamesLists.append(filename)
 
 completeFile = open('Completions.txt', 'r')
 completeLines = completeFile.readlines()
@@ -429,10 +435,10 @@ fileUI.close()
 fileUA.close()
 
 #SQLite Segment
-conn = sqlite3.connect('games.db')
-print("Games database opened successfully")
+#conn = sqlite3.connect('games.db')
+#print("Games database opened successfully")
 #... (EXPAND THE ACTUAL TABLE CREATION, ETC.?)
-conn.close()
+#conn.close()
 
 #further sort by keys after sorted by values?
 
@@ -446,6 +452,11 @@ listCounts = "Unranked Lists: " + str(unrankedFileCount)
 print(listCounts)
 listCounts = "Former Lists: " + str(formerFileCount)
 print(listCounts)
+
+print("LISTS USED IN PROCESS:")
+for list in gamesLists:
+    print(list)
+
 print("Successfully completed!")
 
 """"
