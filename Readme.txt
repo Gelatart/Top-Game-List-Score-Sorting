@@ -1,16 +1,12 @@
 CONDA ACTIVATION: GameListScore
 
-HOW TO WORK THIS:
-
-<fill in process of running this and environment required>
-
 GRABBING FROM AI CLASS (UVU CS 4470):
 [CS 4470 - Project 1.pdf helped figure a lot of this out, from Module 1]
--We used Conda to manage a Python environment?
--We used Anaconda?
+-We used Anaconda/Conda to manage a Python environment?
 -We named our environment "GameListScore"?
 -Would have created it with something like "conda create --name cs4470 python=3.9"?
 
+HOW TO WORK GENERATOR.PY:
 -Run the Anaconda Prompt program from Laptop? In pinned programs at bottom?
 --Should have (base) at the beginning
 --Navigate it to correct directory
@@ -33,3 +29,9 @@ SCORING PROCESSES:
 
 MONGOSH:
 (Seems like I can only properly connect to the cluster when I don't use my VPN?)
+
+GITHUB BRANCHING:
+(Ask dad for review on the console commands that can do this)
+-Branch whenever get a new major feature that I want to work on
+-Pull request when I've made significant progress on that feature
+-Keep commiting while I wait for dad to approve the pull request

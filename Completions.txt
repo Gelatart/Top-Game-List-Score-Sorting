@@ -1,6 +1,7 @@
 Ape Escape
 Batman: Arkham Asylum
 Batman: Arkham City
+Call of Duty: Modern Warfare 2
 Danganronpa: Trigger Happy Havoc
 Danganronpa 2: Goodbye Despair
 Grim Fandango
@@ -13,10 +14,14 @@ Halo: Reach
 Kingdom Hearts
 Kirby: Squeak Squad
 The Last of Us
+League of Legends
 Legend of Zelda: Ocarina of Time
 Legend of Zelda: Twilight Princess
 Luigi's Mansion
+Mario Kart: Double Dash
+Mario Kart DS
 Mario Kart Wii
+Pikmin 2
 Pokemon Black / White
 Pokemon Red / Blue
 Pokemon Ruby / Sapphire
@@ -33,7 +38,11 @@ Super Mario 3D World
 Super Mario 64
 Super Mario Galaxy
 Super Mario Odyssey
+Super Mario Sunshine
 Super Smash Bros. Brawl
+Super Smash Bros. for Wii U
 Super Smash Bros. Melee
+Team Fortress 2
 Tetris
 Undertale
+Wii Sports

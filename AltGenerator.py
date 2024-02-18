@@ -1,3 +1,5 @@
+#THIS IS AN ALTERNATE VERSION OF GENERATOR, THAT ONLY ADDS NEW FILES NOT IN DATABASE
+
 # import required module
 import os
 import math
@@ -5,8 +7,9 @@ import math
 # sheet using Python33
 import xlwt
 from xlwt import Workbook
-#import sqlite3
-#^Replaced the need for SQL with MongoDB and Pymongo
+#SQLite
+import sqlite3
+#^Replacing with mongodb?
 import pymongo
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
@@ -20,11 +23,8 @@ directory = r'GameLists\Ranked'
 
 #LOOK INTO PANDAS FOR DEALING WITH TABULAR DATA IN PYTHON
 
-#START FLESHING OUT GLITCHWAVE USAGE
-    #FILL OUT RATINGS, COLLECTION, PLAYTHROUGHS, ETC.
-    #IMPORT REVIEWS
-    #START LOOKING AT GENRE (INFLUENCE?), YEAR, PLATFORM, ETC. CHARTS
-#SEE IF BACKLOGGD CHARTS COMPARE, IF CAN DO SIMILAR THINGS TO GLITCHWAVE (ALSO LOOK INTO GROUVEE?)
+#CONSIDER INCORPORATING SQL, MYSQL, NOSQL, POSTGRES, ETC. INTO THIS?
+
 
 #ONCE CLEARED ALL OF AN UP TO LIST, THEN CONSIDER EXPANDING THE RANGE (LIKE FROM UP TO 100 TO UP TO 150)
 
@@ -265,16 +265,10 @@ try:
 except Exception as e:
     print(e)
 monCol = monDB["games"]
-listCol = monDB["lists"]
-
-#TEST INSERT_ONE
-#testDict = { "title": "This is a test", "score": 69}
-#test = monCol.insert_one(testDict)
 
 #INSERT ALL GAMES INTO DATABASE
 #Clear database to begin with?
 monCol.drop()
-listCol.drop()
 #export = []
 print("INSERTING INTO MONGODB!")
 for game, details in gameDb.items():
@@ -299,13 +293,6 @@ for game, details in gameDb.items():
     insertion = monCol.insert_one(exportDict)
 #insertion = monCol.insert_many(gameDb)
 #insertion = monCol.insert_many(export)
-print("TIME TO INSERT THE LISTS INTO MONGODB!")
-for list in gamesLists:
-    print(list)
-    listDict = {}
-    listDict["Title"] = list
-    #could keep track of what type of list it is, other variables?
-    listInsert = listCol.insert_one(listDict)
 
 gameDbRanked = {}
 gameDbInclusion = {}
@@ -337,10 +324,6 @@ for game, details in gameDb.items():
     #sheet1.write(excelCount, 2, details.listCount)
     sheet1.write(excelCount, 1, rScore)
     sheet1.write(excelCount, 2, iScore)
-    #averageScore = details.rankedScore / details.listCount
-    #averageScore = (details.rankedScore / details.listCount)/details.totalCount
-    #averageScore = details.rankedScore / details.totalCount
-    #sheet1.write(excelCount, 3, averageScore)
     sheet1.write(excelCount, 3, aScore)
     outputLists = ""
     for refList in details.listsReferencing:
