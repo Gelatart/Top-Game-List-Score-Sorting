@@ -1,5 +1,5 @@
-RANKED: 45
-UNRANKED: 13
+RANKED: 48
+UNRANKED: 14
 FORMER: 8
 UNUSED: 0
 
@@ -146,3 +146,7 @@ U-Essential Patriciancore - /v/ - Posted roughly 9-24-2013 (Grabbed from /v/ Rec
 
 TOP GAMES OF 2018:
 U-The 20 best video games of 2018 - Business Insider - 12-24-2018
+U-The 15 best video games of 2018 - The Verge - 12-17-2018
+R-The 10 Best Video Games of 2018 - Vulture - 12-7-2018
+R-The 10 Best Video Games of 2018 - TIME - 11-16-2018
+R-The 10 Best Games of 2018 - WIRED - 12-30-2018

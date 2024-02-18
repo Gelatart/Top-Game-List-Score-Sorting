@@ -2,8 +2,7 @@ CONDA ACTIVATION: GameListScore
 
 GRABBING FROM AI CLASS (UVU CS 4470):
 [CS 4470 - Project 1.pdf helped figure a lot of this out, from Module 1]
--We used Conda to manage a Python environment?
--We used Anaconda?
+-We used Anaconda/Conda to manage a Python environment?
 -We named our environment "GameListScore"?
 -Would have created it with something like "conda create --name cs4470 python=3.9"?
 
@@ -32,4 +31,7 @@ MONGOSH:
 (Seems like I can only properly connect to the cluster when I don't use my VPN?)
 
 GITHUB BRANCHING:
-(Might need to ask dad to review console commands to do this properly)
+(Ask dad for review on the console commands that can do this)
+-Branch whenever get a new major feature that I want to work on
+-Pull request when I've made significant progress on that feature
+-Keep commiting while I wait for dad to approve the pull request

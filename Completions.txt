@@ -1,6 +1,7 @@
 Ape Escape
 Batman: Arkham Asylum
 Batman: Arkham City
+Call of Duty: Modern Warfare 2
 Danganronpa: Trigger Happy Havoc
 Danganronpa 2: Goodbye Despair
 Grim Fandango
@@ -13,6 +14,7 @@ Halo: Reach
 Kingdom Hearts
 Kirby: Squeak Squad
 The Last of Us
+League of Legends
 Legend of Zelda: Ocarina of Time
 Legend of Zelda: Twilight Princess
 Luigi's Mansion

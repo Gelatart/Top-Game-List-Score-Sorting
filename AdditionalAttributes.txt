@@ -12,6 +12,13 @@ BioShock
 	Players: 1
 	Devs: 2K Boston, 2K Australia
 
+Castlevania: Symphony of the Night
+	Main: PS1
+	Platforms: PS1, Sat, X360, PSP, PS4, Android, iOS
+	Release: 3/20/1997
+	Players: 1
+	Devs: Konami Computer Entertainment Tokyo
+
 Chrono Trigger
 	Main: SNES
 	Platforms: SNES, Super Famicom, Satellaview, Wii, PS1, iOS, Android, Windows
@@ -88,6 +95,13 @@ Super Mario 64
 	Release: 6/23/1996
 	Players: 1
 	Devs: Nintendo EAD
+
+Super Mario Bros. 3
+	Main: NES
+	Platforms: NES, Famicom, PlayChoice-10, Wii U, Switch, 3DS, NES Classic
+	Release: 10/23/1988
+	Players: 1, 2
+	Devs: Nintendo R&D4
 
 Super Mario World
 	Main: SNES
