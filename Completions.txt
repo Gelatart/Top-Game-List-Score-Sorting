@@ -23,6 +23,8 @@ Mario Kart DS
 Mario Kart Wii
 Pikmin 2
 Pokemon Black / White
+Pokemon Go
+Pokemon Gold / Silver
 Pokemon Red / Blue
 Pokemon Ruby / Sapphire
 Pokemon Yellow
@@ -31,6 +33,7 @@ Portal 2
 Resident Evil 4
 Silent Hill
 Silent Hill 2
+Silent Hill 3
 Sonic the Hedgehog
 Sonic the Hedgehog 2
 Spyro the Dragon

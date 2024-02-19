@@ -91,9 +91,7 @@ rankedFileCount = 0
 unrankedFileCount = 0
 formerFileCount = 0
 
-"loop of getting the database information"
-# iterate over files in
-# that directory
+"Loop of getting the database information"
 #RANKED DIRECTORY
 for filename in os.listdir(directory):
     f = os.path.join(directory, filename)
@@ -256,7 +254,7 @@ except StopIteration:
 load_dotenv()
 monConnect = os.getenv('MONGO_URI')
 monClient = pymongo.MongoClient(monConnect)
-#mClient = MongoClient(mConnect, server_api=ServerApi('1'))
+monClient = pymongo.MongoClient(monConnect, server_api=ServerApi('1'))
 #Reference code: client = MongoClient(uri, server_api=ServerApi('1'))
 monDB = monClient["GameSorting"]
 try:
@@ -301,7 +299,7 @@ for game, details in gameDb.items():
 #insertion = monCol.insert_many(export)
 print("TIME TO INSERT THE LISTS INTO MONGODB!")
 for list in gamesLists:
-    print(list)
+    #print(list)
     listDict = {}
     listDict["Title"] = list
     #could keep track of what type of list it is, other variables?
@@ -389,11 +387,8 @@ for game, score in convertedRanked.items():
     if (gameDb[game].completed == True):
         entry += "[x]"
     entry += game.strip()
-    #fileR.write(game)
     entry += " --> "
-    #fileR.write(" --> ")
     entry += str(score)
-    #fileR.write(str(score))
     fileR.write(entry)
     fileR.write("\n")
     if (gameDb[game].completed == False):
