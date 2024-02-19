@@ -253,7 +253,7 @@ except StopIteration:
 #Connecting to env file to get private login data
 load_dotenv()
 monConnect = os.getenv('MONGO_URI')
-monClient = pymongo.MongoClient(monConnect)
+#monClient = pymongo.MongoClient(monConnect)
 monClient = pymongo.MongoClient(monConnect, server_api=ServerApi('1'))
 #Reference code: client = MongoClient(uri, server_api=ServerApi('1'))
 monDB = monClient["GameSorting"]

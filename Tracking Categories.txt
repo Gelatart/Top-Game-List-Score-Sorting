@@ -1,4 +1,4 @@
-RANKED: 50
+RANKED: 51
 UNRANKED: 18
 FORMER: 9
 UNUSED: 0
@@ -163,3 +163,4 @@ R-The 10 Best Video Games of 2017 - BGR - 12-13-2017
 	F-+ HONORABLE MENTIONS
 U-The 20 Best Video Games Of 2017 - Forbes - 12-22-2017
 <^4 Tiers: Platinum (1), Gold (2-4), Silver (5-10), Bronze (11-20)>
+R-The 10 Best Video Games of 2017 - Vulture - 12-8-2017
