@@ -40,6 +40,13 @@ Final Fantasy VII
 	Players: 1
 	Devs: Square
 
+Grand Theft Auto V
+	Main: X360
+	Platforms: X360, PS3, PS4, XONE, PC, PS5, Series X 
+	Release: 9/17/2013
+	Players: 1, Multi
+	Devs: Rockstar North
+
 Half-Life 2
 	Main: PC
 	Platforms: PC, Mac, Linux, Xbox, X360, PS3, Android

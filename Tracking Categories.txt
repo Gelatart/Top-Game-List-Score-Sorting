@@ -1,7 +1,9 @@
-RANKED: 51
-UNRANKED: 18
-FORMER: 9
+RANKED: 56
+UNRANKED: 21
+FORMER: 11
 UNUSED: 0
+---
+TOTAL: 88
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -164,3 +166,15 @@ R-The 10 Best Video Games of 2017 - BGR - 12-13-2017
 U-The 20 Best Video Games Of 2017 - Forbes - 12-22-2017
 <^4 Tiers: Platinum (1), Gold (2-4), Silver (5-10), Bronze (11-20)>
 R-The 10 Best Video Games of 2017 - Vulture - 12-8-2017
+U-The Best Video Games of 2017 - The New Yorker - 12-28-2017
+	F-+ HONORABLE MENTIONS
+U-The best video games of 2017 - The Daily Dot - 1-2-2018
+R-The 10 Best Video Games of 2017 - Business Insider - 12-11-2017
+R-The Top 10 Video Games of 2017 - TIME - 11-20-2017
+
+TOP GAMES OF 2016:
+R-The 10 Best Video Games of 2016 - Forbes - 1-10-2017
+	F-+ HONORABLE MENTIONS
+U-The 10 Best Video Games of 2016 - Washington Post - 11-30-2016
+R-The 15 Best Video Games of 2016 - TIME - 12-19-2016
+R-The 10 Best Video Games of 2016 - Vulture - 12-14-2016

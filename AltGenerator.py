@@ -171,7 +171,6 @@ for filename in os.listdir(directory):
             print("Brand new list to log!")
             #print(f)
             # Using readlines()
-            #file1 = open(f, 'r')
             file1 = open(f, 'r', encoding="utf-8")
             unrankedFileCount += 1
             startingLine = file1.readline()
@@ -222,9 +221,7 @@ for filename in os.listdir(directory):
             continue
         else:
             print("Brand new list to log!")
-            #print(f)
             # Using readlines()
-            # file1 = open(f, 'r')
             file1 = open(f, 'r', encoding="utf-8")
             formerFileCount += 1
             startingLine = file1.readline()

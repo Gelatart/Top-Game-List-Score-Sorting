@@ -1,8 +1,7 @@
 # import required module
 import os
 import math
-# Writing to an excel
-# sheet using Python33
+# Writing to an excel sheet using Python
 import xlwt
 from xlwt import Workbook
 #import sqlite3
@@ -99,15 +98,14 @@ for filename in os.listdir(directory):
     if os.path.isfile(f):
         #print(f)
         # Using readlines()
-        # file1 = open(f, 'r')
         file1 = open(f, 'r', encoding="utf-8")
         rankedFileCount += 1
         startingLine = file1.readline()
         Lines = file1.readlines()
         #count = int(startingLine)
         count = len(Lines)
-        print(f)
-        print(len(Lines))
+        #print(f)
+        #print(len(Lines))
         #input('Wait to review\n')
         originalCount = count
         # Strips the newline character
@@ -134,7 +132,6 @@ for filename in os.listdir(directory):
     if os.path.isfile(f):
         #print(f)
         # Using readlines()
-        #file1 = open(f, 'r')
         file1 = open(f, 'r', encoding="utf-8")
         unrankedFileCount += 1
         startingLine = file1.readline()
