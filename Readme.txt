@@ -35,3 +35,12 @@ GITHUB BRANCHING:
 -Branch whenever get a new major feature that I want to work on
 -Pull request when I've made significant progress on that feature
 -Keep commiting while I wait for dad to approve the pull request
+-Command line: first put "git status" to see what branch I'm on and status
+-Then put "git branch <BRANCH NAME>" to start a new branch (ex. "create-mongo-db")
+-Then put "git checkout <BRANCH NAME>" to switch to this new branch
+-Then put "git status" to check that successfully on new branch
+-Then put "git push -u origin <BRANCH NAME>" to push the new branch to the remote source
+-Feel free to check the new branch exists and that you're using it
+
+PULL REQUESTS:
+-Add dad as a reviewer as soon as make new pull request so try to include him

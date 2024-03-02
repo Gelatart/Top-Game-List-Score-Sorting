@@ -1,7 +1,11 @@
-RANKED: 48
-UNRANKED: 14
-FORMER: 8
+RANKED: 56
+UNRANKED: 21
+FORMER: 11
 UNUSED: 0
+---
+TOTAL: 88
+
+<^> indicates special notes for scoring that are not currently implemented
 
 MY TOP 100:
 My Personal Top 100 - Backloggd (As of 2-9-2024)
@@ -86,6 +90,7 @@ R-The 25 best Wii U games - GamesRadar - 10-13-2017
 
 TOP PLATFORM OF ALL TIME (GB):
 U-The 26 Best Nintendo Game Boy Games Of All Time - Nintendo Life - 4-11-2018
+<^Top 5 Ranked, rest not>
 
 TOP PLATFORM OF ALL TIME (GBC):
 R-The 25 Best Video Games for Nintendos Gameboy Color - Complex - 8-31-2013
@@ -150,3 +155,26 @@ U-The 15 best video games of 2018 - The Verge - 12-17-2018
 R-The 10 Best Video Games of 2018 - Vulture - 12-7-2018
 R-The 10 Best Video Games of 2018 - TIME - 11-16-2018
 R-The 10 Best Games of 2018 - WIRED - 12-30-2018
+U-10 Best Video Games of 2018 - Den of Geek - 12-31-2018
+R-The Best Video Games of 2018 - Complex - 12-13-2018
+U-The 10 best video games of 2018 - The Washington Post - 11-15-2018
+
+TOP GAMES OF 2017:
+U-The 10 Best Video Games of 2017 - Washington Post - 11-30-2017
+R-The 10 Best Video Games of 2017 - BGR - 12-13-2017
+	F-+ HONORABLE MENTIONS
+U-The 20 Best Video Games Of 2017 - Forbes - 12-22-2017
+<^4 Tiers: Platinum (1), Gold (2-4), Silver (5-10), Bronze (11-20)>
+R-The 10 Best Video Games of 2017 - Vulture - 12-8-2017
+U-The Best Video Games of 2017 - The New Yorker - 12-28-2017
+	F-+ HONORABLE MENTIONS
+U-The best video games of 2017 - The Daily Dot - 1-2-2018
+R-The 10 Best Video Games of 2017 - Business Insider - 12-11-2017
+R-The Top 10 Video Games of 2017 - TIME - 11-20-2017
+
+TOP GAMES OF 2016:
+R-The 10 Best Video Games of 2016 - Forbes - 1-10-2017
+	F-+ HONORABLE MENTIONS
+U-The 10 Best Video Games of 2016 - Washington Post - 11-30-2016
+R-The 15 Best Video Games of 2016 - TIME - 12-19-2016
+R-The 10 Best Video Games of 2016 - Vulture - 12-14-2016

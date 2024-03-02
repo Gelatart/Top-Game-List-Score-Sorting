@@ -23,9 +23,6 @@ directory = r'GameLists\Ranked'
 
 #LOOK INTO PANDAS FOR DEALING WITH TABULAR DATA IN PYTHON
 
-#CONSIDER INCORPORATING SQL, MYSQL, NOSQL, POSTGRES, ETC. INTO THIS?
-
-
 #ONCE CLEARED ALL OF AN UP TO LIST, THEN CONSIDER EXPANDING THE RANGE (LIKE FROM UP TO 100 TO UP TO 150)
 
 "gameDb is a dict of string titles and game object values"
@@ -91,42 +88,68 @@ rankedFileCount = 0
 unrankedFileCount = 0
 formerFileCount = 0
 
+#START USING PYMONGO FOR OUTPUTTING TO MONGODB DATABASE
+#Used code sample from Atlas on how to connect with Pymongo for assistance here
+#Connecting to env file to get private login data
+load_dotenv()
+monConnect = os.getenv('MONGO_URI')
+#monClient = pymongo.MongoClient(monConnect)
+monClient = pymongo.MongoClient(monConnect, server_api=ServerApi('1'))
+monDB = monClient["GameSorting"]
+try:
+    monClient.admin.command('ping')
+    print("Pinged your deployment. You successfully connected to MongoDB!")
+except Exception as e:
+    print(e)
+monCol = monDB["games"]
+listCol = monDB["lists"]
+
 "loop of getting the database information"
-# iterate over files in
-# that directory
 #RANKED DIRECTORY
 for filename in os.listdir(directory):
     f = os.path.join(directory, filename)
     # checking if it is a file
     if os.path.isfile(f):
-        #print(f)
-        # Using readlines()
-        # file1 = open(f, 'r')
-        file1 = open(f, 'r', encoding="utf-8")
-        rankedFileCount += 1
-        startingLine = file1.readline()
-        Lines = file1.readlines()
-        #count = int(startingLine)
-        count = len(Lines)
-        print(f)
-        print(len(Lines))
-        #input('Wait to review\n')
-        originalCount = count
-        # Strips the newline character
-        for line in Lines:
-            if line in gameDb:
-                gameDb[line].rankedScore += count
-                gameDb[line].listCount += 1
-                gameDb[line].listsReferencing.append(f)
-                gameDb[line].totalCount += originalCount
-            else:
-                newObj = GameObject(count, f, originalCount)
-                gameDb[line] = newObj
-            #searchObj = gameDb.get(newObj, 0) + 1
-            #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
-            print("Score of {}: {}".format(count, line.strip()))
-            count -= 1
-        gamesLists.append(filename)
+        list_query = { "Title": filename}
+        list_count = listCol.count_documents(list_query)
+        #print(filename)
+        #print(list_count)
+        #if(listCol.find(list_query) != None):
+        if (list_count > 0):
+            #print(listCol.find(list_query).count())
+            print("List was already logged!")
+            #input('Wait to review\n')
+            continue
+        else:
+            print("Brand new list to log!")
+            #print(f)
+            # Using readlines()
+            # file1 = open(f, 'r')
+            file1 = open(f, 'r', encoding="utf-8")
+            rankedFileCount += 1
+            startingLine = file1.readline()
+            Lines = file1.readlines()
+            #count = int(startingLine)
+            count = len(Lines)
+            #print(f)
+            #print(len(Lines))
+            #input('Wait to review\n')
+            originalCount = count
+            # Strips the newline character
+            for line in Lines:
+                if line in gameDb:
+                    gameDb[line].rankedScore += count
+                    gameDb[line].listCount += 1
+                    gameDb[line].listsReferencing.append(f)
+                    gameDb[line].totalCount += originalCount
+                else:
+                    newObj = GameObject(count, f, originalCount)
+                    gameDb[line] = newObj
+                #searchObj = gameDb.get(newObj, 0) + 1
+                #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
+                #print("Score of {}: {}".format(count, line.strip()))
+                count -= 1
+            gamesLists.append(filename)
 
 directory = r'GameLists\Unranked'
 
@@ -134,75 +157,96 @@ for filename in os.listdir(directory):
     f = os.path.join(directory, filename)
     # checking if it is a file
     if os.path.isfile(f):
-        #print(f)
-        # Using readlines()
-        #file1 = open(f, 'r')
-        file1 = open(f, 'r', encoding="utf-8")
-        unrankedFileCount += 1
-        startingLine = file1.readline()
-        Lines = file1.readlines()
-        #count = int(startingLine)
-        floatCount = float(startingLine)
-        count = math.floor(floatCount)
-        count = len(Lines)
-        print(count)
-        originalCount = count
-        #do a sum of all numbers in that count
-        count = originalCount * (originalCount + 1) // 2
-        #divide the factorial by the original count
-        count //= originalCount
-        print(count)
-        print(f)
-        #input('Wait to review\n')
-        # Strips the newline character
-        for line in Lines:
-            if line in gameDb:
-                gameDb[line].rankedScore += count
-                gameDb[line].listCount += 1
-                gameDb[line].listsReferencing.append(f)
-                gameDb[line].totalCount += originalCount
-            else:
-                newObj = GameObject(count, f, originalCount)
-                gameDb[line] = newObj
-            #searchObj = gameDb.get(newObj, 0) + 1
-            #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
-            print("Score of {}: {}".format(count, line.strip()))
-            #count -= 1
-        gamesLists.append(filename)
+        list_query = {"Title": filename}
+        list_count = listCol.count_documents(list_query)
+        # print(filename)
+        # print(list_count)
+        # if(listCol.find(list_query) != None):
+        if (list_count > 0):
+            # print(listCol.find(list_query).count())
+            print("List was already logged!")
+            # input('Wait to review\n')
+            continue
+        else:
+            print("Brand new list to log!")
+            #print(f)
+            # Using readlines()
+            file1 = open(f, 'r', encoding="utf-8")
+            unrankedFileCount += 1
+            startingLine = file1.readline()
+            Lines = file1.readlines()
+            #count = int(startingLine)
+            floatCount = float(startingLine)
+            count = math.floor(floatCount)
+            count = len(Lines)
+            print(count)
+            originalCount = count
+            #do a sum of all numbers in that count
+            count = originalCount * (originalCount + 1) // 2
+            #divide the factorial by the original count
+            count //= originalCount
+            #print(count)
+            #print(f)
+            #input('Wait to review\n')
+            # Strips the newline character
+            for line in Lines:
+                if line in gameDb:
+                    gameDb[line].rankedScore += count
+                    gameDb[line].listCount += 1
+                    gameDb[line].listsReferencing.append(f)
+                    gameDb[line].totalCount += originalCount
+                else:
+                    newObj = GameObject(count, f, originalCount)
+                    gameDb[line] = newObj
+                #searchObj = gameDb.get(newObj, 0) + 1
+                #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
+                #print("Score of {}: {}".format(count, line.strip()))
+                #count -= 1
+            gamesLists.append(filename)
 
 directory = r'GameLists\Former'
 for filename in os.listdir(directory):
     f = os.path.join(directory, filename)
     # checking if it is a file
     if os.path.isfile(f):
-        #print(f)
-        # Using readlines()
-        # file1 = open(f, 'r')
-        file1 = open(f, 'r', encoding="utf-8")
-        formerFileCount += 1
-        startingLine = file1.readline()
-        Lines = file1.readlines()
-        #count = 1
-        count = int(startingLine)
-        originalCount = count
-        #^find out how to read the line amount ahead of time
-        #originalCount = len(Lines)
-        print(originalCount)
-        # Strips the newline character
-        for line in Lines:
-            if line in gameDb:
-                gameDb[line].rankedScore += count
-                gameDb[line].listCount += 1
-                gameDb[line].listsReferencing.append(f)
-                gameDb[line].totalCount += originalCount
-            else:
-                newObj = GameObject(count, f, originalCount)
-                gameDb[line] = newObj
-            #searchObj = gameDb.get(newObj, 0) + 1
-            #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
-            print("Score of {}: {}".format(count, line.strip()))
-            #count -= 1
-        gamesLists.append(filename)
+        list_query = {"Title": filename}
+        list_count = listCol.count_documents(list_query)
+        # print(filename)
+        # print(list_count)
+        # if(listCol.find(list_query) != None):
+        if (list_count > 0):
+            # print(listCol.find(list_query).count())
+            print("List was already logged!")
+            # input('Wait to review\n')
+            continue
+        else:
+            print("Brand new list to log!")
+            # Using readlines()
+            file1 = open(f, 'r', encoding="utf-8")
+            formerFileCount += 1
+            startingLine = file1.readline()
+            Lines = file1.readlines()
+            #count = 1
+            count = int(startingLine)
+            originalCount = count
+            #^find out how to read the line amount ahead of time
+            #originalCount = len(Lines)
+            #print(originalCount)
+            # Strips the newline character
+            for line in Lines:
+                if line in gameDb:
+                    gameDb[line].rankedScore += count
+                    gameDb[line].listCount += 1
+                    gameDb[line].listsReferencing.append(f)
+                    gameDb[line].totalCount += originalCount
+                else:
+                    newObj = GameObject(count, f, originalCount)
+                    gameDb[line] = newObj
+                #searchObj = gameDb.get(newObj, 0) + 1
+                #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
+                #print("Score of {}: {}".format(count, line.strip()))
+                #count -= 1
+            gamesLists.append(filename)
 
 completeFile = open('Completions.txt', 'r')
 completeLines = completeFile.readlines()
@@ -250,32 +294,10 @@ try:
 except StopIteration:
         pass
 
-#START USING PYMONGO FOR OUTPUTTING TO MONGODB DATABASE
-#Used code sample from Atlas on how to connect with Pymongo for assistance here
-#Connecting to env file to get private login data
-load_dotenv()
-monConnect = os.getenv('MONGO_URI')
-monClient = pymongo.MongoClient(monConnect)
-#mClient = MongoClient(mConnect, server_api=ServerApi('1'))
-#Reference code: client = MongoClient(uri, server_api=ServerApi('1'))
-monDB = monClient["GameSorting"]
-try:
-    monClient.admin.command('ping')
-    print("Pinged your deployment. You successfully connected to MongoDB!")
-except Exception as e:
-    print(e)
-monCol = monDB["games"]
-
 #INSERT ALL GAMES INTO DATABASE
-#Clear database to begin with?
-monCol.drop()
 #export = []
 print("INSERTING INTO MONGODB!")
 for game, details in gameDb.items():
-    #print(details)
-    #insertion = monCol.insert_one(details)
-    #insertion = monCol.insert_one(gameDb[game])
-    #export.append(details)
     exportDict = {}
     exportDict["Title"] = game
     exportDict["Ranked Score"] = details.rankedScore
@@ -293,6 +315,13 @@ for game, details in gameDb.items():
     insertion = monCol.insert_one(exportDict)
 #insertion = monCol.insert_many(gameDb)
 #insertion = monCol.insert_many(export)
+print("TIME TO INSERT THE LISTS INTO MONGODB!")
+for list in gamesLists:
+    #print(list)
+    listDict = {}
+    listDict["Title"] = list
+    #could keep track of what type of list it is, other variables?
+    listInsert = listCol.insert_one(listDict)
 
 gameDbRanked = {}
 gameDbInclusion = {}
@@ -372,11 +401,8 @@ for game, score in convertedRanked.items():
     if (gameDb[game].completed == True):
         entry += "[x]"
     entry += game.strip()
-    #fileR.write(game)
     entry += " --> "
-    #fileR.write(" --> ")
     entry += str(score)
-    #fileR.write(str(score))
     fileR.write(entry)
     fileR.write("\n")
     if (gameDb[game].completed == False):
@@ -389,11 +415,8 @@ for game, score in convertedInclusion.items():
     if (gameDb[game].completed == True):
         entry += "[x]"
     entry += game.strip()
-    #fileR.write(game)
     entry += " --> "
-    #fileR.write(" --> ")
     entry += str(score)
-    #fileR.write(str(score))
     fileI.write(entry)
     fileI.write("\n")
     if (gameDb[game].completed == False):
@@ -405,11 +428,8 @@ for game, score in convertedAverage.items():
     if (gameDb[game].completed == True):
         entry += "[x]"
     entry += game.strip()
-    #fileR.write(game)
     entry += " --> "
-    #fileR.write(" --> ")
     entry += str(score)
-    #fileR.write(str(score))
     fileA.write(entry)
     fileA.write("\n")
     if (gameDb[game].completed == False):
@@ -422,12 +442,6 @@ fileA.close()
 fileUR.close()
 fileUI.close()
 fileUA.close()
-
-#SQLite Segment
-#conn = sqlite3.connect('games.db')
-#print("Games database opened successfully")
-#... (EXPAND THE ACTUAL TABLE CREATION, ETC.?)
-#conn.close()
 
 #further sort by keys after sorted by values?
 
@@ -446,39 +460,16 @@ print("LISTS USED IN PROCESS:")
 for list in gamesLists:
     print(list)
 
+print()
+print("Time to grab lists from collections!")
+for list in listCol.find({}, {"_id": 0}):
+    print(list)
+
 print("Successfully completed!")
 
 """"
 REFERENCES:
-Iterate over files in directory: https://www.geeksforgeeks.org/how-to-iterate-over-files-in-directory-using-python/
-https://www.w3schools.com/python/python_dictionaries.asp
-https://www.geeksforgeeks.org/read-a-file-line-by-line-in-python/
-https://www.geeksforgeeks.org/convert-string-to-integer-in-python/
-https://www.geeksforgeeks.org/python-initializing-dictionary-with-empty-lists/
-https://linuxhint.com/initialize-dictionary-python/#:~:text=Another%20way%20to%20initialize%20a,print%20out%20the%20initialized%20dictionary.
-https://www.geeksforgeeks.org/writing-excel-sheet-using-python/
-https://stackoverflow.com/questions/9848299/importerror-no-module-named-xlwt
-https://www.geeksforgeeks.org/python-increment-value-in-dictionary/
-https://www.educative.io/answers/how-to-check-if-a-key-exists-in-a-python-dictionary
-Factorial in python: https://www.geeksforgeeks.org/factorial-in-python/
-https://stackoverflow.com/questions/1347791/unicode-error-unicodeescape-codec-cant-decode-bytes-cannot-open-text-file
-https://kodify.net/python/math/round-integers/
-https://stackoverflow.com/questions/27946595/how-to-manage-division-of-huge-numbers-in-python
-https://www.geeksforgeeks.org/python-add-one-string-to-another/
-Counting the number of lines in file: https://pynative.com/python-count-number-of-lines-in-file/
-https://www.freecodecamp.org/news/sort-dictionary-by-value-in-python/
-https://www.geeksforgeeks.org/reading-writing-text-files-python/
-https://www.geeksforgeeks.org/convert-integer-to-string-in-python/
-https://www.geeksforgeeks.org/python-removing-newline-character-from-string/
-https://github.com/python-excel/xlwt/blob/master/xlwt/Style.py
-https://www.digitalocean.com/community/tutorials/python-wait-time-wait-for-input
-https://www.tutorialspoint.com/sqlite/sqlite_python.htm
-https://www.geeksforgeeks.org/iterate-over-a-list-in-python/
-Pymongo Tutorial: https://www.w3schools.com/python/python_mongodb_getstarted.asp
-Mongodb Tutorial: https://www.w3schools.com/mongodb/mongodb_get_started.php
-Add to a list: https://www.w3schools.com/python/python_lists_add.asp
-How to keep sensitive data safe in an ENV file: https://forum.freecodecamp.org/t/how-to-store-a-mongodb-username-and-password-persistently-using-dotenv/50994
-How to setup ENV file to work with Python: https://configu.com/blog/using-py-dotenv-python-dotenv-package-to-manage-env-variables/
-Pre-commit safety: https://docs.gitguardian.com/ggshield-docs/integrations/git-hooks/pre-commit?utm_source=product&utm_medium=GitHub_checks&utm_campaign=check_run
-Fix for UnicodeEncodeError after pre-commit safety integration: https://github.com/mwouts/jupytext/issues/770
+(EXCLUDING THE ONES ALREADY REFERENCED IN GENERATOR.PY)
+Finding results from collection: https://www.w3schools.com/python/python_mongodb_find.asp
+Get count for Pymongo find results: https://stackoverflow.com/questions/4415514/in-mongodbs-pymongo-how-do-i-do-a-count
 """

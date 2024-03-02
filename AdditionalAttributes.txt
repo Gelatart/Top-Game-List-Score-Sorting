@@ -33,12 +33,33 @@ Dark Souls
 	Players: 1, Multi
 	Devs: FromSoftware
 
+Final Fantasy VII
+	Main: PS1
+	Platforms: PS1, PC, PS4, Switch, XONE, iOS, Android
+	Release: 1/31/1997
+	Players: 1
+	Devs: Square
+
+Grand Theft Auto V
+	Main: X360
+	Platforms: X360, PS3, PS4, XONE, PC, PS5, Series X 
+	Release: 9/17/2013
+	Players: 1, Multi
+	Devs: Rockstar North
+
 Half-Life 2
 	Main: PC
 	Platforms: PC, Mac, Linux, Xbox, X360, PS3, Android
 	Release: 11/16/2004
 	Players: 1, Multi
 	Devs: Valve
+
+Halo: Combat Evolved
+	Main: Xbox
+	Platforms: Xbox, PC, Mac, X360
+	Release: 11/15/2001
+	Players: 1,2,3,4, Multi
+	Devs: Bungie
 
 Legend of Zelda: A Link to the Past
 	Main: SNES
@@ -60,6 +81,20 @@ Mass Effect 2
 	Release: 1/26/2010
 	Players: 1
 	Devs: BioWare
+
+Minecraft
+	Main: PC
+	Platforms: PC, Mac, Linux, Android, iOS, X360, PS3, PS4, XONE, Vita, Wii U, Switch, New 3DS, Raspberry Pi, Fire OS, Windows Phone, tvOS, ChromeOS
+	Release: 11/18/2011
+	Players: 1, Multi
+	Devs: Mojang Studios
+
+Portal
+	Main: PC
+	Platforms: PC, Mac, Linux, X360, PS3, Switch, Android
+	Release: 10/10/2007
+	Players: 1
+	Devs: Valve
 
 Portal 2
 	Main: PC
