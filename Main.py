@@ -58,45 +58,56 @@ option_check = False
 program_completed = False
 #Make a loop to keep going until program done?
 program_selected = None
-while(option_check == False):
+while(program_completed == False):
+    while(option_check == False):
+        print()
+        print("Here are your options:")
+        print("1. Generator.py: Run the traditional generator, which starts fresh every time")
+        print("2. AltGenerator.py: Run the alternate generator, which checks for new lists and only adds them")
+        print("3. Drop.py: Drop the collections to empty the databases in the cluster and start with a clean slate")
+        print("4. Quit/Exit: Quit this program and finish your business")
+        print()
+        #Provide an option to quit and finish
+
+        option = input("Select what you would like to choose to run: ")
+
+        if(option == '1' or option == 'Generator.py' or option == 'Generator' or option == 'generator'):
+            #print("Generator.py will be run now")
+            option_check = True
+            program_selected = 'Generator.py'
+        elif(option == '2' or option == 'AltGenerator.py' or option == 'AltGenerator' or option == 'altgenerator'):
+            #print("AltGenerator.py will be run now")
+            option_check = True
+            program_selected = 'AltGenerator.py'
+        elif (option == '3' or option == 'Drop.py' or option == 'Drop' or option == 'drop'):
+            #print("Drop.py will be run now")
+            option_check = True
+            program_selected = 'Drop.py'
+        elif(option == '4' or option == 'Quit' or option == 'quit' or option == 'Exit' or option == 'exit'):
+            option_check = True
+            print("Thank you for spending time with this program.")
+            program_completed = True
+            break
+        else:
+            print("Hmm, not sure if I understand that input (or at least not yet)")
+    if(program_completed == True):
+        break
     print()
-    print("Here are your options:")
-    print("1. Generator.py: Run the traditional generator, which starts fresh every time")
-    print("2. AltGenerator.py: Run the alternate generator, which checks for new lists and only adds them")
-    print("3. Drop.py: Drop the collections to empty the databases in the cluster and start with a clean slate")
-    print()
-    #Provide an option to quit and finish
+    program = str(program_selected)
+    #print("You have chosen: " + option)
+    #print("You have chosen: " + str(program_selected))
+    print("You have chosen: " + program)
+    #print(str(program_selected) + " will be run now")
+    print(program + " will be run now")
 
-    option = input("Select what you would like to choose to run: ")
+    """
+    TIME TO RUN THE REAL PROGRAM!
+    """
+    #os.system(program_selected)
+    #os.system(program)
+    subprocess.run(["python", program])
 
-    if(option == '1' or option == 'Generator.py' or option == 'Generator' or option == 'generator'):
-        #print("Generator.py will be run now")
-        option_check = True
-        program_selected = 'Generator.py'
-    elif(option == '2' or option == 'AltGenerator.py' or option == 'AltGenerator' or option == 'altgenerator'):
-        #print("AltGenerator.py will be run now")
-        option_check = True
-        program_selected = 'AltGenerator.py'
-    elif (option == '3' or option == 'Drop.py' or option == 'Drop' or option == 'drop'):
-        #print("Drop.py will be run now")
-        option_check = True
-        program_selected = 'Drop.py'
-    else:
-        print("Hmm, not sure if I understand that input (or at least not yet)")
-print()
-program = str(program_selected)
-#print("You have chosen: " + option)
-#print("You have chosen: " + str(program_selected))
-print("You have chosen: " + program)
-#print(str(program_selected) + " will be run now")
-print(program + " will be run now")
-
-"""
-TIME TO RUN THE REAL PROGRAM!
-"""
-#os.system(program_selected)
-#os.system(program)
-subprocess.run(["python", program])
+    option_check = False #To prevent the loop from going through again before it's ready
 
 print()
 print("All done! Goodbye!")
