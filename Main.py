@@ -7,6 +7,8 @@
 #The CLI may even offer opportunities for micro-operations that don't require their own files? Or could later be spun off?
 #Allow the printing of reports with various customizations?
 
+import os #To run a python script from this file in a new shell
+
 print("Welcome to Gelatart's Top-Game-List-Score-Sorting project!")
 
 answer_check = False
@@ -14,7 +16,7 @@ while(answer_check == False):
     # Provide option to skip the intro text eventually, only see it if people want to read it?
     print("Would you like to skip the broader intro to the point of this project, and just get into operating it?")
     answer = input("Answer here, Y or N: ")
-    if(answer == 'N'):
+    if(answer == 'N' or answer == 'n' or answer == 'No' or answer == 'no'):
         print("This project is a personal-use project")
         print("It was originally quickly designed to fulfill a very specific use of interest for me and me alone")
         print()
@@ -35,28 +37,66 @@ while(answer_check == False):
         print("On how aside from the work you get up to in your classes, it's important to have personal portfolio work for recruiters")
         print("I had only recently started using Python, and wanted to do more with it to familiarize myself with such a popular language")
         print("But I had become familiar enough with how easy it is to get things running off the ground with basic implementation in Python")
+        print("And I think some of that Python experience helped give me a jolt of sudden inspiration, things suddenly clicking into place")
+        print("I had tried coding some sort of automated solution in the past, but gave up quickly, probably trying to take on too much at once")
+        print("But it had suddenly hit me to do a minimum viable prototype approach, starting very basic and working from there")
+        print("Within a few hours I had implemented a working basic version, essentially the skeleton of the process I still use to this point")
+        print()
+        print("I started with Generator.py, which first only printed to a spreadsheet, then sorted txt files, and now uses MongoDB")
+        print("Since then I've added other files as well, and plan to keep expanding this project in as many useful ways as I can think of")
+        print("I hope you enjoy using this program!")
         answer_check = True
-    elif(answer == 'Y'):
+    elif(answer == 'Y' or answer == 'y' or answer == 'Yes' or answer == 'yes'):
         print("Okay, let's get into it!")
         answer_check = True
     else:
         print("Not really a valid response")
         print()
 
-print()
-print("Here are your options:")
-print("1. Generator.py: Run the traditional generator, which starts fresh every time")
-print("2. AltGenerator.py: Run the alternate generator, which checks for new lists and only adds them")
-print("3. Drop.py: Drop the collections to empty the databases in the cluster and start with a clean slate")
-print()
+option_check = False
+program_selected = None
+while(option_check == False):
+    print()
+    print("Here are your options:")
+    print("1. Generator.py: Run the traditional generator, which starts fresh every time")
+    print("2. AltGenerator.py: Run the alternate generator, which checks for new lists and only adds them")
+    print("3. Drop.py: Drop the collections to empty the databases in the cluster and start with a clean slate")
+    print()
 
-option = input("Select what you would like to choose to run: ")
+    option = input("Select what you would like to choose to run: ")
+
+    if(option == '1' or option == 'Generator.py' or option == 'Generator' or option == 'generator'):
+        #print("Generator.py will be run now")
+        option_check = True
+        program_selected = 'Generator.py'
+    elif(option == '2' or option == 'AltGenerator.py' or option == 'AltGenerator' or option == 'altgenerator'):
+        #print("AltGenerator.py will be run now")
+        option_check = True
+        program_selected = 'AltGenerator.py'
+    elif (option == '3' or option == 'Drop.py' or option == 'Drop' or option == 'drop'):
+        #print("Drop.py will be run now")
+        option_check = True
+        program_selected = 'Drop.py'
+    else:
+        print("Hmm, not sure if I understand that input (or at least not yet)")
+print()
+program = str(program_selected)
+#print("You have chosen: " + option)
+#print("You have chosen: " + str(program_selected))
+print("You have chosen: " + program)
+#print(str(program_selected) + " will be run now")
+print(program + " will be run now")
+
+"""
+TIME TO RUN THE REAL PROGRAM!
+"""
+#os.system(program_selected)
+os.system(program)
 
 print()
-print("You have chosen: " + option)
-if(option == '1'):
-    print("Generator.py will be run now")
-elif(option == '2'):
-    print("AltGenerator.py will be run now")
-else:
-    print("Hmm, not sure if I understand that input (or at least not yet)")
+print("All done! Goodbye!")
+
+"""
+REFERENCES:
+Running a python script from another: https://www.geeksforgeeks.org/run-one-python-script-from-another-in-python/
+"""
