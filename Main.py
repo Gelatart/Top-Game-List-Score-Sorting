@@ -7,17 +7,19 @@
 #The CLI may even offer opportunities for micro-operations that don't require their own files? Or could later be spun off?
 #Allow the printing of reports with various customizations?
 
-import os #To run a python script from this file in a new shell
-import subprocess #Another attempt to call a python script from here
+#import os #To run a python script from this file in a new shell, doesn't seem to work right now
+import subprocess #Used to run other py files as a subprocess
 
+#Introduce users to the main program
 print("Welcome to Gelatart's Top-Game-List-Score-Sorting project!")
 
+#Keep looping on asking user if they want to skip intro text until good response given
 answer_check = False
 while(answer_check == False):
-    # Provide option to skip the intro text eventually, only see it if people want to read it?
     print("Would you like to skip the broader intro to the point of this project, and just get into operating it?")
     answer = input("Answer here, Y or N: ")
     if(answer == 'N' or answer == 'n' or answer == 'No' or answer == 'no'):
+        #The full intro text is given here, consider storing this elsewhere and importing it in at some point?
         print("This project is a personal-use project")
         print("It was originally quickly designed to fulfill a very specific use of interest for me and me alone")
         print()
@@ -48,50 +50,65 @@ while(answer_check == False):
         print("I hope you enjoy using this program!")
         answer_check = True
     elif(answer == 'Y' or answer == 'y' or answer == 'Yes' or answer == 'yes'):
+        #Skip the intro text and get to running programs
         print("Okay, let's get into it!")
         answer_check = True
     else:
+        #Loop again until get response program understands
         print("Not really a valid response")
         print()
 
+#Keep looping on allowing user to run other Python programs from the main program
 option_check = False
 program_completed = False
 #Make a loop to keep going until program done?
 program_selected = None
 while(program_completed == False):
+    #Loop on giving options, wait until given good response
     while(option_check == False):
+        #List all the options
         print()
         print("Here are your options:")
         print("1. Generator.py: Run the traditional generator, which starts fresh every time")
         print("2. AltGenerator.py: Run the alternate generator, which checks for new lists and only adds them")
         print("3. Drop.py: Drop the collections to empty the databases in the cluster and start with a clean slate")
-        print("4. Quit/Exit: Quit this program and finish your business")
+        print("4. QuickMath.py: Not entirely related to this project, more personal use for tracking hours in games I've played")
+        print("5. Quit/Exit: Quit this program and finish your business")
         print()
-        #Provide an option to quit and finish
 
+        #Let user pick their option of program
         option = input("Select what you would like to choose to run: ")
 
-        if(option == '1' or option == 'Generator.py' or option == 'Generator' or option == 'generator'):
+        #Potential valid options
+        if(option == '1' or option == 'Generator.py' or option == 'Generator' or option == 'generator' or option == 'generator.py'):
             #print("Generator.py will be run now")
             option_check = True
             program_selected = 'Generator.py'
-        elif(option == '2' or option == 'AltGenerator.py' or option == 'AltGenerator' or option == 'altgenerator'):
+        elif(option == '2' or option == 'AltGenerator.py' or option == 'AltGenerator' or option == 'altgenerator' or option == 'altgenerator.py'):
             #print("AltGenerator.py will be run now")
             option_check = True
             program_selected = 'AltGenerator.py'
-        elif (option == '3' or option == 'Drop.py' or option == 'Drop' or option == 'drop'):
+        elif (option == '3' or option == 'Drop.py' or option == 'Drop' or option == 'drop' or option == 'drop.py'):
             #print("Drop.py will be run now")
             option_check = True
             program_selected = 'Drop.py'
-        elif(option == '4' or option == 'Quit' or option == 'quit' or option == 'Exit' or option == 'exit'):
+        elif (option == '4' or option == 'QuickMath.py' or option == 'QuickMath' or option == 'quickmath' or option == 'quickmath.py'):
+            option_check = True
+            program_selected = 'QuickMath.py'
+        elif(option == '5' or option == 'Quit' or option == 'quit' or option == 'Exit' or option == 'exit'):
             option_check = True
             print("Thank you for spending time with this program.")
             program_completed = True
             break
+            #Break out of the loop because we are exited
         else:
+            #An entry that the program is not yet designed to understand
             print("Hmm, not sure if I understand that input (or at least not yet)")
+    #The program is set to complete, so break the loop
     if(program_completed == True):
         break
+
+    #Print out the program that was selected
     print()
     program = str(program_selected)
     #print("You have chosen: " + option)
@@ -100,15 +117,14 @@ while(program_completed == False):
     #print(str(program_selected) + " will be run now")
     print(program + " will be run now")
 
-    """
-    TIME TO RUN THE REAL PROGRAM!
-    """
+    #TIME TO RUN REAL PROGRAM
     #os.system(program_selected)
     #os.system(program)
     subprocess.run(["python", program])
 
     option_check = False #To prevent the loop from going through again before it's ready
 
+#Wrap up the program
 print()
 print("All done! Goodbye!")
 
