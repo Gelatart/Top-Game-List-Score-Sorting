@@ -8,6 +8,7 @@
 #Allow the printing of reports with various customizations?
 
 import os #To run a python script from this file in a new shell
+import subprocess #Another attempt to call a python script from here
 
 print("Welcome to Gelatart's Top-Game-List-Score-Sorting project!")
 
@@ -54,6 +55,8 @@ while(answer_check == False):
         print()
 
 option_check = False
+program_completed = False
+#Make a loop to keep going until program done?
 program_selected = None
 while(option_check == False):
     print()
@@ -62,6 +65,7 @@ while(option_check == False):
     print("2. AltGenerator.py: Run the alternate generator, which checks for new lists and only adds them")
     print("3. Drop.py: Drop the collections to empty the databases in the cluster and start with a clean slate")
     print()
+    #Provide an option to quit and finish
 
     option = input("Select what you would like to choose to run: ")
 
@@ -91,7 +95,8 @@ print(program + " will be run now")
 TIME TO RUN THE REAL PROGRAM!
 """
 #os.system(program_selected)
-os.system(program)
+#os.system(program)
+subprocess.run(["python", program])
 
 print()
 print("All done! Goodbye!")
