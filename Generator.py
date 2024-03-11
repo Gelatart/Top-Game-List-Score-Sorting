@@ -27,6 +27,9 @@ directory = r'GameLists\Ranked'
 
 #ONCE CLEARED ALL OF AN UP TO LIST, THEN CONSIDER EXPANDING THE RANGE (LIKE FROM UP TO 100 TO UP TO 150)
 
+#GENERATOR NOW TAKES QUITE A BIT OF TIME TO INSERT INTO MONGODB IT SEEMS
+#We might want to consider AltGenerator more often once we can do local files better with it
+
 "gameDb is a dict of string titles and game object values"
 gameDb = {}
 "game object needs two scores"
