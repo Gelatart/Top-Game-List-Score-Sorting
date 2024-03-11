@@ -3,8 +3,6 @@
 # import required module
 import os
 import math
-# Writing to an excel
-# sheet using Python33
 import xlwt
 from xlwt import Workbook
 #SQLite
@@ -101,8 +99,8 @@ try:
     print("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
     print(e)
-monCol = monDB["games"]
-listCol = monDB["lists"]
+mon_col = monDB["games"]
+list_col = monDB["lists"]
 
 "loop of getting the database information"
 #RANKED DIRECTORY
@@ -111,12 +109,12 @@ for filename in os.listdir(directory):
     # checking if it is a file
     if os.path.isfile(f):
         list_query = { "Title": filename}
-        list_count = listCol.count_documents(list_query)
+        list_count = list_col.count_documents(list_query)
         #print(filename)
         #print(list_count)
-        #if(listCol.find(list_query) != None):
+        #if(list_col.find(list_query) != None):
         if (list_count > 0):
-            #print(listCol.find(list_query).count())
+            #print(list_col.find(list_query).count())
             print("List was already logged!")
             #input('Wait to review\n')
             continue
@@ -158,12 +156,12 @@ for filename in os.listdir(directory):
     # checking if it is a file
     if os.path.isfile(f):
         list_query = {"Title": filename}
-        list_count = listCol.count_documents(list_query)
+        list_count = list_col.count_documents(list_query)
         # print(filename)
         # print(list_count)
-        # if(listCol.find(list_query) != None):
+        # if(list_col.find(list_query) != None):
         if (list_count > 0):
-            # print(listCol.find(list_query).count())
+            # print(list_col.find(list_query).count())
             print("List was already logged!")
             # input('Wait to review\n')
             continue
@@ -210,12 +208,12 @@ for filename in os.listdir(directory):
     # checking if it is a file
     if os.path.isfile(f):
         list_query = {"Title": filename}
-        list_count = listCol.count_documents(list_query)
+        list_count = list_col.count_documents(list_query)
         # print(filename)
         # print(list_count)
-        # if(listCol.find(list_query) != None):
+        # if(list_col.find(list_query) != None):
         if (list_count > 0):
-            # print(listCol.find(list_query).count())
+            # print(list_col.find(list_query).count())
             print("List was already logged!")
             # input('Wait to review\n')
             continue
@@ -312,16 +310,16 @@ for game, details in gameDb.items():
     exportDict["Player Counts"] = details.playerCounts
     exportDict["Developers"] = details.listDevelopers
     exportDict["Total Count"] = details.totalCount
-    insertion = monCol.insert_one(exportDict)
-#insertion = monCol.insert_many(gameDb)
-#insertion = monCol.insert_many(export)
+    insertion = mon_col.insert_one(exportDict)
+#insertion = mon_col.insert_many(gameDb)
+#insertion = mon_col.insert_many(export)
 print("TIME TO INSERT THE LISTS INTO MONGODB!")
 for list in gamesLists:
     #print(list)
     listDict = {}
     listDict["Title"] = list
     #could keep track of what type of list it is, other variables?
-    listInsert = listCol.insert_one(listDict)
+    listInsert = list_col.insert_one(listDict)
 
 gameDbRanked = {}
 gameDbInclusion = {}
@@ -462,8 +460,59 @@ for list in gamesLists:
 
 print()
 print("Time to grab lists from collections!")
-for list in listCol.find({}, {"_id": 0}):
+for list in list_col.find({}, {"_id": 0}):
     print(list)
+
+print()
+print("Time to grab the games from the database!")
+games_pulled = mon_col.find()
+games_pulled_ranked = mon_col.find().sort("Ranked Score", -1)
+games_pulled_inclusion = mon_col.find().sort("Inclusion Score")
+games_pulled_average = mon_col.find().sort("Average Score")
+
+file_ranked = open("Sorted by Ranked.txt","w", encoding="utf-8")
+file_inclusion = open("Sorted by Inclusion.txt","w", encoding="utf-8")
+file_average = open("Sorted by Average.txt","w", encoding="utf-8")
+file_ranked_uncompleted = open("Sorted by Ranked (Uncompleted).txt", "w", encoding="utf-8")
+file_inclusion_uncompleted = open("Sorted by Inclusion (Uncompleted).txt","w", encoding="utf-8")
+file_average_uncompleted = open("Sorted by Average (Uncompleted).txt","w", encoding="utf-8")
+
+for game in mon_col.find({},{ "_id": 0, "Title": 1  }).limit(20):
+  print(game)
+  print()
+
+for game in mon_col.find().limit(1):
+  print(game)
+  print()
+
+for game in games_pulled_ranked:
+    #print(game)
+    entry = ""
+    completed = game["Completed"]
+    if (completed == True):
+        entry += "[x]"
+    entry += game['Title'].strip()
+    entry += " --> "
+    entry += str(game['Ranked Score'])
+    file_ranked.write(entry)
+    file_ranked.write("\n")
+    if (completed == False):
+        file_ranked_uncompleted.write(entry)
+        file_ranked_uncompleted.write("\n")
+
+for game in games_pulled_inclusion:
+    entry = ""
+    completed = game["Completed"]
+    if (completed == True):
+        entry += "[x]"
+    entry += game['Title'].strip()
+    entry += " --> "
+    entry += str(game['Inclusion Score'])
+    file_inclusion.write(entry)
+    file_inclusion.write("\n")
+    if (completed == False):
+        file_inclusion_uncompleted.write(entry)
+        file_inclusion_uncompleted.write("\n")
 
 print("Successfully completed!")
 
@@ -472,4 +521,5 @@ REFERENCES:
 (EXCLUDING THE ONES ALREADY REFERENCED IN GENERATOR.PY)
 Finding results from collection: https://www.w3schools.com/python/python_mongodb_find.asp
 Get count for Pymongo find results: https://stackoverflow.com/questions/4415514/in-mongodbs-pymongo-how-do-i-do-a-count
+How to grab values from objects from cursor: https://stackoverflow.com/questions/32305103/how-to-get-values-of-cursor-object-by-using-python
 """

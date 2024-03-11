@@ -99,7 +99,6 @@ for filename in os.listdir(directory):
     f = os.path.join(directory, filename)
     # checking if it is a file
     if os.path.isfile(f):
-        #print(f)
         # Using readlines()
         file1 = open(f, 'r', encoding="utf-8")
         rankedFileCount += 1
@@ -107,7 +106,6 @@ for filename in os.listdir(directory):
         Lines = file1.readlines()
         #count = int(startingLine)
         count = len(Lines)
-        #print(f)
         #print(len(Lines))
         #input('Wait to review\n')
         originalCount = count
@@ -262,23 +260,23 @@ try:
     print("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
     print(e)
-monCol = monDB["games"]
-listCol = monDB["lists"]
+mon_col = monDB["games"]
+list_col = monDB["lists"]
 
 #TEST INSERT_ONE
 #testDict = { "title": "This is a test", "score": 69}
-#test = monCol.insert_one(testDict)
+#test = mon_col.insert_one(testDict)
 
 #INSERT ALL GAMES INTO DATABASE
 #Clear database to begin with?
-monCol.drop()
-listCol.drop()
+mon_col.drop()
+list_col.drop()
 #export = []
 print("INSERTING INTO MONGODB!")
 for game, details in gameDb.items():
     #print(details)
-    #insertion = monCol.insert_one(details)
-    #insertion = monCol.insert_one(gameDb[game])
+    #insertion = mon_col.insert_one(details)
+    #insertion = mon_col.insert_one(gameDb[game])
     #export.append(details)
     exportDict = {}
     exportDict["Title"] = game
@@ -294,16 +292,16 @@ for game, details in gameDb.items():
     exportDict["Player Counts"] = details.playerCounts
     exportDict["Developers"] = details.listDevelopers
     exportDict["Total Count"] = details.totalCount
-    insertion = monCol.insert_one(exportDict)
-#insertion = monCol.insert_many(gameDb)
-#insertion = monCol.insert_many(export)
+    insertion = mon_col.insert_one(exportDict)
+#insertion = mon_col.insert_many(gameDb)
+#insertion = mon_col.insert_many(export)
 print("TIME TO INSERT THE LISTS INTO MONGODB!")
 for list in gamesLists:
     #print(list)
     listDict = {}
     listDict["Title"] = list
     #could keep track of what type of list it is, other variables?
-    listInsert = listCol.insert_one(listDict)
+    listInsert = list_col.insert_one(listDict)
 
 gameDbRanked = {}
 gameDbInclusion = {}
