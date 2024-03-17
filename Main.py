@@ -26,6 +26,7 @@
         #when writing it just appends to the already existing file
         #can be reviewed later, lines removed if felt they aren't worth concern
     #give options to change what database format using? provide support for more than mongodb? option to switch?
+    #make a txt file that branches games into family groupings?
     #chatgpt: try to figure out web scraping to extract data from websites?
         #review the data afterwards to see how useful it was, give a check to original source to make sure fits my standards?
     #chatgpt: consider what other user-friendly options and interactive features I could add?
@@ -191,6 +192,41 @@ while(program_completed == False):
 #Wrap up the program
 print()
 print("All done! Goodbye!")
+
+"""
+DATA API SAMPLE ATLAS GAVE ME FOR PYTHON AND GAMESORTING GAMES COLLECTION:
+"""
+"""
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+data_key = os.getenv('API_KEY')
+
+import requests
+import json
+url = "https://us-west-2.aws.data.mongodb-api.com/app/data-sghta/endpoint/data/v1/action/findOne"
+#^Do I need to put the App ID (or cluster name?) in the env file?
+
+payload = json.dumps({
+    "collection": "games",
+    "database": "GameSorting",
+    "dataSource": "GameSorting",
+    "projection": {
+        "_id": 1,
+        "Title": 1
+    }
+})
+headers = {
+  'Content-Type': 'application/json',
+  'Access-Control-Request-Headers': '*',
+  'api-key': data_key,
+}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+
+print(response.text)
+"""
 
 """
 REFERENCES:

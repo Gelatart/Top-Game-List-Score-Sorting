@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b33df5e9-3490-443b-8a31-ba21b2040da7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AltGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/AltGenerator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameLists/Former/FORMER METACRITIC (Critic Scores, Metascore, Up to 100) (As of 2-1-2024).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameLists/Ranked/Metacritic (Critic Scores, Metascore, Up to 100) (As of 2-1-2024).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Generator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sorted Database.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted Database.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sorted by Average (Uncompleted).txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Average (Uncompleted).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sorted by Average.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Average.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sorted by Inclusion (Uncompleted).txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Inclusion (Uncompleted).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sorted by Inclusion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Inclusion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sorted by Ranked (Uncompleted).txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Ranked (Uncompleted).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sorted by Ranked.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Ranked.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tracking Categories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tracking Categories.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +27,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="2KWFqQomF7D44cWxWXFWRjPdlyP" />
   <component name="ProjectViewState">

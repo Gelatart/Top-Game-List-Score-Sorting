@@ -47,6 +47,13 @@ Grand Theft Auto V
 	Players: 1, Multi
 	Devs: Rockstar North
 
+Half-Life
+	Main: PC
+	Platforms: PC, Mac, Linux, PS2
+	Release: 11/19/1998
+	Players: 1, Multi
+	Devs: Valve
+
 Half-Life 2
 	Main: PC
 	Platforms: PC, Mac, Linux, Xbox, X360, PS3, Android

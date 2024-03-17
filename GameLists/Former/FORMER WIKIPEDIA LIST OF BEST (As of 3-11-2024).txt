@@ -1,4 +1,4 @@
-80
+81
 Chrono Cross
 Dragon Quest [Dragon Warrior]
 Guitar Hero II
@@ -12,7 +12,6 @@ Resident Evil 2 [2019]
 Shenmue II
 Super Mario RPG: Legend of the Seven Stars
 Super Smash Bros.
-Super Smash Bros. Brawl
 Tecmo Bowl
 Tekken 2
 TowerFall [Ascension]

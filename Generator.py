@@ -81,7 +81,7 @@ class GameObject:
     #CONSIDER MAKING AN EXPORT FUNCTION FOR THE CLASS TO CONVERT TO DICTIONARY?
 
 #Start collecting the lists used in a list, put to a new collection in MongoDB
-gamesLists = []
+games_lists = []
 
 # Workbook is created
 wb = Workbook()
@@ -89,8 +89,8 @@ wb = Workbook()
 # add_sheet is used to create sheet.
 sheet1 = wb.add_sheet('Sheet 1')
 
-rankedFileCount = 0
-unrankedFileCount = 0
+ranked_file_count = 0
+unranked_file_count = 0
 formerFileCount = 0
 
 "Loop of getting the database information"
@@ -99,15 +99,13 @@ for filename in os.listdir(directory):
     f = os.path.join(directory, filename)
     # checking if it is a file
     if os.path.isfile(f):
-        #print(f)
         # Using readlines()
         file1 = open(f, 'r', encoding="utf-8")
-        rankedFileCount += 1
-        startingLine = file1.readline()
+        ranked_file_count += 1
+        starting_line = file1.readline()
         Lines = file1.readlines()
-        #count = int(startingLine)
+        #count = int(starting_line)
         count = len(Lines)
-        #print(f)
         #print(len(Lines))
         #input('Wait to review\n')
         originalCount = count
@@ -125,7 +123,7 @@ for filename in os.listdir(directory):
             #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
             print("Score of {}: {}".format(count, line.strip()))
             count -= 1
-        gamesLists.append(filename)
+        games_lists.append(filename)
 
 directory = r'GameLists\Unranked'
 
@@ -136,11 +134,11 @@ for filename in os.listdir(directory):
         #print(f)
         # Using readlines()
         file1 = open(f, 'r', encoding="utf-8")
-        unrankedFileCount += 1
-        startingLine = file1.readline()
+        unranked_file_count += 1
+        starting_line = file1.readline()
         Lines = file1.readlines()
-        #count = int(startingLine)
-        floatCount = float(startingLine)
+        #count = int(starting_line)
+        floatCount = float(starting_line)
         count = math.floor(floatCount)
         count = len(Lines)
         print(count)
@@ -166,7 +164,7 @@ for filename in os.listdir(directory):
             #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
             print("Score of {}: {}".format(count, line.strip()))
             #count -= 1
-        gamesLists.append(filename)
+        games_lists.append(filename)
 
 directory = r'GameLists\Former'
 for filename in os.listdir(directory):
@@ -178,10 +176,10 @@ for filename in os.listdir(directory):
         # file1 = open(f, 'r')
         file1 = open(f, 'r', encoding="utf-8")
         formerFileCount += 1
-        startingLine = file1.readline()
+        starting_line = file1.readline()
         Lines = file1.readlines()
         #count = 1
-        count = int(startingLine)
+        count = int(starting_line)
         originalCount = count
         #^find out how to read the line amount ahead of time
         #originalCount = len(Lines)
@@ -200,7 +198,7 @@ for filename in os.listdir(directory):
             #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
             print("Score of {}: {}".format(count, line.strip()))
             #count -= 1
-        gamesLists.append(filename)
+        games_lists.append(filename)
 
 completeFile = open('Completions.txt', 'r')
 completeLines = completeFile.readlines()
@@ -262,23 +260,23 @@ try:
     print("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
     print(e)
-monCol = monDB["games"]
-listCol = monDB["lists"]
+mon_col = monDB["games"]
+list_col = monDB["lists"]
 
 #TEST INSERT_ONE
 #testDict = { "title": "This is a test", "score": 69}
-#test = monCol.insert_one(testDict)
+#test = mon_col.insert_one(testDict)
 
 #INSERT ALL GAMES INTO DATABASE
 #Clear database to begin with?
-monCol.drop()
-listCol.drop()
+mon_col.drop()
+list_col.drop()
 #export = []
 print("INSERTING INTO MONGODB!")
 for game, details in gameDb.items():
     #print(details)
-    #insertion = monCol.insert_one(details)
-    #insertion = monCol.insert_one(gameDb[game])
+    #insertion = mon_col.insert_one(details)
+    #insertion = mon_col.insert_one(gameDb[game])
     #export.append(details)
     exportDict = {}
     exportDict["Title"] = game
@@ -294,21 +292,25 @@ for game, details in gameDb.items():
     exportDict["Player Counts"] = details.playerCounts
     exportDict["Developers"] = details.listDevelopers
     exportDict["Total Count"] = details.totalCount
-    insertion = monCol.insert_one(exportDict)
-#insertion = monCol.insert_many(gameDb)
-#insertion = monCol.insert_many(export)
+    insertion = mon_col.insert_one(exportDict)
+#insertion = mon_col.insert_many(gameDb)
+#insertion = mon_col.insert_many(export)
 print("TIME TO INSERT THE LISTS INTO MONGODB!")
-for list in gamesLists:
+for list in games_lists:
     #print(list)
     listDict = {}
     listDict["Title"] = list
     #could keep track of what type of list it is, other variables?
-    listInsert = listCol.insert_one(listDict)
+    list_insert = list_col.insert_one(listDict)
 
+"""
 gameDbRanked = {}
 gameDbInclusion = {}
 gameDbAverage = {}
+"""
 "loop of printing database to a spreadsheet file"
+
+"""
 # Applying multiple styles
 boldStyle = xlwt.easyxf('font: bold 1;')
 crossedStyle = xlwt.easyxf('font: struck_out 1;')
@@ -364,24 +366,30 @@ for game, details in gameDb.items():
     gameDbInclusion[game] = iScore
     gameDbAverage[game] = aScore
 wb.save('Sorted Database.xls')
+"""
 
 #after printed out everything to excel, then make three printed sorted lists?
 #each time, sort excel a certain way, then print out excel factors to list?
 
+"""
 sortByRanked = sorted(gameDbRanked.items(), key=lambda x:x[1], reverse=True)
 convertedRanked = dict(sortByRanked)
 sortByInclusion = sorted(gameDbInclusion.items(), key=lambda x:x[1], reverse=True)
 convertedInclusion = dict(sortByInclusion)
 sortByAverage = sorted(gameDbAverage.items(), key=lambda x:x[1], reverse=True)
 convertedAverage = dict(sortByAverage)
+"""
 
-fileR = open("Sorted by Ranked.txt","w", encoding="utf-8")
+"""
+file_ranked = open("Sorted by Ranked.txt","w", encoding="utf-8")
 fileI = open("Sorted by Inclusion.txt","w", encoding="utf-8")
 fileA = open("Sorted by Average.txt","w", encoding="utf-8")
 fileUR = open("Sorted by Ranked (Uncompleted).txt", "w", encoding="utf-8")
 fileUI = open("Sorted by Inclusion (Uncompleted).txt","w", encoding="utf-8")
 fileUA = open("Sorted by Average (Uncompleted).txt","w", encoding="utf-8")
+"""
 
+"""
 for game, score in convertedRanked.items():
     entry = ""
     if (gameDb[game].completed == True):
@@ -389,8 +397,8 @@ for game, score in convertedRanked.items():
     entry += game.strip()
     entry += " --> "
     entry += str(score)
-    fileR.write(entry)
-    fileR.write("\n")
+    file_ranked.write(entry)
+    file_ranked.write("\n")
     if (gameDb[game].completed == False):
         fileUR.write(entry)
         fileUR.write("\n")
@@ -401,11 +409,11 @@ for game, score in convertedInclusion.items():
     if (gameDb[game].completed == True):
         entry += "[x]"
     entry += game.strip()
-    #fileR.write(game)
+    #file_ranked.write(game)
     entry += " --> "
-    #fileR.write(" --> ")
+    #file_ranked.write(" --> ")
     entry += str(score)
-    #fileR.write(str(score))
+    #file_ranked.write(str(score))
     fileI.write(entry)
     fileI.write("\n")
     if (gameDb[game].completed == False):
@@ -417,23 +425,26 @@ for game, score in convertedAverage.items():
     if (gameDb[game].completed == True):
         entry += "[x]"
     entry += game.strip()
-    #fileR.write(game)
+    #file_ranked.write(game)
     entry += " --> "
-    #fileR.write(" --> ")
+    #file_ranked.write(" --> ")
     entry += str(score)
-    #fileR.write(str(score))
+    #file_ranked.write(str(score))
     fileA.write(entry)
     fileA.write("\n")
     if (gameDb[game].completed == False):
         fileUA.write(entry)
         fileUA.write("\n")
+"""
 
-fileR.close()
+"""
+file_ranked.close()
 fileI.close()
 fileA.close()
 fileUR.close()
 fileUI.close()
 fileUA.close()
+"""
 
 #SQLite Segment
 #conn = sqlite3.connect('games.db')
@@ -447,16 +458,119 @@ fileUA.close()
 
 #once gone through creating the lists, use separate files to mark the status of games? (completed, etc.)
 
-listCounts = "Ranked Lists: " + str(rankedFileCount)
-print(listCounts)
-listCounts = "Unranked Lists: " + str(unrankedFileCount)
-print(listCounts)
-listCounts = "Former Lists: " + str(formerFileCount)
-print(listCounts)
+list_counts = "Ranked Lists: " + str(ranked_file_count)
+print(list_counts)
+list_counts = "Unranked Lists: " + str(unranked_file_count)
+print(list_counts)
+list_counts = "Former Lists: " + str(formerFileCount)
+print(list_counts)
 
 print("LISTS USED IN PROCESS:")
-for list in gamesLists:
+for list in games_lists:
     print(list)
+
+print()
+print("Time to grab the games from the database!")
+games_pulled = mon_col.find()
+games_pulled_ranked = mon_col.find().sort("Ranked Score", -1)
+games_pulled_inclusion = mon_col.find().sort("Inclusion Score", -1)
+games_pulled_average = mon_col.find().sort("Average Score", -1)
+
+file_ranked = open("Sorted by Ranked.txt","w", encoding="utf-8")
+file_inclusion = open("Sorted by Inclusion.txt","w", encoding="utf-8")
+file_average = open("Sorted by Average.txt","w", encoding="utf-8")
+file_ranked_uncompleted = open("Sorted by Ranked (Uncompleted).txt", "w", encoding="utf-8")
+file_inclusion_uncompleted = open("Sorted by Inclusion (Uncompleted).txt","w", encoding="utf-8")
+file_average_uncompleted = open("Sorted by Average (Uncompleted).txt","w", encoding="utf-8")
+
+for game in games_pulled_ranked:
+    #print(game)
+    entry = ""
+    completed = game["Completed"]
+    if (completed == True):
+        entry += "[x]"
+    entry += game['Title'].strip()
+    entry += " --> "
+    entry += str(game['Ranked Score'])
+    file_ranked.write(entry)
+    file_ranked.write("\n")
+    if (completed == False):
+        file_ranked_uncompleted.write(entry)
+        file_ranked_uncompleted.write("\n")
+
+for game in games_pulled_inclusion:
+    entry = ""
+    completed = game["Completed"]
+    if (completed == True):
+        entry += "[x]"
+    entry += game['Title'].strip()
+    entry += " --> "
+    entry += str(game['Inclusion Score'])
+    file_inclusion.write(entry)
+    file_inclusion.write("\n")
+    if (completed == False):
+        file_inclusion_uncompleted.write(entry)
+        file_inclusion_uncompleted.write("\n")
+
+for game in games_pulled_average:
+    entry = ""
+    completed = game["Completed"]
+    if (completed == True):
+        entry += "[x]"
+    entry += game['Title'].strip()
+    entry += " --> "
+    entry += str(game['Average Score'])
+    file_average.write(entry)
+    file_average.write("\n")
+    if (completed == False):
+        file_average_uncompleted.write(entry)
+        file_average_uncompleted.write("\n")
+
+#Writing to excel using new approach from MongoDB Atlas
+bold_style = xlwt.easyxf('font: bold 1;')
+crossed_style = xlwt.easyxf('font: struck_out 1;')
+sheet1.write(0, 0, 'TITLE', bold_style)
+sheet1.write(0, 1, 'RANKED SCORE', bold_style)
+sheet1.write(0, 2, 'INCLUSION SCORE', bold_style)
+sheet1.write(0, 3, 'AVERAGE SCORE', bold_style)
+sheet1.write(0, 4, 'LISTS INCLUDED ON', bold_style)
+sheet1.write(0, 5, 'MAIN PLATFORM', bold_style)
+sheet1.write(0, 6, 'LIST OF PLATFORMS', bold_style)
+sheet1.write(0, 7, 'RELEASE DATE', bold_style)
+sheet1.write(0, 8, 'PLAYER COUNTS', bold_style)
+sheet1.write(0, 9, 'DEVELOPERS', bold_style)
+excel_count = 1
+for game in games_pulled:
+    ranked_score = game['Ranked Score']
+    inclusion_score = game['Inclusion Score']
+    average_score = ranked_score / game['Total Count']
+    if(game['Completed'] == True):
+        sheet1.write(excel_count, 0, game['Title'], crossed_style)
+    else:
+        sheet1.write(excel_count, 0, game['Title'])
+    sheet1.write(excel_count, 1, ranked_score)
+    sheet1.write(excel_count, 2, inclusion_score)
+    sheet1.write(excel_count, 3, average_score)
+    output_lists = ""
+    for ref_list in game['List of References']:
+        output_lists += ref_list
+        output_lists += ", "
+    sheet1.write(excel_count, 4, output_lists)
+    #mPlat = details.mainPlatform
+    sheet1.write(excel_count, 5, game['Main Platform'].strip())
+    #lPlat = details.listPlatforms
+    sheet1.write(excel_count, 6, game['List of Platforms'])
+    #^Try to strip escape chars out earlier or the items themselves
+    #rDate = details.releaseDate
+    sheet1.write(excel_count, 7, game['Release Date'].strip())
+    #pCounts = details.playerCounts
+    sheet1.write(excel_count, 8, game['Player Counts'])
+    # ^Try to strip escape chars out earlier or the items themselves
+    #lDevs = details.listDevelopers
+    sheet1.write(excel_count, 9, game['Developers'])
+    # ^Try to strip escape chars out earlier or the items themselves
+    excel_count += 1
+wb.save('Sorted Database.xls')
 
 print("Successfully completed!")
 

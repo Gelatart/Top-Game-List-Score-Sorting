@@ -14,8 +14,8 @@ Legend of Zelda: Breath of the Wild
 Super Mario Odyssey
 Silent Hill
 Grim Fandango
-Super Mario Galaxy
 Legend of Zelda: Ocarina of Time
+Super Mario Galaxy
 Legend of Zelda: Majora's Mask
 Silent Hill 3
 Chibi-Robo!
@@ -27,8 +27,10 @@ Resident Evil 4
 Pikmin 2
 Portal 2
 Katamari Damacy
+Ape Escape
 Pokemon Black / White
 Super Smash Bros. Melee
+Super Mario 64
 Pokemon Black 2 / White 2
 Danganronpa 2: Goodbye Despair
 Legend of Zelda: Wind Waker
@@ -42,8 +44,6 @@ Rome: Total War
 Super Mario World 2: Yoshi's Island
 Danganronpa: Trigger Happy Havoc
 Half-Life
-Ape Escape
-Super Mario 64
 Elder Scrolls V: Skyrim
 Mario Kart: Double Dash
 Sid Meier's Civilization V
@@ -57,13 +57,13 @@ Pokemon Diamond / Pearl
 Pokemon Gold / Silver
 Sonic the Hedgehog 2
 Metal Gear Solid
+Halo 3: ODST
 Super Smash Bros. Brawl
 Dr. Mario
 Pokemon XD: Gale of Darkness
 Age of Mythology
-Halo 3: ODST
-Sonic the Hedgehog
 Mario and Luigi: Partners in Time
+Sonic the Hedgehog
 Metal Gear Solid 3: Snake Eater
 Pokemon Fire Red / Leaf Green
 Pokemon Red / Blue
@@ -82,18 +82,18 @@ Just Cause 2
 Zoo Tycoon
 Spyro the Dragon
 Battlefield 3
-World of Warcraft
 StarCraft
 BioShock Infinite
 Batman: Arkham City
 Dead Space
 Gears of War 2
 The Sims 3
-Animal Crossing: Wild World
 MediEvil
-MapleStory
+World of Warcraft
+Animal Crossing: Wild World
 Super Mario 3D Land
 League of Legends
+MapleStory
 Lego Star Wars: The Complete Saga
 Luigi's Mansion
 Mario Party 6

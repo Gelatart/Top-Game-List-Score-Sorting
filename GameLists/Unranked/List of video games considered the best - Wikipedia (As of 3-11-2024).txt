@@ -1,4 +1,4 @@
-321
+323
 The Oregon Trail
 Pong
 Combat
@@ -241,6 +241,7 @@ Call of Duty 4: Modern Warfare
 God of War II
 Halo 3
 Mass Effect
+Peggle
 Portal
 Rock Band
 Super Mario Galaxy
@@ -259,6 +260,7 @@ Persona 4
 Rock Band 2
 Spelunky
 Street Fighter IV
+Super Smash Bros. Brawl
 Valkyria Chronicles
 Angry Birds
 Assassin's Creed II
