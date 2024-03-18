@@ -1,4 +1,4 @@
-279
+281
 30XX
 Adventures of Pip
 Armored Core VI: Fires of Rubicon
@@ -26,6 +26,8 @@ Freedom Planet
 Ghostrunner
 God of War [2018]
 Gunbrella
+Hi-Fi Rush
+Horizon Zero Dawn [Complete Edition]
 Immortals Fenyx Rising
 Jet Set Radio
 Katamari Damacy [Reroll]
@@ -67,6 +69,7 @@ Heavy Rain
 Myst
 The Walking Dead
 The Wolf Among Us
+Apex Legends
 Call of Duty: Warzone
 Fortnite
 PlayerUnknown's Battlegrounds
@@ -128,6 +131,7 @@ Final Fantasy XIV: A Realm Reborn
 Lost Ark
 Onigiri
 Star Wars: The Old Republic
+Warframe
 World of Warcraft
 World of Warcraft [Shadowlands]
 Dota 2
@@ -140,6 +144,7 @@ Portal 2
 Quantum Conundrum
 Scribblenauts Unlimited
 The Swapper
+Burnout Paradise [Remastered]
 Dirt 5
 Forza Horizon 4
 Forza Horizon 5
@@ -157,6 +162,7 @@ Crisis Core: Final Fantasy VII [Reunion]
 Cyberpunk 2077
 Dark Souls II
 Dark Souls III
+Deus Ex: Mankind Divided
 Diablo III
 Diablo IV
 DIG: Deep in Galaxies
@@ -165,25 +171,24 @@ Dragon's Dogma [Dark Arisen]
 Dying Light 2: Stay Human
 Eastern Exorcist
 Elden Ring
-Elder Scrolls V: Skyrim
+Elder Scrolls V: Skyrim [Special Edition]
 Final Fantasy VII Remake [Intergrade]
 Final Fantasy X/X-2 HD Remaster
 Genshin Impact
 Hades
 Hogwarts Legacy
 Honkai: Star Rail
-Horizon Zero Dawn [Complete Edition]
 Legend of Mana [Remastered]
 Mass Effect 2
-Mass Effect 3
 Mass Effect: Andromeda
 Mass Effect: Legendary Edition [Mass Effect + Mass Effect 2 + Mass Effect 3]
 Monster Hunter Rise
 Monster Hunter: World
 Ni No Kuni II: Revenant Kingdom
 NieR: Automata
-Nioh
+Nioh [Complete Edition]
 Nioh 2 [Complete Edition]
+Persona 4 [Golden]
 Persona 5 [Royal]
 Record of Lodoss War: Deedlit in Wonder Labyrinth
 Rune Factory 4 [Special]
@@ -216,16 +221,14 @@ Battlefield 4
 Battlefield V
 BioShock Infinite
 Borderlands 2
-Call of Duty: Black Ops
-Call of Duty: Black Ops II
 Call of Duty: Modern Warfare [2019]
 Counter-Strike: Global Offensive
 DOOM [2016]
 Doom Eternal
 Far Cry 4
-Gears of War [Ultimate Edition]
-Gears of War 4
 Gears 5
+Gears of War 4
+Gears of War [Ultimate Edition]
 Halo: Combat Evolved [Anniversary]
 Halo 2 [Anniversary]
 Halo 3
@@ -242,6 +245,7 @@ Star Wars Battlefront [2015]
 Star Wars Battlefront II [2017]
 Superhot
 Vanquish
+Sid Meier's Civilization: Beyond Earth
 Elite: Dangerous
 Evil Genius 2: World Domination
 Microsoft Flight Simulator [2020]
@@ -250,11 +254,10 @@ No Man's Sky
 The Pinball Arcade
 PowerWash Simulator
 Rocksmith 2014 [Remastered]
-Sid Meier's Civilization: Beyond Earth
 The Sims 3
 Baseball Stars 2
 Fire Pro Wrestling World
-Football Manager 2022
+Football Manager 2024
 Mutant Football League
 RetroMania Wrestling
 Rocket League
@@ -263,7 +266,6 @@ Super Mega Baseball 3
 Tony Hawk's Pro Skater 1+2
 Turbo Golf Racing
 Windjammers 2
-Deus Ex: Mankind Divided
 Dishonored
 Hitman 3
 Metal Gear Solid V: Ground Zeroes

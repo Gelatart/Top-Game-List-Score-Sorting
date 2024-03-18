@@ -13,6 +13,9 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 import dotenv
 from dotenv import load_dotenv
+from bs4 import BeautifulSoup
+import requests
+from igdb.wrapper import IGDBWrapper
 
 # assign directory
 directory = r'GameLists\Ranked'
@@ -592,4 +595,5 @@ REFERENCES:
 Finding results from collection: https://www.w3schools.com/python/python_mongodb_find.asp
 Get count for Pymongo find results: https://stackoverflow.com/questions/4415514/in-mongodbs-pymongo-how-do-i-do-a-count
 How to grab values from objects from cursor: https://stackoverflow.com/questions/32305103/how-to-get-values-of-cursor-object-by-using-python
+Intro to web scraping: https://medium.com/codex/web-scraping-using-beautifulsoup-pushing-data-to-mysql-database-9de6af06e7b8
 """

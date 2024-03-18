@@ -11,6 +11,9 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 import dotenv
 from dotenv import load_dotenv
+from bs4 import BeautifulSoup
+import requests
+from igdb.wrapper import IGDBWrapper
 
 # assign directory
 #directory = 'C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameLists\Ranked'
@@ -26,9 +29,6 @@ directory = r'GameLists\Ranked'
 #SEE IF BACKLOGGD CHARTS COMPARE, IF CAN DO SIMILAR THINGS TO GLITCHWAVE (ALSO LOOK INTO GROUVEE?)
 
 #ONCE CLEARED ALL OF AN UP TO LIST, THEN CONSIDER EXPANDING THE RANGE (LIKE FROM UP TO 100 TO UP TO 150)
-
-#GENERATOR NOW TAKES QUITE A BIT OF TIME TO INSERT INTO MONGODB IT SEEMS
-#We might want to consider AltGenerator more often once we can do local files better with it
 
 "gameDb is a dict of string titles and game object values"
 gameDb = {}
@@ -246,13 +246,60 @@ try:
 except StopIteration:
         pass
 
+#START SCRAPING FOR ATTRIBUTES
+"""
+Most of the requests to the API will use the POST method
+The base URL is: https://api.igdb.com/v4
+You define which endpoint you wish to query by appending /{endpoint name} to the base URL eg. https://api.igdb.com/v4/games
+Include your Client ID and Access Token in the HEADER of your request so that your headers look like the following.
+    Client-ID: Client ID
+    Authorization: Bearer access_token
+Take special care of the capitalisation. Bearer should be hard-coded infront of your access_token
+You use the BODY of your request to specify the fields you want to retrieve as well as any other filters, sorting etc
+
+Example
+If your Client ID is abcdefg12345 and your access_token is access12345token, a simple request to get information about 10 games would be.
+    POST: https://api.igdb.com/v4/games
+    Client-ID: abcdefg12345
+    Authorization: Bearer access12345token
+    Body: "fields *;"
+
+"""
+load_dotenv()
+client_id = os.getenv('CLIENT_ID')
+client_secret = os.getenv('CLIENT_SECRET')
+post = 'https://id.twitch.tv/oauth2/token?client_id='
+post += client_id
+post += '&client_secret='
+post += client_secret
+post += '&grant_type=client_credentials'
+
+#page = requests.get(post) #404
+page = requests.post(post) #gives access token we can use
+print(page.text)
+input("Here we pause")
+
+#wrapper = IGDBWrapper("YOUR_CLIENT_ID", "YOUR_APP_ACCESS_TOKEN")
+access_token = page.text["access_token"]
+print(access_token)
+wrapper = IGDBWrapper(client_id, access_token)
+input("Here we pause")
+exit()
+
+"""
+MEDIUM EXAMPLE:
+URL = 'https://www.bookdepository.com/top-new-releases'
+page = requests.get(URL)
+soup = BeautiulSoup(page.content, "html.parser")
+books = soup.find_all("div", class_ = "book-item")
+"""
+
 #START USING PYMONGO FOR OUTPUTTING TO MONGODB DATABASE
 #Used code sample from Atlas on how to connect with Pymongo for assistance here
 #Connecting to env file to get private login data
-load_dotenv()
-monConnect = os.getenv('MONGO_URI')
-#monClient = pymongo.MongoClient(monConnect)
-monClient = pymongo.MongoClient(monConnect, server_api=ServerApi('1'))
+mon_connect = os.getenv('MONGO_URI')
+#monClient = pymongo.MongoClient(mon_connect)
+monClient = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
 #Reference code: client = MongoClient(uri, server_api=ServerApi('1'))
 monDB = monClient["GameSorting"]
 try:
@@ -607,4 +654,6 @@ How to keep sensitive data safe in an ENV file: https://forum.freecodecamp.org/t
 How to setup ENV file to work with Python: https://configu.com/blog/using-py-dotenv-python-dotenv-package-to-manage-env-variables/
 Pre-commit safety: https://docs.gitguardian.com/ggshield-docs/integrations/git-hooks/pre-commit?utm_source=product&utm_medium=GitHub_checks&utm_campaign=check_run
 Fix for UnicodeEncodeError after pre-commit safety integration: https://github.com/mwouts/jupytext/issues/770
+Python Requests post: https://www.w3schools.com/python/ref_requests_post.asp
+Python IGDB API Wrapper: https://github.com/twitchtv/igdb-api-python
 """

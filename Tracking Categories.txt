@@ -1,5 +1,5 @@
-RANKED: 56
-UNRANKED: 21
+RANKED: 59
+UNRANKED: 22
 FORMER: 11
 UNUSED: 0
 ---
@@ -42,7 +42,7 @@ R-Metacritic (Critic Scores, Metascore, Up to 100) (As of 3-11-2024)
 	F-+ FORMER
 
 SCORE AGGREGATION (USERS):
-R-Glitchwave Top Game Chart (Up to 100) (As of 2-1-2024)
+R-Glitchwave Top Game Chart (Up to 100) (As of 3-13-2024)
 	F-+ FORMER
 R-Metacritic (User Scores, Up to 100) (As of 2-2-2024)
 	F-+ FORMER
@@ -94,6 +94,8 @@ U-The 26 Best Nintendo Game Boy Games Of All Time - Nintendo Life - 4-11-2018
 
 TOP PLATFORM OF ALL TIME (GBC):
 R-The 25 Best Video Games for Nintendos Gameboy Color - Complex - 8-31-2013
+U-Best Game Boy Color Games of All Time - GameSpot - 4-22-2022
+R-14 Best Game Boy Color Games Ever, Ranked - TheGamer - 10-18-2023
 
 TOP PLATFORM OF ALL TIME (GBA):
 R-Top 25 Game Boy Advance Games of All Time - IGN - 3-16-2007
@@ -135,7 +137,7 @@ TOP PLATFORM OF ALL TIME (X360):
 R-The best Xbox 360 games - Digital Trends - 1-4-2019
 
 BEST GAMES TO GET (PC):
-U-The Best PC Games - PCMag (As of 2-3-2024)
+U-The Best PC Games - PCMag (As of 2-27-2024)
 	F-+ FORMER
 
 UNRANKED LIST OF GREAT/IMPORTANT GAMES:
@@ -178,3 +180,4 @@ R-The 10 Best Video Games of 2016 - Forbes - 1-10-2017
 U-The 10 Best Video Games of 2016 - Washington Post - 11-30-2016
 R-The 15 Best Video Games of 2016 - TIME - 12-19-2016
 R-The 10 Best Video Games of 2016 - Vulture - 12-14-2016
+R-The 25 Best Videogames of 2016 - Paste Magazine - 12-8-2016
