@@ -306,7 +306,7 @@ input("Here we pause")
 
 print("Time to go looking")
 for game, details in gameDb.items():
-    check_string = 'fields *; exclude tags; where name = "'
+    check_string = 'fields *; exclude tags, similar_games, checksum; where name = "'
     check_string += game.strip()
     check_string += '"; limit 5; offset 0;'
     #check_string += ';'
@@ -330,7 +330,7 @@ for game, details in gameDb.items():
 #when there are multiple options, so we can try to narrow down on that title
 #Use <> to contain ID number (from IGDB database)
 #Example: The ID we want to use for Super Mario World is 1070
-#retitle: a link to the past
+#retitle: a link to the past and other zelda games
 #ID for Final Fantasy VII: 427
 #ID for Ms. Pac-Man: 7452
 #investigate ways to test for what is the most parent version?
