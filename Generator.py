@@ -14,6 +14,7 @@ from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 import requests
 from igdb.wrapper import IGDBWrapper
+import json
 
 # assign directory
 #directory = 'C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameLists\Ranked'
@@ -280,10 +281,59 @@ print(page.text)
 input("Here we pause")
 
 #wrapper = IGDBWrapper("YOUR_CLIENT_ID", "YOUR_APP_ACCESS_TOKEN")
-access_token = page.text["access_token"]
+received = json.loads(page.text)
+access_token = received["access_token"]
 print(access_token)
 wrapper = IGDBWrapper(client_id, access_token)
 input("Here we pause")
+
+"""
+igdb_request = wrapper.api_request(
+            'games',
+            'fields id, name; offset 0; where platforms=48;'
+          )
+"""
+from igdb.igdbapi_pb2 import GameResult
+igdb_request = wrapper.api_request(
+            'games.pb', # Note the '.pb' suffix at the endpoint
+            'fields name, rating; limit 5; offset 0;'
+          )
+games_message = GameResult()
+games_message.ParseFromString(igdb_request) # Fills the protobuf message object with the response
+games = games_message.games
+print(games)
+input("Here we pause")
+
+print("Time to go looking")
+for game, details in gameDb.items():
+    check_string = 'fields *; exclude tags; where name = "'
+    check_string += game.strip()
+    check_string += '"; limit 5; offset 0;'
+    #check_string += ';'
+    print(check_string)
+    igdb_request = wrapper.api_request(
+        'games.pb',  # Note the '.pb' suffix at the endpoint
+        check_string
+    )
+    games_message = GameResult()
+    games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
+    games = games_message.games
+    if(len(games) > 1):
+        for result in games:
+            print(result)
+        input("Here we pause")
+    else:
+        print(games)
+
+#When there is ID confusion, need to clarify ID when putting entries
+#Have a process that runs through when generating databases and pauses
+#when there are multiple options, so we can try to narrow down on that title
+#Use <> to contain ID number (from IGDB database)
+#Example: The ID we want to use for Super Mario World is 1070
+#retitle: a link to the past
+#ID for Final Fantasy VII: 427
+#ID for Ms. Pac-Man: 7452
+#investigate ways to test for what is the most parent version?
 exit()
 
 """
@@ -656,4 +706,5 @@ Pre-commit safety: https://docs.gitguardian.com/ggshield-docs/integrations/git-h
 Fix for UnicodeEncodeError after pre-commit safety integration: https://github.com/mwouts/jupytext/issues/770
 Python Requests post: https://www.w3schools.com/python/ref_requests_post.asp
 Python IGDB API Wrapper: https://github.com/twitchtv/igdb-api-python
+Reading JSON files in python: https://www.geeksforgeeks.org/read-json-file-using-python/
 """

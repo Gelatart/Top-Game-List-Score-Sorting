@@ -16,6 +16,7 @@ from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 import requests
 from igdb.wrapper import IGDBWrapper
+import json
 
 # assign directory
 directory = r'GameLists\Ranked'
