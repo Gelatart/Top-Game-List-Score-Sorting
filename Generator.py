@@ -15,6 +15,7 @@ from bs4 import BeautifulSoup
 import requests
 from igdb.wrapper import IGDBWrapper
 import json
+import pandas
 
 # assign directory
 #directory = 'C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameLists\Ranked'
@@ -36,7 +37,8 @@ gameDb = {}
 "game object needs two scores"
 class GameObject:
     def __init__(self, rank):
-        self.rankedScore = rank
+        self.igdb_ID = None
+        self.ranked_score = rank
         self.listCount = 1
         self.listsReferencing = []
         self.totalCount = 0
@@ -50,11 +52,12 @@ class GameObject:
     #consider storing a constantly updated average score?
 
     #def __init__(self, rank, count):
-    #    self.rankedScore = rank
+    #    self.ranked_score = rank
     #    self.listCount = count
 
     def __init__(self, rank, list):
-        self.rankedScore = rank
+        self.igdb_ID = None
+        self.ranked_score = rank
         self.listCount = 1
         self.listsReferencing = []
         self.listsReferencing.append(list)
@@ -67,7 +70,8 @@ class GameObject:
         self.listDevelopers = []
 
     def __init__(self, rank, list, total):
-        self.rankedScore = rank
+        self.igdb_ID = None
+        self.ranked_score = rank
         self.listCount = 1
         self.listsReferencing = []
         self.listsReferencing.append(list)
@@ -113,7 +117,7 @@ for filename in os.listdir(directory):
         # Strips the newline character
         for line in Lines:
             if line in gameDb:
-                gameDb[line].rankedScore += count
+                gameDb[line].ranked_score += count
                 gameDb[line].listCount += 1
                 gameDb[line].listsReferencing.append(f)
                 gameDb[line].totalCount += originalCount
@@ -154,7 +158,7 @@ for filename in os.listdir(directory):
         # Strips the newline character
         for line in Lines:
             if line in gameDb:
-                gameDb[line].rankedScore += count
+                gameDb[line].ranked_score += count
                 gameDb[line].listCount += 1
                 gameDb[line].listsReferencing.append(f)
                 gameDb[line].totalCount += originalCount
@@ -188,7 +192,7 @@ for filename in os.listdir(directory):
         # Strips the newline character
         for line in Lines:
             if line in gameDb:
-                gameDb[line].rankedScore += count
+                gameDb[line].ranked_score += count
                 gameDb[line].listCount += 1
                 gameDb[line].listsReferencing.append(f)
                 gameDb[line].totalCount += originalCount
@@ -306,9 +310,9 @@ input("Here we pause")
 
 print("Time to go looking")
 for game, details in gameDb.items():
-    check_string = 'fields *; exclude tags, similar_games, checksum; where name = "'
+    check_string = 'fields *; exclude checksum, tags, release_dates, similar_games, screenshots, alternative_names, language_supports, websites; where name = "'
     check_string += game.strip()
-    check_string += '"; limit 5; offset 0;'
+    check_string += '"; offset 0;'
     #check_string += ';'
     print(check_string)
     igdb_request = wrapper.api_request(
@@ -319,11 +323,45 @@ for game, details in gameDb.items():
     games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
     games = games_message.games
     if(len(games) > 1):
+        versions_counter = 0
+        print(games[0])
+        #earliest_release = int(round(games[0].first_release_date))
+        #earliest_release = games[0].first_release_date
+        #earliest_release = games[0].first_release_date.to_pydatetime()
+        earliest_release = games[0].first_release_date.ToDatetime()
+        earliest_game = games[0]
+        print(earliest_release)
+        input("Here is a release!")
         for result in games:
+            #how do I compare timestamps?
+            potential_release = result.first_release_date.ToDatetime()
+            if(potential_release < earliest_release):
+                #Also check for parent_game field?
+                print("New earliest release!")
+                #earliest_release = result.first_release_date
+                earliest_release = potential_release
+                earliest_game = result
+                input(earliest_release)
             print(result)
+        print(earliest_game.slug)
+        print(earliest_game.url)
+        print(earliest_game.id)
+        print(earliest_release)
         input("Here we pause")
-    else:
+        """
+        self.mainPlatform = 'None'
+        self.listPlatforms = []
+        self.playerCounts = []
+        self.listDevelopers = []
+        """
+        #Time to put the IGDB attributes into the game we are putting out to the cluster
+        gameDb[game].igdb_ID = earliest_game.id
+        gameDb[game].releaseDate = earliest_release
+    elif(len(games) == 1):
         print(games)
+    else:
+        print("Not found with that name!")
+        input("Maybe you need to alter the title somehow?\n")
 
 #When there is ID confusion, need to clarify ID when putting entries
 #Have a process that runs through when generating databases and pauses
@@ -334,7 +372,9 @@ for game, details in gameDb.items():
 #ID for Final Fantasy VII: 427
 #ID for Ms. Pac-Man: 7452
 #investigate ways to test for what is the most parent version?
-exit()
+#when multiple options to go with, for now go with the one that has
+#the most total_rating_count? earliest release date?
+#exit()
 
 """
 MEDIUM EXAMPLE:
@@ -377,9 +417,9 @@ for game, details in gameDb.items():
     #export.append(details)
     exportDict = {}
     exportDict["Title"] = game
-    exportDict["Ranked Score"] = details.rankedScore
+    exportDict["Ranked Score"] = details.ranked_score
     exportDict["Inclusion Score"] = details.listCount
-    averageScore = details.rankedScore / details.totalCount
+    averageScore = details.ranked_score / details.totalCount
     exportDict["Average Score"] = averageScore
     exportDict["List of References"] = details.listsReferencing
     exportDict["Completed"] = details.completed
@@ -423,20 +463,20 @@ sheet1.write(0, 8, 'PLAYER COUNTS', boldStyle)
 sheet1.write(0, 9, 'DEVELOPERS', boldStyle)
 excelCount = 1
 for game, details in gameDb.items():
-    rScore = details.rankedScore
+    rScore = details.ranked_score
     iScore = details.listCount
     aScore = rScore / details.totalCount
     if(details.completed == True):
         sheet1.write(excelCount, 0, game, crossedStyle)
     else:
         sheet1.write(excelCount, 0, game)
-    #sheet1.write(excelCount, 1, details.rankedScore)
+    #sheet1.write(excelCount, 1, details.ranked_score)
     #sheet1.write(excelCount, 2, details.listCount)
     sheet1.write(excelCount, 1, rScore)
     sheet1.write(excelCount, 2, iScore)
-    #averageScore = details.rankedScore / details.listCount
-    #averageScore = (details.rankedScore / details.listCount)/details.totalCount
-    #averageScore = details.rankedScore / details.totalCount
+    #averageScore = details.ranked_score / details.listCount
+    #averageScore = (details.ranked_score / details.listCount)/details.totalCount
+    #averageScore = details.ranked_score / details.totalCount
     #sheet1.write(excelCount, 3, averageScore)
     sheet1.write(excelCount, 3, aScore)
     outputLists = ""
@@ -456,7 +496,7 @@ for game, details in gameDb.items():
     sheet1.write(excelCount, 9, lDevs)
     excelCount += 1
     #add to the individual databases
-    #gameDbRanked[game] = details.rankedScore
+    #gameDbRanked[game] = details.ranked_score
     #gameDbInclusion[game] = details.listCount
     #gameDbAverage[game] = averageScore
     gameDbRanked[game] = rScore
@@ -707,4 +747,6 @@ Fix for UnicodeEncodeError after pre-commit safety integration: https://github.c
 Python Requests post: https://www.w3schools.com/python/ref_requests_post.asp
 Python IGDB API Wrapper: https://github.com/twitchtv/igdb-api-python
 Reading JSON files in python: https://www.geeksforgeeks.org/read-json-file-using-python/
+Converting datetime to integer timestamp: https://www.geeksforgeeks.org/python-datetime-to-integer-timestamp/
+Converting Pandas timestamp to python datetime: https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.to_pydatetime.html#pandas.Timestamp.to_pydatetime
 """
