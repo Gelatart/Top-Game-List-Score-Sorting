@@ -310,7 +310,7 @@ input("Here we pause")
 
 print("Time to go looking")
 for game, details in gameDb.items():
-    check_string = 'fields *; exclude checksum, tags, release_dates, similar_games, screenshots, alternative_names, language_supports, websites; where name = "'
+    check_string = 'fields *; exclude checksum, release_dates, similar_games, screenshots, tags, themes, alternative_names, language_supports, websites; where name = "'
     check_string += game.strip()
     check_string += '"; offset 0;'
     #check_string += ';'
@@ -346,19 +346,26 @@ for game, details in gameDb.items():
         print(earliest_game.slug)
         print(earliest_game.url)
         print(earliest_game.id)
+        print(earliest_game.platforms)
         print(earliest_release)
         input("Here we pause")
-        """
-        self.mainPlatform = 'None'
-        self.listPlatforms = []
-        self.playerCounts = []
-        self.listDevelopers = []
-        """
         #Time to put the IGDB attributes into the game we are putting out to the cluster
         gameDb[game].igdb_ID = earliest_game.id
         gameDb[game].releaseDate = earliest_release
+        gameDb[game].mainPlatform = earliest_game.platforms[0] #Will this always pull best choice?
+        gameDb[game].listPlatforms = earliest_game.platforms #Will only pull ID's for now, need to tackle later?
+        gameDb[game].playerCounts = earliest_game.game_modes #Changes approach but for the better?
+        #^Also consider multiplayer_modes?
+        gameDb[game].listDevelopers = earliest_game.involved_companies #Will this grab the most definitive list?
     elif(len(games) == 1):
-        print(games)
+        current_game = games[0]
+        #print(games)
+        print(current_game.slug)
+        print(current_game.url)
+        print(current_game.id)
+        print(current_game.platforms)
+        print(current_game.first_release_date.ToDatetime())
+        input("This should go quickly!")
     else:
         print("Not found with that name!")
         input("Maybe you need to alter the title somehow?\n")
