@@ -33,7 +33,7 @@ Tetris
 Ultima IV: Quest of the Avatar
 Arkanoid
 Bubble Bobble
-Legend of Zelda
+The Legend of Zelda
 OutRun
 Contra
 Double Dragon
@@ -55,7 +55,7 @@ Wing Commander
 Another World [Out of this World]
 Sid Meier's Civilization
 Final Fantasy IV
-Legend of Zelda: A Link to the Past
+The Legend of Zelda: A Link to the Past
 Lemmings
 Micro Machines
 Monkey Island 2: LeChuck's Revenge
@@ -77,9 +77,9 @@ Ultima VII: The Black Gate
 Virtua Racing
 Wolfenstein 3D
 Maniac Mansion II: Day of the Tentacle
-DOOM
+Doom
 Gunstar Heroes
-Legend of Zelda: Link's Awakening
+The Legend of Zelda: Link's Awakening
 Mega Man X
 Mortal Kombat II
 Myst
@@ -94,7 +94,7 @@ Star Fox
 Syndicate
 Daytona USA
 Donkey Kong Country
-DOOM II: Hell on Earth
+Doom II: Hell on Earth
 EarthBound
 Final Fantasy VI
 Sega Rally Championship
@@ -146,7 +146,7 @@ Dance Dance Revolution
 Fallout 2
 Grim Fandango
 Half-Life
-Legend of Zelda: Ocarina of Time
+The Legend of Zelda: Ocarina of Time
 Metal Gear Solid
 Panzer Dragoon Saga
 Resident Evil 2
@@ -169,7 +169,7 @@ Counter-Strike [1.6]
 Deus Ex
 Diablo II
 Jet Set Radio
-Legend of Zelda: Majora's Mask
+The Legend of Zelda: Majora's Mask
 Perfect Dark
 Marvel vs. Capcom 2: New Age of Heroes
 The Sims
@@ -197,7 +197,7 @@ Elder Scrolls III: Morrowind
 Eternal Darkness: Sanity's Requiem
 Grand Theft Auto: Vice City
 Kingdom Hearts
-Legend of Zelda: Wind Waker
+The Legend of Zelda: The Wind Waker
 Metroid Prime
 SoulCalibur II
 Tom Clancy's Splinter Cell
@@ -233,7 +233,7 @@ Company of Heroes
 Elder Scrolls IV: Oblivion
 Gears of War
 Hitman: Blood Money
-Legend of Zelda: Twilight Princess
+The Legend of Zelda: Twilight Princess
 Okami
 Wii Sports
 BioShock
@@ -315,7 +315,7 @@ Overwatch
 Stardew Valley
 Uncharted 4: A Thief's End
 Fortnite
-Legend of Zelda: Breath of the Wild
+The Legend of Zelda: Breath of the Wild
 Super Mario Odyssey
 God of War [2018]
 Red Dead Redemption 2

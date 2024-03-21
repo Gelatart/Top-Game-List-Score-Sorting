@@ -1,9 +1,9 @@
 100
 Super Mario World
-Legend of Zelda: Ocarina of Time
+The Legend of Zelda: Ocarina of Time
 Portal
 Super Metroid
-Legend of Zelda: A Link to the Past
+The Legend of Zelda: A Link to the Past
 Super Mario Bros. 3
 Tetris
 Half-Life 2
@@ -17,14 +17,14 @@ Street Fighter II
 Dark Souls
 Grand Theft Auto V
 Chrono Trigger
-DOOM
+Doom
 The Last of Us
 Metal Gear Solid 3: Snake Eater
 Half-Life
 Halo 2
 Minecraft
 Sid Meier's Civilization IV
-Legend of Zelda: Breath of the Wild
+The Legend of Zelda: Breath of the Wild
 BioShock
 Shadow of the Colossus
 Super Mario Galaxy
@@ -33,7 +33,7 @@ The Witcher 3: Wild Hunt
 Resident Evil 4
 Metroid Prime
 Bloodborne
-Legend of Zelda
+The Legend of Zelda
 Pokemon Yellow
 Mass Effect 2
 Final Fantasy VI
@@ -50,7 +50,7 @@ Ms. Pac-Man
 Baldur's Gate II: Shadows of Amn
 Deus Ex
 Overwatch
-Legend of Zelda: Majora's Mask
+The Legend of Zelda: Majora's Mask
 Uncharted 2: Among Thieves
 Journey
 The Witness
@@ -77,7 +77,7 @@ X-COM: UFO Defense
 Elder Scrolls V: Skyrim
 Super Smash Bros. Melee
 GoldenEye 007
-Legend of Zelda: Wind Waker
+The Legend of Zelda: The Wind Waker
 Grim Fandango
 Persona 5
 Grand Theft Auto: Vice City

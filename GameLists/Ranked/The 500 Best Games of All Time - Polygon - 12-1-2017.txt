@@ -1,8 +1,8 @@
 500
 Tetris
 Super Mario Bros. 3
-Legend of Zelda
-DOOM
+The Legend of Zelda
+Doom
 Pokemon Red / Blue
 Ms. Pac-Man
 World of Warcraft
@@ -18,7 +18,7 @@ Super Mario 64
 Portal
 Castlevania: Symphony of the Night
 Sid Meier's Civilization II
-Legend of Zelda: A Link to the Past
+The Legend of Zelda: A Link to the Past
 Super Mario Bros.
 FIFA 12
 Rogue
@@ -37,7 +37,7 @@ Donkey Kong
 Resident Evil 4
 Grand Theft Auto V
 Diablo II
-Legend of Zelda: Ocarina of Time
+The Legend of Zelda: Ocarina of Time
 Dark Souls
 Wii Sports
 Halo: Combat Evolved
@@ -116,7 +116,7 @@ BioShock
 Call of Duty 2
 Gunstar Heroes
 Mario Kart 8
-Legend of Zelda: Wind Waker
+The Legend of Zelda: The Wind Waker
 Device 6
 Frog Fractions
 Quake
@@ -141,7 +141,7 @@ EverQuest
 Super Smash Bros.
 The Operative: No One Lives Forever
 Unreal Tournament [1999]
-Legend of Zelda: Link's Awakening
+The Legend of Zelda: Link's Awakening
 Team Fortress 2
 Mortal Kombat II
 Wolfenstein 3D
@@ -298,7 +298,7 @@ Super Mario Bros. 2
 The World Ends With You
 Thief: Deadly Shadows
 Diablo III
-Legend of Zelda: A Link Between Worlds
+The Legend of Zelda: A Link Between Worlds
 Microsoft Flight Simulator
 Resident Evil 2
 Maniac Mansion II: Day of the Tentacle
@@ -330,7 +330,7 @@ Miner 2049er
 Panzer Dragoon II Zwei
 Puzzle Quest: Challenge of the Warlords
 Samurai Shodown
-Legend of Zelda: Majora's Mask
+The Legend of Zelda: Majora's Mask
 Deus Ex
 Everybody's Golf [Hot Shots Golf]
 Populous

@@ -1,9 +1,9 @@
 100
 Super Mario World
-Legend of Zelda: A Link to the Past
+The Legend of Zelda: A Link to the Past
 Portal 2
 Super Metroid
-Legend of Zelda: Breath of the Wild
+The Legend of Zelda: Breath of the Wild
 Super Mario Bros. 3
 Tetris
 Half-Life 2
@@ -17,13 +17,13 @@ Street Fighter II
 Dark Souls
 Portal
 Chrono Trigger
-DOOM
+Doom
 The Last of Us
 Metal Gear Solid 3: Snake Eater
 Half-Life
 Halo: Combat Evolved
 Minecraft
-Legend of Zelda: Ocarina of Time
+The Legend of Zelda: Ocarina of Time
 Sid Meier's Civilization IV
 BioShock
 The Witcher 3: Wild Hunt

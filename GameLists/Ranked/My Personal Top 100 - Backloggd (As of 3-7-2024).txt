@@ -6,17 +6,17 @@ Minecraft
 Paper Mario: The Thousand-Year Door
 Halo 3
 Halo: Combat Evolved
-Legend of Zelda: Tears of the Kingdom
+The Legend of Zelda: Tears of the Kingdom
 Halo 2
-Legend of Zelda: Twilight Princess
+The Legend of Zelda: Twilight Princess
 Final Fantasy VII
-Legend of Zelda: Breath of the Wild
+The Legend of Zelda: Breath of the Wild
 Super Mario Odyssey
 Silent Hill
 Grim Fandango
-Legend of Zelda: Ocarina of Time
+The Legend of Zelda: Ocarina of Time
 Super Mario Galaxy
-Legend of Zelda: Majora's Mask
+The Legend of Zelda: Majora's Mask
 Silent Hill 3
 Chibi-Robo!
 EarthBound
@@ -33,7 +33,7 @@ Super Smash Bros. Melee
 Super Mario 64
 Pokemon Black 2 / White 2
 Danganronpa 2: Goodbye Despair
-Legend of Zelda: Wind Waker
+The Legend of Zelda: The Wind Waker
 Portal
 Call of Duty: Modern Warfare 2
 Super Smash Bros. Ultimate

@@ -39,8 +39,8 @@ class GameObject:
     def __init__(self, rank):
         self.igdb_ID = None
         self.ranked_score = rank
-        self.listCount = 1
-        self.listsReferencing = []
+        self.list_count = 1
+        self.lists_referencing = []
         self.totalCount = 0
         self.completed = False
         self.mainPlatform = 'None'
@@ -53,14 +53,14 @@ class GameObject:
 
     #def __init__(self, rank, count):
     #    self.ranked_score = rank
-    #    self.listCount = count
+    #    self.list_count = count
 
     def __init__(self, rank, list):
         self.igdb_ID = None
         self.ranked_score = rank
-        self.listCount = 1
-        self.listsReferencing = []
-        self.listsReferencing.append(list)
+        self.list_count = 1
+        self.lists_referencing = []
+        self.lists_referencing.append(list)
         self.totalCount = 0
         self.completed = False
         self.mainPlatform = 'None'
@@ -72,9 +72,9 @@ class GameObject:
     def __init__(self, rank, list, total):
         self.igdb_ID = None
         self.ranked_score = rank
-        self.listCount = 1
-        self.listsReferencing = []
-        self.listsReferencing.append(list)
+        self.list_count = 1
+        self.lists_referencing = []
+        self.lists_referencing.append(list)
         self.totalCount = total
         self.completed = False
         self.mainPlatform = 'None'
@@ -118,14 +118,14 @@ for filename in os.listdir(directory):
         for line in Lines:
             if line in gameDb:
                 gameDb[line].ranked_score += count
-                gameDb[line].listCount += 1
-                gameDb[line].listsReferencing.append(f)
+                gameDb[line].list_count += 1
+                gameDb[line].lists_referencing.append(f)
                 gameDb[line].totalCount += originalCount
             else:
                 newObj = GameObject(count, f, originalCount)
                 gameDb[line] = newObj
             #searchObj = gameDb.get(newObj, 0) + 1
-            #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
+            #gameDb[line].list_count = gameDb.get(newObj, 0) + 1
             print("Score of {}: {}".format(count, line.strip()))
             count -= 1
         games_lists.append(filename)
@@ -159,14 +159,14 @@ for filename in os.listdir(directory):
         for line in Lines:
             if line in gameDb:
                 gameDb[line].ranked_score += count
-                gameDb[line].listCount += 1
-                gameDb[line].listsReferencing.append(f)
+                gameDb[line].list_count += 1
+                gameDb[line].lists_referencing.append(f)
                 gameDb[line].totalCount += originalCount
             else:
                 newObj = GameObject(count, f, originalCount)
                 gameDb[line] = newObj
             #searchObj = gameDb.get(newObj, 0) + 1
-            #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
+            #gameDb[line].list_count = gameDb.get(newObj, 0) + 1
             print("Score of {}: {}".format(count, line.strip()))
             #count -= 1
         games_lists.append(filename)
@@ -193,14 +193,14 @@ for filename in os.listdir(directory):
         for line in Lines:
             if line in gameDb:
                 gameDb[line].ranked_score += count
-                gameDb[line].listCount += 1
-                gameDb[line].listsReferencing.append(f)
+                gameDb[line].list_count += 1
+                gameDb[line].lists_referencing.append(f)
                 gameDb[line].totalCount += originalCount
             else:
                 newObj = GameObject(count, f, originalCount)
                 gameDb[line] = newObj
             #searchObj = gameDb.get(newObj, 0) + 1
-            #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
+            #gameDb[line].list_count = gameDb.get(newObj, 0) + 1
             print("Score of {}: {}".format(count, line.strip()))
             #count -= 1
         games_lists.append(filename)
@@ -308,11 +308,17 @@ games = games_message.games
 print(games)
 input("Here we pause")
 
-print("Time to go looking")
+print("Time to go looking around")
 for game, details in gameDb.items():
-    check_string = 'fields *; exclude checksum, release_dates, similar_games, screenshots, tags, themes, alternative_names, language_supports, websites; where name = "'
+    check_string = 'fields *; exclude age_ratings, alternative_names, checksum, cover, involved_companies, keywords, '
+    check_string += 'language_supports, release_dates, screenshots, similar_games, tags, themes, websites; '
+    check_string += 'where name = "'
     check_string += game.strip()
-    check_string += '"; offset 0;'
+    check_string += '" & version_parent = null; offset 0;' #6 is cancelled,  & status != 6
+    #Exclude versions that aren't the parent
+    #Exclude cancelled, unreleased, TBD versions?
+    #Figure out how to deal with children versions? How to give points and pass on points to parent too?
+    #Also dealing with compilation games? Add points to individual games? Create field to track subgames in a compilation?
     #check_string += ';'
     print(check_string)
     igdb_request = wrapper.api_request(
@@ -331,17 +337,17 @@ for game, details in gameDb.items():
         earliest_release = games[0].first_release_date.ToDatetime()
         earliest_game = games[0]
         print(earliest_release)
-        input("Here is a release!")
+        #input("Here is a release!")
         for result in games:
             #how do I compare timestamps?
             potential_release = result.first_release_date.ToDatetime()
             if(potential_release < earliest_release):
                 #Also check for parent_game field?
-                print("New earliest release!")
+                #print("New earliest release!")
                 #earliest_release = result.first_release_date
                 earliest_release = potential_release
                 earliest_game = result
-                input(earliest_release)
+                #input(earliest_release)
             print(result)
         print(earliest_game.slug)
         print(earliest_game.url)
@@ -352,8 +358,49 @@ for game, details in gameDb.items():
         #Time to put the IGDB attributes into the game we are putting out to the cluster
         gameDb[game].igdb_ID = earliest_game.id
         gameDb[game].releaseDate = earliest_release
-        gameDb[game].mainPlatform = earliest_game.platforms[0] #Will this always pull best choice?
-        gameDb[game].listPlatforms = earliest_game.platforms #Will only pull ID's for now, need to tackle later?
+        print("Time to go through platforms")
+        # Spin this while loop off into its own function eventually?
+        plat_counter = 0
+        main_plat = None
+        plat_name = None
+        list_plats = []
+        while(plat_counter < len(earliest_game.platforms)):
+            plat_ID = earliest_game.platforms[plat_counter]
+            print(plat_ID)
+            match plat_ID:
+                case 3:
+                    plat_name = "Linux"
+                case 4:
+                    plat_name = "N64"
+                case 5:
+                    plat_name = "Wii"
+                case 6:
+                    plat_name = "PC (Windows)"
+                case 7:
+                    plat_name = "PS1"
+                case 9:
+                    plat_name = "PS3"
+                case 12:
+                    plat_name = "X360"
+                case 13:
+                    plat_name = "PC-DOS"
+                case 14:
+                    plat_name = "Mac"
+                case 19:
+                    plat_name = "SNES"
+                case 41:
+                    plat_name = "Wii U"
+                case default:
+                    plat_name = "Unknown"
+            if(plat_counter == 0):
+                main_plat = plat_name
+            print(plat_name)
+            list_plats.append(plat_name)
+            plat_counter += 1
+        #gameDb[game].mainPlatform = earliest_game.platforms[0]
+        gameDb[game].mainPlatform = main_plat #Will this always pull best choice?
+        #gameDb[game].listPlatforms = earliest_game.platforms
+        gameDb[game].listPlatforms = list_plats #Will only pull ID's for now, need to tackle later?
         gameDb[game].playerCounts = earliest_game.game_modes #Changes approach but for the better?
         #^Also consider multiplayer_modes?
         gameDb[game].listDevelopers = earliest_game.involved_companies #Will this grab the most definitive list?
@@ -397,7 +444,6 @@ books = soup.find_all("div", class_ = "book-item")
 mon_connect = os.getenv('MONGO_URI')
 #monClient = pymongo.MongoClient(mon_connect)
 monClient = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
-#Reference code: client = MongoClient(uri, server_api=ServerApi('1'))
 monDB = monClient["GameSorting"]
 try:
     monClient.admin.command('ping')
@@ -406,10 +452,6 @@ except Exception as e:
     print(e)
 mon_col = monDB["games"]
 list_col = monDB["lists"]
-
-#TEST INSERT_ONE
-#testDict = { "title": "This is a test", "score": 69}
-#test = mon_col.insert_one(testDict)
 
 #INSERT ALL GAMES INTO DATABASE
 #Clear database to begin with?
@@ -425,10 +467,10 @@ for game, details in gameDb.items():
     exportDict = {}
     exportDict["Title"] = game
     exportDict["Ranked Score"] = details.ranked_score
-    exportDict["Inclusion Score"] = details.listCount
+    exportDict["Inclusion Score"] = details.list_count
     averageScore = details.ranked_score / details.totalCount
     exportDict["Average Score"] = averageScore
-    exportDict["List of References"] = details.listsReferencing
+    exportDict["List of References"] = details.lists_referencing
     exportDict["Completed"] = details.completed
     exportDict["Main Platform"] = details.mainPlatform
     exportDict["List of Platforms"] = details.listPlatforms
@@ -447,11 +489,6 @@ for list in games_lists:
     #could keep track of what type of list it is, other variables?
     list_insert = list_col.insert_one(listDict)
 
-"""
-gameDbRanked = {}
-gameDbInclusion = {}
-gameDbAverage = {}
-"""
 "loop of printing database to a spreadsheet file"
 
 """
@@ -471,23 +508,23 @@ sheet1.write(0, 9, 'DEVELOPERS', boldStyle)
 excelCount = 1
 for game, details in gameDb.items():
     rScore = details.ranked_score
-    iScore = details.listCount
+    iScore = details.list_count
     aScore = rScore / details.totalCount
     if(details.completed == True):
         sheet1.write(excelCount, 0, game, crossedStyle)
     else:
         sheet1.write(excelCount, 0, game)
     #sheet1.write(excelCount, 1, details.ranked_score)
-    #sheet1.write(excelCount, 2, details.listCount)
+    #sheet1.write(excelCount, 2, details.list_count)
     sheet1.write(excelCount, 1, rScore)
     sheet1.write(excelCount, 2, iScore)
-    #averageScore = details.ranked_score / details.listCount
-    #averageScore = (details.ranked_score / details.listCount)/details.totalCount
+    #averageScore = details.ranked_score / details.list_count
+    #averageScore = (details.ranked_score / details.list_count)/details.totalCount
     #averageScore = details.ranked_score / details.totalCount
     #sheet1.write(excelCount, 3, averageScore)
     sheet1.write(excelCount, 3, aScore)
     outputLists = ""
-    for refList in details.listsReferencing:
+    for refList in details.lists_referencing:
         outputLists += refList
         outputLists += ", "
     sheet1.write(excelCount, 4, outputLists)
@@ -504,7 +541,7 @@ for game, details in gameDb.items():
     excelCount += 1
     #add to the individual databases
     #gameDbRanked[game] = details.ranked_score
-    #gameDbInclusion[game] = details.listCount
+    #gameDbInclusion[game] = details.list_count
     #gameDbAverage[game] = averageScore
     gameDbRanked[game] = rScore
     gameDbInclusion[game] = iScore
@@ -516,69 +553,12 @@ wb.save('Sorted Database.xls')
 #each time, sort excel a certain way, then print out excel factors to list?
 
 """
-sortByRanked = sorted(gameDbRanked.items(), key=lambda x:x[1], reverse=True)
-convertedRanked = dict(sortByRanked)
-sortByInclusion = sorted(gameDbInclusion.items(), key=lambda x:x[1], reverse=True)
-convertedInclusion = dict(sortByInclusion)
-sortByAverage = sorted(gameDbAverage.items(), key=lambda x:x[1], reverse=True)
-convertedAverage = dict(sortByAverage)
-"""
-
-"""
 file_ranked = open("Sorted by Ranked.txt","w", encoding="utf-8")
 fileI = open("Sorted by Inclusion.txt","w", encoding="utf-8")
 fileA = open("Sorted by Average.txt","w", encoding="utf-8")
 fileUR = open("Sorted by Ranked (Uncompleted).txt", "w", encoding="utf-8")
 fileUI = open("Sorted by Inclusion (Uncompleted).txt","w", encoding="utf-8")
 fileUA = open("Sorted by Average (Uncompleted).txt","w", encoding="utf-8")
-"""
-
-"""
-for game, score in convertedRanked.items():
-    entry = ""
-    if (gameDb[game].completed == True):
-        entry += "[x]"
-    entry += game.strip()
-    entry += " --> "
-    entry += str(score)
-    file_ranked.write(entry)
-    file_ranked.write("\n")
-    if (gameDb[game].completed == False):
-        fileUR.write(entry)
-        fileUR.write("\n")
-#then print out to the files for inclusion and average
-
-for game, score in convertedInclusion.items():
-    entry = ""
-    if (gameDb[game].completed == True):
-        entry += "[x]"
-    entry += game.strip()
-    #file_ranked.write(game)
-    entry += " --> "
-    #file_ranked.write(" --> ")
-    entry += str(score)
-    #file_ranked.write(str(score))
-    fileI.write(entry)
-    fileI.write("\n")
-    if (gameDb[game].completed == False):
-        fileUI.write(entry)
-        fileUI.write("\n")
-
-for game, score in convertedAverage.items():
-    entry = ""
-    if (gameDb[game].completed == True):
-        entry += "[x]"
-    entry += game.strip()
-    #file_ranked.write(game)
-    entry += " --> "
-    #file_ranked.write(" --> ")
-    entry += str(score)
-    #file_ranked.write(str(score))
-    fileA.write(entry)
-    fileA.write("\n")
-    if (gameDb[game].completed == False):
-        fileUA.write(entry)
-        fileUA.write("\n")
 """
 
 """
@@ -620,6 +600,7 @@ games_pulled_ranked = mon_col.find().sort("Ranked Score", -1)
 games_pulled_inclusion = mon_col.find().sort("Inclusion Score", -1)
 games_pulled_average = mon_col.find().sort("Average Score", -1)
 
+#Opening the files that we are going to be writing to
 file_ranked = open("Sorted by Ranked.txt","w", encoding="utf-8")
 file_inclusion = open("Sorted by Inclusion.txt","w", encoding="utf-8")
 file_average = open("Sorted by Average.txt","w", encoding="utf-8")
@@ -721,7 +702,7 @@ print("Successfully completed!")
 """"
 REFERENCES:
 Iterate over files in directory: https://www.geeksforgeeks.org/how-to-iterate-over-files-in-directory-using-python/
-https://www.w3schools.com/python/python_dictionaries.asp
+Python dictionaries: https://www.w3schools.com/python/python_dictionaries.asp
 https://www.geeksforgeeks.org/read-a-file-line-by-line-in-python/
 https://www.geeksforgeeks.org/convert-string-to-integer-in-python/
 https://www.geeksforgeeks.org/python-initializing-dictionary-with-empty-lists/
@@ -756,4 +737,5 @@ Python IGDB API Wrapper: https://github.com/twitchtv/igdb-api-python
 Reading JSON files in python: https://www.geeksforgeeks.org/read-json-file-using-python/
 Converting datetime to integer timestamp: https://www.geeksforgeeks.org/python-datetime-to-integer-timestamp/
 Converting Pandas timestamp to python datetime: https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.to_pydatetime.html#pandas.Timestamp.to_pydatetime
+Switch statement equivalent in Python: https://www.geeksforgeeks.org/switch-case-in-python-replacement/
 """

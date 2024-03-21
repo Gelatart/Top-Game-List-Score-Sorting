@@ -1,10 +1,10 @@
 100
-Legend of Zelda: Ocarina of Time
+The Legend of Zelda: Ocarina of Time
 SoulCalibur
 Grand Theft Auto IV
 Super Mario Galaxy
 Super Mario Galaxy 2
-Legend of Zelda: Breath of the Wild
+The Legend of Zelda: Breath of the Wild
 Tony Hawk's Pro Skater 3
 Red Dead Redemption 2
 Grand Theft Auto V
@@ -26,8 +26,8 @@ The House in Fata Morgana [Dreams of the Revenants Edition]
 Elden Ring
 Elder Scrolls V: Skyrim
 Half-Life
-Legend of Zelda: Tears of the Kingdom
-Legend of Zelda: Wind Waker
+The Legend of Zelda: Tears of the Kingdom
+The Legend of Zelda: The Wind Waker
 Gran Turismo
 Metal Gear Solid 2: Sons of Liberty
 Grand Theft Auto Double Pack [Grand Theft Auto III + Grand Theft Auto: Vice City]
@@ -36,13 +36,13 @@ Baldur's Gate II: Shadows of Amn
 Grand Theft Auto: San Andreas
 Grand Theft Auto: Vice City
 LittleBigPlanet
-Legend of Zelda: Collector's Edition [Legend of Zelda + Zelda II: The Adventure of Link + Legend of Zelda: Ocarina of Time + Legend of Zelda: Majora's Mask]
+The Legend of Zelda: Collector's Edition
 Gran Turismo 3: A-Spec
 Halo 2
-Legend of Zelda: A Link to the Past and Four Swords
-Legend of Zelda: Majora's Mask
+The Legend of Zelda: A Link to the Past & Four Swords
+The Legend of Zelda: Majora's Mask
 The Last of Us
-Legend of Zelda: Twilight Princess
+The Legend of Zelda: Twilight Princess
 Madden NFL 2003
 Persona 5 [Royal]
 The Last of Us [Remastered]
@@ -55,7 +55,7 @@ Devil May Cry
 Madden NFL 2002
 Batman: Arkham City
 Metroid Prime [Remastered]
-Legend of Zelda: Ocarina of Time [3D]
+The Legend of Zelda: Ocarina of Time 3D
 Chrono Cross
 Madden NFL 2004
 Gears of War

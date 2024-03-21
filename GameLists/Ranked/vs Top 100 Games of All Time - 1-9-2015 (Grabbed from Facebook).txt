@@ -1,6 +1,6 @@
 100
 Elder Scrolls III: Morrowind
-Legend of Zelda: Majora's Mask
+The Legend of Zelda: Majora's Mask
 Final Fantasy IX
 Final Fantasy Tactics
 Warcraft III [The Frozen Throne]
@@ -8,13 +8,13 @@ Super Mario Bros. 3
 Phoenix Wright: Ace Attorney
 Donkey Kong Country 2: Diddy's Kong Quest
 The Wonderful 101
-Legend of Zelda: A Link to the Past
+The Legend of Zelda: A Link to the Past
 Grand Theft Auto: Vice City
 Kirby Super Star
 Pokemon Heart Gold / Soul Silver
-Legend of Zelda: Ocarina of Time
+The Legend of Zelda: Ocarina of Time
 StarCraft [Brood War]
-DOOM II: Hell on Earth
+Doom II: Hell on Earth
 Vampire: The Masquerade - Bloodlines
 System Shock 2
 Deus Ex
@@ -46,7 +46,7 @@ Banjo-Kazooie
 Phoenix Wright: Ace Attorney - Trials and Tribulations
 The World Ends With You
 Diablo II
-DOOM
+Doom
 Persona 4
 Fire Emblem [GBA]
 Tales of Symphonia
@@ -55,7 +55,7 @@ Super Mario RPG: Legend of the Seven Stars
 Resident Evil 4
 Red Dead Redemption
 Castlevania: Symphony of the Night
-Legend of Zelda: Twilight Princess
+The Legend of Zelda: Twilight Princess
 Silent Hill 2
 Fallout: New Vegas
 Shin Megami Tensei: Nocturne
@@ -83,7 +83,7 @@ Advance Wars
 Mega Man X
 Slaves to Armok: God of Blood Chapter II - Dwarf Fortress
 Ghost Trick: Phantom Detective
-Legend of Zelda: Wind Waker
+The Legend of Zelda: The Wind Waker
 Super Mario Galaxy 2
 Final Fantasy VI
 Final Fantasy VII

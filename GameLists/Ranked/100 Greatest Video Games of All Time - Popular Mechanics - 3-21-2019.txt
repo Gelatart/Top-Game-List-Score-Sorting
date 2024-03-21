@@ -1,5 +1,5 @@
 100
-Legend of Zelda: A Link to the Past
+The Legend of Zelda: A Link to the Past
 Super Mario World
 Halo: Combat Evolved
 Final Fantasy VII
@@ -10,8 +10,8 @@ Mass Effect 2
 Half-Life 2
 GoldenEye 007
 Super Mario Kart
-Legend of Zelda: Ocarina of Time
-DOOM
+The Legend of Zelda: Ocarina of Time
+Doom
 Metal Gear Solid
 Super Mario Bros. 3
 Mother 3
@@ -54,7 +54,7 @@ NBA Jam
 Castlevania: Symphony of the Night
 Super Mario RPG: Legend of the Seven Stars
 Rock Band 3
-Legend of Zelda: Breath of the Wild
+The Legend of Zelda: Breath of the Wild
 SimCity 2000
 Secret of Mana
 Tomb Raider
