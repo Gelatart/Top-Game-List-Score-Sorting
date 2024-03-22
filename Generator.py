@@ -252,6 +252,8 @@ except StopIteration:
         pass
 
 #START SCRAPING FOR ATTRIBUTES
+#(Look into close-enough matches that can match when it’s not exact?)
+#(Have the option to replace data manually when database info isn’t good enough or is missing?)
 """
 Most of the requests to the API will use the POST method
 The base URL is: https://api.igdb.com/v4
@@ -310,8 +312,9 @@ input("Here we pause")
 
 print("Time to go looking around")
 for game, details in gameDb.items():
-    check_string = 'fields *; exclude age_ratings, alternative_names, checksum, cover, involved_companies, keywords, '
-    check_string += 'language_supports, release_dates, screenshots, similar_games, tags, themes, websites; '
+    check_string = 'fields *; exclude age_ratings, alternative_names, artworks, checksum, collections, cover, '
+    check_string += 'game_localizations, involved_companies, keywords, language_supports, release_dates, screenshots, '
+    check_string += 'similar_games, tags, themes, updated_at, videos, websites; '
     check_string += 'where name = "'
     check_string += game.strip()
     check_string += '" & version_parent = null; offset 0;' #6 is cancelled,  & status != 6
@@ -341,9 +344,10 @@ for game, details in gameDb.items():
         for result in games:
             #how do I compare timestamps?
             potential_release = result.first_release_date.ToDatetime()
-            if(potential_release < earliest_release):
+            if(potential_release < earliest_release and result.status != 6):
                 #Also check for parent_game field?
                 #print("New earliest release!")
+                print(result.status)
                 #earliest_release = result.first_release_date
                 earliest_release = potential_release
                 earliest_game = result
@@ -367,31 +371,62 @@ for game, details in gameDb.items():
         while(plat_counter < len(earliest_game.platforms)):
             plat_ID = earliest_game.platforms[plat_counter]
             print(plat_ID)
-            match plat_ID:
-                case 3:
-                    plat_name = "Linux"
-                case 4:
-                    plat_name = "N64"
-                case 5:
-                    plat_name = "Wii"
-                case 6:
-                    plat_name = "PC (Windows)"
-                case 7:
-                    plat_name = "PS1"
-                case 9:
-                    plat_name = "PS3"
-                case 12:
-                    plat_name = "X360"
-                case 13:
-                    plat_name = "PC-DOS"
-                case 14:
-                    plat_name = "Mac"
-                case 19:
-                    plat_name = "SNES"
-                case 41:
-                    plat_name = "Wii U"
-                case default:
-                    plat_name = "Unknown"
+            #print(plat_ID.value)
+            print(plat_ID.id)
+            #match plat_ID:
+            if(plat_ID.id == 3):
+                plat_name = "Linux"
+            elif(plat_ID.id == 4):
+                plat_name = "N64"
+            elif(plat_ID.id == 5):
+                plat_name = "Wii"
+            elif(plat_ID.id == 6):
+                plat_name = "PC (Windows)"
+            elif(plat_ID.id == 7):
+                plat_name = "PS1"
+            elif(plat_ID.id == 9):
+                plat_name = "PS3"
+            elif(plat_ID.id == 11):
+                plat_name = "Xbox"
+            elif(plat_ID.id == 12):
+                plat_name = "X360"
+            elif(plat_ID.id == 13):
+                plat_name = "PC-DOS"
+            elif(plat_ID.id == 14):
+                plat_name = "Mac"
+            elif (plat_ID.id == 15):
+                plat_name = "C64 & C128"
+            elif(plat_ID.id == 19):
+                plat_name = "SNES"
+            elif (plat_ID.id == 26):
+                plat_name = "ZX Spectrum"
+            elif (plat_ID.id == 33):
+                plat_name = "GB"
+            elif (plat_ID.id == 34):
+                plat_name = "Android"
+            elif (plat_ID.id == 38):
+                plat_name = "PSP"
+            elif (plat_ID.id == 39):
+                plat_name = "iOS"
+            elif(plat_ID.id == 41):
+                plat_name = "Wii U"
+            elif (plat_ID.id == 46):
+                plat_name = "Vita"
+            elif(plat_ID.id == 52):
+                plat_name = "Arcade"
+            elif(plat_ID.id == 58):
+                plat_name = "Super Famicom"
+            elif (plat_ID.id == 59):
+                plat_name = "2600"
+            elif (plat_ID.id == 130):
+                plat_name = "Switch"
+            elif(plat_ID.id == 137):
+                plat_name = "New Nintendo 3DS"
+            elif(plat_ID.id == 306):
+                plat_name = "Satellaview"
+            #379: which is this?
+            else:
+                plat_name = "Unknown"
             if(plat_counter == 0):
                 main_plat = plat_name
             print(plat_name)
