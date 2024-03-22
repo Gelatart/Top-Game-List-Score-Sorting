@@ -384,6 +384,8 @@ for game, details in gameDb.items():
                 plat_name = "PC (Windows)"
             elif(plat_ID.id == 7):
                 plat_name = "PS1"
+            elif(plat_ID.id == 8):
+                plat_name = "PS2"
             elif(plat_ID.id == 9):
                 plat_name = "PS3"
             elif(plat_ID.id == 11):
@@ -396,10 +398,32 @@ for game, details in gameDb.items():
                 plat_name = "Mac"
             elif (plat_ID.id == 15):
                 plat_name = "C64 & C128"
-            elif(plat_ID.id == 19):
+            elif (plat_ID.id == 16):
+                plat_name = "Amiga"
+            elif (plat_ID.id == 18):
+                plat_name = "NES"
+            elif (plat_ID.id == 19):
                 plat_name = "SNES"
+            elif (plat_ID.id == 20):
+                plat_name = "DS"
+            elif (plat_ID.id == 21):
+                plat_name = "GCN" 
+            elif (plat_ID.id == 22):
+                plat_name = "GBC"
+            elif (plat_ID.id == 23):
+                plat_name = "DC"
+            elif (plat_ID.id == 24):
+                plat_name = "GBA"
+            elif (plat_ID.id == 25):
+                plat_name = "Amstrad CPC"
             elif (plat_ID.id == 26):
                 plat_name = "ZX Spectrum"
+            elif (plat_ID.id == 27):
+                plat_name = "MSX"
+            elif (plat_ID.id == 29):
+                plat_name = "GEN/MD"
+            elif (plat_ID.id == 30):
+                plat_name = "32X"          
             elif (plat_ID.id == 33):
                 plat_name = "GB"
             elif (plat_ID.id == 34):
