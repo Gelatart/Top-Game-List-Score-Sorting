@@ -469,6 +469,7 @@ for game, details in gameDb.items():
             elif(plat_ID.id == 306):
                 plat_name = "Satellaview"
             #379: which is this?
+            #test comment to make sure everything restored properly
             else:
                 plat_name = "Unknown"
             if(plat_counter == 0):
