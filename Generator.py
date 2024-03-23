@@ -41,7 +41,7 @@ class GameObject:
         self.ranked_score = rank
         self.list_count = 1
         self.lists_referencing = []
-        self.totalCount = 0
+        self.total_count = 0
         self.completed = False
         self.mainPlatform = 'None'
         self.listPlatforms = []
@@ -61,7 +61,7 @@ class GameObject:
         self.list_count = 1
         self.lists_referencing = []
         self.lists_referencing.append(list)
-        self.totalCount = 0
+        self.total_count = 0
         self.completed = False
         self.mainPlatform = 'None'
         self.listPlatforms = []
@@ -75,7 +75,7 @@ class GameObject:
         self.list_count = 1
         self.lists_referencing = []
         self.lists_referencing.append(list)
-        self.totalCount = total
+        self.total_count = total
         self.completed = False
         self.mainPlatform = 'None'
         self.listPlatforms = []
@@ -120,7 +120,7 @@ for filename in os.listdir(directory):
                 gameDb[line].ranked_score += count
                 gameDb[line].list_count += 1
                 gameDb[line].lists_referencing.append(f)
-                gameDb[line].totalCount += originalCount
+                gameDb[line].total_count += originalCount
             else:
                 newObj = GameObject(count, f, originalCount)
                 gameDb[line] = newObj
@@ -161,7 +161,7 @@ for filename in os.listdir(directory):
                 gameDb[line].ranked_score += count
                 gameDb[line].list_count += 1
                 gameDb[line].lists_referencing.append(f)
-                gameDb[line].totalCount += originalCount
+                gameDb[line].total_count += originalCount
             else:
                 newObj = GameObject(count, f, originalCount)
                 gameDb[line] = newObj
@@ -195,7 +195,7 @@ for filename in os.listdir(directory):
                 gameDb[line].ranked_score += count
                 gameDb[line].list_count += 1
                 gameDb[line].lists_referencing.append(f)
-                gameDb[line].totalCount += originalCount
+                gameDb[line].total_count += originalCount
             else:
                 newObj = GameObject(count, f, originalCount)
                 gameDb[line] = newObj
@@ -313,8 +313,8 @@ input("Here we pause")
 print("Time to go looking around")
 for game, details in gameDb.items():
     check_string = 'fields *; exclude age_ratings, alternative_names, artworks, checksum, collections, cover, '
-    check_string += 'game_localizations, involved_companies, keywords, language_supports, release_dates, screenshots, '
-    check_string += 'similar_games, tags, themes, updated_at, videos, websites; '
+    check_string += 'game_localizations, genres, involved_companies, keywords, language_supports, release_dates, '
+    check_string += 'screenshots, similar_games, tags, themes, updated_at, videos, websites; '
     check_string += 'where name = "'
     check_string += game.strip()
     check_string += '" & version_parent = null; offset 0;' #6 is cancelled,  & status != 6
@@ -346,12 +346,12 @@ for game, details in gameDb.items():
             potential_release = result.first_release_date.ToDatetime()
             if(potential_release < earliest_release and result.status != 6):
                 #Also check for parent_game field?
-                #print("New earliest release!")
+                print("New earliest release!")
                 print(result.status)
                 #earliest_release = result.first_release_date
                 earliest_release = potential_release
                 earliest_game = result
-                #input(earliest_release)
+                input(earliest_release)
             print(result)
         print(earliest_game.slug)
         print(earliest_game.url)
@@ -374,27 +374,27 @@ for game, details in gameDb.items():
             #print(plat_ID.value)
             print(plat_ID.id)
             #match plat_ID:
-            if(plat_ID.id == 3):
+            if (plat_ID.id == 3):
                 plat_name = "Linux"
-            elif(plat_ID.id == 4):
+            elif (plat_ID.id == 4):
                 plat_name = "N64"
-            elif(plat_ID.id == 5):
+            elif (plat_ID.id == 5):
                 plat_name = "Wii"
-            elif(plat_ID.id == 6):
+            elif (plat_ID.id == 6):
                 plat_name = "PC (Windows)"
-            elif(plat_ID.id == 7):
+            elif (plat_ID.id == 7):
                 plat_name = "PS1"
-            elif(plat_ID.id == 8):
+            elif (plat_ID.id == 8):
                 plat_name = "PS2"
-            elif(plat_ID.id == 9):
+            elif (plat_ID.id == 9):
                 plat_name = "PS3"
-            elif(plat_ID.id == 11):
+            elif (plat_ID.id == 11):
                 plat_name = "Xbox"
-            elif(plat_ID.id == 12):
+            elif (plat_ID.id == 12):
                 plat_name = "X360"
-            elif(plat_ID.id == 13):
+            elif (plat_ID.id == 13):
                 plat_name = "PC-DOS"
-            elif(plat_ID.id == 14):
+            elif (plat_ID.id == 14):
                 plat_name = "Mac"
             elif (plat_ID.id == 15):
                 plat_name = "C64 & C128"
@@ -407,7 +407,7 @@ for game, details in gameDb.items():
             elif (plat_ID.id == 20):
                 plat_name = "DS"
             elif (plat_ID.id == 21):
-                plat_name = "GCN" 
+                plat_name = "GCN"
             elif (plat_ID.id == 22):
                 plat_name = "GBC"
             elif (plat_ID.id == 23):
@@ -423,11 +423,15 @@ for game, details in gameDb.items():
             elif (plat_ID.id == 29):
                 plat_name = "GEN/MD"
             elif (plat_ID.id == 30):
-                plat_name = "32X"          
+                plat_name = "32X"
+            elif (plat_ID.id == 32):
+                plat_name = "SAT"
             elif (plat_ID.id == 33):
                 plat_name = "GB"
             elif (plat_ID.id == 34):
                 plat_name = "Android"
+            elif (plat_ID.id == 35):
+                plat_name = "Sega Game Gear"
             elif (plat_ID.id == 38):
                 plat_name = "PSP"
             elif (plat_ID.id == 39):
@@ -436,16 +440,32 @@ for game, details in gameDb.items():
                 plat_name = "Wii U"
             elif (plat_ID.id == 46):
                 plat_name = "Vita"
+            elif (plat_ID.id == 48):
+                plat_name = "PS4"
+            elif (plat_ID.id == 49):
+                plat_name = "XONE"
             elif(plat_ID.id == 52):
                 plat_name = "Arcade"
             elif(plat_ID.id == 58):
                 plat_name = "Super Famicom"
             elif (plat_ID.id == 59):
                 plat_name = "2600"
+            elif (plat_ID.id == 75):
+                plat_name = "Apple II"
+            elif (plat_ID.id == 79):
+                plat_name = "Neo Geo MVS"
+            elif (plat_ID.id == 80):
+                plat_name = "Neo Geo AES"
+            elif (plat_ID.id == 99):
+                plat_name = "Famicom"
             elif (plat_ID.id == 130):
                 plat_name = "Switch"
             elif(plat_ID.id == 137):
                 plat_name = "New Nintendo 3DS"
+            elif (plat_ID.id == 149):
+                plat_name = "PC-98"
+            elif (plat_ID.id == 169):
+                plat_name = "Xbox Series"
             elif(plat_ID.id == 306):
                 plat_name = "Satellaview"
             #379: which is this?
@@ -456,6 +476,7 @@ for game, details in gameDb.items():
             print(plat_name)
             list_plats.append(plat_name)
             plat_counter += 1
+        input("There they are!")
         #gameDb[game].mainPlatform = earliest_game.platforms[0]
         gameDb[game].mainPlatform = main_plat #Will this always pull best choice?
         #gameDb[game].listPlatforms = earliest_game.platforms
@@ -527,7 +548,7 @@ for game, details in gameDb.items():
     exportDict["Title"] = game
     exportDict["Ranked Score"] = details.ranked_score
     exportDict["Inclusion Score"] = details.list_count
-    averageScore = details.ranked_score / details.totalCount
+    averageScore = details.ranked_score / details.total_count
     exportDict["Average Score"] = averageScore
     exportDict["List of References"] = details.lists_referencing
     exportDict["Completed"] = details.completed
@@ -536,7 +557,7 @@ for game, details in gameDb.items():
     exportDict["Release Date"] = details.releaseDate
     exportDict["Player Counts"] = details.playerCounts
     exportDict["Developers"] = details.listDevelopers
-    exportDict["Total Count"] = details.totalCount
+    exportDict["Total Count"] = details.total_count
     insertion = mon_col.insert_one(exportDict)
 #insertion = mon_col.insert_many(gameDb)
 #insertion = mon_col.insert_many(export)
@@ -568,7 +589,7 @@ excelCount = 1
 for game, details in gameDb.items():
     rScore = details.ranked_score
     iScore = details.list_count
-    aScore = rScore / details.totalCount
+    aScore = rScore / details.total_count
     if(details.completed == True):
         sheet1.write(excelCount, 0, game, crossedStyle)
     else:
@@ -578,8 +599,8 @@ for game, details in gameDb.items():
     sheet1.write(excelCount, 1, rScore)
     sheet1.write(excelCount, 2, iScore)
     #averageScore = details.ranked_score / details.list_count
-    #averageScore = (details.ranked_score / details.list_count)/details.totalCount
-    #averageScore = details.ranked_score / details.totalCount
+    #averageScore = (details.ranked_score / details.list_count)/details.total_count
+    #averageScore = details.ranked_score / details.total_count
     #sheet1.write(excelCount, 3, averageScore)
     sheet1.write(excelCount, 3, aScore)
     outputLists = ""
