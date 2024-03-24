@@ -118,7 +118,7 @@ Duke Nukem 3D
 Mario Kart 64
 NiGHTS into Dreams...
 PaRappa the Rapper
-Pokemon Red / Blue
+Pokemon Red Version
 Quake
 Resident Evil
 Super Mario 64
@@ -193,7 +193,7 @@ Silent Hill 2
 Super Smash Bros. Melee
 Tony Hawk's Pro Skater 3
 Battlefield 1942
-Elder Scrolls III: Morrowind
+The Elder Scrolls III: Morrowind
 Eternal Darkness: Sanity's Requiem
 Grand Theft Auto: Vice City
 Kingdom Hearts
@@ -230,7 +230,7 @@ Resident Evil 4
 Shadow of the Colossus
 Tom Clancy's Splinter Cell: Chaos Theory
 Company of Heroes
-Elder Scrolls IV: Oblivion
+The Elder Scrolls IV: Oblivion
 Gears of War
 Hitman: Blood Money
 The Legend of Zelda: Twilight Princess
@@ -286,7 +286,7 @@ Super Meat Boy
 Xenoblade Chronicles
 Batman: Arkham City
 Dark Souls
-Elder Scrolls V: Skyrim
+The Elder Scrolls V: Skyrim
 Minecraft
 Portal 2
 Borderlands 2

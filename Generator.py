@@ -313,8 +313,9 @@ input("Here we pause")
 print("Time to go looking around")
 for game, details in gameDb.items():
     check_string = 'fields *; exclude age_ratings, alternative_names, artworks, checksum, collections, cover, '
-    check_string += 'game_localizations, genres, involved_companies, keywords, language_supports, release_dates, '
-    check_string += 'screenshots, similar_games, tags, themes, updated_at, videos, websites; '
+    check_string += 'created_at, follows, game_localizations, genres, involved_companies, keywords, language_supports, '
+    check_string += 'player_perspectives, rating_count, release_dates, screenshots, similar_games, tags, themes, '
+    check_string += 'updated_at, videos, websites; '
     check_string += 'where name = "'
     check_string += game.strip()
     check_string += '" & version_parent = null; offset 0;' #6 is cancelled,  & status != 6
@@ -333,13 +334,13 @@ for game, details in gameDb.items():
     games = games_message.games
     if(len(games) > 1):
         versions_counter = 0
-        print(games[0])
+        #print(games[0])
         #earliest_release = int(round(games[0].first_release_date))
         #earliest_release = games[0].first_release_date
         #earliest_release = games[0].first_release_date.to_pydatetime()
         earliest_release = games[0].first_release_date.ToDatetime()
         earliest_game = games[0]
-        print(earliest_release)
+        #print(earliest_release)
         #input("Here is a release!")
         for result in games:
             #how do I compare timestamps?
@@ -351,14 +352,14 @@ for game, details in gameDb.items():
                 #earliest_release = result.first_release_date
                 earliest_release = potential_release
                 earliest_game = result
-                input(earliest_release)
+                #input(earliest_release)
             print(result)
-        print(earliest_game.slug)
+        #print(earliest_game.slug)
         print(earliest_game.url)
         print(earliest_game.id)
         print(earliest_game.platforms)
         print(earliest_release)
-        input("Here we pause")
+        #input("Here we pause")
         #Time to put the IGDB attributes into the game we are putting out to the cluster
         gameDb[game].igdb_ID = earliest_game.id
         gameDb[game].releaseDate = earliest_release
@@ -450,6 +451,8 @@ for game, details in gameDb.items():
                 plat_name = "Super Famicom"
             elif (plat_ID.id == 59):
                 plat_name = "2600"
+            elif (plat_ID.id == 64):
+                plat_name = "Sega Master System"
             elif (plat_ID.id == 75):
                 plat_name = "Apple II"
             elif (plat_ID.id == 79):
@@ -468,7 +471,8 @@ for game, details in gameDb.items():
                 plat_name = "Xbox Series"
             elif(plat_ID.id == 306):
                 plat_name = "Satellaview"
-            #379: which is this?
+            elif (plat_ID.id == 379):
+                plat_name = "Game.com"
             #test comment to make sure everything restored properly
             else:
                 plat_name = "Unknown"
@@ -477,7 +481,7 @@ for game, details in gameDb.items():
             print(plat_name)
             list_plats.append(plat_name)
             plat_counter += 1
-        input("There they are!")
+        #input("There they are!")
         #gameDb[game].mainPlatform = earliest_game.platforms[0]
         gameDb[game].mainPlatform = main_plat #Will this always pull best choice?
         #gameDb[game].listPlatforms = earliest_game.platforms
@@ -491,9 +495,9 @@ for game, details in gameDb.items():
         print(current_game.slug)
         print(current_game.url)
         print(current_game.id)
-        print(current_game.platforms)
+        #print(current_game.platforms)
         print(current_game.first_release_date.ToDatetime())
-        input("This should go quickly!")
+        #input("This should go quickly!")
     else:
         print("Not found with that name!")
         input("Maybe you need to alter the title somehow?\n")
@@ -509,6 +513,10 @@ for game, details in gameDb.items():
 #investigate ways to test for what is the most parent version?
 #when multiple options to go with, for now go with the one that has
 #the most total_rating_count? earliest release date?
+
+#For now, Pokemon versions need to pick one over the other,for simplicity we go for the one that tends to be listed first
+#Pokémon Red Version seems to break the api request, probably the accented e
+#Doesn't get found with the title "Pokemon Red Version" either though
 #exit()
 
 """

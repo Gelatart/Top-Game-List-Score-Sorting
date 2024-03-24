@@ -3,7 +3,7 @@ Tetris
 Super Mario Bros. 3
 The Legend of Zelda
 Doom
-Pokemon Red / Blue
+Pokemon Red Version
 Ms. Pac-Man
 World of Warcraft
 Minecraft
@@ -26,7 +26,7 @@ Slaves to Armok: God of Blood Chapter II - Dwarf Fortress
 Metal Gear Solid
 NBA Jam
 Journey
-Elder Scrolls III: Morrowind
+The Elder Scrolls III: Morrowind
 EarthBound
 Spelunky
 Gone Home
@@ -71,7 +71,7 @@ Harvest Moon
 Final Fantasy VII
 Super Smash Bros. Melee
 Burnout 3: Takedown
-Elder Scrolls V: Skyrim
+The Elder Scrolls V: Skyrim
 Dota 2
 Ultima Online
 Habitat
@@ -413,7 +413,7 @@ Power Stone
 Kingdom Rush
 Drop7
 Rhythm Heaven
-Elder Scrolls IV: Oblivion
+The Elder Scrolls IV: Oblivion
 Grim Fandango
 Sid Meier's Alpha Centauri
 Final Fantasy XIV: A Realm Reborn

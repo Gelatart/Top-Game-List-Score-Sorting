@@ -22,7 +22,7 @@ Tekken 3
 Super Metroid
 BioShock Infinite
 Grand Theft Auto III
-Elder Scrolls V: Skyrim
+The Elder Scrolls V: Skyrim
 Grand Theft Auto: San Andreas
 BioShock
 Metal Gear Solid 2: Sons of Liberty
@@ -52,7 +52,7 @@ NFL 2K1
 Gears of War
 Persona 4 [Golden]
 Tom Clancy's Splinter Cell: Chaos Theory
-Elder Scrolls IV: Oblivion
+The Elder Scrolls IV: Oblivion
 Company of Heroes
 The Legend of Zelda: Ocarina of Time 3D
 Undertale

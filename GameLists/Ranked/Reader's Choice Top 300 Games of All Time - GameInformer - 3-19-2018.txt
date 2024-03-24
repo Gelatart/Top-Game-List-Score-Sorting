@@ -3,7 +3,7 @@ The Witcher 3: Wild Hunt
 The Last of Us
 The Legend of Zelda: Ocarina of Time
 Mass Effect 2
-Elder Scrolls V: Skyrim
+The Elder Scrolls V: Skyrim
 The Legend of Zelda: Breath of the Wild
 Final Fantasy VII
 Red Dead Redemption
@@ -18,7 +18,7 @@ Metal Gear Solid
 Shadow of the Colossus
 Mass Effect
 Kingdom Hearts II
-Elder Scrolls IV: Oblivion
+The Elder Scrolls IV: Oblivion
 Star Wars: Knights of the Old Republic
 Fallout 3
 Halo: Combat Evolved
@@ -51,7 +51,7 @@ Final Fantasy IX
 Batman: Arkham City
 Final Fantasy XV
 Borderlands 2
-Elder Scrolls III: Morrowind
+The Elder Scrolls III: Morrowind
 Halo 2
 Castlevania: Symphony of the Night
 Destiny
@@ -64,7 +64,7 @@ Xenoblade Chronicles
 Okami
 Fallout 4
 Grand Theft Auto: San Andreas
-Pokemon Red / Blue
+Pokemon Red Version
 Dragon Age: Inquisition
 NieR: Automata
 Call of Duty 4: Modern Warfare
