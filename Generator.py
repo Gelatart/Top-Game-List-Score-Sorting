@@ -44,7 +44,7 @@ class GameObject:
         self.lists_referencing = []
         self.total_count = 0
         self.completed = False
-        self.mainPlatform = 'None'
+        self.main_platform = 'None'
         self.listPlatforms = []
         self.releaseDate = 'Unknown' #Can I set this to some date value?
         self.playerCounts = []
@@ -64,7 +64,7 @@ class GameObject:
         self.lists_referencing.append(list)
         self.total_count = 0
         self.completed = False
-        self.mainPlatform = 'None'
+        self.main_platform = 'None'
         self.listPlatforms = []
         self.releaseDate = 'Unknown'  # Can I set this to some date value?
         self.playerCounts = []
@@ -78,7 +78,7 @@ class GameObject:
         self.lists_referencing.append(list)
         self.total_count = total
         self.completed = False
-        self.mainPlatform = 'None'
+        self.main_platform = 'None'
         self.listPlatforms = []
         self.releaseDate = 'Unknown'  # Can I set this to some date value?
         self.playerCounts = []
@@ -227,10 +227,10 @@ try:
         title = next(itr)
         if title in gameDb:
             print(title)
-            #mainPlatform
+            #main_platform
             attribute = next(itr)
             print(attribute)
-            gameDb[title].mainPlatform = attribute
+            gameDb[title].main_platform = attribute
             #listPlatforms
             attribute = next(itr)
             print(attribute)
@@ -252,299 +252,318 @@ try:
 except StopIteration:
         pass
 
-#START SCRAPING FOR ATTRIBUTES
-#(Look into close-enough matches that can match when it’s not exact?)
-#(Have the option to replace data manually when database info isn’t good enough or is missing?)
-"""
-Most of the requests to the API will use the POST method
-The base URL is: https://api.igdb.com/v4
-You define which endpoint you wish to query by appending /{endpoint name} to the base URL eg. https://api.igdb.com/v4/games
-Include your Client ID and Access Token in the HEADER of your request so that your headers look like the following.
-    Client-ID: Client ID
-    Authorization: Bearer access_token
-Take special care of the capitalisation. Bearer should be hard-coded infront of your access_token
-You use the BODY of your request to specify the fields you want to retrieve as well as any other filters, sorting etc
+#This is where the user sets whether they want to grab from the IGDB API or not
+#Maybe add options for how much to grab? How many games? What types of info? Other qualifiers?
+igdb_check = False
+while(igdb_check == False):
+    print("Would you like to grab additional game data from the IGDB API at this moment? Y or N")
+    igdb_answer = input("Make your selection: ")
+    if(igdb_answer == 'Y' or igdb_answer == 'Yes'):
+        # START SCRAPING FOR ATTRIBUTES
+        # (Look into close-enough matches that can match when it’s not exact?)
+        # (Have the option to replace data manually when database info isn’t good enough or is missing?)
+        """
+        Most of the requests to the API will use the POST method
+        The base URL is: https://api.igdb.com/v4
+        You define which endpoint you wish to query by appending /{endpoint name} to the base URL eg. https://api.igdb.com/v4/games
+        Include your Client ID and Access Token in the HEADER of your request so that your headers look like the following.
+            Client-ID: Client ID
+            Authorization: Bearer access_token
+        Take special care of the capitalisation. Bearer should be hard-coded infront of your access_token
+        You use the BODY of your request to specify the fields you want to retrieve as well as any other filters, sorting etc
+    
+        Example
+        If your Client ID is abcdefg12345 and your access_token is access12345token, a simple request to get information about 10 games would be.
+            POST: https://api.igdb.com/v4/games
+            Client-ID: abcdefg12345
+            Authorization: Bearer access12345token
+            Body: "fields *;"
+    
+        """
+        load_dotenv()
+        client_id = os.getenv('CLIENT_ID')
+        client_secret = os.getenv('CLIENT_SECRET')
+        post = 'https://id.twitch.tv/oauth2/token?client_id='
+        post += client_id
+        post += '&client_secret='
+        post += client_secret
+        post += '&grant_type=client_credentials'
 
-Example
-If your Client ID is abcdefg12345 and your access_token is access12345token, a simple request to get information about 10 games would be.
-    POST: https://api.igdb.com/v4/games
-    Client-ID: abcdefg12345
-    Authorization: Bearer access12345token
-    Body: "fields *;"
+        # page = requests.get(post) #404
+        page = requests.post(post)  # gives access token we can use
+        print(page.text)
+        input("Here we pause")
 
-"""
-load_dotenv()
-client_id = os.getenv('CLIENT_ID')
-client_secret = os.getenv('CLIENT_SECRET')
-post = 'https://id.twitch.tv/oauth2/token?client_id='
-post += client_id
-post += '&client_secret='
-post += client_secret
-post += '&grant_type=client_credentials'
+        # wrapper = IGDBWrapper("YOUR_CLIENT_ID", "YOUR_APP_ACCESS_TOKEN")
+        received = json.loads(page.text)
+        access_token = received["access_token"]
+        print(access_token)
+        wrapper = IGDBWrapper(client_id, access_token)
+        input("Here we pause")
 
-#page = requests.get(post) #404
-page = requests.post(post) #gives access token we can use
-print(page.text)
-input("Here we pause")
+        """
+        igdb_request = wrapper.api_request(
+                    'games',
+                    'fields id, name; offset 0; where platforms=48;'
+                  )
+        """
+        from igdb.igdbapi_pb2 import GameResult
 
-#wrapper = IGDBWrapper("YOUR_CLIENT_ID", "YOUR_APP_ACCESS_TOKEN")
-received = json.loads(page.text)
-access_token = received["access_token"]
-print(access_token)
-wrapper = IGDBWrapper(client_id, access_token)
-input("Here we pause")
-
-"""
-igdb_request = wrapper.api_request(
-            'games',
-            'fields id, name; offset 0; where platforms=48;'
-          )
-"""
-from igdb.igdbapi_pb2 import GameResult
-igdb_request = wrapper.api_request(
-            'games.pb', # Note the '.pb' suffix at the endpoint
-            #'fields name, rating; limit 5; offset 0;'
+        igdb_request = wrapper.api_request(
+            'games.pb',  # Note the '.pb' suffix at the endpoint
+            # 'fields name, rating; limit 5; offset 0;'
             'fields name, rating; offset 0;'
-          )
-games_message = GameResult()
-games_message.ParseFromString(igdb_request) # Fills the protobuf message object with the response
-games = games_message.games
-print(games)
-#input("Here we pause")
+        )
+        games_message = GameResult()
+        games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
+        games = games_message.games
+        print(games)
+        # input("Here we pause")
 
-print("Time to go looking around")
-for game, details in gameDb.items():
-    check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
-    check_string += 'artworks, checksum, collection, collections, cover, created_at, external_games, follows, '
-    check_string += 'franchises, game_localizations, game_modes, genres, involved_companies, keywords, '
-    check_string += 'language_supports, multiplayer_modes, player_perspectives, rating, rating_count, release_dates, '
-    check_string += 'screenshots, similar_games, standalone_expansions, storyline, tags, themes, total_rating, '
-    check_string += 'total_rating_count, updated_at, videos, websites; '
-    #Check if <> comes first, where we use ID instead of name, for titles hard to specify
-    if(game[0] == '<'):
-        input("Turns out this is a special case!\n")
-        game_title = game.strip()
-        #pull the ID from the <> part of the string
-        check_string += 'where id = '
-        #pattern_match = r'<[0-9]+>'
-        pattern_match = r'[0-9]+'
-        substring = re.findall(pattern_match, game_title)
-        title_ID = substring[0]
-        input(substring)
-        check_string += title_ID
-    else:
-        check_string += 'where name = "'
-        check_string += game.strip()
-        check_string += '"'
-    check_string += ' & version_parent = null; offset 0;' #6 is cancelled,  & status != 6
-    #Exclude versions that aren't the parent
-    #Exclude cancelled, unreleased, TBD versions?
-    #Figure out how to deal with children versions? How to give points and pass on points to parent too?
-    #Also dealing with compilation games? Add points to individual games? Create field to track subgames in a compilation?
-    #check_string += ';'
-    #print(check_string)
-    igdb_request = wrapper.api_request(
-        'games.pb',  # Note the '.pb' suffix at the endpoint
-        check_string
-    )
-    games_message = GameResult()
-    games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
-    games = games_message.games
-    if(len(games) > 1):
-        versions_counter = 0
-        #print(games[0])
-        #earliest_release = int(round(games[0].first_release_date))
-        #earliest_release = games[0].first_release_date
-        #earliest_release = games[0].first_release_date.to_pydatetime()
-        earliest_release = games[0].first_release_date.ToDatetime()
-        earliest_game = games[0]
-        #print(earliest_release)
-        #input("Here is a release!")
-        for result in games:
-            #how do I compare timestamps?
-            potential_release = result.first_release_date.ToDatetime()
-            if(potential_release < earliest_release and result.status != 6):
-                #Also check for parent_game field?
-                #print("New earliest release!")
-                #print(result.status)
-                #earliest_release = result.first_release_date
-                earliest_release = potential_release
-                earliest_game = result
-                #input(earliest_release)
-            print(result)
-        #print(earliest_game.slug)
-        #print(earliest_game.url)
-        #print(earliest_game.id)
-        #print(earliest_game.platforms)
-        #print(earliest_release)
-        #input("Here we pause")
-        #Time to put the IGDB attributes into the game we are putting out to the cluster
-        gameDb[game].igdb_ID = earliest_game.id
-        gameDb[game].releaseDate = earliest_release
-        #print("Time to go through platforms")
-        # Spin this while loop off into its own function eventually?
-        plat_counter = 0
-        main_plat = None
-        plat_name = None
-        list_plats = []
-        while(plat_counter < len(earliest_game.platforms)):
-            plat_ID = earliest_game.platforms[plat_counter]
-            #print(plat_ID)
-            #print(plat_ID.value)
-            #print(plat_ID.id)
-            #match plat_ID:
-            if (plat_ID.id == 3):
-                plat_name = "Linux"
-            elif (plat_ID.id == 4):
-                plat_name = "N64"
-            elif (plat_ID.id == 5):
-                plat_name = "Wii"
-            elif (plat_ID.id == 6):
-                plat_name = "PC (Windows)"
-            elif (plat_ID.id == 7):
-                plat_name = "PS1"
-            elif (plat_ID.id == 8):
-                plat_name = "PS2"
-            elif (plat_ID.id == 9):
-                plat_name = "PS3"
-            elif (plat_ID.id == 11):
-                plat_name = "Xbox"
-            elif (plat_ID.id == 12):
-                plat_name = "X360"
-            elif (plat_ID.id == 13):
-                plat_name = "PC-DOS"
-            elif (plat_ID.id == 14):
-                plat_name = "Mac"
-            elif (plat_ID.id == 15):
-                plat_name = "C64 & C128"
-            elif (plat_ID.id == 16):
-                plat_name = "Amiga"
-            elif (plat_ID.id == 18):
-                plat_name = "NES"
-            elif (plat_ID.id == 19):
-                plat_name = "SNES"
-            elif (plat_ID.id == 20):
-                plat_name = "DS"
-            elif (plat_ID.id == 21):
-                plat_name = "GCN"
-            elif (plat_ID.id == 22):
-                plat_name = "GBC"
-            elif (plat_ID.id == 23):
-                plat_name = "DC"
-            elif (plat_ID.id == 24):
-                plat_name = "GBA"
-            elif (plat_ID.id == 25):
-                plat_name = "Amstrad CPC"
-            elif (plat_ID.id == 26):
-                plat_name = "ZX Spectrum"
-            elif (plat_ID.id == 27):
-                plat_name = "MSX"
-            elif (plat_ID.id == 29):
-                plat_name = "GEN/MD"
-            elif (plat_ID.id == 30):
-                plat_name = "32X"
-            elif (plat_ID.id == 32):
-                plat_name = "SAT"
-            elif (plat_ID.id == 33):
-                plat_name = "GB"
-            elif (plat_ID.id == 34):
-                plat_name = "Android"
-            elif (plat_ID.id == 35):
-                plat_name = "Sega Game Gear"
-            elif (plat_ID.id == 38):
-                plat_name = "PSP"
-            elif (plat_ID.id == 39):
-                plat_name = "iOS"
-            elif(plat_ID.id == 41):
-                plat_name = "Wii U"
-            elif (plat_ID.id == 46):
-                plat_name = "Vita"
-            elif (plat_ID.id == 48):
-                plat_name = "PS4"
-            elif (plat_ID.id == 49):
-                plat_name = "XONE"
-            elif(plat_ID.id == 52):
-                plat_name = "Arcade"
-            elif(plat_ID.id == 58):
-                plat_name = "Super Famicom"
-            elif (plat_ID.id == 59):
-                plat_name = "2600"
-            elif (plat_ID.id == 64):
-                plat_name = "Sega Master System"
-            elif (plat_ID.id == 75):
-                plat_name = "Apple II"
-            elif (plat_ID.id == 79):
-                plat_name = "Neo Geo MVS"
-            elif (plat_ID.id == 80):
-                plat_name = "Neo Geo AES"
-            elif (plat_ID.id == 99):
-                plat_name = "Famicom"
-            elif (plat_ID.id == 130):
-                plat_name = "Switch"
-            elif(plat_ID.id == 137):
-                plat_name = "New Nintendo 3DS"
-            elif (plat_ID.id == 149):
-                plat_name = "PC-98"
-            elif (plat_ID.id == 169):
-                plat_name = "Xbox Series"
-            elif(plat_ID.id == 306):
-                plat_name = "Satellaview"
-            elif (plat_ID.id == 379):
-                plat_name = "Game.com"
-            #test comment to make sure everything restored properly
+        print("Time to go looking around")
+        for game, details in gameDb.items():
+            check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
+            check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
+            check_string += 'external_games, follows, franchises, game_localizations, game_modes, genres, '
+            check_string += 'involved_companies, keywords, language_supports, multiplayer_modes, player_perspectives, '
+            check_string += 'rating, rating_count, release_dates, screenshots, similar_games, standalone_expansions, '
+            check_string += 'storyline, tags, themes, total_rating, total_rating_count, updated_at, videos, websites; '
+            # Check if <> comes first, where we use ID instead of name, for titles hard to specify
+            if (game[0] == '<'):
+                print(game.strip())
+                input("Turns out this is a special case!\n")
+                game_title = game.strip()
+                # pull the ID from the <> part of the string
+                check_string += 'where id = '
+                # pattern_match = r'<[0-9]+>'
+                pattern_match = r'[0-9]+'
+                substring = re.findall(pattern_match, game_title)
+                title_ID = substring[0]
+                input(substring)
+                check_string += title_ID
+                #Maybe grab the name from IGDB here, to update the name before it gets sent to the cluster?
+                #Otherwise it might have <ID> in front of the name there?
             else:
-                plat_name = "Unknown"
-            if(plat_counter == 0):
-                main_plat = plat_name
-            #print(plat_name)
-            list_plats.append(plat_name)
-            plat_counter += 1
-        #input("There they are!")
-        #gameDb[game].mainPlatform = earliest_game.platforms[0]
-        gameDb[game].mainPlatform = main_plat #Will this always pull best choice?
-        #gameDb[game].listPlatforms = earliest_game.platforms
-        gameDb[game].listPlatforms = list_plats #Will only pull ID's for now, need to tackle later?
-        gameDb[game].playerCounts = earliest_game.game_modes #Changes approach but for the better?
-        #^Also consider multiplayer_modes?
-        gameDb[game].listDevelopers = earliest_game.involved_companies #Will this grab the most definitive list?
-    elif(len(games) == 1):
-        current_game = games[0]
-        #print(games)
-        #print(current_game.slug)
-        #print(current_game.url)
-        #print(current_game.id)
-        #print(current_game.platforms)
-        #print(current_game.first_release_date.ToDatetime())
-        #input("This should go quickly!")
+                check_string += 'where name = "'
+                check_string += game.strip()
+                check_string += '"'
+            check_string += ' & version_parent = null; offset 0;'  # 6 is cancelled,  & status != 6
+            # Exclude versions that aren't the parent
+            # Exclude cancelled, unreleased, TBD versions?
+            # Figure out how to deal with children versions? How to give points and pass on points to parent too?
+            # Also dealing with compilation games? Add points to individual games? Create field to track subgames in a compilation?
+            # check_string += ';'
+            print(check_string)
+            igdb_request = wrapper.api_request(
+                'games.pb',  # Note the '.pb' suffix at the endpoint
+                check_string
+            )
+            games_message = GameResult()
+            games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
+            games = games_message.games
+            if (len(games) > 1):
+                versions_counter = 0
+                # print(games[0])
+                # earliest_release = int(round(games[0].first_release_date))
+                # earliest_release = games[0].first_release_date
+                # earliest_release = games[0].first_release_date.to_pydatetime()
+                earliest_release = games[0].first_release_date.ToDatetime()
+                earliest_game = games[0]
+                # print(earliest_release)
+                # input("Here is a release!")
+                for result in games:
+                    # how do I compare timestamps?
+                    potential_release = result.first_release_date.ToDatetime()
+                    if (potential_release < earliest_release and result.status != 6):
+                        # Also check for parent_game field?
+                        # print("New earliest release!")
+                        # print(result.status)
+                        # earliest_release = result.first_release_date
+                        earliest_release = potential_release
+                        earliest_game = result
+                        # input(earliest_release)
+                    print(result)
+                # print(earliest_game.slug)
+                # print(earliest_game.url)
+                # print(earliest_game.id)
+                # print(earliest_game.platforms)
+                # print(earliest_release)
+                # input("Here we pause")
+                # Time to put the IGDB attributes into the game we are putting out to the cluster
+                gameDb[game].igdb_ID = earliest_game.id
+                gameDb[game].releaseDate = earliest_release
+                # print("Time to go through platforms")
+                # Spin this while loop off into its own function eventually?
+                plat_counter = 0
+                main_plat = None
+                plat_name = None
+                list_plats = []
+                while (plat_counter < len(earliest_game.platforms)):
+                    plat_ID = earliest_game.platforms[plat_counter]
+                    # print(plat_ID)
+                    # print(plat_ID.value)
+                    # print(plat_ID.id)
+                    # match plat_ID:
+                    if (plat_ID.id == 3):
+                        plat_name = "Linux"
+                    elif (plat_ID.id == 4):
+                        plat_name = "N64"
+                    elif (plat_ID.id == 5):
+                        plat_name = "Wii"
+                    elif (plat_ID.id == 6):
+                        plat_name = "PC (Windows)"
+                    elif (plat_ID.id == 7):
+                        plat_name = "PS1"
+                    elif (plat_ID.id == 8):
+                        plat_name = "PS2"
+                    elif (plat_ID.id == 9):
+                        plat_name = "PS3"
+                    elif (plat_ID.id == 11):
+                        plat_name = "Xbox"
+                    elif (plat_ID.id == 12):
+                        plat_name = "X360"
+                    elif (plat_ID.id == 13):
+                        plat_name = "PC-DOS"
+                    elif (plat_ID.id == 14):
+                        plat_name = "Mac"
+                    elif (plat_ID.id == 15):
+                        plat_name = "C64 & C128"
+                    elif (plat_ID.id == 16):
+                        plat_name = "Amiga"
+                    elif (plat_ID.id == 18):
+                        plat_name = "NES"
+                    elif (plat_ID.id == 19):
+                        plat_name = "SNES"
+                    elif (plat_ID.id == 20):
+                        plat_name = "DS"
+                    elif (plat_ID.id == 21):
+                        plat_name = "GCN"
+                    elif (plat_ID.id == 22):
+                        plat_name = "GBC"
+                    elif (plat_ID.id == 23):
+                        plat_name = "DC"
+                    elif (plat_ID.id == 24):
+                        plat_name = "GBA"
+                    elif (plat_ID.id == 25):
+                        plat_name = "Amstrad CPC"
+                    elif (plat_ID.id == 26):
+                        plat_name = "ZX Spectrum"
+                    elif (plat_ID.id == 27):
+                        plat_name = "MSX"
+                    elif (plat_ID.id == 29):
+                        plat_name = "GEN/MD"
+                    elif (plat_ID.id == 30):
+                        plat_name = "32X"
+                    elif (plat_ID.id == 32):
+                        plat_name = "SAT"
+                    elif (plat_ID.id == 33):
+                        plat_name = "GB"
+                    elif (plat_ID.id == 34):
+                        plat_name = "Android"
+                    elif (plat_ID.id == 35):
+                        plat_name = "Sega Game Gear"
+                    elif (plat_ID.id == 38):
+                        plat_name = "PSP"
+                    elif (plat_ID.id == 39):
+                        plat_name = "iOS"
+                    elif (plat_ID.id == 41):
+                        plat_name = "Wii U"
+                    elif (plat_ID.id == 46):
+                        plat_name = "Vita"
+                    elif (plat_ID.id == 48):
+                        plat_name = "PS4"
+                    elif (plat_ID.id == 49):
+                        plat_name = "XONE"
+                    elif (plat_ID.id == 52):
+                        plat_name = "Arcade"
+                    elif (plat_ID.id == 58):
+                        plat_name = "Super Famicom"
+                    elif (plat_ID.id == 59):
+                        plat_name = "2600"
+                    elif (plat_ID.id == 64):
+                        plat_name = "Sega Master System"
+                    elif (plat_ID.id == 75):
+                        plat_name = "Apple II"
+                    elif (plat_ID.id == 79):
+                        plat_name = "Neo Geo MVS"
+                    elif (plat_ID.id == 80):
+                        plat_name = "Neo Geo AES"
+                    elif (plat_ID.id == 99):
+                        plat_name = "Famicom"
+                    elif (plat_ID.id == 130):
+                        plat_name = "Switch"
+                    elif (plat_ID.id == 137):
+                        plat_name = "New Nintendo 3DS"
+                    elif (plat_ID.id == 149):
+                        plat_name = "PC-98"
+                    elif (plat_ID.id == 169):
+                        plat_name = "Xbox Series"
+                    elif (plat_ID.id == 306):
+                        plat_name = "Satellaview"
+                    elif (plat_ID.id == 379):
+                        plat_name = "Game.com"
+                    # test comment to make sure everything restored properly
+                    else:
+                        plat_name = "Unknown"
+                    if (plat_counter == 0):
+                        main_plat = plat_name
+                    # print(plat_name)
+                    list_plats.append(plat_name)
+                    plat_counter += 1
+                # input("There they are!")
+                # gameDb[game].main_platform = earliest_game.platforms[0]
+                gameDb[game].main_platform = main_plat  # Will this always pull best choice?
+                # gameDb[game].listPlatforms = earliest_game.platforms
+                gameDb[game].listPlatforms = list_plats  # Will only pull ID's for now, need to tackle later?
+                gameDb[game].playerCounts = earliest_game.game_modes  # Changes approach but for the better?
+                # ^Also consider multiplayer_modes?
+                gameDb[game].listDevelopers = earliest_game.involved_companies  # Will this grab the most definitive list?
+            elif (len(games) == 1):
+                current_game = games[0]
+                # print(games)
+                # print(current_game.slug)
+                # print(current_game.url)
+                # print(current_game.id)
+                # print(current_game.platforms)
+                # print(current_game.first_release_date.ToDatetime())
+                # input("This should go quickly!")
+            else:
+                # print(result)
+                print("Not found with that name!")
+                input("Maybe you need to alter the title somehow?\n")
+
+        # When there is ID confusion, need to clarify ID when putting entries
+        # Have a process that runs through when generating databases and pauses
+        # when there are multiple options, so we can try to narrow down on that title
+        # Use <> to contain ID number (from IGDB database)
+        # Example: The ID we want to use for Super Mario World is 1070
+        # retitle: a link to the past and other zelda games
+        # ID for Final Fantasy VII: 427
+        # ID for Ms. Pac-Man: 7452
+        # investigate ways to test for what is the most parent version?
+        # when multiple options to go with, for now go with the one that has
+        # the most total_rating_count? earliest release date?
+
+        # For now, Pokemon versions need to pick one over the other,for simplicity we go for the one that tends to be listed first
+        # Pokémon Red Version seems to break the api request, probably the accented e
+        # Doesn't get found with the title "Pokemon Red Version" either though
+        # exit()
+
+        """
+        MEDIUM EXAMPLE:
+        URL = 'https://www.bookdepository.com/top-new-releases'
+        page = requests.get(URL)
+        soup = BeautiulSoup(page.content, "html.parser")
+        books = soup.find_all("div", class_ = "book-item")
+        """
+        igdb_check = True
+    elif(igdb_answer == 'N' or igdb_answer == 'No'):
+        print("Understood, skipping to next step.")
+        igdb_check = True
     else:
-        #print(result)
-        print("Not found with that name!")
-        input("Maybe you need to alter the title somehow?\n")
+        print("Answer not understood, try again.")
+        print()
 
-#When there is ID confusion, need to clarify ID when putting entries
-#Have a process that runs through when generating databases and pauses
-#when there are multiple options, so we can try to narrow down on that title
-#Use <> to contain ID number (from IGDB database)
-#Example: The ID we want to use for Super Mario World is 1070
-#retitle: a link to the past and other zelda games
-#ID for Final Fantasy VII: 427
-#ID for Ms. Pac-Man: 7452
-#investigate ways to test for what is the most parent version?
-#when multiple options to go with, for now go with the one that has
-#the most total_rating_count? earliest release date?
-
-#For now, Pokemon versions need to pick one over the other,for simplicity we go for the one that tends to be listed first
-#Pokémon Red Version seems to break the api request, probably the accented e
-#Doesn't get found with the title "Pokemon Red Version" either though
-#exit()
-
-"""
-MEDIUM EXAMPLE:
-URL = 'https://www.bookdepository.com/top-new-releases'
-page = requests.get(URL)
-soup = BeautiulSoup(page.content, "html.parser")
-books = soup.find_all("div", class_ = "book-item")
-"""
 
 #START USING PYMONGO FOR OUTPUTTING TO MONGODB DATABASE
 #Used code sample from Atlas on how to connect with Pymongo for assistance here
@@ -580,7 +599,7 @@ for game, details in gameDb.items():
     exportDict["Average Score"] = averageScore
     exportDict["List of References"] = details.lists_referencing
     exportDict["Completed"] = details.completed
-    exportDict["Main Platform"] = details.mainPlatform
+    exportDict["Main Platform"] = details.main_platform
     exportDict["List of Platforms"] = details.listPlatforms
     exportDict["Release Date"] = details.releaseDate
     exportDict["Player Counts"] = details.playerCounts
@@ -636,7 +655,7 @@ for game, details in gameDb.items():
         outputLists += refList
         outputLists += ", "
     sheet1.write(excelCount, 4, outputLists)
-    mPlat = details.mainPlatform
+    mPlat = details.main_platform
     sheet1.write(excelCount, 5, mPlat)
     lPlat = details.listPlatforms
     sheet1.write(excelCount, 6, lPlat)
@@ -659,15 +678,6 @@ wb.save('Sorted Database.xls')
 
 #after printed out everything to excel, then make three printed sorted lists?
 #each time, sort excel a certain way, then print out excel factors to list?
-
-"""
-file_ranked = open("Sorted by Ranked.txt","w", encoding="utf-8")
-fileI = open("Sorted by Inclusion.txt","w", encoding="utf-8")
-fileA = open("Sorted by Average.txt","w", encoding="utf-8")
-fileUR = open("Sorted by Ranked (Uncompleted).txt", "w", encoding="utf-8")
-fileUI = open("Sorted by Inclusion (Uncompleted).txt","w", encoding="utf-8")
-fileUA = open("Sorted by Average (Uncompleted).txt","w", encoding="utf-8")
-"""
 
 #SQLite Segment
 #conn = sqlite3.connect('games.db')
@@ -780,7 +790,7 @@ for game in games_pulled:
         output_lists += ref_list
         output_lists += ", "
     sheet1.write(excel_count, 4, output_lists)
-    #mPlat = details.mainPlatform
+    #mPlat = details.main_platform
     sheet1.write(excel_count, 5, game['Main Platform'].strip())
     #lPlat = details.listPlatforms
     sheet1.write(excel_count, 6, game['List of Platforms'])

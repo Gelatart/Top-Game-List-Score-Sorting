@@ -27,6 +27,8 @@
         #can be reviewed later, lines removed if felt they aren't worth concern
     #give options to change what database format using? provide support for more than mongodb? option to switch?
     #make a txt file that branches games into family groupings?
+    #make a version/option for generator on whether it grabs from the IGDB API or not
+        #spin IGDB generation into its own file?
     #chatgpt: try to figure out web scraping to extract data from websites?
         #review the data afterwards to see how useful it was, give a check to original source to make sure fits my standards?
     #chatgpt: consider what other user-friendly options and interactive features I could add?

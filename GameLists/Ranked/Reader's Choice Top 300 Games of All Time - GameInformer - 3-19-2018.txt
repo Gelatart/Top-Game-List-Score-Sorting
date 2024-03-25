@@ -61,7 +61,7 @@ Metroid Prime
 Super Mario Galaxy
 Silent Hill 2
 Xenoblade Chronicles
-Okami
+<1271> Okami
 Fallout 4
 Grand Theft Auto: San Andreas
 <1561> Pokemon Red Version
@@ -214,7 +214,7 @@ TimeSplitters 2
 Banjo-Tooie
 BioShock 2
 Ogre Battle: March of the Black Queen
-INSIDE
+Inside
 Shining Force II
 Super Smash Bros.
 Gran Turismo

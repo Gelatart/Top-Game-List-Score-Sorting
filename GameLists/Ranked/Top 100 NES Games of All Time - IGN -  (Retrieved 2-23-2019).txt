@@ -15,7 +15,7 @@ R.C. Pro-Am
 Excitebike
 River City Ransom
 Mega Man 3
-Ninja Gaiden [NES]
+<210484> Ninja Gaiden
 Super Mario Bros. 2
 Castlevania
 Kid Icarus

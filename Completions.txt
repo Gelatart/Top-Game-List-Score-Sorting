@@ -18,6 +18,7 @@ The Last of Us
 League of Legends
 Legend of Zelda: Ocarina of Time
 Legend of Zelda: Twilight Princess
+Lego Star Wars: The Complete Saga
 Luigi's Mansion
 Mario Kart: Double Dash
 Mario Kart DS
@@ -25,8 +26,8 @@ Mario Kart Wii
 Pikmin 2
 Pokemon Black / White
 Pokemon Go
-Pokemon Gold / Silver
-Pokemon Red / Blue
+<1558> Pokemon Gold Version
+<1561> Pokemon Red Version
 Pokemon Ruby / Sapphire
 Pokemon Yellow
 Portal

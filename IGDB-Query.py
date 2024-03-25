@@ -73,4 +73,6 @@ print("Successfully completed! Goodbye!")
 Pokemon Red Version (what about blue?): IGDB ID: 1561
 God of War 2018: IGDB ID: 19560
 Pokemon Gold Version (what about silver?): IGDB ID: 1558
+Ōkami/Okami: IGDB ID: 1271
+Ninja Gaiden NES: IGDB ID: 210484 (Will it be an issue that this is a port with a parent, the arcade original?)
 """

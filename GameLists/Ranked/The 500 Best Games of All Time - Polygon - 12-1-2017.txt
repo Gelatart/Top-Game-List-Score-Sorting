@@ -255,7 +255,7 @@ Star Control
 King's Quest I: Quest for the Crown
 The Hitchhiker's Guide to the Galaxy
 Donkey Kong Country
-INSIDE
+Inside
 Final Fantasy VIII
 Bloodborne
 Persona 3
@@ -467,7 +467,7 @@ The Chronicles of Riddick: Escape from Butcher Bay
 Medal of Honor
 Depression Quest
 TimeSplitters 2
-Ninja Gaiden [NES]
+<210484> Ninja Gaiden
 Peggle
 Earth Defense Force 2017
 Aladdin [Genesis]

@@ -42,7 +42,7 @@ Mike Tyson's Punch-Out!!
 R-Type
 Sid Meier's Pirates! [1987]
 Mega Man 2
-Ninja Gaiden [NES]
+<210484> Ninja Gaiden
 Super Mario Bros. 3
 Final Fight
 Populous
@@ -234,7 +234,7 @@ The Elder Scrolls IV: Oblivion
 Gears of War
 Hitman: Blood Money
 The Legend of Zelda: Twilight Princess
-Okami
+<1271> Okami
 Wii Sports
 BioShock
 Call of Duty 4: Modern Warfare
@@ -310,7 +310,7 @@ Rocket League
 Undertale
 The Witcher 3: Wild Hunt
 Dishonored 2
-INSIDE
+Inside
 Overwatch
 Stardew Valley
 Uncharted 4: A Thief's End

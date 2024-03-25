@@ -15,7 +15,7 @@ Super Metroid
 Super Smash Bros. Melee
 The Last of Us
 EarthBound
-Okami
+<1271> Okami
 Silent Hill 2
 Super Mario 64
 Final Fantasy VII
@@ -34,7 +34,7 @@ Gone Home
 Journey
 The Witcher 3: Wild Hunt
 The Legend of Zelda: The Wind Waker
-INSIDE
+Inside
 Rock Band 3
 Fallout 2
 The Legend of Zelda: Breath of the Wild
@@ -74,7 +74,7 @@ Mass Effect 3
 Three Fourths Home
 Halo 3
 Half-Life 2
-Ninja Gaiden [NES]
+<210484> Ninja Gaiden
 Viewtiful Joe
 Hotline Miami
 Conker's Bad Fur Day

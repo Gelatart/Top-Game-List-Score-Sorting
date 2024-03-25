@@ -39,7 +39,7 @@ Spelunky
 The Legend of Zelda: Majora's Mask
 Halo 3
 Shadow of the Colossus
-INSIDE
+Inside
 Fire Emblem Fates: Birthright and Conquest and Revelation
 Super Mario Maker
 Vanquish
@@ -58,7 +58,7 @@ The Witcher 3: Wild Hunt
 Monster Hunter 4 Ultimate
 X-COM: Enemy Unknown
 The Stanley Parable
-Okami
+<1271> Okami
 Mass Effect 2
 Persona 4 [Golden]
 FTL: Advanced Edition
