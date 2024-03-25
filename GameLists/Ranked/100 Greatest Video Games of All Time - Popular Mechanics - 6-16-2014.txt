@@ -25,7 +25,7 @@ Red Dead Redemption
 Assassin's Creed II
 The Last of Us
 Chrono Trigger
-Pokemon Red Version
+<1561> Pokemon Red Version
 Uncharted 2: Among Thieves
 Star Wars: Knights of the Old Republic
 World of Warcraft
@@ -83,19 +83,19 @@ Team Fortress 2
 Prince of Persia: The Sands of Time
 Gran Turismo 3: A-Spec
 Zork
-LIMBO
+Limbo
 Heavy Rain
 Braid
-Fire Emblem Awakening
+Fire Emblem: Awakening
 Shenmue II
 Donkey Kong
 Wii Sports
 Forza Motorsport 4
 Myst
 Guitar Hero II
-EVE Online
+Eve Online
 Super Meat Boy
 Tempest
 Gone Home
-TowerFall [Ascension]
+TowerFall
 Hotline Miami

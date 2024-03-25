@@ -64,7 +64,7 @@ Xenoblade Chronicles
 Okami
 Fallout 4
 Grand Theft Auto: San Andreas
-Pokemon Red Version
+<1561> Pokemon Red Version
 Dragon Age: Inquisition
 NieR: Automata
 Call of Duty 4: Modern Warfare
@@ -76,7 +76,7 @@ Minecraft
 Persona 3
 Assassin's Creed II
 Resident Evil
-Pokemon Gold / Silver
+<1558> Pokemon Gold Version
 Call of Duty: Modern Warfare 2
 Metal Gear Solid 4: Guns of the Patriots
 Alan Wake
@@ -147,7 +147,7 @@ Final Fantasy IV
 Battlefield: Bad Company 2
 NieR
 Demon's Souls
-Beyond Good and Evil
+Beyond Good & Evil
 Dragon Quest VIII
 Devil May Cry 3: Dante's Awakening
 Bully
@@ -218,7 +218,7 @@ INSIDE
 Shining Force II
 Super Smash Bros.
 Gran Turismo
-Fire Emblem Awakening
+Fire Emblem: Awakening
 Fire Emblem Fates: Birthright and Conquest and Revelation
 Donkey Kong 64
 Mafia II
@@ -294,7 +294,7 @@ Donkey Kong
 Mike Tyson's Punch-Out!!
 Divinity: Original Sin II
 Final Fantasy Tactics: The War of the Lions
-LIMBO
+Limbo
 Dragon Age II
 Mega Man X4
 Metroid Prime 3: Corruption

@@ -16,6 +16,7 @@ import requests
 from igdb.wrapper import IGDBWrapper
 import json
 import pandas
+import re
 
 # assign directory
 #directory = 'C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameLists\Ranked'
@@ -302,29 +303,46 @@ igdb_request = wrapper.api_request(
 from igdb.igdbapi_pb2 import GameResult
 igdb_request = wrapper.api_request(
             'games.pb', # Note the '.pb' suffix at the endpoint
-            'fields name, rating; limit 5; offset 0;'
+            #'fields name, rating; limit 5; offset 0;'
+            'fields name, rating; offset 0;'
           )
 games_message = GameResult()
 games_message.ParseFromString(igdb_request) # Fills the protobuf message object with the response
 games = games_message.games
 print(games)
-input("Here we pause")
+#input("Here we pause")
 
 print("Time to go looking around")
 for game, details in gameDb.items():
-    check_string = 'fields *; exclude age_ratings, alternative_names, artworks, checksum, collections, cover, '
-    check_string += 'created_at, follows, game_localizations, genres, involved_companies, keywords, language_supports, '
-    check_string += 'player_perspectives, rating_count, release_dates, screenshots, similar_games, tags, themes, '
-    check_string += 'updated_at, videos, websites; '
-    check_string += 'where name = "'
-    check_string += game.strip()
-    check_string += '" & version_parent = null; offset 0;' #6 is cancelled,  & status != 6
+    check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
+    check_string += 'artworks, checksum, collection, collections, cover, created_at, external_games, follows, '
+    check_string += 'franchises, game_localizations, game_modes, genres, involved_companies, keywords, '
+    check_string += 'language_supports, multiplayer_modes, player_perspectives, rating, rating_count, release_dates, '
+    check_string += 'screenshots, similar_games, standalone_expansions, storyline, tags, themes, total_rating, '
+    check_string += 'total_rating_count, updated_at, videos, websites; '
+    #Check if <> comes first, where we use ID instead of name, for titles hard to specify
+    if(game[0] == '<'):
+        input("Turns out this is a special case!\n")
+        game_title = game.strip()
+        #pull the ID from the <> part of the string
+        check_string += 'where id = '
+        #pattern_match = r'<[0-9]+>'
+        pattern_match = r'[0-9]+'
+        substring = re.findall(pattern_match, game_title)
+        title_ID = substring[0]
+        input(substring)
+        check_string += title_ID
+    else:
+        check_string += 'where name = "'
+        check_string += game.strip()
+        check_string += '"'
+    check_string += ' & version_parent = null; offset 0;' #6 is cancelled,  & status != 6
     #Exclude versions that aren't the parent
     #Exclude cancelled, unreleased, TBD versions?
     #Figure out how to deal with children versions? How to give points and pass on points to parent too?
     #Also dealing with compilation games? Add points to individual games? Create field to track subgames in a compilation?
     #check_string += ';'
-    print(check_string)
+    #print(check_string)
     igdb_request = wrapper.api_request(
         'games.pb',  # Note the '.pb' suffix at the endpoint
         check_string
@@ -347,23 +365,23 @@ for game, details in gameDb.items():
             potential_release = result.first_release_date.ToDatetime()
             if(potential_release < earliest_release and result.status != 6):
                 #Also check for parent_game field?
-                print("New earliest release!")
-                print(result.status)
+                #print("New earliest release!")
+                #print(result.status)
                 #earliest_release = result.first_release_date
                 earliest_release = potential_release
                 earliest_game = result
                 #input(earliest_release)
             print(result)
         #print(earliest_game.slug)
-        print(earliest_game.url)
-        print(earliest_game.id)
-        print(earliest_game.platforms)
-        print(earliest_release)
+        #print(earliest_game.url)
+        #print(earliest_game.id)
+        #print(earliest_game.platforms)
+        #print(earliest_release)
         #input("Here we pause")
         #Time to put the IGDB attributes into the game we are putting out to the cluster
         gameDb[game].igdb_ID = earliest_game.id
         gameDb[game].releaseDate = earliest_release
-        print("Time to go through platforms")
+        #print("Time to go through platforms")
         # Spin this while loop off into its own function eventually?
         plat_counter = 0
         main_plat = None
@@ -371,9 +389,9 @@ for game, details in gameDb.items():
         list_plats = []
         while(plat_counter < len(earliest_game.platforms)):
             plat_ID = earliest_game.platforms[plat_counter]
-            print(plat_ID)
+            #print(plat_ID)
             #print(plat_ID.value)
-            print(plat_ID.id)
+            #print(plat_ID.id)
             #match plat_ID:
             if (plat_ID.id == 3):
                 plat_name = "Linux"
@@ -478,7 +496,7 @@ for game, details in gameDb.items():
                 plat_name = "Unknown"
             if(plat_counter == 0):
                 main_plat = plat_name
-            print(plat_name)
+            #print(plat_name)
             list_plats.append(plat_name)
             plat_counter += 1
         #input("There they are!")
@@ -492,13 +510,14 @@ for game, details in gameDb.items():
     elif(len(games) == 1):
         current_game = games[0]
         #print(games)
-        print(current_game.slug)
-        print(current_game.url)
-        print(current_game.id)
+        #print(current_game.slug)
+        #print(current_game.url)
+        #print(current_game.id)
         #print(current_game.platforms)
-        print(current_game.first_release_date.ToDatetime())
+        #print(current_game.first_release_date.ToDatetime())
         #input("This should go quickly!")
     else:
+        #print(result)
         print("Not found with that name!")
         input("Maybe you need to alter the title somehow?\n")
 
@@ -650,15 +669,6 @@ fileUI = open("Sorted by Inclusion (Uncompleted).txt","w", encoding="utf-8")
 fileUA = open("Sorted by Average (Uncompleted).txt","w", encoding="utf-8")
 """
 
-"""
-file_ranked.close()
-fileI.close()
-fileA.close()
-fileUR.close()
-fileUI.close()
-fileUA.close()
-"""
-
 #SQLite Segment
 #conn = sqlite3.connect('games.db')
 #print("Games database opened successfully")
@@ -804,12 +814,12 @@ Factorial in python: https://www.geeksforgeeks.org/factorial-in-python/
 https://stackoverflow.com/questions/1347791/unicode-error-unicodeescape-codec-cant-decode-bytes-cannot-open-text-file
 https://kodify.net/python/math/round-integers/
 https://stackoverflow.com/questions/27946595/how-to-manage-division-of-huge-numbers-in-python
-https://www.geeksforgeeks.org/python-add-one-string-to-another/
+Adding strings in Python: https://www.geeksforgeeks.org/python-add-one-string-to-another/
 Counting the number of lines in file: https://pynative.com/python-count-number-of-lines-in-file/
 https://www.freecodecamp.org/news/sort-dictionary-by-value-in-python/
 https://www.geeksforgeeks.org/reading-writing-text-files-python/
 https://www.geeksforgeeks.org/convert-integer-to-string-in-python/
-https://www.geeksforgeeks.org/python-removing-newline-character-from-string/
+Removing newline character from string in Python: https://www.geeksforgeeks.org/python-removing-newline-character-from-string/
 https://github.com/python-excel/xlwt/blob/master/xlwt/Style.py
 https://www.digitalocean.com/community/tutorials/python-wait-time-wait-for-input
 https://www.tutorialspoint.com/sqlite/sqlite_python.htm
@@ -827,4 +837,6 @@ Reading JSON files in python: https://www.geeksforgeeks.org/read-json-file-using
 Converting datetime to integer timestamp: https://www.geeksforgeeks.org/python-datetime-to-integer-timestamp/
 Converting Pandas timestamp to python datetime: https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.to_pydatetime.html#pandas.Timestamp.to_pydatetime
 Switch statement equivalent in Python: https://www.geeksforgeeks.org/switch-case-in-python-replacement/
+Substringing a string in Python: https://www.geeksforgeeks.org/how-to-substring-a-string-in-python/
+Regex Python: https://www.geeksforgeeks.org/python-regex-re-search-vs-re-findall/
 """

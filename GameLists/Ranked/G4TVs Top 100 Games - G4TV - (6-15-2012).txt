@@ -55,9 +55,9 @@ Deus Ex
 Gauntlet
 Kingdom Hearts
 Super Street Fighter IV
-Pokemon Red Version
+<1561> Pokemon Red Version
 Ultima Online
-Maniac Mansion II: Day of the Tentacle
+Day of the Tentacle
 Contra [NES]
 God of War III
 Sid Meier's Civilization II
@@ -67,7 +67,7 @@ Unreal Tournament [1999]
 Assassin's Creed II
 Minecraft
 Prince of Persia: The Sands of Time
-Double Dragon [Arcade]
+Double Dragon
 Star Wars [Arcade]
 Wing Commander II: Vengeance of the Kilrathi
 Mortal Kombat

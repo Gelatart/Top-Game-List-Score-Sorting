@@ -136,9 +136,11 @@ while(program_completed == False):
         print("Here are your options:")
         print("1. Generator.py: Run the traditional generator, which starts fresh every time")
         print("2. AltGenerator.py: Run the alternate generator, which checks for new lists and only adds them")
-        print("3. Drop.py: Drop the collections to empty the databases in the cluster and start with a clean slate")
-        print("4. QuickMath.py: Not entirely related to this project, more personal use for tracking hours in games I've played")
-        print("5. Quit/Exit: Quit this program and finish your business")
+        print("3. PrintReports.py: Print custom reports with custom criteria off of the data in the cluster")
+        print("4. Drop.py: Drop the collections to empty the databases in the cluster and start with a clean slate")
+        print("5. QuickMath.py: Not entirely related to this project, more personal use for tracking hours in games I've played")
+        print("6. IGDB-Query.py: Tool for writing up command line querying of the IGDB API for testing purposes")
+        print("7. Quit/Exit: Quit this program and finish your business")
         print()
 
         #Let user pick their option of program
@@ -153,14 +155,20 @@ while(program_completed == False):
             #print("AltGenerator.py will be run now")
             option_check = True
             program_selected = 'AltGenerator.py'
-        elif (option == '3' or option == 'Drop.py' or option == 'Drop' or option == 'drop' or option == 'drop.py'):
+        elif (option == '3' or option == 'PrintReports.py' or option == 'PrintReports' or option == 'printreports' or option == 'printreports.py'):
+            option_check = True
+            program_selected = 'PrintReports.py'
+        elif (option == '4' or option == 'Drop.py' or option == 'Drop' or option == 'drop' or option == 'drop.py'):
             #print("Drop.py will be run now")
             option_check = True
             program_selected = 'Drop.py'
-        elif (option == '4' or option == 'QuickMath.py' or option == 'QuickMath' or option == 'quickmath' or option == 'quickmath.py'):
+        elif (option == '5' or option == 'QuickMath.py' or option == 'QuickMath' or option == 'quickmath' or option == 'quickmath.py'):
             option_check = True
             program_selected = 'QuickMath.py'
-        elif(option == '5' or option == 'Quit' or option == 'quit' or option == 'Exit' or option == 'exit'):
+        elif (option == '6' or option == 'IGDB-Query.py' or option == 'IGDB-Query' or option == 'igdb-query' or option == 'igdb-query.py'):
+            option_check = True
+            program_selected = 'IGDB-Query.py'
+        elif(option == '7' or option == 'Quit' or option == 'quit' or option == 'Exit' or option == 'exit'):
             option_check = True
             print("Thank you for spending time with this program.")
             program_completed = True

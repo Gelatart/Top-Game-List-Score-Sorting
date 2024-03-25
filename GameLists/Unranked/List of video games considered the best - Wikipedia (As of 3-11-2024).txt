@@ -76,7 +76,7 @@ Super Mario Kart
 Ultima VII: The Black Gate
 Virtua Racing
 Wolfenstein 3D
-Maniac Mansion II: Day of the Tentacle
+Day of the Tentacle
 Doom
 Gunstar Heroes
 The Legend of Zelda: Link's Awakening
@@ -118,13 +118,13 @@ Duke Nukem 3D
 Mario Kart 64
 NiGHTS into Dreams...
 PaRappa the Rapper
-Pokemon Red Version
+<1561> Pokemon Red Version
 Quake
 Resident Evil
 Super Mario 64
 Tomb Raider
 Wave Race 64
-Wipeout 2097
+Wipeout XL
 Age of Empires
 Castlevania: Symphony of the Night
 Diablo
@@ -158,7 +158,7 @@ Age of Empires II: The Age of Kings
 EverQuest
 Homeworld
 Planescape: Torment
-Pokemon Gold / Silver
+<1558> Pokemon Gold Version
 Quake III Arena
 Shenmue
 Silent Hill
@@ -276,7 +276,7 @@ Uncharted 2: Among Thieves
 Sid Meier's Civilization V
 God of War III
 Heavy Rain
-LIMBO
+Limbo
 Mass Effect 2
 Red Dead Redemption
 Rock Band 3
@@ -292,7 +292,7 @@ Portal 2
 Borderlands 2
 Dishonored
 Far Cry 3
-Fire Emblem Awakening
+Fire Emblem: Awakening
 Hotline Miami
 Journey
 The Walking Dead
@@ -317,7 +317,7 @@ Uncharted 4: A Thief's End
 Fortnite
 The Legend of Zelda: Breath of the Wild
 Super Mario Odyssey
-God of War [2018]
+<19560> God of War [2018]
 Red Dead Redemption 2
 Super Smash Bros. Ultimate
 Disco Elysium

@@ -39,7 +39,7 @@ Super Mario Maker
 Vanquish
 Dota 2
 Dead Space
-Fire Emblem Awakening
+Fire Emblem: Awakening
 Journey
 Super Mario 3D World
 Fez
@@ -59,8 +59,8 @@ Puyo Puyo
 Transistor
 Batman: Arkham Knight
 EarthBound
-TowerFall [Ascension]
-LIMBO
+TowerFall
+Limbo
 Castlevania: Symphony of the Night
 Hearthstone: Heroes of Warcraft
 Metroid Prime

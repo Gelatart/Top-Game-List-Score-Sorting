@@ -54,7 +54,7 @@ Batman: Arkham Asylum
 Super Mario Sunshine
 Team Fortress 2
 Pokemon Diamond / Pearl
-Pokemon Gold / Silver
+<1558> Pokemon Gold Version
 Sonic the Hedgehog 2
 Metal Gear Solid
 Halo 3: ODST
@@ -66,7 +66,7 @@ Mario and Luigi: Partners in Time
 Sonic the Hedgehog
 Metal Gear Solid 3: Snake Eater
 Pokemon Fire Red / Leaf Green
-Pokemon Red Version
+<1561> Pokemon Red Version
 Super Mario 3D World
 Assassin's Creed II
 Deadly Premonition

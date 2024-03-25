@@ -27,7 +27,7 @@ Resident Evil 4
 Super Mario Bros.
 Metroid Prime
 Rez
-Pokemon Red Version
+<1561> Pokemon Red Version
 The Walking Dead
 Tetris
 Batman: Arkham City
@@ -64,7 +64,7 @@ Star Fox 64
 Silent Hill
 Donkey Kong Country
 Vagrant Story
-Beyond Good and Evil
+Beyond Good & Evil
 Call of Duty 4: Modern Warfare
 Street Fighter II [Championship Edition]
 Amplitude
@@ -94,7 +94,7 @@ Fallout 3
 Teenage Mutant Ninja Turtles IV: Turtles in Time
 Advance Wars: Dual Strike
 Dead Space
-Pokemon Gold Version
+<1558> Pokemon Gold Version
 Wild Arms
 Phoenix Wright: Ace Attorney
 Phantasy Star IV: The End of the Millennium

@@ -27,7 +27,7 @@ Super Smash Bros. Ultimate
 Assassin's Creed II
 The Last of Us
 Chrono Trigger
-Pokemon Red Version
+<1561> Pokemon Red Version
 Star Wars: Knights of the Old Republic
 World of Warcraft
 Call of Duty 4: Modern Warfare
@@ -66,7 +66,7 @@ Donkey Kong Country
 Teenage Mutant Ninja Turtles IV: Turtles in Time
 Diablo II
 Persona 4
-God of War [2018]
+<19560> God of War [2018]
 Journey
 Gauntlet
 Stardew Valley
@@ -78,7 +78,7 @@ Myst
 Overwatch
 Spy Hunter
 Kingdom Hearts
-Double Dragon [Arcade]
+Double Dragon
 Super Mario Odyssey
 Mike Tyson's Punch-Out!!
 Donkey Kong
@@ -94,8 +94,8 @@ Dungeon Master
 Mega Man 2
 Star Fox 64
 Zork
-Maniac Mansion II: Day of the Tentacle
+Day of the Tentacle
 Silent Hill 2
-Fire Emblem Awakening
+Fire Emblem: Awakening
 Shenmue II
 Gone Home
