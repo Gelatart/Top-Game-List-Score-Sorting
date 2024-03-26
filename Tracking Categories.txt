@@ -1,4 +1,4 @@
-RANKED: 59
+RANKED: 60
 UNRANKED: 25
 FORMER: 12
 UNUSED: 0
@@ -96,6 +96,7 @@ TOP PLATFORM OF ALL TIME (GBC):
 R-The 25 Best Video Games for Nintendos Gameboy Color - Complex - 8-31-2013
 U-Best Game Boy Color Games of All Time - GameSpot - 4-22-2022
 R-14 Best Game Boy Color Games Ever, Ranked - TheGamer - 10-18-2023
+R-50 Best Game Boy Color (GBC) Games Of All Time - NintendoLife - 2-12-2024
 
 TOP PLATFORM OF ALL TIME (GBA):
 R-Top 25 Game Boy Advance Games of All Time - IGN - 3-16-2007

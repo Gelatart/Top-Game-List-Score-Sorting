@@ -1,17 +1,17 @@
 16
-Pokemon Crystal
-Pokemon Gold / Silver
+<1514> Pokemon Crystal Version
+<1558> Pokemon Gold Version
 The Legend of Zelda: Oracle of Ages
 The Legend of Zelda: Oracle of Seasons
 Wario Land 3
 The Legend of Zelda: Link's Awakening DX
-Metal Gear Solid [GBC]
-Super Mario Bros. [Deluxe]
-Dragon Quest III: The Seeds of Salvation
+<5600> Metal Gear Solid
+Super Mario Bros. Deluxe
+<205600> Dragon Warrior III
 Shantae
-Pokemon Pinball
-Tetris [DX]
-Mario Tennis [GBC]
-Pokemon Trading Card Game [GBC]
-Donkey Kong Country [GBC]
+<4068> Pokemon Pinball
+Tetris DX
+<128874> Mario Tennis
+<4567> Pokemon Trading Card Game
+<152752> Donkey Kong Country
 Kirby Tilt 'n' Tumble

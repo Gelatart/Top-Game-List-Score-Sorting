@@ -26,7 +26,7 @@ The Elder Scrolls V: Skyrim
 Grand Theft Auto: San Andreas
 BioShock
 Metal Gear Solid 2: Sons of Liberty
-Metal Gear Solid [GBC]
+<5600> Metal Gear Solid
 Chrono Trigger
 Portal 2
 LittleBigPlanet

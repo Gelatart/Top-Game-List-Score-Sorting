@@ -31,7 +31,7 @@ The Orange Box
 Paper Mario
 Pathologic
 Persona 3
-Pokemon Crystal
+<1514> Pokemon Crystal Version
 <1558> Pokemon Gold Version
 Portal
 Red Dead Redemption

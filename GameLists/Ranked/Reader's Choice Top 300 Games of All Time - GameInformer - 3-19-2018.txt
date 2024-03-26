@@ -97,7 +97,7 @@ Resident Evil 2
 Paper Mario: The Thousand-Year Door
 Final Fantasy VIII
 Super Mario Bros.
-The World Ends With You
+The World Ends with You
 Star Wars: Battlefront II [2005]
 StarCraft
 Star Wars: Knights of the Old Republic II: The Sith Lords
@@ -142,7 +142,7 @@ Ratchet & Clank: Going Commando
 Fable II
 Chrono Cross
 Grim Fandango
-Pokemon Crystal
+<1514> Pokemon Crystal Version
 Final Fantasy IV
 Battlefield: Bad Company 2
 NieR

@@ -246,7 +246,7 @@ Asteroids
 Psychonauts
 Another World [Out of This World]
 Castlevania
-Jackbox Party Pack
+The Jackbox Party Pack
 Castlevania III: Dracula's Curse
 Fallout
 Pokemon Go
@@ -295,7 +295,7 @@ NBA 2K12
 Proteus
 Sonic CD
 Super Mario Bros. 2
-The World Ends With You
+The World Ends with You
 Thief: Deadly Shadows
 Diablo III
 The Legend of Zelda: A Link Between Worlds

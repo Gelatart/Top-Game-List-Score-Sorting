@@ -5,22 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b33df5e9-3490-443b-8a31-ba21b2040da7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Completions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Completions.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameLists/Ranked/100 Greatest Video Games of All Time - Slant Magazine - 6-8-2018.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GameLists/Ranked/100 Greatest Video Games of All Time - Slant Magazine - 6-8-2018.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameLists/Ranked/100 Greatest Video Games of All time - Slant Magazine - 6-9-2014.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GameLists/Ranked/100 Greatest Video Games of All time - Slant Magazine - 6-9-2014.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameLists/Ranked/GameRankings [Up to 100] (Accessed by gr.blade.sk) [DISCONTINUED DECEMBER 2019].txt" beforeDir="false" afterPath="$PROJECT_DIR$/GameLists/Ranked/GameRankings [Up to 100] (Accessed by gr.blade.sk) [DISCONTINUED DECEMBER 2019].txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameLists/Ranked/IGN Top 100 Games of All Time - IGN - (2019 Version).txt" beforeDir="false" afterPath="$PROJECT_DIR$/GameLists/Ranked/IGN Top 100 Games of All Time - IGN - (2019 Version).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameLists/Ranked/Reader's Choice Top 300 Games of All Time - GameInformer - 3-19-2018.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GameLists/Ranked/Reader's Choice Top 300 Games of All Time - GameInformer - 3-19-2018.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/GameLists/Ranked/The 500 Best Games of All Time - Polygon - 12-1-2017.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GameLists/Ranked/The 500 Best Games of All Time - Polygon - 12-1-2017.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameLists/Ranked/The Best PS2 Games of All Time - GamesRadar - 2-13-2018.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GameLists/Ranked/The Best PS2 Games of All Time - GamesRadar - 2-13-2018.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameLists/Unranked/List of video games considered the best - Wikipedia (As of 3-11-2024).txt" beforeDir="false" afterPath="$PROJECT_DIR$/GameLists/Unranked/List of video games considered the best - Wikipedia (As of 3-11-2024).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameLists/Unranked/The Best PC Games - PCMag (As of 2-27-2024).txt" beforeDir="false" afterPath="$PROJECT_DIR$/GameLists/Unranked/The Best PC Games - PCMag (As of 2-27-2024).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IGDB-Query.py" beforeDir="false" afterPath="$PROJECT_DIR$/IGDB-Query.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tracking Categories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tracking Categories.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

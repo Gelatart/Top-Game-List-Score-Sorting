@@ -70,9 +70,24 @@ print("Successfully completed! Goodbye!")
 
 #SPECIAL CASES KNOWN SO FAR:
 """
-Pokemon Red Version (what about blue?): IGDB ID: 1561
+Donkey Kong Country GBC: IGDB ID: 152752
+Dragon Warrior III GBC: IGDB ID: 205600
 God of War 2018: IGDB ID: 19560
-Pokemon Gold Version (what about silver?): IGDB ID: 1558
-Ōkami/Okami: IGDB ID: 1271
+Harry Potter and the Chamber of Secrets GBC: IGDB ID: 117322
+Harry Potter and the Sorcerer's Stone GBC: IGDB ID: 118554
+Mario Golf GBC: IGDB ID: 135389
+Mario Tennis GBC: IGDB ID: 128874
+Metal Gear Solid GBC: IGDB ID: 5600
+Mr. Driller GBC: IGDB ID: 254519
+Nights Into Dreams (2008 PC Version, because Nights + Christmas Nights): IGDB ID: 19903
 Ninja Gaiden NES: IGDB ID: 210484 (Will it be an issue that this is a port with a parent, the arcade original?)
+Ōkami/Okami: IGDB ID: 1271
+Perfect Dark GBC: IGDB ID: 1464
+Pokemon Crystal Version: IGDB ID: 1514
+Pokemon Gold Version (what about silver?): IGDB ID: 1558
+Pokemon Pinball: IGDB ID: 4068
+Pokemon Puzzle Challenge: IGDB ID: 49857
+Pokemon Red Version (what about blue?): IGDB ID: 1561
+Pokemon Trading Card Game GBC: IGDB ID: 4567
+Rayman GBC: IGDB ID: 85578
 """
