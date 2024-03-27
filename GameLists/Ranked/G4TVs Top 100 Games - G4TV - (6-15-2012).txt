@@ -1,15 +1,15 @@
 100
 Super Mario Bros.
-Legend of Zelda: A Link to the Past
+The Legend of Zelda: A Link to the Past
 BioShock
 Asteroids
 Tetris
-Legend of Zelda
+The Legend of Zelda
 Super Mario Bros. 3
 GoldenEye 007
 Shadow of the Colossus
 World of Warcraft
-Legend of Zelda: Ocarina of Time
+The Legend of Zelda: Ocarina of Time
 DOOM II: Hell on Earth
 Portal
 Uncharted 2: Among Thieves
@@ -29,7 +29,7 @@ Chrono Trigger
 Super Mario Kart
 Star Wars: Knights of the Old Republic
 Super Street Fighter II Turbo
-Elder Scrolls V: Skyrim
+The Elder Scrolls V: Skyrim
 Mike Tyson's Punch-Out!!
 Final Fantasy VII
 Counter-Strike [1.6]
@@ -55,9 +55,9 @@ Deus Ex
 Gauntlet
 Kingdom Hearts
 Super Street Fighter IV
-Pokemon Red / Blue
+<1561> Pokemon Red Version
 Ultima Online
-Maniac Mansion II: Day of the Tentacle
+Day of the Tentacle
 Contra [NES]
 God of War III
 Sid Meier's Civilization II
@@ -67,7 +67,7 @@ Unreal Tournament [1999]
 Assassin's Creed II
 Minecraft
 Prince of Persia: The Sands of Time
-Double Dragon [Arcade]
+Double Dragon
 Star Wars [Arcade]
 Wing Commander II: Vengeance of the Kilrathi
 Mortal Kombat
@@ -81,7 +81,7 @@ Psychonauts
 Gears of War 3
 Resident Evil
 Super Smash Bros. Melee
-Ninja Gaiden [NES]
+Ninja Gaiden [2004]
 Wii Sports
 Silent Hill 2
 OutRun

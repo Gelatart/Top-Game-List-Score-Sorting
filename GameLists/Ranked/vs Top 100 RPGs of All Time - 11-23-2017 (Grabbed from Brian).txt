@@ -6,7 +6,7 @@ Gothic II
 Dark Souls
 Fallout 2
 Vampire: The Masquerade - Bloodlines
-Elder Scrolls III: Morrowind
+The Elder Scrolls III: Morrowind
 Mount and Blade: Warband
 Mother 3
 Arcanum: Of Steamworks and Magick Obscura
@@ -34,7 +34,7 @@ Divinity: Original Sin II
 PlaneScape: Torment
 Persona 3
 EarthBound
-The World Ends With You
+The World Ends with You
 Mario & Luigi: Superstar Saga
 Pokemon Emerald
 Mass Effect
@@ -75,7 +75,7 @@ Golden Sun: The Lost Age
 Arx Fatalis
 Tales of Vesperia
 Pokemon Mystery Dungeon: Explorers of Sky
-Elder Scrolls IV: Oblivion
+The Elder Scrolls IV: Oblivion
 The Legend of Heroes: Trails in the Sky SC
 Ultima Underworld: The Stygian Abyss
 E.Y.E: Divine Cybermancy
@@ -97,5 +97,5 @@ Bravely Second: End Layer
 Lunar: Silver Star Story Complete
 Shadow Hearts: Covenant
 Lufia II: Rise of the Sinistrals
-Elder Scrolls V: Skyrim
+The Elder Scrolls V: Skyrim
 Etrian Odyssey 3

@@ -4,7 +4,7 @@ Super Mario Odyssey
 Legend of Zelda: Breath of the Wild
 Grand Theft Auto V
 Super Mario Galaxy 2
-Legend of Zelda: Ocarina of Time
+The Legend of Zelda: Ocarina of Time
 Grand Theft Auto IV
 Red Dead Redemption 2
 Uncharted 2: Among Thieves
@@ -22,21 +22,21 @@ Tekken 3
 Super Metroid
 BioShock Infinite
 Grand Theft Auto III
-Elder Scrolls V: Skyrim
+The Elder Scrolls V: Skyrim
 Grand Theft Auto: San Andreas
 BioShock
 Metal Gear Solid 2: Sons of Liberty
-Metal Gear Solid [GBC]
+<5600> Metal Gear Solid
 Chrono Trigger
 Portal 2
 LittleBigPlanet
 Halo 2
-Legend of Zelda: Twilight Princess
+The Legend of Zelda: Twilight Princess
 Ninja Gaiden Black
 Red Dead Redemption
 Gran Turismo 3: A-Spec
 Grand Theft Auto Double Pack
-Legend of Zelda: Wind Waker
+The Legend of Zelda: The Wind Waker
 Gran Turismo
 Journey
 Tony Hawk's Pro Skater 2
@@ -47,14 +47,14 @@ GoldenEye 007
 Call of Duty 4: Modern Warfare
 Championship Manager 4
 The Walking Dead [Episode 5]
-God of War [2018]
+<19560> God of War [2018]
 NFL 2K1
 Gears of War
 Persona 4 [Golden]
 Tom Clancy's Splinter Cell: Chaos Theory
-Elder Scrolls IV: Oblivion
+The Elder Scrolls IV: Oblivion
 Company of Heroes
-Legend of Zelda: Ocarina of Time [3D]
+The Legend of Zelda: Ocarina of Time 3D
 Undertale
 Baldur's Gate II: Shadows of Amn
 Half-Life
@@ -82,7 +82,7 @@ Super Mario World
 Resident Evil 2 [2019]
 Project Gotham Racing 2
 Unreal Tournament [1999]
-Legend of Zelda: Skyward Sword
+The Legend of Zelda: Skyward Sword
 Divinity: Original Sin II [Definitive Edition]
 Forza Motorsport
 Fallout 3 [Game of the Year Edition]
@@ -97,5 +97,5 @@ Fallout 3
 Super Smash Bros. Brawl
 World Soccer Winning Eleven 7 International
 Resident Evil 2
-INSIDE
+Inside
 Divinity: Original Sin II

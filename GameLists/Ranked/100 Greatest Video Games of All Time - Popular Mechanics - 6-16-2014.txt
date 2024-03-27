@@ -2,15 +2,15 @@
 BioShock
 Super Mario World
 Portal 2
-Legend of Zelda: A Link to the Past
+The Legend of Zelda: A Link to the Past
 Halo: Combat Evolved
 Street Fighter II
 Mass Effect 2
 Final Fantasy VII
 Half-Life 2
 Space Invaders
-Legend of Zelda: Ocarina of Time
-DOOM
+The Legend of Zelda: Ocarina of Time
+Doom
 Metal Gear Solid
 Super Mario Bros. 3
 Resident Evil 4
@@ -25,7 +25,7 @@ Red Dead Redemption
 Assassin's Creed II
 The Last of Us
 Chrono Trigger
-Pokemon Red / Blue
+<1561> Pokemon Red Version
 Uncharted 2: Among Thieves
 Star Wars: Knights of the Old Republic
 World of Warcraft
@@ -41,7 +41,7 @@ Shadow of the Colossus
 Tekken 3
 Mega Man 2
 Silent Hill 2
-Elder Scrolls V: Skyrim
+The Elder Scrolls V: Skyrim
 Resident Evil 2
 The Sims 3
 Tecmo Super Bowl
@@ -83,19 +83,19 @@ Team Fortress 2
 Prince of Persia: The Sands of Time
 Gran Turismo 3: A-Spec
 Zork
-LIMBO
+Limbo
 Heavy Rain
 Braid
-Fire Emblem Awakening
+Fire Emblem: Awakening
 Shenmue II
 Donkey Kong
 Wii Sports
 Forza Motorsport 4
 Myst
 Guitar Hero II
-EVE Online
+Eve Online
 Super Meat Boy
 Tempest
 Gone Home
-TowerFall [Ascension]
+TowerFall
 Hotline Miami

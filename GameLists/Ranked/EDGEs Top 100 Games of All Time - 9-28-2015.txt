@@ -6,7 +6,7 @@ Bloodborne
 Half-Life 2
 Tetris
 Super Mario Galaxy 2
-Legend of Zelda: Ocarina of Time
+The Legend of Zelda: Ocarina of Time
 Resident Evil 4
 Minecraft
 Bayonetta 2
@@ -23,23 +23,23 @@ Super Metroid
 Ico
 Uncharted 2: Among Thieves
 Drop7
-Elder Scrolls V: Skyrim
+The Elder Scrolls V: Skyrim
 Rock Band 3
-Legend of Zelda: Wind Waker
+The Legend of Zelda: Wind Waker
 Splatoon
 Dishonored
 Kerbal Space Program
-Legend of Zelda: A Link to the Past
+The Legend of Zelda: A Link to the Past
 Destiny
 Spelunky
-Legend of Zelda: Majora's Mask
+The Legend of Zelda: Majora's Mask
 Halo 3
 Shadow of the Colossus
 Super Mario Maker
 Vanquish
 Dota 2
 Dead Space
-Fire Emblem Awakening
+Fire Emblem: Awakening
 Journey
 Super Mario 3D World
 Fez
@@ -51,7 +51,7 @@ The Witcher 3: Wild Hunt
 Monster Hunter 4 Ultimate
 X-COM: Enemy Unknown
 The Stanley Parable
-Okami
+<1271> Okami
 Mass Effect 2
 Persona 4 [Golden]
 FTL: Advanced Edition
@@ -59,8 +59,8 @@ Puyo Puyo
 Transistor
 Batman: Arkham Knight
 EarthBound
-TowerFall [Ascension]
-LIMBO
+TowerFall
+Limbo
 Castlevania: Symphony of the Night
 Hearthstone: Heroes of Warcraft
 Metroid Prime

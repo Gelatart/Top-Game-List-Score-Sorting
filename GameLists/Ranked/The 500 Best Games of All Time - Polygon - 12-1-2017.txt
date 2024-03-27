@@ -1,9 +1,9 @@
 500
 Tetris
 Super Mario Bros. 3
-Legend of Zelda
-DOOM
-Pokemon Red / Blue
+The Legend of Zelda
+Doom
+<1561> Pokemon Red Version
 Ms. Pac-Man
 World of Warcraft
 Minecraft
@@ -18,7 +18,7 @@ Super Mario 64
 Portal
 Castlevania: Symphony of the Night
 Sid Meier's Civilization II
-Legend of Zelda: A Link to the Past
+The Legend of Zelda: A Link to the Past
 Super Mario Bros.
 FIFA 12
 Rogue
@@ -26,7 +26,7 @@ Slaves to Armok: God of Blood Chapter II - Dwarf Fortress
 Metal Gear Solid
 NBA Jam
 Journey
-Elder Scrolls III: Morrowind
+The Elder Scrolls III: Morrowind
 EarthBound
 Spelunky
 Gone Home
@@ -37,7 +37,7 @@ Donkey Kong
 Resident Evil 4
 Grand Theft Auto V
 Diablo II
-Legend of Zelda: Ocarina of Time
+The Legend of Zelda: Ocarina of Time
 Dark Souls
 Wii Sports
 Halo: Combat Evolved
@@ -71,7 +71,7 @@ Harvest Moon
 Final Fantasy VII
 Super Smash Bros. Melee
 Burnout 3: Takedown
-Elder Scrolls V: Skyrim
+The Elder Scrolls V: Skyrim
 Dota 2
 Ultima Online
 Habitat
@@ -88,7 +88,7 @@ DOOM II: Hell on Earth
 NetHack
 Call of Duty 4: Modern Warfare
 Metroid
-EVE Online
+Eve Online
 Dragon Quest [Dragon Warrior]
 Robotron: 2084
 Super Mario World 2: Yoshi's Island
@@ -116,7 +116,7 @@ BioShock
 Call of Duty 2
 Gunstar Heroes
 Mario Kart 8
-Legend of Zelda: Wind Waker
+The Legend of Zelda: The Wind Waker
 Device 6
 Frog Fractions
 Quake
@@ -141,7 +141,7 @@ EverQuest
 Super Smash Bros.
 The Operative: No One Lives Forever
 Unreal Tournament [1999]
-Legend of Zelda: Link's Awakening
+The Legend of Zelda: Link's Awakening
 Team Fortress 2
 Mortal Kombat II
 Wolfenstein 3D
@@ -190,7 +190,7 @@ P.T.
 Myst
 Command & Conquer
 Sonic the Hedgehog
-Pokemon Gold / Silver
+<1558> Pokemon Gold Version
 Star Wars: X-Wing vs. TIE Fighter
 Dragon's Dogma
 Final Fantasy IX
@@ -246,7 +246,7 @@ Asteroids
 Psychonauts
 Another World [Out of This World]
 Castlevania
-Jackbox Party Pack
+The Jackbox Party Pack
 Castlevania III: Dracula's Curse
 Fallout
 Pokemon Go
@@ -255,7 +255,7 @@ Star Control
 King's Quest I: Quest for the Crown
 The Hitchhiker's Guide to the Galaxy
 Donkey Kong Country
-INSIDE
+Inside
 Final Fantasy VIII
 Bloodborne
 Persona 3
@@ -295,13 +295,13 @@ NBA 2K12
 Proteus
 Sonic CD
 Super Mario Bros. 2
-The World Ends With You
+The World Ends with You
 Thief: Deadly Shadows
 Diablo III
-Legend of Zelda: A Link Between Worlds
+The Legend of Zelda: A Link Between Worlds
 Microsoft Flight Simulator
 Resident Evil 2
-Maniac Mansion II: Day of the Tentacle
+Day of the Tentacle
 Tempest 2000
 Tekken 3
 Age of Empires
@@ -309,7 +309,7 @@ Gran Turismo 3: A-Spec
 Split/Second
 Chrono Cross
 Flower
-TowerFall [Ascension]
+TowerFall
 Battlefield 1942
 Super Smash Bros. Brawl
 Breakout
@@ -330,7 +330,7 @@ Miner 2049er
 Panzer Dragoon II Zwei
 Puzzle Quest: Challenge of the Warlords
 Samurai Shodown
-Legend of Zelda: Majora's Mask
+The Legend of Zelda: Majora's Mask
 Deus Ex
 Everybody's Golf [Hot Shots Golf]
 Populous
@@ -364,7 +364,7 @@ Contra III: The Alien Wars
 Joust
 Castle Crashers
 Lemmings
-LIMBO
+Limbo
 PaRappa the Rapper
 Pokemon X / Y
 Super Mario Land 2: 6 Golden Coins
@@ -383,7 +383,7 @@ Crazy Taxi
 Hunt the Wumpus
 Devil's Crush
 Fallout 2
-Fire Emblem Awakening
+Fire Emblem: Awakening
 God of War II
 International Karate +
 Jumpman Junior
@@ -413,7 +413,7 @@ Power Stone
 Kingdom Rush
 Drop7
 Rhythm Heaven
-Elder Scrolls IV: Oblivion
+The Elder Scrolls IV: Oblivion
 Grim Fandango
 Sid Meier's Alpha Centauri
 Final Fantasy XIV: A Realm Reborn
@@ -467,7 +467,7 @@ The Chronicles of Riddick: Escape from Butcher Bay
 Medal of Honor
 Depression Quest
 TimeSplitters 2
-Ninja Gaiden [NES]
+<210484> Ninja Gaiden
 Peggle
 Earth Defense Force 2017
 Aladdin [Genesis]

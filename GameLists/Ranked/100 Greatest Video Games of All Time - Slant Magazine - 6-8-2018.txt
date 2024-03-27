@@ -1,5 +1,5 @@
 100
-Legend of Zelda: Majora's Mask
+The Legend of Zelda: Majora's Mask
 Red Dead Redemption
 Final Fantasy VI
 Super Mario Bros. 3
@@ -10,12 +10,12 @@ Portal 2
 Metroid Prime
 Tetris
 Resident Evil 4
-Legend of Zelda: Ocarina of Time
+The Legend of Zelda: Ocarina of Time
 Super Metroid
 Super Smash Bros. Melee
 The Last of Us
 EarthBound
-Okami
+<1271> Okami
 Silent Hill 2
 Super Mario 64
 Final Fantasy VII
@@ -23,7 +23,7 @@ Super Mario World
 Portal
 Mass Effect 2
 Planescape: Torment
-Legend of Zelda: A Link to the Past
+The Legend of Zelda: A Link to the Past
 Max Payne
 Castlevania: Symphony of the Night
 Final Fantasy Tactics
@@ -33,11 +33,11 @@ Super Mario Odyssey
 Gone Home
 Journey
 The Witcher 3: Wild Hunt
-Legend of Zelda: Wind Waker
-INSIDE
+The Legend of Zelda: The Wind Waker
+Inside
 Rock Band 3
 Fallout 2
-Legend of Zelda: Breath of the Wild
+The Legend of Zelda: Breath of the Wild
 Super Mario RPG: Legend of the Seven Stars
 Grand Theft Auto V
 Left 4 Dead 2
@@ -45,12 +45,12 @@ Animal Crossing
 BioShock
 Spelunky
 Dark Souls
-Beyond Good and Evil
+Beyond Good & Evil
 Jet Set Radio
 Killer7
 Bayonetta
 Mega Man 3
-DOOM
+Doom
 Super Mario Kart
 Super Mario Galaxy 2
 Batman: Arkham Asylum
@@ -74,7 +74,7 @@ Mass Effect 3
 Three Fourths Home
 Halo 3
 Half-Life 2
-Ninja Gaiden [NES]
+<210484> Ninja Gaiden
 Viewtiful Joe
 Hotline Miami
 Conker's Bad Fur Day
@@ -84,7 +84,7 @@ The Talos Principle
 Ico
 Paper Mario: The Thousand-Year Door
 Elite Beat Agents
-Jackbox Party Pack
+The Jackbox Party Pack
 Uncharted 4: A Thief's End
 Missile Command
 Grand Theft Auto III

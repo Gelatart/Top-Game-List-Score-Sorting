@@ -17,7 +17,7 @@ Ultima Underworld: The Stygian Abyss
 Wolfenstein 3D
 Myst
 Frontier: Elite II
-DOOM
+Doom
 Wing Commander III: Heart of the Tiger
 X-COM: UFO Defense
 Quake
@@ -39,7 +39,7 @@ Medal of Honor: Allied Assault
 Elder Scrolls III: Morrowind
 Battlefield 1942
 DotA
-EVE Online
+Eve Online
 Second Life
 Half-Life 2
 World of Warcraft

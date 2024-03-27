@@ -1,8 +1,8 @@
 100
-Legend of Zelda: Ocarina of Time
+The Legend of Zelda: Ocarina of Time
 Super Mario 64
 Resident Evil 4
-Legend of Zelda: A Link to the Past
+The Legend of Zelda: A Link to the Past
 Super Mario World
 Tetris
 Super Mario Galaxy
@@ -20,7 +20,7 @@ Sid Meier's Civilization IV
 Super Mario Bros. 3
 Metal Gear Solid 3: Snake Eater
 Grand Theft Auto: Vice City
-Legend of Zelda: Wind Waker
+The Legend of Zelda: The Wind Waker
 Virtua Fighter 5
 Final Fantasy XII
 Medieval II: Total War
@@ -42,9 +42,9 @@ Race Driver: Grid
 FIFA 09
 Portal
 Jet Set Radio Future
-Elder Scrolls IV: Oblivion
+The Elder Scrolls IV: Oblivion
 Disgaea: Afternoon of Darkness
-EVE Online
+Eve Online
 Final Fantasy VII
 Rez
 Metal Gear Solid: The Twin Snakes
@@ -74,7 +74,7 @@ Frequency
 Puzzle Quest: Challenge of the Warlords
 F-Zero GX
 Planescape: Torment
-Legend of Zelda: Majora's Mask
+The Legend of Zelda: Majora's Mask
 X-COM: UFO Defense
 Pac-Man Championship Edition
 Quake III Arena
@@ -83,7 +83,7 @@ Sam & Max Hit the Road
 Peggle
 God of War
 The Secret of Monkey Island
-SingStar [2008]
+<15180> SingStar
 DOOM II: Hell on Earth
 Panel de Pon
 Final Fantasy VI
@@ -93,7 +93,7 @@ Animal Crossing: City Folk
 The Sims 2
 Space Giraffe
 Football Manager 2009
-Legend of Zelda: Twilight Princess
+The Legend of Zelda: Twilight Princess
 Resident Evil
 Star Fox 64
 Far Cry 2

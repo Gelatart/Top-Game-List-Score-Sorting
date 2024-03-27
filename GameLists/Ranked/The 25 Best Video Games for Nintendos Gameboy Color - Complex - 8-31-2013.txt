@@ -1,23 +1,23 @@
 25
-Legend of Zelda: Link's Awakening DX
-Legend of Zelda: The Oracle of Ages
-Legend of Zelda: The Oracle of Seasons
+The Legend of Zelda: Link's Awakening DX
+The Legend of Zelda: Oracle of Ages
+The Legend of Zelda: Oracle of Seasons
 Wario Land 3
-Pokemon Crystal
-Dragon Quest III: The Seeds of Salvation [Dragon Warrior III]
+<1514> Pokemon Crystal Version
+<205600> Dragon Warrior III
 Shantae
-Mario Golf [Game Boy Color]
+<135389> Mario Golf
 Tetris DX
 Mega Man Xtreme
-Pokemon Pinball
-Metal Gear Solid [Game Boy Color]
+<4068> Pokemon Pinball
+<5600> Metal Gear Solid
 Bionic Commando: Elite Forces
-Pokemon Puzzle Challenge
-Mario Tennis [Game Boy Color]
+<49857> Pokemon Puzzle Challenge
+<128874> Mario Tennis
 Super Mario Bros. Deluxe
-Dragon Warrior + Dragon Warrior II
+Dragon Warrior I & II
 Kirby Tilt 'n' Tumble
-Donkey Kong Country [Game Boy Color]
+<152752> Donkey Kong Country
 Rainbow Islands
 Donkey Kong Land 3
 Tomb Raider: Curse of the Sword

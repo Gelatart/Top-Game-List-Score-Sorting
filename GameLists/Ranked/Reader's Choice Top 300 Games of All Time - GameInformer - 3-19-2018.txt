@@ -1,10 +1,10 @@
 299
 The Witcher 3: Wild Hunt
 The Last of Us
-Legend of Zelda: Ocarina of Time
+The Legend of Zelda: Ocarina of Time
 Mass Effect 2
-Elder Scrolls V: Skyrim
-Legend of Zelda: Breath of the Wild
+The Elder Scrolls V: Skyrim
+The Legend of Zelda: Breath of the Wild
 Final Fantasy VII
 Red Dead Redemption
 BioShock
@@ -12,13 +12,13 @@ Bloodborne
 Chrono Trigger
 Dark Souls
 Final Fantasy VI
-Legend of Zelda: A Link to the Past
+The Legend of Zelda: A Link to the Past
 Resident Evil 4
 Metal Gear Solid
 Shadow of the Colossus
 Mass Effect
 Kingdom Hearts II
-Elder Scrolls IV: Oblivion
+The Elder Scrolls IV: Oblivion
 Star Wars: Knights of the Old Republic
 Fallout 3
 Halo: Combat Evolved
@@ -28,11 +28,11 @@ Super Mario World
 Metal Gear Solid 3: Snake Eater
 Horizon Zero Dawn
 Overwatch
-Legend of Zelda: Wind Waker
+The Legend of Zelda: The Wind Waker
 Halo 3
 Portal 2
 Final Fantasy X
-Legend of Zelda: Majora's Mask
+The Legend of Zelda: Majora's Mask
 Persona 5
 Fallout: New Vegas
 Super Mario Bros. 3
@@ -45,26 +45,26 @@ Mass Effect 3
 Persona 4
 Uncharted 4: A Thief's End
 Dragon Age: Origins
-Legend of Zelda: Twilight Princess
+The Legend of Zelda: Twilight Princess
 Grand Theft Auto V
 Final Fantasy IX
 Batman: Arkham City
 Final Fantasy XV
 Borderlands 2
-Elder Scrolls III: Morrowind
+The Elder Scrolls III: Morrowind
 Halo 2
 Castlevania: Symphony of the Night
 Destiny
 Super Smash Bros. Melee 
-Legend of Zelda
+The Legend of Zelda
 Metroid Prime
 Super Mario Galaxy
 Silent Hill 2
 Xenoblade Chronicles
-Okami
+<1271> Okami
 Fallout 4
 Grand Theft Auto: San Andreas
-Pokemon Red / Blue
+<1561> Pokemon Red Version
 Dragon Age: Inquisition
 NieR: Automata
 Call of Duty 4: Modern Warfare
@@ -76,7 +76,7 @@ Minecraft
 Persona 3
 Assassin's Creed II
 Resident Evil
-Pokemon Gold / Silver
+<1558> Pokemon Gold Version
 Call of Duty: Modern Warfare 2
 Metal Gear Solid 4: Guns of the Patriots
 Alan Wake
@@ -97,14 +97,14 @@ Resident Evil 2
 Paper Mario: The Thousand-Year Door
 Final Fantasy VIII
 Super Mario Bros.
-The World Ends With You
+The World Ends with You
 Star Wars: Battlefront II [2005]
 StarCraft
 Star Wars: Knights of the Old Republic II: The Sith Lords
 GoldenEye 007
 Super Mario Galaxy 2
 Secret of Mana
-DOOM
+Doom
 The Walking Dead [Season One]
 Super Smash Bros. for Wii U
 God of War
@@ -142,12 +142,12 @@ Ratchet & Clank: Going Commando
 Fable II
 Chrono Cross
 Grim Fandango
-Pokemon Crystal
+<1514> Pokemon Crystal Version
 Final Fantasy IV
 Battlefield: Bad Company 2
 NieR
 Demon's Souls
-Beyond Good and Evil
+Beyond Good & Evil
 Dragon Quest VIII
 Devil May Cry 3: Dante's Awakening
 Bully
@@ -180,7 +180,7 @@ Psychonauts
 Terraria
 Lunar: Silver Star Story Complete
 Assassin's Creed Origins
-Legend of Zelda: Ocarina of Time [3D]
+The Legend of Zelda: Ocarina of Time 3D
 Assassin's Creed IV: Black Flag
 Counter-Strike [1.6]
 The Pandora Directive
@@ -191,7 +191,7 @@ Phoenix Wright: Ace Attorney
 God of War II
 Spyro the Dragon
 Deadly Premonition
-Legend of Zelda: Skyward Sword
+The Legend of Zelda: Skyward Sword
 Mega Man Legends
 Crisis Core: Final Fantasy VII
 Final Fantasy Tactics Advance
@@ -214,11 +214,11 @@ TimeSplitters 2
 Banjo-Tooie
 BioShock 2
 Ogre Battle: March of the Black Queen
-INSIDE
+Inside
 Shining Force II
 Super Smash Bros.
 Gran Turismo
-Fire Emblem Awakening
+Fire Emblem: Awakening
 Fire Emblem Fates: Birthright and Conquest and Revelation
 Donkey Kong 64
 Mafia II
@@ -227,7 +227,7 @@ Bayonetta 2
 Life is Strange: Before the Storm
 Tales from the Borderlands
 Sonic Mania
-Legend of Zelda: Link's Awakening
+The Legend of Zelda: Link's Awakening
 Super Mario World 2: Yoshi's Island
 Planescape: Torment
 Command & Conquer: Red Alert 2
@@ -294,7 +294,7 @@ Donkey Kong
 Mike Tyson's Punch-Out!!
 Divinity: Original Sin II
 Final Fantasy Tactics: The War of the Lions
-LIMBO
+Limbo
 Dragon Age II
 Mega Man X4
 Metroid Prime 3: Corruption

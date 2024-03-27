@@ -1,11 +1,11 @@
 50
 Tetris
 Super Mario 64
-Legend of Zelda: Ocarina of Time
-DOOM
+The Legend of Zelda: Ocarina of Time
+Doom
 Ms. Pac-Man
 Minecraft
-Legend of Zelda
+The Legend of Zelda
 Super Mario Bros.
 The Oregon Trail
 World of Warcraft
@@ -28,7 +28,7 @@ StarCraft II: Wings of Liberty
 Mortal Kombat
 Donkey Kong
 Myst
-Pokemon Red / Blue
+<1561> Pokemon Red Version
 The Sims
 Wolfenstein 3D
 Super Mario Kart

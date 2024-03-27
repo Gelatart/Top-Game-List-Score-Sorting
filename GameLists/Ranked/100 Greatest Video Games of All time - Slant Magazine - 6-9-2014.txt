@@ -1,5 +1,5 @@
 100
-Legend of Zelda: Ocarina of Time
+The Legend of Zelda: Ocarina of Time
 Chrono Trigger
 Super Metroid
 Red Dead Redemption
@@ -7,18 +7,18 @@ Shadow of the Colossus
 Half-Life 2
 Portal 2
 Braid
-Legend of Zelda: Majora's Mask
+The Legend of Zelda: Majora's Mask
 BioShock
 GoldenEye 007
-Okami
-Legend of Zelda: Wind Waker
+<1271> Okami
+The Legend of Zelda: The Wind Waker
 Mass Effect 2
 Silent Hill 2
 Final Fantasy VII
 Super Mario World
 Portal
 Super Mario RPG: Legend of the Seven Stars
-Legend of Zelda: A Link to the Past
+The Legend of Zelda: A Link to the Past
 EarthBound
 SoulCalibur
 Final Fantasy X
@@ -27,7 +27,7 @@ Resident Evil 4
 Super Mario Bros.
 Metroid Prime
 Rez
-Pokemon Red / Blue
+<1561> Pokemon Red Version
 The Walking Dead
 Tetris
 Batman: Arkham City
@@ -49,7 +49,7 @@ Max Payne
 Journey
 Grand Theft Auto: Vice City
 Bayonetta
-The World Ends With You
+The World Ends with You
 Chrono Cross
 Final Fantasy Tactics
 Metal Gear Solid 4: Guns of the Patriots
@@ -59,12 +59,12 @@ Xenogears
 Conker's Bad Fur Day
 Hotline Miami
 Deus Ex: Human Revolution
-You Don't Know Jack! (vol. 1)
+You Don't Know Jack Vol. 1 XL
 Star Fox 64
 Silent Hill
 Donkey Kong Country
 Vagrant Story
-Beyond Good and Evil
+Beyond Good & Evil
 Call of Duty 4: Modern Warfare
 Street Fighter II [Championship Edition]
 Amplitude
@@ -91,10 +91,10 @@ Valkyrie Profile
 Saints Row: The Third
 Halo: Combat Evolved
 Fallout 3
-TMNT IV: Turtles in Time
+Teenage Mutant Ninja Turtles IV: Turtles in Time
 Advance Wars: Dual Strike
 Dead Space
-Pokemon Gold / Silver
+<1558> Pokemon Gold Version
 Wild Arms
 Phoenix Wright: Ace Attorney
 Phantasy Star IV: The End of the Millennium

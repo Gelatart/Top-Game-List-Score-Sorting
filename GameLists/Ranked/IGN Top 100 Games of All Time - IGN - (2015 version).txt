@@ -1,12 +1,12 @@
 100
 Super Mario Bros. 3
-Legend of Zelda: A Link to the Past
-DOOM
+The Legend of Zelda: A Link to the Past
+Doom
 Super Mario Bros.
 Portal 2
 Half-Life 2
 Super Metroid
-Legend of Zelda: Ocarina of Time
+The Legend of Zelda: Ocarina of Time
 Halo 2
 Tetris
 Super Mario 64
@@ -28,7 +28,7 @@ Half-Life
 Castlevania: Symphony of the Night
 Final Fantasy VI
 Red Dead Redemption
-Legend of Zelda
+The Legend of Zelda
 Star Wars: Knights of the Old Republic
 Rock Band
 Battlefield 1942
@@ -62,7 +62,7 @@ Donkey Kong
 Grim Fandango
 Monkey Island 2: LeChuck's Revenge
 Super Smash Bros. Melee
-Elder Scrolls V: Skyrim
+The Elder Scrolls V: Skyrim
 Burnout 3: Takedown
 GoldenEye 007
 Final Fantasy Tactics
@@ -94,7 +94,7 @@ Super Mario World 2: Yoshi's Island
 Ico
 Donkey Kong '94
 Super Mario Galaxy 2
-Legend of Zelda: Wind Waker
+The Legend of Zelda: The Wind Waker
 Galaga
 Perfect Dark
 Advance Wars

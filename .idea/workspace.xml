@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b33df5e9-3490-443b-8a31-ba21b2040da7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AltGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/AltGenerator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameLists/Former/FORMER METACRITIC (Critic Scores, Metascore, Up to 100) (As of 2-1-2024).txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameLists/Ranked/Metacritic (Critic Scores, Metascore, Up to 100) (As of 2-1-2024).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Completions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Completions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameLists/Ranked/EDGEs Top 100 Games of All Time - (March 2009).txt" beforeDir="false" afterPath="$PROJECT_DIR$/GameLists/Ranked/EDGEs Top 100 Games of All Time - (March 2009).txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sorted Database.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted Database.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sorted by Average (Uncompleted).txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Average (Uncompleted).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sorted by Average.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Average.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sorted by Inclusion (Uncompleted).txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Inclusion (Uncompleted).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sorted by Inclusion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Inclusion.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sorted by Ranked (Uncompleted).txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Ranked (Uncompleted).txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sorted by Ranked.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Ranked.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tracking Categories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tracking Categories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGDB-Query.py" beforeDir="false" afterPath="$PROJECT_DIR$/IGDB-Query.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickMath.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuickMath.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

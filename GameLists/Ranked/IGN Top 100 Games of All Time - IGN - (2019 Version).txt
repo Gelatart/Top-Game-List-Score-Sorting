@@ -1,9 +1,9 @@
 100
 Super Mario World
-Legend of Zelda: A Link to the Past
+The Legend of Zelda: A Link to the Past
 Portal 2
 Super Metroid
-Legend of Zelda: Breath of the Wild
+The Legend of Zelda: Breath of the Wild
 Super Mario Bros. 3
 Tetris
 Half-Life 2
@@ -17,17 +17,17 @@ Street Fighter II
 Dark Souls
 Portal
 Chrono Trigger
-DOOM
+Doom
 The Last of Us
 Metal Gear Solid 3: Snake Eater
 Half-Life
 Halo: Combat Evolved
 Minecraft
-Legend of Zelda: Ocarina of Time
+The Legend of Zelda: Ocarina of Time
 Sid Meier's Civilization IV
 BioShock
 The Witcher 3: Wild Hunt
-God of War [2018]
+<19560> God of War [2018]
 Metal Gear Solid
 Shadow of the Colossus
 Resident Evil 4
@@ -71,7 +71,7 @@ Dota 2
 Battlefield 1942
 Suikoden II
 X-COM: UFO Defense
-Elder Scrolls V: Skyrim
+The Elder Scrolls V: Skyrim
 Super Smash Bros. Ultimate
 GoldenEye 007
 Fable II
@@ -83,7 +83,7 @@ Resident Evil 2 [2019]
 Monster Hunter: World
 Tony Hawk's Pro Skater 2
 Contra [NES]
-INSIDE
+Inside
 SimCity 2000
 Thief II: The Metal Age
 SoulCalibur
