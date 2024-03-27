@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b33df5e9-3490-443b-8a31-ba21b2040da7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameLists/Ranked/100 Greatest Video Games of All Time - Slant Magazine - 6-8-2018.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GameLists/Ranked/100 Greatest Video Games of All Time - Slant Magazine - 6-8-2018.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameLists/Ranked/The 500 Best Games of All Time - Polygon - 12-1-2017.txt" beforeDir="false" afterPath="$PROJECT_DIR$/GameLists/Ranked/The 500 Best Games of All Time - Polygon - 12-1-2017.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Completions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Completions.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameLists/Ranked/EDGEs Top 100 Games of All Time - (March 2009).txt" beforeDir="false" afterPath="$PROJECT_DIR$/GameLists/Ranked/EDGEs Top 100 Games of All Time - (March 2009).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/IGDB-Query.py" beforeDir="false" afterPath="$PROJECT_DIR$/IGDB-Query.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/QuickMath.py" beforeDir="false" afterPath="$PROJECT_DIR$/QuickMath.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

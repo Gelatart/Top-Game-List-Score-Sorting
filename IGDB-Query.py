@@ -90,4 +90,5 @@ Pokemon Puzzle Challenge: IGDB ID: 49857
 Pokemon Red Version (what about blue?): IGDB ID: 1561
 Pokemon Trading Card Game GBC: IGDB ID: 4567
 Rayman GBC: IGDB ID: 85578
+Singstar 2007 (had in my list that we had a 2008 one?): IGDB ID: 15180
 """

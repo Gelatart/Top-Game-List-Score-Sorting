@@ -331,7 +331,7 @@ while(igdb_check == False):
             # Check if <> comes first, where we use ID instead of name, for titles hard to specify
             if (game[0] == '<'):
                 print(game.strip())
-                input("Turns out this is a special case!\n")
+                #input("Turns out this is a special case!\n")
                 game_title = game.strip()
                 # pull the ID from the <> part of the string
                 check_string += 'where id = '
@@ -339,7 +339,7 @@ while(igdb_check == False):
                 pattern_match = r'[0-9]+'
                 substring = re.findall(pattern_match, game_title)
                 title_ID = substring[0]
-                input(substring)
+                #input(substring)
                 check_string += title_ID
                 #Maybe grab the name from IGDB here, to update the name before it gets sent to the cluster?
                 #Otherwise it might have <ID> in front of the name there?
@@ -615,66 +615,6 @@ for list in games_lists:
     listDict["Title"] = list
     #could keep track of what type of list it is, other variables?
     list_insert = list_col.insert_one(listDict)
-
-"loop of printing database to a spreadsheet file"
-
-"""
-# Applying multiple styles
-boldStyle = xlwt.easyxf('font: bold 1;')
-crossedStyle = xlwt.easyxf('font: struck_out 1;')
-sheet1.write(0, 0, 'TITLE', boldStyle)
-sheet1.write(0, 1, 'RANKED SCORE', boldStyle)
-sheet1.write(0, 2, 'INCLUSION SCORE', boldStyle)
-sheet1.write(0, 3, 'AVERAGE SCORE', boldStyle)
-sheet1.write(0, 4, 'LISTS INCLUDED ON', boldStyle)
-sheet1.write(0, 5, 'MAIN PLATFORM', boldStyle)
-sheet1.write(0, 6, 'LIST OF PLATFORMS', boldStyle)
-sheet1.write(0, 7, 'RELEASE DATE', boldStyle)
-sheet1.write(0, 8, 'PLAYER COUNTS', boldStyle)
-sheet1.write(0, 9, 'DEVELOPERS', boldStyle)
-excelCount = 1
-for game, details in gameDb.items():
-    rScore = details.ranked_score
-    iScore = details.list_count
-    aScore = rScore / details.total_count
-    if(details.completed == True):
-        sheet1.write(excelCount, 0, game, crossedStyle)
-    else:
-        sheet1.write(excelCount, 0, game)
-    #sheet1.write(excelCount, 1, details.ranked_score)
-    #sheet1.write(excelCount, 2, details.list_count)
-    sheet1.write(excelCount, 1, rScore)
-    sheet1.write(excelCount, 2, iScore)
-    #averageScore = details.ranked_score / details.list_count
-    #averageScore = (details.ranked_score / details.list_count)/details.total_count
-    #averageScore = details.ranked_score / details.total_count
-    #sheet1.write(excelCount, 3, averageScore)
-    sheet1.write(excelCount, 3, aScore)
-    outputLists = ""
-    for refList in details.lists_referencing:
-        outputLists += refList
-        outputLists += ", "
-    sheet1.write(excelCount, 4, outputLists)
-    mPlat = details.main_platform
-    sheet1.write(excelCount, 5, mPlat)
-    lPlat = details.listPlatforms
-    sheet1.write(excelCount, 6, lPlat)
-    rDate = details.releaseDate
-    sheet1.write(excelCount, 7, rDate)
-    pCounts = details.playerCounts
-    sheet1.write(excelCount, 8, pCounts)
-    lDevs = details.listDevelopers
-    sheet1.write(excelCount, 9, lDevs)
-    excelCount += 1
-    #add to the individual databases
-    #gameDbRanked[game] = details.ranked_score
-    #gameDbInclusion[game] = details.list_count
-    #gameDbAverage[game] = averageScore
-    gameDbRanked[game] = rScore
-    gameDbInclusion[game] = iScore
-    gameDbAverage[game] = aScore
-wb.save('Sorted Database.xls')
-"""
 
 #after printed out everything to excel, then make three printed sorted lists?
 #each time, sort excel a certain way, then print out excel factors to list?

@@ -46,12 +46,12 @@ Jagged Alliance 2
 Virtua Tennis
 Tekken 3
 Demolition Racer
-Portal [Still Alive]
+Portal: Still Alive
 Metal Torrent
 Banjo-Kazooie
-Heroes of Might and Magic III [Armageddon's Blade]
+Heroes of Might and Magic III: Armageddon's Blade
 Chrono Trigger [DS]
-Dungeon Keeper [The Deeper Dungeons]
+Dungeon Keeper: The Deeper Dungeons
 Dungeon Keeper
 Age of Empires II [The Conquerors]
 Max Payne
@@ -60,7 +60,7 @@ Warcraft III: Reign of Chaos
 Baldur's Gate II: Shadows of Amn
 Super Smash Bros. Melee
 Gothic II
-Super Mario World 2: Yoshi's Island [Super Mario Advance 3]
+Yoshi's Island: Super Mario Advance 3
 Kessen III
 System Shock 2
 Crash Bandicoot 3: Warped
@@ -78,7 +78,7 @@ Gran Turismo 4
 Final Fantasy IX
 Steins;Gate
 The Last of Us
-Metal Gear Solid: The Legacy Collection [Metal Gear + Metal Gear 2: Solid Snake + Metal Gear Solid + Metal Gear Solid: VR Missions + Metal Gear Solid 2: Sons of Liberty + Metal Gear Solid 3: Snake Eater + Metal Gear Solid 4: Guns of the Patriots + Metal Gear Solid: Peace Walker]
+Metal Gear Solid: The Legacy Collection
 God of War Saga [God of War + God of War II + God of War III + God of War: Chains of Olympus + God of War: Ghost of Sparta]
 Donkey Kong Country: Tropical Freeze
 Half-Life 2
