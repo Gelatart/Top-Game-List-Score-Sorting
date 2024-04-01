@@ -45,7 +45,7 @@ class GameObject:
         self.total_count = 0
         self.completed = False
         self.main_platform = 'None'
-        self.listPlatforms = []
+        self.list_platforms = []
         self.releaseDate = 'Unknown' #Can I set this to some date value?
         self.playerCounts = []
         self.listDevelopers = []
@@ -65,7 +65,7 @@ class GameObject:
         self.total_count = 0
         self.completed = False
         self.main_platform = 'None'
-        self.listPlatforms = []
+        self.list_platforms = []
         self.releaseDate = 'Unknown'  # Can I set this to some date value?
         self.playerCounts = []
         self.listDevelopers = []
@@ -79,7 +79,7 @@ class GameObject:
         self.total_count = total
         self.completed = False
         self.main_platform = 'None'
-        self.listPlatforms = []
+        self.list_platforms = []
         self.releaseDate = 'Unknown'  # Can I set this to some date value?
         self.playerCounts = []
         self.listDevelopers = []
@@ -231,10 +231,10 @@ try:
             attribute = next(itr)
             print(attribute)
             gameDb[title].main_platform = attribute
-            #listPlatforms
+            #list_platforms
             attribute = next(itr)
             print(attribute)
-            gameDb[title].listPlatforms = attribute
+            gameDb[title].list_platforms = attribute
             #releaseDate
             attribute = next(itr)
             print(attribute)
@@ -301,18 +301,12 @@ while(igdb_check == False):
         wrapper = IGDBWrapper(client_id, access_token)
         input("Here we pause")
 
-        """
-        igdb_request = wrapper.api_request(
-                    'games',
-                    'fields id, name; offset 0; where platforms=48;'
-                  )
-        """
         from igdb.igdbapi_pb2 import GameResult
 
         igdb_request = wrapper.api_request(
             'games.pb',  # Note the '.pb' suffix at the endpoint
-            # 'fields name, rating; limit 5; offset 0;'
-            'fields name, rating; offset 0;'
+             'fields name, rating; limit 5; offset 0;'
+            # 'fields name, rating; offset 0;'
         )
         games_message = GameResult()
         games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
@@ -321,7 +315,15 @@ while(igdb_check == False):
         # input("Here we pause")
 
         print("Time to go looking around")
+        time_speedup = 0;
+        #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
+        #As of 4/1/24: 0-1 speedup, 2 is good (3)
         for game, details in gameDb.items():
+            if(time_speedup < 2):
+                time_speedup += 1
+                continue
+            elif(time_speedup == 2):
+                time_speedup = 0
             check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
             check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
             check_string += 'external_games, follows, franchises, game_localizations, game_modes, genres, '
@@ -513,8 +515,8 @@ while(igdb_check == False):
                 # input("There they are!")
                 # gameDb[game].main_platform = earliest_game.platforms[0]
                 gameDb[game].main_platform = main_plat  # Will this always pull best choice?
-                # gameDb[game].listPlatforms = earliest_game.platforms
-                gameDb[game].listPlatforms = list_plats  # Will only pull ID's for now, need to tackle later?
+                # gameDb[game].list_platforms = earliest_game.platforms
+                gameDb[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
                 gameDb[game].playerCounts = earliest_game.game_modes  # Changes approach but for the better?
                 # ^Also consider multiplayer_modes?
                 gameDb[game].listDevelopers = earliest_game.involved_companies  # Will this grab the most definitive list?
@@ -600,7 +602,7 @@ for game, details in gameDb.items():
     exportDict["List of References"] = details.lists_referencing
     exportDict["Completed"] = details.completed
     exportDict["Main Platform"] = details.main_platform
-    exportDict["List of Platforms"] = details.listPlatforms
+    exportDict["List of Platforms"] = details.list_platforms
     exportDict["Release Date"] = details.releaseDate
     exportDict["Player Counts"] = details.playerCounts
     exportDict["Developers"] = details.listDevelopers
@@ -618,12 +620,6 @@ for list in games_lists:
 
 #after printed out everything to excel, then make three printed sorted lists?
 #each time, sort excel a certain way, then print out excel factors to list?
-
-#SQLite Segment
-#conn = sqlite3.connect('games.db')
-#print("Games database opened successfully")
-#... (EXPAND THE ACTUAL TABLE CREATION, ETC.?)
-#conn.close()
 
 #further sort by keys after sorted by values?
 
@@ -732,7 +728,7 @@ for game in games_pulled:
     sheet1.write(excel_count, 4, output_lists)
     #mPlat = details.main_platform
     sheet1.write(excel_count, 5, game['Main Platform'].strip())
-    #lPlat = details.listPlatforms
+    #lPlat = details.list_platforms
     sheet1.write(excel_count, 6, game['List of Platforms'])
     #^Try to strip escape chars out earlier or the items themselves
     #rDate = details.releaseDate

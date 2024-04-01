@@ -22,7 +22,7 @@ The Legend of Zelda: A Link to the Past
 Super Mario Bros.
 FIFA 12
 Rogue
-Slaves to Armok: God of Blood Chapter II - Dwarf Fortress
+Dwarf Fortress
 Metal Gear Solid
 NBA Jam
 Journey
@@ -31,7 +31,7 @@ EarthBound
 Spelunky
 Gone Home
 Zork
-Persona 4 [Golden]
+Persona 4 Golden
 Super Mario World
 Donkey Kong
 Resident Evil 4
@@ -80,11 +80,11 @@ Secret of Mana
 Space Invaders
 Guild Wars 2
 Star Wars: Knights of the Old Republic
-Adventure [2600]
+Adventure
 Silent Hill 2
 Portal 2
 Katamari Damacy
-DOOM II: Hell on Earth
+Doom II: Hell on Earth
 NetHack
 Call of Duty 4: Modern Warfare
 Metroid
@@ -108,7 +108,7 @@ Final Fantasy Tactics
 Papers, Please
 Super Mario Maker
 Kentucky Route Zero
-Counter-Strike [1.6]
+Counter-Strike
 Hitman: Blood Money
 Prince of Persia: The Sands of Time
 Herzog Zwei
@@ -132,7 +132,7 @@ Her Story
 Vampire: The Masquerade - Redemption
 Kirby: Canvas Curse
 Street Fighter III: 3rd Strike - Fight for the Future 
-Hearthstone: Heroes of Warcraft
+Hearthstone
 Kirby's Adventure
 Phantasy Star Online
 Resident Evil
@@ -140,7 +140,7 @@ The Oregon Trail
 EverQuest
 Super Smash Bros.
 The Operative: No One Lives Forever
-Unreal Tournament [1999]
+Unreal Tournament
 The Legend of Zelda: Link's Awakening
 Team Fortress 2
 Mortal Kombat II
@@ -151,7 +151,7 @@ SoulCalibur II
 Metroid Prime
 The Walking Dead [Season One]
 Geometry Wars: Retro Evolved
-Pac-Man Championship Edition DX
+Pac-Man: Championship Edition DX
 Assassin's Creed II
 80 Days
 Brothers: A Tale of Two Sons
@@ -170,7 +170,7 @@ Phantasy Star IV: The End of the Millennium
 Planescape: Torment
 Red Faction: Guerrilla
 Spacewar!
-Star Wars [Arcade]
+Star Wars
 Streets of Rage 2
 Superhot [VR]
 System Shock 2
@@ -194,7 +194,7 @@ Sonic the Hedgehog
 Star Wars: X-Wing vs. TIE Fighter
 Dragon's Dogma
 Final Fantasy IX
-X-COM: Enemy Unknown
+XCOM: Enemy Unknown
 Mario Kart 64
 Overwatch
 Halo 3
@@ -217,7 +217,7 @@ Tony Hawk's Underground
 WarioWare: Twisted!
 Zero Escape: Virtue's Last Reward
 Burnout Revenge
-DOOM [2016]
+<7351> Doom
 Tony Hawk's Pro Skater
 A Mind Forever Voyaging
 Gran Turismo
@@ -341,7 +341,7 @@ Yakuza 0
 Bayonetta 2
 Dead Space
 Pool of Radiance
-Ninja Gaiden [2004]
+<5972> Ninja Gaiden
 RollerCoaster Tycoon
 Fruit Ninja
 Bastion
@@ -395,7 +395,7 @@ Stephen's Sausage Roll
 Syberia
 Uridium
 Wizardry: Proving Grounds of the Mad Overlord
-NiGHTS into Dreams...
+Nights Into Dreams...
 Frogger
 Shovel Knight
 Braid
@@ -416,8 +416,8 @@ Rhythm Heaven
 The Elder Scrolls IV: Oblivion
 Grim Fandango
 Sid Meier's Alpha Centauri
-Final Fantasy XIV: A Realm Reborn
-Fire Emblem Fates: Birthright and Conquest and Revelation
+<386> Final Fantasy XIV Online: A Realm Reborn
+<24220> Fire Emblem Fates: Birthright and Conquest and Revelation
 Metro 2033
 Military Madness
 Missile Command

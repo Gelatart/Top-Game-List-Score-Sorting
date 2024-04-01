@@ -52,14 +52,14 @@ R-Type Final
 Fable II
 Uncharted: Drake's Fortune
 Ico
-Pokemon Yellow
+<1512> Pokemon Yellow Version
 Counter-Strike: Source
 Deus Ex
 Gears of War 2
 Viewtiful Joe
-Bust-a-Move [Puzzle Bobble]
+Bust-A-Move
 Robotron: 2084
-Ninja Gaiden II [2008]
+Ninja Gaiden II
 Lemmings
 Puyo Pop Fever
 Thief II: The Metal Age
@@ -84,7 +84,7 @@ Peggle
 God of War
 The Secret of Monkey Island
 <15180> SingStar
-DOOM II: Hell on Earth
+Doom II: Hell on Earth
 Panel de Pon
 Final Fantasy VI
 Braid
@@ -97,5 +97,5 @@ The Legend of Zelda: Twilight Princess
 Resident Evil
 Star Fox 64
 Far Cry 2
-R4: Ridge Racer Type 4
+Ridge Racer Type 4
 The Orange Box

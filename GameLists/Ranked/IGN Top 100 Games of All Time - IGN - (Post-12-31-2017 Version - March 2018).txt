@@ -34,7 +34,7 @@ Resident Evil 4
 Metroid Prime
 Bloodborne
 The Legend of Zelda
-Pokemon Yellow
+<1512> Pokemon Yellow Version
 Mass Effect 2
 Final Fantasy VI
 Metal Gear Solid 2: Sons of Liberty
@@ -44,8 +44,8 @@ StarCraft
 Diablo II
 Resident Evil [2002]
 EarthBound
-Persona 4 [Golden]
-Counter-Strike [1.6]
+Persona 4 Golden
+Counter-Strike
 Ms. Pac-Man
 Baldur's Gate II: Shadows of Amn
 Deus Ex
@@ -68,7 +68,7 @@ Team Fortress 2
 Donkey Kong
 Spelunky
 Thief II: The Metal Age
-Star Wars Jedi Knight II: Jedi Outcast
+Star Wars: Jedi Knight II - Jedi Outcast
 Final Fantasy Tactics
 Dota 2
 Battlefield 1942
@@ -84,7 +84,7 @@ Grand Theft Auto: Vice City
 System Shock 2
 Super Mario Odyssey
 Inside
-Contra [NES]
+<186207> Contra
 SimCity 2000
 SoulCalibur
 Mega Man 3

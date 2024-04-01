@@ -40,7 +40,7 @@ Mass Effect
 Journey
 Dark Souls
 Metal Gear Solid
-Counter-Strike [1.6]
+Counter-Strike
 Resident Evil 4
 Banjo-Kazooie
 Diablo II
@@ -50,14 +50,14 @@ The Last of Us
 Call of Duty 4: Modern Warfare
 Dota 2
 Mass Effect 2
-Pokemon Yellow
+<1512> Pokemon Yellow Version
 Ms. Pac-Man
 Thief II: The Metal Age
-Star Wars Jedi Knight II: Jedi Outcast
+Star Wars: Jedi Knight II - Jedi Outcast
 StarCraft
 MechWarrior 2: 31st Century Combat
 Team Fortress 2
-Persona 4 [Golden]
+Persona 4 Golden
 Donkey Kong
 Grim Fandango
 Monkey Island 2: LeChuck's Revenge
@@ -82,7 +82,7 @@ Final Fantasy VII
 The Secret of Monkey Island
 Resident Evil 2
 Fallout 2
-Contra [NES]
+<186207> Contra
 X-COM: UFO Defense
 Mike Tyson's Punch-Out!!
 SimCity 2000

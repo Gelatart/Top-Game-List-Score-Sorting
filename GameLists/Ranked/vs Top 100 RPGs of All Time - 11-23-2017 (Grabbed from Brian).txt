@@ -41,7 +41,7 @@ Mass Effect
 Final Fantasy X
 Suikoden II
 Baldur's Gate II: Shadows of Amn
-Persona 4 [Golden]
+Persona 4 Golden
 Skies of Arcadia
 Xenogears
 Secret of Mana
@@ -57,7 +57,7 @@ Tactics Ogre - Let Us Cling Together
 Fire Emblem: Radiant Dawn
 Dragon Quest VIII: Journey of the Cursed King
 NieR
-Pokemon Black 2 / White 2
+<8284> Pokemon Black Version 2
 Mass Effect 2
 Dark Souls III
 Final Fantasy V
@@ -68,13 +68,13 @@ Fable
 Final Fantasy XII
 Radiant Historia
 Tales of Berseria
-Pokemon Black / White
+<1521> Pokemon Black Version
 Parasite Eve
 Chrono Cross
 Golden Sun: The Lost Age
 Arx Fatalis
 Tales of Vesperia
-Pokemon Mystery Dungeon: Explorers of Sky
+<2323> Pokemon Mystery Dungeon: Explorers of Sky
 The Elder Scrolls IV: Oblivion
 The Legend of Heroes: Trails in the Sky SC
 Ultima Underworld: The Stygian Abyss

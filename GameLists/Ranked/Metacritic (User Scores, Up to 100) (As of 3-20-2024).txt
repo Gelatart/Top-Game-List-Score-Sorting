@@ -1,6 +1,6 @@
 100
-BioShock 2 [Minerva's Den]
-Pokemon Mystery Dungeon: Explorers of Sky
+BioShock 2: Minerva's Den
+<2323> Pokemon Mystery Dungeon: Explorers of Sky
 Pokemon Heart Gold / Soul Silver
 God of War III
 Half-Life 2 [Episode Two]
@@ -18,10 +18,10 @@ Master of Orion II: Battle at Antares
 X-COM: UFO Defense
 Warcraft II [Battle.net Edition]
 Heroes of Might and Magic III [The Shadow of Death]
-Warcraft III [The Frozen Throne]
+Warcraft III: The Frozen Throne
 Warcraft II [Beyond the Dark Portal]
 Dino Crisis 2
-Super Mario World [Super Mario Advance 2]
+Super Mario World: Super Mario Advance 2
 BioShock
 Medieval II: Total War
 Halo 2 [Multiplayer Map Pack]

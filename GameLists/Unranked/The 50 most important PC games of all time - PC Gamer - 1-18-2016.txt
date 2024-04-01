@@ -30,7 +30,7 @@ Starsiege: Tribes
 Thief: The Dark Project
 Baldur's Gate
 EverQuest
-Counter-Strike [1.6]
+Counter-Strike
 System Shock 2
 Quake III Arena
 The Sims
@@ -43,7 +43,7 @@ Eve Online
 Second Life
 Half-Life 2
 World of Warcraft
-Slaves to Armok: God of Blood Chapter II - Dwarf Fortress
+Dwarf Fortress
 Team Fortress 2
 Spelunky
 Minecraft

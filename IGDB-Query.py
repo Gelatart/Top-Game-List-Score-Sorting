@@ -70,8 +70,12 @@ print("Successfully completed! Goodbye!")
 
 #SPECIAL CASES KNOWN SO FAR:
 """
+Contra NES: IGDB ID: 186207
 Donkey Kong Country GBC: IGDB ID: 152752
+Doom 2016: IGDB ID: 7351
 Dragon Warrior III GBC: IGDB ID: 205600
+Final Fantasy XIV Online (A Realm Reborn) (Online reboot 2013): IGDB ID: 386
+Fire Emblem Fates: Birthright (and Conquest and Revelation): IGDB ID: 24220
 God of War 2018: IGDB ID: 19560
 Harry Potter and the Chamber of Secrets GBC: IGDB ID: 117322
 Harry Potter and the Sorcerer's Stone GBC: IGDB ID: 118554
@@ -80,15 +84,22 @@ Mario Tennis GBC: IGDB ID: 128874
 Metal Gear Solid GBC: IGDB ID: 5600
 Mr. Driller GBC: IGDB ID: 254519
 Nights Into Dreams (2008 PC Version, because Nights + Christmas Nights): IGDB ID: 19903
+Ninja Gaiden 2004: IGDB ID: 5972
 Ninja Gaiden NES: IGDB ID: 210484 (Will it be an issue that this is a port with a parent, the arcade original?)
 Ōkami/Okami: IGDB ID: 1271
 Perfect Dark GBC: IGDB ID: 1464
+Pokemon Black Version (what about white?): IGDB ID: 1521
+Pokemon Black Version 2 (what about white 2?): IGDB ID: 8284
 Pokemon Crystal Version: IGDB ID: 1514
 Pokemon Gold Version (what about silver?): IGDB ID: 1558
+Pokemon Mystery Dungeon: Explorers of Sky: IGDB ID: 2323
 Pokemon Pinball: IGDB ID: 4068
 Pokemon Puzzle Challenge: IGDB ID: 49857
 Pokemon Red Version (what about blue?): IGDB ID: 1561
+Pokemon Ruby Version (what about Sapphire?): IGDB ID: 1557
 Pokemon Trading Card Game GBC: IGDB ID: 4567
+Pokemon Yellow Version: IGDB ID: 1512
 Rayman GBC: IGDB ID: 85578
+Resident Evil 2 2019: IGDB ID: 19686
 Singstar 2007 (had in my list that we had a 2008 one?): IGDB ID: 15180
 """

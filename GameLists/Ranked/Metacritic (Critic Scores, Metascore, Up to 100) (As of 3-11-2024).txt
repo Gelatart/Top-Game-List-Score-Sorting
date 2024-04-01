@@ -22,7 +22,7 @@ Resident Evil 4
 The Orange Box
 Tekken 3
 Mass Effect 2
-The House in Fata Morgana [Dreams of the Revenants Edition]
+The House in Fata Morgana: Dreams of the Revenants Edition
 Elden Ring
 The Elder Scrolls V: Skyrim
 Half-Life
@@ -54,7 +54,7 @@ Tony Hawk's Pro Skater 4
 Devil May Cry
 Madden NFL 2002
 Batman: Arkham City
-Metroid Prime [Remastered]
+Metroid Prime Remastered
 The Legend of Zelda: Ocarina of Time 3D
 Chrono Cross
 Madden NFL 2004
@@ -67,14 +67,14 @@ BioShock Infinite
 Halo 3
 Ninja Gaiden Black
 Metal Gear Solid
-Super Mario Bros. 3 [Super Mario Advance 4]
+Super Mario Advance 4: Super Mario Bros. 3
 Grim Fandango
 Tom Clancy's Splinter Cell: Chaos Theory
 God of War Ragnarok
-Resident Evil - Code: Veronica
+Resident Evil Code: Veronica
 Burnout 3: Takedown
 Diablo
-Metal Gear Solid 3 [Subsistence]
+Metal Gear Solid 3: Subsistence
 Call of Duty: Modern Warfare 2
 Metal Gear Solid 4: Guns of the Patriots
 God of War
@@ -87,8 +87,8 @@ Gran Turismo 2
 The Last of Us Part II
 Tom Clancy's Splinter Cell: Pandora Tomorrow
 Grand Theft Auto: Chinatown Wars
-Pac-Man Championship Edition DX
-Slaves to Armok: God of Blood Chapter II - Dwarf Fortress
+Pac-Man: Championship Edition DX
+Dwarf Fortress
 Half-Life: Alyx
 Divinity: Original Sin II
 Unreal Tournament 2004
@@ -98,4 +98,4 @@ Super Mario 3D World
 StarCraft II: Wings of Liberty
 SSX
 Street Fighter IV
-Persona 4 [Golden]
+Persona 4 Golden

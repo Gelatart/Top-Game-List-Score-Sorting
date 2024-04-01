@@ -10,7 +10,7 @@ Dragon Quest [Dragon Warrior]
 Bionic Commando
 DuckTales
 Final Fantasy
-Contra [NES]
+<186207> Contra
 R.C. Pro-Am
 Excitebike
 River City Ransom

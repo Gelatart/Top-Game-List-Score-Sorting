@@ -2,7 +2,7 @@
 Pitfall!
 Missile Command
 Super Breakout
-Adventure [2600]
+Adventure
 Combat
 Space Invaders
 Dig Dug

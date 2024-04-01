@@ -121,13 +121,13 @@ Dead Rising 2: Off the Record
 Dead Space [2023]
 Narcosis
 Resident Evil [2002] [HD Remaster]
-Resident Evil 2 [2019]
+<19686> Resident Evil 2
 Resident Evil 3 [2020]
 Resident Evil 4 [2023]
 Resident Evil 7: Biohazard
 Resident Evil Village
 Blade & Soul
-Final Fantasy XIV: A Realm Reborn
+<386> Final Fantasy XIV Online: A Realm Reborn
 Lost Ark
 Onigiri
 Star Wars: The Old Republic
@@ -223,7 +223,7 @@ BioShock Infinite
 Borderlands 2
 Call of Duty: Modern Warfare [2019]
 Counter-Strike: Global Offensive
-DOOM [2016]
+<7351> Doom
 Doom Eternal
 Far Cry 4
 Gears 5
@@ -279,4 +279,4 @@ StarCraft II: Legacy of the Void
 StarCraft II: Wings of Liberty
 Supreme Commander 2
 X-COM: Chimera Squad
-X-COM: Enemy Unknown
+XCOM: Enemy Unknown

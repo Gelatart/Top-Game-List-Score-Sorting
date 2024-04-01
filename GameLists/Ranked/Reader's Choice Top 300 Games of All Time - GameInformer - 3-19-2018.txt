@@ -119,7 +119,7 @@ Street Fighter II
 PlayerUnknown's Battlegrounds
 Gears of War 3
 EarthBound
-Kingdom Hearts HD 2.5 Remix [Kingdom Hearts II Final Mix + Kingdom Hearts Birth by Sleep Final Mix + Kingdom Hearts Re:coded]
+Kingdom Hearts HD 2.5 Remix
 Stardew Valley
 Donkey Kong Country 2: Diddy's Kong Quest
 Batman: Arkham Knight
@@ -137,7 +137,7 @@ Jak and Daxter: The Precursor Legacy
 Suikoden II
 Shenmue
 Dead Space
-Pokemon Yellow
+<1512> Pokemon Yellow Version
 Ratchet & Clank: Going Commando
 Fable II
 Chrono Cross
@@ -161,8 +161,8 @@ Tales of Symphonia
 Sonic the Hedgehog 2
 Rise of the Tomb Raider
 Skies of Arcadia
-Final Fantasy XIV: A Realm Reborn
-DOOM II: Hell on Earth
+<386> Final Fantasy XIV Online: A Realm Reborn
+Doom II: Hell on Earth
 Fallout
 Sly 2: Band of Thieves
 Fortnite
@@ -171,18 +171,18 @@ Super Mario Sunshine
 Gears of War 2
 Grand Theft Auto III
 Shovel Knight
-Hearthstone: Heroes of Warcraft
+Hearthstone
 Legend of Legaia
 Diablo
 Borderlands
-Pokemon Ruby / Sapphire
+<1557> Pokemon Ruby Version
 Psychonauts
 Terraria
 Lunar: Silver Star Story Complete
 Assassin's Creed Origins
 The Legend of Zelda: Ocarina of Time 3D
 Assassin's Creed IV: Black Flag
-Counter-Strike [1.6]
+Counter-Strike
 The Pandora Directive
 Mega Man 2
 Pokemon Emerald
@@ -219,7 +219,7 @@ Shining Force II
 Super Smash Bros.
 Gran Turismo
 Fire Emblem: Awakening
-Fire Emblem Fates: Birthright and Conquest and Revelation
+<24220> Fire Emblem Fates: Birthright and Conquest and Revelation
 Donkey Kong 64
 Mafia II
 Bayonetta 2
