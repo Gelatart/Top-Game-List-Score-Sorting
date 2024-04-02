@@ -48,7 +48,7 @@ Metal Storm
 Vice: Project Doom
 Tetris [Tengen]
 Kid Niki: Radical Ninja
-Shadowgate [NES]
+Shadowgate
 Dr. Mario
 Adventures of Lolo 3
 Tecmo Super Bowl
@@ -96,6 +96,6 @@ Kickle Cubicle
 Mega Man 4
 Dragon Quest III: The Seeds of Salvation [Dragon Warrior III]
 Astyanax
-Teenage Mutant Ninja Turtles [NES]
+<86386> Teenage Mutant Ninja Turtles
 Rush'n Attack
 Ice Hockey

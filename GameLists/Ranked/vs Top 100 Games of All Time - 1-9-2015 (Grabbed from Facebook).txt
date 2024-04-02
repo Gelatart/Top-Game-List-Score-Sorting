@@ -11,7 +11,7 @@ The Wonderful 101
 The Legend of Zelda: A Link to the Past
 Grand Theft Auto: Vice City
 Kirby Super Star
-Pokemon Heart Gold / Soul Silver
+<1556> Pokemon Heart Gold Version
 The Legend of Zelda: Ocarina of Time
 StarCraft [Brood War]
 Doom II: Hell on Earth
@@ -59,7 +59,7 @@ The Legend of Zelda: Twilight Princess
 Silent Hill 2
 Fallout: New Vegas
 Shin Megami Tensei: Nocturne
-999: Nine Hours, Nine Persons, Nine Doors
+Zero Escape: Nine Hours, Nine Persons, Nine Doors
 Dark Souls
 Paper Mario: The Thousand-Year Door
 Wario Land 4

@@ -8,7 +8,7 @@ Mercs
 Ikari Warriors
 Galaxian
 Teenage Mutant Ninja Turtles [Arcade]
-The Simpsons [Arcade]
+The Simpsons Arcade Game
 X-Men [Arcade]
 Golden Axe
 Ms. Pac-Man
@@ -39,7 +39,7 @@ Golden Tee Off
 Bubble Bobble
 Rampage
 Double Dragon
-Ivan “Ironman” Stewart’s Super Off Road
+<12735> Ivan Ironman Stewart’s Super Off Road
 Space Invaders
 Asteroids
 Star Wars

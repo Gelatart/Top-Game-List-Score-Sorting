@@ -1,7 +1,7 @@
 100
 BioShock 2: Minerva's Den
 <2323> Pokemon Mystery Dungeon: Explorers of Sky
-Pokemon Heart Gold / Soul Silver
+<1556> Pokemon Heart Gold Version
 God of War III
 Half-Life 2 [Episode Two]
 Vanquish
@@ -17,9 +17,9 @@ Resident Evil 3: Nemesis
 Master of Orion II: Battle at Antares
 X-COM: UFO Defense
 Warcraft II [Battle.net Edition]
-Heroes of Might and Magic III [The Shadow of Death]
+Heroes of Might and Magic III: The Shadow of Death
 Warcraft III: The Frozen Throne
-Warcraft II [Beyond the Dark Portal]
+Warcraft II: Beyond the Dark Portal
 Dino Crisis 2
 Super Mario World: Super Mario Advance 2
 BioShock
@@ -53,7 +53,7 @@ Heroes of Might and Magic III: Armageddon's Blade
 Chrono Trigger [DS]
 Dungeon Keeper: The Deeper Dungeons
 Dungeon Keeper
-Age of Empires II [The Conquerors]
+Age of Empires II: The Conquerors
 Max Payne
 Xenogears
 Warcraft III: Reign of Chaos
@@ -86,7 +86,7 @@ Half-Life 2
 Metroid: Zero Mission
 Mother 3
 The Legend of Zelda: Collector's Edition
-Midnight Club 3 [DUB Edition]
+Midnight Club 3: DUB Edition
 Sly 2: Band of Thieves
 Grand Theft Auto: San Andreas
 Pikmin 2

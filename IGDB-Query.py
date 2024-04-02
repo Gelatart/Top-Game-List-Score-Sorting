@@ -71,14 +71,17 @@ print("Successfully completed! Goodbye!")
 #SPECIAL CASES KNOWN SO FAR:
 """
 Contra NES: IGDB ID: 186207
+Daytona USA Sega Saturn: IDGB ID: 177619
 Donkey Kong Country GBC: IGDB ID: 152752
 Doom 2016: IGDB ID: 7351
 Dragon Warrior III GBC: IGDB ID: 205600
 Final Fantasy XIV Online (A Realm Reborn) (Online reboot 2013): IGDB ID: 386
 Fire Emblem Fates: Birthright (and Conquest and Revelation): IGDB ID: 24220
+FTL: Advanced Edition (not matching for some reason?): IGDB ID: 20098
 God of War 2018: IGDB ID: 19560
 Harry Potter and the Chamber of Secrets GBC: IGDB ID: 117322
 Harry Potter and the Sorcerer's Stone GBC: IGDB ID: 118554
+Ivan "Ironman" Stewart's Super Off Road (name seems to be crashing IGDB API request?): IGDB ID: 12735
 Mario Golf GBC: IGDB ID: 135389
 Mario Tennis GBC: IGDB ID: 128874
 Metal Gear Solid GBC: IGDB ID: 5600
@@ -91,7 +94,10 @@ Perfect Dark GBC: IGDB ID: 1464
 Pokemon Black Version (what about white?): IGDB ID: 1521
 Pokemon Black Version 2 (what about white 2?): IGDB ID: 8284
 Pokemon Crystal Version: IGDB ID: 1514
+Pokemon Diamond Version (what about peral?): IGDB ID: 1560
+Pokemon Fire Red Version (what about leaf green?): IGDB ID: 1559
 Pokemon Gold Version (what about silver?): IGDB ID: 1558
+Pokemon Heart Gold Version (what about soul silver?): IGDB ID: 1556
 Pokemon Mystery Dungeon: Explorers of Sky: IGDB ID: 2323
 Pokemon Pinball: IGDB ID: 4068
 Pokemon Puzzle Challenge: IGDB ID: 49857
@@ -99,7 +105,11 @@ Pokemon Red Version (what about blue?): IGDB ID: 1561
 Pokemon Ruby Version (what about Sapphire?): IGDB ID: 1557
 Pokemon Trading Card Game GBC: IGDB ID: 4567
 Pokemon Yellow Version: IGDB ID: 1512
+Ratchet & Clank (name seems to be crashing IGDB API request?): IGDB ID: 1289
+Ratchet and Clank: Up Your Arsenal (name seems to be crashing IGDB API request?): IGDB ID: 1773
 Rayman GBC: IGDB ID: 85578
 Resident Evil 2 2019: IGDB ID: 19686
+Resident Evil 4 2023: IGDB ID: 132181
 Singstar 2007 (had in my list that we had a 2008 one?): IGDB ID: 15180
+Teenage Mutant Ninja Turtles NES: IGDB ID: 86386
 """

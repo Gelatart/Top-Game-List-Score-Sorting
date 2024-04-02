@@ -20,13 +20,13 @@ Resident Evil 4
 Pathologic 2
 Red Dead Redemption 2
 Sekiro: Shadows Die Twice
-Resident Evil 4 [2023]
+<132181> Resident Evil 4
 Hollow Knight
-Persona 3 [Reload]
+Persona 3 Reload
 Planescape: Torment
 Fallout: New Vegas
 Thief II: The Metal Age
-Umineko When They Cry
+Umineko no Naku Koro ni: Episode 1 - Legend of the Golden Witch
 Super Metroid
 Paper Mario: The Thousand-Year Door
 We Love Katamari
@@ -59,7 +59,7 @@ Final Fantasy VII
 Yume 2kki
 Dark Souls III
 Resident Evil [2002]
-Pokemon Heart Gold / Soul Silver
+<1556> Pokemon Heart Gold Version
 Metal Gear Solid
 Pizza Tower
 Super Mario World
@@ -67,7 +67,7 @@ Return of the Obra Dinn
 Echo
 Super Mario Odyssey
 Ghost Trick: Phantom Detective
-Alan Wake 2
+Alan Wake II
 Super Mario 64
 LISA: The Painful
 Cruelty Squad

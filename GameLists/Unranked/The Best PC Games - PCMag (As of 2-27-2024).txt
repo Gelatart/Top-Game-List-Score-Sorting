@@ -17,7 +17,7 @@ Darksiders III
 Death Stranding
 Devil May Cry 4 [Special Edition]
 Devil May Cry 5
-The Disney Afternoon Collection [DuckTales + DuckTales 2 + TaleSpin + Darkwing Duck + Chip 'n Dale Rescue Rangers + Chip 'n Dale Rescue Rangers 2]
+The Disney Afternoon Collection
 En Garde!
 Fall Guys: Ultimate Knock Out
 Far Cry Primal
@@ -123,7 +123,7 @@ Narcosis
 Resident Evil [2002] [HD Remaster]
 <19686> Resident Evil 2
 Resident Evil 3 [2020]
-Resident Evil 4 [2023]
+<132181> Resident Evil 4
 Resident Evil 7: Biohazard
 Resident Evil Village
 Blade & Soul
@@ -243,7 +243,7 @@ Prey [2017]
 Returnal
 Star Wars Battlefront [2015]
 Star Wars Battlefront II [2017]
-Superhot
+SuperHot
 Vanquish
 Sid Meier's Civilization: Beyond Earth
 Elite: Dangerous

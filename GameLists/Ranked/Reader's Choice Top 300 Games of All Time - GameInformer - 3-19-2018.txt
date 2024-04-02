@@ -85,7 +85,7 @@ Metal Gear Solid V: The Phantom Pain
 Diablo II
 Ratchet & Clank Future: A Crack in Time
 Final Fantasy Tactics
-Ratchet & Clank: Up Your Arsenal
+<1773> Ratchet & Clank: Up Your Arsenal
 Grand Theft Auto IV
 Portal
 Batman: Arkham Asylum
@@ -223,7 +223,7 @@ Fire Emblem: Awakening
 Donkey Kong 64
 Mafia II
 Bayonetta 2
-999: Nine Hours, Nine Persons, Nine Doors
+Zero Escape: Nine Hours, Nine Persons, Nine Doors
 Life is Strange: Before the Storm
 Tales from the Borderlands
 Sonic Mania
@@ -276,7 +276,7 @@ Call of Duty: WWII
 Gears of War 4
 LittleBigPlanet
 XCOM 2
-Pokemon Heart Gold / Soul Silver
+<1556> Pokemon Heart Gold Version
 SOCOM II: U.S. Navy SEALs
 Rome: Total War
 Ico

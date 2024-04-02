@@ -1,9 +1,9 @@
-RANKED: 60
+RANKED: 61
 UNRANKED: 25
 FORMER: 12
 UNUSED: 0
 ---
-TOTAL: 88
+TOTAL: 98
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -112,6 +112,7 @@ U-The 25 Best Sega Genesis Games - Digital Trends - 2-13-2019
 
 TOP PLATFORM OF ALL TIME (SAT):
 R-Best Sega Saturn games of all time - GamesRadar - 6-21-2017
+R-Best Sega Saturn games of all time - GamesRadar - 7-4-2022
 
 TOP PLATFORM OF ALL TIME (DC):
 R-The 25 best Dreamcast games of all time - GamesRadar - 6-20-2017

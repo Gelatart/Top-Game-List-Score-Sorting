@@ -21,7 +21,7 @@ Silent Hill 3
 Chibi-Robo!
 EarthBound
 Halo: Reach
-Ratchet & Clank
+<1289> Ratchet & Clank
 Tetris
 Resident Evil 4
 Pikmin 2
@@ -53,7 +53,7 @@ Cuphead
 Batman: Arkham Asylum
 Super Mario Sunshine
 Team Fortress 2
-Pokemon Diamond / Pearl
+<1560> Pokemon Diamond Version
 <1558> Pokemon Gold Version
 Sonic the Hedgehog 2
 Metal Gear Solid
@@ -65,7 +65,7 @@ Age of Mythology
 Mario and Luigi: Partners in Time
 Sonic the Hedgehog
 Metal Gear Solid 3: Snake Eater
-Pokemon Fire Red / Leaf Green
+<1559> Pokemon Fire Red Version
 <1561> Pokemon Red Version
 Super Mario 3D World
 Assassin's Creed II

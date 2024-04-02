@@ -46,7 +46,7 @@ class GameObject:
         self.completed = False
         self.main_platform = 'None'
         self.list_platforms = []
-        self.releaseDate = 'Unknown' #Can I set this to some date value?
+        self.release_date = 'Unknown' #Can I set this to some date value?
         self.playerCounts = []
         self.listDevelopers = []
 
@@ -66,7 +66,7 @@ class GameObject:
         self.completed = False
         self.main_platform = 'None'
         self.list_platforms = []
-        self.releaseDate = 'Unknown'  # Can I set this to some date value?
+        self.release_date = 'Unknown'  # Can I set this to some date value?
         self.playerCounts = []
         self.listDevelopers = []
 
@@ -80,7 +80,7 @@ class GameObject:
         self.completed = False
         self.main_platform = 'None'
         self.list_platforms = []
-        self.releaseDate = 'Unknown'  # Can I set this to some date value?
+        self.release_date = 'Unknown'  # Can I set this to some date value?
         self.playerCounts = []
         self.listDevelopers = []
 
@@ -235,10 +235,10 @@ try:
             attribute = next(itr)
             print(attribute)
             gameDb[title].list_platforms = attribute
-            #releaseDate
+            #release_date
             attribute = next(itr)
             print(attribute)
-            gameDb[title].releaseDate = attribute
+            gameDb[title].release_date = attribute
             #playerCounts
             attribute = next(itr)
             print(attribute)
@@ -317,12 +317,13 @@ while(igdb_check == False):
         print("Time to go looking around")
         time_speedup = 0;
         #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
-        #As of 4/1/24: 0-1 speedup, 2 is good (3)
+        #As of 4/1/24: 0-12 speedup, 13 is good (14)
         for game, details in gameDb.items():
-            if(time_speedup < 2):
+            if(time_speedup < 13):
+                print("SKIPPING!!!")
                 time_speedup += 1
                 continue
-            elif(time_speedup == 2):
+            elif(time_speedup == 13):
                 time_speedup = 0
             check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
             check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
@@ -393,7 +394,7 @@ while(igdb_check == False):
                 # input("Here we pause")
                 # Time to put the IGDB attributes into the game we are putting out to the cluster
                 gameDb[game].igdb_ID = earliest_game.id
-                gameDb[game].releaseDate = earliest_release
+                gameDb[game].release_date = earliest_release
                 # print("Time to go through platforms")
                 # Spin this while loop off into its own function eventually?
                 plat_counter = 0
@@ -603,7 +604,7 @@ for game, details in gameDb.items():
     exportDict["Completed"] = details.completed
     exportDict["Main Platform"] = details.main_platform
     exportDict["List of Platforms"] = details.list_platforms
-    exportDict["Release Date"] = details.releaseDate
+    exportDict["Release Date"] = details.release_date
     exportDict["Player Counts"] = details.playerCounts
     exportDict["Developers"] = details.listDevelopers
     exportDict["Total Count"] = details.total_count
@@ -731,7 +732,7 @@ for game in games_pulled:
     #lPlat = details.list_platforms
     sheet1.write(excel_count, 6, game['List of Platforms'])
     #^Try to strip escape chars out earlier or the items themselves
-    #rDate = details.releaseDate
+    #rDate = details.release_date
     sheet1.write(excel_count, 7, game['Release Date'].strip())
     #pCounts = details.playerCounts
     sheet1.write(excel_count, 8, game['Player Counts'])
