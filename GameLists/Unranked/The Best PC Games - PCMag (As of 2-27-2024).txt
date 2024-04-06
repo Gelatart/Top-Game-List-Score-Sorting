@@ -40,7 +40,7 @@ Mega Man Legacy Collection [Mega Man + Mega Man 2 + Mega Man 3 + Mega Man 4 + Me
 Metal Gear Rising: Revengeance
 Metal Slug 3
 Ninja Gaiden: Master Collection [Ninja Gaiden Sigma + Ninja Gaiden Sigma 2 + Ninja Gaiden 3: Razor's Edge]
-Okami [HD]
+<20744> Okami HD
 Ori and the Will of the Wisps
 Red Dead Redemption 2
 Rise of the Tomb Raider
@@ -201,7 +201,7 @@ Star Ocean: The Divine Force
 Starfield
 Harvest Moon: Friends of Mineral Town [Story of Seasons: Friends of Mineral Town]
 Tales of Arise
-Trials of Mana [2020]
+<119391> Trials of Mana
 Wasteland 2
 Wild Hearts
 The Witcher 3: Wild Hunt
@@ -234,7 +234,7 @@ Halo 2 [Anniversary]
 Halo 3
 Halo: Reach
 Halo: Spartan Strike
-Halo 5 [Forge]
+Halo 5: Forge
 Halo Infinite
 Overwatch 2
 Plants vs. Zombies: Garden Warfare 2

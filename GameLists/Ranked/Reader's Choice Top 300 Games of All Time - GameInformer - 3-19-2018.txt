@@ -181,11 +181,11 @@ Terraria
 Lunar: Silver Star Story Complete
 Assassin's Creed Origins
 The Legend of Zelda: Ocarina of Time 3D
-Assassin's Creed IV: Black Flag
+Assassin's Creed IV Black Flag
 Counter-Strike
-The Pandora Directive
+Tex Murphy: The Pandora Directive
 Mega Man 2
-Pokemon Emerald
+<1517> Pokemon Emerald Version
 Sid Meier's Civilization V
 Phoenix Wright: Ace Attorney
 God of War II
@@ -240,7 +240,7 @@ The Bard's Tale
 Diablo III
 Zork I
 Radiata Stories
-Ratchet & Clank
+<1289> Ratchet & Clank
 Final Fantasy III
 The Witcher 2: Assassins of Kings
 Ghost Trick: Phantom Detective
@@ -269,7 +269,7 @@ Starflight
 Mass Effect: Andromeda
 Final Fantasy XIII
 EverQuest
-Sid Meier's Pirates! [1987]
+Sid Meier's Pirates!
 Ori and the Blind Forest
 Star Wars: The Old Republic
 Call of Duty: WWII

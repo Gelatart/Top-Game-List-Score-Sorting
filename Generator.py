@@ -317,13 +317,13 @@ while(igdb_check == False):
         print("Time to go looking around")
         time_speedup = 0;
         #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
-        #As of 4/1/24: 0-12 speedup, 13 is good (14)
+        #As of 4/4/24: 0-8 speedup, 9 is good (10)
         for game, details in gameDb.items():
-            if(time_speedup < 13):
+            if(time_speedup < 9):
                 print("SKIPPING!!!")
                 time_speedup += 1
                 continue
-            elif(time_speedup == 13):
+            elif(time_speedup == 9):
                 time_speedup = 0
             check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
             check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '

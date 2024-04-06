@@ -25,7 +25,7 @@ FTL: Faster Than Light
 Prison Architect
 Super Mario RPG: Legend of the Seven Stars
 Full Throttle
-Command & Conquer: Red Alert 2
+<245> Command & Conquer: Red Alert 2
 SimCity 2000
 Zork
 Uncharted 2: Among Thieves

@@ -70,8 +70,13 @@ print("Successfully completed! Goodbye!")
 
 #SPECIAL CASES KNOWN SO FAR:
 """
+(Seems like using the & symbol can break queries even when it's in the name?)
+
+1080 Snowboarding: IGDB ID: 3328
+Command & Conquer: Red Alert 2 (name seems to be crashing request?): IGDB ID: 245
 Contra NES: IGDB ID: 186207
 Daytona USA Sega Saturn: IDGB ID: 177619
+Donkey Kong '94: IGDB ID: 1089
 Donkey Kong Country GBC: IGDB ID: 152752
 Doom 2016: IGDB ID: 7351
 Dragon Warrior III GBC: IGDB ID: 205600
@@ -90,11 +95,13 @@ Nights Into Dreams (2008 PC Version, because Nights + Christmas Nights): IGDB ID
 Ninja Gaiden 2004: IGDB ID: 5972
 Ninja Gaiden NES: IGDB ID: 210484 (Will it be an issue that this is a port with a parent, the arcade original?)
 Ōkami/Okami: IGDB ID: 1271
+Ōkami/Okami HD: IGDB ID: 20744
 Perfect Dark GBC: IGDB ID: 1464
 Pokemon Black Version (what about white?): IGDB ID: 1521
 Pokemon Black Version 2 (what about white 2?): IGDB ID: 8284
 Pokemon Crystal Version: IGDB ID: 1514
 Pokemon Diamond Version (what about peral?): IGDB ID: 1560
+Pokemon Emerald Version): IGDB ID: 1517
 Pokemon Fire Red Version (what about leaf green?): IGDB ID: 1559
 Pokemon Gold Version (what about silver?): IGDB ID: 1558
 Pokemon Heart Gold Version (what about soul silver?): IGDB ID: 1556
@@ -104,12 +111,15 @@ Pokemon Puzzle Challenge: IGDB ID: 49857
 Pokemon Red Version (what about blue?): IGDB ID: 1561
 Pokemon Ruby Version (what about Sapphire?): IGDB ID: 1557
 Pokemon Trading Card Game GBC: IGDB ID: 4567
+Pokemon XD: Gale of Darkness: IGDB ID: 2724
 Pokemon Yellow Version: IGDB ID: 1512
-Ratchet & Clank (name seems to be crashing IGDB API request?): IGDB ID: 1289
+Ratchet and Clank (name seems to be crashing IGDB API request?): IGDB ID: 1289
 Ratchet and Clank: Up Your Arsenal (name seems to be crashing IGDB API request?): IGDB ID: 1773
 Rayman GBC: IGDB ID: 85578
 Resident Evil 2 2019: IGDB ID: 19686
 Resident Evil 4 2023: IGDB ID: 132181
 Singstar 2007 (had in my list that we had a 2008 one?): IGDB ID: 15180
 Teenage Mutant Ninja Turtles NES: IGDB ID: 86386
+Trials of Mana 2020: IGDB ID: 119391
+Warcraft II Battle.net edition (name doesn't seem to match?): IGDB ID: 127782
 """

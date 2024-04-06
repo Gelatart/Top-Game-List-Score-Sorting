@@ -285,7 +285,7 @@ Gauntlet
 Forza Horizon 3
 Kirby's Dream Land
 Kingdom Hearts
-Assassin's Creed IV: Black Flag
+Assassin's Creed IV Black Flag
 Tennis for Two
 Combat
 Sid Meier's Railroad Tycoon
@@ -340,7 +340,7 @@ Threes!
 Yakuza 0
 Bayonetta 2
 Dead Space
-Pool of Radiance
+Advanced Dungeons & Dragons: Pool of Radiance
 <5972> Ninja Gaiden
 RollerCoaster Tycoon
 Fruit Ninja

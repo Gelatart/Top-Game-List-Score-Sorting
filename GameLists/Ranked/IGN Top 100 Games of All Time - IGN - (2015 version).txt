@@ -10,7 +10,7 @@ The Legend of Zelda: Ocarina of Time
 Halo 2
 Tetris
 Super Mario 64
-Sid Meier's Pirates! [1987]
+Sid Meier's Pirates!
 Chrono Trigger
 Super Mario World
 Minecraft
@@ -92,7 +92,7 @@ System Shock 2
 Batman: Arkham Asylum
 Super Mario World 2: Yoshi's Island
 Ico
-Donkey Kong '94
+<1089> Donkey Kong '94
 Super Mario Galaxy 2
 The Legend of Zelda: The Wind Waker
 Galaga

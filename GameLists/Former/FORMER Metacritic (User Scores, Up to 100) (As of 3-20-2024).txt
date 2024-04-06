@@ -7,7 +7,7 @@ AI: The Somnium Files
 Alundra
 Anito Legends
 Anomaly Agent
-Astro Bot Rescue Mission
+Astro Bot: Rescue Mission
 Astro's Playroom
 Atelier Sophie 2: The Alchemist of the Mysterious Dream
 Banjo-Tooie
@@ -15,7 +15,7 @@ Batman: Arkham City [Game of the Year Edition]
 Bayonetta & Vanquish
 Bayonetta 2
 Bloodborne
-Bloodborne [The Old Hunters]
+Bloodborne: The Old Hunters
 Bloodborne [Complete Edition]
 Bully
 Burnout 3: Takedown
@@ -94,7 +94,7 @@ Justice League Heroes
 The King of Fighters Collection: The Orochi Saga [KOF 94 + KOF 95 + KOF 96 + KOF 97 + KOF 98]
 Kingdom Hearts II
 Kingdom Hearts HD 2.5 Remix
-Kirby's Dream Collection [Special Edition] [Kirby's Dream Land + Kirby's Adventure + Kirby's Dream Land 2 + Kirby Super Star + Kirby's Dream Land 3 + Kirby 64: The Crystal Shards]
+Kirby's Dream Collection Special Edition
 Klonoa 2: Lunatea's Veil
 Knights of Honor
 The Last of Us [Remastered]
@@ -120,7 +120,7 @@ Metal Gear Solid 3: Snake Eater
 Metal Gear Solid 3: Subsistence
 Metal Gear Solid HD Collection
 Metroid Fusion
-Metroid Prime Trilogy [Metroid Prime + Metroid Prime 2: Echoes + Metroid Prime 3: Corruption]
+Metroid Prime: Trilogy
 MVP 07 NCAA Baseball
 NieR: Automata [Become as Gods Edition]
 Nobunaga's Ambition: Rise to Power
@@ -196,4 +196,4 @@ WWE SmackDown! Here Comes the Pain
 Xenoblade Chronicles
 Xenoblade Chronicles X
 Yggdra Union: We'll Never Fight Alone (GBA)
-Zeno Clash [Ultimate Edition]
+Zeno Clash: Ultimate Edition
