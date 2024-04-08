@@ -1,4 +1,4 @@
-RANKED: 61
+RANKED: 62
 UNRANKED: 25
 FORMER: 12
 UNUSED: 0
@@ -63,6 +63,7 @@ R-The 10 Best Post-Apocalyptic Video Games Ranked - Maxim - 8-31-2016
 
 TOP THEMATIC GENRE ALL TIME (PREHISTORIC):
 U-The 10 Best Prehistoric Video Games - Paste Magazine - 2-10-2016
+R-12 Best Prehistoric Video Games, Ranked - GameRant - 12-14-2022
 
 TOP PLATFORM OF ALL TIME (ARCADE):
 U-The 50 best arcade games of all time ever - TechRadar - 3-7-2017

@@ -39,7 +39,7 @@ Devil May Cry HD Collection [Devil May Cry + Devil May Cry 2 + Devil May Cry 3: 
 Diablo II [Lord of Destruction]
 Dino Crisis
 Dissidia 012 Final Fantasy
-DOOM [GBA]
+<259941> Doom
 DOOM II: Hell on Earth [GBA]
 Doom 3 [Resurrection of Evil]
 Dragon Ball Z: Budokai Tenkaichi 3
@@ -58,14 +58,14 @@ Final Fantasy VI [GBA]
 Final Fantasy VII
 Final Fantasy X/X-2 HD Remaster
 Final Fantasy XIV [Endwalker]
-Final Fantasy XIV [Heavensward]
+Final Fantasy XIV: Heavensward
 Final Fantasy XIV [Shadowbringers]
 Final Fantasy XIV [Stormblood]
 Final Fantasy Chronicles [Final Fantasy IV + Chrono Trigger]
 Final Fantasy Crystal Chronicles
 Final Fantasy Tactics
 Final Fantasy Tactics Advance
-Fire Emblem [GBA]
+Fire Emblem: The Blazing Blade
 Fire Emblem: Awakening
 Fire Emblem: Path of Radiance
 Fire Emblem: The Sacred Stones
@@ -97,7 +97,7 @@ Kingdom Hearts HD 2.5 Remix
 Kirby's Dream Collection Special Edition
 Klonoa 2: Lunatea's Veil
 Knights of Honor
-The Last of Us [Remastered]
+The Last of Us Remastered
 Left 4 Dead
 The Legend of Dragoon
 The Legend of Zelda: A Link Between Worlds
@@ -154,7 +154,7 @@ Resident Evil 4 [2023] [Separate Ways]
 Resident Evil Code: Veronica
 Rise of Nations
 Rome: Total War
-The Secret of Monkey Island [Special Edition]
+The Secret of Monkey Island: Special Edition
 Sekiro: Shadows Die Twice
 Shadow Hearts: Covenant
 Shadow of the Colossus
@@ -164,8 +164,8 @@ Silent Hill 2
 The Sly Collection [Sly Cooper and the Thievius Racoonus + Sly 2: Band of Thieves + Sly 3: Honor Among Thieves]
 Sonic Mania [Plus]
 SSX 3
-Star Wars: Battlefront II [2005]
-StarCraft [Brood War]
+Star Wars: Battlefront II
+StarCraft: Brood War
 The Suffering
 Suikoden II
 Suikoden V

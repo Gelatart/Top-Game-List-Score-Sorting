@@ -58,7 +58,7 @@ Persona 4
 Final Fantasy VII
 Yume 2kki
 Dark Souls III
-Resident Evil [2002]
+<24869> Resident Evil [2002]
 <1556> Pokemon Heart Gold Version
 Metal Gear Solid
 Pizza Tower
@@ -94,7 +94,7 @@ God Hand
 Star Wars: Knights of the Old Republic II - The Sith Lords
 Dwarf Fortress
 Undertale
-DOOM Eternal
+Doom Eternal
 Resident Evil 2
 Suikoden II
 Silent Hill

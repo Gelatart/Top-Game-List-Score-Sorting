@@ -42,7 +42,7 @@ Star Wars: Knights of the Old Republic
 World of Warcraft
 StarCraft
 Diablo II
-Resident Evil [2002]
+<24869> Resident Evil [2002]
 EarthBound
 Persona 4 Golden
 Counter-Strike

@@ -28,7 +28,7 @@ Gun
 Hearts of Iron III
 Heroes of Might and Magic III: The Restoration of Erathia
 Homeworld
-I Have No Mouth and I Must Scream
+I Have No Mouth, and I Must Scream
 Ikaruga
 Jagged Alliance 2
 Killer7
@@ -73,7 +73,7 @@ Vampire: The Masquerade - Bloodlines
 The Void
 Wario Land II
 The World Ends with You
-Wizardry VII: Crusaders of the Dark Savant
+Wizardry: Crusaders of the Dark Savant
 X-COM: UFO Defense 
 Xenogears
 Ys: The Oath in Felghana

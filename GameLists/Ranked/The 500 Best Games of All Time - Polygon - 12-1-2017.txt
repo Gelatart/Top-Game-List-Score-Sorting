@@ -20,7 +20,7 @@ Castlevania: Symphony of the Night
 Sid Meier's Civilization II
 The Legend of Zelda: A Link to the Past
 Super Mario Bros.
-FIFA 12
+FIFA Soccer 12
 Rogue
 Dwarf Fortress
 Metal Gear Solid
@@ -47,7 +47,7 @@ Super Mario Kart
 Mother 3
 Hero's Quest: So You Want to Be a Hero
 Shadow of the Colossus
-DotA
+Defense of the Ancients
 Mass Effect 2
 Football Manager
 Half-Life
@@ -88,8 +88,7 @@ Doom II: Hell on Earth
 NetHack
 Call of Duty 4: Modern Warfare
 Metroid
-Eve Online
-Dragon Quest [Dragon Warrior]
+Dragon Warrior
 Robotron: 2084
 Super Mario World 2: Yoshi's Island
 Guitar Hero II
@@ -125,13 +124,13 @@ Rock Band 2
 Mike Tyson's Punch-Out!!
 Uncharted 2: Among Thieves
 Cart Life
-Dune II: The Building of a Dynasty [Dune: Battle for Arakis]
+Dune II: The Building of a Dynasty
 Rock Band
 Undertale
 Her Story
 Vampire: The Masquerade - Redemption
 Kirby: Canvas Curse
-Street Fighter III: 3rd Strike - Fight for the Future 
+Street Fighter III: 3rd Strike
 Hearthstone
 Kirby's Adventure
 Phantasy Star Online
@@ -149,7 +148,7 @@ Super Mario 3D World
 Animal Crossing: New Leaf
 SoulCalibur II
 Metroid Prime
-The Walking Dead [Season One]
+The Walking Dead: The Complete First Season
 Geometry Wars: Retro Evolved
 Pac-Man: Championship Edition DX
 Assassin's Creed II
@@ -161,7 +160,7 @@ Crusader Kings II
 DEFCON
 Defender
 Dragon Quest VIII: Journey of the Cursed King
-FS1 Flight Simulator
+Flight Simulator
 Galaga
 Giants: Citizen Kabuto
 Homeworld 2
@@ -345,7 +344,7 @@ Advanced Dungeons & Dragons: Pool of Radiance
 RollerCoaster Tycoon
 Fruit Ninja
 Bastion
-Hitman [2016]
+<11157> Hitman
 Max Payne 2: The Fall of Max Payne
 Tony Hawk's Pro Skater 3
 Forza Motorsport 4
@@ -402,7 +401,7 @@ Braid
 Mirror's Edge
 LittleBigPlanet
 Tiger Woods PGA Tour 12
-Star Wars: Knights of the Old Republic II: The Sith Lords
+Star Wars: Knights of the Old Republic II - The Sith Lords
 Thief: The Dark Project
 Deus Ex Machina
 Metal Gear Solid: Peace Walker
@@ -438,7 +437,7 @@ Indiana Jones and the Fate of Atlantis
 Devil May Cry
 WWF No Mercy
 Kerbal Space Program
-Need for Speed: Most Wanted [2012]
+<3193> Need for Speed: Most Wanted
 Super Castlevania IV
 Mario Paint
 Jetpack Joyride
@@ -448,7 +447,7 @@ Vanquish
 Sonic Colors
 BioShock 2
 Final Fantasy X
-Hitman Go
+Hitman GO
 Professor Layton and the Unwound Future
 The Witcher 2: Assassins of Kings
 Angry Birds

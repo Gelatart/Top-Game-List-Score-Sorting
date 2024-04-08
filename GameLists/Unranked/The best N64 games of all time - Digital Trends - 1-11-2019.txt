@@ -9,7 +9,7 @@ Bomberman 64
 Donkey Kong 64
 Conker's Bad Fur Day
 Super Smash Bros.
-Duke Nukem 3D [Duke Nukem 64]
+Duke Nukem 64
 GoldenEye 007
 Perfect Dark
 Turok: Dinosaur Hunter
@@ -23,7 +23,7 @@ Banjo-Kazooie
 Banjo-Tooie
 Rayman 2: The Great Escape
 Dr. Mario 64
-Pokemon Puzzle League
+<3574> Pokemon Puzzle League
 Mario Kart 64
 F-Zero X
 Star Wars Episode I: Racer

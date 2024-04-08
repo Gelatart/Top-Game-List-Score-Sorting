@@ -19,7 +19,7 @@ Devil May Cry 4 [Special Edition]
 Devil May Cry 5
 The Disney Afternoon Collection
 En Garde!
-Fall Guys: Ultimate Knock Out
+Fall Guys
 Far Cry Primal
 For Honor
 Freedom Planet
@@ -27,10 +27,10 @@ Ghostrunner
 <19560> God of War [2018]
 Gunbrella
 Hi-Fi Rush
-Horizon Zero Dawn [Complete Edition]
+Horizon Zero Dawn: Complete Edition
 Immortals Fenyx Rising
 Jet Set Radio
-Katamari Damacy [Reroll]
+Katamari Damacy Reroll
 Killer is Dead [Nightmare Edition]
 Lego Batman 3: Beyond Gotham
 Lego Marvel Super Heroes
@@ -97,7 +97,7 @@ Guilty Gear Xrd -Sign-
 Killer Instinct [2013]
 The King of Fighters '98 [Ultimate Match Final Edition]
 The King of Fighters 2002 [Unlimited Match]
-The King of Fighters XIII [Steam Edition]
+The King of Fighters XIII Steam Edition
 The King of Fighters XV
 The Last Blade
 Marvel vs. Capcom Infinite
@@ -113,7 +113,7 @@ Street Fighter 30th Anniversary Collection [Street Fighter + Street Fighter II (
 Street Fighter V [Champion Edition]
 Street Fighter 6
 Tekken 7
-Marvel vs. Capcom 3: Fate of Two Worlds [Ultimate Marvel vs. Capcom 3]
+Ultimate Marvel vs. Capcom 3
 Street Fighter IV [Ultra Street Fighter IV]
 Alien: Isolation
 Dead Island
@@ -122,7 +122,7 @@ Dead Space [2023]
 Narcosis
 Resident Evil [2002] [HD Remaster]
 <19686> Resident Evil 2
-Resident Evil 3 [2020]
+Resident Evil 3
 <132181> Resident Evil 4
 Resident Evil 7: Biohazard
 Resident Evil Village
@@ -133,7 +133,7 @@ Onigiri
 Star Wars: The Old Republic
 Warframe
 World of Warcraft
-World of Warcraft [Shadowlands]
+World of Warcraft: Shadowlands
 Dota 2
 League of Legends
 Smite
@@ -158,7 +158,7 @@ Split/Second
 WRC 10 FIA World Rally Championship
 Across the Obelisk
 Baldur's Gate 3
-Crisis Core: Final Fantasy VII [Reunion]
+Crisis Core: Final Fantasy VII - Reunion
 Cyberpunk 2077
 Dark Souls II
 Dark Souls III
@@ -171,7 +171,7 @@ Dragon's Dogma [Dark Arisen]
 Dying Light 2: Stay Human
 Eastern Exorcist
 Elden Ring
-The Elder Scrolls V: Skyrim [Special Edition]
+The Elder Scrolls V: Skyrim - Special Edition
 Final Fantasy VII Remake [Intergrade]
 Final Fantasy X/X-2 HD Remaster
 Genshin Impact
@@ -181,17 +181,17 @@ Honkai: Star Rail
 Legend of Mana [Remastered]
 Mass Effect 2
 Mass Effect: Andromeda
-Mass Effect: Legendary Edition [Mass Effect + Mass Effect 2 + Mass Effect 3]
+Mass Effect Legendary Edition
 Monster Hunter Rise
 Monster Hunter: World
-Ni No Kuni II: Revenant Kingdom
+Ni no Kuni II: Revenant Kingdom
 NieR: Automata
-Nioh [Complete Edition]
+Nioh: Complete Edition
 Nioh 2 [Complete Edition]
 Persona 4 [Golden]
-Persona 5 [Royal]
+Persona 5 Royal
 Record of Lodoss War: Deedlit in Wonder Labyrinth
-Rune Factory 4 [Special]
+Rune Factory 4 Special
 RymdResa
 Sea of Stars
 Shovel Knight Dig
@@ -199,7 +199,7 @@ Soundfall
 South Park: The Fractured But Whole
 Star Ocean: The Divine Force
 Starfield
-Harvest Moon: Friends of Mineral Town [Story of Seasons: Friends of Mineral Town]
+Story of Seasons: Friends of Mineral Town
 Tales of Arise
 <119391> Trials of Mana
 Wasteland 2
@@ -229,8 +229,8 @@ Far Cry 4
 Gears 5
 Gears of War 4
 Gears of War [Ultimate Edition]
-Halo: Combat Evolved [Anniversary]
-Halo 2 [Anniversary]
+Halo: Combat Evolved Anniversary
+Halo 2: Anniversary
 Halo 3
 Halo: Reach
 Halo: Spartan Strike
@@ -241,14 +241,14 @@ Plants vs. Zombies: Garden Warfare 2
 Postal: Brain Damaged
 Prey [2017]
 Returnal
-Star Wars Battlefront [2015]
+Star Wars Battlefront
 Star Wars Battlefront II [2017]
 SuperHot
 Vanquish
 Sid Meier's Civilization: Beyond Earth
 Elite: Dangerous
 Evil Genius 2: World Domination
-Microsoft Flight Simulator [2020]
+<119295> Microsoft Flight Simulator 2020
 Minecraft
 No Man's Sky
 The Pinball Arcade
@@ -270,7 +270,7 @@ Dishonored
 Hitman 3
 Metal Gear Solid V: Ground Zeroes
 Metal Gear Solid V: The Phantom Pain
-Monaco: What's Yours is Mine
+Monaco: What's Yours Is Mine
 Battlestar Galactica Deadlock
 BattleTech
 Gears Tactics

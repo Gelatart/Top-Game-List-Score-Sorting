@@ -13,7 +13,7 @@ Grand Theft Auto: Vice City
 Kirby Super Star
 <1556> Pokemon Heart Gold Version
 The Legend of Zelda: Ocarina of Time
-StarCraft [Brood War]
+StarCraft: Brood War
 Doom II: Hell on Earth
 Vampire: The Masquerade - Bloodlines
 System Shock 2
@@ -48,7 +48,7 @@ The World Ends with You
 Diablo II
 Doom
 Persona 4
-Fire Emblem [GBA]
+Fire Emblem: The Blazing Blade
 Tales of Symphonia
 Donkey Kong Country: Tropical Freeze
 Super Mario RPG: Legend of the Seven Stars
@@ -73,7 +73,7 @@ STALKER: Shadow of Chernobyl
 Metal Gear Solid
 Metal Gear Rising: Revengeance
 Mount and Blade: Warband
-Star Wars: Battlefront II [2005]
+Star Wars: Battlefront II
 Grand Theft Auto: San Andreas
 Thief: The Dark Project
 BioShock

@@ -6,9 +6,9 @@ Mega Man 2
 Castlevania III: Dracula's Curse
 Metroid
 Mike Tyson's Punch-Out!!
-Dragon Quest [Dragon Warrior]
+Dragon Warrior
 Bionic Commando
-DuckTales
+Disney's DuckTales
 Final Fantasy
 <186207> Contra
 R.C. Pro-Am
@@ -31,13 +31,13 @@ Adventure Island
 Mega Man
 Micro Machines
 Snake Rattle 'n' Roll
-Batman: The Video Game [NES]
+Batman: The Video Game
 Gradius
 StarTropics
 Faxanadu
 Jackal
 Life Force
-Dragon Quest V: Hand of the Heavenly Bride [Dragon Warrior V]
+Dragon Warrior IV
 Battletoads [NES]
 Teenage Mutant Ninja Turtles II: The Arcade Game
 Crystalis
@@ -61,8 +61,8 @@ Rygar
 Super C
 Maniac Mansion [NES]
 Kung Fu
-Gargoyle's Quest II: The Demon Darkness
-IronSword: Wizards & Warriors II
+Gargoyle's Quest II
+Ironsword: Wizards & Warriors II
 Stinger
 Cobra Triangle
 Qix

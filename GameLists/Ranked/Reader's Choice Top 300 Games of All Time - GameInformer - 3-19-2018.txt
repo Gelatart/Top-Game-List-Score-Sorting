@@ -98,14 +98,14 @@ Paper Mario: The Thousand-Year Door
 Final Fantasy VIII
 Super Mario Bros.
 The World Ends with You
-Star Wars: Battlefront II [2005]
+Star Wars: Battlefront II
 StarCraft
-Star Wars: Knights of the Old Republic II: The Sith Lords
+Star Wars: Knights of the Old Republic II - The Sith Lords
 GoldenEye 007
 Super Mario Galaxy 2
 Secret of Mana
 Doom
-The Walking Dead [Season One]
+The Walking Dead: The Complete First Season
 Super Smash Bros. for Wii U
 God of War
 The Legend of Dragoon
@@ -125,7 +125,7 @@ Donkey Kong Country 2: Diddy's Kong Quest
 Batman: Arkham Knight
 Journey
 The Last Guardian
-Final Fantasy XI
+Final Fantasy XI Online
 Undertale
 Perfect Dark
 Monster Hunter: World
@@ -235,10 +235,10 @@ Prince of Persia: The Sands of Time
 Final Fantasy XII
 Phantasy Star Online
 Lego Dimensions
-Resident Evil [2002]
+<24869> Resident Evil [2002]
 The Bard's Tale
 Diablo III
-Zork I
+Zork
 Radiata Stories
 <1289> Ratchet & Clank
 Final Fantasy III
@@ -251,7 +251,7 @@ Jak 3
 Jet Set Radio Future
 The Legend of Heroes: Trails in the Sky
 Spec Ops: The Line
-Sly Cooper and the Thievius Racoonus
+Sly Cooper and the Thievius Raccoonus
 Splatoon
 Xenoblade Chronicles 2
 Crash Bandicoot 2: Cortex Strikes Back

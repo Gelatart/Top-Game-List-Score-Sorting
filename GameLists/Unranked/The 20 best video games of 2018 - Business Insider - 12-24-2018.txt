@@ -1,6 +1,6 @@
 20
 Monster Hunter: World
-Marvel's Spider-Man [2018]
+Marvel's Spider-Man
 Dragon Ball FighterZ
 <19560> God of War [2018]
 A Way Out
@@ -8,7 +8,7 @@ Shadow of the Tomb Raider
 Octopath Traveler
 Forza Horizon 4
 Dead Cells
-Pokemon: Let's Go, Pikachu! and Let's Go, Eevee!
+<25877> Pokemon: Let's Go, Pikachu!
 Assassin's Creed Odyssey
 Celeste
 Kirby Star Allies

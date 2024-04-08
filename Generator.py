@@ -47,8 +47,8 @@ class GameObject:
         self.main_platform = 'None'
         self.list_platforms = []
         self.release_date = 'Unknown' #Can I set this to some date value?
-        self.playerCounts = []
-        self.listDevelopers = []
+        self.player_counts = []
+        self.list_developers = []
 
     #consider storing a constantly updated average score?
 
@@ -67,8 +67,8 @@ class GameObject:
         self.main_platform = 'None'
         self.list_platforms = []
         self.release_date = 'Unknown'  # Can I set this to some date value?
-        self.playerCounts = []
-        self.listDevelopers = []
+        self.player_counts = []
+        self.list_developers = []
 
     def __init__(self, rank, list, total):
         self.igdb_ID = None
@@ -81,8 +81,8 @@ class GameObject:
         self.main_platform = 'None'
         self.list_platforms = []
         self.release_date = 'Unknown'  # Can I set this to some date value?
-        self.playerCounts = []
-        self.listDevelopers = []
+        self.player_counts = []
+        self.list_developers = []
 
     #CONSIDER MAKING AN EXPORT FUNCTION FOR THE CLASS TO CONVERT TO DICTIONARY?
 
@@ -239,14 +239,14 @@ try:
             attribute = next(itr)
             print(attribute)
             gameDb[title].release_date = attribute
-            #playerCounts
+            #player_counts
             attribute = next(itr)
             print(attribute)
-            gameDb[title].playerCounts = attribute
-            #listDevelopers
+            gameDb[title].player_counts = attribute
+            #list_developers
             attribute = next(itr)
             print(attribute)
-            gameDb[title].listDevelopers = attribute
+            gameDb[title].list_developers = attribute
             print('')
         #else: supposed to be in database?
 except StopIteration:
@@ -317,13 +317,13 @@ while(igdb_check == False):
         print("Time to go looking around")
         time_speedup = 0;
         #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
-        #As of 4/4/24: 0-8 speedup, 9 is good (10)
+        #As of 4/8/24: 0-16 speedup, 17 is good (18)
         for game, details in gameDb.items():
-            if(time_speedup < 9):
-                print("SKIPPING!!!")
+            if(time_speedup < 17):
+                print("SKIPPING!!")
                 time_speedup += 1
                 continue
-            elif(time_speedup == 9):
+            elif(time_speedup == 17):
                 time_speedup = 0
             check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
             check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
@@ -517,10 +517,15 @@ while(igdb_check == False):
                 # gameDb[game].main_platform = earliest_game.platforms[0]
                 gameDb[game].main_platform = main_plat  # Will this always pull best choice?
                 # gameDb[game].list_platforms = earliest_game.platforms
-                gameDb[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
-                gameDb[game].playerCounts = earliest_game.game_modes  # Changes approach but for the better?
+                if(len(list_plats) > 0):
+                    gameDb[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
+                modes = earliest_game.game_modes
+                if(len(modes) > 0):
+                    gameDb[game].player_counts = modes # Changes approach but for the better?
                 # ^Also consider multiplayer_modes?
-                gameDb[game].listDevelopers = earliest_game.involved_companies  # Will this grab the most definitive list?
+                developers = earliest_game.involved_companies
+                if(len(developers) > 0):
+                    gameDb[game].list_developers = developers  # Will this grab the most definitive list?
             elif (len(games) == 1):
                 current_game = games[0]
                 # print(games)
@@ -533,7 +538,7 @@ while(igdb_check == False):
             else:
                 # print(result)
                 print("Not found with that name!")
-                input("Maybe you need to alter the title somehow?\n")
+                #input("Maybe you need to alter the title somehow?\n")
 
         # When there is ID confusion, need to clarify ID when putting entries
         # Have a process that runs through when generating databases and pauses
@@ -605,8 +610,8 @@ for game, details in gameDb.items():
     exportDict["Main Platform"] = details.main_platform
     exportDict["List of Platforms"] = details.list_platforms
     exportDict["Release Date"] = details.release_date
-    exportDict["Player Counts"] = details.playerCounts
-    exportDict["Developers"] = details.listDevelopers
+    exportDict["Player Counts"] = details.player_counts
+    exportDict["Developers"] = details.list_developers
     exportDict["Total Count"] = details.total_count
     insertion = mon_col.insert_one(exportDict)
 #insertion = mon_col.insert_many(gameDb)
@@ -728,16 +733,18 @@ for game in games_pulled:
         output_lists += ", "
     sheet1.write(excel_count, 4, output_lists)
     #mPlat = details.main_platform
-    sheet1.write(excel_count, 5, game['Main Platform'].strip())
+    #sheet1.write(excel_count, 5, game['Main Platform'].strip())
+    sheet1.write(excel_count, 5, game['Main Platform'])
     #lPlat = details.list_platforms
     sheet1.write(excel_count, 6, game['List of Platforms'])
     #^Try to strip escape chars out earlier or the items themselves
     #rDate = details.release_date
-    sheet1.write(excel_count, 7, game['Release Date'].strip())
-    #pCounts = details.playerCounts
+    #sheet1.write(excel_count, 7, game['Release Date'].strip())
+    sheet1.write(excel_count, 7, game['Release Date'])
+    #pCounts = details.player_counts
     sheet1.write(excel_count, 8, game['Player Counts'])
     # ^Try to strip escape chars out earlier or the items themselves
-    #lDevs = details.listDevelopers
+    #lDevs = details.list_developers
     sheet1.write(excel_count, 9, game['Developers'])
     # ^Try to strip escape chars out earlier or the items themselves
     excel_count += 1

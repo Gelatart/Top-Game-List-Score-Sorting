@@ -6,7 +6,7 @@ God of War III
 Half-Life 2: Episode Two
 Vanquish
 Z.H.P. Unlosing Ranger vs. Darkdeath Evilman
-Umineko When They Cry - Question Arcs
+Umineko When They Cry: Question Arcs
 Gears of War 2 [Game of the Year Edition]
 Final Fantasy Tactics: The War of the Lions
 Cory in the House [DS]
@@ -31,7 +31,7 @@ God of War II
 The King of Fighters '98 [Ultimate Match]
 Dungeon Keeper 2
 Spyro 2: Ripto's Rage!
-Resident Evil [2002]
+<24869> Resident Evil [2002]
 Valkyrie Profile 2: Silmeria
 Deus Ex
 Ace Combat 5: The Unsung War
@@ -90,12 +90,12 @@ Midnight Club 3: DUB Edition
 Sly 2: Band of Thieves
 Grand Theft Auto: San Andreas
 Pikmin 2
-Super Mario Bros. 3 [Super Mario Advance 4]
+Super Mario Advance 4: Super Mario Bros. 3
 Phoenix Wright: Ace Attorney
-Gothic II [Gold Edition]
+<29207> Gothic II: Gold Edition
 The Legend of Zelda: Ocarina of Time 3D
 OneShot
 Platinum Demo: Final Fantasy XV
 Monster Rancher 1 & 2 DX
-Portal Companion Collection [Portal + Portal 2]
+Portal: Companion Collection
 World War ToonZ
