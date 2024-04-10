@@ -137,5 +137,6 @@ Teenage Mutant Ninja Turtles NES: IGDB ID: 86386
 Tony Hawk's Pro Skater 2 GBA: IGDB ID: 229927
 Trials of Mana 2020: IGDB ID: 119391
 Viva Piñata (the ñ might be throwing off the query?): IGDB ID: 7236
+The Walking Dead: The Complete First Season (not matching for some reason?): IGDB ID: 41623
 Warcraft II Battle.net edition (name doesn't seem to match?): IGDB ID: 127782
 """

@@ -317,13 +317,13 @@ while(igdb_check == False):
         print("Time to go looking around")
         time_speedup = 0;
         #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
-        #As of 4/8/24: 0-16 speedup, 17 is good (18)
+        #As of 4/9/24: 0-15 speedup, 16 is good (17)
         for game, details in gameDb.items():
-            if(time_speedup < 17):
+            if(time_speedup < 16):
                 print("SKIPPING!!")
                 time_speedup += 1
                 continue
-            elif(time_speedup == 17):
+            elif(time_speedup == 16):
                 time_speedup = 0
             check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
             check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
@@ -402,6 +402,7 @@ while(igdb_check == False):
                 plat_name = None
                 list_plats = []
                 while (plat_counter < len(earliest_game.platforms)):
+                    #plat_next = plat_counter + 1
                     plat_ID = earliest_game.platforms[plat_counter]
                     # print(plat_ID)
                     # print(plat_ID.value)
@@ -538,7 +539,7 @@ while(igdb_check == False):
             else:
                 # print(result)
                 print("Not found with that name!")
-                #input("Maybe you need to alter the title somehow?\n")
+                input("Maybe you need to alter the title somehow?\n")
 
         # When there is ID confusion, need to clarify ID when putting entries
         # Have a process that runs through when generating databases and pauses
@@ -577,11 +578,11 @@ while(igdb_check == False):
 #Used code sample from Atlas on how to connect with Pymongo for assistance here
 #Connecting to env file to get private login data
 mon_connect = os.getenv('MONGO_URI')
-#monClient = pymongo.MongoClient(mon_connect)
-monClient = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
-monDB = monClient["GameSorting"]
+#mon_client = pymongo.MongoClient(mon_connect)
+mon_client = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
+monDB = mon_client["GameSorting"]
 try:
-    monClient.admin.command('ping')
+    mon_client.admin.command('ping')
     print("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
     print(e)
