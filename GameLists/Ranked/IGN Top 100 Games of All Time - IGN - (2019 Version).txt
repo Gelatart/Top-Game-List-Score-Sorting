@@ -33,7 +33,7 @@ Shadow of the Colossus
 Resident Evil 4
 Metroid Prime
 Bloodborne
-Pokemon Yellow
+<1512> Pokemon Yellow Version
 Mass Effect 2
 Final Fantasy VI
 Fallout: New Vegas
@@ -41,10 +41,10 @@ Star Wars: Knights of the Old Republic
 World of Warcraft
 StarCraft
 Diablo II
-Resident Evil [2002]
+<24869> Resident Evil [2002]
 EarthBound
 Left 4 Dead 2
-Counter-Strike [1.6]
+Counter-Strike
 Ms. Pac-Man
 Baldur's Gate II: Shadows of Amn
 Deus Ex
@@ -65,7 +65,7 @@ Rock Band
 The Sims
 Donkey Kong
 Spelunky
-Star Wars Jedi Knight II: Jedi Outcast
+Star Wars: Jedi Knight II - Jedi Outcast
 Mario Kart 8 Deluxe
 Dota 2
 Battlefield 1942
@@ -79,10 +79,10 @@ Fortnite
 Persona 5
 Grand Theft Auto: Vice City
 System Shock 2
-Resident Evil 2 [2019]
+<19686> Resident Evil 2
 Monster Hunter: World
 Tony Hawk's Pro Skater 2
-Contra [NES]
+<186207> Contra
 Inside
 SimCity 2000
 Thief II: The Metal Age
@@ -93,7 +93,7 @@ Undertale
 Fallout 2
 Burnout 3: Takedown
 Monkey Island 2: LeChuck's Revenge
-Assassin's Creed IV: Black Flag
+Assassin's Creed IV Black Flag
 Final Fantasy VII
 Dishonored
 Divinity: Original Sin II

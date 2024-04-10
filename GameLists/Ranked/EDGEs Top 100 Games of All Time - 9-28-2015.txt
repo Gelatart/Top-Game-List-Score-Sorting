@@ -25,7 +25,7 @@ Uncharted 2: Among Thieves
 Drop7
 The Elder Scrolls V: Skyrim
 Rock Band 3
-The Legend of Zelda: Wind Waker
+The Legend of Zelda: The Wind Waker
 Splatoon
 Dishonored
 Kerbal Space Program
@@ -49,12 +49,12 @@ LittleBigPlanet 3
 Far Cry 4
 The Witcher 3: Wild Hunt
 Monster Hunter 4 Ultimate
-X-COM: Enemy Unknown
+XCOM: Enemy Unknown
 The Stanley Parable
 <1271> Okami
 Mass Effect 2
-Persona 4 [Golden]
-FTL: Advanced Edition
+Persona 4 Golden
+<20098> FTL: Advanced Edition
 Puyo Puyo
 Transistor
 Batman: Arkham Knight
@@ -62,7 +62,7 @@ EarthBound
 TowerFall
 Limbo
 Castlevania: Symphony of the Night
-Hearthstone: Heroes of Warcraft
+Hearthstone
 Metroid Prime
 Battlefield 4
 Rez
@@ -85,7 +85,7 @@ Elite: Dangerous
 R-Type Final
 The Sims 3
 F-Zero GX
-Bust-a-Move [Puzzle Bobble]
+Bust-A-Move
 Resogun
 Animal Crossing: New Leaf
 Katamari Damacy

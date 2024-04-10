@@ -2,7 +2,7 @@
 Gods Will Be Watching
 The Witcher 3: Wild Hunt
 Call of Duty: Black Ops II
-Star Wars: Knights of the Old Republic II: The Sith Lords
+Star Wars: Knights of the Old Republic II - The Sith Lords
 Mass Effect 3
 Grand Theft Auto: San Andreas
 Half-Life 2
@@ -15,7 +15,7 @@ Portal 2
 Danganronpa: Trigger Happy Havoc
 The Dig
 Tom Clancy's Splinter Cell: Double Agent
-Counter-Strike [1.6]
+Counter-Strike
 Deus Ex: Invisible War
 Max Payne 2: The Fall of Max Payne
 World in Conflict
@@ -25,7 +25,7 @@ FTL: Faster Than Light
 Prison Architect
 Super Mario RPG: Legend of the Seven Stars
 Full Throttle
-Command & Conquer: Red Alert 2
+<245> Command & Conquer: Red Alert 2
 SimCity 2000
 Zork
 Uncharted 2: Among Thieves

@@ -23,7 +23,7 @@ BioShock Infinite
 Gears of War 3
 Call of Duty 2
 Dead Rising
-Assassin's Creed: Brotherhood
+Assassin's Creed Brotherhood
 Rayman Origins
 Saints Row: The Third
 Mark of the Ninja
@@ -46,6 +46,6 @@ Fable II
 Brothers: A Tale of Two Sons
 DJ Hero 2
 Fight Night Champion
-Tom Clancy's Ghost Recon: Advanced Warfighter
+Tom Clancy's Ghost Recon Advanced Warfighter
 South Park: The Stick of Truth
-Viva Pinata
+<7236> Viva Piñata

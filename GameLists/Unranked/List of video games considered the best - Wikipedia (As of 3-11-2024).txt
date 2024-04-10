@@ -5,7 +5,7 @@ Combat
 Zork
 Space Invaders
 Asteroids
-Adventure [2600]
+Adventure
 Battlezone
 Missile Command
 Pac-Man
@@ -23,7 +23,7 @@ Robotron: 2084
 Archon: The Light and the Dark
 Lode Runner
 M.U.L.E.
-Star Wars [Arcade]
+Star Wars
 Elite
 Marble Madness
 Gauntlet
@@ -40,7 +40,7 @@ Double Dragon
 Dungeon Master
 Mike Tyson's Punch-Out!!
 R-Type
-Sid Meier's Pirates! [1987]
+Sid Meier's Pirates!
 Mega Man 2
 <210484> Ninja Gaiden
 Super Mario Bros. 3
@@ -64,7 +64,7 @@ Street Fighter II
 Super Castlevania IV
 Alone in the Dark
 Contra III: The Alien Wars
-Dune II: The Building of a Dynasty [Dune: Battle for Arakis]
+Dune II: The Building of a Dynasty
 Flashback: The Quest for Identity
 Indiana Jones and the Fate of Atlantis
 Mortal Kombat
@@ -116,7 +116,7 @@ Sid Meier's Civilization II
 Command & Conquer: Red Alert
 Duke Nukem 3D
 Mario Kart 64
-NiGHTS into Dreams...
+Nights Into Dreams...
 PaRappa the Rapper
 <1561> Pokemon Red Version
 Quake
@@ -163,9 +163,9 @@ Quake III Arena
 Shenmue
 Silent Hill
 System Shock 2
-Unreal Tournament [1999]
+Unreal Tournament
 Baldur's Gate II: Shadows of Amn
-Counter-Strike [1.6]
+Counter-Strike
 Deus Ex
 Diablo II
 Jet Set Radio

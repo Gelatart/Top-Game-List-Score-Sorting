@@ -1,9 +1,9 @@
-RANKED: 60
+RANKED: 63
 UNRANKED: 25
 FORMER: 12
 UNUSED: 0
 ---
-TOTAL: 88
+TOTAL: 100
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -17,6 +17,8 @@ R-The 500 Best Games of All Time - Polygon - 12-1-2017
 
 TOP 100 ALL TIME:
 R-100 Greatest Video Games of All Time - Popular Mechanics - 6-16-2014
+R-100 Greatest Video Games of All Time - Popular Mechanics - 3-21-2019
+R-100 Greatest Video Games of All Time - Popular Mechanics - 3-15-2022
 R-/v/'s Top 100 Games of All Time - 1-9-2015 (Grabbed from Facebook)
 R-EDGE's Top 100 Games of All Time - (2007)
 R-EDGEs Top 100 Games of All Time - (March 2009)
@@ -28,7 +30,6 @@ R-IGN Top 100 Games of All Time - IGN - (2015 version)
 R-IGN Top 100 Games of All Time - IGN - (Post-12-31-2017 Version - March 2018)
 R-IGN Top 100 Games of All Time - IGN - (2019 Version)
 R-G4TV's Top 100 Games - G4TV - (6-15-2012)
-R-100 Greatest Video Games of All Time - Popular Mechanics - 3-21-2019
 
 TOP 100(-) ALL TIME:
 R-Top 10 Video Games of All Time - The Inquirer - 5-27-2016
@@ -63,6 +64,7 @@ R-The 10 Best Post-Apocalyptic Video Games Ranked - Maxim - 8-31-2016
 
 TOP THEMATIC GENRE ALL TIME (PREHISTORIC):
 U-The 10 Best Prehistoric Video Games - Paste Magazine - 2-10-2016
+R-12 Best Prehistoric Video Games, Ranked - GameRant - 12-14-2022
 
 TOP PLATFORM OF ALL TIME (ARCADE):
 U-The 50 best arcade games of all time ever - TechRadar - 3-7-2017
@@ -112,6 +114,7 @@ U-The 25 Best Sega Genesis Games - Digital Trends - 2-13-2019
 
 TOP PLATFORM OF ALL TIME (SAT):
 R-Best Sega Saturn games of all time - GamesRadar - 6-21-2017
+R-Best Sega Saturn games of all time - GamesRadar - 7-4-2022
 
 TOP PLATFORM OF ALL TIME (DC):
 R-The 25 best Dreamcast games of all time - GamesRadar - 6-20-2017

@@ -85,7 +85,7 @@ Metal Gear Solid V: The Phantom Pain
 Diablo II
 Ratchet & Clank Future: A Crack in Time
 Final Fantasy Tactics
-Ratchet & Clank: Up Your Arsenal
+<1773> Ratchet & Clank: Up Your Arsenal
 Grand Theft Auto IV
 Portal
 Batman: Arkham Asylum
@@ -98,14 +98,14 @@ Paper Mario: The Thousand-Year Door
 Final Fantasy VIII
 Super Mario Bros.
 The World Ends with You
-Star Wars: Battlefront II [2005]
+Star Wars: Battlefront II
 StarCraft
-Star Wars: Knights of the Old Republic II: The Sith Lords
+Star Wars: Knights of the Old Republic II - The Sith Lords
 GoldenEye 007
 Super Mario Galaxy 2
 Secret of Mana
 Doom
-The Walking Dead [Season One]
+<41623> The Walking Dead: The Complete First Season
 Super Smash Bros. for Wii U
 God of War
 The Legend of Dragoon
@@ -119,13 +119,13 @@ Street Fighter II
 PlayerUnknown's Battlegrounds
 Gears of War 3
 EarthBound
-Kingdom Hearts HD 2.5 Remix [Kingdom Hearts II Final Mix + Kingdom Hearts Birth by Sleep Final Mix + Kingdom Hearts Re:coded]
+Kingdom Hearts HD 2.5 Remix
 Stardew Valley
 Donkey Kong Country 2: Diddy's Kong Quest
 Batman: Arkham Knight
 Journey
 The Last Guardian
-Final Fantasy XI
+Final Fantasy XI Online
 Undertale
 Perfect Dark
 Monster Hunter: World
@@ -137,7 +137,7 @@ Jak and Daxter: The Precursor Legacy
 Suikoden II
 Shenmue
 Dead Space
-Pokemon Yellow
+<1512> Pokemon Yellow Version
 Ratchet & Clank: Going Commando
 Fable II
 Chrono Cross
@@ -161,8 +161,8 @@ Tales of Symphonia
 Sonic the Hedgehog 2
 Rise of the Tomb Raider
 Skies of Arcadia
-Final Fantasy XIV: A Realm Reborn
-DOOM II: Hell on Earth
+<386> Final Fantasy XIV Online: A Realm Reborn
+Doom II: Hell on Earth
 Fallout
 Sly 2: Band of Thieves
 Fortnite
@@ -171,21 +171,21 @@ Super Mario Sunshine
 Gears of War 2
 Grand Theft Auto III
 Shovel Knight
-Hearthstone: Heroes of Warcraft
+Hearthstone
 Legend of Legaia
 Diablo
 Borderlands
-Pokemon Ruby / Sapphire
+<1557> Pokemon Ruby Version
 Psychonauts
 Terraria
 Lunar: Silver Star Story Complete
 Assassin's Creed Origins
 The Legend of Zelda: Ocarina of Time 3D
-Assassin's Creed IV: Black Flag
-Counter-Strike [1.6]
-The Pandora Directive
+Assassin's Creed IV Black Flag
+Counter-Strike
+Tex Murphy: The Pandora Directive
 Mega Man 2
-Pokemon Emerald
+<1517> Pokemon Emerald Version
 Sid Meier's Civilization V
 Phoenix Wright: Ace Attorney
 God of War II
@@ -219,11 +219,11 @@ Shining Force II
 Super Smash Bros.
 Gran Turismo
 Fire Emblem: Awakening
-Fire Emblem Fates: Birthright and Conquest and Revelation
+<24220> Fire Emblem Fates: Birthright and Conquest and Revelation
 Donkey Kong 64
 Mafia II
 Bayonetta 2
-999: Nine Hours, Nine Persons, Nine Doors
+Zero Escape: Nine Hours, Nine Persons, Nine Doors
 Life is Strange: Before the Storm
 Tales from the Borderlands
 Sonic Mania
@@ -235,12 +235,12 @@ Prince of Persia: The Sands of Time
 Final Fantasy XII
 Phantasy Star Online
 Lego Dimensions
-Resident Evil [2002]
+<24869> Resident Evil [2002]
 The Bard's Tale
 Diablo III
-Zork I
+Zork
 Radiata Stories
-Ratchet & Clank
+<1289> Ratchet & Clank
 Final Fantasy III
 The Witcher 2: Assassins of Kings
 Ghost Trick: Phantom Detective
@@ -251,7 +251,7 @@ Jak 3
 Jet Set Radio Future
 The Legend of Heroes: Trails in the Sky
 Spec Ops: The Line
-Sly Cooper and the Thievius Racoonus
+Sly Cooper and the Thievius Raccoonus
 Splatoon
 Xenoblade Chronicles 2
 Crash Bandicoot 2: Cortex Strikes Back
@@ -269,14 +269,14 @@ Starflight
 Mass Effect: Andromeda
 Final Fantasy XIII
 EverQuest
-Sid Meier's Pirates! [1987]
+Sid Meier's Pirates!
 Ori and the Blind Forest
 Star Wars: The Old Republic
 Call of Duty: WWII
 Gears of War 4
 LittleBigPlanet
 XCOM 2
-Pokemon Heart Gold / Soul Silver
+<1556> Pokemon Heart Gold Version
 SOCOM II: U.S. Navy SEALs
 Rome: Total War
 Ico

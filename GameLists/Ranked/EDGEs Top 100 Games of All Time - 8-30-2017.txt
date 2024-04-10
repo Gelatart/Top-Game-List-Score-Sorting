@@ -40,7 +40,7 @@ The Legend of Zelda: Majora's Mask
 Halo 3
 Shadow of the Colossus
 Inside
-Fire Emblem Fates: Birthright and Conquest and Revelation
+<24220> Fire Emblem Fates: Birthright and Conquest and Revelation
 Super Mario Maker
 Vanquish
 Dota 2
@@ -51,17 +51,17 @@ Overwatch
 Fez
 Nidhogg
 Trials Fusion
-DOOM [2016]
+<7351> Doom
 Titanfall 2
 Far Cry 4
 The Witcher 3: Wild Hunt
 Monster Hunter 4 Ultimate
-X-COM: Enemy Unknown
+XCOM: Enemy Unknown
 The Stanley Parable
 <1271> Okami
 Mass Effect 2
-Persona 4 [Golden]
-FTL: Advanced Edition
+Persona 4 Golden
+<20098> FTL: Advanced Edition
 Puyo Puyo
 Transistor
 Batman: Arkham Knight
@@ -69,7 +69,7 @@ EarthBound
 TowerFall
 Limbo
 Castlevania: Symphony of the Night
-Hearthstone: Heroes of Warcraft
+Hearthstone
 Metroid Prime
 Battlefield 4
 Sid Meier's Civilization IV
@@ -89,7 +89,7 @@ Elite: Dangerous
 R-Type Final
 The Sims 3
 F-Zero GX
-Bust-a-Move [Puzzle Bobble]
+Bust-A-Move
 Resogun
 Animal Crossing: New Leaf
 Katamari Damacy

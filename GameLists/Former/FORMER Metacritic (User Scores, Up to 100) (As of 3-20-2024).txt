@@ -7,7 +7,7 @@ AI: The Somnium Files
 Alundra
 Anito Legends
 Anomaly Agent
-Astro Bot Rescue Mission
+Astro Bot: Rescue Mission
 Astro's Playroom
 Atelier Sophie 2: The Alchemist of the Mysterious Dream
 Banjo-Tooie
@@ -15,7 +15,7 @@ Batman: Arkham City [Game of the Year Edition]
 Bayonetta & Vanquish
 Bayonetta 2
 Bloodborne
-Bloodborne [The Old Hunters]
+Bloodborne: The Old Hunters
 Bloodborne [Complete Edition]
 Bully
 Burnout 3: Takedown
@@ -23,7 +23,7 @@ Car Battler Joe
 Castlevania: Symphony of the Night
 Command & Conquer: Generals [Zero Hour]
 Conker's Bad Fur Day
-Counter-Strike [1.6]
+Counter-Strike
 Crystar
 Cyberpunk 2077 [Ultimate Edition]
 Dark Cloud 2
@@ -39,7 +39,7 @@ Devil May Cry HD Collection [Devil May Cry + Devil May Cry 2 + Devil May Cry 3: 
 Diablo II [Lord of Destruction]
 Dino Crisis
 Dissidia 012 Final Fantasy
-DOOM [GBA]
+<259941> Doom
 DOOM II: Hell on Earth [GBA]
 Doom 3 [Resurrection of Evil]
 Dragon Ball Z: Budokai Tenkaichi 3
@@ -58,14 +58,14 @@ Final Fantasy VI [GBA]
 Final Fantasy VII
 Final Fantasy X/X-2 HD Remaster
 Final Fantasy XIV [Endwalker]
-Final Fantasy XIV [Heavensward]
+Final Fantasy XIV: Heavensward
 Final Fantasy XIV [Shadowbringers]
 Final Fantasy XIV [Stormblood]
 Final Fantasy Chronicles [Final Fantasy IV + Chrono Trigger]
 Final Fantasy Crystal Chronicles
 Final Fantasy Tactics
 Final Fantasy Tactics Advance
-Fire Emblem [GBA]
+Fire Emblem: The Blazing Blade
 Fire Emblem: Awakening
 Fire Emblem: Path of Radiance
 Fire Emblem: The Sacred Stones
@@ -93,11 +93,11 @@ Jagged Alliance 2 [Wildfire]
 Justice League Heroes
 The King of Fighters Collection: The Orochi Saga [KOF 94 + KOF 95 + KOF 96 + KOF 97 + KOF 98]
 Kingdom Hearts II
-Kingdom Hearts HD 2.5 Remix [Kingdom Hearts II Final Mix + Kingdom Hearts Birth by Sleep Final Mix + Kingdom Hearts Re:coded]
-Kirby's Dream Collection [Special Edition] [Kirby's Dream Land + Kirby's Adventure + Kirby's Dream Land 2 + Kirby Super Star + Kirby's Dream Land 3 + Kirby 64: The Crystal Shards]
+Kingdom Hearts HD 2.5 Remix
+Kirby's Dream Collection Special Edition
 Klonoa 2: Lunatea's Veil
 Knights of Honor
-The Last of Us [Remastered]
+The Last of Us Remastered
 Left 4 Dead
 The Legend of Dragoon
 The Legend of Zelda: A Link Between Worlds
@@ -117,10 +117,10 @@ Max Payne 2: The Fall of Max Payne
 Mega Man Legacy Collection 2 [Mega Man 7 + Mega Man 8 + Mega Man 9 + Mega Man 10]
 Metal Gear Solid
 Metal Gear Solid 3: Snake Eater
-Metal Gear Solid 3 [Subsistence]
-Metal Gear Solid HD Collection [Metal Gear + Metal Gear 2: Solid Snake + MGS2 + MGS3 + MGS: Peace Walker]
+Metal Gear Solid 3: Subsistence
+Metal Gear Solid HD Collection
 Metroid Fusion
-Metroid Prime Trilogy [Metroid Prime + Metroid Prime 2: Echoes + Metroid Prime 3: Corruption]
+Metroid Prime: Trilogy
 MVP 07 NCAA Baseball
 NieR: Automata [Become as Gods Edition]
 Nobunaga's Ambition: Rise to Power
@@ -130,7 +130,7 @@ Outer Wilds [Echoes of the Eye]
 Paper Mario
 Paper Mario: The Thousand-Year Door
 Parasite Eve II
-Persona 4 [Golden]
+Persona 4 Golden
 Persona 5
 Pikmin 4
 Pitfall: The Lost Expedition
@@ -143,18 +143,18 @@ Predator: Concrete Jungle
 Professor Layton and the Unwound Future
 Project Warlock
 Ratchet & Clank: Going Commando
-Ratchet & Clank: Up Your Arsenal
+<1773> Ratchet & Clank: Up Your Arsenal
 Raw Danger!
 Red Dead Redemption
 Resident Evil
 Resident Evil 2
-Resident Evil 2 [2019]
+<19686> Resident Evil 2
 Resident Evil 4
 Resident Evil 4 [2023] [Separate Ways]
-Resident Evil - Code: Veronica
+Resident Evil Code: Veronica
 Rise of Nations
 Rome: Total War
-The Secret of Monkey Island [Special Edition]
+The Secret of Monkey Island: Special Edition
 Sekiro: Shadows Die Twice
 Shadow Hearts: Covenant
 Shadow of the Colossus
@@ -164,8 +164,8 @@ Silent Hill 2
 The Sly Collection [Sly Cooper and the Thievius Racoonus + Sly 2: Band of Thieves + Sly 3: Honor Among Thieves]
 Sonic Mania [Plus]
 SSX 3
-Star Wars: Battlefront II [2005]
-StarCraft [Brood War]
+Star Wars: Battlefront II
+StarCraft: Brood War
 The Suffering
 Suikoden II
 Suikoden V
@@ -196,4 +196,4 @@ WWE SmackDown! Here Comes the Pain
 Xenoblade Chronicles
 Xenoblade Chronicles X
 Yggdra Union: We'll Never Fight Alone (GBA)
-Zeno Clash [Ultimate Edition]
+Zeno Clash: Ultimate Edition

@@ -6,8 +6,8 @@ Mario Golf [GBC]
 Mario Tennis [GBC]
 Metal Gear Solid [GBC]
 Pokemon Gold / Silver
-Pokemon Crystal
-Pokemon Trading Card Game [GBC]
+<1514> Pokemon Crystal Version
+<4567> Pokemon Trading Card Game
 Super Mario Bros. [Deluxe]
-Tetris [DX]
+Tetris DX
 Wario Land 3

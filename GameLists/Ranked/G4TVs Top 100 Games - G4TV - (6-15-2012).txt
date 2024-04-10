@@ -10,7 +10,7 @@ GoldenEye 007
 Shadow of the Colossus
 World of Warcraft
 The Legend of Zelda: Ocarina of Time
-DOOM II: Hell on Earth
+Doom II: Hell on Earth
 Portal
 Uncharted 2: Among Thieves
 Donkey Kong
@@ -32,7 +32,7 @@ Super Street Fighter II Turbo
 The Elder Scrolls V: Skyrim
 Mike Tyson's Punch-Out!!
 Final Fantasy VII
-Counter-Strike [1.6]
+Counter-Strike
 Castlevania: Symphony of the Night
 Batman: Arkham City
 Halo: Combat Evolved
@@ -40,7 +40,7 @@ Super Metroid
 Tony Hawk's Pro Skater
 Space Invaders
 Super Mario 64
-Ghosts 'N Goblins
+Ghosts 'n Goblins
 Quake III Arena
 Grand Theft Auto IV
 Metal Gear Solid
@@ -58,17 +58,17 @@ Super Street Fighter IV
 <1561> Pokemon Red Version
 Ultima Online
 Day of the Tentacle
-Contra [NES]
+<186207> Contra
 God of War III
 Sid Meier's Civilization II
 Wolfenstein 3D
 NBA Jam
-Unreal Tournament [1999]
+Unreal Tournament
 Assassin's Creed II
 Minecraft
 Prince of Persia: The Sands of Time
 Double Dragon
-Star Wars [Arcade]
+Star Wars
 Wing Commander II: Vengeance of the Kilrathi
 Mortal Kombat
 Mega Man 2
@@ -81,7 +81,7 @@ Psychonauts
 Gears of War 3
 Resident Evil
 Super Smash Bros. Melee
-Ninja Gaiden [2004]
+<5972> Ninja Gaiden
 Wii Sports
 Silent Hill 2
 OutRun
@@ -97,5 +97,5 @@ BurgerTime
 Guitar Hero II
 NBA 2K11
 Pitfall!
-Words with Friends
+Words With Friends
 Pong

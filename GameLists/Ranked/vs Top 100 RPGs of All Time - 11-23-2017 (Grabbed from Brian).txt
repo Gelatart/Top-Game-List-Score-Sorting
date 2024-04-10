@@ -10,7 +10,7 @@ The Elder Scrolls III: Morrowind
 Mount and Blade: Warband
 Mother 3
 Arcanum: Of Steamworks and Magick Obscura
-Star Wars: Knights of the Old Republic II
+Star Wars: Knights of the Old Republic II - The Sith Lords
 Bloodborne
 Paper Mario: The Thousand-Year Door
 Shin Megami Tensei: Nocturne
@@ -36,12 +36,12 @@ Persona 3
 EarthBound
 The World Ends with You
 Mario & Luigi: Superstar Saga
-Pokemon Emerald
+<1517> Pokemon Emerald Version
 Mass Effect
 Final Fantasy X
 Suikoden II
 Baldur's Gate II: Shadows of Amn
-Persona 4 [Golden]
+Persona 4 Golden
 Skies of Arcadia
 Xenogears
 Secret of Mana
@@ -51,13 +51,13 @@ Dragon Age: Origins
 The Witcher 2: Assassins of Kings
 Bravely Default
 Persona 2: Innocent Sin
-Pokemon Heart Gold / Soul Silver
+<1556> Pokemon Heart Gold Version
 Shin Megami Tensei IV
 Tactics Ogre - Let Us Cling Together
 Fire Emblem: Radiant Dawn
 Dragon Quest VIII: Journey of the Cursed King
 NieR
-Pokemon Black 2 / White 2
+<8284> Pokemon Black Version 2
 Mass Effect 2
 Dark Souls III
 Final Fantasy V
@@ -68,13 +68,13 @@ Fable
 Final Fantasy XII
 Radiant Historia
 Tales of Berseria
-Pokemon Black / White
+<1521> Pokemon Black Version
 Parasite Eve
 Chrono Cross
 Golden Sun: The Lost Age
 Arx Fatalis
 Tales of Vesperia
-Pokemon Mystery Dungeon: Explorers of Sky
+<2323> Pokemon Mystery Dungeon: Explorers of Sky
 The Elder Scrolls IV: Oblivion
 The Legend of Heroes: Trails in the Sky SC
 Ultima Underworld: The Stygian Abyss
@@ -91,7 +91,7 @@ Shin Megami Tensei: Digital Devil Saga 2
 Heroes of Might and Magic III: The Restoration of Erathia
 LISA: The Painful
 Grandia
-Dragon Quest V: Hand of the Heavenly Bride [Dragon Warrior V]
+Dragon Quest V: Tenkuu no Hanayome
 Shin Megami Tensei: Digital Devil Saga 2
 Bravely Second: End Layer
 Lunar: Silver Star Story Complete

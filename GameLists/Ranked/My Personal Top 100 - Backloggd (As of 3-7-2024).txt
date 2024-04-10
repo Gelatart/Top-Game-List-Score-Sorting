@@ -21,24 +21,24 @@ Silent Hill 3
 Chibi-Robo!
 EarthBound
 Halo: Reach
-Ratchet & Clank
+<1289> Ratchet & Clank
 Tetris
 Resident Evil 4
 Pikmin 2
 Portal 2
 Katamari Damacy
 Ape Escape
-Pokemon Black / White
+<1521> Pokemon Black Version
 Super Smash Bros. Melee
 Super Mario 64
-Pokemon Black 2 / White 2
+<8284> Pokemon Black Version 2
 Danganronpa 2: Goodbye Despair
 The Legend of Zelda: The Wind Waker
 Portal
 Call of Duty: Modern Warfare 2
 Super Smash Bros. Ultimate
 Star Wars: Knights of the Old Republic
-Pokemon Ruby / Sapphire
+<1557> Pokemon Ruby Version
 Dark Souls
 Rome: Total War
 Super Mario World 2: Yoshi's Island
@@ -53,19 +53,19 @@ Cuphead
 Batman: Arkham Asylum
 Super Mario Sunshine
 Team Fortress 2
-Pokemon Diamond / Pearl
+<1560> Pokemon Diamond Version
 <1558> Pokemon Gold Version
 Sonic the Hedgehog 2
 Metal Gear Solid
 Halo 3: ODST
 Super Smash Bros. Brawl
 Dr. Mario
-Pokemon XD: Gale of Darkness
+<2724> Pokemon XD: Gale of Darkness
 Age of Mythology
-Mario and Luigi: Partners in Time
+Mario & Luigi: Partners in Time
 Sonic the Hedgehog
 Metal Gear Solid 3: Snake Eater
-Pokemon Fire Red / Leaf Green
+<1559> Pokemon Fire Red Version
 <1561> Pokemon Red Version
 Super Mario 3D World
 Assassin's Creed II
@@ -94,7 +94,7 @@ Animal Crossing: Wild World
 Super Mario 3D Land
 League of Legends
 MapleStory
-Lego Star Wars: The Complete Saga
+LEGO Star Wars: The Complete Saga
 Luigi's Mansion
 Mario Party 6
 Kirby: Squeak Squad

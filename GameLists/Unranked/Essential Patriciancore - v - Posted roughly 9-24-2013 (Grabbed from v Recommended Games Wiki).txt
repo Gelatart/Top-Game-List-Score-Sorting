@@ -1,5 +1,5 @@
 80
-999: Nine Hours, Nine Persons, Nine Doors
+Zero Escape: Nine Hours, Nine Persons, Nine Doors
 American McGee's Alice
 Alone in the Dark
 Baten Kaitos: Eternal Wings and the Lost Ocean
@@ -15,7 +15,7 @@ Dark Messiah of Might and Magic
 The Dark Spire
 Deadly Premonition
 Dungeon Keeper
-Slaves to Armok: God of Blood Chapter II - Dwarf Fortress
+Dwarf Fortress
 Eternal Darkness: Sanity's Requiem
 E.Y.E: Divine Cybermancy
 Fallout 2
@@ -28,7 +28,7 @@ Gun
 Hearts of Iron III
 Heroes of Might and Magic III: The Restoration of Erathia
 Homeworld
-I Have No Mouth and I Must Scream
+I Have No Mouth, and I Must Scream
 Ikaruga
 Jagged Alliance 2
 Killer7
@@ -73,7 +73,7 @@ Vampire: The Masquerade - Bloodlines
 The Void
 Wario Land II
 The World Ends with You
-Wizardry VII: Crusaders of the Dark Savant
+Wizardry: Crusaders of the Dark Savant
 X-COM: UFO Defense 
 Xenogears
 Ys: The Oath in Felghana

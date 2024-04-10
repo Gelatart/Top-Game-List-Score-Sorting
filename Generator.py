@@ -45,10 +45,10 @@ class GameObject:
         self.total_count = 0
         self.completed = False
         self.main_platform = 'None'
-        self.listPlatforms = []
-        self.releaseDate = 'Unknown' #Can I set this to some date value?
-        self.playerCounts = []
-        self.listDevelopers = []
+        self.list_platforms = []
+        self.release_date = 'Unknown' #Can I set this to some date value?
+        self.player_counts = []
+        self.list_developers = []
 
     #consider storing a constantly updated average score?
 
@@ -65,10 +65,10 @@ class GameObject:
         self.total_count = 0
         self.completed = False
         self.main_platform = 'None'
-        self.listPlatforms = []
-        self.releaseDate = 'Unknown'  # Can I set this to some date value?
-        self.playerCounts = []
-        self.listDevelopers = []
+        self.list_platforms = []
+        self.release_date = 'Unknown'  # Can I set this to some date value?
+        self.player_counts = []
+        self.list_developers = []
 
     def __init__(self, rank, list, total):
         self.igdb_ID = None
@@ -79,10 +79,10 @@ class GameObject:
         self.total_count = total
         self.completed = False
         self.main_platform = 'None'
-        self.listPlatforms = []
-        self.releaseDate = 'Unknown'  # Can I set this to some date value?
-        self.playerCounts = []
-        self.listDevelopers = []
+        self.list_platforms = []
+        self.release_date = 'Unknown'  # Can I set this to some date value?
+        self.player_counts = []
+        self.list_developers = []
 
     #CONSIDER MAKING AN EXPORT FUNCTION FOR THE CLASS TO CONVERT TO DICTIONARY?
 
@@ -231,22 +231,22 @@ try:
             attribute = next(itr)
             print(attribute)
             gameDb[title].main_platform = attribute
-            #listPlatforms
+            #list_platforms
             attribute = next(itr)
             print(attribute)
-            gameDb[title].listPlatforms = attribute
-            #releaseDate
+            gameDb[title].list_platforms = attribute
+            #release_date
             attribute = next(itr)
             print(attribute)
-            gameDb[title].releaseDate = attribute
-            #playerCounts
+            gameDb[title].release_date = attribute
+            #player_counts
             attribute = next(itr)
             print(attribute)
-            gameDb[title].playerCounts = attribute
-            #listDevelopers
+            gameDb[title].player_counts = attribute
+            #list_developers
             attribute = next(itr)
             print(attribute)
-            gameDb[title].listDevelopers = attribute
+            gameDb[title].list_developers = attribute
             print('')
         #else: supposed to be in database?
 except StopIteration:
@@ -301,18 +301,12 @@ while(igdb_check == False):
         wrapper = IGDBWrapper(client_id, access_token)
         input("Here we pause")
 
-        """
-        igdb_request = wrapper.api_request(
-                    'games',
-                    'fields id, name; offset 0; where platforms=48;'
-                  )
-        """
         from igdb.igdbapi_pb2 import GameResult
 
         igdb_request = wrapper.api_request(
             'games.pb',  # Note the '.pb' suffix at the endpoint
-            # 'fields name, rating; limit 5; offset 0;'
-            'fields name, rating; offset 0;'
+             'fields name, rating; limit 5; offset 0;'
+            # 'fields name, rating; offset 0;'
         )
         games_message = GameResult()
         games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
@@ -321,7 +315,16 @@ while(igdb_check == False):
         # input("Here we pause")
 
         print("Time to go looking around")
+        time_speedup = 0;
+        #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
+        #As of 4/9/24: 0-15 speedup, 16 is good (17)
         for game, details in gameDb.items():
+            if(time_speedup < 16):
+                print("SKIPPING!!")
+                time_speedup += 1
+                continue
+            elif(time_speedup == 16):
+                time_speedup = 0
             check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
             check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
             check_string += 'external_games, follows, franchises, game_localizations, game_modes, genres, '
@@ -391,7 +394,7 @@ while(igdb_check == False):
                 # input("Here we pause")
                 # Time to put the IGDB attributes into the game we are putting out to the cluster
                 gameDb[game].igdb_ID = earliest_game.id
-                gameDb[game].releaseDate = earliest_release
+                gameDb[game].release_date = earliest_release
                 # print("Time to go through platforms")
                 # Spin this while loop off into its own function eventually?
                 plat_counter = 0
@@ -399,6 +402,7 @@ while(igdb_check == False):
                 plat_name = None
                 list_plats = []
                 while (plat_counter < len(earliest_game.platforms)):
+                    #plat_next = plat_counter + 1
                     plat_ID = earliest_game.platforms[plat_counter]
                     # print(plat_ID)
                     # print(plat_ID.value)
@@ -513,11 +517,16 @@ while(igdb_check == False):
                 # input("There they are!")
                 # gameDb[game].main_platform = earliest_game.platforms[0]
                 gameDb[game].main_platform = main_plat  # Will this always pull best choice?
-                # gameDb[game].listPlatforms = earliest_game.platforms
-                gameDb[game].listPlatforms = list_plats  # Will only pull ID's for now, need to tackle later?
-                gameDb[game].playerCounts = earliest_game.game_modes  # Changes approach but for the better?
+                # gameDb[game].list_platforms = earliest_game.platforms
+                if(len(list_plats) > 0):
+                    gameDb[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
+                modes = earliest_game.game_modes
+                if(len(modes) > 0):
+                    gameDb[game].player_counts = modes # Changes approach but for the better?
                 # ^Also consider multiplayer_modes?
-                gameDb[game].listDevelopers = earliest_game.involved_companies  # Will this grab the most definitive list?
+                developers = earliest_game.involved_companies
+                if(len(developers) > 0):
+                    gameDb[game].list_developers = developers  # Will this grab the most definitive list?
             elif (len(games) == 1):
                 current_game = games[0]
                 # print(games)
@@ -569,11 +578,11 @@ while(igdb_check == False):
 #Used code sample from Atlas on how to connect with Pymongo for assistance here
 #Connecting to env file to get private login data
 mon_connect = os.getenv('MONGO_URI')
-#monClient = pymongo.MongoClient(mon_connect)
-monClient = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
-monDB = monClient["GameSorting"]
+#mon_client = pymongo.MongoClient(mon_connect)
+mon_client = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
+monDB = mon_client["GameSorting"]
 try:
-    monClient.admin.command('ping')
+    mon_client.admin.command('ping')
     print("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
     print(e)
@@ -600,10 +609,10 @@ for game, details in gameDb.items():
     exportDict["List of References"] = details.lists_referencing
     exportDict["Completed"] = details.completed
     exportDict["Main Platform"] = details.main_platform
-    exportDict["List of Platforms"] = details.listPlatforms
-    exportDict["Release Date"] = details.releaseDate
-    exportDict["Player Counts"] = details.playerCounts
-    exportDict["Developers"] = details.listDevelopers
+    exportDict["List of Platforms"] = details.list_platforms
+    exportDict["Release Date"] = details.release_date
+    exportDict["Player Counts"] = details.player_counts
+    exportDict["Developers"] = details.list_developers
     exportDict["Total Count"] = details.total_count
     insertion = mon_col.insert_one(exportDict)
 #insertion = mon_col.insert_many(gameDb)
@@ -618,12 +627,6 @@ for list in games_lists:
 
 #after printed out everything to excel, then make three printed sorted lists?
 #each time, sort excel a certain way, then print out excel factors to list?
-
-#SQLite Segment
-#conn = sqlite3.connect('games.db')
-#print("Games database opened successfully")
-#... (EXPAND THE ACTUAL TABLE CREATION, ETC.?)
-#conn.close()
 
 #further sort by keys after sorted by values?
 
@@ -731,16 +734,18 @@ for game in games_pulled:
         output_lists += ", "
     sheet1.write(excel_count, 4, output_lists)
     #mPlat = details.main_platform
-    sheet1.write(excel_count, 5, game['Main Platform'].strip())
-    #lPlat = details.listPlatforms
+    #sheet1.write(excel_count, 5, game['Main Platform'].strip())
+    sheet1.write(excel_count, 5, game['Main Platform'])
+    #lPlat = details.list_platforms
     sheet1.write(excel_count, 6, game['List of Platforms'])
     #^Try to strip escape chars out earlier or the items themselves
-    #rDate = details.releaseDate
-    sheet1.write(excel_count, 7, game['Release Date'].strip())
-    #pCounts = details.playerCounts
+    #rDate = details.release_date
+    #sheet1.write(excel_count, 7, game['Release Date'].strip())
+    sheet1.write(excel_count, 7, game['Release Date'])
+    #pCounts = details.player_counts
     sheet1.write(excel_count, 8, game['Player Counts'])
     # ^Try to strip escape chars out earlier or the items themselves
-    #lDevs = details.listDevelopers
+    #lDevs = details.list_developers
     sheet1.write(excel_count, 9, game['Developers'])
     # ^Try to strip escape chars out earlier or the items themselves
     excel_count += 1

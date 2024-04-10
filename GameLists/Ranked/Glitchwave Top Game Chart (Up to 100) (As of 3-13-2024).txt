@@ -7,7 +7,7 @@ Metal Gear Solid 3: Snake Eater
 Baldur's Gate 3
 Dark Souls
 Metal Gear Solid 2: Sons of Liberty
-Umineko When They Cry - Answer Arcs
+Umineko When They Cry: Answer Arcs
 Outer Wilds
 Half-Life: Alyx
 Deus Ex
@@ -20,13 +20,13 @@ Resident Evil 4
 Pathologic 2
 Red Dead Redemption 2
 Sekiro: Shadows Die Twice
-Resident Evil 4 [2023]
+<132181> Resident Evil 4
 Hollow Knight
-Persona 3 [Reload]
+Persona 3 Reload
 Planescape: Torment
 Fallout: New Vegas
 Thief II: The Metal Age
-Umineko When They Cry
+Umineko no Naku Koro ni: Episode 1 - Legend of the Golden Witch
 Super Metroid
 Paper Mario: The Thousand-Year Door
 We Love Katamari
@@ -46,20 +46,20 @@ Half-Life 2
 Fear & Hunger 2: Termina
 System Shock 2
 Metroid Prime
-ULTRAKILL
+Ultrakill
 Super Mario Galaxy 2
 Baldur's Gate II: Shadows of Amn
 Heroes of Might and Magic III: The Restoration of Erathia
 Rhythm Heaven Fever
-Street Fighter III: 3rd Strike - Fight for the Future
+Street Fighter III: 3rd Strike
 Vampire: The Masquerade - Bloodlines
 Persona 4
-Resident Evil 2 [2019]
+<19686> Resident Evil 2
 Final Fantasy VII
 Yume 2kki
 Dark Souls III
-Resident Evil [2002]
-Pokemon Heart Gold / Soul Silver
+<24869> Resident Evil [2002]
+<1556> Pokemon Heart Gold Version
 Metal Gear Solid
 Pizza Tower
 Super Mario World
@@ -67,7 +67,7 @@ Return of the Obra Dinn
 Echo
 Super Mario Odyssey
 Ghost Trick: Phantom Detective
-Alan Wake 2
+Alan Wake II
 Super Mario 64
 LISA: The Painful
 Cruelty Squad
@@ -78,7 +78,7 @@ Higurashi When They Cry Kai
 Silent Hill 3
 Donkey Kong Country 2: Diddy's Kong Quest
 Ace Attorney Investigations 2
-Pokemon Mystery Dungeon: Explorers of Sky
+<2323> Pokemon Mystery Dungeon: Explorers of Sky
 Minecraft
 Super Mario World 2: Yoshi's Island
 Final Fantasy IX
@@ -91,10 +91,10 @@ NieR: Automata
 Shin Megami Tensei: Nocturne
 Final Fantasy Tactics
 God Hand
-Star Wars: Knights of the Old Republic II: The Sith Lords
-Slaves to Armok: God of Blood Chapter II - Dwarf Fortress
+Star Wars: Knights of the Old Republic II - The Sith Lords
+Dwarf Fortress
 Undertale
-DOOM Eternal
+Doom Eternal
 Resident Evil 2
 Suikoden II
 Silent Hill

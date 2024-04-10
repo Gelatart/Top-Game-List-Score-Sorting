@@ -12,7 +12,7 @@ SimCity
 Commander Keen
 The Secret of Monkey Island
 Sid Meier's Civilization
-Dune II: The Building of a Dynasty [Dune: Battle for Arakis]
+Dune II: The Building of a Dynasty
 Ultima Underworld: The Stygian Abyss
 Wolfenstein 3D
 Myst
@@ -25,12 +25,12 @@ Tomb Raider
 Diablo
 Ultima Online
 Half-Life
-StarCraft [Brood War]
+StarCraft: Brood War
 Starsiege: Tribes
 Thief: The Dark Project
 Baldur's Gate
 EverQuest
-Counter-Strike [1.6]
+Counter-Strike
 System Shock 2
 Quake III Arena
 The Sims
@@ -38,12 +38,12 @@ Deus Ex
 Medal of Honor: Allied Assault
 Elder Scrolls III: Morrowind
 Battlefield 1942
-DotA
+Defense of the Ancients
 Eve Online
 Second Life
 Half-Life 2
 World of Warcraft
-Slaves to Armok: God of Blood Chapter II - Dwarf Fortress
+Dwarf Fortress
 Team Fortress 2
 Spelunky
 Minecraft

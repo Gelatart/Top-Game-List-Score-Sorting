@@ -40,7 +40,7 @@ Kirby's Dream Course
 Teenage Mutant Ninja Turtles IV: Turtles in Time
 Earthworm Jim 2
 Ogre Battle: March of the Black Queen
-E.V.O.: Search for Eden
+E.V.O. : Search for Eden
 Breath of Fire
 Demon's Crest
 Gradius III
@@ -52,13 +52,13 @@ Yoshi's Cookie
 Super Ghouls 'n Ghosts
 Ken Griffey, Jr.'s Winning Run 
 Breath of Fire II
-Bust-A-Move [Puzzle Bobble]
+Bust-A-Move
 Axelay
 Alien 3
 Earthworm Jim
 Donkey Kong Country 3: Dixie Kong's Double Trouble!
 NHL '94
-Aladdin [SNES]
+<2473> Disney's Aladdin [SNES]
 Joe & Mac 2: Lost in the Tropics
 Kirby's Dream Land 3
 Fatal Fury 2

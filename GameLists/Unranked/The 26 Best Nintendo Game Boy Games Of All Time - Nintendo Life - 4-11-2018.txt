@@ -12,13 +12,13 @@ Mega Man V [Game Boy]
 R-Type
 F-1 Race
 Double Dragon
-DuckTales
+<145268> Disney's DuckTales
 Gradius: The Interstellar Assault [Nemesis II]
 Operation C
-Tiny Toons Adventures: Babs' Big Break
+Tiny Toon Adventures: Babs' Big Break
 Kid Dracula
 Mole Mania
-Donkey Kong '94
+<1089> Donkey Kong '94
 Balloon Kid
 Bill & Ted's Excellent Game Boy Adventure: A Bogus Journey!
 Castlevania II: Belmont's Revenge
