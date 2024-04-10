@@ -97,7 +97,7 @@ sheet1 = wb.add_sheet('Sheet 1')
 
 ranked_file_count = 0
 unranked_file_count = 0
-formerFileCount = 0
+former_file_count = 0
 
 "Loop of getting the database information"
 #RANKED DIRECTORY
@@ -181,7 +181,7 @@ for filename in os.listdir(directory):
         # Using readlines()
         # file1 = open(f, 'r')
         file1 = open(f, 'r', encoding="utf-8")
-        formerFileCount += 1
+        former_file_count += 1
         starting_line = file1.readline()
         Lines = file1.readlines()
         #count = 1
@@ -317,13 +317,13 @@ while(igdb_check == False):
         print("Time to go looking around")
         time_speedup = 0;
         #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
-        #As of 4/9/24: 0-15 speedup, 16 is good (17)
+        #As of 4/9/24: 0-14 speedup, 15 is good (16)
         for game, details in gameDb.items():
-            if(time_speedup < 16):
+            if(time_speedup < 15):
                 print("SKIPPING!!")
                 time_speedup += 1
                 continue
-            elif(time_speedup == 16):
+            elif(time_speedup == 15):
                 time_speedup = 0
             check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
             check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
@@ -638,7 +638,7 @@ list_counts = "Ranked Lists: " + str(ranked_file_count)
 print(list_counts)
 list_counts = "Unranked Lists: " + str(unranked_file_count)
 print(list_counts)
-list_counts = "Former Lists: " + str(formerFileCount)
+list_counts = "Former Lists: " + str(former_file_count)
 print(list_counts)
 
 print("LISTS USED IN PROCESS:")
@@ -737,6 +737,7 @@ for game in games_pulled:
     #sheet1.write(excel_count, 5, game['Main Platform'].strip())
     sheet1.write(excel_count, 5, game['Main Platform'])
     #lPlat = details.list_platforms
+    #Create a loop to deal with printing the platforms in a comma approach
     sheet1.write(excel_count, 6, game['List of Platforms'])
     #^Try to strip escape chars out earlier or the items themselves
     #rDate = details.release_date
