@@ -20,7 +20,7 @@ Joust
 Ms. Pac-Man
 Pitfall!
 Robotron: 2084
-Archon: The Light and the Dark
+Archon
 Lode Runner
 M.U.L.E.
 Star Wars
@@ -52,7 +52,7 @@ The Secret of Monkey Island
 Speedball 2: Brutal Deluxe
 Super Mario World
 Wing Commander
-Another World [Out of this World]
+Another World
 Sid Meier's Civilization
 Final Fantasy IV
 The Legend of Zelda: A Link to the Past
@@ -136,7 +136,7 @@ Gran Turismo
 Grand Theft Auto
 Quake II
 Star Fox 64
-Star Wars Jedi Knight: Dark Forces II
+Star Wars: Jedi Knight - Dark Forces II
 Tekken 3
 Total Annihilation
 Ultima Online

@@ -248,7 +248,7 @@ Castlevania
 The Jackbox Party Pack
 Castlevania III: Dracula's Curse
 Fallout
-Pokemon Go
+<12515> Pokemon Go
 Maniac Mansion
 Star Control
 King's Quest I: Quest for the Crown
@@ -452,7 +452,7 @@ Professor Layton and the Unwound Future
 The Witcher 2: Assassins of Kings
 Angry Birds
 Dragon Age: Origins
-Archon: The Light and the Dark
+Archon
 Boulder Dash
 Cities: Skylines
 Plants vs. Zombies

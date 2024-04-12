@@ -144,13 +144,13 @@ Portal 2
 Quantum Conundrum
 Scribblenauts Unlimited
 The Swapper
-Burnout Paradise [Remastered]
+Burnout Paradise Remastered
 Dirt 5
 Forza Horizon 4
 Forza Horizon 5
 Horizon Chase Turbo
 Hotshot Racing
-Lego 2K Drive
+LEGO 2K Drive
 Need for Speed Heat
 Ridge Racer Unbounded
 Sonic & All-Stars Racing Transformed [Collection]
@@ -221,7 +221,7 @@ Battlefield 4
 Battlefield V
 BioShock Infinite
 Borderlands 2
-Call of Duty: Modern Warfare [2019]
+Call of Duty: Modern Warfare
 Counter-Strike: Global Offensive
 <7351> Doom
 Doom Eternal

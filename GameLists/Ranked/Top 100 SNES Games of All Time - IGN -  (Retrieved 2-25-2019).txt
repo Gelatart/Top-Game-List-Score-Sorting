@@ -18,7 +18,7 @@ Donkey Kong Country 2: Diddy's Kong Quest
 Super Punch-Out!!
 F-Zero
 ActRaiser
-Super Mario All-Stars [Super Mario Bros. + Super Mario Bros. 2 + Super Mario Bros. 3 + Super Mario Bros.: The Lost Levels]
+Super Mario All-Stars
 Super Castlevania IV
 Mario Paint
 The Magical Quest Starring Mickey Mouse
@@ -30,10 +30,10 @@ Donkey Kong Country
 Wario's Woods
 The Lost Vikings
 Mega Man X2
-Legend of the Mystical Ninja
+The Legend of the Mystical Ninja
 Metal Warriors
 Lufia II: Rise of the Sinistrals
-SimCity [SNES]
+<180001> SimCity [SNES]
 NBA Jam
 UN Squadron
 Kirby's Dream Course
@@ -67,7 +67,7 @@ R-Type III: The Third Lightning
 The Lion King
 Mega Man X3
 Kirby's Avalanche
-Another World [Out of this World]
+Another World
 Populous
 Jungle Strike
 Rock n' Roll Racing
@@ -75,7 +75,7 @@ Pocky & Rocky 2
 Illusion of Gaia
 Madden NFL '94
 Soul Blazer
-Shadowrun [SNES]
+<7640> Shadowrun [SNES]
 X-Men: Mutant Apocalypse
 Flashback: The Quest for Identity
 Pilotwings

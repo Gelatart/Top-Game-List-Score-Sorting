@@ -22,7 +22,7 @@ Resident Evil 4
 Sonic the Hedgehog
 Sid Meier's Civilization II
 Batman: Arkham City
-Red Dead Redemption II
+Red Dead Redemption 2
 Super Smash Bros. Ultimate
 Assassin's Creed II
 The Last of Us
@@ -82,7 +82,7 @@ Double Dragon
 Super Mario Odyssey
 Mike Tyson's Punch-Out!!
 Donkey Kong
-Prince of Persia: Sands of Time
+Prince of Persia: The Sands of Time
 Gran Turismo 3: A-Spec
 Cuphead
 Twisted Metal

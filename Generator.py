@@ -213,9 +213,10 @@ for line in completeLines:
         gameDb[line].completed = True
     #else: raise error because not in database? create it with 0 score?
 
-print("Time for attributes!")
-
+"""
 #ADD SECTION WHERE WE START GRABBING ADDITIONAL ATTRIBUTES FOR GAME DATABASE?
+#Purposefully naming this wrong for now so we don't grab from it, only from IGDB for now?
+print("Time for attributes!")
 attributesFile = open('AdditionalAttributes.txt', 'r')
 attributesLines = attributesFile.readlines()
 itr = iter(attributesLines)
@@ -251,6 +252,7 @@ try:
         #else: supposed to be in database?
 except StopIteration:
         pass
+"""
 
 #This is where the user sets whether they want to grab from the IGDB API or not
 #Maybe add options for how much to grab? How many games? What types of info? Other qualifiers?
@@ -317,13 +319,13 @@ while(igdb_check == False):
         print("Time to go looking around")
         time_speedup = 0;
         #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
-        #As of 4/9/24: 0-14 speedup, 15 is good (16)
+        #As of 4/12/24: 0-3 speedup, 4 is good (5)
         for game, details in gameDb.items():
-            if(time_speedup < 15):
+            if(time_speedup < 4):
                 print("SKIPPING!!")
                 time_speedup += 1
                 continue
-            elif(time_speedup == 15):
+            elif(time_speedup == 4):
                 time_speedup = 0
             check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
             check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
@@ -350,7 +352,9 @@ while(igdb_check == False):
                 check_string += 'where name = "'
                 check_string += game.strip()
                 check_string += '"'
-            check_string += ' & version_parent = null; offset 0;'  # 6 is cancelled,  & status != 6
+            check_string += ' & version_parent = null ; offset 0;'  # 6 is cancelled,  & status != 6
+            # | category = 3  (attempted to insert this into the query)
+            # Category is an enum, 3 means it's a bundle, is | the right way to do an or?
             # Exclude versions that aren't the parent
             # Exclude cancelled, unreleased, TBD versions?
             # Figure out how to deal with children versions? How to give points and pass on points to parent too?
@@ -492,6 +496,8 @@ while(igdb_check == False):
                         plat_name = "Neo Geo MVS"
                     elif (plat_ID.id == 80):
                         plat_name = "Neo Geo AES"
+                    elif (plat_ID.id == 88):
+                        plat_name = "Magnavox Odyssey"
                     elif (plat_ID.id == 99):
                         plat_name = "Famicom"
                     elif (plat_ID.id == 130):
@@ -733,22 +739,27 @@ for game in games_pulled:
         output_lists += ref_list
         output_lists += ", "
     sheet1.write(excel_count, 4, output_lists)
-    #mPlat = details.main_platform
     #sheet1.write(excel_count, 5, game['Main Platform'].strip())
     sheet1.write(excel_count, 5, game['Main Platform'])
-    #lPlat = details.list_platforms
     #Create a loop to deal with printing the platforms in a comma approach
-    sheet1.write(excel_count, 6, game['List of Platforms'])
-    #^Try to strip escape chars out earlier or the items themselves
-    #rDate = details.release_date
+    game_platforms = game['List of Platforms']
+    platforms_string = ""
+    plat_next = 1
+    #print(game_platforms)
+    #print(len(game_platforms))
+    #input("Here are the number of platforms")
+    for platform in game_platforms:
+        platforms_string += platform
+        if(plat_next < len(game_platforms)):
+            platforms_string += ", "
+        plat_next += 1
+    #sheet1.write(excel_count, 6, game['List of Platforms'])
+    sheet1.write(excel_count, 6, platforms_string)
     #sheet1.write(excel_count, 7, game['Release Date'].strip())
+    #^Try to strip escape chars out earlier or the items themselves
     sheet1.write(excel_count, 7, game['Release Date'])
-    #pCounts = details.player_counts
     sheet1.write(excel_count, 8, game['Player Counts'])
-    # ^Try to strip escape chars out earlier or the items themselves
-    #lDevs = details.list_developers
     sheet1.write(excel_count, 9, game['Developers'])
-    # ^Try to strip escape chars out earlier or the items themselves
     excel_count += 1
 wb.save('Sorted Database.xls')
 

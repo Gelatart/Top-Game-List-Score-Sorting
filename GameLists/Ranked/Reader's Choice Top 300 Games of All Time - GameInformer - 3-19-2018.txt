@@ -205,7 +205,7 @@ Mortal Kombat II
 League of Legends
 Sonic Adventure 2
 Flower
-Tomb Raider [2013]
+<1164> Tomb Raider [2013]
 Rocket League
 Vampire: The Masquerade - Bloodlines
 Panzer Dragoon Saga
@@ -264,7 +264,7 @@ Sid Meier's Civilization IV
 Splatoon 2
 Streets of Rage 2
 L.A. Noire
-Mount and Blade: Warband
+Mount & Blade: Warband
 Starflight
 Mass Effect: Andromeda
 Final Fantasy XIII
@@ -282,7 +282,7 @@ Rome: Total War
 Ico
 Membrane
 Fallout 2
-Xenosaga Episode III: Also Sprach Zarathustra
+Xenosaga Episode III: Also sprach Zarathustra
 Shenmue II
 Catherine
 Star Wars: TIE Fighter
