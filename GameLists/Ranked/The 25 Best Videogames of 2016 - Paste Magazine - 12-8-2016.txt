@@ -8,7 +8,7 @@ Firewatch
 No Man's Sky
 Stardew Valley
 Titanfall 2
-DOOM [2016]
+<7351> Doom [2016]
 Hyper Light Drifter
 Oxenfree
 Sid Meier's Civilization VI
@@ -21,6 +21,6 @@ Small Radios, Big Televisions
 Reigns
 Dark Souls III
 XCOM 2
-Superhot
+SuperHot
 Final Fantasy XV
 Forza Horizon 3

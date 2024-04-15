@@ -319,13 +319,13 @@ while(igdb_check == False):
         print("Time to go looking around")
         time_speedup = 0;
         #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
-        #As of 4/12/24: 0-3 speedup, 4 is good (5)
+        #As of 4/15/24: 0-11 speedup, 12 is good (13)
         for game, details in gameDb.items():
-            if(time_speedup < 4):
+            if(time_speedup < 12):
                 print("SKIPPING!!")
                 time_speedup += 1
                 continue
-            elif(time_speedup == 4):
+            elif(time_speedup == 12):
                 time_speedup = 0
             check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
             check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
@@ -763,7 +763,15 @@ for game in games_pulled:
     excel_count += 1
 wb.save('Sorted Database.xls')
 
-print("Successfully completed!")
+#Close connection to open up socket (seemed to cause problems when running generator then trying printreports?)
+mon_client.close()
+#Close cursors too?
+games_pulled.close()
+games_pulled_ranked.close()
+games_pulled_average.close()
+games_pulled_inclusion.close()
+
+print("Successfully completed! Have a good day!")
 
 """"
 REFERENCES:
@@ -785,7 +793,7 @@ Adding strings in Python: https://www.geeksforgeeks.org/python-add-one-string-to
 Counting the number of lines in file: https://pynative.com/python-count-number-of-lines-in-file/
 https://www.freecodecamp.org/news/sort-dictionary-by-value-in-python/
 https://www.geeksforgeeks.org/reading-writing-text-files-python/
-https://www.geeksforgeeks.org/convert-integer-to-string-in-python/
+Converting integer to string in Python: https://www.geeksforgeeks.org/convert-integer-to-string-in-python/
 Removing newline character from string in Python: https://www.geeksforgeeks.org/python-removing-newline-character-from-string/
 https://github.com/python-excel/xlwt/blob/master/xlwt/Style.py
 https://www.digitalocean.com/community/tutorials/python-wait-time-wait-for-input
@@ -806,4 +814,6 @@ Converting Pandas timestamp to python datetime: https://pandas.pydata.org/docs/r
 Switch statement equivalent in Python: https://www.geeksforgeeks.org/switch-case-in-python-replacement/
 Substringing a string in Python: https://www.geeksforgeeks.org/how-to-substring-a-string-in-python/
 Regex Python: https://www.geeksforgeeks.org/python-regex-re-search-vs-re-findall/
+Closing pymongo connection: https://stackoverflow.com/questions/18401015/how-to-close-a-mongodb-python-connection
+Close cursors, try 'with' connections: https://www.mongodb.com/community/forums/t/i-am-using-pymongo-do-i-have-to-close-a-mongoclient-after-use/213511
 """

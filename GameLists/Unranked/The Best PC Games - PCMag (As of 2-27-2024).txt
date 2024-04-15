@@ -7,7 +7,7 @@ Assassin's Creed Valhalla
 Axiom Verge
 Batman: Arkham City
 Bayonetta
-Blasphemous 2
+Blasphemous II
 Blazing Chrome
 Bomb Rush Cyberfunk
 Carrion
@@ -15,12 +15,12 @@ Cuphead
 Daemon X Machina
 Darksiders III
 Death Stranding
-Devil May Cry 4 [Special Edition]
+Devil May Cry 4: Special Edition
 Devil May Cry 5
 The Disney Afternoon Collection
 En Garde!
 Fall Guys
-Far Cry Primal
+Far Cry: Primal
 For Honor
 Freedom Planet
 Ghostrunner
@@ -31,39 +31,39 @@ Horizon Zero Dawn: Complete Edition
 Immortals Fenyx Rising
 Jet Set Radio
 Katamari Damacy Reroll
-Killer is Dead [Nightmare Edition]
-Lego Batman 3: Beyond Gotham
+Killer is Dead: Nightmare Edition
+LEGO Batman 3: Beyond Gotham
 Lego Marvel Super Heroes
-Marvel's Spider-Man [Remastered]
+Marvel's Spider-Man Remastered
 Mega Man 11
-Mega Man Legacy Collection [Mega Man + Mega Man 2 + Mega Man 3 + Mega Man 4 + Mega Man 5 + Mega Man 6]
+Mega Man Legacy Collection
 Metal Gear Rising: Revengeance
 Metal Slug 3
-Ninja Gaiden: Master Collection [Ninja Gaiden Sigma + Ninja Gaiden Sigma 2 + Ninja Gaiden 3: Razor's Edge]
+Ninja Gaiden: Master Collection
 <20744> Okami HD
 Ori and the Will of the Wisps
 Red Dead Redemption 2
 Rise of the Tomb Raider
 Sackboy: A Big Adventure
 Sekiro: Shadows Die Twice
-Shadow Complex [Remastered]
+Shadow Complex Remastered
 Shadow of the Tomb Raider
 Shenmue I & II
 Shock Troopers
 Shovel Knight
 Sonic Mania
-Sonic Origins [Sonic the Hedgehog + Sonic the Hedgehog 2 + Sonic the Hedgehog 3 & Knuckles + Sonic CD]
+Sonic Origins
 Soulstice
 Stray
 Tembo the Badass Elephant
 Trek to Yomi
-Uncharted: Legacy of Thieves Collection [Uncharted 4: A Thief's End + Uncharted: The Lost Legacy]
+Uncharted: Legacy of Thieves Collection
 Warframe
 Watch Dogs: Legion
-Zone of the Enders: The 2nd Runner [Mars]
+Zone of The Enders: The 2nd Runner Mars
 Batman: The Telltale Series
 Bugsnax
-D4: Dark Dreams Don't Die
+D4: Dark Dreams Don't Die - Season 1
 Firmament
 Heavy Rain
 Myst
@@ -75,12 +75,12 @@ Fortnite
 PlayerUnknown's Battlegrounds
 Rumbleverse
 Spellbreak
-Capcom Beat 'Em Up Bundle [Final Fight + Captain Commando + The King of Dragons + Knights of the Round + Warriors of Fate + Armored Warriors + Battle Circuit]
+Capcom Beat 'Em Up Bundle
 Fight'N Rage
 River City Girls
 River City Girls 2
 River City Melee Mach!!
-Scott Pilgrim vs. The World: The Game [Complete Edition]
+Scott Pilgrim vs. the World: The Game - Complete Edition
 Sifu
 Streets of Rage 4
 Teenage Mutant Ninja Turtles: Shredder's Revenge
@@ -94,33 +94,33 @@ Dragon Ball FighterZ
 Garou: Mark of the Wolves
 Guilty Gear Strive
 Guilty Gear Xrd -Sign-
-Killer Instinct [2013]
-The King of Fighters '98 [Ultimate Match Final Edition]
-The King of Fighters 2002 [Unlimited Match]
+<10354> Killer Instinct [2013]
+The King of Fighters '98 Ultimate Match Final Edition
+The King of Fighters 2002: Unlimited Match
 The King of Fighters XIII Steam Edition
 The King of Fighters XV
 The Last Blade
-Marvel vs. Capcom Infinite
-Mortal Kombat X [XL]
+Marvel vs. Capcom: Infinite
+Mortal Kombat XL
 Mortal Kombat 11
 MultiVersus
-Samurai Shodown [2019]
+<109277> Samurai Shodown [2019]
 Samurai Shodown Neo Geo Collection [Samurai Shodown + Samurai Shodown II + Samurai Shodown III + Samurai Shodown IV: Amakusa's Revenge + Samurai Shodown V (3)]
-Skullgirls [2nd Encore]
+Skullgirls: 2nd Encore
 SNK vs. Capcom: The Match of the Millennium
 SoulCalibur VI
-Street Fighter 30th Anniversary Collection [Street Fighter + Street Fighter II (5) + Street Fighter Alpha (3) + Street Fighter III (3)]
-Street Fighter V [Champion Edition]
+Street Fighter 30th Anniversary Collection
+Street Fighter V: Champion Edition
 Street Fighter 6
 Tekken 7
 Ultimate Marvel vs. Capcom 3
-Street Fighter IV [Ultra Street Fighter IV]
+Ultra Street Fighter IV
 Alien: Isolation
 Dead Island
 Dead Rising 2: Off the Record
-Dead Space [2023]
+<159119> Dead Space [2023]
 Narcosis
-Resident Evil [2002] [HD Remaster]
+<8254> Resident Evil [2002] [HD Remaster]
 <19686> Resident Evil 2
 Resident Evil 3
 <132181> Resident Evil 4
@@ -153,9 +153,9 @@ Hotshot Racing
 LEGO 2K Drive
 Need for Speed Heat
 Ridge Racer Unbounded
-Sonic & All-Stars Racing Transformed [Collection]
+Sonic & All-Stars Racing Transformed
 Split/Second
-WRC 10 FIA World Rally Championship
+WRC 10
 Across the Obelisk
 Baldur's Gate 3
 Crisis Core: Final Fantasy VII - Reunion
@@ -165,8 +165,8 @@ Dark Souls III
 Deus Ex: Mankind Divided
 Diablo III
 Diablo IV
-DIG: Deep in Galaxies
-Disco Elysium [The Final Cut]
+DIG: Deep In Galaxies
+Disco Elysium: The Final Cut
 Dragon's Dogma [Dark Arisen]
 Dying Light 2: Stay Human
 Eastern Exorcist
@@ -188,7 +188,7 @@ Ni no Kuni II: Revenant Kingdom
 NieR: Automata
 Nioh: Complete Edition
 Nioh 2 [Complete Edition]
-Persona 4 [Golden]
+Persona 4 Golden
 Persona 5 Royal
 Record of Lodoss War: Deedlit in Wonder Labyrinth
 Rune Factory 4 Special

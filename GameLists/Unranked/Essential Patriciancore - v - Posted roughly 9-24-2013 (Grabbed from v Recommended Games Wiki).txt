@@ -19,7 +19,7 @@ Dwarf Fortress
 Eternal Darkness: Sanity's Requiem
 E.Y.E: Divine Cybermancy
 Fallout 2
-Fire Emblem: Genealogy of the Holy War [Fire Emblem: Seisen no Keifu]
+Fire Emblem: Genealogy of the Holy War
 Freelancer
 Full Throttle
 God Hand
@@ -53,7 +53,7 @@ Recettear: An Item Shop's Tale
 Rez
 Riven: The Sequel to Myst
 Sanitarium
-Sengoku Rance [ADULT!]
+Sengoku Rance
 Severance: Blade of Darkness
 Shadowrun [SNES]
 Sid Meier's Alpha Centauri

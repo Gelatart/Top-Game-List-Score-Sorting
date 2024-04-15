@@ -4,10 +4,10 @@ The Legend of Zelda: Oracle of Ages
 The Legend of Zelda: Oracle of Seasons
 Mario Golf [GBC]
 Mario Tennis [GBC]
-Metal Gear Solid [GBC]
+<5600> Metal Gear Solid GBC
 Pokemon Gold / Silver
 <1514> Pokemon Crystal Version
 <4567> Pokemon Trading Card Game
-Super Mario Bros. [Deluxe]
+Super Mario Bros. Deluxe
 Tetris DX
 Wario Land 3

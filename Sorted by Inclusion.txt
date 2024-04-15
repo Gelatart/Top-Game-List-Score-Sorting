@@ -87,6 +87,7 @@ Braid --> 11
 Paper Mario: The Thousand-Year Door --> 11
 Uncharted 4: A Thief's End --> 11
 Final Fantasy IX --> 11
+Persona 4 Golden --> 11
 [x]League of Legends --> 11
 Burnout 3: Takedown --> 11
 Suikoden II --> 11
@@ -107,7 +108,6 @@ The Witness --> 10
 Super Mario Bros. --> 10
 Metal Gear Solid 2: Sons of Liberty --> 10
 Advance Wars --> 10
-Persona 4 Golden --> 10
 [x]Halo 2 --> 10
 Assassin's Creed II --> 9
 Mike Tyson's Punch-Out!! --> 9
@@ -277,6 +277,7 @@ Valkyria Chronicles --> 5
 EverQuest --> 5
 Tetris Effect --> 5
 No Man's Sky --> 5
+SuperHot --> 5
 Forza Horizon 3 --> 5
 Paper Mario --> 5
 Hades --> 5
@@ -303,6 +304,7 @@ The Legend of Zelda: Oracle of Seasons --> 4
 Wario Land 3 --> 4
 The Legend of Zelda: Link's Awakening DX --> 4
 <5600> Metal Gear Solid --> 4
+Super Mario Bros. Deluxe --> 4
 Tetris DX --> 4
 Frogger --> 4
 Joust --> 4
@@ -382,7 +384,6 @@ Kentucky Route Zero --> 3
 Power Stone 2 --> 3
 Rayman Legends --> 3
 E.V.O. : Search for Eden --> 3
-Super Mario Bros. Deluxe --> 3
 <205600> Dragon Warrior III --> 3
 Shantae --> 3
 <4068> Pokemon Pinball --> 3
@@ -519,7 +520,6 @@ Golden Sun --> 3
 Riven: The Sequel to Myst --> 3
 Blood --> 3
 Tom Clancy's Splinter Cell --> 3
-SuperHot --> 3
 Metroid Prime: Trilogy --> 3
 Twisted Metal --> 2
 Forza Motorsport 4 --> 2
@@ -534,6 +534,7 @@ Grandia II --> 2
 Saints Row: The Third --> 2
 Advance Wars: Dual Strike --> 2
 Worms Armageddon --> 2
+Far Cry: Primal --> 2
 Bonk's Adventure --> 2
 Wario Land II --> 2
 <135389> Mario Golf --> 2
@@ -587,6 +588,7 @@ World of Goo --> 2
 <103337> Divinity: Original Sin II - Definitive Edition --> 2
 Forza Motorsport --> 2
 NCAA Football 2004 --> 2
+Final Fantasy XIV: Shadowbringers --> 2
 Disco Elysium --> 2
 <132181> Resident Evil 4 --> 2
 LISA: The Painful --> 2
@@ -602,6 +604,7 @@ Persona 5 Royal --> 2
 Tom Clancy's Splinter Cell: Pandora Tomorrow --> 2
 Pac-Man: Championship Edition DX --> 2
 SSX --> 2
+Half-Life 2: Episode Two --> 2
 Warcraft III: The Frozen Throne --> 2
 Super Mario World: Super Mario Advance 2 --> 2
 Spyro 2: Ripto's Rage! --> 2
@@ -609,7 +612,7 @@ Jagged Alliance 2 --> 2
 Virtua Tennis --> 2
 <20398> Chrono Trigger [DS] --> 2
 Yoshi's Island: Super Mario Advance 3 --> 2
-Crash Bandicoot 3: Warped --> 2
+Crash Bandicoot: Warped --> 2
 Metroid: Zero Mission --> 2
 Sly 2: Band of Thieves --> 2
 <1289> Ratchet & Clank --> 2
@@ -640,7 +643,7 @@ Crisis Core: Final Fantasy VII --> 2
 Flower --> 2
 <1164> Tomb Raider [2013] --> 2
 BioShock 2 --> 2
-Ogre Battle: March of the Black Queen --> 2
+Ogre Battle: The March of the Black Queen --> 2
 Shining Force II --> 2
 Donkey Kong 64 --> 2
 The Binding of Isaac: Rebirth --> 2
@@ -654,6 +657,7 @@ Gears of War 4 --> 2
 XCOM 2 --> 2
 SOCOM II: U.S. Navy SEALs --> 2
 Mega Man X4 --> 2
+Hitman 2 --> 2
 Metro 2033 --> 2
 Sid Meier's Civilization VI --> 2
 Kentucky Route Zero: Act IV --> 2
@@ -674,8 +678,7 @@ Klonoa: Door to Phantomile --> 2
 Metal Gear Solid: Peace Walker --> 2
 God of War: Ghost of Sparta --> 2
 Dissidia 012 Final Fantasy --> 2
-DOOM [2016] --> 2
-Superhot --> 2
+<7351> Doom [2016] --> 2
 The Legend of Zelda: The Wind Waker HD --> 2
 Axiom Verge --> 2
 The Wonderful 101 --> 2
@@ -727,7 +730,7 @@ Archon --> 2
 Plants vs. Zombies --> 2
 River City Ransom --> 2
 Zelda II: The Adventure of Link --> 2
-Aladdin [Genesis] --> 2
+<8118> Disney's Aladdin [Genesis] --> 2
 Marble Madness --> 2
 Metroid II: Return of Samus --> 2
 F-Zero --> 2
@@ -780,7 +783,6 @@ Astro Bot: Rescue Mission --> 2
 Phantasy Star II --> 2
 Operation Wolf --> 2
 Rayman 2: The Great Escape --> 2
-Devil May Cry 4 [Special Edition] --> 2
 Hi-Fi Rush --> 2
 Warframe --> 2
 Dead or Alive 6 --> 2
@@ -788,6 +790,8 @@ Disco Elysium [The Final Cut] --> 2
 Final Fantasy X/X-2 HD Remaster --> 2
 Hogwarts Legacy --> 2
 Bloodborne: The Old Hunters --> 2
+Diablo II: Lord of Destruction --> 2
+The Witcher 3: Wild Hunt - Hearts of Stone --> 2
 SSX 3 --> 2
 Street Fighter II Turbo: Hyper Fighting --> 1
 The Binding of Isaac --> 1
@@ -799,7 +803,6 @@ Amplitude --> 1
 Child of Eden --> 1
 Valkyrie Profile --> 1
 Wild Arms --> 1
-Far Cry: Primal --> 1
 Dawn of Man --> 1
 Ancestors: The Humankind Odyssey --> 1
 Saurian --> 1
@@ -903,11 +906,10 @@ Words With Friends --> 1
 Championship Manager 4 --> 1
 The Walking Dead: Season One - Episode 5: No Time Left --> 1
 Robo Aleste --> 1
-Christmas NiGHTS into Dreams... --> 1
+Christmas Nights into Dreams --> 1
 <21892> Fallout 3: Game of the Year Edition --> 1
 Out of the Park Baseball 2007 --> 1
 LittleBigPlanet: Game of the Year Edition --> 1
-Final Fantasy XIV: Shadowbringers --> 1
 World Soccer: Winning Eleven 7 International --> 1
 Umineko When They Cry: Answer Arcs --> 1
 Outer Wilds --> 1
@@ -933,11 +935,10 @@ Madden NFL 2003 --> 1
 Madden NFL 2002 --> 1
 Metroid Prime Remastered --> 1
 Madden NFL 2004 --> 1
-God of War Ragnarok --> 1
+<112875> God of War Ragnarok --> 1
 Virtua Fighter 4 --> 1
 The Last of Us Part II --> 1
 BioShock 2: Minerva's Den --> 1
-Half-Life 2: Episode Two --> 1
 Z.H.P. Unlosing Ranger vs. Darkdeath Evilman --> 1
 Umineko When They Cry: Question Arcs --> 1
 Gears of War 2: Game of the Year Edition --> 1
@@ -970,7 +971,7 @@ P.N.03 --> 1
 Eternal Poison --> 1
 Steins;Gate --> 1
 Metal Gear Solid: The Legacy Collection --> 1
-God of War Saga [God of War + God of War II + God of War III + God of War: Chains of Olympus + God of War: Ghost of Sparta] --> 1
+God of War Saga --> 1
 Midnight Club 3: DUB Edition --> 1
 <29207> Gothic II: Gold Edition --> 1
 OneShot --> 1
@@ -1007,7 +1008,7 @@ Mafia II --> 1
 Life is Strange: Before the Storm --> 1
 Tales from the Borderlands --> 1
 Command & Conquer: Red Alert 2 --> 1
-Lego Dimensions --> 1
+LEGO Dimensions --> 1
 The Bard's Tale --> 1
 Radiata Stories --> 1
 Final Fantasy III --> 1
@@ -1023,13 +1024,12 @@ Xenosaga Episode III: Also sprach Zarathustra --> 1
 OverBlood --> 1
 Dragon Age II --> 1
 Metroid Prime 3: Corruption --> 1
-Hitman 2 --> 1
 Minit --> 1
 Rage --> 1
 Motorstorm: Apocalypse --> 1
 Mad Max --> 1
 Attack on Titan --> 1
-Mafia 3 --> 1
+Mafia III --> 1
 Overcooked --> 1
 A Hat in Time --> 1
 Farpoint --> 1
@@ -1038,7 +1038,7 @@ HQ Trivia --> 1
 Heat Signature --> 1
 Super Mario Party --> 1
 Dandara --> 1
-Rimworld --> 1
+RimWorld --> 1
 Tharsis --> 1
 Burly Men at Sea --> 1
 Super Mario Run --> 1
@@ -1061,7 +1061,7 @@ Dragon Quest V: Hand of the Heavenly Bride --> 1
 Sonic Rush --> 1
 Trauma Center: Under the Knife 2 --> 1
 Kirby Mass Attack --> 1
-Star Wars Rogue Leader: Rogue Squadron II --> 1
+Star Wars: Rogue Squadron II - Rogue Leader --> 1
 Skies of Arcadia Legends --> 1
 Super Mario Strikers --> 1
 Severed --> 1
@@ -1103,7 +1103,7 @@ Killzone: Liberation --> 1
 Half-Minute Hero --> 1
 Mega Man Xtreme --> 1
 Rainbow Islands --> 1
-Donkey Kong Land 3 --> 1
+Donkey Kong Land III --> 1
 Tomb Raider: Curse of the Sword --> 1
 Classic Bubble Bobble --> 1
 That Dragon, Cancer --> 1
@@ -1121,10 +1121,9 @@ Monster Hunter 3 Ultimate --> 1
 Tokyo Mirage Sessions #FE --> 1
 Deus Ex: Human Revolution - Director's Cut --> 1
 ZombiU --> 1
-Lego City: Undercover --> 1
+LEGO City Undercover --> 1
 Gods Will Be Watching --> 1
-Half-Life 2 [Episode 1] --> 1
-Half-Life 2 [Episode 2] --> 1
+Half-Life 2: Episode One --> 1
 The Dig --> 1
 Tom Clancy's Splinter Cell: Double Agent --> 1
 Deus Ex: Invisible War --> 1
@@ -1200,7 +1199,7 @@ Stunt Car Racer --> 1
 Balance of Power --> 1
 Fantastic Contraption --> 1
 Castle Crashers --> 1
-Pokemon X / Y --> 1
+<2286> Pokemon X Version --> 1
 Star Wars: X-Wing --> 1
 Ant Attack --> 1
 Beatmania --> 1
@@ -1433,14 +1432,13 @@ Rune Factory 4 --> 1
 Kingdom Hearts Final Mix --> 1
 Dragon Quest V: Tenkuu no Hanayome --> 1
 Bravely Second: End Layer --> 1
-Etrian Odyssey 3 --> 1
+Etrian Odyssey III: The Drowned City --> 1
 Kingdom Come: Deliverance --> 1
 The Messenger --> 1
 Mario Golf [GBC] --> 1
 Mario Tennis [GBC] --> 1
-Metal Gear Solid [GBC] --> 1
+<5600> Metal Gear Solid GBC --> 1
 Pokemon Gold / Silver --> 1
-Super Mario Bros. [Deluxe] --> 1
 American McGee's Alice --> 1
 Baten Kaitos: Eternal Wings and the Lost Ocean --> 1
 Beneath a Steel Sky --> 1
@@ -1450,7 +1448,7 @@ Clock Tower --> 1
 Contra: Hard Corps --> 1
 Cubivore: Survival of the Fittest --> 1
 The Dark Spire --> 1
-Fire Emblem: Genealogy of the Holy War [Fire Emblem: Seisen no Keifu] --> 1
+Fire Emblem: Genealogy of the Holy War --> 1
 Freelancer --> 1
 GrimGrimoire --> 1
 Hearts of Iron III --> 1
@@ -1464,7 +1462,7 @@ The Neverhood --> 1
 Oni --> 1
 Recettear: An Item Shop's Tale --> 1
 Sanitarium --> 1
-Sengoku Rance [ADULT!] --> 1
+Sengoku Rance --> 1
 Severance: Blade of Darkness --> 1
 Shadowrun [SNES] --> 1
 Shin Megami Tensei II --> 1
@@ -1488,7 +1486,7 @@ Theme Park --> 1
 Worms --> 1
 Grand Theft Auto --> 1
 Quake II --> 1
-Star Wars Jedi Knight: Dark Forces II --> 1
+Star Wars: Jedi Knight - Dark Forces II --> 1
 Tail of the Sun --> 1
 Tomba! --> 1
 Primal Rage --> 1
@@ -1587,7 +1585,7 @@ WinBack --> 1
 Star Wars: Rogue Squadron --> 1
 Bomberman 64 --> 1
 Duke Nukem 64 --> 1
-Pokemon Snap --> 1
+<2324> Pokemon Snap --> 1
 Mario Party --> 1
 Mario Party 2 --> 1
 Mario Party 3 --> 1
@@ -1595,7 +1593,7 @@ Glover --> 1
 Dr. Mario 64 --> 1
 <3574> Pokemon Puzzle League --> 1
 F-Zero X --> 1
-Star Wars Episode I: Racer --> 1
+Star Wars: Episode I - Racer --> 1
 Diddy Kong Racing --> 1
 Pokemon Stadium --> 1
 Ken Griffey Jr.'s Slugfest --> 1
@@ -1604,24 +1602,24 @@ NBA Showtime --> 1
 Mario Golf --> 1
 Mario Tennis --> 1
 <3328> 1080 Snowboarding --> 1
-StarCraft [StarCraft 64] --> 1
+StarCraft 64 --> 1
 30XX --> 1
 Adventures of Pip --> 1
 Armored Core VI: Fires of Rubicon --> 1
 Assassin's Creed Mirage --> 1
 Assassin's Creed Valhalla --> 1
-Blasphemous 2 --> 1
+Blasphemous II --> 1
 Blazing Chrome --> 1
 Bomb Rush Cyberfunk --> 1
 Carrion --> 1
 Daemon X Machina --> 1
 Darksiders III --> 1
 Death Stranding --> 1
+Devil May Cry 4 [Special Edition] --> 1
 Devil May Cry 5 --> 1
 The Disney Afternoon Collection --> 1
 En Garde! --> 1
 Fall Guys --> 1
-Far Cry Primal --> 1
 For Honor --> 1
 Freedom Planet --> 1
 Ghostrunner --> 1
@@ -1629,13 +1627,13 @@ Gunbrella --> 1
 Horizon Zero Dawn: Complete Edition --> 1
 Immortals Fenyx Rising --> 1
 Katamari Damacy Reroll --> 1
-Killer is Dead [Nightmare Edition] --> 1
-Lego Batman 3: Beyond Gotham --> 1
+Killer is Dead: Nightmare Edition --> 1
+LEGO Batman 3: Beyond Gotham --> 1
 Lego Marvel Super Heroes --> 1
-Marvel's Spider-Man [Remastered] --> 1
+Marvel's Spider-Man Remastered --> 1
 Mega Man 11 --> 1
 Mega Man Legacy Collection [Mega Man + Mega Man 2 + Mega Man 3 + Mega Man 4 + Mega Man 5 + Mega Man 6] --> 1
-Ninja Gaiden: Master Collection [Ninja Gaiden Sigma + Ninja Gaiden Sigma 2 + Ninja Gaiden 3: Razor's Edge] --> 1
+Ninja Gaiden: Master Collection --> 1
 <20744> Okami HD --> 1
 Ori and the Will of the Wisps --> 1
 Sackboy: A Big Adventure --> 1
@@ -1647,12 +1645,12 @@ Soulstice --> 1
 Stray --> 1
 Tembo the Badass Elephant --> 1
 Trek to Yomi --> 1
-Uncharted: Legacy of Thieves Collection [Uncharted 4: A Thief's End + Uncharted: The Lost Legacy] --> 1
+Uncharted: Legacy of Thieves Collection --> 1
 Watch Dogs: Legion --> 1
-Zone of the Enders: The 2nd Runner [Mars] --> 1
+Zone of The Enders: The 2nd Runner Mars --> 1
 Batman: The Telltale Series --> 1
 Bugsnax --> 1
-D4: Dark Dreams Don't Die --> 1
+D4: Dark Dreams Don't Die - Season 1 --> 1
 Firmament --> 1
 The Wolf Among Us --> 1
 Apex Legends --> 1
@@ -1664,7 +1662,7 @@ Fight'N Rage --> 1
 River City Girls --> 1
 River City Girls 2 --> 1
 River City Melee Mach!! --> 1
-Scott Pilgrim vs. The World: The Game [Complete Edition] --> 1
+Scott Pilgrim vs. the World: The Game - Complete Edition --> 1
 Sifu --> 1
 Streets of Rage 4 --> 1
 Teenage Mutant Ninja Turtles: Shredder's Revenge --> 1
@@ -1675,22 +1673,22 @@ Divekick --> 1
 Garou: Mark of the Wolves --> 1
 Guilty Gear Strive --> 1
 Guilty Gear Xrd -Sign- --> 1
-Killer Instinct [2013] --> 1
+<10354> Killer Instinct [2013] --> 1
 The King of Fighters '98 [Ultimate Match Final Edition] --> 1
 The King of Fighters 2002 [Unlimited Match] --> 1
 The King of Fighters XIII Steam Edition --> 1
 The King of Fighters XV --> 1
 The Last Blade --> 1
-Marvel vs. Capcom Infinite --> 1
-Mortal Kombat X [XL] --> 1
+Marvel vs. Capcom: Infinite --> 1
+Mortal Kombat XL --> 1
 Mortal Kombat 11 --> 1
 MultiVersus --> 1
 Samurai Shodown [2019] --> 1
 Samurai Shodown Neo Geo Collection [Samurai Shodown + Samurai Shodown II + Samurai Shodown III + Samurai Shodown IV: Amakusa's Revenge + Samurai Shodown V (3)] --> 1
-Skullgirls [2nd Encore] --> 1
+Skullgirls: 2nd Encore --> 1
 SNK vs. Capcom: The Match of the Millennium --> 1
 SoulCalibur VI --> 1
-Street Fighter 30th Anniversary Collection [Street Fighter + Street Fighter II (5) + Street Fighter Alpha (3) + Street Fighter III (3)] --> 1
+Street Fighter 30th Anniversary Collection --> 1
 Street Fighter V [Champion Edition] --> 1
 Street Fighter 6 --> 1
 Tekken 7 --> 1
@@ -1699,7 +1697,7 @@ Street Fighter IV [Ultra Street Fighter IV] --> 1
 Alien: Isolation --> 1
 Dead Island --> 1
 Dead Rising 2: Off the Record --> 1
-Dead Space [2023] --> 1
+<159119> Dead Space [2023] --> 1
 Narcosis --> 1
 Resident Evil [2002] [HD Remaster] --> 1
 Resident Evil 3 --> 1
@@ -1719,17 +1717,17 @@ Dirt 5 --> 1
 Forza Horizon 5 --> 1
 Horizon Chase Turbo --> 1
 Hotshot Racing --> 1
-Lego 2K Drive --> 1
+LEGO 2K Drive --> 1
 Need for Speed Heat --> 1
 Ridge Racer Unbounded --> 1
 Sonic & All-Stars Racing Transformed [Collection] --> 1
-WRC 10 FIA World Rally Championship --> 1
+WRC 10 --> 1
 Across the Obelisk --> 1
 Crisis Core: Final Fantasy VII - Reunion --> 1
 Cyberpunk 2077 --> 1
 Deus Ex: Mankind Divided --> 1
 Diablo IV --> 1
-DIG: Deep in Galaxies --> 1
+DIG: Deep In Galaxies --> 1
 Dragon's Dogma [Dark Arisen] --> 1
 Dying Light 2: Stay Human --> 1
 Eastern Exorcist --> 1
@@ -1743,7 +1741,6 @@ Monster Hunter Rise --> 1
 Ni no Kuni II: Revenant Kingdom --> 1
 Nioh: Complete Edition --> 1
 Nioh 2 [Complete Edition] --> 1
-Persona 4 [Golden] --> 1
 Record of Lodoss War: Deedlit in Wonder Labyrinth --> 1
 Rune Factory 4 Special --> 1
 RymdResa --> 1
@@ -1836,65 +1833,61 @@ Phantasy Star --> 1
 Galactic Civilizations II: Dark Avatar --> 1
 World of Warcraft [Wrath of the Lich King] --> 1
 Dark Souls: Artorias of the Abyss --> 1
-Diablo II: Lord of Destruction --> 1
 Gothic II: The Night of the Raven --> 1
 Guilty Gear XX Accent Core Plus R --> 1
 Metroid Dread --> 1
 Shadow of the Colossus [2018] --> 1
 Sonic the Hedgehog 3 & Knuckles --> 1
 Super Mario All-Stars + Super Mario World --> 1
-The Witcher 3: Wild Hunt - Hearts of Stone --> 1
-Wonderful Everyday ~Diskontinuierliches Dasein~ [ADULT!] --> 1
+Wonderful Everyday: Down the Rabbit-Hole --> 1
 Tetris Effect [Connected] --> 1
 The Witcher 3: Wild Hunt - Complete Edition --> 1
 13 Sentinels: Aegis Rim --> 1
-Age of Empires IV [Anniversary Edition] --> 1
+Age of Empires IV: Anniversary Edition --> 1
 AI: The Somnium Files --> 1
 Alundra --> 1
 Anito Legends --> 1
 Anomaly Agent --> 1
 Astro's Playroom --> 1
 Atelier Sophie 2: The Alchemist of the Mysterious Dream --> 1
-Batman: Arkham City [Game of the Year Edition] --> 1
+<21704> Batman: Arkham City - Game of the Year Edition --> 1
 Bayonetta & Vanquish --> 1
-Bloodborne [Complete Edition] --> 1
+Bloodborne: Complete Edition Bundle --> 1
 Car Battler Joe --> 1
-Command & Conquer: Generals [Zero Hour] --> 1
+Command & Conquer: Generals - Zero Hour --> 1
 Crystar --> 1
-Cyberpunk 2077 [Ultimate Edition] --> 1
+Cyberpunk 2077: Ultimate Edition --> 1
 Day of Defeat --> 1
 Day of Defeat: Source --> 1
 Dead or Alive Ultimate [Dead or Alive + Dead or Alive 2] --> 1
-Devil May Cry 3: Dante's Awakening [Special Edition] --> 1
-Devil May Cry HD Collection [Devil May Cry + Devil May Cry 2 + Devil May Cry 3: Dante's Awakening [Special Edition]] --> 1
-Diablo II [Lord of Destruction] --> 1
+Devil May Cry 3: Dante's Awakening - Special Edition --> 1
+Devil May Cry 4: Special Edition --> 1
+Devil May Cry HD Collection --> 1
 Dino Crisis --> 1
 <259941> Doom --> 1
 DOOM II: Hell on Earth [GBA] --> 1
-Doom 3 [Resurrection of Evil] --> 1
+Doom 3: Resurrection of Evil --> 1
 Dragon Ball Z: Budokai Tenkaichi 3 --> 1
 Dynasty Warriors 9 --> 1
-Dynasty Warriors 9 [Empires] --> 1
+Dynasty Warriors 9: Empires --> 1
 Everlasting Summer --> 1
-The Evil Within [The Assignment] --> 1
-The Evil Within [The Consequence] --> 1
+The Evil Within: The Assignment --> 1
+The Evil Within: The Consequence --> 1
 The Evil Within 2 --> 1
 Fatal Frame: Maiden of Black Water --> 1
 Final Fantasy [2007] --> 1
 Final Fantasy IV [2008] --> 1
 Final Fantasy IV: The Complete Collection [Final Fantasy IV [2008] + Final Fantasy IV [The After Years] + Final Fantasy IV [Interlude]] --> 1
 Final Fantasy VI [GBA] --> 1
-Final Fantasy XIV [Endwalker] --> 1
+Final Fantasy XIV: Endwalker --> 1
 Final Fantasy XIV: Heavensward --> 1
-Final Fantasy XIV [Shadowbringers] --> 1
-Final Fantasy XIV [Stormblood] --> 1
+Final Fantasy XIV: Stormblood --> 1
 Final Fantasy Chronicles [Final Fantasy IV + Chrono Trigger] --> 1
 Final Fantasy Crystal Chronicles --> 1
 Fire Emblem: The Sacred Stones --> 1
 Football Manager 2010 --> 1
 Ghost of Tsushima --> 1
 Haunting Ground --> 1
-Hitman 2 [2018] --> 1
 Insurgency: Sandstorm --> 1
 It Takes Two --> 1
 Jagged Alliance 2 [Wildfire] --> 1
@@ -1912,14 +1905,14 @@ Mario Kart 8 [DLC Pack 1] --> 1
 Mario Kart 8 [DLC Pack 2] --> 1
 Mega Man Legacy Collection 2 [Mega Man 7 + Mega Man 8 + Mega Man 9 + Mega Man 10] --> 1
 MVP 07 NCAA Baseball --> 1
-NieR: Automata [Become as Gods Edition] --> 1
+Nier: Automata - Become as Gods Edition --> 1
 Nobunaga's Ambition: Rise to Power --> 1
 Outer Wilds [Echoes of the Eye] --> 1
 Parasite Eve II --> 1
 Pikmin 4 --> 1
 Pitfall: The Lost Expedition --> 1
 Pokemon Platinum --> 1
-Pokemon Ultra Sun / Ultra Moon --> 1
+<36792> Pokemon Ultra Sun Version --> 1
 Predator: Concrete Jungle --> 1
 Project Warlock --> 1
 Raw Danger! --> 1
@@ -1939,7 +1932,6 @@ TrackMania United --> 1
 Ultra Kaiju Monster Rancher --> 1
 Warcraft II [Tides of Darkness] --> 1
 Wild Earth: African Safari --> 1
-The Witcher 3: Wild Hunt [Hearts of Stone] --> 1
 WWE SmackDown! Here Comes the Pain --> 1
 Yggdra Union: We'll Never Fight Alone (GBA) --> 1
 Zeno Clash: Ultimate Edition --> 1

@@ -2,7 +2,7 @@
 13 Sentinels: Aegis Rim
 Advance Wars
 Advance Wars 2: Black Hole Rising
-Age of Empires IV [Anniversary Edition]
+Age of Empires IV: Anniversary Edition
 AI: The Somnium Files
 Alundra
 Anito Legends
@@ -11,21 +11,21 @@ Astro Bot: Rescue Mission
 Astro's Playroom
 Atelier Sophie 2: The Alchemist of the Mysterious Dream
 Banjo-Tooie
-Batman: Arkham City [Game of the Year Edition]
+<21704> Batman: Arkham City - Game of the Year Edition
 Bayonetta & Vanquish
 Bayonetta 2
 Bloodborne
 Bloodborne: The Old Hunters
-Bloodborne [Complete Edition]
+Bloodborne: Complete Edition Bundle
 Bully
 Burnout 3: Takedown
 Car Battler Joe
 Castlevania: Symphony of the Night
-Command & Conquer: Generals [Zero Hour]
+Command & Conquer: Generals - Zero Hour
 Conker's Bad Fur Day
 Counter-Strike
 Crystar
-Cyberpunk 2077 [Ultimate Edition]
+Cyberpunk 2077: Ultimate Edition
 Dark Cloud 2
 Dark Souls III
 Day of Defeat
@@ -33,21 +33,21 @@ Day of Defeat: Source
 Dead or Alive Ultimate [Dead or Alive + Dead or Alive 2]
 Dead or Alive 6
 Devil May Cry 3: Dante's Awakening
-Devil May Cry 3: Dante's Awakening [Special Edition]
-Devil May Cry 4 [Special Edition]
-Devil May Cry HD Collection [Devil May Cry + Devil May Cry 2 + Devil May Cry 3: Dante's Awakening [Special Edition]]
-Diablo II [Lord of Destruction]
+Devil May Cry 3: Dante's Awakening - Special Edition
+Devil May Cry 4: Special Edition
+Devil May Cry HD Collection
+Diablo II: Lord of Destruction
 Dino Crisis
 Dissidia 012 Final Fantasy
 <259941> Doom
 DOOM II: Hell on Earth [GBA]
-Doom 3 [Resurrection of Evil]
+Doom 3: Resurrection of Evil
 Dragon Ball Z: Budokai Tenkaichi 3
 Dynasty Warriors 9
-Dynasty Warriors 9 [Empires]
+Dynasty Warriors 9: Empires
 Everlasting Summer
-The Evil Within [The Assignment]
-The Evil Within [The Consequence]
+The Evil Within: The Assignment
+The Evil Within: The Consequence
 The Evil Within 2
 Fatal Frame II: Crimson Butterfly
 Fatal Frame: Maiden of Black Water
@@ -57,11 +57,11 @@ Final Fantasy IV: The Complete Collection [Final Fantasy IV [2008] + Final Fanta
 Final Fantasy VI [GBA]
 Final Fantasy VII
 Final Fantasy X/X-2 HD Remaster
-Final Fantasy XIV [Endwalker]
+Final Fantasy XIV: Endwalker
 Final Fantasy XIV: Heavensward
-Final Fantasy XIV [Shadowbringers]
-Final Fantasy XIV [Stormblood]
-Final Fantasy Chronicles [Final Fantasy IV + Chrono Trigger]
+Final Fantasy XIV: Shadowbringers
+Final Fantasy XIV: Stormblood
+Final Fantasy Chronicles
 Final Fantasy Crystal Chronicles
 Final Fantasy Tactics
 Final Fantasy Tactics Advance
@@ -84,7 +84,7 @@ Half-Life: Alyx
 Harvest Moon: Friends of Mineral Town
 Haunting Ground
 Hi-Fi Rush
-Hitman 2 [2018]
+Hitman 2
 Hogwarts Legacy
 Hollow Knight
 Insurgency: Sandstorm
@@ -122,7 +122,7 @@ Metal Gear Solid HD Collection
 Metroid Fusion
 Metroid Prime: Trilogy
 MVP 07 NCAA Baseball
-NieR: Automata [Become as Gods Edition]
+Nier: Automata - Become as Gods Edition
 Nobunaga's Ambition: Rise to Power
 Omori
 The Orange Box
@@ -136,7 +136,7 @@ Pikmin 4
 Pitfall: The Lost Expedition
 Planescape: Torment
 Pokemon Platinum
-Pokemon Ultra Sun / Ultra Moon
+<36792> Pokemon Ultra Sun Version
 Portal
 Portal 2
 Predator: Concrete Jungle
@@ -191,7 +191,7 @@ Wild Earth: African Safari
 Winning Eleven: Pro Evolution Soccer 2007
 The Witcher 3: Wild Hunt
 The Witcher 3: Wild Hunt - Blood and Wine
-The Witcher 3: Wild Hunt [Hearts of Stone]
+The Witcher 3: Wild Hunt - Hearts of Stone
 WWE SmackDown! Here Comes the Pain
 Xenoblade Chronicles
 Xenoblade Chronicles X

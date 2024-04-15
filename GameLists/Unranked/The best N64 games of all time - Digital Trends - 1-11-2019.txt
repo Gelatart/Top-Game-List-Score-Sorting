@@ -26,7 +26,7 @@ Dr. Mario 64
 <3574> Pokemon Puzzle League
 Mario Kart 64
 F-Zero X
-Star Wars Episode I: Racer
+Star Wars: Episode I - Racer
 Wave Race 64
 Diddy Kong Racing
 The Legend of Zelda: Ocarina of Time
@@ -41,4 +41,4 @@ Mario Tennis
 <3328> 1080 Snowboarding
 Tony Hawk's Pro Skater
 WWF No Mercy
-StarCraft [StarCraft 64]
+StarCraft 64

@@ -365,7 +365,7 @@ Castle Crashers
 Lemmings
 Limbo
 PaRappa the Rapper
-Pokemon X / Y
+<2286> Pokemon X Version
 Super Mario Land 2: 6 Golden Coins
 Ultima IV: Quest of the Avatar
 Star Wars: X-Wing
@@ -469,7 +469,7 @@ TimeSplitters 2
 <210484> Ninja Gaiden
 Peggle
 Earth Defense Force 2017
-Aladdin [Genesis]
+<8118> Disney's Aladdin [Genesis]
 Firewatch
 Monument Valley
 Borderlands
