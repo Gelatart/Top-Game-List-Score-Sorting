@@ -107,6 +107,7 @@ Harry Potter and the Sorcerer's Stone GBC: IGDB ID: 118554
 Hitman 2016: IGDB ID: 11157
 Ivan "Ironman" Stewart's Super Off Road (name seems to be crashing IGDB API request?): IGDB ID: 12735
 Killer Instinct 2013: IGDB ID: 10354
+Legend of Mana [Remastered]: IGDB ID: 143616
 Mario Golf GBC: IGDB ID: 135389
 Mario Tennis GBC: IGDB ID: 128874
 Metal Gear Solid GBC: IGDB ID: 5600

@@ -167,18 +167,18 @@ Diablo III
 Diablo IV
 DIG: Deep In Galaxies
 Disco Elysium: The Final Cut
-Dragon's Dogma [Dark Arisen]
+Dragon's Dogma: Dark Arisen
 Dying Light 2: Stay Human
 Eastern Exorcist
 Elden Ring
 The Elder Scrolls V: Skyrim - Special Edition
-Final Fantasy VII Remake [Intergrade]
+Final Fantasy VII Remake Intergrade
 Final Fantasy X/X-2 HD Remaster
 Genshin Impact
 Hades
 Hogwarts Legacy
 Honkai: Star Rail
-Legend of Mana [Remastered]
+<143616> Legend of Mana [Remastered]
 Mass Effect 2
 Mass Effect: Andromeda
 Mass Effect Legendary Edition
@@ -187,7 +187,7 @@ Monster Hunter: World
 Ni no Kuni II: Revenant Kingdom
 NieR: Automata
 Nioh: Complete Edition
-Nioh 2 [Complete Edition]
+Nioh 2: The Complete Edition
 Persona 4 Golden
 Persona 5 Royal
 Record of Lodoss War: Deedlit in Wonder Labyrinth
@@ -228,7 +228,7 @@ Doom Eternal
 Far Cry 4
 Gears 5
 Gears of War 4
-Gears of War [Ultimate Edition]
+Gears of War: Ultimate Edition 
 Halo: Combat Evolved Anniversary
 Halo 2: Anniversary
 Halo 3
@@ -253,7 +253,7 @@ Minecraft
 No Man's Sky
 The Pinball Arcade
 PowerWash Simulator
-Rocksmith 2014 [Remastered]
+Rocksmith 2014 Edition: Remastered
 The Sims 3
 Baseball Stars 2
 Fire Pro Wrestling World
@@ -278,5 +278,5 @@ Halo Wars 2
 StarCraft II: Legacy of the Void
 StarCraft II: Wings of Liberty
 Supreme Commander 2
-X-COM: Chimera Squad
+XCOM: Chimera Squad
 XCOM: Enemy Unknown
