@@ -171,7 +171,7 @@ Red Faction: Guerrilla
 Spacewar!
 Star Wars
 Streets of Rage 2
-Superhot [VR]
+SuperHot VR
 System Shock 2
 The Last of Us
 The Secret of Monkey Island
@@ -243,7 +243,7 @@ Gears of War
 Devil May Cry 3: Dante's Awakening
 Asteroids
 Psychonauts
-Another World [Out of This World]
+Another World
 Castlevania
 The Jackbox Party Pack
 Castlevania III: Dracula's Curse

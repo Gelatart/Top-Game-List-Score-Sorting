@@ -388,15 +388,6 @@ with pymongo.MongoClient(monConnect, server_api=ServerApi('1')) as mon_client:
     #each time, sort excel a certain way, then print out excel factors to list?
 
     """
-    sortByRanked = sorted(gameDbRanked.items(), key=lambda x:x[1], reverse=True)
-    convertedRanked = dict(sortByRanked)
-    sortByInclusion = sorted(gameDbInclusion.items(), key=lambda x:x[1], reverse=True)
-    convertedInclusion = dict(sortByInclusion)
-    sortByAverage = sorted(gameDbAverage.items(), key=lambda x:x[1], reverse=True)
-    convertedAverage = dict(sortByAverage)
-    """
-
-    """
     fileR = open("Sorted by Ranked.txt","w", encoding="utf-8")
     fileI = open("Sorted by Inclusion.txt","w", encoding="utf-8")
     fileA = open("Sorted by Average.txt","w", encoding="utf-8")

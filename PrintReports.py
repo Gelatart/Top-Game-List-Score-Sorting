@@ -29,7 +29,7 @@ list_col = monDB["lists"]
 test_query = { "Main Platform": "PC (Windows)"}
 
 print("Time to grab the games!")
-games_pulled = mon_col.find()
+games_pulled = mon_col.find().limit(20)
 games_pulled_query = mon_col.find(test_query)
 games_pulled_ranked = mon_col.find(test_query).sort("Ranked Score", -1)
 games_pulled_inclusion = mon_col.find(test_query).sort("Inclusion Score", -1)
@@ -38,6 +38,8 @@ games_pulled_average = mon_col.find(test_query).sort("Average Score", -1)
 print(games_pulled_query)
 
 for game in games_pulled:
+    print("Here is a game")
+    print(game)
     if(game["Main Platform"] == "PC (Windows)"):
         print("We found one!")
         print(game)

@@ -117,7 +117,9 @@ for filename in os.listdir(directory):
         originalCount = count
         # Strips the newline character
         for line in Lines:
-            if line in gameDb:
+            stripped_line = line.strip()
+            line = stripped_line
+            if stripped_line in gameDb:
                 gameDb[line].ranked_score += count
                 gameDb[line].list_count += 1
                 gameDb[line].lists_referencing.append(f)
@@ -158,7 +160,9 @@ for filename in os.listdir(directory):
         #input('Wait to review\n')
         # Strips the newline character
         for line in Lines:
-            if line in gameDb:
+            stripped_line = line.strip()
+            line = stripped_line
+            if stripped_line in gameDb:
                 gameDb[line].ranked_score += count
                 gameDb[line].list_count += 1
                 gameDb[line].lists_referencing.append(f)
@@ -192,7 +196,9 @@ for filename in os.listdir(directory):
         print(originalCount)
         # Strips the newline character
         for line in Lines:
-            if line in gameDb:
+            stripped_line = line.strip()
+            line = stripped_line
+            if stripped_line in gameDb:
                 gameDb[line].ranked_score += count
                 gameDb[line].list_count += 1
                 gameDb[line].lists_referencing.append(f)
@@ -321,11 +327,11 @@ while(igdb_check == False):
         #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
         #As of 4/15/24: 0-11 speedup, 12 is good (13)
         for game, details in gameDb.items():
-            if(time_speedup < 12):
+            if(time_speedup < 1):
                 print("SKIPPING!!")
                 time_speedup += 1
                 continue
-            elif(time_speedup == 12):
+            elif(time_speedup == 1):
                 time_speedup = 0
             check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
             check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
