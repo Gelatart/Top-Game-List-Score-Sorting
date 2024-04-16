@@ -1,3 +1,5 @@
+Set up environment on Laptop, Desktop is in process of being set up
+
 CONDA ACTIVATION: GameListScore
 
 GRABBING FROM AI CLASS (UVU CS 4470):

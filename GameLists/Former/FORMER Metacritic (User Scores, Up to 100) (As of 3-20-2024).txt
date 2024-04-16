@@ -89,9 +89,9 @@ Hogwarts Legacy
 Hollow Knight
 Insurgency: Sandstorm
 It Takes Two
-Jagged Alliance 2 [Wildfire]
+Jagged Alliance 2: Wildfire
 Justice League Heroes
-The King of Fighters Collection: The Orochi Saga [KOF 94 + KOF 95 + KOF 96 + KOF 97 + KOF 98]
+The King of Fighters Collection: The Orochi Saga
 Kingdom Hearts II
 Kingdom Hearts HD 2.5 Remix
 Kirby's Dream Collection Special Edition
@@ -111,10 +111,10 @@ MADiSON
 Mafia
 Mario & Luigi: Superstar Saga
 Mario Kart 8
-Mario Kart 8 [DLC Pack 1]
-Mario Kart 8 [DLC Pack 2]
+Mario Kart 8: DLC Pack One
+Mario Kart 8: DLC Pack Two
 Max Payne 2: The Fall of Max Payne
-Mega Man Legacy Collection 2 [Mega Man 7 + Mega Man 8 + Mega Man 9 + Mega Man 10]
+Mega Man Legacy Collection 2
 Metal Gear Solid
 Metal Gear Solid 3: Snake Eater
 Metal Gear Solid 3: Subsistence
@@ -126,7 +126,7 @@ Nier: Automata - Become as Gods Edition
 Nobunaga's Ambition: Rise to Power
 Omori
 The Orange Box
-Outer Wilds [Echoes of the Eye]
+Outer Wilds: Echoes of the Eye
 Paper Mario
 Paper Mario: The Thousand-Year Door
 Parasite Eve II
