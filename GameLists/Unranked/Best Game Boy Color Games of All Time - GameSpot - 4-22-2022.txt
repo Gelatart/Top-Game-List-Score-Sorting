@@ -5,7 +5,7 @@ The Legend of Zelda: Oracle of Seasons
 Mario Golf [GBC]
 Mario Tennis [GBC]
 <5600> Metal Gear Solid GBC
-Pokemon Gold / Silver
+<1558> Pokemon Gold Version
 <1514> Pokemon Crystal Version
 <4567> Pokemon Trading Card Game
 Super Mario Bros. Deluxe

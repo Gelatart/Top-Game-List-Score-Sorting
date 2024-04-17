@@ -5,7 +5,7 @@ Pulseman
 Streets of Rage 2
 Gunstar Heroes
 Ecco the Dolphin
-The Lost World: Jurassic Park [Gen]
+<8075> The Lost World: Jurassic Park [Gen]
 Samurai Shodown
 Super Street Fighter II
 Fatal Fury

@@ -25,7 +25,7 @@ Command & Conquer: Generals - Zero Hour
 Conker's Bad Fur Day
 Counter-Strike
 Crystar
-Cyberpunk 2077: Ultimate Edition
+<277807> Cyberpunk 2077: Ultimate Edition
 Dark Cloud 2
 Dark Souls III
 Day of Defeat
@@ -105,9 +105,9 @@ The Legend of Zelda: A Link to the Past & Four Swords
 The Legend of Zelda: Majora's Mask 3D
 The Legend of Zelda: Twilight Princess
 The Legend of Zelda: The Wind Waker HD
-Life is Strange [Episode 3]
+Life is Strange: Episode 3 - Chaos Theory
 Lost in Hell
-MADiSON
+Madison
 Mafia
 Mario & Luigi: Superstar Saga
 Mario Kart 8
@@ -161,8 +161,8 @@ Shadow of the Colossus
 Shenmue II
 Silent Hill
 Silent Hill 2
-The Sly Collection [Sly Cooper and the Thievius Racoonus + Sly 2: Band of Thieves + Sly 3: Honor Among Thieves]
-Sonic Mania [Plus]
+The Sly Collection
+Sonic Mania Plus
 SSX 3
 Star Wars: Battlefront II
 StarCraft: Brood War
@@ -186,7 +186,7 @@ Touken Ranbu Warriors
 TrackMania United
 Ultra Kaiju Monster Rancher
 Vampire: The Masquerade - Bloodlines
-Warcraft II [Tides of Darkness]
+Warcraft II: Tides of Darkness
 Wild Earth: African Safari
 Winning Eleven: Pro Evolution Soccer 2007
 The Witcher 3: Wild Hunt
@@ -195,5 +195,5 @@ The Witcher 3: Wild Hunt - Hearts of Stone
 WWE SmackDown! Here Comes the Pain
 Xenoblade Chronicles
 Xenoblade Chronicles X
-Yggdra Union: We'll Never Fight Alone (GBA)
+Yggdra Union: We'll Never Fight Alone
 Zeno Clash: Ultimate Edition

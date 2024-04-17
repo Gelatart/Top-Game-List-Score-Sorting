@@ -82,6 +82,7 @@ Battletoads GB: IGDB ID: 136619
 Chrono Trigger DS: IGDB ID: 20398
 Command & Conquer: Red Alert 2 (name seems to be crashing request?): IGDB ID: 245
 Contra NES: IGDB ID: 186207
+Cyberpunk 2077: Ultimate Edition (not matching some reason?): IGDB ID: 277807
 Daytona USA Sega Saturn: IDGB ID: 177619
 Daytona USA 2001: IGDB ID: 22007
 Dead Space 2023: IGDB ID: 159119
@@ -108,6 +109,8 @@ Hitman 2016: IGDB ID: 11157
 Ivan "Ironman" Stewart's Super Off Road (name seems to be crashing IGDB API request?): IGDB ID: 12735
 Killer Instinct 2013: IGDB ID: 10354
 Legend of Mana [Remastered]: IGDB ID: 143616
+The Lost World: Jurassic Park [Arcade]: IGDB ID: 132135
+The Lost World: Jurassic Park [Genesis]: IGDB ID: 8075
 Mario Golf GBC: IGDB ID: 135389
 Mario Tennis GBC: IGDB ID: 128874
 Metal Gear Solid GBC: IGDB ID: 5600
@@ -151,6 +154,7 @@ Resident Evil 2 2019: IGDB ID: 19686
 Resident Evil 4 2023: IGDB ID: 132181
 Samurai Showdown 2019: IGDB ID: 109277
 Sapiens 2022: IGDB ID: 117186
+Shadow of the Colossus [2018]: IGDB ID: 37094
 Shadowrun SNES: IGDB ID: 7640
 SimCity SNES: IGDB ID: 180001
 Singstar 2007 (had in my list that we had a 2008 one?): IGDB ID: 15180

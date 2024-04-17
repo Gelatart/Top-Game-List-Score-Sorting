@@ -1,7 +1,7 @@
 50
 Donkey Kong
 Guitar Freaks
-The Lost World: Jurassic Park [Arcade]
+<132135> The Lost World: Jurassic Park [Arcade]
 Joust
 Defender
 Mercs
@@ -27,7 +27,7 @@ Street Fighter II
 Daytona USA
 Operation Wolf
 Tekken
-Smash TV
+Smash T.V.
 Dragon's Lair
 Crazy Taxi
 Sunset Riders
@@ -46,6 +46,6 @@ Star Wars
 Final Furlong
 Track and Field
 Marvel vs. Capcom 2: New Age of Heroes
-1942 [Arcade]
+1942
 Aqua Jet
 Computer Space
