@@ -2,9 +2,9 @@
 The Legend of Zelda: Link's Awakening DX
 The Legend of Zelda: Oracle of Ages
 The Legend of Zelda: Oracle of Seasons
-Mario Golf [GBC]
-Mario Tennis [GBC]
-<5600> Metal Gear Solid GBC
+<135389> Mario Golf [GBC]
+<128874> Mario Tennis [GBC]
+<5600> Metal Gear Solid [GBC]
 <1558> Pokemon Gold Version
 <1514> Pokemon Crystal Version
 <4567> Pokemon Trading Card Game

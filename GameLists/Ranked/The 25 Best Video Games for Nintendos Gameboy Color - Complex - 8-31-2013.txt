@@ -6,14 +6,14 @@ Wario Land 3
 <1514> Pokemon Crystal Version
 <205600> Dragon Warrior III
 Shantae
-<135389> Mario Golf
+<135389> Mario Golf [GBC]
 Tetris DX
 Mega Man Xtreme
 <4068> Pokemon Pinball
-<5600> Metal Gear Solid
+<5600> Metal Gear Solid [GBC]
 Bionic Commando: Elite Forces
 <49857> Pokemon Puzzle Challenge
-<128874> Mario Tennis
+<128874> Mario Tennis [GBC]
 Super Mario Bros. Deluxe
 Dragon Warrior I & II
 Kirby Tilt 'n' Tumble
