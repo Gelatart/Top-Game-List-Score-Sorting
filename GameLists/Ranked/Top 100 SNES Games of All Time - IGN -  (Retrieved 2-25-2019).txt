@@ -35,7 +35,7 @@ Metal Warriors
 Lufia II: Rise of the Sinistrals
 <180001> SimCity [SNES]
 NBA Jam
-UN Squadron
+U.N. Squadron
 Kirby's Dream Course
 Teenage Mutant Ninja Turtles IV: Turtles in Time
 Earthworm Jim 2
@@ -97,5 +97,5 @@ Top Gear 2
 Street Fighter Alpha 2
 Ultimate Mortal Kombat 3
 Uniracers
-Tiny Toons Adventure: Buster Busts Loose!
+Tiny Toon Adventures: Buster Busts Loose!
 Final Fight

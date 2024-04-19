@@ -106,6 +106,7 @@ Gran Turismo PSP: IGDB ID: 20426
 Harry Potter and the Chamber of Secrets GBC: IGDB ID: 117322
 Harry Potter and the Sorcerer's Stone GBC: IGDB ID: 118554
 Hitman 2016: IGDB ID: 11157
+Ikari Warriors [NES]: IGDB ID: 274081
 Ivan "Ironman" Stewart's Super Off Road (name seems to be crashing IGDB API request?): IGDB ID: 12735
 Killer Instinct 2013: IGDB ID: 10354
 Legend of Mana [Remastered]: IGDB ID: 143616
@@ -145,6 +146,7 @@ Pokemon Ultra Sun (what about ultra moon?): IGDB ID: 36792
 Pokemon X (what about y?): IGDB ID: 2286
 Pokemon XD: Gale of Darkness: IGDB ID: 2724
 Pokemon Yellow Version: IGDB ID: 1512
+Prey [2017]: IGDB ID: 19531
 Ratchet and Clank (name seems to be crashing IGDB API request?): IGDB ID: 1289
 Ratchet and Clank: Up Your Arsenal (name seems to be crashing IGDB API request?): IGDB ID: 1773
 Rayman GBC: IGDB ID: 85578

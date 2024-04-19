@@ -111,7 +111,7 @@ God of War
 The Legend of Dragoon
 Gears of War
 Banjo-Kazooie
-Rainbow Six Siege
+Tom Clancy's Rainbow Six Siege
 Tetris
 Baldur's Gate II: Shadows of Amn
 Mega Man X
@@ -209,7 +209,7 @@ Flower
 Rocket League
 Vampire: The Masquerade - Bloodlines
 Panzer Dragoon Saga
-Prey [2017]
+<19531> Prey [2017]
 TimeSplitters 2
 Banjo-Tooie
 BioShock 2
