@@ -52,6 +52,9 @@ check_string += '" & version_parent = null; offset 0;' #6 is cancelled,  & statu
 
 Test query for Pokemon Red: 'fields *; where id = '1561'; offset 0;'
 Additional query for Pokemon Red: 'fields *; where name = 'Pokémon Red Version'; offset 0;'
+
+This works for FTL: Advanced Edition: fields *; where id = '20098'; offset 0;
+fields *; where id = '20098' & version_parent = null; offset 0; //Doesn't get result in this case
 """
 
 igdb_request = wrapper.api_request(

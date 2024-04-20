@@ -358,7 +358,9 @@ while(igdb_check == False):
                 check_string += 'where name = "'
                 check_string += game.strip()
                 check_string += '"'
-            check_string += ' & version_parent = null ; offset 0;'  # 6 is cancelled,  & status != 6
+            check_string += '; offset 0;'  # 6 is cancelled,  & status != 6
+            # Had & version_parent = null in the check_string before, but probably won't work in cases we do want port, might just want
+            # more specificity in some cases
             # | category = 3  (attempted to insert this into the query)
             # Category is an enum, 3 means it's a bundle, is | the right way to do an or?
             # Exclude versions that aren't the parent
