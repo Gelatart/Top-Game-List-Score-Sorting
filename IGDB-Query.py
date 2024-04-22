@@ -163,6 +163,7 @@ Shadow of the Colossus [2018]: IGDB ID: 37094
 Shadowrun SNES: IGDB ID: 7640
 SimCity SNES: IGDB ID: 180001
 Singstar 2007 (had in my list that we had a 2008 one?): IGDB ID: 15180
+Spider-Man [PlayStation]: IGDB ID: 3603
 Star Wars: Battlefront I/II are the originals, Star Wars Battlefront I/II are the EA post-Disney ones
 Teenage Mutant Ninja Turtles NES: IGDB ID: 86386
 Tomb Raider 2013: IGDB ID: 1164 
