@@ -39,7 +39,7 @@ LSD: Dream Emulator
 Lufia II: Rise of the Sinistrals
 Metal Slug 3
 Mother 3
-Mr. Gimmick [Gimmick!]
+Mr. Gimmick
 Myth II: Soulblighter
 The Neverhood
 NieR
@@ -55,7 +55,7 @@ Riven: The Sequel to Myst
 Sanitarium
 Sengoku Rance
 Severance: Blade of Darkness
-Shadowrun [SNES]
+<7640> Shadowrun [SNES]
 Sid Meier's Alpha Centauri
 Shin Megami Tensei II
 Sins of a Solar Empire
