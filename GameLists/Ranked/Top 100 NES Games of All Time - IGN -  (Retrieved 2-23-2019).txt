@@ -24,7 +24,7 @@ Blaster Master
 Bubble Bobble
 Blades of Steel
 Castlevania II: Simon's Quest
-Metal Gear [NES]
+<133917> Metal Gear [NES]
 Kirby's Adventure
 Baseball Stars
 Adventure Island
@@ -46,7 +46,7 @@ Klax
 Fester's Quest
 Metal Storm
 Vice: Project Doom
-Tetris [Tengen]
+<180278> Tetris [Tengen]
 Kid Niki: Radical Ninja
 Shadowgate
 Dr. Mario

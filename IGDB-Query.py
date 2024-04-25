@@ -117,6 +117,7 @@ The Lost World: Jurassic Park [Arcade]: IGDB ID: 132135
 The Lost World: Jurassic Park [Genesis]: IGDB ID: 8075
 Mario Golf GBC: IGDB ID: 135389
 Mario Tennis GBC: IGDB ID: 128874
+Metal Gear NES: IGDB ID: 133917
 Metal Gear Solid GBC: IGDB ID: 5600
 Microsoft Flight Simulator 2020: IGDB ID: 119295
 Mr. Driller GBC: IGDB ID: 254519
@@ -166,6 +167,7 @@ Singstar 2007 (had in my list that we had a 2008 one?): IGDB ID: 15180
 Spider-Man [PlayStation]: IGDB ID: 3603
 Star Wars: Battlefront I/II are the originals, Star Wars Battlefront I/II are the EA post-Disney ones
 Teenage Mutant Ninja Turtles NES: IGDB ID: 86386
+Tetris TENGEN: IGDB ID: 180278
 Tomb Raider 2013: IGDB ID: 1164 
 Tony Hawk's Pro Skater 2 GBA: IGDB ID: 229927
 Trials of Mana 2020: IGDB ID: 119391
