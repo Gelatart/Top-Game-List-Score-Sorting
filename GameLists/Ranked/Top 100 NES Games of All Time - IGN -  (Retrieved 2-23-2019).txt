@@ -52,14 +52,14 @@ Shadowgate
 Dr. Mario
 Adventures of Lolo 3
 Tecmo Super Bowl
-Ghosts 'N Goblins [NES]
+<39048> Ghosts 'N Goblins [NES]
 Double Dragon III: The Sacred Stones
 Wizards & Warriors
 Rad Racer
 Mega Man 6
 Rygar
 Super C
-Maniac Mansion [NES]
+Maniac Mansion
 Kung Fu
 Gargoyle's Quest II
 Ironsword: Wizards & Warriors II
@@ -94,7 +94,7 @@ Skate or Die 2: The Search for Double Trouble
 Little Samson
 Kickle Cubicle
 Mega Man 4
-Dragon Quest III: The Seeds of Salvation [Dragon Warrior III]
+Dragon Warrior III
 Astyanax
 <86386> Teenage Mutant Ninja Turtles
 Rush'n Attack

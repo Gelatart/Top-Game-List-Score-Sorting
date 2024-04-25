@@ -102,6 +102,7 @@ Fallout 3: Game of the Year Edition (not matching some reason?): IGDB ID: 21892
 Final Fantasy XIV Online (A Realm Reborn) (Online reboot 2013): IGDB ID: 386
 Fire Emblem Fates: Birthright (and Conquest and Revelation): IGDB ID: 24220
 FTL: Advanced Edition (not matching for some reason?): IGDB ID: 20098
+Ghosts 'n Goblins [NES]: IGDB ID: 39048
 God of War 2018: IGDB ID: 19560
 God of War Ragnarok: IGDB ID: 112875
 Gothic II: Gold Edition (not matching for some reason?): IGDB ID: 29207
