@@ -168,6 +168,7 @@ SimCity SNES: IGDB ID: 180001
 Singstar 2007 (had in my list that we had a 2008 one?): IGDB ID: 15180
 Spider-Man [PlayStation]: IGDB ID: 3603
 Star Wars: Battlefront I/II are the originals, Star Wars Battlefront I/II are the EA post-Disney ones
+Teenage Mutant Ninja Turtles ARCADE: IGDB ID: 3815
 Teenage Mutant Ninja Turtles NES: IGDB ID: 86386
 Tetris TENGEN: IGDB ID: 180278
 Tomb Raider 2013: IGDB ID: 1164 
