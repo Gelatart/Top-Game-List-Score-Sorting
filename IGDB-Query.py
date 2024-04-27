@@ -153,6 +153,7 @@ Pokemon XD: Gale of Darkness: IGDB ID: 2724
 Pokemon Yellow Version: IGDB ID: 1512
 Polybius [2017]: IGDB ID: 24868
 Prey [2017]: IGDB ID: 19531
+Punch-Out!! [Wii]: IGDB ID: 2194
 Ratchet and Clank (name seems to be crashing IGDB API request?): IGDB ID: 1289
 Ratchet and Clank: Up Your Arsenal (name seems to be crashing IGDB API request?): IGDB ID: 1773
 Rayman GBC: IGDB ID: 85578

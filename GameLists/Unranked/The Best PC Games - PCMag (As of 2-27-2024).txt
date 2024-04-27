@@ -105,7 +105,7 @@ Mortal Kombat XL
 Mortal Kombat 11
 MultiVersus
 <109277> Samurai Shodown [2019]
-Samurai Shodown Neo Geo Collection [Samurai Shodown + Samurai Shodown II + Samurai Shodown III + Samurai Shodown IV: Amakusa's Revenge + Samurai Shodown V (3)]
+Samurai Shodown NeoGeo Collection
 Skullgirls: 2nd Encore
 SNK vs. Capcom: The Match of the Millennium
 SoulCalibur VI
@@ -242,7 +242,7 @@ Postal: Brain Damaged
 <19531> Prey [2017]
 Returnal
 Star Wars Battlefront
-Star Wars Battlefront II [2017]
+Star Wars Battlefront II
 SuperHot
 Vanquish
 Sid Meier's Civilization: Beyond Earth
