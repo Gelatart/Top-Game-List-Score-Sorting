@@ -92,8 +92,8 @@ Dead or Alive 6
 Divekick
 Dragon Ball FighterZ
 Garou: Mark of the Wolves
-Guilty Gear Strive
-Guilty Gear Xrd -Sign-
+Guilty Gear: Strive
+Guilty Gear Xrd: Sign
 <10354> Killer Instinct [2013]
 The King of Fighters '98 Ultimate Match Final Edition
 The King of Fighters 2002: Unlimited Match
@@ -251,7 +251,7 @@ Evil Genius 2: World Domination
 <119295> Microsoft Flight Simulator 2020
 Minecraft
 No Man's Sky
-The Pinball Arcade
+Pinball Arcade
 PowerWash Simulator
 Rocksmith 2014 Edition: Remastered
 The Sims 3
