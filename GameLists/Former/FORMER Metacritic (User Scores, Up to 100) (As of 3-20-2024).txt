@@ -30,7 +30,7 @@ Dark Cloud 2
 Dark Souls III
 Day of Defeat
 Day of Defeat: Source
-Dead or Alive Ultimate [Dead or Alive + Dead or Alive 2]
+Dead or Alive 1 Ultimate
 Dead or Alive 6
 Devil May Cry 3: Dante's Awakening
 Devil May Cry 3: Dante's Awakening - Special Edition
@@ -39,8 +39,8 @@ Devil May Cry HD Collection
 Diablo II: Lord of Destruction
 Dino Crisis
 Dissidia 012 Final Fantasy
-<259941> Doom
-DOOM II: Hell on Earth [GBA]
+<259941> Doom [GBA]
+<202120> Doom II: Hell on Earth [GBA]
 Doom 3: Resurrection of Evil
 Dragon Ball Z: Budokai Tenkaichi 3
 Dynasty Warriors 9

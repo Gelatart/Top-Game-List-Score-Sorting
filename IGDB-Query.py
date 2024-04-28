@@ -97,6 +97,7 @@ Donkey Kong '94: IGDB ID: 1089
 Donkey Kong Country GBC: IGDB ID: 152752
 Doom 2016: IGDB ID: 7351
 Doom GBA: IGDB ID: 259941
+Doom II: Hell on Earth GBA: IGDB ID: 202120
 Dragon Warrior III GBC: IGDB ID: 205600
 Fallout 3: Game of the Year Edition (not matching some reason?): IGDB ID: 21892
 Final Fantasy XIV Online (A Realm Reborn) (Online reboot 2013): IGDB ID: 386
@@ -146,6 +147,7 @@ Pokemon Puzzle League: IGDB ID: 3574
 Pokemon Red Version (what about blue?): IGDB ID: 1561
 Pokemon Ruby Version (what about Sapphire?): IGDB ID: 1557
 Pokemon SNAP: IGDB ID: 2324
+Pokemon Stadium: IGDB ID: 2289
 Pokemon Trading Card Game GBC: IGDB ID: 4567
 Pokemon Ultra Sun (what about ultra moon?): IGDB ID: 36792
 Pokemon X (what about y?): IGDB ID: 2286

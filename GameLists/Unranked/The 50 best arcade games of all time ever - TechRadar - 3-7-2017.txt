@@ -35,7 +35,7 @@ Metal Slug
 Mortal Kombat
 Gauntlet
 Frogger
-Golden Tee Off
+Golden Tee Golf
 Bubble Bobble
 Rampage
 Double Dragon
@@ -44,7 +44,7 @@ Space Invaders
 Asteroids
 Star Wars
 Final Furlong
-Track and Field
+Track & Field
 Marvel vs. Capcom 2: New Age of Heroes
 1942
 Aqua Jet

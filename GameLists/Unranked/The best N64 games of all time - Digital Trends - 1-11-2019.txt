@@ -1,7 +1,7 @@
 43
 Jet Force Gemini
 Star Wars: Shadows of the Empire
-WinBack
+WinBack: Covert Operations
 Star Fox 64
 Star Wars: Rogue Squadron
 Resident Evil 2
@@ -31,11 +31,11 @@ Wave Race 64
 Diddy Kong Racing
 The Legend of Zelda: Ocarina of Time
 The Legend of Zelda: Majora's Mask
-Pokemon Stadium
+<2289> Pokemon Stadium
 Paper Mario
 Ken Griffey Jr.'s Slugfest
 NFL Blitz
-NBA Showtime
+NBA Showtime: NBA on NBC
 Mario Golf
 Mario Tennis
 <3328> 1080 Snowboarding
