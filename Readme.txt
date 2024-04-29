@@ -1,4 +1,6 @@
-Set up environment on Laptop, Desktop is in process of being set up
+Laptop environment tends to lag behind now, Desktop now leading the charge
+
+(Whenever have to clone repo again, take special consideration to .env file)
 
 CONDA ACTIVATION: GameListScore
 

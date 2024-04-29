@@ -100,6 +100,7 @@ Doom GBA: IGDB ID: 259941
 Doom II: Hell on Earth GBA: IGDB ID: 202120
 Dragon Warrior III GBC: IGDB ID: 205600
 Fallout 3: Game of the Year Edition (not matching some reason?): IGDB ID: 21892
+Final Fantasy IV [2008]: IGDB ID: 399
 Final Fantasy XIV Online (A Realm Reborn) (Online reboot 2013): IGDB ID: 386
 Fire Emblem Fates: Birthright (and Conquest and Revelation): IGDB ID: 24220
 FTL: Advanced Edition (not matching for some reason?): IGDB ID: 20098

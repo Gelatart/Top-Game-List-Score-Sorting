@@ -51,10 +51,10 @@ The Evil Within: The Consequence
 The Evil Within 2
 Fatal Frame II: Crimson Butterfly
 Fatal Frame: Maiden of Black Water
-Final Fantasy [2007]
-Final Fantasy IV [2008]
-Final Fantasy IV: The Complete Collection [Final Fantasy IV [2008] + Final Fantasy IV [The After Years] + Final Fantasy IV [Interlude]]
-Final Fantasy VI [GBA]
+Final Fantasy: 20th Anniversary Edition
+<399> Final Fantasy IV [2008]
+Final Fantasy IV: The Complete Collection
+Final Fantasy VI Advance
 Final Fantasy VII
 Final Fantasy X/X-2 HD Remaster
 Final Fantasy XIV: Endwalker
@@ -150,7 +150,7 @@ Resident Evil
 Resident Evil 2
 <19686> Resident Evil 2
 Resident Evil 4
-Resident Evil 4 [2023] [Separate Ways]
+Resident Evil 4: Separate Ways
 Resident Evil Code: Veronica
 Rise of Nations
 Rome: Total War
