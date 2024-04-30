@@ -62,7 +62,7 @@ Final Fantasy XIV: Heavensward
 Final Fantasy XIV: Shadowbringers
 Final Fantasy XIV: Stormblood
 Final Fantasy Chronicles
-Final Fantasy Crystal Chronicles
+Final Fantasy: Crystal Chronicles
 Final Fantasy Tactics
 Final Fantasy Tactics Advance
 Fire Emblem: The Blazing Blade
@@ -121,7 +121,7 @@ Metal Gear Solid 3: Subsistence
 Metal Gear Solid HD Collection
 Metroid Fusion
 Metroid Prime: Trilogy
-MVP 07 NCAA Baseball
+MVP 07: NCAA Baseball
 Nier: Automata - Become as Gods Edition
 Nobunaga's Ambition: Rise to Power
 Omori
@@ -135,7 +135,7 @@ Persona 5
 Pikmin 4
 Pitfall: The Lost Expedition
 Planescape: Torment
-Pokemon Platinum
+<1519> Pokemon Platinum Version
 <36792> Pokemon Ultra Sun Version
 Portal
 Portal 2
@@ -192,7 +192,7 @@ Winning Eleven: Pro Evolution Soccer 2007
 The Witcher 3: Wild Hunt
 The Witcher 3: Wild Hunt - Blood and Wine
 The Witcher 3: Wild Hunt - Hearts of Stone
-WWE SmackDown! Here Comes the Pain
+WWE Smackdown! Here Comes the Pain
 Xenoblade Chronicles
 Xenoblade Chronicles X
 Yggdra Union: We'll Never Fight Alone

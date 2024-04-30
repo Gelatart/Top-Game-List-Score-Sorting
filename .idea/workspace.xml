@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b33df5e9-3490-443b-8a31-ba21b2040da7" name="Changes" comment="" />
+    <list default="true" id="b33df5e9-3490-443b-8a31-ba21b2040da7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/GameLists/Former/FORMER Metacritic (User Scores, Up to 100) (As of 3-20-2024).txt" beforeDir="false" afterPath="$PROJECT_DIR$/GameLists/Former/FORMER Metacritic (User Scores, Up to 100) (As of 3-20-2024).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IGDB-Query.py" beforeDir="false" afterPath="$PROJECT_DIR$/IGDB-Query.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

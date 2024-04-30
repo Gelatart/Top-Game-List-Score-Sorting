@@ -143,6 +143,7 @@ Pokemon Heart Gold Version (what about soul silver?): IGDB ID: 1556
 Pokemon: Let's Go, Pikachu! (what about eevee?): IGDB ID: 25877
 Pokemon Mystery Dungeon: Explorers of Sky: IGDB ID: 2323
 Pokemon Pinball: IGDB ID: 4068
+Pokemon Platinum: IGBD ID: 1519
 Pokemon Puzzle Challenge: IGDB ID: 49857
 Pokemon Puzzle League: IGDB ID: 3574
 Pokemon Red Version (what about blue?): IGDB ID: 1561
