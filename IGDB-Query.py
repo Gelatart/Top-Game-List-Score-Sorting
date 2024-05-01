@@ -76,9 +76,13 @@ print("Successfully completed! Goodbye!")
 (Seems like using the & symbol can break queries even when it's in the name?)
 (Seems like it has difficulty picking up the names of games that are bundles at this time?)
 
+(Need to make a page for Out of the Park Baseball 2007, get more proof of existence)
+(Need to make a page for Anito Legends)
+
 (Sonic the Hedgehog 8-bit from Master System seems not to be in API?)
 
 1080 Snowboarding: IGDB ID: 3328
+Baku Baku [Master System]: IGDB ID: 69785
 Batman the Video Game GB: IGDB ID: 49227
 Batman: Arkham City - Game of the Year Edition (not matching some reason?): IGDB ID: 21704
 Battletoads GB: IGDB ID: 136619

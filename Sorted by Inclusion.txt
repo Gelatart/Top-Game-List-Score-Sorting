@@ -1807,7 +1807,7 @@ WarioWare: Smooth Moves --> 1
 Psycho Fox --> 1
 Alex Kidd in Miracle World --> 1
 California Games --> 1
-Baku Baku Animal --> 1
+<69785> Baku Baku [Master System] --> 1
 Wonder Boy III: The Dragon's Trap --> 1
 Phantasy Star --> 1
 Galactic Civilizations II: Dark Avatar --> 1
@@ -1831,7 +1831,7 @@ Anomaly Agent --> 1
 Astro's Playroom --> 1
 Atelier Sophie 2: The Alchemist of the Mysterious Dream --> 1
 <21704> Batman: Arkham City - Game of the Year Edition --> 1
-Bayonetta & Vanquish --> 1
+Bayonetta & Vanquish 10th Anniversary Bundle --> 1
 Bloodborne: Complete Edition Bundle --> 1
 Car Battler Joe --> 1
 Command & Conquer: Generals - Zero Hour --> 1
@@ -1925,7 +1925,7 @@ Punch-Out!! --> 1
 Tekken 2 --> 1
 Doki Doki Literature Club! --> 1
 Gravity Rush 2 --> 1
-Everybody's Golf [2017] --> 1
+Everybody's Golf --> 1
 Outcast --> 1
 America's Army --> 1
 Crysis --> 1

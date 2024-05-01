@@ -27,7 +27,7 @@ Anomaly Agent --> 1.0
 Astro's Playroom --> 1.0
 Atelier Sophie 2: The Alchemist of the Mysterious Dream --> 1.0
 <21704> Batman: Arkham City - Game of the Year Edition --> 1.0
-Bayonetta & Vanquish --> 1.0
+Bayonetta & Vanquish 10th Anniversary Bundle --> 1.0
 Bloodborne: Complete Edition Bundle --> 1.0
 Car Battler Joe --> 1.0
 Command & Conquer: Generals - Zero Hour --> 1.0
@@ -121,7 +121,7 @@ Punch-Out!! --> 1.0
 Tekken 2 --> 1.0
 Doki Doki Literature Club! --> 1.0
 Gravity Rush 2 --> 1.0
-Everybody's Golf [2017] --> 1.0
+Everybody's Golf --> 1.0
 Outcast --> 1.0
 America's Army --> 1.0
 Crysis --> 1.0
@@ -1080,7 +1080,7 @@ Everything --> 0.5
 Psycho Fox --> 0.5
 Alex Kidd in Miracle World --> 0.5
 California Games --> 0.5
-Baku Baku Animal --> 0.5
+<69785> Baku Baku [Master System] --> 0.5
 Wonder Boy III: The Dragon's Trap --> 0.5
 Phantasy Star --> 0.5
 Far Cry 4 --> 0.498960498960499
