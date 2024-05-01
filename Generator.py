@@ -18,6 +18,9 @@ import json
 import pandas
 import re
 
+load_dotenv()
+#^To actually populate what we will need from mongo connection
+
 # assign directory
 #directory = 'C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameLists\Ranked'
 directory = r'GameLists\Ranked'
@@ -288,7 +291,7 @@ while(igdb_check == False):
             Body: "fields *;"
     
         """
-        load_dotenv()
+        #load_dotenv() (Done at beginning of file now)
         client_id = os.getenv('CLIENT_ID')
         client_secret = os.getenv('CLIENT_SECRET')
         post = 'https://id.twitch.tv/oauth2/token?client_id='
@@ -595,6 +598,7 @@ mon_connect = os.getenv('MONGO_URI')
 #mon_client = pymongo.MongoClient(mon_connect)
 mon_client = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
 monDB = mon_client["GameSorting"]
+#input(mon_connect)
 try:
     mon_client.admin.command('ping')
     print("Pinged your deployment. You successfully connected to MongoDB!")
@@ -616,6 +620,7 @@ for game, details in gameDb.items():
     #export.append(details)
     exportDict = {}
     exportDict["Title"] = game
+    exportDict["IGDB ID"] = details.igdb_ID
     exportDict["Ranked Score"] = details.ranked_score
     exportDict["Inclusion Score"] = details.list_count
     averageScore = details.ranked_score / details.total_count
@@ -770,6 +775,15 @@ for game in games_pulled:
     sheet1.write(excel_count, 9, game['Developers'])
     excel_count += 1
 wb.save('Sorted Database.xls')
+
+games_pulled = mon_col.find().limit(10)
+for game in games_pulled:
+    print("Here is a game")
+    print(game)
+    if(game["Main Platform"] == "Wii"):
+        print("We found one!")
+        print(game)
+    print()
 
 #Close connection to open up socket (seemed to cause problems when running generator then trying printreports?)
 mon_client.close()
