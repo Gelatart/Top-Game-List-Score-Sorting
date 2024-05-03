@@ -25,18 +25,14 @@ Command & Conquer: Generals - Zero Hour
 Conker's Bad Fur Day
 Counter-Strike
 Crystar
-<277807> Cyberpunk 2077: Ultimate Edition
 Dark Cloud 2
 Dark Souls III
 Day of Defeat
 Day of Defeat: Source
-Dead or Alive 1 Ultimate
 Dead or Alive 6
-Devil May Cry 3: Dante's Awakening
 Devil May Cry 3: Dante's Awakening - Special Edition
 Devil May Cry 4: Special Edition
 Devil May Cry HD Collection
-Diablo II: Lord of Destruction
 Dino Crisis
 Dissidia 012 Final Fantasy
 <259941> Doom [GBA]
@@ -65,9 +61,7 @@ Final Fantasy Chronicles
 Final Fantasy: Crystal Chronicles
 Final Fantasy Tactics
 Final Fantasy Tactics Advance
-Fire Emblem: The Blazing Blade
 Fire Emblem: Awakening
-Fire Emblem: Path of Radiance
 Fire Emblem: The Sacred Stones
 Football Manager 2010
 Ghost of Tsushima
@@ -92,7 +86,6 @@ It Takes Two
 Jagged Alliance 2: Wildfire
 Justice League Heroes
 The King of Fighters Collection: The Orochi Saga
-Kingdom Hearts II
 Kingdom Hearts HD 2.5 Remix
 Kirby's Dream Collection Special Edition
 Klonoa 2: Lunatea's Veil
@@ -127,7 +120,6 @@ Nobunaga's Ambition: Rise to Power
 Omori
 The Orange Box
 Outer Wilds: Echoes of the Eye
-Paper Mario
 Paper Mario: The Thousand-Year Door
 Parasite Eve II
 Persona 4 Golden
@@ -139,19 +131,15 @@ Planescape: Torment
 <36792> Pokemon Ultra Sun Version
 Portal
 Portal 2
-Predator: Concrete Jungle
 Professor Layton and the Unwound Future
 Project Warlock
 Ratchet & Clank: Going Commando
 <1773> Ratchet & Clank: Up Your Arsenal
 Raw Danger!
 Red Dead Redemption
-Resident Evil
 Resident Evil 2
 <19686> Resident Evil 2
 Resident Evil 4
-Resident Evil 4: Separate Ways
-Resident Evil Code: Veronica
 Rise of Nations
 Rome: Total War
 The Secret of Monkey Island: Special Edition
@@ -165,9 +153,7 @@ The Sly Collection
 Sonic Mania Plus
 SSX 3
 Star Wars: Battlefront II
-StarCraft: Brood War
 The Suffering
-Suikoden II
 Suikoden V
 Super Mario 3D World
 Super Mario 64
@@ -186,13 +172,11 @@ Touken Ranbu Warriors
 TrackMania United
 Ultra Kaiju Monster Rancher
 Vampire: The Masquerade - Bloodlines
-Warcraft II: Tides of Darkness
 Wild Earth: African Safari
 Winning Eleven: Pro Evolution Soccer 2007
 The Witcher 3: Wild Hunt
 The Witcher 3: Wild Hunt - Blood and Wine
 The Witcher 3: Wild Hunt - Hearts of Stone
-WWE Smackdown! Here Comes the Pain
 Xenoblade Chronicles
 Xenoblade Chronicles X
 Yggdra Union: We'll Never Fight Alone

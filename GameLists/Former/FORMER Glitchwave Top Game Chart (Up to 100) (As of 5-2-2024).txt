@@ -14,7 +14,6 @@ Doom II: Hell on Earth
 The Elder Scrolls III: Morrowind
 Gothic II
 Gothic II: The Night of the Raven
-Guilty Gear XX Accent Core Plus R
 Hades
 Half-Life
 Kentucky Route Zero
@@ -27,6 +26,7 @@ Metal Gear Solid HD Collection
 Metroid Dread
 Metroid Prime: Trilogy
 Monkey Island 2: LeChuck's Revenge
+Omori
 The Orange Box
 Paper Mario
 Pathologic
@@ -35,6 +35,7 @@ Persona 3
 <1558> Pokemon Gold Version
 Portal
 Red Dead Redemption
+Resident Evil 2
 Riven: The Sequel to Myst
 The Secret of Monkey Island
 <37094> Shadow of the Colossus [2018]
