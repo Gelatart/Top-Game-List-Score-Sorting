@@ -35,16 +35,16 @@ test_query = {"Main Platform": "Wii"}
 
 print("Time to grab the games!")
 #games_pulled = mon_db.mon_col.find().limit(15)
-games_pulled = mon_col.find().limit(10)
+#games_pulled = mon_col.find().limit(10)
 #games_pulled = GameSorting.games.find().limit(10)
 #games_pulled = mon_db.find().limit(15)
-games_pulled = mon_col.find({},{"Title": 1, "Main Platform": 1}).limit(10)
-games_pulled_query = mon_col.find(test_query, { "List of References": 0, "Total Count": 0}).limit(10)
-games_pulled_ranked = mon_col.find(test_query).sort("Ranked Score", -1)
-games_pulled_inclusion = mon_col.find(test_query).sort("Inclusion Score", -1)
-games_pulled_average = mon_col.find(test_query).sort("Average Score", -1)
+#games_pulled = mon_col.find({},{"Title": 1, "Main Platform": 1}).limit(10)
+#games_pulled_query = mon_col.find(test_query, { "List of References": 0, "Total Count": 0}).limit(10)
+#games_pulled_ranked = mon_col.find(test_query).sort("Ranked Score", -1)
+#games_pulled_inclusion = mon_col.find(test_query).sort("Inclusion Score", -1)
+#games_pulled_average = mon_col.find(test_query).sort("Average Score", -1)
 
-print(games_pulled_query)
+#print(games_pulled_query)
 
 """
 for game in games_pulled:
@@ -58,6 +58,7 @@ for game in games_pulled:
 
 #input("Brief pause\n")
 
+"""
 for game in games_pulled_query:
     print("Here is a game")
     print(game)
@@ -65,6 +66,7 @@ for game in games_pulled_query:
     #    print("We found one!")
     #    print(game)
     print()
+"""
 
 print("Now it's time for us to pick some options in generating a report")
 
@@ -118,73 +120,50 @@ while(answer_check_main == False):
             print("20. DS")
             print("21. GCN")
             print("22. GBC")
+            print("23. DC")
+            print("24. GBA")
+            print("25. Amstrad CPC")
+            print("26. ZX Spectrum")
+            print("27. MSX")
+            print("29. GEN/MD")
+            print("30. 32X")
+            print("32. SAT")
+            print("33. GB")
+            print("34. Android")
+            print("35. Sega Game Gear")
+            print("36. XBLA")
+            print("37. 3DS")
+            print("38. PSP")
+            print("39. iOS")
+            print("41. Wii U")
+            print("42. N-Gage")
+            print("46. Vita")
+            print("48. PS4")
+            print("49. XONE")
+            print("52. Arcade")
+            print("58. Super Famicom")
+            print("59. 2600")
+            print("64. Sega Master System")
+            print("65. Atari 8-bit")
+            print("71. Commodore VIC-20")
+            print("75. Apple II")
+            print("79. Neo Geo MVS")
+            print("80. Neo Geo AES")
+            print("88. Magnavox Odyssey")
+            print("99. Famicom")
+            print("129. Texas Instruments TI-99")
+            print("130. Switch")
+            print("137. New Nintendo 3DS")
+            print("149. PC-98")
+            print("169. Xbox Series")
+            print("306. Satellaview")
+            print("379. Game.com")
             print("Which platform would you like to include?")
             #have function to check if number just given was one of the valid options?
-            if (plat_ID.id == 23):
-                plat_name = "DC"
-            elif (plat_ID.id == 24):
-                plat_name = "GBA"
-            elif (plat_ID.id == 25):
-                plat_name = "Amstrad CPC"
-            elif (plat_ID.id == 26):
-                plat_name = "ZX Spectrum"
-            elif (plat_ID.id == 27):
-                plat_name = "MSX"
-            elif (plat_ID.id == 29):
-                plat_name = "GEN/MD"
-            elif (plat_ID.id == 30):
-                plat_name = "32X"
-            elif (plat_ID.id == 32):
-                plat_name = "SAT"
-            elif (plat_ID.id == 33):
-                plat_name = "GB"
-            elif (plat_ID.id == 34):
-                plat_name = "Android"
-            elif (plat_ID.id == 35):
-                plat_name = "Sega Game Gear"
-            elif (plat_ID.id == 38):
-                plat_name = "PSP"
-            elif (plat_ID.id == 39):
-                plat_name = "iOS"
-            elif (plat_ID.id == 41):
-                plat_name = "Wii U"
-            elif (plat_ID.id == 46):
-                plat_name = "Vita"
-            elif (plat_ID.id == 48):
-                plat_name = "PS4"
-            elif (plat_ID.id == 49):
-                plat_name = "XONE"
-            elif (plat_ID.id == 52):
-                plat_name = "Arcade"
-            elif (plat_ID.id == 58):
-                plat_name = "Super Famicom"
-            elif (plat_ID.id == 59):
-                plat_name = "2600"
-            elif (plat_ID.id == 64):
-                plat_name = "Sega Master System"
-            elif (plat_ID.id == 75):
-                plat_name = "Apple II"
-            elif (plat_ID.id == 79):
-                plat_name = "Neo Geo MVS"
-            elif (plat_ID.id == 80):
-                plat_name = "Neo Geo AES"
-            elif (plat_ID.id == 88):
-                plat_name = "Magnavox Odyssey"
-            elif (plat_ID.id == 99):
-                plat_name = "Famicom"
-            elif (plat_ID.id == 130):
-                plat_name = "Switch"
-            elif (plat_ID.id == 137):
-                plat_name = "New Nintendo 3DS"
-            elif (plat_ID.id == 149):
-                plat_name = "PC-98"
-            elif (plat_ID.id == 169):
-                plat_name = "Xbox Series"
-            elif (plat_ID.id == 306):
-                plat_name = "Satellaview"
-            elif (plat_ID.id == 379):
-                plat_name = "Game.com"
-            #going to go off of IGDB ID's for now?
+            #going to go off of IGDB ID's for now, need to keep adding more
+            platform_selection = input()
+            new_query = {"List of Platforms": platform_selection}
+            queries.append(new_query)
             #...
         print("Which brand of platform would you like to include?")
         print("1. Nintendo")
@@ -258,6 +237,13 @@ while(answer_check_main == False):
         #answer_check_main = True
         print("Alright! Let's generate the report with the options selected!")
         custom_query = {}
+        print(queries)
+        for query, value in queries.items():
+            #how do i combine all the old queries into one new one?
+            #need to take list of queries dict values, and pull values out to build into custom_query
+            #custom_query += query
+            custom_query[query] = value
+
         print("How would you like your report sorted?")
         print("1. By Ranked Score")
         print("2. By Inclusion Score")
@@ -315,3 +301,11 @@ games_pulled_average.close()
 games_pulled_inclusion.close()
 
 print("Successfully completed! Have a good day!")
+
+"""
+REFERENCES:
+(EXCLUDING THE ONES ALREADY REFERENCED IN GENERATOR.PY)
+Putting python variables into mongo queries: https://stackoverflow.com/questions/37707033/mongo-query-in-python-if-i-use-variable-as-value
+Building up queries dynamically in pymongo: https://stackoverflow.com/questions/11269680/dynamically-building-queries-in-pymongo
+Grabbing both values of a dict as iterating: https://www.geeksforgeeks.org/iterate-over-a-dictionary-in-python/
+"""

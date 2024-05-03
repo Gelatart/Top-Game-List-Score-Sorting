@@ -481,12 +481,18 @@ while(igdb_check == False):
                         plat_name = "Android"
                     elif (plat_ID.id == 35):
                         plat_name = "Sega Game Gear"
+                    elif (plat_ID.id == 36):
+                        plat_name = "XBLA"
+                    elif (plat_ID.id == 37):
+                        plat_name = "3DS"
                     elif (plat_ID.id == 38):
                         plat_name = "PSP"
                     elif (plat_ID.id == 39):
                         plat_name = "iOS"
                     elif (plat_ID.id == 41):
                         plat_name = "Wii U"
+                    elif (plat_ID.id == 42):
+                        plat_name = "N-Gage"
                     elif (plat_ID.id == 46):
                         plat_name = "Vita"
                     elif (plat_ID.id == 48):
@@ -501,6 +507,10 @@ while(igdb_check == False):
                         plat_name = "2600"
                     elif (plat_ID.id == 64):
                         plat_name = "Sega Master System"
+                    elif (plat_ID.id == 65):
+                        plat_name = "Atari 8-bit"
+                    elif (plat_ID.id == 71):
+                        plat_name = "Commodore VIC-20"
                     elif (plat_ID.id == 75):
                         plat_name = "Apple II"
                     elif (plat_ID.id == 79):
@@ -511,6 +521,8 @@ while(igdb_check == False):
                         plat_name = "Magnavox Odyssey"
                     elif (plat_ID.id == 99):
                         plat_name = "Famicom"
+                    elif (plat_ID.id == 129):
+                        plat_name = "Texas Instruments TI-99"
                     elif (plat_ID.id == 130):
                         plat_name = "Switch"
                     elif (plat_ID.id == 137):

@@ -6,8 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="b33df5e9-3490-443b-8a31-ba21b2040da7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameLists/Former/FORMER Metacritic (User Scores, Up to 100) (As of 3-20-2024).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameLists/Ranked/Metacritic (User Scores, Up to 100) (As of 3-20-2024).txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PrintReports.py" beforeDir="false" afterPath="$PROJECT_DIR$/PrintReports.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sorted Database.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted Database.xls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sorted by Average (Uncompleted).txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Average (Uncompleted).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sorted by Average.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Average.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sorted by Inclusion (Uncompleted).txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Inclusion (Uncompleted).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sorted by Inclusion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Inclusion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sorted by Ranked (Uncompleted).txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Ranked (Uncompleted).txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sorted by Ranked.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Ranked.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tracking Categories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tracking Categories.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
