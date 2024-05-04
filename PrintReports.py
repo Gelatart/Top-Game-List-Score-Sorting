@@ -101,7 +101,7 @@ while(answer_check_main == False):
         if(platforms_option == '1'):
             print("Now we are going to list all of the options of platforms you can choose from")
             print("Note that the numbers are listed as so because they are the platform ID's listed in IGDB's API")
-            input("Whenever you are ready, the platform options will be listed in full\n")
+            input("Whenever you are ready, the platform options will be listed in full (For now use the text version)\n")
             print("3. Linux")
             print("4. N64")
             print("5. Wii")
@@ -182,6 +182,70 @@ while(answer_check_main == False):
     elif (filter_category == '2'):
         print("You have selected 2. Main Platform")
         print("Which platform would you like to be the main platform?")
+        print("Note that the numbers are listed as so because they are the platform ID's listed in IGDB's API")
+        input("Whenever you are ready, the platform options will be listed in full (For now use the text version)\n")
+        print("3. Linux")
+        print("4. N64")
+        print("5. Wii")
+        print("6. PC (Windows)")
+        print("7. PS1")
+        print("8. PS2")
+        print("9. PS3")
+        print("11. Xbox")
+        print("12. X360")
+        print("13. PC-DOS")
+        print("14. Mac")
+        print("15. C64 & C128")
+        print("16. Amiga")
+        print("18. NES")
+        print("19. SNES")
+        print("20. DS")
+        print("21. GCN")
+        print("22. GBC")
+        print("23. DC")
+        print("24. GBA")
+        print("25. Amstrad CPC")
+        print("26. ZX Spectrum")
+        print("27. MSX")
+        print("29. GEN/MD")
+        print("30. 32X")
+        print("32. SAT")
+        print("33. GB")
+        print("34. Android")
+        print("35. Sega Game Gear")
+        print("36. XBLA")
+        print("37. 3DS")
+        print("38. PSP")
+        print("39. iOS")
+        print("41. Wii U")
+        print("42. N-Gage")
+        print("46. Vita")
+        print("48. PS4")
+        print("49. XONE")
+        print("52. Arcade")
+        print("58. Super Famicom")
+        print("59. 2600")
+        print("64. Sega Master System")
+        print("65. Atari 8-bit")
+        print("71. Commodore VIC-20")
+        print("75. Apple II")
+        print("79. Neo Geo MVS")
+        print("80. Neo Geo AES")
+        print("88. Magnavox Odyssey")
+        print("99. Famicom")
+        print("129. Texas Instruments TI-99")
+        print("130. Switch")
+        print("137. New Nintendo 3DS")
+        print("149. PC-98")
+        print("169. Xbox Series")
+        print("306. Satellaview")
+        print("379. Game.com")
+        print("Which platform would you like to include?")
+        # have function to check if number just given was one of the valid options?
+        # going to go off of IGDB ID's for now, need to keep adding more
+        platform_selection = input()
+        new_query = {"Main Platform": platform_selection}
+        queries.append(new_query)
         # ...
     elif (filter_category == '3'):
         print("You have selected 3. Release Date")
@@ -238,11 +302,14 @@ while(answer_check_main == False):
         print("Alright! Let's generate the report with the options selected!")
         custom_query = {}
         print(queries)
-        for query, value in queries.items():
+        #for query, value in queries.items():
+        for query in queries:
             #how do i combine all the old queries into one new one?
             #need to take list of queries dict values, and pull values out to build into custom_query
             #custom_query += query
-            custom_query[query] = value
+            #custom_query[query] = value
+            for key, value in query.items():
+                custom_query[key] = value
 
         print("How would you like your report sorted?")
         print("1. By Ranked Score")
@@ -295,10 +362,10 @@ while(answer_check_main == False):
 mon_client.close()
 #Close cursors too?
 games_pulled.close()
-games_pulled_query.close()
-games_pulled_ranked.close()
-games_pulled_average.close()
-games_pulled_inclusion.close()
+#games_pulled_query.close()
+#games_pulled_ranked.close()
+#games_pulled_average.close()
+#games_pulled_inclusion.close()
 
 print("Successfully completed! Have a good day!")
 
@@ -308,4 +375,5 @@ REFERENCES:
 Putting python variables into mongo queries: https://stackoverflow.com/questions/37707033/mongo-query-in-python-if-i-use-variable-as-value
 Building up queries dynamically in pymongo: https://stackoverflow.com/questions/11269680/dynamically-building-queries-in-pymongo
 Grabbing both values of a dict as iterating: https://www.geeksforgeeks.org/iterate-over-a-dictionary-in-python/
+Getting dictionary keys as variables: https://stackoverflow.com/questions/3545331/how-can-i-get-dictionary-key-as-variable-directly-in-python-not-by-searching-fr
 """
