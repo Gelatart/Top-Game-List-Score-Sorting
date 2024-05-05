@@ -5,13 +5,30 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 import dotenv
 from dotenv import load_dotenv
+import datetime
 
 print("Welcome to PrintReports!")
 
-print("For now let's start with a test pull. Best games for the Wii!")
+#print("For now let's start with a test pull. Best games for the Wii!")
 
-#Pulling from the mongo cluster seems not to work if we haven't done anything with mongo yet?
-#When haven't run generator it seems not to work fully?
+#Right now going to attempt to build an or query? Make an option for an and query style later?
+"""
+AND STYLE:
+query = {'x': 1}
+if checkbox == 'checked':
+    query['y'] = 2
+
+results = db.collection.find(query)
+
+OR STYLE:
+query = [{'x': 1}]
+if checkbox == 'checked':
+    query.append({'y': 2})
+
+results = db.collection.find({'$or': query})
+
+REFERENCE: https://stackoverflow.com/questions/11269680/dynamically-building-queries-in-pymongo
+"""
 
 load_dotenv()
 
@@ -29,7 +46,7 @@ except Exception as e:
 mon_col = mon_db["games"]
 list_col = mon_db["lists"]
 
-test_query = {"Main Platform": "Wii"}
+#test_query = {"Main Platform": "Wii"}
 #test_query = {"Main Platform": {"$exists": True}}
 #test_query = {"Ranked Score": { "$gt": 2400 } }
 
@@ -69,6 +86,8 @@ for game in games_pulled_query:
 """
 
 print("Now it's time for us to pick some options in generating a report")
+
+#add in more answer checks later? or come up with a better way to do menu progression and repeated asking?
 
 answer_check_main = False
 queries = []
@@ -137,6 +156,7 @@ while(answer_check_main == False):
             print("39. iOS")
             print("41. Wii U")
             print("42. N-Gage")
+            print("44. Tapwave Zodiac")
             print("46. Vita")
             print("48. PS4")
             print("49. XONE")
@@ -164,7 +184,6 @@ while(answer_check_main == False):
             platform_selection = input()
             new_query = {"List of Platforms": platform_selection}
             queries.append(new_query)
-            #...
         print("Which brand of platform would you like to include?")
         print("1. Nintendo")
         print("2. Sony")
@@ -219,6 +238,7 @@ while(answer_check_main == False):
         print("39. iOS")
         print("41. Wii U")
         print("42. N-Gage")
+        print("44. Tapwave Zodiac")
         print("46. Vita")
         print("48. PS4")
         print("49. XONE")
@@ -246,26 +266,51 @@ while(answer_check_main == False):
         platform_selection = input()
         new_query = {"Main Platform": platform_selection}
         queries.append(new_query)
-        # ...
     elif (filter_category == '3'):
         print("You have selected 3. Release Date")
         print("Would you like to enter a specific date? Or specify a time range?")
-        #...
-        print("Type in the date you would like to filter for")
-        #...
-        print("Here are the time range options")
-        print("1. Specific year")
-        print("2. Specific decade")
-        print("3. Before a date")
-        print("4. After a date")
-        print("5. In between two dates")
-        print("6. 20th Century")
-        print("7. 21st Century")
-        #...
+        print("1. Specific date")
+        print("2. Specified time range")
+        time_style_option = input()
+        if (time_style_option == '1'):
+            print("Type in the date you would like to filter for")
+            print("First type in the year, then the month, then the day")
+            date_year = int(input())
+            date_month = int(input())
+            date_day = int(input())
+            filter_date = datetime.datetime(date_year, date_month, date_day)
+            print(filter_date)
+            new_query = {"Release Date": filter_date}
+            queries.append(new_query)
+        elif (time_style_option == '2'):
+            print("Here are the time range options")
+            print("1. Specific year")
+            print("2. Specific decade")
+            print("3. Before a date")
+            print("4. After a date")
+            print("5. In between two dates")
+            print("6. 20th Century")
+            print("7. 21st Century")
+            time_range_option = input()
+            #...
+        else:
+            print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
     elif (filter_category == '4'):
         print("You have selected 4. Completion Status")
         print("Would you like games you have completed? Or games you haven't completed?")
-        #...
+        print("1. Completed")
+        print("2. Uncompleted")
+        completed_option = input()
+        if(completed_option == '1'):
+            print("Including games you have completed")
+            new_query = {"Completed": True}
+            queries.append(new_query)
+        elif(completed_option == '2'):
+            print("Including games you have not completed")
+            new_query = {"Completed": False}
+            queries.append(new_query)
+        else:
+            print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
     elif (filter_category == '5'):
         print("You have selected 5. Title")
         print("Would you like to enter a filter string to use in filtering results?")
@@ -303,6 +348,8 @@ while(answer_check_main == False):
         custom_query = {}
         print(queries)
         #for query, value in queries.items():
+        """
+        COMMENTING UNTIL WE HAVE AND APPROACH
         for query in queries:
             #how do i combine all the old queries into one new one?
             #need to take list of queries dict values, and pull values out to build into custom_query
@@ -310,6 +357,7 @@ while(answer_check_main == False):
             #custom_query[query] = value
             for key, value in query.items():
                 custom_query[key] = value
+        """
 
         print("How would you like your report sorted?")
         print("1. By Ranked Score")
@@ -320,11 +368,17 @@ while(answer_check_main == False):
         print("6. Newest First")
         sort_type = input()
         if(sort_type == '1'):
-            games_pulled = mon_col.find(custom_query).sort("Ranked Score", -1)
+            #and approach
+            #games_pulled = mon_col.find(custom_query).sort("Ranked Score", -1)
+            games_pulled = mon_col.find({'$or': queries}).sort("Ranked Score", -1)
         elif (sort_type == '2'):
-            games_pulled = mon_col.find(custom_query).sort("Inclusion Score", -1)
+            # and approach
+            #games_pulled = mon_col.find(custom_query).sort("Inclusion Score", -1)
+            games_pulled = mon_col.find({'$or': queries}).sort("Inclusion Score", -1)
         elif (sort_type == '3'):
-            games_pulled = mon_col.find(custom_query).sort("Average Score", -1)
+            # and approach
+            #games_pulled = mon_col.find(custom_query).sort("Average Score", -1)
+            games_pulled = mon_col.find({'$or': queries}).sort("Average Score", -1)
         else:
             print("Sorry, I don't understand")
             #check again
@@ -376,4 +430,5 @@ Putting python variables into mongo queries: https://stackoverflow.com/questions
 Building up queries dynamically in pymongo: https://stackoverflow.com/questions/11269680/dynamically-building-queries-in-pymongo
 Grabbing both values of a dict as iterating: https://www.geeksforgeeks.org/iterate-over-a-dictionary-in-python/
 Getting dictionary keys as variables: https://stackoverflow.com/questions/3545331/how-can-i-get-dictionary-key-as-variable-directly-in-python-not-by-searching-fr
+Creating datetime objects: https://www.w3schools.com/python/python_datetime.asp
 """
