@@ -55,6 +55,7 @@ Sonic Mania
 Sonic Origins
 Soulstice
 Stray
+Tales of Kenzera: Zau
 Tembo the Badass Elephant
 Trek to Yomi
 Uncharted: Legacy of Thieves Collection
@@ -66,15 +67,12 @@ Bugsnax
 D4: Dark Dreams Don't Die - Season 1
 Firmament
 Heavy Rain
-Myst
+<141568> Myst [2020]
 The Walking Dead
 The Wolf Among Us
-Apex Legends
 Call of Duty: Warzone
 Fortnite
 PUBG: Battlegrounds
-Rumbleverse
-Spellbreak
 Capcom Beat 'Em Up Bundle
 Fight'N Rage
 River City Girls
@@ -121,9 +119,9 @@ Dead Rising 2: Off the Record
 <159119> Dead Space [2023]
 Narcosis
 <8254> Resident Evil [2002] [HD Remaster]
-<19686> Resident Evil 2
+<19686> Resident Evil 2 [2019]
 Resident Evil 3
-<132181> Resident Evil 4
+<132181> Resident Evil 4 [2023]
 Resident Evil 7: Biohazard
 Resident Evil Village
 Blade & Soul
@@ -157,6 +155,7 @@ Sonic & All-Stars Racing Transformed
 Split/Second
 WRC 10
 Across the Obelisk
+Another Crab's Treasure
 Baldur's Gate 3
 Crisis Core: Final Fantasy VII - Reunion
 Cyberpunk 2077
@@ -168,6 +167,7 @@ Diablo IV
 DIG: Deep In Galaxies
 Disco Elysium: The Final Cut
 Dragon's Dogma: Dark Arisen
+Dragon's Dogma II
 Dying Light 2: Stay Human
 Eastern Exorcist
 Elden Ring
@@ -179,9 +179,9 @@ Hades
 Hogwarts Legacy
 Honkai: Star Rail
 <143616> Legend of Mana [Remastered]
-Mass Effect 2
 Mass Effect: Andromeda
 Mass Effect Legendary Edition
+Mass Effect 2
 Monster Hunter Rise
 Monster Hunter: World
 Ni no Kuni II: Revenant Kingdom
@@ -201,7 +201,7 @@ Star Ocean: The Divine Force
 Starfield
 Story of Seasons: Friends of Mineral Town
 Tales of Arise
-<119391> Trials of Mana
+<119391> Trials of Mana [Remastered]
 Wasteland 2
 Wild Hearts
 The Witcher 3: Wild Hunt
@@ -223,7 +223,7 @@ BioShock Infinite
 Borderlands 2
 Call of Duty: Modern Warfare
 Counter-Strike: Global Offensive
-<7351> Doom
+<7351> Doom [2016]
 Doom Eternal
 Far Cry 4
 Gears 5

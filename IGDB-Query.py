@@ -128,6 +128,7 @@ Metal Gear NES: IGDB ID: 133917
 Metal Gear Solid GBC: IGDB ID: 5600
 Microsoft Flight Simulator 2020: IGDB ID: 119295
 Mr. Driller GBC: IGDB ID: 254519
+Myst [2020]: IGDB ID: 
 Need for Speed: Most Wanted 2012: IGDB ID: 3193
 Nights Into Dreams (2008 PC Version, because Nights + Christmas Nights): IGDB ID: 19903
 Ninja Gaiden 2004: IGDB ID: 5972

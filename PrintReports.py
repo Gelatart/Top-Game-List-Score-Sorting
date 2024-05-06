@@ -106,7 +106,7 @@ while(answer_check_main == False):
     print("10. Developers")
     print("11. Miscellaneous")
     print("12. Finish and Generate Report")
-    #consider franchise option when that data is pulled? other fields?
+    #consider franchise option when that data is pulled? genre? other fields?
 
     filter_category = input("Make selection here: ")
 
