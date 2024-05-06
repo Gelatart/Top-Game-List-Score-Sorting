@@ -1,4 +1,4 @@
-323
+327
 The Oregon Trail
 Pong
 Combat
@@ -26,7 +26,6 @@ M.U.L.E.
 Star Wars
 Elite
 Marble Madness
-
 Gauntlet
 Ghosts 'n Goblins
 Super Mario Bros.
@@ -43,7 +42,7 @@ Mike Tyson's Punch-Out!!
 R-Type
 Sid Meier's Pirates!
 Mega Man 2
-<210484> Ninja Gaiden
+<210484> Ninja Gaiden [NES]
 Super Mario Bros. 3
 Final Fight
 Populous
@@ -303,8 +302,10 @@ Dota 2
 Grand Theft Auto V
 The Last of Us
 Papers, Please
+Alien: Isolation
 Destiny
 Hearthstone
+Mario Kart 8
 Shovel Knight
 Bloodborne
 Rocket League
@@ -313,6 +314,7 @@ The Witcher 3: Wild Hunt
 Dishonored 2
 Inside
 Overwatch
+Persona 5
 Stardew Valley
 Uncharted 4: A Thief's End
 Fortnite
@@ -323,3 +325,4 @@ Red Dead Redemption 2
 Super Smash Bros. Ultimate
 Disco Elysium
 Hades
+Elden Ring
