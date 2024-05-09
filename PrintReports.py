@@ -91,6 +91,9 @@ print("Now it's time for us to pick some options in generating a report")
 
 answer_check_main = False
 queries = []
+or_queries = []
+and_queries = []
+#^Try to split the natural or queries and the natural and queries?
 while(answer_check_main == False):
     print()
     print("Which filter category would you like to add on to your report?")
@@ -314,7 +317,14 @@ while(answer_check_main == False):
     elif (filter_category == '5'):
         print("You have selected 5. Title")
         print("Would you like to enter a filter string to use in filtering results?")
-        #...
+        title_search = input("If so, specify your filter string here: ")
+        #new_query = { "Title": { "$text:": title_search}}
+        #new_query = mon_col.aggregate([{"$search": {"text:": {"query": title_search, "path": "Title"}}}])
+        #new_query = mon_col.find({"$text": {"$search": title_search}})
+        new_query = {"$text": {"$search": title_search}}
+        #new_query = {"Title": {"$search": title_search}}
+        #Trying to figure this out, not working properly, need to have properly built index I refer to?
+        queries.append(new_query)
     elif (filter_category == '6'):
         print("You have selected 6. Ranked Score")
         print("Would you like to set a minimum threshold score? A maximum one? Or a target score value?")
@@ -358,7 +368,11 @@ while(answer_check_main == False):
             for key, value in query.items():
                 custom_query[key] = value
         """
-
+        print("Would you like your queries to build in an AND approach, OR approach, or the most natural mix of both?")
+        print("1. AND approach")
+        print("2. OR approach")
+        print("3. Natural mix")
+        and_or_type = input()
         print("How would you like your report sorted?")
         print("1. By Ranked Score")
         print("2. By Inclusion Score")
@@ -367,16 +381,29 @@ while(answer_check_main == False):
         print("5. Oldest First")
         print("6. Newest First")
         sort_type = input()
-        if(sort_type == '1'):
-            #and approach
-            #games_pulled = mon_col.find(custom_query).sort("Ranked Score", -1)
-            games_pulled = mon_col.find({'$or': queries}).sort("Ranked Score", -1)
-        elif (sort_type == '2'):
+        if (sort_type == '1' and and_or_type == '1'):
+            # and approach
+            # games_pulled = mon_col.find(custom_query).sort("Ranked Score", -1)
+            #games_pulled = mon_col.find({'$or': queries}).sort("Ranked Score", -1)
+            games_pulled = mon_col.find({'$and': queries}).sort("Ranked Score", -1)
+        elif (sort_type == '2' and and_or_type == '1'):
             # and approach
             #games_pulled = mon_col.find(custom_query).sort("Inclusion Score", -1)
-            games_pulled = mon_col.find({'$or': queries}).sort("Inclusion Score", -1)
-        elif (sort_type == '3'):
+            games_pulled = mon_col.find({'$and': queries}).sort("Inclusion Score", -1)
+        elif (sort_type == '3' and and_or_type == '1'):
             # and approach
+            #games_pulled = mon_col.find(custom_query).sort("Average Score", -1)
+            games_pulled = mon_col.find({'$and': queries}).sort("Average Score", -1)
+        elif(sort_type == '1' and and_or_type == '2'):
+            #or approach
+            #games_pulled = mon_col.find(custom_query).sort("Ranked Score", -1)
+            games_pulled = mon_col.find({'$or': queries}).sort("Ranked Score", -1)
+        elif (sort_type == '2' and and_or_type == '2'):
+            # or approach
+            #games_pulled = mon_col.find(custom_query).sort("Inclusion Score", -1)
+            games_pulled = mon_col.find({'$or': queries}).sort("Inclusion Score", -1)
+        elif (sort_type == '3' and and_or_type == '2'):
+            # or approach
             #games_pulled = mon_col.find(custom_query).sort("Average Score", -1)
             games_pulled = mon_col.find({'$or': queries}).sort("Average Score", -1)
         else:
