@@ -1,5 +1,5 @@
 100
-Elder Scrolls III: Morrowind
+The Elder Scrolls III: Morrowind
 The Legend of Zelda: Majora's Mask
 Final Fantasy IX
 Final Fantasy Tactics
@@ -69,10 +69,10 @@ Bayonetta
 Banjo-Tooie
 Age of Empires II: The Age of Kings
 Final Fantasy XII
-STALKER: Shadow of Chernobyl
+S.T.A.L.K.E.R.: Shadow of Chernobyl
 Metal Gear Solid
 Metal Gear Rising: Revengeance
-Mount and Blade: Warband
+Mount & Blade: Warband
 Star Wars: Battlefront II
 Grand Theft Auto: San Andreas
 Thief: The Dark Project

@@ -8,7 +8,7 @@ TOTAL: 100
 <^> indicates special notes for scoring that are not currently implemented
 
 MY TOP 100:
-My Personal Top 100 - Backloggd (As of 3-7-2024)
+My Personal Top 100 - Backloggd (As of 5-2-2024)
 
 TOP 100(+) ALL TIME:
 R-Reader's Choice Top 300 Games of All Time - GameInformer - 3-19-2018
@@ -39,13 +39,13 @@ R-The 50 Best Video Games of All Time - TIME - 8-23-2016
 R-Top 10 Video Games - CNET - 7-5-2008
 
 SCORE AGGREGATION (CRITICS):
-R-Metacritic (Critic Scores, Metascore, Up to 100) (As of 3-11-2024)
+R-Metacritic (Critic Scores, Metascore, Up to 100) (As of 5-2-2024)
 	F-+ FORMER
 
 SCORE AGGREGATION (USERS):
-R-Glitchwave Top Game Chart (Up to 100) (As of 3-13-2024)
+R-Glitchwave Top Game Chart (Up to 100) (As of 5-2-2024)
 	F-+ FORMER
-R-Metacritic (User Scores, Up to 100) (As of 3-20-2024)
+R-Metacritic (User Scores, Up to 100) (As of 5-3-2024)
 	F-+ FORMER
 
 SCORE AGGREGATION (DISCONTINUED):
@@ -141,11 +141,11 @@ TOP PLATFORM OF ALL TIME (X360):
 R-The best Xbox 360 games - Digital Trends - 1-4-2019
 
 BEST GAMES TO GET (PC):
-U-The Best PC Games - PCMag (As of 2-27-2024)
+U-The Best PC Games - PCMag (As of 5-4-2024)
 	F-+ FORMER
 
 UNRANKED LIST OF GREAT/IMPORTANT GAMES:
-U-List of video games considered the best - Wikipedia (As of 3-11-2024)
+U-List of video games considered the best - Wikipedia (As of 5-5-2024)
 	F-+ FORMER
 
 UNRANKED LIST OF GREAT/IMPORTANT GAMES (PC):

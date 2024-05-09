@@ -171,7 +171,7 @@ Red Faction: Guerrilla
 Spacewar!
 Star Wars
 Streets of Rage 2
-Superhot [VR]
+SuperHot VR
 System Shock 2
 The Last of Us
 The Secret of Monkey Island
@@ -243,12 +243,12 @@ Gears of War
 Devil May Cry 3: Dante's Awakening
 Asteroids
 Psychonauts
-Another World [Out of This World]
+Another World
 Castlevania
 The Jackbox Party Pack
 Castlevania III: Dracula's Curse
 Fallout
-Pokemon Go
+<12515> Pokemon Go
 Maniac Mansion
 Star Control
 King's Quest I: Quest for the Crown
@@ -331,7 +331,7 @@ Puzzle Quest: Challenge of the Warlords
 Samurai Shodown
 The Legend of Zelda: Majora's Mask
 Deus Ex
-Everybody's Golf [Hot Shots Golf]
+Hot Shots Golf
 Populous
 Dishonored 2
 Quadrilateral Cowboy
@@ -365,7 +365,7 @@ Castle Crashers
 Lemmings
 Limbo
 PaRappa the Rapper
-Pokemon X / Y
+<2286> Pokemon X Version
 Super Mario Land 2: 6 Golden Coins
 Ultima IV: Quest of the Avatar
 Star Wars: X-Wing
@@ -452,7 +452,7 @@ Professor Layton and the Unwound Future
 The Witcher 2: Assassins of Kings
 Angry Birds
 Dragon Age: Origins
-Archon: The Light and the Dark
+Archon
 Boulder Dash
 Cities: Skylines
 Plants vs. Zombies
@@ -469,7 +469,7 @@ TimeSplitters 2
 <210484> Ninja Gaiden
 Peggle
 Earth Defense Force 2017
-Aladdin [Genesis]
+<8118> Disney's Aladdin [Genesis]
 Firewatch
 Monument Valley
 Borderlands

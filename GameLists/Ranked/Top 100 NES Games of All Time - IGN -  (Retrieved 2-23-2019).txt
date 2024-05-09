@@ -24,7 +24,7 @@ Blaster Master
 Bubble Bobble
 Blades of Steel
 Castlevania II: Simon's Quest
-Metal Gear [NES]
+<133917> Metal Gear [NES]
 Kirby's Adventure
 Baseball Stars
 Adventure Island
@@ -38,7 +38,7 @@ Faxanadu
 Jackal
 Life Force
 Dragon Warrior IV
-Battletoads [NES]
+Battletoads
 Teenage Mutant Ninja Turtles II: The Arcade Game
 Crystalis
 Ninja Gaiden II: The Dark Sword of Chaos
@@ -46,20 +46,20 @@ Klax
 Fester's Quest
 Metal Storm
 Vice: Project Doom
-Tetris [Tengen]
+<180278> Tetris [Tengen]
 Kid Niki: Radical Ninja
 Shadowgate
 Dr. Mario
 Adventures of Lolo 3
 Tecmo Super Bowl
-Ghosts 'N Goblins [NES]
+<39048> Ghosts 'N Goblins [NES]
 Double Dragon III: The Sacred Stones
 Wizards & Warriors
 Rad Racer
 Mega Man 6
 Rygar
 Super C
-Maniac Mansion [NES]
+Maniac Mansion
 Kung Fu
 Gargoyle's Quest II
 Ironsword: Wizards & Warriors II
@@ -69,12 +69,12 @@ Qix
 Little Nemo: The Dream Master
 Tecmo World Wrestling
 Legendary Wings
-Chip 'N Dale: Rescue Ranger
-Ikari Warriors [NES]
+Disney's Chip 'n Dale Rescue Rangers
+<274081> Ikari Warriors [NES]
 Spy Hunter
 A Boy and His Blob: Trouble on Blobolonia
 The Goonies II
-Battletoads & Double Dragon: The Ultimate Team
+Battletoads / Double Dragon
 Duck Hunt
 Ring King
 Ice Climber
@@ -94,7 +94,7 @@ Skate or Die 2: The Search for Double Trouble
 Little Samson
 Kickle Cubicle
 Mega Man 4
-Dragon Quest III: The Seeds of Salvation [Dragon Warrior III]
+Dragon Warrior III
 Astyanax
 <86386> Teenage Mutant Ninja Turtles
 Rush'n Attack

@@ -6,12 +6,12 @@ The Legend of Zelda: Oracle of Seasons
 <1514> Pokemon Crystal Version
 Wario Land 3
 Wario Land II
-<5600> Metal Gear Solid
-<128874> Mario Tennis
+<5600> Metal Gear Solid [GBC]
+<128874> Mario Tennis [GBC]
 Dragon Warrior Monsters 2: Tara's Adventure
 Super Mario Bros. Deluxe
 <205600> Dragon Warrior III
-<135389> Mario Golf
+<135389> Mario Golf [GBC]
 Dragon Warrior Monsters
 <152752> Donkey Kong Country
 <4567> Pokemon Trading Card Game

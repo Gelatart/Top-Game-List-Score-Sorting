@@ -4,16 +4,16 @@ The Legend of Zelda: Link's Awakening
 Metroid II: Return of Samus
 Tetris
 Super Mario Land 2: 6 Golden Coins
-Battletoads [Game Boy]
+<136619> Battletoads [Game Boy]
 Mario's Picross
 Gargoyle's Quest
-Batman: The Video Game [Game Boy]
-Mega Man V [Game Boy]
+<49227> Batman: The Video Game [Game Boy]
+Mega Man V
 R-Type
 F-1 Race
 Double Dragon
 <145268> Disney's DuckTales
-Gradius: The Interstellar Assault [Nemesis II]
+Gradius: The Interstellar Assault
 Operation C
 Tiny Toon Adventures: Babs' Big Break
 Kid Dracula

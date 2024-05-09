@@ -19,7 +19,7 @@ Dwarf Fortress
 Eternal Darkness: Sanity's Requiem
 E.Y.E: Divine Cybermancy
 Fallout 2
-Fire Emblem: Genealogy of the Holy War [Fire Emblem: Seisen no Keifu]
+Fire Emblem: Genealogy of the Holy War
 Freelancer
 Full Throttle
 God Hand
@@ -39,7 +39,7 @@ LSD: Dream Emulator
 Lufia II: Rise of the Sinistrals
 Metal Slug 3
 Mother 3
-Mr. Gimmick [Gimmick!]
+Mr. Gimmick
 Myth II: Soulblighter
 The Neverhood
 NieR
@@ -53,16 +53,16 @@ Recettear: An Item Shop's Tale
 Rez
 Riven: The Sequel to Myst
 Sanitarium
-Sengoku Rance [ADULT!]
+Sengoku Rance
 Severance: Blade of Darkness
-Shadowrun [SNES]
+<7640> Shadowrun [SNES]
 Sid Meier's Alpha Centauri
 Shin Megami Tensei II
 Sins of a Solar Empire
-Soul Reaver 2
+Legacy of Kain: Soul Reaver 2
 System Shock 2
 Star Wars: TIE Fighter
-2nd Super Robot Wars Alpha
+Dai-2-ji Super Robot Taisen Alpha
 SWAT 4
 Terranigma
 Total Annihilation

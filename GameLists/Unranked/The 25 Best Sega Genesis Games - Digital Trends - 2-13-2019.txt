@@ -5,9 +5,9 @@ Pulseman
 Streets of Rage 2
 Gunstar Heroes
 Ecco the Dolphin
-The Lost World: Jurassic Park [Gen]
+<8075> The Lost World: Jurassic Park [Gen]
 Samurai Shodown
-Super Street Fighter II
+Super Street Fighter II: The New Challengers
 Fatal Fury
 Mortal Kombat II
 Sonic the Hedgehog 2
@@ -15,7 +15,7 @@ Earthworm Jim
 Dr. Robotnik's Mean Bean Machine
 Phantasy Star IV: The End of the Millennium
 Sword of Vermilion
-Shadowrun [GEN]
+<3000> Shadowrun [Gen]
 Beyond Oasis
 Phantasy Star II
 Shining Force II

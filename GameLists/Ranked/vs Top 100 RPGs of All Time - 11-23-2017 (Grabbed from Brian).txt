@@ -7,9 +7,9 @@ Dark Souls
 Fallout 2
 Vampire: The Masquerade - Bloodlines
 The Elder Scrolls III: Morrowind
-Mount and Blade: Warband
+Mount & Blade: Warband
 Mother 3
-Arcanum: Of Steamworks and Magick Obscura
+Arcanum: of Steamworks and Magick Obscura
 Star Wars: Knights of the Old Republic II - The Sith Lords
 Bloodborne
 Paper Mario: The Thousand-Year Door
@@ -31,7 +31,7 @@ Demon's Souls
 Final Fantasy IX
 The Witcher 3: Wild Hunt
 Divinity: Original Sin II
-PlaneScape: Torment
+Planescape: Torment
 Persona 3
 EarthBound
 The World Ends with You
@@ -53,7 +53,7 @@ Bravely Default
 Persona 2: Innocent Sin
 <1556> Pokemon Heart Gold Version
 Shin Megami Tensei IV
-Tactics Ogre - Let Us Cling Together
+Tactics Ogre: Let Us Cling Together
 Fire Emblem: Radiant Dawn
 Dragon Quest VIII: Journey of the Cursed King
 NieR
@@ -62,7 +62,7 @@ Mass Effect 2
 Dark Souls III
 Final Fantasy V
 The Witcher
-Ultima VI
+Ultima VI: The False Prophet
 Golden Sun
 Fable
 Final Fantasy XII
@@ -89,7 +89,7 @@ Kingdom Hearts Final Mix
 Terranigma
 Shin Megami Tensei: Digital Devil Saga 2
 Heroes of Might and Magic III: The Restoration of Erathia
-LISA: The Painful
+Lisa
 Grandia
 Dragon Quest V: Tenkuu no Hanayome
 Shin Megami Tensei: Digital Devil Saga 2
@@ -98,4 +98,4 @@ Lunar: Silver Star Story Complete
 Shadow Hearts: Covenant
 Lufia II: Rise of the Sinistrals
 The Elder Scrolls V: Skyrim
-Etrian Odyssey 3
+Etrian Odyssey III: The Drowned City

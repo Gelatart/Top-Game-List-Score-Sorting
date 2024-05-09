@@ -1,7 +1,7 @@
 100
 Super Mario Galaxy
 Super Mario Odyssey
-Legend of Zelda: Breath of the Wild
+The Legend of Zelda: Breath of the Wild
 Grand Theft Auto V
 Super Mario Galaxy 2
 The Legend of Zelda: Ocarina of Time
@@ -26,7 +26,7 @@ The Elder Scrolls V: Skyrim
 Grand Theft Auto: San Andreas
 BioShock
 Metal Gear Solid 2: Sons of Liberty
-<5600> Metal Gear Solid
+<5600> Metal Gear Solid [GBC]
 Chrono Trigger
 Portal 2
 LittleBigPlanet
@@ -59,7 +59,7 @@ Undertale
 Baldur's Gate II: Shadows of Amn
 Half-Life
 Robo Aleste
-Christmas NiGHTS into Dreams...
+Christmas Nights into Dreams
 Zork
 World of Goo
 Resident Evil Code: Veronica
@@ -85,7 +85,7 @@ Unreal Tournament
 The Legend of Zelda: Skyward Sword
 <103337> Divinity: Original Sin II - Definitive Edition
 Forza Motorsport
-Fallout 3: Game of the Year Edition
+<21892> Fallout 3: Game of the Year Edition
 Out of the Park Baseball 2007
 Metal Gear Solid
 Metal Gear Solid 3: Subsistence

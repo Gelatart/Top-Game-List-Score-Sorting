@@ -7,7 +7,7 @@ Assassin's Creed Valhalla
 Axiom Verge
 Batman: Arkham City
 Bayonetta
-Blasphemous 2
+Blasphemous II
 Blazing Chrome
 Bomb Rush Cyberfunk
 Carrion
@@ -15,12 +15,12 @@ Cuphead
 Daemon X Machina
 Darksiders III
 Death Stranding
-Devil May Cry 4 [Special Edition]
+Devil May Cry 4: Special Edition
 Devil May Cry 5
 The Disney Afternoon Collection
 En Garde!
 Fall Guys
-Far Cry Primal
+Far Cry: Primal
 For Honor
 Freedom Planet
 Ghostrunner
@@ -31,56 +31,54 @@ Horizon Zero Dawn: Complete Edition
 Immortals Fenyx Rising
 Jet Set Radio
 Katamari Damacy Reroll
-Killer is Dead [Nightmare Edition]
-Lego Batman 3: Beyond Gotham
-Lego Marvel Super Heroes
-Marvel's Spider-Man [Remastered]
+Killer is Dead: Nightmare Edition
+LEGO Batman 3: Beyond Gotham
+LEGO Marvel Super Heroes
+Marvel's Spider-Man Remastered
 Mega Man 11
-Mega Man Legacy Collection [Mega Man + Mega Man 2 + Mega Man 3 + Mega Man 4 + Mega Man 5 + Mega Man 6]
+Mega Man Legacy Collection
 Metal Gear Rising: Revengeance
 Metal Slug 3
-Ninja Gaiden: Master Collection [Ninja Gaiden Sigma + Ninja Gaiden Sigma 2 + Ninja Gaiden 3: Razor's Edge]
+Ninja Gaiden: Master Collection
 <20744> Okami HD
 Ori and the Will of the Wisps
 Red Dead Redemption 2
 Rise of the Tomb Raider
 Sackboy: A Big Adventure
 Sekiro: Shadows Die Twice
-Shadow Complex [Remastered]
+Shadow Complex Remastered
 Shadow of the Tomb Raider
 Shenmue I & II
 Shock Troopers
 Shovel Knight
 Sonic Mania
-Sonic Origins [Sonic the Hedgehog + Sonic the Hedgehog 2 + Sonic the Hedgehog 3 & Knuckles + Sonic CD]
+Sonic Origins
 Soulstice
 Stray
+Tales of Kenzera: Zau
 Tembo the Badass Elephant
 Trek to Yomi
-Uncharted: Legacy of Thieves Collection [Uncharted 4: A Thief's End + Uncharted: The Lost Legacy]
+Uncharted: Legacy of Thieves Collection
 Warframe
 Watch Dogs: Legion
-Zone of the Enders: The 2nd Runner [Mars]
+Zone of The Enders: The 2nd Runner Mars
 Batman: The Telltale Series
 Bugsnax
-D4: Dark Dreams Don't Die
+D4: Dark Dreams Don't Die - Season 1
 Firmament
 Heavy Rain
-Myst
+<141568> Myst [2020]
 The Walking Dead
 The Wolf Among Us
-Apex Legends
 Call of Duty: Warzone
 Fortnite
-PlayerUnknown's Battlegrounds
-Rumbleverse
-Spellbreak
-Capcom Beat 'Em Up Bundle [Final Fight + Captain Commando + The King of Dragons + Knights of the Round + Warriors of Fate + Armored Warriors + Battle Circuit]
+PUBG: Battlegrounds
+Capcom Beat 'Em Up Bundle
 Fight'N Rage
 River City Girls
 River City Girls 2
 River City Melee Mach!!
-Scott Pilgrim vs. The World: The Game [Complete Edition]
+Scott Pilgrim vs. the World: The Game - Complete Edition
 Sifu
 Streets of Rage 4
 Teenage Mutant Ninja Turtles: Shredder's Revenge
@@ -92,38 +90,38 @@ Dead or Alive 6
 Divekick
 Dragon Ball FighterZ
 Garou: Mark of the Wolves
-Guilty Gear Strive
-Guilty Gear Xrd -Sign-
-Killer Instinct [2013]
-The King of Fighters '98 [Ultimate Match Final Edition]
-The King of Fighters 2002 [Unlimited Match]
+Guilty Gear: Strive
+Guilty Gear Xrd: Sign
+<10354> Killer Instinct [2013]
+The King of Fighters '98 Ultimate Match Final Edition
+The King of Fighters 2002: Unlimited Match
 The King of Fighters XIII Steam Edition
 The King of Fighters XV
 The Last Blade
-Marvel vs. Capcom Infinite
-Mortal Kombat X [XL]
+Marvel vs. Capcom: Infinite
+Mortal Kombat XL
 Mortal Kombat 11
 MultiVersus
-Samurai Shodown [2019]
-Samurai Shodown Neo Geo Collection [Samurai Shodown + Samurai Shodown II + Samurai Shodown III + Samurai Shodown IV: Amakusa's Revenge + Samurai Shodown V (3)]
-Skullgirls [2nd Encore]
+<109277> Samurai Shodown [2019]
+Samurai Shodown NeoGeo Collection
+Skullgirls: 2nd Encore
 SNK vs. Capcom: The Match of the Millennium
 SoulCalibur VI
-Street Fighter 30th Anniversary Collection [Street Fighter + Street Fighter II (5) + Street Fighter Alpha (3) + Street Fighter III (3)]
-Street Fighter V [Champion Edition]
+Street Fighter 30th Anniversary Collection
+Street Fighter V: Champion Edition
 Street Fighter 6
 Tekken 7
 Ultimate Marvel vs. Capcom 3
-Street Fighter IV [Ultra Street Fighter IV]
+Ultra Street Fighter IV
 Alien: Isolation
 Dead Island
 Dead Rising 2: Off the Record
-Dead Space [2023]
+<159119> Dead Space [2023]
 Narcosis
-Resident Evil [2002] [HD Remaster]
-<19686> Resident Evil 2
+<8254> Resident Evil [2002] [HD Remaster]
+<19686> Resident Evil 2 [2019]
 Resident Evil 3
-<132181> Resident Evil 4
+<132181> Resident Evil 4 [2023]
 Resident Evil 7: Biohazard
 Resident Evil Village
 Blade & Soul
@@ -144,19 +142,20 @@ Portal 2
 Quantum Conundrum
 Scribblenauts Unlimited
 The Swapper
-Burnout Paradise [Remastered]
+Burnout Paradise Remastered
 Dirt 5
 Forza Horizon 4
 Forza Horizon 5
 Horizon Chase Turbo
 Hotshot Racing
-Lego 2K Drive
-Need for Speed Heat
+LEGO 2K Drive
+Need for Speed: Heat
 Ridge Racer Unbounded
-Sonic & All-Stars Racing Transformed [Collection]
+Sonic & All-Stars Racing Transformed
 Split/Second
-WRC 10 FIA World Rally Championship
+WRC 10
 Across the Obelisk
+Another Crab's Treasure
 Baldur's Gate 3
 Crisis Core: Final Fantasy VII - Reunion
 Cyberpunk 2077
@@ -165,30 +164,31 @@ Dark Souls III
 Deus Ex: Mankind Divided
 Diablo III
 Diablo IV
-DIG: Deep in Galaxies
-Disco Elysium [The Final Cut]
-Dragon's Dogma [Dark Arisen]
+DIG: Deep In Galaxies
+Disco Elysium: The Final Cut
+Dragon's Dogma: Dark Arisen
+Dragon's Dogma II
 Dying Light 2: Stay Human
 Eastern Exorcist
 Elden Ring
 The Elder Scrolls V: Skyrim - Special Edition
-Final Fantasy VII Remake [Intergrade]
+Final Fantasy VII Remake Intergrade
 Final Fantasy X/X-2 HD Remaster
 Genshin Impact
 Hades
 Hogwarts Legacy
 Honkai: Star Rail
-Legend of Mana [Remastered]
-Mass Effect 2
+<143616> Legend of Mana [Remastered]
 Mass Effect: Andromeda
 Mass Effect Legendary Edition
+Mass Effect 2
 Monster Hunter Rise
 Monster Hunter: World
 Ni no Kuni II: Revenant Kingdom
 NieR: Automata
 Nioh: Complete Edition
-Nioh 2 [Complete Edition]
-Persona 4 [Golden]
+Nioh 2: The Complete Edition
+Persona 4 Golden
 Persona 5 Royal
 Record of Lodoss War: Deedlit in Wonder Labyrinth
 Rune Factory 4 Special
@@ -201,7 +201,7 @@ Star Ocean: The Divine Force
 Starfield
 Story of Seasons: Friends of Mineral Town
 Tales of Arise
-<119391> Trials of Mana
+<119391> Trials of Mana [Remastered]
 Wasteland 2
 Wild Hearts
 The Witcher 3: Wild Hunt
@@ -221,14 +221,14 @@ Battlefield 4
 Battlefield V
 BioShock Infinite
 Borderlands 2
-Call of Duty: Modern Warfare [2019]
+Call of Duty: Modern Warfare
 Counter-Strike: Global Offensive
-<7351> Doom
+<7351> Doom [2016]
 Doom Eternal
 Far Cry 4
 Gears 5
 Gears of War 4
-Gears of War [Ultimate Edition]
+Gears of War: Ultimate Edition 
 Halo: Combat Evolved Anniversary
 Halo 2: Anniversary
 Halo 3
@@ -239,10 +239,10 @@ Halo Infinite
 Overwatch 2
 Plants vs. Zombies: Garden Warfare 2
 Postal: Brain Damaged
-Prey [2017]
+<19531> Prey [2017]
 Returnal
 Star Wars Battlefront
-Star Wars Battlefront II [2017]
+Star Wars Battlefront II
 SuperHot
 Vanquish
 Sid Meier's Civilization: Beyond Earth
@@ -251,9 +251,9 @@ Evil Genius 2: World Domination
 <119295> Microsoft Flight Simulator 2020
 Minecraft
 No Man's Sky
-The Pinball Arcade
+Pinball Arcade
 PowerWash Simulator
-Rocksmith 2014 [Remastered]
+Rocksmith 2014 Edition: Remastered
 The Sims 3
 Baseball Stars 2
 Fire Pro Wrestling World
@@ -278,5 +278,5 @@ Halo Wars 2
 StarCraft II: Legacy of the Void
 StarCraft II: Wings of Liberty
 Supreme Commander 2
-X-COM: Chimera Squad
+XCOM: Chimera Squad
 XCOM: Enemy Unknown

@@ -111,12 +111,12 @@ God of War
 The Legend of Dragoon
 Gears of War
 Banjo-Kazooie
-Rainbow Six Siege
+Tom Clancy's Rainbow Six Siege
 Tetris
 Baldur's Gate II: Shadows of Amn
 Mega Man X
 Street Fighter II
-PlayerUnknown's Battlegrounds
+PUBG: Battlegrounds
 Gears of War 3
 EarthBound
 Kingdom Hearts HD 2.5 Remix
@@ -148,7 +148,7 @@ Battlefield: Bad Company 2
 NieR
 Demon's Souls
 Beyond Good & Evil
-Dragon Quest VIII
+Dragon Quest VIII: Journey of the Cursed King
 Devil May Cry 3: Dante's Awakening
 Bully
 Baldur's Gate
@@ -205,15 +205,15 @@ Mortal Kombat II
 League of Legends
 Sonic Adventure 2
 Flower
-Tomb Raider [2013]
+<1164> Tomb Raider [2013]
 Rocket League
 Vampire: The Masquerade - Bloodlines
 Panzer Dragoon Saga
-Prey [2017]
+<19531> Prey [2017]
 TimeSplitters 2
 Banjo-Tooie
 BioShock 2
-Ogre Battle: March of the Black Queen
+Ogre Battle: The March of the Black Queen
 Inside
 Shining Force II
 Super Smash Bros.
@@ -234,7 +234,7 @@ Command & Conquer: Red Alert 2
 Prince of Persia: The Sands of Time
 Final Fantasy XII
 Phantasy Star Online
-Lego Dimensions
+LEGO Dimensions
 <24869> Resident Evil [2002]
 The Bard's Tale
 Diablo III
@@ -264,7 +264,7 @@ Sid Meier's Civilization IV
 Splatoon 2
 Streets of Rage 2
 L.A. Noire
-Mount and Blade: Warband
+Mount & Blade: Warband
 Starflight
 Mass Effect: Andromeda
 Final Fantasy XIII
@@ -282,7 +282,7 @@ Rome: Total War
 Ico
 Membrane
 Fallout 2
-Xenosaga Episode III: Also Sprach Zarathustra
+Xenosaga Episode III: Also sprach Zarathustra
 Shenmue II
 Catherine
 Star Wars: TIE Fighter

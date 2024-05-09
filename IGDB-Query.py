@@ -52,6 +52,9 @@ check_string += '" & version_parent = null; offset 0;' #6 is cancelled,  & statu
 
 Test query for Pokemon Red: 'fields *; where id = '1561'; offset 0;'
 Additional query for Pokemon Red: 'fields *; where name = 'Pokémon Red Version'; offset 0;'
+
+This works for FTL: Advanced Edition: fields *; where id = '20098'; offset 0;
+fields *; where id = '20098' & version_parent = null; offset 0; //Doesn't get result in this case
 """
 
 igdb_request = wrapper.api_request(
@@ -71,34 +74,61 @@ print("Successfully completed! Goodbye!")
 #SPECIAL CASES KNOWN SO FAR:
 """
 (Seems like using the & symbol can break queries even when it's in the name?)
+(Seems like it has difficulty picking up the names of games that are bundles at this time?)
+
+(Need to make a page for Out of the Park Baseball 2007, get more proof of existence)
+(Need to make a page for Anito Legends)
+
+(Sonic the Hedgehog 8-bit from Master System seems not to be in API?)
 
 1080 Snowboarding: IGDB ID: 3328
+Baku Baku [Master System]: IGDB ID: 69785
+Batman the Video Game GB: IGDB ID: 49227
+Batman: Arkham City - Game of the Year Edition (not matching some reason?): IGDB ID: 21704
+Battletoads GB: IGDB ID: 136619
+Chrono Trigger DS: IGDB ID: 20398
 Command & Conquer: Red Alert 2 (name seems to be crashing request?): IGDB ID: 245
 Contra NES: IGDB ID: 186207
+Cyberpunk 2077: Ultimate Edition (not matching some reason?): IGDB ID: 277807
 Daytona USA Sega Saturn: IDGB ID: 177619
+Daytona USA 2001: IGDB ID: 22007
+Dead Space 2023: IGDB ID: 159119
 Disney's Aladdin SNES: IGDB ID: 2473
+Disney's Aladdin GEN: IGDB ID: 8118
 Disney's DuckTales GB: IGDB ID: 145268
 Divinity: Original Sin II - Definitive Edition (not matching some reason?): IGDB ID: 103337
 Donkey Kong '94: IGDB ID: 1089
 Donkey Kong Country GBC: IGDB ID: 152752
 Doom 2016: IGDB ID: 7351
 Doom GBA: IGDB ID: 259941
+Doom II: Hell on Earth GBA: IGDB ID: 202120
 Dragon Warrior III GBC: IGDB ID: 205600
+Fallout 3: Game of the Year Edition (not matching some reason?): IGDB ID: 21892
+Final Fantasy IV [2008]: IGDB ID: 399
 Final Fantasy XIV Online (A Realm Reborn) (Online reboot 2013): IGDB ID: 386
 Fire Emblem Fates: Birthright (and Conquest and Revelation): IGDB ID: 24220
 FTL: Advanced Edition (not matching for some reason?): IGDB ID: 20098
+Ghosts 'n Goblins [NES]: IGDB ID: 39048
 God of War 2018: IGDB ID: 19560
+God of War Ragnarok: IGDB ID: 112875
 Gothic II: Gold Edition (not matching for some reason?): IGDB ID: 29207
 Gran Turismo PSP: IGDB ID: 20426
 Harry Potter and the Chamber of Secrets GBC: IGDB ID: 117322
 Harry Potter and the Sorcerer's Stone GBC: IGDB ID: 118554
 Hitman 2016: IGDB ID: 11157
+Ikari Warriors [NES]: IGDB ID: 274081
 Ivan "Ironman" Stewart's Super Off Road (name seems to be crashing IGDB API request?): IGDB ID: 12735
+Killer Instinct 2013: IGDB ID: 10354
+Legend of Mana [Remastered]: IGDB ID: 143616
+The Lost World: Jurassic Park [Arcade]: IGDB ID: 132135
+The Lost World: Jurassic Park [Genesis]: IGDB ID: 8075
 Mario Golf GBC: IGDB ID: 135389
 Mario Tennis GBC: IGDB ID: 128874
+Metal Gear NES: IGDB ID: 133917
 Metal Gear Solid GBC: IGDB ID: 5600
 Microsoft Flight Simulator 2020: IGDB ID: 119295
 Mr. Driller GBC: IGDB ID: 254519
+Myst [2020]: IGDB ID: 
 Need for Speed: Most Wanted 2012: IGDB ID: 3193
 Nights Into Dreams (2008 PC Version, because Nights + Christmas Nights): IGDB ID: 19903
 Ninja Gaiden 2004: IGDB ID: 5972
@@ -112,28 +142,46 @@ Pokemon Crystal Version: IGDB ID: 1514
 Pokemon Diamond Version (what about peral?): IGDB ID: 1560
 Pokemon Emerald Version): IGDB ID: 1517
 Pokemon Fire Red Version (what about leaf green?): IGDB ID: 1559
+Pokemon GO: IGDB ID: 12515
 Pokemon Gold Version (what about silver?): IGDB ID: 1558
 Pokemon Heart Gold Version (what about soul silver?): IGDB ID: 1556
 Pokemon: Let's Go, Pikachu! (what about eevee?): IGDB ID: 25877
 Pokemon Mystery Dungeon: Explorers of Sky: IGDB ID: 2323
 Pokemon Pinball: IGDB ID: 4068
+Pokemon Platinum: IGBD ID: 1519
 Pokemon Puzzle Challenge: IGDB ID: 49857
 Pokemon Puzzle League: IGDB ID: 3574
 Pokemon Red Version (what about blue?): IGDB ID: 1561
 Pokemon Ruby Version (what about Sapphire?): IGDB ID: 1557
+Pokemon SNAP: IGDB ID: 2324
+Pokemon Stadium: IGDB ID: 2289
 Pokemon Trading Card Game GBC: IGDB ID: 4567
+Pokemon Ultra Sun (what about ultra moon?): IGDB ID: 36792
+Pokemon X (what about y?): IGDB ID: 2286
 Pokemon XD: Gale of Darkness: IGDB ID: 2724
 Pokemon Yellow Version: IGDB ID: 1512
+Polybius [2017]: IGDB ID: 24868
+Prey [2017]: IGDB ID: 19531
+Punch-Out!! [Wii]: IGDB ID: 2194
 Ratchet and Clank (name seems to be crashing IGDB API request?): IGDB ID: 1289
 Ratchet and Clank: Up Your Arsenal (name seems to be crashing IGDB API request?): IGDB ID: 1773
 Rayman GBC: IGDB ID: 85578
 Resident Evil 2002: IGDB ID: 24869
+Resident Evil 2002 HD REMASTER: IGDB ID: 8254
 Resident Evil 2 2019: IGDB ID: 19686
 Resident Evil 4 2023: IGDB ID: 132181
+Samurai Showdown 2019: IGDB ID: 109277
 Sapiens 2022: IGDB ID: 117186
+Shadow of the Colossus [2018]: IGDB ID: 37094
+Shadowrun SNES: IGDB ID: 7640
+SimCity SNES: IGDB ID: 180001
 Singstar 2007 (had in my list that we had a 2008 one?): IGDB ID: 15180
+Spider-Man [PlayStation]: IGDB ID: 3603
 Star Wars: Battlefront I/II are the originals, Star Wars Battlefront I/II are the EA post-Disney ones
+Teenage Mutant Ninja Turtles ARCADE: IGDB ID: 3815
 Teenage Mutant Ninja Turtles NES: IGDB ID: 86386
+Tetris TENGEN: IGDB ID: 180278
+Tomb Raider 2013: IGDB ID: 1164 
 Tony Hawk's Pro Skater 2 GBA: IGDB ID: 229927
 Trials of Mana 2020: IGDB ID: 119391
 Viva Piñata (the ñ might be throwing off the query?): IGDB ID: 7236

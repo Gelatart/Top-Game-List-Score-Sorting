@@ -18,6 +18,9 @@ import json
 import pandas
 import re
 
+load_dotenv()
+#^To actually populate what we will need from mongo connection
+
 # assign directory
 #directory = 'C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameLists\Ranked'
 directory = r'GameLists\Ranked'
@@ -97,7 +100,7 @@ sheet1 = wb.add_sheet('Sheet 1')
 
 ranked_file_count = 0
 unranked_file_count = 0
-formerFileCount = 0
+former_file_count = 0
 
 "Loop of getting the database information"
 #RANKED DIRECTORY
@@ -117,7 +120,9 @@ for filename in os.listdir(directory):
         originalCount = count
         # Strips the newline character
         for line in Lines:
-            if line in gameDb:
+            stripped_line = line.strip()
+            line = stripped_line
+            if stripped_line in gameDb:
                 gameDb[line].ranked_score += count
                 gameDb[line].list_count += 1
                 gameDb[line].lists_referencing.append(f)
@@ -158,7 +163,9 @@ for filename in os.listdir(directory):
         #input('Wait to review\n')
         # Strips the newline character
         for line in Lines:
-            if line in gameDb:
+            stripped_line = line.strip()
+            line = stripped_line
+            if stripped_line in gameDb:
                 gameDb[line].ranked_score += count
                 gameDb[line].list_count += 1
                 gameDb[line].lists_referencing.append(f)
@@ -181,7 +188,7 @@ for filename in os.listdir(directory):
         # Using readlines()
         # file1 = open(f, 'r')
         file1 = open(f, 'r', encoding="utf-8")
-        formerFileCount += 1
+        former_file_count += 1
         starting_line = file1.readline()
         Lines = file1.readlines()
         #count = 1
@@ -192,7 +199,9 @@ for filename in os.listdir(directory):
         print(originalCount)
         # Strips the newline character
         for line in Lines:
-            if line in gameDb:
+            stripped_line = line.strip()
+            line = stripped_line
+            if stripped_line in gameDb:
                 gameDb[line].ranked_score += count
                 gameDb[line].list_count += 1
                 gameDb[line].lists_referencing.append(f)
@@ -209,13 +218,17 @@ for filename in os.listdir(directory):
 completeFile = open('Completions.txt', 'r')
 completeLines = completeFile.readlines()
 for line in completeLines:
+    stripped_line = line.strip()
+    line = stripped_line
     if line in gameDb:
         gameDb[line].completed = True
+        #input("We got a true here!")
     #else: raise error because not in database? create it with 0 score?
 
-print("Time for attributes!")
-
+"""
 #ADD SECTION WHERE WE START GRABBING ADDITIONAL ATTRIBUTES FOR GAME DATABASE?
+#Purposefully naming this wrong for now so we don't grab from it, only from IGDB for now?
+print("Time for attributes!")
 attributesFile = open('AdditionalAttributes.txt', 'r')
 attributesLines = attributesFile.readlines()
 itr = iter(attributesLines)
@@ -251,6 +264,7 @@ try:
         #else: supposed to be in database?
 except StopIteration:
         pass
+"""
 
 #This is where the user sets whether they want to grab from the IGDB API or not
 #Maybe add options for how much to grab? How many games? What types of info? Other qualifiers?
@@ -280,7 +294,7 @@ while(igdb_check == False):
             Body: "fields *;"
     
         """
-        load_dotenv()
+        #load_dotenv() (Done at beginning of file now)
         client_id = os.getenv('CLIENT_ID')
         client_secret = os.getenv('CLIENT_SECRET')
         post = 'https://id.twitch.tv/oauth2/token?client_id='
@@ -317,13 +331,13 @@ while(igdb_check == False):
         print("Time to go looking around")
         time_speedup = 0;
         #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
-        #As of 4/9/24: 0-15 speedup, 16 is good (17)
+        #As of 4/15/24: 0-11 speedup, 12 is good (13)
         for game, details in gameDb.items():
-            if(time_speedup < 16):
+            if(time_speedup < 0):
                 print("SKIPPING!!")
                 time_speedup += 1
                 continue
-            elif(time_speedup == 16):
+            elif(time_speedup == 0):
                 time_speedup = 0
             check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
             check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
@@ -350,7 +364,11 @@ while(igdb_check == False):
                 check_string += 'where name = "'
                 check_string += game.strip()
                 check_string += '"'
-            check_string += ' & version_parent = null; offset 0;'  # 6 is cancelled,  & status != 6
+            check_string += '; offset 0;'  # 6 is cancelled,  & status != 6
+            # Had & version_parent = null in the check_string before, but probably won't work in cases we do want port, might just want
+            # more specificity in some cases
+            # | category = 3  (attempted to insert this into the query)
+            # Category is an enum, 3 means it's a bundle, is | the right way to do an or?
             # Exclude versions that aren't the parent
             # Exclude cancelled, unreleased, TBD versions?
             # Figure out how to deal with children versions? How to give points and pass on points to parent too?
@@ -466,12 +484,20 @@ while(igdb_check == False):
                         plat_name = "Android"
                     elif (plat_ID.id == 35):
                         plat_name = "Sega Game Gear"
+                    elif (plat_ID.id == 36):
+                        plat_name = "XBLA"
+                    elif (plat_ID.id == 37):
+                        plat_name = "3DS"
                     elif (plat_ID.id == 38):
                         plat_name = "PSP"
                     elif (plat_ID.id == 39):
                         plat_name = "iOS"
                     elif (plat_ID.id == 41):
                         plat_name = "Wii U"
+                    elif (plat_ID.id == 42):
+                        plat_name = "N-Gage"
+                    elif (plat_ID.id == 44):
+                        plat_name = "Tapwave Zodiac"
                     elif (plat_ID.id == 46):
                         plat_name = "Vita"
                     elif (plat_ID.id == 48):
@@ -486,14 +512,22 @@ while(igdb_check == False):
                         plat_name = "2600"
                     elif (plat_ID.id == 64):
                         plat_name = "Sega Master System"
+                    elif (plat_ID.id == 65):
+                        plat_name = "Atari 8-bit"
+                    elif (plat_ID.id == 71):
+                        plat_name = "Commodore VIC-20"
                     elif (plat_ID.id == 75):
                         plat_name = "Apple II"
                     elif (plat_ID.id == 79):
                         plat_name = "Neo Geo MVS"
                     elif (plat_ID.id == 80):
                         plat_name = "Neo Geo AES"
+                    elif (plat_ID.id == 88):
+                        plat_name = "Magnavox Odyssey"
                     elif (plat_ID.id == 99):
                         plat_name = "Famicom"
+                    elif (plat_ID.id == 129):
+                        plat_name = "Texas Instruments TI-99"
                     elif (plat_ID.id == 130):
                         plat_name = "Switch"
                     elif (plat_ID.id == 137):
@@ -517,6 +551,8 @@ while(igdb_check == False):
                 # input("There they are!")
                 # gameDb[game].main_platform = earliest_game.platforms[0]
                 gameDb[game].main_platform = main_plat  # Will this always pull best choice?
+                #^Seriously consider revising this to pull the first format with the earliest release date
+                #Because platform ID's are overruling too much (ex. wii is an early ID so overrides earlier releases)
                 # gameDb[game].list_platforms = earliest_game.platforms
                 if(len(list_plats) > 0):
                     gameDb[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
@@ -528,14 +564,154 @@ while(igdb_check == False):
                 if(len(developers) > 0):
                     gameDb[game].list_developers = developers  # Will this grab the most definitive list?
             elif (len(games) == 1):
-                current_game = games[0]
-                # print(games)
-                # print(current_game.slug)
-                # print(current_game.url)
-                # print(current_game.id)
-                # print(current_game.platforms)
-                # print(current_game.first_release_date.ToDatetime())
-                # input("This should go quickly!")
+                try:
+                    current_game = games[0]
+                    # print(games)
+                    # print(current_game.slug)
+                    # print(current_game.url)
+                    # print(current_game.id)
+                    # print(current_game.platforms)
+                    # print(current_game.first_release_date.ToDatetime())
+                    # input("This should go quickly!")
+                    try:
+                        gameDb[game].igdb_ID = current_game.id
+                    except IndexError as e:
+                        print("Error:", e)
+                        #print("Index", i, "is out of range")
+                    gameDb[game].release_date = current_game.first_release_date.ToDatetime()
+                    plat_ID = current_game.platforms[0]
+                    plat_name = None
+                    if (plat_ID.id == 3):
+                        plat_name = "Linux"
+                    elif (plat_ID.id == 4):
+                        plat_name = "N64"
+                    elif (plat_ID.id == 5):
+                        plat_name = "Wii"
+                    elif (plat_ID.id == 6):
+                        plat_name = "PC (Windows)"
+                    elif (plat_ID.id == 7):
+                        plat_name = "PS1"
+                    elif (plat_ID.id == 8):
+                        plat_name = "PS2"
+                    elif (plat_ID.id == 9):
+                        plat_name = "PS3"
+                    elif (plat_ID.id == 11):
+                        plat_name = "Xbox"
+                    elif (plat_ID.id == 12):
+                        plat_name = "X360"
+                    elif (plat_ID.id == 13):
+                        plat_name = "PC-DOS"
+                    elif (plat_ID.id == 14):
+                        plat_name = "Mac"
+                    elif (plat_ID.id == 15):
+                        plat_name = "C64 & C128"
+                    elif (plat_ID.id == 16):
+                        plat_name = "Amiga"
+                    elif (plat_ID.id == 18):
+                        plat_name = "NES"
+                    elif (plat_ID.id == 19):
+                        plat_name = "SNES"
+                    elif (plat_ID.id == 20):
+                        plat_name = "DS"
+                    elif (plat_ID.id == 21):
+                        plat_name = "GCN"
+                    elif (plat_ID.id == 22):
+                        plat_name = "GBC"
+                    elif (plat_ID.id == 23):
+                        plat_name = "DC"
+                    elif (plat_ID.id == 24):
+                        plat_name = "GBA"
+                    elif (plat_ID.id == 25):
+                        plat_name = "Amstrad CPC"
+                    elif (plat_ID.id == 26):
+                        plat_name = "ZX Spectrum"
+                    elif (plat_ID.id == 27):
+                        plat_name = "MSX"
+                    elif (plat_ID.id == 29):
+                        plat_name = "GEN/MD"
+                    elif (plat_ID.id == 30):
+                        plat_name = "32X"
+                    elif (plat_ID.id == 32):
+                        plat_name = "SAT"
+                    elif (plat_ID.id == 33):
+                        plat_name = "GB"
+                    elif (plat_ID.id == 34):
+                        plat_name = "Android"
+                    elif (plat_ID.id == 35):
+                        plat_name = "Sega Game Gear"
+                    elif (plat_ID.id == 36):
+                        plat_name = "XBLA"
+                    elif (plat_ID.id == 37):
+                        plat_name = "3DS"
+                    elif (plat_ID.id == 38):
+                        plat_name = "PSP"
+                    elif (plat_ID.id == 39):
+                        plat_name = "iOS"
+                    elif (plat_ID.id == 41):
+                        plat_name = "Wii U"
+                    elif (plat_ID.id == 42):
+                        plat_name = "N-Gage"
+                    elif (plat_ID.id == 44):
+                        plat_name = "Tapwave Zodiac"
+                    elif (plat_ID.id == 46):
+                        plat_name = "Vita"
+                    elif (plat_ID.id == 48):
+                        plat_name = "PS4"
+                    elif (plat_ID.id == 49):
+                        plat_name = "XONE"
+                    elif (plat_ID.id == 52):
+                        plat_name = "Arcade"
+                    elif (plat_ID.id == 58):
+                        plat_name = "Super Famicom"
+                    elif (plat_ID.id == 59):
+                        plat_name = "2600"
+                    elif (plat_ID.id == 64):
+                        plat_name = "Sega Master System"
+                    elif (plat_ID.id == 65):
+                        plat_name = "Atari 8-bit"
+                    elif (plat_ID.id == 71):
+                        plat_name = "Commodore VIC-20"
+                    elif (plat_ID.id == 75):
+                        plat_name = "Apple II"
+                    elif (plat_ID.id == 79):
+                        plat_name = "Neo Geo MVS"
+                    elif (plat_ID.id == 80):
+                        plat_name = "Neo Geo AES"
+                    elif (plat_ID.id == 88):
+                        plat_name = "Magnavox Odyssey"
+                    elif (plat_ID.id == 99):
+                        plat_name = "Famicom"
+                    elif (plat_ID.id == 129):
+                        plat_name = "Texas Instruments TI-99"
+                    elif (plat_ID.id == 130):
+                        plat_name = "Switch"
+                    elif (plat_ID.id == 137):
+                        plat_name = "New Nintendo 3DS"
+                    elif (plat_ID.id == 149):
+                        plat_name = "PC-98"
+                    elif (plat_ID.id == 169):
+                        plat_name = "Xbox Series"
+                    elif (plat_ID.id == 306):
+                        plat_name = "Satellaview"
+                    elif (plat_ID.id == 379):
+                        plat_name = "Game.com"
+                    # test comment to make sure everything restored properly
+                    else:
+                        plat_name = "Unknown"
+                    gameDb[game].main_platform = plat_name
+                    list_plats = []
+                    list_plats.append(plat_name)
+                    gameDb[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
+                    modes = current_game.game_modes
+                    if (len(modes) > 0):
+                        gameDb[game].player_counts = modes  # Changes approach but for the better?
+                    # ^Also consider multiplayer_modes?
+                    developers = current_game.involved_companies
+                    if (len(developers) > 0):
+                        gameDb[game].list_developers = developers  # Will this grab the most definitive list?
+                except Exception as e:
+                    print("An error has occurred:", e)
+                    #it starts hitting errors when it gets to some of the new games featured in metacritic user scores?
             else:
                 # print(result)
                 print("Not found with that name!")
@@ -581,6 +757,7 @@ mon_connect = os.getenv('MONGO_URI')
 #mon_client = pymongo.MongoClient(mon_connect)
 mon_client = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
 monDB = mon_client["GameSorting"]
+#input(mon_connect)
 try:
     mon_client.admin.command('ping')
     print("Pinged your deployment. You successfully connected to MongoDB!")
@@ -602,6 +779,7 @@ for game, details in gameDb.items():
     #export.append(details)
     exportDict = {}
     exportDict["Title"] = game
+    exportDict["IGDB ID"] = details.igdb_ID
     exportDict["Ranked Score"] = details.ranked_score
     exportDict["Inclusion Score"] = details.list_count
     averageScore = details.ranked_score / details.total_count
@@ -638,7 +816,7 @@ list_counts = "Ranked Lists: " + str(ranked_file_count)
 print(list_counts)
 list_counts = "Unranked Lists: " + str(unranked_file_count)
 print(list_counts)
-list_counts = "Former Lists: " + str(formerFileCount)
+list_counts = "Former Lists: " + str(former_file_count)
 print(list_counts)
 
 print("LISTS USED IN PROCESS:")
@@ -733,25 +911,48 @@ for game in games_pulled:
         output_lists += ref_list
         output_lists += ", "
     sheet1.write(excel_count, 4, output_lists)
-    #mPlat = details.main_platform
     #sheet1.write(excel_count, 5, game['Main Platform'].strip())
     sheet1.write(excel_count, 5, game['Main Platform'])
-    #lPlat = details.list_platforms
-    sheet1.write(excel_count, 6, game['List of Platforms'])
-    #^Try to strip escape chars out earlier or the items themselves
-    #rDate = details.release_date
+    #Create a loop to deal with printing the platforms in a comma approach
+    game_platforms = game['List of Platforms']
+    platforms_string = ""
+    plat_next = 1
+    #print(game_platforms)
+    #print(len(game_platforms))
+    #input("Here are the number of platforms")
+    for platform in game_platforms:
+        platforms_string += platform
+        if(plat_next < len(game_platforms)):
+            platforms_string += ", "
+        plat_next += 1
+    #sheet1.write(excel_count, 6, game['List of Platforms'])
+    sheet1.write(excel_count, 6, platforms_string)
     #sheet1.write(excel_count, 7, game['Release Date'].strip())
+    #^Try to strip escape chars out earlier or the items themselves
     sheet1.write(excel_count, 7, game['Release Date'])
-    #pCounts = details.player_counts
     sheet1.write(excel_count, 8, game['Player Counts'])
-    # ^Try to strip escape chars out earlier or the items themselves
-    #lDevs = details.list_developers
     sheet1.write(excel_count, 9, game['Developers'])
-    # ^Try to strip escape chars out earlier or the items themselves
     excel_count += 1
 wb.save('Sorted Database.xls')
 
-print("Successfully completed!")
+games_pulled = mon_col.find().limit(10)
+for game in games_pulled:
+    print("Here is a game")
+    print(game)
+    if(game["Main Platform"] == "Wii"):
+        print("We found one!")
+        print(game)
+    print()
+
+#Close connection to open up socket (seemed to cause problems when running generator then trying printreports?)
+mon_client.close()
+#Close cursors too?
+games_pulled.close()
+games_pulled_ranked.close()
+games_pulled_average.close()
+games_pulled_inclusion.close()
+
+print("Successfully completed! Have a good day!")
 
 """"
 REFERENCES:
@@ -773,7 +974,7 @@ Adding strings in Python: https://www.geeksforgeeks.org/python-add-one-string-to
 Counting the number of lines in file: https://pynative.com/python-count-number-of-lines-in-file/
 https://www.freecodecamp.org/news/sort-dictionary-by-value-in-python/
 https://www.geeksforgeeks.org/reading-writing-text-files-python/
-https://www.geeksforgeeks.org/convert-integer-to-string-in-python/
+Converting integer to string in Python: https://www.geeksforgeeks.org/convert-integer-to-string-in-python/
 Removing newline character from string in Python: https://www.geeksforgeeks.org/python-removing-newline-character-from-string/
 https://github.com/python-excel/xlwt/blob/master/xlwt/Style.py
 https://www.digitalocean.com/community/tutorials/python-wait-time-wait-for-input
@@ -794,4 +995,7 @@ Converting Pandas timestamp to python datetime: https://pandas.pydata.org/docs/r
 Switch statement equivalent in Python: https://www.geeksforgeeks.org/switch-case-in-python-replacement/
 Substringing a string in Python: https://www.geeksforgeeks.org/how-to-substring-a-string-in-python/
 Regex Python: https://www.geeksforgeeks.org/python-regex-re-search-vs-re-findall/
+Closing pymongo connection: https://stackoverflow.com/questions/18401015/how-to-close-a-mongodb-python-connection
+Close cursors, try 'with' connections: https://www.mongodb.com/community/forums/t/i-am-using-pymongo-do-i-have-to-close-a-mongoclient-after-use/213511
+Dealing with out of index in list errors: https://rollbar.com/blog/how-to-fix-python-list-index-out-of-range-error-in-for-loops/#
 """

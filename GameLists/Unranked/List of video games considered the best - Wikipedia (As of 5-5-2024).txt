@@ -1,4 +1,4 @@
-323
+327
 The Oregon Trail
 Pong
 Combat
@@ -20,7 +20,7 @@ Joust
 Ms. Pac-Man
 Pitfall!
 Robotron: 2084
-Archon: The Light and the Dark
+Archon
 Lode Runner
 M.U.L.E.
 Star Wars
@@ -42,7 +42,7 @@ Mike Tyson's Punch-Out!!
 R-Type
 Sid Meier's Pirates!
 Mega Man 2
-<210484> Ninja Gaiden
+<210484> Ninja Gaiden [NES]
 Super Mario Bros. 3
 Final Fight
 Populous
@@ -52,7 +52,7 @@ The Secret of Monkey Island
 Speedball 2: Brutal Deluxe
 Super Mario World
 Wing Commander
-Another World [Out of this World]
+Another World
 Sid Meier's Civilization
 Final Fantasy IV
 The Legend of Zelda: A Link to the Past
@@ -136,12 +136,12 @@ Gran Turismo
 Grand Theft Auto
 Quake II
 Star Fox 64
-Star Wars Jedi Knight: Dark Forces II
+Star Wars: Jedi Knight - Dark Forces II
 Tekken 3
 Total Annihilation
 Ultima Online
 Baldur's Gate
-Crash Bandicoot 3: Warped
+Crash Bandicoot: Warped
 Dance Dance Revolution
 Fallout 2
 Grim Fandango
@@ -210,7 +210,7 @@ Star Wars: Knights of the Old Republic
 WarioWare, Inc.: Mega Microgames!
 Burnout 3: Takedown
 The Chronicles of Riddick: Escape from Butcher Bay
-Dragon Quest VIII
+Dragon Quest VIII: Journey of the Cursed King
 Gran Turismo 4
 Grand Theft Auto: San Andreas
 Half-Life 2
@@ -302,8 +302,10 @@ Dota 2
 Grand Theft Auto V
 The Last of Us
 Papers, Please
+Alien: Isolation
 Destiny
 Hearthstone
+Mario Kart 8
 Shovel Knight
 Bloodborne
 Rocket League
@@ -312,6 +314,7 @@ The Witcher 3: Wild Hunt
 Dishonored 2
 Inside
 Overwatch
+Persona 5
 Stardew Valley
 Uncharted 4: A Thief's End
 Fortnite
@@ -322,3 +325,4 @@ Red Dead Redemption 2
 Super Smash Bros. Ultimate
 Disco Elysium
 Hades
+Elden Ring

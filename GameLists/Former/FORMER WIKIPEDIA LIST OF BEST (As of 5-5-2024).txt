@@ -1,4 +1,4 @@
-81
+82
 Chrono Cross
 Dragon Warrior
 Guitar Hero II
@@ -7,7 +7,7 @@ Mass Effect 3
 Metal Gear Solid 4: Guns of the Patriots
 Metroid
 Phantasy Star II
-Punch-Out!! [Arcade]
+Punch-Out!!
 <19686> Resident Evil 2
 Shenmue II
 Super Mario RPG: Legend of the Seven Stars

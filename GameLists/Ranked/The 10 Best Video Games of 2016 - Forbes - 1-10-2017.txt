@@ -5,7 +5,7 @@ Overwatch
 Uncharted 4: A Thief's End
 Sid Meier's Civilization VI
 Dragon Quest Builders
-Pokemon Go
+<12515> Pokemon Go
 The Witness
 Dark Souls III
-Mafia 3
+Mafia III

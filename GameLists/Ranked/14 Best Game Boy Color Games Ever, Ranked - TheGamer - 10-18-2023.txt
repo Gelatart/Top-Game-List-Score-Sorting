@@ -5,13 +5,13 @@ The Legend of Zelda: Oracle of Ages
 The Legend of Zelda: Oracle of Seasons
 Wario Land 3
 The Legend of Zelda: Link's Awakening DX
-<5600> Metal Gear Solid
+<5600> Metal Gear Solid [GBC]
 Super Mario Bros. Deluxe
 <205600> Dragon Warrior III
 Shantae
 <4068> Pokemon Pinball
 Tetris DX
-<128874> Mario Tennis
+<128874> Mario Tennis [GBC]
 <4567> Pokemon Trading Card Game
 <152752> Donkey Kong Country
 Kirby Tilt 'n' Tumble
