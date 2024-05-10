@@ -117,7 +117,7 @@ for filename in os.listdir(directory):
         count = len(Lines)
         #print(len(Lines))
         #input('Wait to review\n')
-        originalCount = count
+        original_count = count
         # Strips the newline character
         for line in Lines:
             stripped_line = line.strip()
@@ -126,9 +126,9 @@ for filename in os.listdir(directory):
                 gameDb[line].ranked_score += count
                 gameDb[line].list_count += 1
                 gameDb[line].lists_referencing.append(f)
-                gameDb[line].total_count += originalCount
+                gameDb[line].total_count += original_count
             else:
-                newObj = GameObject(count, f, originalCount)
+                newObj = GameObject(count, f, original_count)
                 gameDb[line] = newObj
             #searchObj = gameDb.get(newObj, 0) + 1
             #gameDb[line].list_count = gameDb.get(newObj, 0) + 1
@@ -153,11 +153,11 @@ for filename in os.listdir(directory):
         count = math.floor(floatCount)
         count = len(Lines)
         print(count)
-        originalCount = count
+        original_count = count
         #do a sum of all numbers in that count
-        count = originalCount * (originalCount + 1) // 2
+        count = original_count * (original_count + 1) // 2
         #divide the factorial by the original count
-        count //= originalCount
+        count //= original_count
         print(count)
         print(f)
         #input('Wait to review\n')
@@ -169,9 +169,9 @@ for filename in os.listdir(directory):
                 gameDb[line].ranked_score += count
                 gameDb[line].list_count += 1
                 gameDb[line].lists_referencing.append(f)
-                gameDb[line].total_count += originalCount
+                gameDb[line].total_count += original_count
             else:
-                newObj = GameObject(count, f, originalCount)
+                newObj = GameObject(count, f, original_count)
                 gameDb[line] = newObj
             #searchObj = gameDb.get(newObj, 0) + 1
             #gameDb[line].list_count = gameDb.get(newObj, 0) + 1
@@ -193,10 +193,10 @@ for filename in os.listdir(directory):
         Lines = file1.readlines()
         #count = 1
         count = int(starting_line)
-        originalCount = count
+        original_count = count
         #^find out how to read the line amount ahead of time
-        #originalCount = len(Lines)
-        print(originalCount)
+        #original_count = len(Lines)
+        print(original_count)
         # Strips the newline character
         for line in Lines:
             stripped_line = line.strip()
@@ -205,9 +205,9 @@ for filename in os.listdir(directory):
                 gameDb[line].ranked_score += count
                 gameDb[line].list_count += 1
                 gameDb[line].lists_referencing.append(f)
-                gameDb[line].total_count += originalCount
+                gameDb[line].total_count += original_count
             else:
-                newObj = GameObject(count, f, originalCount)
+                newObj = GameObject(count, f, original_count)
                 gameDb[line] = newObj
             #searchObj = gameDb.get(newObj, 0) + 1
             #gameDb[line].list_count = gameDb.get(newObj, 0) + 1
@@ -266,6 +266,29 @@ except StopIteration:
         pass
 """
 
+"""
+TYPES FOR GAME_MODES (Based on id #):
+1: Singleplayer?
+    2, 3: Multiplayer? (2 might just be some form of singleplayer? multi against npcs's?)
+2: Multiplayer?
+3: Co-op?
+4: Split-screen?
+5: MMO?
+6: Battle Royale?
+No others at this time?
+
+FOR INVOLVED_COMPANIES, WE WILL LIKELY NEED TO USE A DIFFERENT ENDPOINT TO FIGURE OUT WHAT THEY ALL ARE,
+BECAUSE SO MANY POTENTIAL ID NUMBERS
+
+TYPE FOR PLATFORM FAMILIES (Based on id #):
+1: PlayStation
+2: Xbox
+3: Sega
+4: Linux
+5: Nintendo
+No others at this time?
+"""
+
 #This is where the user sets whether they want to grab from the IGDB API or not
 #Maybe add options for how much to grab? How many games? What types of info? Other qualifiers?
 igdb_check = False
@@ -294,7 +317,6 @@ while(igdb_check == False):
             Body: "fields *;"
     
         """
-        #load_dotenv() (Done at beginning of file now)
         client_id = os.getenv('CLIENT_ID')
         client_secret = os.getenv('CLIENT_SECRET')
         post = 'https://id.twitch.tv/oauth2/token?client_id='
@@ -316,6 +338,11 @@ while(igdb_check == False):
         input("Here we pause")
 
         from igdb.igdbapi_pb2 import GameResult
+        from igdb.igdbapi_pb2 import GameModeResult
+        from igdb.igdbapi_pb2 import PlatformResult
+        from igdb.igdbapi_pb2 import PlatformFamilyResult
+        from igdb.igdbapi_pb2 import InvolvedCompanyResult
+        from igdb.igdbapi_pb2 import CompanyResult
 
         igdb_request = wrapper.api_request(
             'games.pb',  # Note the '.pb' suffix at the endpoint
@@ -341,8 +368,8 @@ while(igdb_check == False):
                 time_speedup = 0
             check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
             check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
-            check_string += 'external_games, follows, franchises, game_localizations, game_modes, genres, '
-            check_string += 'involved_companies, keywords, language_supports, multiplayer_modes, player_perspectives, '
+            check_string += 'external_games, follows, franchises, game_localizations, genres, '
+            check_string += 'keywords, language_supports, player_perspectives, '
             check_string += 'rating, rating_count, release_dates, screenshots, similar_games, standalone_expansions, '
             check_string += 'storyline, tags, themes, total_rating, total_rating_count, updated_at, videos, websites; '
             # Check if <> comes first, where we use ID instead of name, for titles hard to specify
@@ -419,6 +446,7 @@ while(igdb_check == False):
                 main_plat = None
                 plat_name = None
                 list_plats = []
+                #REPLACE THIS WITH A REQUEST THAT LOOKS AT THE ID AND THEN CONSULTS PLATFORMS ENDPOINT?
                 while (plat_counter < len(earliest_game.platforms)):
                     #plat_next = plat_counter + 1
                     plat_ID = earliest_game.platforms[plat_counter]
@@ -498,6 +526,8 @@ while(igdb_check == False):
                         plat_name = "N-Gage"
                     elif (plat_ID.id == 44):
                         plat_name = "Tapwave Zodiac"
+                    elif (plat_ID.id == 45):
+                        plat_name = "PSN"
                     elif (plat_ID.id == 46):
                         plat_name = "Vita"
                     elif (plat_ID.id == 48):
@@ -557,12 +587,65 @@ while(igdb_check == False):
                 if(len(list_plats) > 0):
                     gameDb[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
                 modes = earliest_game.game_modes
+                #input(modes)
                 if(len(modes) > 0):
-                    gameDb[game].player_counts = modes # Changes approach but for the better?
-                # ^Also consider multiplayer_modes?
+                    for mode in modes:
+                        mode_type = None
+                        #input(mode)
+                        #sub_query = 'fields *;'
+                        sub_query = 'fields name; where id=' + str(mode.id) + ';'
+                        sub_request = wrapper.api_request(
+                            'game_modes.pb',  # Note the '.pb' suffix at the endpoint
+                            sub_query
+                        )
+                        modes_message = GameModeResult()
+                        modes_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
+                        new_modes = modes_message.gamemodes
+                        print(new_modes)
+                        mode_type = new_modes[0].name
+                        gameDb[game].player_counts.append(mode_type)
+                        #input(mode_type)
+                    #gameDb[game].player_counts = modes # Changes approach but for the better?
+                # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
                 developers = earliest_game.involved_companies
+                #^consider a check for developer boolean? porting? supporting?
+                #do we count publishers?
+                #consider more categories for game objects later like publishers
+                #input(developers)
+                print(developers)
                 if(len(developers) > 0):
-                    gameDb[game].list_developers = developers  # Will this grab the most definitive list?
+                    for dev in developers:
+                        dev_name = None
+                        #input(dev)
+                        #FIX THE REST OF THIS!!! (involved company, company?)
+                        #first query to look at involved companies
+                        #sub_query = 'fields *;'
+                        sub_query_1 = 'fields *; where id=' + str(dev.id) + ' & developer=true;'
+                        sub_request_1 = wrapper.api_request(
+                            'involved_companies.pb',  # Note the '.pb' suffix at the endpoint
+                            sub_query_1
+                        )
+                        inv_companies_message = InvolvedCompanyResult()
+                        inv_companies_message.ParseFromString(sub_request_1)  # Fills the protobuf message object with the response
+                        inv_companies = inv_companies_message.involvedcompanies
+                        print(inv_companies)
+                        print(len(inv_companies))
+                        if(len(inv_companies) == 0):
+                            continue
+                        #second query to look at the company specifically
+                        sub_query_2 = 'fields name; where id=' + str(inv_companies[0].company.id) + ';'
+                        sub_request_2 = wrapper.api_request(
+                            'companies.pb',  # Note the '.pb' suffix at the endpoint
+                            sub_query_2
+                        )
+                        companies_message = CompanyResult()
+                        companies_message.ParseFromString(sub_request_2)  # Fills the protobuf message object with the response
+                        companies = companies_message.companies
+                        print(companies)
+                        dev_name = companies[0].name
+                        gameDb[game].list_developers.append(dev_name)
+                        #input(dev_name)
+                    #gameDb[game].list_developers = developers  # Will this grab the most definitive list?
             elif (len(games) == 1):
                 try:
                     current_game = games[0]
@@ -581,6 +664,7 @@ while(igdb_check == False):
                     gameDb[game].release_date = current_game.first_release_date.ToDatetime()
                     plat_ID = current_game.platforms[0]
                     plat_name = None
+                    # REPLACE THIS WITH A REQUEST THAT LOOKS AT THE ID AND THEN CONSULTS PLATFORMS ENDPOINT?
                     if (plat_ID.id == 3):
                         plat_name = "Linux"
                     elif (plat_ID.id == 4):
@@ -653,6 +737,8 @@ while(igdb_check == False):
                         plat_name = "N-Gage"
                     elif (plat_ID.id == 44):
                         plat_name = "Tapwave Zodiac"
+                    elif (plat_ID.id == 45):
+                        plat_name = "PSN"
                     elif (plat_ID.id == 46):
                         plat_name = "Vita"
                     elif (plat_ID.id == 48):
@@ -704,8 +790,25 @@ while(igdb_check == False):
                     gameDb[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
                     modes = current_game.game_modes
                     if (len(modes) > 0):
-                        gameDb[game].player_counts = modes  # Changes approach but for the better?
-                    # ^Also consider multiplayer_modes?
+                        for mode in modes:
+                            mode_type = None
+                            # input(mode)
+                            # sub_query = 'fields *;'
+                            sub_query = 'fields name; where id=' + str(mode.id) + ';'
+                            sub_request = wrapper.api_request(
+                                'game_modes.pb',  # Note the '.pb' suffix at the endpoint
+                                sub_query
+                            )
+                            modes_message = GameModeResult()
+                            modes_message.ParseFromString(
+                                sub_request)  # Fills the protobuf message object with the response
+                            new_modes = modes_message.gamemodes
+                            print(new_modes)
+                            mode_type = new_modes[0].name
+                            gameDb[game].player_counts.append(mode_type)
+                            # input(mode_type)
+                        # gameDb[game].player_counts = modes # Changes approach but for the better?
+                    # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
                     developers = current_game.involved_companies
                     if (len(developers) > 0):
                         gameDb[game].list_developers = developers  # Will this grab the most definitive list?

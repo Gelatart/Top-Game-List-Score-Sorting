@@ -18,7 +18,6 @@ post += '&grant_type=client_credentials'
 #page = requests.get(post) #404
 page = requests.post(post) #gives access token we can use
 print(page.text)
-#input("Here we pause")
 
 #wrapper = IGDBWrapper("YOUR_CLIENT_ID", "YOUR_APP_ACCESS_TOKEN")
 received = json.loads(page.text)
@@ -28,6 +27,11 @@ wrapper = IGDBWrapper(client_id, access_token)
 #input("Here we pause")
 
 from igdb.igdbapi_pb2 import GameResult
+from igdb.igdbapi_pb2 import GameModeResult
+from igdb.igdbapi_pb2 import PlatformResult
+from igdb.igdbapi_pb2 import PlatformFamilyResult
+from igdb.igdbapi_pb2 import InvolvedCompanyResult
+from igdb.igdbapi_pb2 import CompanyResult
 igdb_request = wrapper.api_request(
             'games.pb', # Note the '.pb' suffix at the endpoint
             #'fields name, rating; limit 5; offset 0;'
@@ -38,6 +42,20 @@ games_message.ParseFromString(igdb_request) # Fills the protobuf message object 
 games = games_message.games
 #print(games)
 #input("Here we pause")
+
+print("Would you like to use the games endpoint or another?")
+print("1. Games")
+print("2. Another")
+endpoint_option_1 = input()
+if(endpoint_option_1 == "2"):
+    print("You have selected another? Which endpoint would you like to use?")
+    print("1. Game Modes")
+    print("2. Platform")
+    print("3. Platform Family")
+    print("4. Involved Company")
+    print("5. Company")
+    #...
+    endpoint_option_2 = input()
 
 query = input("Enter your query for the IGDB API here. Make sure to use the proper syntax to not have an error\n")
 print(query)
@@ -57,15 +75,75 @@ This works for FTL: Advanced Edition: fields *; where id = '20098'; offset 0;
 fields *; where id = '20098' & version_parent = null; offset 0; //Doesn't get result in this case
 """
 
-igdb_request = wrapper.api_request(
-    'games.pb',  # Note the '.pb' suffix at the endpoint
-    query
-)
-games_message = GameResult()
-games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
-games = games_message.games
+#igdb_request = None
 
-print(games)
+if(endpoint_option_1 == "1"):
+    igdb_request = wrapper.api_request(
+        'games.pb',  # Note the '.pb' suffix at the endpoint
+        query
+    )
+    games_message = GameResult()
+    games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
+    games = games_message.games
+
+    print(games)
+elif(endpoint_option_1 == "2"):
+    if(endpoint_option_2 == "1"):
+        #Game_Modes
+        igdb_request = wrapper.api_request(
+            'game_modes.pb',  # Note the '.pb' suffix at the endpoint
+            query
+        )
+        modes_message = GameModeResult()
+        modes_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
+        modes = modes_message.gamemodes #Correct syntax for it is gamemodes
+
+        print(modes)
+        #Doing the fields *; query for this helped me find all of the types of game_modes
+    elif (endpoint_option_2 == "2"):
+        # Platforms
+        igdb_request = wrapper.api_request(
+            'platforms.pb',  # Note the '.pb' suffix at the endpoint
+            query
+        )
+        platforms_message = PlatformResult()
+        platforms_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
+        platforms = platforms_message.platforms  # Correct syntax for it is gamemodes
+
+        print(platforms)
+    elif (endpoint_option_2 == "3"):
+        # Platform Families
+        igdb_request = wrapper.api_request(
+            'platform_families.pb',  # Note the '.pb' suffix at the endpoint
+            query
+        )
+        platforms_message = PlatformFamilyResult()
+        platforms_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
+        platform_families = platforms_message.platformfamilies  # Correct syntax for it is gamemodes
+
+        print(platform_families)
+    elif (endpoint_option_2 == "4"):
+        # Involved Company
+        igdb_request = wrapper.api_request(
+            'involved_companies.pb',  # Note the '.pb' suffix at the endpoint
+            query
+        )
+        company_message = InvolvedCompanyResult()
+        company_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
+        companies = company_message.involvedcompanies
+
+        print(companies)
+    elif (endpoint_option_2 == "5"):
+        # Company
+        igdb_request = wrapper.api_request(
+            'companies.pb',  # Note the '.pb' suffix at the endpoint
+            query
+        )
+        company_message = CompanyResult()
+        company_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
+        companies = company_message.companies
+
+        print(companies)
 
 print("Successfully completed! Goodbye!")
 

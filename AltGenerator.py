@@ -31,7 +31,7 @@ gameDb = {}
 "game object needs two scores"
 class GameObject:
     def __init__(self, rank):
-        self.rankedScore = rank
+        self.ranked_score = rank
         self.listCount = 1
         self.listsReferencing = []
         self.totalCount = 0
@@ -45,11 +45,11 @@ class GameObject:
     #consider storing a constantly updated average score?
 
     #def __init__(self, rank, count):
-    #    self.rankedScore = rank
+    #    self.ranked_score = rank
     #    self.listCount = count
 
     def __init__(self, rank, list):
-        self.rankedScore = rank
+        self.ranked_score = rank
         self.listCount = 1
         self.listsReferencing = []
         self.listsReferencing.append(list)
@@ -62,7 +62,7 @@ class GameObject:
         self.listDevelopers = []
 
     def __init__(self, rank, list, total):
-        self.rankedScore = rank
+        self.ranked_score = rank
         self.listCount = 1
         self.listsReferencing = []
         self.listsReferencing.append(list)
@@ -136,7 +136,7 @@ with pymongo.MongoClient(monConnect, server_api=ServerApi('1')) as mon_client:
                 # Strips the newline character
                 for line in Lines:
                     if line in gameDb:
-                        gameDb[line].rankedScore += count
+                        gameDb[line].ranked_score += count
                         gameDb[line].listCount += 1
                         gameDb[line].listsReferencing.append(f)
                         gameDb[line].totalCount += originalCount
@@ -189,7 +189,7 @@ with pymongo.MongoClient(monConnect, server_api=ServerApi('1')) as mon_client:
                 # Strips the newline character
                 for line in Lines:
                     if line in gameDb:
-                        gameDb[line].rankedScore += count
+                        gameDb[line].ranked_score += count
                         gameDb[line].listCount += 1
                         gameDb[line].listsReferencing.append(f)
                         gameDb[line].totalCount += originalCount
@@ -209,13 +209,9 @@ with pymongo.MongoClient(monConnect, server_api=ServerApi('1')) as mon_client:
         if os.path.isfile(f):
             list_query = {"Title": filename}
             list_count = list_col.count_documents(list_query)
-            # print(filename)
-            # print(list_count)
             # if(list_col.find(list_query) != None):
             if (list_count > 0):
-                # print(list_col.find(list_query).count())
                 print("List was already logged!")
-                # input('Wait to review\n')
                 continue
             else:
                 print("Brand new list to log!")
@@ -229,11 +225,10 @@ with pymongo.MongoClient(monConnect, server_api=ServerApi('1')) as mon_client:
                 originalCount = count
                 #^find out how to read the line amount ahead of time
                 #originalCount = len(Lines)
-                #print(originalCount)
                 # Strips the newline character
                 for line in Lines:
                     if line in gameDb:
-                        gameDb[line].rankedScore += count
+                        gameDb[line].ranked_score += count
                         gameDb[line].listCount += 1
                         gameDb[line].listsReferencing.append(f)
                         gameDb[line].totalCount += originalCount
@@ -242,7 +237,6 @@ with pymongo.MongoClient(monConnect, server_api=ServerApi('1')) as mon_client:
                         gameDb[line] = newObj
                     #searchObj = gameDb.get(newObj, 0) + 1
                     #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
-                    #print("Score of {}: {}".format(count, line.strip()))
                     #count -= 1
                 games_lists.append(filename)
 
@@ -301,9 +295,9 @@ with pymongo.MongoClient(monConnect, server_api=ServerApi('1')) as mon_client:
     for game, details in gameDb.items():
         exportDict = {}
         exportDict["Title"] = game
-        exportDict["Ranked Score"] = details.rankedScore
+        exportDict["Ranked Score"] = details.ranked_score
         exportDict["Inclusion Score"] = details.listCount
-        averageScore = details.rankedScore / details.totalCount
+        averageScore = details.ranked_score / details.totalCount
         exportDict["Average Score"] = averageScore
         exportDict["List of References"] = details.listsReferencing
         exportDict["Completed"] = details.completed
@@ -346,14 +340,14 @@ with pymongo.MongoClient(monConnect, server_api=ServerApi('1')) as mon_client:
     sheet1.write(0, 9, 'DEVELOPERS', boldStyle)
     excelCount = 1
     for game, details in gameDb.items():
-        rScore = details.rankedScore
+        rScore = details.ranked_score
         iScore = details.listCount
         aScore = rScore / details.totalCount
         if(details.completed == True):
             sheet1.write(excelCount, 0, game, crossedStyle)
         else:
             sheet1.write(excelCount, 0, game)
-        #sheet1.write(excelCount, 1, details.rankedScore)
+        #sheet1.write(excelCount, 1, details.ranked_score)
         #sheet1.write(excelCount, 2, details.listCount)
         sheet1.write(excelCount, 1, rScore)
         sheet1.write(excelCount, 2, iScore)
@@ -375,7 +369,7 @@ with pymongo.MongoClient(monConnect, server_api=ServerApi('1')) as mon_client:
         sheet1.write(excelCount, 9, lDevs)
         excelCount += 1
         #add to the individual databases
-        #gameDbRanked[game] = details.rankedScore
+        #gameDbRanked[game] = details.ranked_score
         #gameDbInclusion[game] = details.listCount
         #gameDbAverage[game] = averageScore
         gameDbRanked[game] = rScore

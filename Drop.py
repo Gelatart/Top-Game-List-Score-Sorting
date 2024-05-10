@@ -16,8 +16,6 @@ fileContents = file.read()
 print(fileContents)
 file.close()
 #config = dotenv_values(".env")
-#print(config)
-#print(monConnect)
 print(f"MonConnect:{monConnect}")
 monClient = pymongo.MongoClient(monConnect, server_api=ServerApi('1'))
 monDB = monClient["GameSorting"]
@@ -27,9 +25,9 @@ try:
 except Exception as e:
     print("Uh-oh!")
     print(e)
-monCol = monDB["games"]
+mon_col = monDB["games"]
 listCol = monDB["lists"]
-monCol.drop()
+mon_col.drop()
 listCol.drop()
 print("Successfully dropped the games collection!")
 print("Successfully dropped the lists collection!")

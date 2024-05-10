@@ -115,10 +115,11 @@ while(answer_check_main == False):
 
     if(filter_category == '1'):
         print("You have selected 1. Platform Inclusion")
-        print("Would you like to include single platforms, entire brands, or formats of platforms?")
+        print("Would you like to include single platforms, entire brands, generations of platform, or formats of platforms?")
         print("1. Single Platform")
         print("2. Brand of Platform")
-        print("3. Format of Platform")
+        print("3. Generation of Platform")
+        print("4. Format of Platform")
         platforms_option = input()
         if(platforms_option == '1'):
             print("Now we are going to list all of the options of platforms you can choose from")
@@ -160,6 +161,7 @@ while(answer_check_main == False):
             print("41. Wii U")
             print("42. N-Gage")
             print("44. Tapwave Zodiac")
+            print("45. PSN")
             print("46. Vita")
             print("48. PS4")
             print("49. XONE")
@@ -193,6 +195,9 @@ while(answer_check_main == False):
         print("3. Microsoft")
         print("4. Sega")
         print("5. Atari")
+        #...
+        print("Which generation of platform would you like to include?")
+        #include options for non-gen platforms? Like PC/operating system, arcade, etc.?
         #...
         print("Which format of platform would you like to include?")
         print("1. Console")
@@ -242,6 +247,7 @@ while(answer_check_main == False):
         print("41. Wii U")
         print("42. N-Gage")
         print("44. Tapwave Zodiac")
+        print("45. PSN")
         print("46. Vita")
         print("48. PS4")
         print("49. XONE")
@@ -315,6 +321,8 @@ while(answer_check_main == False):
         else:
             print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
     elif (filter_category == '5'):
+        #NOT WORKING YET!!!
+        #try search api endpoint?
         print("You have selected 5. Title")
         print("Would you like to enter a filter string to use in filtering results?")
         title_search = input("If so, specify your filter string here: ")
@@ -328,25 +336,98 @@ while(answer_check_main == False):
     elif (filter_category == '6'):
         print("You have selected 6. Ranked Score")
         print("Would you like to set a minimum threshold score? A maximum one? Or a target score value?")
+        print("1. Minimum threshold score")
+        print("2. Maximum threshold score")
+        print("3. Target score")
+        score_option = input()
+        if (score_option == '3'):
+            target_score = input("Set your target score: ")
+            new_query = {"Ranked Score": target_score}
+            queries.append(new_query)
+        else:
+            print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
         #...
     elif (filter_category == '7'):
         print("You have selected 7. Inclusion Score")
         print("Would you like to set a minimum threshold score? A maximum one? Or a target score value?")
+        print("1. Minimum threshold score")
+        print("2. Maximum threshold score")
+        print("3. Target score")
+        score_option = input()
+        if (score_option == '3'):
+            target_score = input("Set your target score: ")
+            new_query = {"Inclusion Score": target_score}
+            queries.append(new_query)
+        else:
+            print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
         #...
     elif (filter_category == '8'):
         print("You have selected 8. Average Score")
         print("Would you like to set a minimum threshold score? A maximum one? Or a target score value?")
+        print("1. Minimum threshold score")
+        print("2. Maximum threshold score")
+        print("3. Target score")
+        score_option = input()
+        if (score_option == '3'):
+            target_score = input("Set your target score: ")
+            new_query = {"Average Score": target_score}
+            queries.append(new_query)
+        else:
+            print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
         #...
     elif (filter_category == '9'):
         print("You have selected 9. Player Count")
         print("Would you like to select whether you want singleplayer or multiplayer?")
         print("Or select one-by-one which player counts you would like to include?")
+        print("1. Singleplayer or Multiplayer")
+        print("2. Pick player counts individually")
+        player_type_option = input()
+        if(player_type_option == '2'):
+            print("Here are the player count options")
+            #more elaborate multiplayer mode options?
+            print("1. Single player")
+            print("2. Multiplayer")
+            print("3. Co-operative")
+            print("4. Split screen")
+            print("5. Massively Multiplayer Online (MMO)")
+            print("6. Battle Royale")
+            player_count_option = input()
+            target_count = None
+            if(player_count_option == '1'):
+                target_count = "Single player"
+            elif(player_count_option == '2'):
+                target_count = "Multiplayer"
+            elif (player_count_option == '3'):
+                target_count = "Co-operative"
+            elif (player_count_option == '4'):
+                target_count = "Split screen"
+            elif (player_count_option == '5'):
+                target_count = "Massively Multiplayer Online (MMO)"
+            elif (player_count_option == '6'):
+                target_count = "Battle Royale"
+            else:
+                print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+            new_query = {"Player Count": target_count}
+            queries.append(new_query)
+        else:
+            print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
         #...
     elif (filter_category == '10'):
         print("You have selected 10. Developers")
-        print("Are you planning on selecting filters for developers or publishers right now?")
-        print("For developers, are you looking for Main Developers, or just any company that worked on a game?")
-        print("Which companies are you planning to filter for?")
+        #print("Are you planning on selecting filters for developers or publishers right now?")
+        print("For developers, are you looking for true Developers, or just any company that worked on a game?")
+        print("Would you like to try entering in a name for the developer you are looking for? Or trying by their IGDB ID?")
+        print("1. Search by name")
+        print("2. Search by ID")
+        dev_type_option = input()
+        if(dev_type_option == '1'):
+            print("Which developer are you wanting to filter for? For now you'll want to be pretty exact.")
+            dev_search = input()
+            new_query = {"Developers": dev_search}
+            queries.append(new_query)
+        else:
+            print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+        #going to be using involvedcompany and company?
         #...
     elif (filter_category == '11'):
         print("You have selected 11. Miscellaneous")
@@ -443,10 +524,6 @@ while(answer_check_main == False):
 mon_client.close()
 #Close cursors too?
 games_pulled.close()
-#games_pulled_query.close()
-#games_pulled_ranked.close()
-#games_pulled_average.close()
-#games_pulled_inclusion.close()
 
 print("Successfully completed! Have a good day!")
 

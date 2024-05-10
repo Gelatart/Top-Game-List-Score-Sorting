@@ -27,7 +27,7 @@ Mario Kart DS
 Mario Kart Wii
 Pikmin 2
 <1521> Pokemon Black Version
-<12515> Pokemon Go
+<1560> Pokemon Diamond Version
 <1558> Pokemon Gold Version
 <1561> Pokemon Red Version
 <1557> Pokemon Ruby Version
