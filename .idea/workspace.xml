@@ -6,17 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b33df5e9-3490-443b-8a31-ba21b2040da7" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AltGenerator.py" beforeDir="false" afterPath="$PROJECT_DIR$/AltGenerator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Completions.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Completions.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drop.py" beforeDir="false" afterPath="$PROJECT_DIR$/Drop.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/Generator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IGDB-Query.py" beforeDir="false" afterPath="$PROJECT_DIR$/IGDB-Query.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NEWTEST2[CUSTOM GENERATION].txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NEWTEST3[CUSTOM GENERATION].txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NEWTEST4[CUSTOM GENERATION].txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NEWTEST[CUSTOM GENERATION].txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/NEW[CUSTOM GENERATION].txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/PrintReports.py" beforeDir="false" afterPath="$PROJECT_DIR$/PrintReports.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sorted Database.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted Database.xls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sorted by Average (Uncompleted).txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Average (Uncompleted).txt" afterDir="false" />
@@ -25,13 +15,7 @@
       <change beforePath="$PROJECT_DIR$/Sorted by Inclusion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Inclusion.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sorted by Ranked (Uncompleted).txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Ranked (Uncompleted).txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sorted by Ranked.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sorted by Ranked.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST2[CUSTOM GENERATION].txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST3[CUSTOM GENERATION].txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST4[CUSTOM GENERATION].txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST5[CUSTOM GENERATION].txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST6[CUSTOM GENERATION].txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST7[CUSTOM GENERATION].txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TEST[CUSTOM GENERATION].txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TETRIS[CUSTOM GENERATION].txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Tracking Categories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tracking Categories.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

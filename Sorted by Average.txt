@@ -253,7 +253,6 @@ Dark Souls --> 0.7585934413275385
 Half-Life 2: Episode Two --> 0.7575757575757576
 Super Mario Kart --> 0.7531725888324873
 The Wonderful 101 --> 0.752
-Life is Strange --> 0.7515923566878981
 Mass Effect 3 --> 0.751412429378531
 Saurian --> 0.75
 Resident Evil 3: Nemesis --> 0.75
@@ -263,6 +262,7 @@ Tecmo Bowl --> 0.7417582417582418
 Vampire: The Masquerade - Redemption --> 0.7414829659318637
 Tetris & Dr. Mario --> 0.74
 [x]Portal 2 --> 0.7369519832985386
+Life is Strange --> 0.7365269461077845
 <205600> Dragon Warrior III --> 0.7362637362637363
 Final Fantasy XV --> 0.7348066298342542
 Kirby's Adventure --> 0.7345575959933222
@@ -287,7 +287,6 @@ Kirby Super Star --> 0.715
 Star Wars: Knights of the Old Republic --> 0.7130612244897959
 <135389> Mario Golf [GBC] --> 0.7126436781609196
 [x]<1561> Pokemon Red Version --> 0.7118267629094948
-The Witcher 3: Wild Hunt --> 0.7117486338797814
 M.U.L.E. --> 0.7110036275695284
 <1773> Ratchet & Clank: Up Your Arsenal --> 0.7107692307692308
 World of Warcraft --> 0.7105263157894737
@@ -295,6 +294,7 @@ Red Dead Redemption --> 0.7104216388225935
 Umineko no Naku Koro ni: Episode 1 - Legend of the Golden Witch --> 0.71
 Mega Man --> 0.71
 The Lost Vikings --> 0.71
+The Witcher 3: Wild Hunt --> 0.7097933513027853
 Adventure --> 0.7097532314923619
 Kingdom Hearts II --> 0.7095588235294118
 Mass Effect 2 --> 0.7093545046599931
@@ -353,7 +353,7 @@ Homeworld 2 --> 0.6713426853707415
 Super Mario Galaxy 2 --> 0.6708732963149924
 Kentucky Route Zero --> 0.67
 Gradius --> 0.67
-Bloodborne --> 0.6681910569105691
+Bloodborne --> 0.6676676676676677
 NBA Jam --> 0.6669133974833457
 Ice Age 2: The Meltdown --> 0.6666666666666666
 Burly Men at Sea --> 0.6666666666666666
@@ -400,12 +400,12 @@ Jackal --> 0.64
 U.N. Squadron --> 0.64
 Brothers: A Tale of Two Sons --> 0.639344262295082
 The Last Guardian --> 0.6391304347826087
+Metal Gear Solid V: The Phantom Pain --> 0.6373873873873874
 The Legend of Zelda: Collector's Edition --> 0.6372549019607843
 The Legend of Zelda: Majora's Mask --> 0.63668430335097
 The Legend of Dragoon --> 0.6366666666666667
 Hitman 2 --> 0.6363636363636364
 Ultra Street Fighter IV --> 0.6361746361746362
-Metal Gear Solid V: The Phantom Pain --> 0.6361573373676248
 Spelunky --> 0.6355762824783477
 Red Dead Redemption 2 --> 0.6334106728538283
 City of Heroes --> 0.6332665330661322
@@ -581,7 +581,7 @@ Danganronpa V3: Killing Harmony --> 0.5454545454545454
 Jak and Daxter: The Precursor Legacy --> 0.5432098765432098
 Advance Wars --> 0.5429769392033543
 Sid Meier's Civilization VI --> 0.5428571428571428
-Her Story --> 0.5425101214574899
+Her Story --> 0.5419440745672437
 Dragon Quest VIII: Journey of the Cursed King --> 0.5416058394160584
 Game & Watch Gallery 3 --> 0.54
 Far Cry --> 0.54
@@ -601,9 +601,6 @@ Eternal Darkness: Sanity's Requiem --> 0.5357142857142857
 Warcraft III: Reign of Chaos --> 0.5339805825242718
 Animal Crossing: New Leaf --> 0.5336194563662375
 Dragon Warrior Monsters --> 0.5333333333333333
-Batman: Arkham Knight) --> 0.5333333333333333
-SOMA --> 0.5333333333333333
-Mortal Kombat X --> 0.5333333333333333
 Beat Saber --> 0.5333333333333333
 Gris --> 0.5333333333333333
 Impossible Mission --> 0.533066132264529
@@ -620,13 +617,12 @@ Predator: Concrete Jungle --> 0.53
 Zombies Ate My Neighbors --> 0.53
 Tony Hawk's Pro Skater --> 0.5296495956873315
 The Beginner's Guide --> 0.5294117647058824
-Downwell --> 0.5294117647058824
 Darkest Dungeon --> 0.5294117647058824
 Everybody's Gone to the Rapture --> 0.5294117647058824
 Prune --> 0.5294117647058824
 Mushroom 11 --> 0.5294117647058824
-Galak Z --> 0.5294117647058824
-Dr. Langeskov, the Tiger, and the Terribly Cursed Emerald: A Whirlwind Heist --> 0.5294117647058824
+Galak-Z: The Dimensional --> 0.5294117647058824
+Dr. Langeskov, The Tiger, and The Terribly Cursed Emerald: A Whirlwind Heist --> 0.5294117647058824
 [x]Batman: Arkham Asylum --> 0.5292096219931272
 Suikoden II --> 0.5288135593220339
 Stardew Valley --> 0.5279001468428781
@@ -653,6 +649,8 @@ LocoRoco 2 --> 0.52
 Assassin's Creed Brotherhood --> 0.52
 Kid Niki: Radical Ninja --> 0.52
 Ultimate Card Games --> 0.52
+Soma --> 0.52
+Mortal Kombat X --> 0.52
 Michael Jackson's Moonwalker --> 0.52
 Comix Zone --> 0.52
 Pulseman --> 0.52
@@ -683,6 +681,7 @@ Super Paper Mario --> 0.52
 WarioWare: Smooth Moves --> 0.52
 Left 4 Dead 2 --> 0.5196353436185134
 The World Ends with You --> 0.5196078431372549
+Downwell --> 0.5185185185185185
 Sunless Sea --> 0.5185185185185185
 Demon's Souls --> 0.5170380078636959
 God of War III --> 0.5163240628778718
@@ -731,9 +730,9 @@ Yoshi's Cookie --> 0.51
 Turok: Dinosaur Hunter --> 0.5094339622641509
 Tekken 3 --> 0.5091714104996837
 Shantae and the Pirate's Curse --> 0.5076335877862596
+Batman: Arkham Knight --> 0.5074906367041199
 Perfect Dark --> 0.5072164948453608
 Phantasy Star IV: The End of the Millennium --> 0.5070028011204482
-Batman: Arkham Knight --> 0.5068762278978389
 SoulCalibur II --> 0.5063721325403568
 Gun --> 0.5061728395061729
 Pathologic --> 0.5061728395061729
@@ -987,6 +986,7 @@ PowerSlave --> 0.5
 The Ultimate Doom --> 0.5
 Battle Chef Brigade --> 0.5
 Guacamelee! 2 --> 0.5
+Until Dawn --> 0.5
 Super Ghouls 'n Ghosts --> 0.5
 Bravely Default --> 0.5
 Kingdom Come: Deliverance --> 0.5
@@ -1033,6 +1033,8 @@ Lost Eden --> 0.5
 Caveman Ninja --> 0.5
 Chuck Rock --> 0.5
 Caveman Games --> 0.5
+Destiny: The Taken King --> 0.5
+The Room Three --> 0.5
 No Stars, Only Constellations --> 0.5
 Anatomy --> 0.5
 Mirror's Edge Catalyst --> 0.5
@@ -1318,10 +1320,12 @@ The Sims 2 --> 0.405152224824356
 Puyo Puyo --> 0.405
 Tomb Raider --> 0.40492307692307694
 Terraria --> 0.40468227424749165
+Fallout 4 --> 0.4044032444959444
 Assassin's Creed Origins --> 0.40425531914893614
 Earthworm Jim --> 0.404
 The Legend of Zelda: A Link Between Worlds --> 0.404
 Deadly Premonition --> 0.40292275574112735
+Rocket League --> 0.40253671562082777
 Final Fantasy Tactics Advance --> 0.4023529411764706
 Microsoft Flight Simulator --> 0.402
 <19531> Prey [2017] --> 0.4019607843137255
@@ -1339,13 +1343,12 @@ NBA 2K --> 0.4
 <20426> Gran Turismo --> 0.4
 NES Remix Pack --> 0.4
 Mercenaries: Playground of Destruction --> 0.4
+Dirt Rally --> 0.4
 Lufia II: Rise of the Sinistrals --> 0.4
 Joe & Mac 2: Lost in the Tropics --> 0.4
-Rocket League --> 0.39986376021798364
 Mega Man 3 --> 0.3975
 The Sims 3 --> 0.3961407491486947
 Transistor --> 0.395
-Fallout 4 --> 0.3949579831932773
 TowerFall --> 0.3938706015891033
 Mario & Luigi: Superstar Saga --> 0.3938053097345133
 Tempest --> 0.39344262295081966
@@ -1540,6 +1543,7 @@ Minit --> 0.3
 MotorStorm: Apocalypse --> 0.3
 HQ Trivia --> 0.3
 RimWorld --> 0.3
+Dying Light --> 0.3
 Disney's Chip 'n Dale Rescue Rangers --> 0.3
 Jungle Strike: The Sequel to Desert Strike --> 0.3
 S.T.A.L.K.E.R.: Shadow of Chernobyl --> 0.3
@@ -1661,11 +1665,11 @@ Power Stone 2 --> 0.23717948717948717
 Devil's Crush --> 0.23647294589178355
 The Talos Principle --> 0.23478260869565218
 Saints Row: The Third --> 0.23333333333333334
+Splatoon --> 0.23255813953488372
 Peggle --> 0.23110151187904968
 TimeSplitters: Future Perfect --> 0.23076923076923078
 Harvest Moon: Friends of Mineral Town --> 0.23076923076923078
 Mario Paint --> 0.2303839732888147
-Splatoon --> 0.2300469483568075
 Bopl Battle --> 0.23
 Ring King --> 0.23
 X-Men: Mutant Apocalypse --> 0.23
@@ -1675,9 +1679,10 @@ Command & Conquer: Red Alert 2 --> 0.22742474916387959
 Jumpman Junior --> 0.22645290581162325
 Marble Madness --> 0.22639225181598063
 Metal Gear Solid: Peace Walker --> 0.22519083969465647
-Lisa --> 0.225
+Lisa: The Painful --> 0.225
 Koronis Rift --> 0.22444889779559118
 Advance Wars: Dual Strike --> 0.224
+LEGO Dimensions --> 0.22330097087378642
 Pillars of Eternity --> 0.22044088176352705
 Yu-Gi-Oh! Dark Duel Stories --> 0.22
 Puzzle & Dragons --> 0.22
@@ -1688,7 +1693,6 @@ Ice Climber --> 0.22
 Stephen's Sausage Roll --> 0.218
 Sid Meier's Alpha Centauri --> 0.21551724137931033
 Syberia --> 0.21442885771543085
-LEGO Dimensions --> 0.2140468227424749
 Bionic Commando: Elite Forces --> 0.21333333333333335
 Uridium --> 0.2124248496993988
 Virtua Tennis 3 --> 0.21
@@ -1718,6 +1722,7 @@ Every Extend Extra --> 0.2
 Donkey Kong Land III --> 0.2
 Giana Sisters: Twisted Dreams --> 0.2
 Trials Evolution --> 0.2
+OlliOlli2: Welcome to Olliwood --> 0.2
 Journey to Silius --> 0.2
 The Death and Return of Superman --> 0.2
 Radiata Stories --> 0.19732441471571907
@@ -1858,6 +1863,7 @@ Overcooked! --> 0.1
 Farpoint --> 0.1
 Heat Signature --> 0.1
 DJ Hero 2 --> 0.1
+Hotline Miami 2: Wrong Number --> 0.1
 The Great Escape --> 0.1
 Mario Bros. --> 0.1
 Super Star Wars: The Empire Strikes Back --> 0.1
@@ -1903,8 +1909,8 @@ MediEvil --> 0.07
 Kickle Cubicle --> 0.07
 The Adventures of Batman & Robin --> 0.07
 Depression Quest --> 0.06813627254509018
+Ori and the Blind Forest --> 0.06804374240583232
 Final Fantasy Tactics: The War of the Lions --> 0.06367924528301887
-Ori and the Blind Forest --> 0.06273062730627306
 Membrane --> 0.06020066889632107
 Earth Defense Force 2017 --> 0.06012024048096192
 Die Hard Arcade --> 0.06
@@ -1927,7 +1933,7 @@ Defender II --> 0.04
 The House of the Dead --> 0.04
 Driveclub --> 0.04
 NBA 2K11 --> 0.04
-World Soccer: Winning Eleven 7 International --> 0.04
+World Soccer Winning Eleven 7 International --> 0.04
 [x]LEGO Star Wars: The Complete Saga --> 0.04
 Sega Bass Fishing --> 0.04
 Kirby Mass Attack --> 0.04

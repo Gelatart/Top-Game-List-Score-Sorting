@@ -222,8 +222,7 @@ for line in completeLines:
     line = stripped_line
     if line in gameDb:
         gameDb[line].completed = True
-        #input("We got a true here!")
-    #else: raise error because not in database? create it with 0 score?
+    #else: raise error because not in database? create it with 0 score? probably just ignore it?
 
 """
 #ADD SECTION WHERE WE START GRABBING ADDITIONAL ATTRIBUTES FOR GAME DATABASE?
@@ -649,13 +648,6 @@ while(igdb_check == False):
             elif (len(games) == 1):
                 try:
                     current_game = games[0]
-                    # print(games)
-                    # print(current_game.slug)
-                    # print(current_game.url)
-                    # print(current_game.id)
-                    # print(current_game.platforms)
-                    # print(current_game.first_release_date.ToDatetime())
-                    # input("This should go quickly!")
                     try:
                         gameDb[game].igdb_ID = current_game.id
                     except IndexError as e:
@@ -810,8 +802,41 @@ while(igdb_check == False):
                         # gameDb[game].player_counts = modes # Changes approach but for the better?
                     # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
                     developers = current_game.involved_companies
+                    print(developers)
                     if (len(developers) > 0):
-                        gameDb[game].list_developers = developers  # Will this grab the most definitive list?
+                        for dev in developers:
+                            dev_name = None
+                            # input(dev)
+                            # FIX THE REST OF THIS!!! (involved company, company?)
+                            # first query to look at involved companies
+                            # sub_query = 'fields *;'
+                            sub_query_1 = 'fields *; where id=' + str(dev.id) + ' & developer=true;'
+                            sub_request_1 = wrapper.api_request(
+                                'involved_companies.pb',  # Note the '.pb' suffix at the endpoint
+                                sub_query_1
+                            )
+                            inv_companies_message = InvolvedCompanyResult()
+                            inv_companies_message.ParseFromString(
+                                sub_request_1)  # Fills the protobuf message object with the response
+                            inv_companies = inv_companies_message.involvedcompanies
+                            print(inv_companies)
+                            print(len(inv_companies))
+                            if (len(inv_companies) == 0):
+                                continue
+                            # second query to look at the company specifically
+                            sub_query_2 = 'fields name; where id=' + str(inv_companies[0].company.id) + ';'
+                            sub_request_2 = wrapper.api_request(
+                                'companies.pb',  # Note the '.pb' suffix at the endpoint
+                                sub_query_2
+                            )
+                            companies_message = CompanyResult()
+                            companies_message.ParseFromString(
+                                sub_request_2)  # Fills the protobuf message object with the response
+                            companies = companies_message.companies
+                            print(companies)
+                            dev_name = companies[0].name
+                            gameDb[game].list_developers.append(dev_name)
+                            #input(dev_name)
                 except Exception as e:
                     print("An error has occurred:", e)
                     #it starts hitting errors when it gets to some of the new games featured in metacritic user scores?
@@ -880,31 +905,38 @@ for game, details in gameDb.items():
     #insertion = mon_col.insert_one(details)
     #insertion = mon_col.insert_one(gameDb[game])
     #export.append(details)
-    exportDict = {}
-    exportDict["Title"] = game
-    exportDict["IGDB ID"] = details.igdb_ID
-    exportDict["Ranked Score"] = details.ranked_score
-    exportDict["Inclusion Score"] = details.list_count
+    export_dict = {}
+    export_dict["Title"] = game
+    export_dict["IGDB ID"] = details.igdb_ID
+    export_dict["Ranked Score"] = details.ranked_score
+    export_dict["Inclusion Score"] = details.list_count
     averageScore = details.ranked_score / details.total_count
-    exportDict["Average Score"] = averageScore
-    exportDict["List of References"] = details.lists_referencing
-    exportDict["Completed"] = details.completed
-    exportDict["Main Platform"] = details.main_platform
-    exportDict["List of Platforms"] = details.list_platforms
-    exportDict["Release Date"] = details.release_date
-    exportDict["Player Counts"] = details.player_counts
-    exportDict["Developers"] = details.list_developers
-    exportDict["Total Count"] = details.total_count
-    insertion = mon_col.insert_one(exportDict)
+    export_dict["Average Score"] = averageScore
+    export_dict["List of References"] = details.lists_referencing
+    export_dict["Completed"] = details.completed
+    export_dict["Main Platform"] = details.main_platform
+    export_dict["List of Platforms"] = details.list_platforms
+    export_dict["Release Date"] = details.release_date
+    export_dict["Player Counts"] = details.player_counts
+    export_dict["Developers"] = details.list_developers
+    export_dict["Total Count"] = details.total_count
+    #export_dict = dict(game)
+    #^need to expand and clarify more?
+    #export_dict = dict('Title' = game, 'IGDB ID' = details.igdb_ID, 'Ranked Score' = details.ranked_score)
+    print(export_dict)
+    insertion = mon_col.insert_one(export_dict)
 #insertion = mon_col.insert_many(gameDb)
 #insertion = mon_col.insert_many(export)
 print("TIME TO INSERT THE LISTS INTO MONGODB!")
 for list in games_lists:
     #print(list)
-    listDict = {}
-    listDict["Title"] = list
-    #could keep track of what type of list it is, other variables?
-    list_insert = list_col.insert_one(listDict)
+    # could keep track of what type of list it is, other variables?
+    #list_dict = {}
+    #list_dict["Title"] = list
+    list_dict = dict(Title = list)
+    print(list_dict)
+    list_insert = list_col.insert_one(list_dict)
+    #list_dict["Title"].append(list)
 
 #after printed out everything to excel, then make three printed sorted lists?
 #each time, sort excel a certain way, then print out excel factors to list?
@@ -1101,4 +1133,5 @@ Regex Python: https://www.geeksforgeeks.org/python-regex-re-search-vs-re-findall
 Closing pymongo connection: https://stackoverflow.com/questions/18401015/how-to-close-a-mongodb-python-connection
 Close cursors, try 'with' connections: https://www.mongodb.com/community/forums/t/i-am-using-pymongo-do-i-have-to-close-a-mongoclient-after-use/213511
 Dealing with out of index in list errors: https://rollbar.com/blog/how-to-fix-python-list-index-out-of-range-error-in-for-loops/#
+Python dict() function: https://www.w3schools.com/python/ref_func_dict.asp
 """

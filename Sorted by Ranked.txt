@@ -30,9 +30,9 @@ GoldenEye 007 --> 1640
 StarCraft --> 1640
 Metroid Prime --> 1592
 EarthBound --> 1592
+The Witcher 3: Wild Hunt --> 1580
 Uncharted 2: Among Thieves --> 1565
 Call of Duty 4: Modern Warfare --> 1564
-The Witcher 3: Wild Hunt --> 1563
 Doom --> 1556
 [x]Half-Life --> 1532
 [x]Silent Hill 2 --> 1517
@@ -46,9 +46,9 @@ Super Mario Bros. --> 1432
 Street Fighter II --> 1401
 Journey --> 1374
 The Legend of Zelda: Breath of the Wild --> 1341
+Bloodborne --> 1334
 Diablo II --> 1329
 Super Mario Galaxy 2 --> 1329
-Bloodborne --> 1315
 Grand Theft Auto: San Andreas --> 1306
 [x]<1561> Pokemon Red Version --> 1282
 The Legend of Zelda --> 1278
@@ -94,10 +94,10 @@ Resident Evil --> 880
 Mortal Kombat II --> 860
 Katamari Damacy --> 860
 Baldur's Gate II: Shadows of Amn --> 858
+Metal Gear Solid V: The Phantom Pain --> 849
 Zork --> 844
 Fallout: New Vegas --> 842
 Inside --> 841
-Metal Gear Solid V: The Phantom Pain --> 841
 Red Dead Redemption 2 --> 819
 Space Invaders --> 814
 Planescape: Torment --> 813
@@ -178,6 +178,7 @@ Homeworld --> 610
 The Legend of Zelda: Link's Awakening --> 606
 <19560> God of War [2018] --> 604
 Adventure --> 604
+Rocket League --> 603
 Wolfenstein 3D --> 601
 SoulCalibur II --> 596
 Hitman: Blood Money --> 594
@@ -187,7 +188,6 @@ Dwarf Fortress --> 588
 Borderlands 2 --> 588
 M.U.L.E. --> 588
 Metroid --> 588
-Rocket League --> 587
 Guild Wars 2 --> 586
 EverQuest --> 586
 Call of Duty 2 --> 586
@@ -285,12 +285,12 @@ NetHack --> 413
 Rez Infinite --> 410
 Manic Miner --> 409
 [x]Super Mario Sunshine --> 408
+Her Story --> 407
 Baldur's Gate --> 406
 Tempest 2000 --> 404
 Diablo III --> 404
 Kentucky Route Zero --> 402
 Geometry Wars: Retro Evolved --> 402
-Her Story --> 402
 The Sentinel --> 402
 Combat --> 397
 Tony Hawk's Pro Skater --> 393
@@ -335,6 +335,7 @@ Street Fighter IV --> 353
 Brothers: A Tale of Two Sons --> 351
 The Sims 3 --> 349
 Daytona USA --> 349
+Fallout 4 --> 349
 Castlevania --> 348
 Castlevania III: Dracula's Curse --> 348
 Battlezone --> 348
@@ -356,7 +357,6 @@ Split/Second --> 334
 Heavy Rain --> 332
 Max Payne 2: The Fall of Max Payne --> 332
 Red Faction: Guerrilla --> 331
-Fallout 4 --> 329
 SuperHot VR --> 327
 Ultima IV: Quest of the Avatar --> 320
 Baldur's Gate 3 --> 317
@@ -403,6 +403,7 @@ F-Zero GX --> 277
 <24869> Resident Evil [2002] --> 272
 God Hand --> 272
 King's Quest I: Quest for the Crown --> 272
+Batman: Arkham Knight --> 271
 The Jackbox Party Pack --> 268
 Angry Birds --> 267
 The Legend of Zelda: Ocarina of Time 3D --> 267
@@ -415,7 +416,6 @@ Monster Hunter Generations --> 265
 Disco Elysium --> 264
 <12515> Pokemon Go --> 262
 Sam & Max Hit the Road --> 258
-Batman: Arkham Knight --> 258
 Super Meat Boy --> 257
 <1556> Pokemon Heart Gold Version --> 257
 NieR --> 257
@@ -425,19 +425,19 @@ Hotline Miami --> 254
 Crash Bandicoot: Warped --> 254
 Sega Rally Championship --> 251
 [x]<1557> Pokemon Ruby Version --> 250
+Splatoon --> 250
 Cuphead --> 249
 Pitfall! --> 248
 Star Control --> 248
 <1514> Pokemon Crystal Version --> 246
+Life is Strange --> 246
 <19531> Prey [2017] --> 246
 The Hitchhiker's Guide to the Galaxy --> 246
-Splatoon --> 245
 Demon Attack --> 242
 Far Cry 4 --> 240
 Paper Mario --> 237
 Dragon Age: Inquisition --> 237
 MVP Baseball 2005 --> 237
-Life is Strange --> 236
 Event[0] --> 235
 Fatal Frame II: Crimson Butterfly --> 235
 Micro Machines --> 234
@@ -993,6 +993,7 @@ Spellbreak --> 70
 Street Fighter V --> 70
 Transformers: Devastation --> 70
 Geometry Wars: Retro Evolved 2 --> 69
+LEGO Dimensions --> 69
 Professor Layton and the Unwound Future --> 69
 Snake Rattle 'n' Roll --> 69
 The Legend of the Mystical Ninja --> 69
@@ -1014,7 +1015,6 @@ The Legend of Zelda: Collector's Edition --> 65
 The King of Fighters '98: Ultimate Match --> 65
 Faxanadu --> 65
 RollerCoaster Tycoon 2 --> 65
-LEGO Dimensions --> 64
 Jackal --> 64
 U.N. Squadron --> 64
 <7640> Shadowrun [SNES] --> 64
@@ -1054,6 +1054,7 @@ Klax --> 57
 Demon's Crest --> 57
 Disgaea: Afternoon of Darkness --> 56
 Madden NFL 2003 --> 56
+Ori and the Blind Forest --> 56
 Fester's Quest --> 56
 Gradius III --> 56
 Virtua Cop 2 --> 55
@@ -1083,7 +1084,6 @@ Cities: Skylines --> 52
 Kid Niki: Radical Ninja --> 52
 Return of the Obra Dinn --> 51
 Jak 3 --> 51
-Ori and the Blind Forest --> 51
 Hitman GO --> 51
 Shadowgate --> 51
 Yoshi's Cookie --> 51
@@ -1116,7 +1116,7 @@ Axelay --> 46
 Tactics Ogre: Let Us Cling Together --> 46
 <152752> Donkey Kong Country --> 45
 Super Street Fighter IV --> 45
-Lisa --> 45
+Lisa: The Painful --> 45
 Metroid Prime Remastered --> 45
 Age of Wonders --> 45
 Xenoblade Chronicles 2 --> 45
@@ -1509,6 +1509,7 @@ Bionic Commando Rearmed --> 14
 The Guardian Legend --> 14
 Sparkster --> 14
 Kingdom Hearts Final Mix --> 14
+Downwell --> 14
 Sunless Sea --> 14
 Legend of the River King 2 --> 13
 Dark Savior --> 13
@@ -1525,6 +1526,8 @@ DmC: Devil May Cry --> 13
 Wolfenstein II: The New Colossus --> 13
 Zombie Nation --> 13
 Ultimate Card Games --> 13
+Soma --> 13
+Mortal Kombat X --> 13
 Michael Jackson's Moonwalker --> 13
 Comix Zone --> 13
 Pulseman --> 13
@@ -1645,13 +1648,12 @@ Skate or Die 2: The Search for Double Trouble --> 9
 Super Double Dragon --> 9
 Metroid Fusion --> 9
 The Beginner's Guide --> 9
-Downwell --> 9
 Darkest Dungeon --> 9
 Everybody's Gone to the Rapture --> 9
 Prune --> 9
 Mushroom 11 --> 9
-Galak Z --> 9
-Dr. Langeskov, the Tiger, and the Terribly Cursed Emerald: A Whirlwind Heist --> 9
+Galak-Z: The Dimensional --> 9
+Dr. Langeskov, The Tiger, and The Terribly Cursed Emerald: A Whirlwind Heist --> 9
 Ice Age 2: The Meltdown --> 8
 <118554> Harry Potter and the Sorcerer's Stone --> 8
 DecAthlete --> 8
@@ -1668,9 +1670,6 @@ Castlevania: Lords of Shadow --> 8
 Little Samson --> 8
 Super Turrican 2 --> 8
 Dragon Quest V: Tenkuu no Hanayome --> 8
-Batman: Arkham Knight) --> 8
-SOMA --> 8
-Mortal Kombat X --> 8
 Beat Saber --> 8
 Gris --> 8
 The Witcher 3: Wild Hunt - Blood and Wine --> 8
@@ -1726,6 +1725,7 @@ Giana Sisters: Twisted Dreams --> 5
 SSX Tricky --> 5
 Guacamelee! 2 --> 5
 DJ Hero 2 --> 5
+Until Dawn --> 5
 Dragon Warrior III --> 5
 Kingdom Come: Deliverance --> 5
 The Messenger --> 5
@@ -1736,6 +1736,8 @@ Lost Eden --> 5
 Caveman Ninja --> 5
 Chuck Rock --> 5
 Caveman Games --> 5
+Destiny: The Taken King --> 5
+The Room Three --> 5
 No Stars, Only Constellations --> 5
 Anatomy --> 5
 Mirror's Edge Catalyst --> 5
@@ -1761,7 +1763,7 @@ River Raid --> 4
 Burning Rangers --> 4
 Driveclub --> 4
 NBA 2K11 --> 4
-World Soccer: Winning Eleven 7 International --> 4
+World Soccer Winning Eleven 7 International --> 4
 SSX --> 4
 [x]LEGO Star Wars: The Complete Saga --> 4
 Rage --> 4
@@ -1774,6 +1776,7 @@ Deus Ex: Human Revolution - Director's Cut --> 4
 Advance Wars 2: Black Hole Rising --> 4
 Treasure Island Dizzy --> 4
 Fight Night Champion --> 4
+Dirt Rally --> 4
 Astyanax --> 4
 Ultimate Mortal Kombat 3 --> 4
 Mario vs. Donkey Kong --> 4
@@ -1796,6 +1799,7 @@ Jeanne d'Arc --> 3
 ZombiU --> 3
 Tom Clancy's Ghost Recon Advanced Warfighter --> 3
 Fight Night Round 2 --> 3
+Dying Light --> 3
 <86386> Teenage Mutant Ninja Turtles --> 3
 Uniracers --> 3
 Ninja Five-O --> 3
@@ -1815,6 +1819,7 @@ Killzone: Liberation --> 2
 Voodoo Vince --> 2
 Dark Cloud 2 --> 2
 South Park: The Stick of Truth --> 2
+OlliOlli2: Welcome to Olliwood --> 2
 Rush'n Attack --> 2
 Tiny Toon Adventures: Buster Busts Loose! --> 2
 Bloodborne: The Old Hunters --> 2
@@ -1847,6 +1852,7 @@ King's Quest III: To Heir is Human --> 1
 Ballblazer --> 1
 Tokyo Jungle --> 1
 <7236> Viva Piñata --> 1
+Hotline Miami 2: Wrong Number --> 1
 The Great Escape --> 1
 Ice Hockey --> 1
 Super Monkey Ball Jr. --> 1
