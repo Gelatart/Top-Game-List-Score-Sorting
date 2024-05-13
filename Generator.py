@@ -453,6 +453,7 @@ while(igdb_check == False):
                     # print(plat_ID.value)
                     # print(plat_ID.id)
                     # match plat_ID:
+                    """
                     if (plat_ID.id == 3):
                         plat_name = "Linux"
                     elif (plat_ID.id == 4):
@@ -572,10 +573,33 @@ while(igdb_check == False):
                     # test comment to make sure everything restored properly
                     else:
                         plat_name = "Unknown"
+                    """
+                    sub_query = 'fields name; where id=' + str(plat_ID.id) + ';'
+                    sub_request = wrapper.api_request(
+                        'platforms.pb',  # Note the '.pb' suffix at the endpoint
+                        sub_query
+                    )
+                    platforms_message = PlatformResult()
+                    platforms_message.ParseFromString(
+                        sub_request)  # Fills the protobuf message object with the response
+                    platforms = platforms_message.platforms
+                    #input(platforms)
+                    plat_name = platforms[0].name
                     if (plat_counter == 0):
                         main_plat = plat_name
                     # print(plat_name)
                     list_plats.append(plat_name)
+                    """
+                    sub_query = 'fields name; where id=' + str(plat_ID.platform_family) + ';'
+                    sub_request = wrapper.api_request(
+                        'platform_families.pb',  # Note the '.pb' suffix at the endpoint
+                        sub_query
+                    )
+                    platforms_message = PlatformFamilyModeResult()
+                    platforms_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
+                    platformfamilies = platforms_message.platformfamilies
+                    input(platformfamilies)
+                    """
                     plat_counter += 1
                 # input("There they are!")
                 # gameDb[game].main_platform = earliest_game.platforms[0]
@@ -657,6 +681,7 @@ while(igdb_check == False):
                     plat_ID = current_game.platforms[0]
                     plat_name = None
                     # REPLACE THIS WITH A REQUEST THAT LOOKS AT THE ID AND THEN CONSULTS PLATFORMS ENDPOINT?
+                    """
                     if (plat_ID.id == 3):
                         plat_name = "Linux"
                     elif (plat_ID.id == 4):
@@ -776,6 +801,23 @@ while(igdb_check == False):
                     # test comment to make sure everything restored properly
                     else:
                         plat_name = "Unknown"
+                    """
+                    sub_query = 'fields name; where id=' + str(plat_ID.id) + ';'
+                    sub_request = wrapper.api_request(
+                        'platforms.pb',  # Note the '.pb' suffix at the endpoint
+                        sub_query
+                    )
+                    platforms_message = PlatformResult()
+                    platforms_message.ParseFromString(
+                        sub_request)  # Fills the protobuf message object with the response
+                    platforms = platforms_message.platforms
+                    print("Main Plat")
+                    #input(platforms)
+                    plat_name = platforms[0].name
+                    if (plat_counter == 0):
+                        main_plat = plat_name
+                    # print(plat_name)
+                    list_plats.append(plat_name)
                     gameDb[game].main_platform = plat_name
                     list_plats = []
                     list_plats.append(plat_name)

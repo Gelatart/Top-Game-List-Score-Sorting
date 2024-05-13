@@ -214,25 +214,47 @@ while True:
                     brand_option = int(input())
                     if (brand_option > 0 and brand_option < 5):
                         #platform family approach, just grab the value and plug it in?
+                        #store platform family value? if/elif case or api endpoint to store it?
                         print("ONE OF THE FAMILY OPTIONS")
+                        if (brand_option == 1):
+                            #playstation family
+                            #PlayStation
+                            #PlayStation 2
+                            #PlayStation 3
+                            #PlayStation 4
+                            #PlayStation 5
+                            #PlayStation Portable
+                            #PlayStation Vita
+                            #PlayStation VR
+                            #PlayStation VR2
+                            #PocketStation
+                            print()
                         #...
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (brand_option == 6):
                         #we arrange this one ourselves for atari options
+                        #consider making my own atari family in a platform family category in the mongo cluster?
                         print("LONER ATARI")
                         """
                         ATARI PLATFORMS:
-                        Atari 2600/VCS
-                        Atari 7800
-                        Atari Lynx
-                        Atari Jaguar
-                        Atari ST/STE
-                        Atari 8-bit
-                        Atari 5200
+                        Atari 2600 (59)
+                        Atari 7800 (60)
+                        Atari Lynx (61)
+                        Atari Jaguar (62)
+                        Atari ST/STE (63)
+                        Atari 8-bit (65)
+                        Atari 5200 (66)
                         jaguar cd?
                         """
                         #...
+                        new_query = {"List of Platforms": "Atari 2600"}
+                        new_query = {"List of Platforms": "Atari 7800"}
+                        new_query = {"List of Platforms": "Atari Lynx"}
+                        new_query = {"List of Platforms": "Atari Jaguar"}
+                        new_query = {"List of Platforms": "Atari ST/STE"}
+                        new_query = {"List of Platforms": "Atari 8-bit"}
+                        new_query = {"List of Platforms": "Atari 5200"}
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     else:

@@ -1,9 +1,9 @@
-RANKED: 64
+RANKED: 65
 UNRANKED: 30
 FORMER: 12
 UNUSED: 0
 ---
-TOTAL: 106
+TOTAL: 107
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -197,3 +197,6 @@ U-The Best Video Games of 2015 - Mirror Online - 12-20-2015
 U-The 10 Best Video Games of 2015 - The Verge - 12-19-2015
 U-The 10 Best Video Games of 2015 - Vulture - 12-10-2015
 R-Top 10 Best Video Games of 2015 - Moviepilot - 12/15/2015
+
+TOP GAMES OF 2014:
+R-The 15 Best Video Games of 2014 - TIME - 12-23-2014
