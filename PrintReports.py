@@ -204,6 +204,7 @@ while True:
                     4: Linux
                     5: Nintendo
                     """
+                    #use or approach within family types?
                     print("Which brand of platform would you like to include?")
                     print("1. Sony (PlayStation)")
                     print("2. Microsoft (Xbox)")
@@ -211,6 +212,7 @@ while True:
                     print("4. Linux")
                     print("5. Nintendo")
                     print("6. Atari") #doesn't have a family
+                    #others? neo geo? apple? windows?
                     brand_option = int(input())
                     if (brand_option > 0 and brand_option < 5):
                         #platform family approach, just grab the value and plug it in?
@@ -228,8 +230,149 @@ while True:
                             #PlayStation VR
                             #PlayStation VR2
                             #PocketStation
-                            print()
-                        #...
+                            new_query = {"List of Platforms": "PlayStation"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "PlayStation 2"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "PlayStation 3"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "PlayStation 4"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "PlayStation 5"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "PlayStation Portable"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "PlayStation Vita"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "PlayStation VR"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "PlayStation VR2"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "PocketStation"}
+                            queries.append(new_query)
+                        elif (brand_option == 2):
+                            #xbox family
+                            #Xbox
+                            #Xbox 360
+                            #Xbox One
+                            #
+                            new_query = {"List of Platforms": "Xbox"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Xbox 360"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Xbox One"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Xbox Series X|S"}
+                            queries.append(new_query)
+                        elif (brand_option == 3):
+                            #sega family
+                            #SG-1000
+                            #Sega Master System/Mark III
+                            #Sega Mega Drive/Genesis
+                            #Sega CD
+                            #Sega 32X
+                            #Sega Saturn
+                            #Dreamcast
+                            #Visual Memory Unit / Visual Memory System
+                            #Sega Game Gear
+                            #Sega Pico
+                            new_query = {"List of Platforms": "SG-1000"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Sega Master System/Mark III"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Sega Mega Drive/Genesis"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Sega CD"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Sega 32X"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Sega Saturn"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Dreamcast"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Visual Memory Unit / Visual Memory System"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Sega Game Gear"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Sega Pico"}
+                            queries.append(new_query)
+                        elif (brand_option == 4):
+                            #linux family
+                            #Linux
+                            #Android
+                            #Google Stadia
+                            new_query = {"List of Platforms": "Linux"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Android"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Google Stadia"}
+                            queries.append(new_query)
+                        elif (brand_option == 5):
+                            #nintendo family
+                            #Nintendo Entertainment System
+                            #Super Nintendo Entertainment System
+                            #Nintendo 64
+                            #Nintendo GameCube
+                            #Wii
+                            #Wii U
+                            #Nintendo Switch
+                            #Game Boy
+                            #Game Boy Color
+                            #Virtual Boy
+                            #Game Boy Advance
+                            #Nintendo DS
+                            #Nintendo DSi
+                            #Nintendo 3DS
+                            #New Nintendo 3DS
+                            #Family Computer
+                            #Family Computer Disk System
+                            #Super Famicom
+                            #Pokémon mini
+                            #Virtual Console
+                            #Nintendo PlayStation
+                            #any others missing? wiiware (removed?)? nintendo eshop (removed?)?
+                            new_query = {"List of Platforms": "Nintendo Entertainment System"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Super Nintendo Entertainment System"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Nintendo 64"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Nintendo GameCube"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Wii"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Wii U"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Nintendo Switch"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Game Boy"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Game Boy Color"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Virtual Boy"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Game Boy Advance"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Nintendo DS"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Nintendo DSi"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Nintendo 3DS"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "New Nintendo 3DS"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Family Computer"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Family Computer Disk System"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Super Famicom"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Pokémon mini"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Virtual Console"}
+                            queries.append(new_query)
+                            new_query = {"List of Platforms": "Nintendo PlayStation"}
+                            queries.append(new_query)
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (brand_option == 6):
@@ -249,12 +392,19 @@ while True:
                         """
                         #...
                         new_query = {"List of Platforms": "Atari 2600"}
+                        queries.append(new_query)
                         new_query = {"List of Platforms": "Atari 7800"}
+                        queries.append(new_query)
                         new_query = {"List of Platforms": "Atari Lynx"}
+                        queries.append(new_query)
                         new_query = {"List of Platforms": "Atari Jaguar"}
+                        queries.append(new_query)
                         new_query = {"List of Platforms": "Atari ST/STE"}
+                        queries.append(new_query)
                         new_query = {"List of Platforms": "Atari 8-bit"}
+                        queries.append(new_query)
                         new_query = {"List of Platforms": "Atari 5200"}
+                        queries.append(new_query)
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     else:
