@@ -141,22 +141,22 @@ while True:
                 print("4. Nintendo 64")
                 print("5. Wii")
                 print("6. PC (Microsoft Windows)")
-                print("7. PS1")
-                print("8. PS2")
-                print("9. PS3")
+                print("7. PlayStation")
+                print("8. PlayStation 2")
+                print("9. PlayStation 3")
                 print("11. Xbox")
-                print("12. X360")
+                print("12. Xbox 360")
                 print("13. PC-DOS")
                 print("14. Mac")
                 print("15. C64 & C128")
                 print("16. Amiga")
-                print("18. NES")
-                print("19. SNES")
-                print("20. DS")
-                print("21. GCN")
+                print("18. Nintendo Entertainment System")
+                print("19. Super Nintendo Entertainment System")
+                print("20. Nintendo DS")
+                print("21. Nintendo GameCube")
                 print("22. GBC")
-                print("23. DC")
-                print("24. GBA")
+                print("23. Dreamcast")
+                print("24. Game Boy Advance")
                 print("25. Amstrad CPC")
                 print("26. ZX Spectrum")
                 print("27. MSX")
@@ -167,8 +167,8 @@ while True:
                 print("34. Android")
                 print("35. Sega Game Gear")
                 print("36. XBLA")
-                print("37. 3DS")
-                print("38. PSP")
+                print("37. Nintendo 3DS")
+                print("38. PlayStation Portable")
                 print("39. iOS")
                 print("41. Wii U")
                 print("42. N-Gage")
@@ -176,8 +176,8 @@ while True:
                 print("45. PlayStation Network")
                 print("46. PlayStation Vita")
                 print("47. Virtual Console")
-                print("48. PS4")
-                print("49. XONE")
+                print("48. PlayStation 4")
+                print("49. Xbox One")
                 print("52. Arcade")
                 print("58. Super Famicom")
                 print("59. 2600")
@@ -190,12 +190,30 @@ while True:
                 print("88. Magnavox Odyssey")
                 print("99. Famicom")
                 print("129. Texas Instruments TI-99")
-                print("130. Switch")
+                print("130. Nintendo Switch")
                 print("137. New Nintendo 3DS")
                 print("149. PC-98")
-                print("169. Xbox Series")
+                print("159. Nintendo DSi")
+                print("165. PlayStation VR")
+                print("166. Pokémon mini")
+                print("167. PlayStation 5")
+                print("169. Xbox Series X|S")
+                print("240. Zeebo")
                 print("306. Satellaview")
+                print("309. Evercade")
                 print("379. Game.com")
+                print("381. Playdate")
+                print("390. PlayStation VR2")
+                print("407. HyperScan")
+                print("412. Leapster")
+                print("413. Leapster Explorer/LeadPad Explorer")
+                print("414. LeapTV")
+                print("439. V.Smile")
+                print("440. Visual Memory Unit / Visual Memory System")
+                print("471. Meta Quest 3")
+                print("477. Panasonic Jungle")
+                print("478. Panasonic M2")
+                print("486. Digiblast")
                 print("Which platform would you like to include?")
                 #have function to check if number just given was one of the valid options?
                 #going to go off of IGDB ID's for now, need to keep adding more
@@ -493,6 +511,68 @@ while True:
                     print("9. 9th-Generation Consoles")
                     # include options for non-gen platforms? Like PC/operating system, arcade, etc.?
                     # ...
+                    # Generation 1:
+                    # ...?
+
+                    # Generation 2:
+                    # ...?
+
+                    # Generation 3:
+                    # ...?
+
+                    # Generation 4:
+                    # ...?
+
+                    #Generation 5:
+                    #...?
+
+                    #Generation 6:
+                    #Nintendo GameCube
+                    #Game Boy Advance
+                    #Dreamcast
+                    #Visual Memory Unit / Visual Memory System
+                    #PlayStation 2
+                    #Xbox
+                    #N-Gage
+                    #Leapster
+                    #V.Smile
+                    #Panasonic M2 (cancelled)
+                    #...?
+
+                    #Generation 7:
+                    #Wii
+                    #Nintendo DS
+                    #Nintendo DSi
+                    #PlayStation 3
+                    #PlayStation Portable
+                    #Xbox 360
+                    #Zeebo
+                    #HyperScan
+                    #Leapster Explorer/LeadPad Explorer
+                    #Digiblast
+                    #...?
+
+                    #Generation 8:
+                    #Wii U
+                    #Nintendo Switch (special case)
+                    #Nintendo 3DS
+                    #New Nintendo 3DS
+                    #PlayStation 4
+                    #PlayStation Vita
+                    #PlayStation VR
+                    #Xbox One
+                    #Evercade
+                    #LeapTV
+                    #Panasonic Jungle (cancelled)
+                    #...?
+
+                    #Generation 9:
+                    #PlayStation 5
+                    #PlayStation VR2
+                    #Xbox Series X|S
+                    #Meta Quest 3
+                    #Playdate
+                    # ...?
                     #input("When you are ready, press Enter to go back to the main print menu\n")
                     #break
                 break
@@ -505,6 +585,9 @@ while True:
                     print("3. Computer")
                     print("4. Arcade")
                     print("5. Mobile Phone")
+                    #vr?
+                    #platform?
+                    #operating system?
                     #...
                     #input("When you are ready, press Enter to go back to the main print menu\n")
                     #break
@@ -523,22 +606,22 @@ while True:
         print("4. Nintendo 64")
         print("5. Wii")
         print("6. PC (Microsoft Windows)")
-        print("7. PS1")
-        print("8. PS2")
-        print("9. PS3")
+        print("7. PlayStation")
+        print("8. PlayStation 2")
+        print("9. PlayStation 3")
         print("11. Xbox")
-        print("12. X360")
+        print("12. Xbox 360")
         print("13. PC-DOS")
         print("14. Mac")
         print("15. C64 & C128")
         print("16. Amiga")
-        print("18. NES")
-        print("19. SNES")
-        print("20. DS")
-        print("21. GCN")
+        print("18. Nintendo Entertainment System")
+        print("19. Super Nintendo Entertainment System")
+        print("20. Nintendo DS")
+        print("21. Nintendo GameCube")
         print("22. GBC")
-        print("23. DC")
-        print("24. GBA")
+        print("23. Dreamcast")
+        print("24. Game Boy Advance")
         print("25. Amstrad CPC")
         print("26. ZX Spectrum")
         print("27. MSX")
@@ -549,8 +632,8 @@ while True:
         print("34. Android")
         print("35. Sega Game Gear")
         print("36. XBLA")
-        print("37. 3DS")
-        print("38. PSP")
+        print("37. Nintendo 3DS")
+        print("38. PlayStation Portable")
         print("39. iOS")
         print("41. Wii U")
         print("42. N-Gage")
@@ -558,8 +641,8 @@ while True:
         print("45. PlayStation Network")
         print("46. PlayStation Vita")
         print("47. Virtual Console")
-        print("48. PS4")
-        print("49. XONE")
+        print("48. PlayStation 4")
+        print("49. Xbox One")
         print("52. Arcade")
         print("58. Super Famicom")
         print("59. 2600")
@@ -572,12 +655,30 @@ while True:
         print("88. Magnavox Odyssey")
         print("99. Famicom")
         print("129. Texas Instruments TI-99")
-        print("130. Switch")
+        print("130. Nintendo Switch")
         print("137. New Nintendo 3DS")
         print("149. PC-98")
-        print("169. Xbox Series")
+        print("159. Nintendo DSi")
+        print("165. PlayStation VR")
+        print("166. Pokémon mini")
+        print("167. PlayStation 5")
+        print("169. Xbox Series X|S")
+        print("240. Zeebo")
         print("306. Satellaview")
+        print("309. Evercade")
         print("379. Game.com")
+        print("381. Playdate")
+        print("390. PlayStation VR2")
+        print("407. HyperScan")
+        print("412. Leapster")
+        print("413. Leapster Explorer/LeadPad Explorer")
+        print("414. LeapTV")
+        print("439. V.Smile")
+        print("440. Visual Memory Unit / Visual Memory System")
+        print("471. Meta Quest 3")
+        print("477. Panasonic Jungle")
+        print("478. Panasonic M2")
+        print("486. Digiblast")
         print("Which platform would you like to include?")
         # have function to check if number just given was one of the valid options?
         # going to go off of IGDB ID's for now, need to keep adding more
