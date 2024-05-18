@@ -91,9 +91,18 @@ print("Now it's time for us to pick some options in generating a report")
 
 answer_check_main = False
 queries = []
+
 or_queries = []
 and_queries = []
+
+#Split different types of similar queries that can be partnered with OR
+platform_queries = []
+player_count_queries = []
+dev_queries = []
+#release date? title? misc?
+misc_queries = []
 #^Try to split the natural or queries and the natural and queries? go by categories?
+
 #while(answer_check_main == False):
 while True:
     print()
@@ -129,9 +138,9 @@ while True:
                 print("Note that the numbers are listed as so because they are the platform ID's listed in IGDB's API")
                 input("Whenever you are ready, the platform options will be listed in full (For now use the text version)\n")
                 print("3. Linux")
-                print("4. N64")
+                print("4. Nintendo 64")
                 print("5. Wii")
-                print("6. PC (Windows)")
+                print("6. PC (Microsoft Windows)")
                 print("7. PS1")
                 print("8. PS2")
                 print("9. PS3")
@@ -164,8 +173,9 @@ while True:
                 print("41. Wii U")
                 print("42. N-Gage")
                 print("44. Tapwave Zodiac")
-                print("45. PSN")
-                print("46. Vita")
+                print("45. PlayStation Network")
+                print("46. PlayStation Vita")
+                print("47. Virtual Console")
                 print("48. PS4")
                 print("49. XONE")
                 print("52. Arcade")
@@ -192,6 +202,7 @@ while True:
                 platform_selection = input()
                 new_query = {"List of Platforms": platform_selection}
                 queries.append(new_query)
+                platform_queries.append(new_query)
                 input("When you are ready, press Enter to go back to the main print menu\n")
                 break
             elif (platforms_option == '2'):
@@ -232,24 +243,34 @@ while True:
                             #PocketStation
                             new_query = {"List of Platforms": "PlayStation"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "PlayStation 2"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "PlayStation 3"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "PlayStation 4"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "PlayStation 5"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "PlayStation Portable"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "PlayStation Vita"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "PlayStation VR"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "PlayStation VR2"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "PocketStation"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                         elif (brand_option == 2):
                             #xbox family
                             #Xbox
@@ -258,12 +279,16 @@ while True:
                             #
                             new_query = {"List of Platforms": "Xbox"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Xbox 360"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Xbox One"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Xbox Series X|S"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                         elif (brand_option == 3):
                             #sega family
                             #SG-1000
@@ -278,24 +303,34 @@ while True:
                             #Sega Pico
                             new_query = {"List of Platforms": "SG-1000"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Sega Master System/Mark III"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Sega Mega Drive/Genesis"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Sega CD"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Sega 32X"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Sega Saturn"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Dreamcast"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Visual Memory Unit / Visual Memory System"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Sega Game Gear"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Sega Pico"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                         elif (brand_option == 4):
                             #linux family
                             #Linux
@@ -303,10 +338,13 @@ while True:
                             #Google Stadia
                             new_query = {"List of Platforms": "Linux"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Android"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Google Stadia"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                         elif (brand_option == 5):
                             #nintendo family
                             #Nintendo Entertainment System
@@ -333,46 +371,67 @@ while True:
                             #any others missing? wiiware (removed?)? nintendo eshop (removed?)?
                             new_query = {"List of Platforms": "Nintendo Entertainment System"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Super Nintendo Entertainment System"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Nintendo 64"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Nintendo GameCube"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Wii"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Wii U"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Nintendo Switch"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Game Boy"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Game Boy Color"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Virtual Boy"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Game Boy Advance"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Nintendo DS"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Nintendo DSi"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Nintendo 3DS"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "New Nintendo 3DS"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Family Computer"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Family Computer Disk System"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Super Famicom"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Pokémon mini"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Virtual Console"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Nintendo PlayStation"}
                             queries.append(new_query)
+                            platform_queries.append(new_query)
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (brand_option == 6):
@@ -393,18 +452,25 @@ while True:
                         #...
                         new_query = {"List of Platforms": "Atari 2600"}
                         queries.append(new_query)
+                        platform_queries.append(new_query)
                         new_query = {"List of Platforms": "Atari 7800"}
                         queries.append(new_query)
+                        platform_queries.append(new_query)
                         new_query = {"List of Platforms": "Atari Lynx"}
                         queries.append(new_query)
+                        platform_queries.append(new_query)
                         new_query = {"List of Platforms": "Atari Jaguar"}
                         queries.append(new_query)
+                        platform_queries.append(new_query)
                         new_query = {"List of Platforms": "Atari ST/STE"}
                         queries.append(new_query)
+                        platform_queries.append(new_query)
                         new_query = {"List of Platforms": "Atari 8-bit"}
                         queries.append(new_query)
+                        platform_queries.append(new_query)
                         new_query = {"List of Platforms": "Atari 5200"}
                         queries.append(new_query)
+                        platform_queries.append(new_query)
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     else:
@@ -415,6 +481,16 @@ while True:
                 while True:
                     # elif 3
                     print("Which generation of platform would you like to include?")
+                    print("Note: For formats not split by generation (ex. PC and Arcade), you will likely want to go by format")
+                    print("1. 1st-Generation Consoles")
+                    print("2. 2nd-Generation Consoles")
+                    print("3. 3rd-Generation Consoles")
+                    print("4. 4th-Generation Consoles")
+                    print("5. 5th-Generation Consoles")
+                    print("6. 6th-Generation Consoles")
+                    print("7. 7th-Generation Consoles")
+                    print("8. 8th-Generation Consoles")
+                    print("9. 9th-Generation Consoles")
                     # include options for non-gen platforms? Like PC/operating system, arcade, etc.?
                     # ...
                     #input("When you are ready, press Enter to go back to the main print menu\n")
@@ -428,6 +504,7 @@ while True:
                     print("2. Handheld")
                     print("3. Computer")
                     print("4. Arcade")
+                    print("5. Mobile Phone")
                     #...
                     #input("When you are ready, press Enter to go back to the main print menu\n")
                     #break
@@ -437,14 +514,15 @@ while True:
                 continue
         print("Returning back to main menu")
     elif (filter_category == '2'):
+        #import some of the platform inclusion options over here?
         print("You have selected 2. Main Platform")
         print("Which platform would you like to be the main platform?")
         print("Note that the numbers are listed as so because they are the platform ID's listed in IGDB's API")
         input("Whenever you are ready, the platform options will be listed in full (For now use the text version)\n")
         print("3. Linux")
-        print("4. N64")
+        print("4. Nintendo 64")
         print("5. Wii")
-        print("6. PC (Windows)")
+        print("6. PC (Microsoft Windows)")
         print("7. PS1")
         print("8. PS2")
         print("9. PS3")
@@ -477,8 +555,9 @@ while True:
         print("41. Wii U")
         print("42. N-Gage")
         print("44. Tapwave Zodiac")
-        print("45. PSN")
-        print("46. Vita")
+        print("45. PlayStation Network")
+        print("46. PlayStation Vita")
+        print("47. Virtual Console")
         print("48. PS4")
         print("49. XONE")
         print("52. Arcade")
@@ -505,6 +584,7 @@ while True:
         platform_selection = input()
         new_query = {"Main Platform": platform_selection}
         queries.append(new_query)
+        platform_queries.append(new_query)
         print("Returning back to main menu")
     elif (filter_category == '3'):
         print("You have selected 3. Release Date")
@@ -646,6 +726,7 @@ while True:
                 print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
             new_query = {"Player Count": target_count}
             queries.append(new_query)
+            player_count_queries.append(new_query)
         else:
             print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
         #...
@@ -663,6 +744,7 @@ while True:
             dev_search = input()
             new_query = {"Developers": dev_search}
             queries.append(new_query)
+            dev_queries.append(new_query)
         else:
             print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
         #going to be using involvedcompany and company?
@@ -707,31 +789,56 @@ while True:
             print("5. Oldest First")
             print("6. Newest First")
             sort_type = input()
-            if (sort_type == '1' and and_or_type == '1'):
-                # and approach
-                # games_pulled = mon_col.find(custom_query).sort("Ranked Score", -1)
-                #games_pulled = mon_col.find({'$or': queries}).sort("Ranked Score", -1)
-                games_pulled = mon_col.find({'$and': queries}).sort("Ranked Score", -1)
-            elif (sort_type == '2' and and_or_type == '1'):
-                # and approach
-                #games_pulled = mon_col.find(custom_query).sort("Inclusion Score", -1)
-                games_pulled = mon_col.find({'$and': queries}).sort("Inclusion Score", -1)
-            elif (sort_type == '3' and and_or_type == '1'):
-                # and approach
-                #games_pulled = mon_col.find(custom_query).sort("Average Score", -1)
-                games_pulled = mon_col.find({'$and': queries}).sort("Average Score", -1)
-            elif(sort_type == '1' and and_or_type == '2'):
-                #or approach
-                #games_pulled = mon_col.find(custom_query).sort("Ranked Score", -1)
-                games_pulled = mon_col.find({'$or': queries}).sort("Ranked Score", -1)
-            elif (sort_type == '2' and and_or_type == '2'):
-                # or approach
-                #games_pulled = mon_col.find(custom_query).sort("Inclusion Score", -1)
-                games_pulled = mon_col.find({'$or': queries}).sort("Inclusion Score", -1)
-            elif (sort_type == '3' and and_or_type == '2'):
-                # or approach
-                #games_pulled = mon_col.find(custom_query).sort("Average Score", -1)
-                games_pulled = mon_col.find({'$or': queries}).sort("Average Score", -1)
+            if(and_or_type == '1'):
+                #AND approach
+                if (sort_type == '1'):
+                    # games_pulled = mon_col.find(custom_query).sort("Ranked Score", -1)
+                    games_pulled = mon_col.find({'$and': queries}).sort("Ranked Score", -1)
+                elif (sort_type == '2'):
+                    games_pulled = mon_col.find({'$and': queries}).sort("Inclusion Score", -1)
+                elif (sort_type == '3'):
+                    games_pulled = mon_col.find({'$and': queries}).sort("Average Score", -1)
+                else:
+                    print("Sorry, I don't understand")
+                    # check again
+            elif(and_or_type == '2'):
+                #OR approach
+                if(sort_type == '1'):
+                    games_pulled = mon_col.find({'$or': queries}).sort("Ranked Score", -1)
+                elif (sort_type == '2'):
+                    games_pulled = mon_col.find({'$or': queries}).sort("Inclusion Score", -1)
+                elif (sort_type == '3'):
+                    games_pulled = mon_col.find({'$or': queries}).sort("Average Score", -1)
+                else:
+                    print("Sorry, I don't understand")
+                    # check again
+            elif (and_or_type == '3'):
+                #NATURAL approach
+                """
+                platform_queries = []
+                player_count_queries = []
+                dev_queries = []
+                ---
+                misc_queries = []
+                """
+                natural_platform = {'$or': platform_queries}
+                natural_player = {'$or': player_count_queries}
+                natural_dev = {'$or': dev_queries}
+                and_queries = []
+                and_queries.append(natural_platform)
+                and_queries.append(natural_player)
+                and_queries.append(natural_dev)
+                and_queries.append(misc_queries)
+                natural_queries = {'$and': and_queries}
+                if (sort_type == '1'):
+                    games_pulled = mon_col.find(natural_queries).sort("Ranked Score", -1)
+                elif (sort_type == '2'):
+                    games_pulled = mon_col.find(natural_queries).sort("Inclusion Score", -1)
+                elif (sort_type == '3'):
+                    games_pulled = mon_col.find(natural_queries).sort("Average Score", -1)
+                else:
+                    print("Sorry, I don't understand")
+                    # check again
             else:
                 print("Sorry, I don't understand")
                 #check again
