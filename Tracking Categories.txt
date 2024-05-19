@@ -1,9 +1,9 @@
-RANKED: 66
+RANKED: 67
 UNRANKED: 30
 FORMER: 12
 UNUSED: 0
 ---
-TOTAL: 108
+TOTAL: 109
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -201,3 +201,4 @@ R-Top 10 Best Video Games of 2015 - Moviepilot - 12/15/2015
 TOP GAMES OF 2014:
 R-The 15 Best Video Games of 2014 - TIME - 12-23-2014
 R-The 25 best video games of 2014 - The Guardian - 12-19-2014
+R-The 25 best video games of 2014 - The Telegraph - 12-30-2014
