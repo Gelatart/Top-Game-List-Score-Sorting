@@ -178,20 +178,34 @@ while True:
                 print("47. Virtual Console")
                 print("48. PlayStation 4")
                 print("49. Xbox One")
+                print("51. Family Computer Disk System")
                 print("52. Arcade")
                 print("58. Super Famicom")
-                print("59. 2600")
-                print("64. Sega Master System")
+                print("59. Atari 2600")
+                print("60. Atari 7800")
+                print("64. Sega Master System/Mark III")
                 print("65. Atari 8-bit")
+                print("66. Atari 5200")
+                print("67. Intellivision")
+                print("68. ColecoVision")
+                print("70. Vectrex")
                 print("71. Commodore VIC-20")
                 print("75. Apple II")
                 print("79. Neo Geo MVS")
                 print("80. Neo Geo AES")
-                print("88. Magnavox Odyssey")
-                print("99. Famicom")
+                print("84. SG-1000")
+                print("88. Odyssey")
+                print("89. Microvision")
+                print("91. Bally Astrocade")
+                print("99. Family Computer")
+                print("127. Fairchild Channel F")
                 print("129. Texas Instruments TI-99")
                 print("130. Nintendo Switch")
+                print("133. Odyssey 2 / Videopac G7000")
                 print("137. New Nintendo 3DS")
+                print("138. VC 4000")
+                print("139. 1292 Advanced Programmable Video System")
+                print("142. PC-50X Family")
                 print("149. PC-98")
                 print("159. Nintendo DSi")
                 print("165. PlayStation VR")
@@ -200,7 +214,10 @@ while True:
                 print("169. Xbox Series X|S")
                 print("240. Zeebo")
                 print("306. Satellaview")
+                print("307. Game & Watch")
                 print("309. Evercade")
+                print("375. Epoch Cassette Vision")
+                print("376. Epoch Super Cassette Vision")
                 print("379. Game.com")
                 print("381. Playdate")
                 print("390. PlayStation VR2")
@@ -372,6 +389,7 @@ while True:
                             #Wii
                             #Wii U
                             #Nintendo Switch
+                            #Game & Watch
                             #Game Boy
                             #Game Boy Color
                             #Virtual Boy
@@ -383,6 +401,7 @@ while True:
                             #Family Computer
                             #Family Computer Disk System
                             #Super Famicom
+                            #Satellaview
                             #Pokémon mini
                             #Virtual Console
                             #Nintendo PlayStation
@@ -512,12 +531,41 @@ while True:
                     # include options for non-gen platforms? Like PC/operating system, arcade, etc.?
                     # ...
                     # Generation 1:
+                    #Odyssey
+                    #PC-50X Family
+                    #---(^from igdb query for gen 1)
+                    #Home Pong series (unfound?)
+                    #TV Tennis Electrotennis (unfound?)
+                    #Coleco Telstar (unfound?)
+                    #Color TV-Game (unfound?)
                     # ...?
 
                     # Generation 2:
+                    #Atari 2600
+                    #Atari 5200
+                    #Intellivision
+                    #ColecoVision
+                    #Odyssey 2 / Videopac G7000
+                    #Game & Watch
+                    #Fairchild Channel F
+                    #Vectrex
+                    #Epoch Cassette Vision
+                    #1292 Advanced Programmable Video System
+                    #VC 4000
+                    #Bally Astrocade
+                    #Microvision
                     # ...?
 
                     # Generation 3:
+                    #Nintendo Entertainment System
+                    #Family Computer
+                    #Family Computer Disk System
+                    #Sega Master System/Mark III
+                    #SG-1000
+                    #Atari 7800
+                    #Epoch Super Cassette Vision
+                    #___
+                    #Atari XEGS (unfound?)
                     # ...?
 
                     # Generation 4:
@@ -643,20 +691,34 @@ while True:
         print("47. Virtual Console")
         print("48. PlayStation 4")
         print("49. Xbox One")
+        print("51. Family Computer Disk System")
         print("52. Arcade")
         print("58. Super Famicom")
-        print("59. 2600")
-        print("64. Sega Master System")
+        print("59. Atari 2600")
+        print("60. Atari 7800")
+        print("64. Sega Master System/Mark III")
         print("65. Atari 8-bit")
+        print("66. Atari 5200")
+        print("67. Intellivision")
+        print("68. ColecoVision")
+        print("70. Vectrex")
         print("71. Commodore VIC-20")
         print("75. Apple II")
         print("79. Neo Geo MVS")
         print("80. Neo Geo AES")
-        print("88. Magnavox Odyssey")
-        print("99. Famicom")
+        print("84. SG-1000")
+        print("88. Odyssey")
+        print("89. Microvision")
+        print("91. Bally Astrocade")
+        print("99. Family Computer")
+        print("127. Fairchild Channel F")
         print("129. Texas Instruments TI-99")
         print("130. Nintendo Switch")
+        print("133. Odyssey 2 / Videopac G7000")
         print("137. New Nintendo 3DS")
+        print("138. VC 4000")
+        print("139. 1292 Advanced Programmable Video System")
+        print("142. PC-50X Family")
         print("149. PC-98")
         print("159. Nintendo DSi")
         print("165. PlayStation VR")
@@ -665,7 +727,10 @@ while True:
         print("169. Xbox Series X|S")
         print("240. Zeebo")
         print("306. Satellaview")
+        print("307. Game & Watch")
         print("309. Evercade")
+        print("375. Epoch Cassette Vision")
+        print("376. Epoch Super Cassette Vision")
         print("379. Game.com")
         print("381. Playdate")
         print("390. PlayStation VR2")
@@ -991,4 +1056,5 @@ Grabbing both values of a dict as iterating: https://www.geeksforgeeks.org/itera
 Getting dictionary keys as variables: https://stackoverflow.com/questions/3545331/how-can-i-get-dictionary-key-as-variable-directly-in-python-not-by-searching-fr
 Creating datetime objects: https://www.w3schools.com/python/python_datetime.asp
 Ask user for input until get valid response: https://www.python-engineer.com/posts/ask-user-for-input/
+Building queries with AND and OR: https://stackoverflow.com/questions/11196101/mongodb-queries-both-with-and-and-or
 """
