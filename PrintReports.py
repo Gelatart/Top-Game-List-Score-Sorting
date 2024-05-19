@@ -30,6 +30,7 @@ results = db.collection.find({'$or': query})
 REFERENCE: https://stackoverflow.com/questions/11269680/dynamically-building-queries-in-pymongo
 """
 
+#Load the env variables from .env
 load_dotenv()
 
 #Start connecting to Mongo cluster
