@@ -162,7 +162,7 @@ while True:
                 print("26. ZX Spectrum")
                 print("27. MSX")
                 print("29. GEN/MD")
-                print("30. 32X")
+                print("30. Sega 32X")
                 print("32. SAT")
                 print("33. GB")
                 print("34. Android")
@@ -184,6 +184,7 @@ while True:
                 print("58. Super Famicom")
                 print("59. Atari 2600")
                 print("60. Atari 7800")
+                print("61. Atari Lynx")
                 print("64. Sega Master System/Mark III")
                 print("65. Atari 8-bit")
                 print("66. Atari 5200")
@@ -192,6 +193,7 @@ while True:
                 print("70. Vectrex")
                 print("71. Commodore VIC-20")
                 print("75. Apple II")
+                print("78. Sega CD")
                 print("79. Neo Geo MVS")
                 print("80. Neo Geo AES")
                 print("84. SG-1000")
@@ -200,9 +202,12 @@ while True:
                 print("91. Bally Astrocade")
                 print("99. Family Computer")
                 print("127. Fairchild Channel F")
+                print("128. PC Engine SuperGrafx")
                 print("129. Texas Instruments TI-99")
                 print("130. Nintendo Switch")
+                print("131. Nintendo PlayStation")
                 print("133. Odyssey 2 / Videopac G7000")
+                print("136. Neo Geo CD")
                 print("137. New Nintendo 3DS")
                 print("138. VC 4000")
                 print("139. 1292 Advanced Programmable Video System")
@@ -217,8 +222,10 @@ while True:
                 print("306. Satellaview")
                 print("307. Game & Watch")
                 print("309. Evercade")
+                print("339. Sega Pico")
                 print("375. Epoch Cassette Vision")
                 print("376. Epoch Super Cassette Vision")
+                print("378. Gamate")
                 print("379. Game.com")
                 print("381. Playdate")
                 print("390. PlayStation VR2")
@@ -570,10 +577,32 @@ while True:
                     # ...?
 
                     # Generation 4:
+                    #Satellaview
+                    #Sega CD
+                    #Sega 32X
+                    #Sega Game Gear
+                    #Sega Pico
+                    #PC Engine SuperGrafx
+                    #Neo Geo CD
+                    #Atari Lynx
+                    #Gamate
+                    #Nintendo PlayStation (cancelled)
+                    #---
+                    #SNES
+                    #Super Famicom
+                    #Game Boy
+                    #Sega Genesis
+                    #PC Engine
+                    #TurboGrafx-16
+                    #Neo Geo
+                    #CD-i
                     # ...?
 
                     #Generation 5:
                     #...?
+                    #game boy color
+                    #virtual boy
+                    #atari jaguar
 
                     #Generation 6:
                     #Nintendo GameCube
@@ -675,7 +704,7 @@ while True:
         print("26. ZX Spectrum")
         print("27. MSX")
         print("29. GEN/MD")
-        print("30. 32X")
+        print("30. Sega 32X")
         print("32. SAT")
         print("33. GB")
         print("34. Android")
@@ -697,6 +726,7 @@ while True:
         print("58. Super Famicom")
         print("59. Atari 2600")
         print("60. Atari 7800")
+        print("61. Atari Lynx")
         print("64. Sega Master System/Mark III")
         print("65. Atari 8-bit")
         print("66. Atari 5200")
@@ -705,6 +735,7 @@ while True:
         print("70. Vectrex")
         print("71. Commodore VIC-20")
         print("75. Apple II")
+        print("78. Sega CD")
         print("79. Neo Geo MVS")
         print("80. Neo Geo AES")
         print("84. SG-1000")
@@ -713,9 +744,12 @@ while True:
         print("91. Bally Astrocade")
         print("99. Family Computer")
         print("127. Fairchild Channel F")
+        print("128. PC Engine SuperGrafx")
         print("129. Texas Instruments TI-99")
         print("130. Nintendo Switch")
+        print("131. Nintendo PlayStation")
         print("133. Odyssey 2 / Videopac G7000")
+        print("136. Neo Geo CD")
         print("137. New Nintendo 3DS")
         print("138. VC 4000")
         print("139. 1292 Advanced Programmable Video System")
@@ -730,8 +764,10 @@ while True:
         print("306. Satellaview")
         print("307. Game & Watch")
         print("309. Evercade")
+        print("339. Sega Pico")
         print("375. Epoch Cassette Vision")
         print("376. Epoch Super Cassette Vision")
+        print("378. Gamate")
         print("379. Game.com")
         print("381. Playdate")
         print("390. PlayStation VR2")

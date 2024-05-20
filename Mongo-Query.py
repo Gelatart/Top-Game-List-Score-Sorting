@@ -43,6 +43,7 @@ while True:
         #Add in options for how we filter the data we grab?
         for game in games_pulled:
             print(game)
+            print()
         break
     elif (mongo_option == '2'):
         # Build up a query through command line options

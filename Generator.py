@@ -635,7 +635,7 @@ while(igdb_check == False):
                 #do we count publishers?
                 #consider more categories for game objects later like publishers
                 #input(developers)
-                print(developers)
+                #print(developers)
                 if(len(developers) > 0):
                     for dev in developers:
                         dev_name = None
