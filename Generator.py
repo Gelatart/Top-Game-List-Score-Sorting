@@ -651,7 +651,7 @@ while(igdb_check == False):
                         inv_companies_message = InvolvedCompanyResult()
                         inv_companies_message.ParseFromString(sub_request_1)  # Fills the protobuf message object with the response
                         inv_companies = inv_companies_message.involvedcompanies
-                        print(inv_companies)
+                        #print(inv_companies)
                         print(len(inv_companies))
                         if(len(inv_companies) == 0):
                             continue

@@ -155,16 +155,16 @@ while True:
                 print("19. Super Nintendo Entertainment System")
                 print("20. Nintendo DS")
                 print("21. Nintendo GameCube")
-                print("22. GBC")
+                print("22. Game Boy Color")
                 print("23. Dreamcast")
                 print("24. Game Boy Advance")
                 print("25. Amstrad CPC")
                 print("26. ZX Spectrum")
                 print("27. MSX")
-                print("29. GEN/MD")
+                print("29. Sega Mega Drive/Genesis")
                 print("30. Sega 32X")
-                print("32. SAT")
-                print("33. GB")
+                print("32. Sega Saturn")
+                print("33. Game Boy")
                 print("34. Android")
                 print("35. Sega Game Gear")
                 print("36. XBLA")
@@ -179,12 +179,14 @@ while True:
                 print("47. Virtual Console")
                 print("48. PlayStation 4")
                 print("49. Xbox One")
+                print("50. 3DO Interactive Multiplayer")
                 print("51. Family Computer Disk System")
                 print("52. Arcade")
                 print("58. Super Famicom")
                 print("59. Atari 2600")
                 print("60. Atari 7800")
                 print("61. Atari Lynx")
+                print("62. Atari Jaguar")
                 print("64. Sega Master System/Mark III")
                 print("65. Atari 8-bit")
                 print("66. Atari 5200")
@@ -197,22 +199,33 @@ while True:
                 print("79. Neo Geo MVS")
                 print("80. Neo Geo AES")
                 print("84. SG-1000")
+                print("86. TurboGrafx-16/PC Engine")
+                print("87. Virtual Boy")
                 print("88. Odyssey")
                 print("89. Microvision")
                 print("91. Bally Astrocade")
                 print("99. Family Computer")
+                print("114. Amiga CD32")
+                print("117. Philips CD-i")
+                print("118. FM Towns")
+                print("119. Neo Geo Pocket")
+                print("120. Neo Geo Pocket Color")
+                print("123. WonderSwan Color")
                 print("127. Fairchild Channel F")
                 print("128. PC Engine SuperGrafx")
                 print("129. Texas Instruments TI-99")
                 print("130. Nintendo Switch")
                 print("131. Nintendo PlayStation")
                 print("133. Odyssey 2 / Videopac G7000")
+                print("135. Hyper Neo Geo 64")
                 print("136. Neo Geo CD")
                 print("137. New Nintendo 3DS")
                 print("138. VC 4000")
                 print("139. 1292 Advanced Programmable Video System")
                 print("142. PC-50X Family")
                 print("149. PC-98")
+                print("150. Turbografx-16/PC Engine CD")
+                print("152. FM-7")
                 print("159. Nintendo DSi")
                 print("165. PlayStation VR")
                 print("166. Pokémon mini")
@@ -221,6 +234,7 @@ while True:
                 print("240. Zeebo")
                 print("306. Satellaview")
                 print("307. Game & Watch")
+                print("308. Playdia")
                 print("309. Evercade")
                 print("339. Sega Pico")
                 print("375. Epoch Cassette Vision")
@@ -577,32 +591,44 @@ while True:
                     # ...?
 
                     # Generation 4:
+                    #Super Nintendo Entertainment System
+                    #Super Famicom
                     #Satellaview
+                    #Game Boy
+                    #Sega Mega Drive/Genesis
                     #Sega CD
                     #Sega 32X
                     #Sega Game Gear
                     #Sega Pico
+                    #TurboGrafx-16/PC Engine
+                    #Turbografx-16/PC Engine CD
                     #PC Engine SuperGrafx
+                    #Neo Geo AES
                     #Neo Geo CD
                     #Atari Lynx
+                    #Philips CD-i
                     #Gamate
                     #Nintendo PlayStation (cancelled)
-                    #---
-                    #SNES
-                    #Super Famicom
-                    #Game Boy
-                    #Sega Genesis
-                    #PC Engine
-                    #TurboGrafx-16
-                    #Neo Geo
-                    #CD-i
                     # ...?
 
                     #Generation 5:
+                    #Game Boy Color
+                    #Virtual Boy
+                    #Sega Saturn
+                    #Neo Geo Pocket
+                    #Neo Geo Pocket Color
+                    #Atari Jaguar
+                    #3DO Interactive Multiplayer
+                    #Amiga CD32
+                    #WonderSwan Color
+                    #Playdia
                     #...?
-                    #game boy color
-                    #virtual boy
-                    #atari jaguar
+                    #FM Towns Marty (unfound?)
+                    #jaguar cd?
+                    #PC-FX
+                    #PS1
+                    #N64
+                    #Apple Pippin
 
                     #Generation 6:
                     #Nintendo GameCube
@@ -651,6 +677,12 @@ while True:
                     #Meta Quest 3
                     #Playdate
                     # ...?
+
+                    #Handhelds with no results:
+                    #TurboExpress / PC Engine GT
+                    #Watara Supervision
+                    #...?
+
                     #input("When you are ready, press Enter to go back to the main print menu\n")
                     #break
                 break
@@ -697,16 +729,16 @@ while True:
         print("19. Super Nintendo Entertainment System")
         print("20. Nintendo DS")
         print("21. Nintendo GameCube")
-        print("22. GBC")
+        print("22. Game Boy Color")
         print("23. Dreamcast")
         print("24. Game Boy Advance")
         print("25. Amstrad CPC")
         print("26. ZX Spectrum")
         print("27. MSX")
-        print("29. GEN/MD")
+        print("29. Sega Mega Drive/Genesis")
         print("30. Sega 32X")
-        print("32. SAT")
-        print("33. GB")
+        print("32. Sega Saturn")
+        print("33. Game Boy")
         print("34. Android")
         print("35. Sega Game Gear")
         print("36. XBLA")
@@ -721,12 +753,14 @@ while True:
         print("47. Virtual Console")
         print("48. PlayStation 4")
         print("49. Xbox One")
+        print("50. 3DO Interactive Multiplayer")
         print("51. Family Computer Disk System")
         print("52. Arcade")
         print("58. Super Famicom")
         print("59. Atari 2600")
         print("60. Atari 7800")
         print("61. Atari Lynx")
+        print("62. Atari Jaguar")
         print("64. Sega Master System/Mark III")
         print("65. Atari 8-bit")
         print("66. Atari 5200")
@@ -739,22 +773,33 @@ while True:
         print("79. Neo Geo MVS")
         print("80. Neo Geo AES")
         print("84. SG-1000")
+        print("86. TurboGrafx-16/PC Engine")
+        print("87. Virtual Boy")
         print("88. Odyssey")
         print("89. Microvision")
         print("91. Bally Astrocade")
         print("99. Family Computer")
+        print("114. Amiga CD32")
+        print("117. Philips CD-i")
+        print("118. FM Towns")
+        print("119. Neo Geo Pocket")
+        print("120. Neo Geo Pocket Color")
+        print("123. WonderSwan Color")
         print("127. Fairchild Channel F")
         print("128. PC Engine SuperGrafx")
         print("129. Texas Instruments TI-99")
         print("130. Nintendo Switch")
         print("131. Nintendo PlayStation")
         print("133. Odyssey 2 / Videopac G7000")
+        print("135. Hyper Neo Geo 64")
         print("136. Neo Geo CD")
         print("137. New Nintendo 3DS")
         print("138. VC 4000")
         print("139. 1292 Advanced Programmable Video System")
         print("142. PC-50X Family")
         print("149. PC-98")
+        print("150. Turbografx-16/PC Engine CD")
+        print("152. FM-7")
         print("159. Nintendo DSi")
         print("165. PlayStation VR")
         print("166. Pokémon mini")
@@ -763,6 +808,7 @@ while True:
         print("240. Zeebo")
         print("306. Satellaview")
         print("307. Game & Watch")
+        print("308. Playdia")
         print("309. Evercade")
         print("339. Sega Pico")
         print("375. Epoch Cassette Vision")
