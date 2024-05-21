@@ -664,7 +664,7 @@ while(igdb_check == False):
                         companies_message = CompanyResult()
                         companies_message.ParseFromString(sub_request_2)  # Fills the protobuf message object with the response
                         companies = companies_message.companies
-                        print(companies)
+                        #print(companies)
                         dev_name = companies[0].name
                         gameDb[game].list_developers.append(dev_name)
                         #input(dev_name)

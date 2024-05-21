@@ -167,7 +167,7 @@ while True:
                 print("33. Game Boy")
                 print("34. Android")
                 print("35. Sega Game Gear")
-                print("36. XBLA")
+                print("36. Xbox Live Arcade")
                 print("37. Nintendo 3DS")
                 print("38. PlayStation Portable")
                 print("39. iOS")
@@ -182,11 +182,13 @@ while True:
                 print("50. 3DO Interactive Multiplayer")
                 print("51. Family Computer Disk System")
                 print("52. Arcade")
+                print("53. MSX2")
                 print("58. Super Famicom")
                 print("59. Atari 2600")
                 print("60. Atari 7800")
                 print("61. Atari Lynx")
                 print("62. Atari Jaguar")
+                print("63. Atari ST/STE")
                 print("64. Sega Master System/Mark III")
                 print("65. Atari 8-bit")
                 print("66. Atari 5200")
@@ -231,7 +233,9 @@ while True:
                 print("166. Pokémon mini")
                 print("167. PlayStation 5")
                 print("169. Xbox Series X|S")
+                print("170. Google Stadia")
                 print("240. Zeebo")
+                print("274. PC-FX")
                 print("306. Satellaview")
                 print("307. Game & Watch")
                 print("308. Playdia")
@@ -244,12 +248,15 @@ while True:
                 print("381. Playdate")
                 print("390. PlayStation VR2")
                 print("407. HyperScan")
+                print("410. Atari Jaguar CD")
                 print("412. Leapster")
                 print("413. Leapster Explorer/LeadPad Explorer")
                 print("414. LeapTV")
                 print("439. V.Smile")
                 print("440. Visual Memory Unit / Visual Memory System")
+                print("441. PocketStation")
                 print("471. Meta Quest 3")
+                print("476. Apple Pippin")
                 print("477. Panasonic Jungle")
                 print("478. Panasonic M2")
                 print("486. Digiblast")
@@ -506,7 +513,7 @@ while True:
                         Atari ST/STE (63)
                         Atari 8-bit (65)
                         Atari 5200 (66)
-                        jaguar cd?
+                        Atari Jaguar CD (410)
                         """
                         #...
                         new_query = {"List of Platforms": "Atari 2600"}
@@ -530,6 +537,9 @@ while True:
                         new_query = {"List of Platforms": "Atari 5200"}
                         queries.append(new_query)
                         platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Atari Jaguar CD"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     else:
@@ -551,7 +561,7 @@ while True:
                     print("8. 8th-Generation Consoles")
                     print("9. 9th-Generation Consoles")
                     # include options for non-gen platforms? Like PC/operating system, arcade, etc.?
-                    # ...
+                    generation_option = input()
                     # Generation 1:
                     #Odyssey
                     #PC-50X Family
@@ -612,23 +622,24 @@ while True:
                     # ...?
 
                     #Generation 5:
+                    #Nintendo 64
                     #Game Boy Color
                     #Virtual Boy
                     #Sega Saturn
+                    #PlayStation
+                    #PocketStation
+                    #PC-FX
                     #Neo Geo Pocket
                     #Neo Geo Pocket Color
                     #Atari Jaguar
+                    #Atari Jaguar CD
                     #3DO Interactive Multiplayer
                     #Amiga CD32
                     #WonderSwan Color
+                    #Apple Pippin
                     #Playdia
                     #...?
                     #FM Towns Marty (unfound?)
-                    #jaguar cd?
-                    #PC-FX
-                    #PS1
-                    #N64
-                    #Apple Pippin
 
                     #Generation 6:
                     #Nintendo GameCube
@@ -683,8 +694,186 @@ while True:
                     #Watara Supervision
                     #...?
 
-                    #input("When you are ready, press Enter to go back to the main print menu\n")
-                    #break
+                    if(generation_option == "1"):
+                        # Generation 1:
+                        # Odyssey
+                        # PC-50X Family
+                        new_query = {"List of Platforms": "Odyssey"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "PC-50X Family"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        print("Generation 1 consoles added to querying!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    elif(generation_option == "2"):
+                        # Generation 2:
+                        # Atari 2600
+                        # Atari 5200
+                        # Intellivision
+                        # ColecoVision
+                        # Odyssey 2 / Videopac G7000
+                        # Game & Watch
+                        # Fairchild Channel F
+                        # Vectrex
+                        # Epoch Cassette Vision
+                        # 1292 Advanced Programmable Video System
+                        # VC 4000
+                        # Bally Astrocade
+                        # Microvision
+                        new_query = {"List of Platforms": "Atari 2600"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Atari 5200"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Intellivision"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "ColecoVision"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Odyssey 2 / Videopac G7000"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Game & Watch"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Fairchild Channel F"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Vectrex"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Epoch Cassette Vision"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "1292 Advanced Programmable Video System"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "VC 4000"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Bally Astrocade"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Microvision"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        print("Generation 2 consoles added to querying!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    elif (generation_option == "3"):
+                        # Generation 3:
+                        # Nintendo Entertainment System
+                        # Family Computer
+                        # Family Computer Disk System
+                        # Sega Master System/Mark III
+                        # SG-1000
+                        # Atari 7800
+                        # Epoch Super Cassette Vision
+                        new_query = {"List of Platforms": "Nintendo Entertainment System"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Family Computer"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Family Computer Disk System"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Sega Master System/Mark III"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "SG-1000"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Atari 7800"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Epoch Super Cassette Vision"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        print("Generation 3 consoles added to querying!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    elif (generation_option == "4"):
+                        # Generation 4:
+                        # Super Nintendo Entertainment System
+                        # Super Famicom
+                        # Satellaview
+                        # Game Boy
+                        # Sega Mega Drive/Genesis
+                        # Sega CD
+                        # Sega 32X
+                        # Sega Game Gear
+                        # Sega Pico
+                        # TurboGrafx-16/PC Engine
+                        # Turbografx-16/PC Engine CD
+                        # PC Engine SuperGrafx
+                        # Neo Geo AES
+                        # Neo Geo CD
+                        # Atari Lynx
+                        # Philips CD-i
+                        # Gamate
+                        new_query = {"List of Platforms": "Super Nintendo Entertainment System"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Super Famicom"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Satellaview"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Game Boy"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Sega Mega Drive/Genesis"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Sega CD"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Sega 32X"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Sega Game Gear"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Sega Pico"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "TurboGrafx-16/PC Engine"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Turbografx-16/PC Engine CD"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "PC Engine SuperGrafx"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Neo Geo AES"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Neo Geo CD"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Atari Lynx"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Philips CD-i"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Gamate"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        print("Generation 4 consoles added to querying!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    #rest of generations
+                    else:
+                        print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.\n")
+                        continue
                 break
             elif (platforms_option == '4'):
                 while True:
@@ -741,7 +930,7 @@ while True:
         print("33. Game Boy")
         print("34. Android")
         print("35. Sega Game Gear")
-        print("36. XBLA")
+        print("36. Xbox Live Arcade")
         print("37. Nintendo 3DS")
         print("38. PlayStation Portable")
         print("39. iOS")
@@ -756,11 +945,13 @@ while True:
         print("50. 3DO Interactive Multiplayer")
         print("51. Family Computer Disk System")
         print("52. Arcade")
+        print("53. MSX2")
         print("58. Super Famicom")
         print("59. Atari 2600")
         print("60. Atari 7800")
         print("61. Atari Lynx")
         print("62. Atari Jaguar")
+        print("63. Atari ST/STE")
         print("64. Sega Master System/Mark III")
         print("65. Atari 8-bit")
         print("66. Atari 5200")
@@ -805,7 +996,9 @@ while True:
         print("166. Pokémon mini")
         print("167. PlayStation 5")
         print("169. Xbox Series X|S")
+        print("170. Google Stadia")
         print("240. Zeebo")
+        print("274. PC-FX")
         print("306. Satellaview")
         print("307. Game & Watch")
         print("308. Playdia")
@@ -818,12 +1011,15 @@ while True:
         print("381. Playdate")
         print("390. PlayStation VR2")
         print("407. HyperScan")
+        print("410. Atari Jaguar CD")
         print("412. Leapster")
         print("413. Leapster Explorer/LeadPad Explorer")
         print("414. LeapTV")
         print("439. V.Smile")
         print("440. Visual Memory Unit / Visual Memory System")
+        print("441. PocketStation")
         print("471. Meta Quest 3")
+        print("476. Apple Pippin")
         print("477. Panasonic Jungle")
         print("478. Panasonic M2")
         print("486. Digiblast")
