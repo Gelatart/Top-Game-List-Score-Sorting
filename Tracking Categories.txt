@@ -1,9 +1,9 @@
 RANKED: 68
-UNRANKED: 32
+UNRANKED: 33
 FORMER: 12
 UNUSED: 0
 ---
-TOTAL: 112
+TOTAL: 113
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -206,3 +206,4 @@ R-The 25 best video games of 2014 - The Telegraph - 12-30-2014
 R-The 25 Best Videogames of 2014 - PasteMagazine - 12-5-2014
 U-FORBES Best Video Games Of 2014 - Forbes - 1-5-2015
 <^4 Tiers: Platinum (1), Gold (2-4), Silver (5-8), Bronze (9-13)>
+U-The 12 Best Video Games Of 2014 - Kotaku - 1-2-2015

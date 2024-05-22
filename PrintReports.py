@@ -183,6 +183,7 @@ while True:
                 print("51. Family Computer Disk System")
                 print("52. Arcade")
                 print("53. MSX2")
+                print("57. WonderSwan")
                 print("58. Super Famicom")
                 print("59. Atari 2600")
                 print("60. Atari 7800")
@@ -635,6 +636,7 @@ while True:
                     #Atari Jaguar CD
                     #3DO Interactive Multiplayer
                     #Amiga CD32
+                    #WonderSwan
                     #WonderSwan Color
                     #Apple Pippin
                     #Playdia
@@ -870,7 +872,234 @@ while True:
                         print("Generation 4 consoles added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
-                    #rest of generations
+                    elif (generation_option == "5"):
+                        # Generation 5:
+                        # Nintendo 64
+                        # Game Boy Color
+                        # Virtual Boy
+                        # Sega Saturn
+                        # PlayStation
+                        # PocketStation
+                        # PC-FX
+                        # Neo Geo Pocket
+                        # Neo Geo Pocket Color
+                        # Atari Jaguar
+                        # Atari Jaguar CD
+                        # 3DO Interactive Multiplayer
+                        # Amiga CD32
+                        # WonderSwan
+                        # WonderSwan Color
+                        # Apple Pippin
+                        # Playdia
+                        new_query = {"List of Platforms": "Nintendo 64"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Game Boy Color"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Virtual Boy"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Sega Saturn"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "PlayStation"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "PocketStation"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "PC-FX"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Neo Geo Pocket"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Neo Geo Pocket Color"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Atari Jaguar"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Atari Jaguar CD"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "3DO Interactive Multiplayer"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Amiga CD32"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "WonderSwan"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "WonderSwan Color"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Apple Pippin"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Playdia"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        print("Generation 5 consoles added to querying!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    elif (generation_option == "6"):
+                        # Generation 6:
+                        # Nintendo GameCube
+                        # Game Boy Advance
+                        # Dreamcast
+                        # Visual Memory Unit / Visual Memory System
+                        # PlayStation 2
+                        # Xbox
+                        # N-Gage
+                        # Leapster
+                        # V.Smile
+                        new_query = {"List of Platforms": "Nintendo GameCube"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Game Boy Advance"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Dreamcast"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Visual Memory Unit / Visual Memory System"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "PlayStation 2"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Xbox"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "N-Gage"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Leapster"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "V.Smile"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        print("Generation 6 consoles added to querying!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    elif (generation_option == "7"):
+                        # Generation 7:
+                        # Wii
+                        # Nintendo DS
+                        # Nintendo DSi
+                        # PlayStation 3
+                        # PlayStation Portable
+                        # Xbox 360
+                        # Zeebo
+                        # HyperScan
+                        # Leapster Explorer/LeadPad Explorer
+                        # Digiblast
+                        new_query = {"List of Platforms": "Wii"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Nintendo DS"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Nintendo DSi"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "PlayStation 3"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "PlayStation Portable"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Xbox 360"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Zeebo"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "HyperScan"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Leapster Explorer/LeadPad Explorer"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Digiblast"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        print("Generation 7 consoles added to querying!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    elif (generation_option == "8"):
+                        # Generation 8:
+                        # Wii U
+                        # Nintendo Switch (special case)
+                        # Nintendo 3DS
+                        # New Nintendo 3DS
+                        # PlayStation 4
+                        # PlayStation Vita
+                        # PlayStation VR
+                        # Xbox One
+                        # Evercade
+                        # LeapTV
+                        new_query = {"List of Platforms": "Wii U"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Nintendo Switch"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Nintendo 3DS"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "New Nintendo 3DS"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "PlayStation 4"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "PlayStation Vita"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "PlayStation VR"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Xbox One"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Evercade"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "LeapTV"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        print("Generation 8 consoles added to querying!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    elif (generation_option == "9"):
+                        # PlayStation 5
+                        # PlayStation VR2
+                        # Xbox Series X|S
+                        # Meta Quest 3
+                        # Playdate
+                        new_query = {"List of Platforms": "PlayStation 5"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "PlayStation VR2"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Xbox Series X|S"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Meta Quest 3"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Playdate"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        print("Generation 9 consoles added to querying!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
                     else:
                         print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.\n")
                         continue
@@ -946,6 +1175,7 @@ while True:
         print("51. Family Computer Disk System")
         print("52. Arcade")
         print("53. MSX2")
+        print("57. WonderSwan")
         print("58. Super Famicom")
         print("59. Atari 2600")
         print("60. Atari 7800")

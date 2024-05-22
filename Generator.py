@@ -811,7 +811,7 @@ while(igdb_check == False):
                     platforms_message.ParseFromString(
                         sub_request)  # Fills the protobuf message object with the response
                     platforms = platforms_message.platforms
-                    print("Main Plat")
+                    #print("Main Plat")
                     #input(platforms)
                     plat_name = platforms[0].name
                     if (plat_counter == 0):
