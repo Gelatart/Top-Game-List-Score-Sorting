@@ -23,11 +23,11 @@ Call of Duty 4: Modern Warfare --> 19
 Final Fantasy VI --> 19
 [x]Tetris --> 19
 The Elder Scrolls V: Skyrim --> 19
+Bloodborne --> 19
 [x]Silent Hill 2 --> 19
 [x]Halo: Combat Evolved --> 18
 GoldenEye 007 --> 18
 World of Warcraft --> 18
-Bloodborne --> 18
 [x]Super Mario Odyssey --> 18
 Star Wars: Knights of the Old Republic --> 17
 [x]Super Smash Bros. Melee --> 17
@@ -90,6 +90,8 @@ Braid --> 11
 Paper Mario: The Thousand-Year Door --> 11
 Uncharted 4: A Thief's End --> 11
 Final Fantasy IX --> 11
+Metal Gear Solid V: The Phantom Pain --> 11
+Splatoon --> 11
 Persona 4 Golden --> 11
 [x]League of Legends --> 11
 Burnout 3: Takedown --> 11
@@ -110,8 +112,6 @@ Super Mario Bros. --> 10
 Metal Gear Solid 2: Sons of Liberty --> 10
 Rocket League --> 10
 Advance Wars --> 10
-Metal Gear Solid V: The Phantom Pain --> 10
-Splatoon --> 10
 Hearthstone --> 10
 [x]Halo 2 --> 10
 Assassin's Creed II --> 9
@@ -131,6 +131,8 @@ SoulCalibur --> 9
 Tony Hawk's Pro Skater 2 --> 9
 [x]The Legend of Zelda: Twilight Princess --> 9
 Destiny --> 9
+Her Story --> 9
+Fallout 4 --> 9
 Mother 3 --> 8
 [x]Sonic the Hedgehog --> 8
 Fortnite --> 8
@@ -155,15 +157,14 @@ The Elder Scrolls IV: Oblivion --> 8
 Quake III Arena --> 8
 Doom II: Hell on Earth --> 8
 Demon's Souls --> 8
+Super Mario Maker --> 8
 [x]Super Mario 3D World --> 8
 StarCraft II: Wings of Liberty --> 8
-Her Story --> 8
 The Legend of Zelda --> 8
 The Sims --> 8
 Divinity: Original Sin II --> 8
 Mass Effect --> 8
 The Elder Scrolls III: Morrowind --> 8
-Fallout 4 --> 8
 Dragon Age: Inquisition --> 8
 [x]Super Smash Bros. for Wii U --> 8
 Shovel Knight --> 8
@@ -199,10 +200,11 @@ The Secret of Monkey Island --> 7
 [x]Super Smash Bros. Brawl --> 7
 Tom Clancy's Splinter Cell: Chaos Theory --> 7
 Horizon Zero Dawn --> 7
-Super Mario Maker --> 7
 Far Cry 4 --> 7
 XCOM: Enemy Unknown --> 7
+Batman: Arkham Knight --> 7
 Dark Souls III --> 7
+Rise of the Tomb Raider --> 7
 Monster Hunter: World --> 7
 God of War II --> 7
 PUBG: Battlegrounds --> 7
@@ -224,7 +226,6 @@ Fable II --> 6
 Gears of War 2 --> 6
 Thief II: The Metal Age --> 6
 The Last Guardian --> 6
-Batman: Arkham Knight --> 6
 Gears of War --> 6
 Celeste --> 6
 Fallout: New Vegas --> 6
@@ -234,7 +235,6 @@ Dwarf Fortress --> 6
 Rock Band --> 6
 Battlefield 1942 --> 6
 Monkey Island 2: LeChuck's Revenge --> 6
-Rise of the Tomb Raider --> 6
 Quake --> 6
 Age of Empires II: The Age of Kings --> 6
 [x]Sonic the Hedgehog 2 --> 6
@@ -487,6 +487,7 @@ The Witcher 2: Assassins of Kings --> 3
 The Legend of Heroes: Trails in the Sky --> 3
 Mount & Blade: Warband --> 3
 Catherine --> 3
+Axiom Verge --> 3
 Dragon Ball FighterZ --> 3
 Donut County --> 3
 Dragon Quest Builders --> 3
@@ -661,6 +662,7 @@ BioShock 2 --> 2
 Ogre Battle: The March of the Black Queen --> 2
 Shining Force II --> 2
 Donkey Kong 64 --> 2
+Tales from the Borderlands --> 2
 LEGO Dimensions --> 2
 The Binding of Isaac: Rebirth --> 2
 Splatoon 2 --> 2
@@ -704,7 +706,6 @@ Luftrausers --> 2
 The Wolf Among Us --> 2
 Kentucky Route Zero: Act III --> 2
 Captain Toad: Treasure Tracker --> 2
-Axiom Verge --> 2
 The Wonderful 101 --> 2
 Call of Duty: Black Ops II --> 2
 Half-Life 2: Episode Two --> 2
@@ -1047,7 +1048,6 @@ Xenosaga Episode I: Der Wille zur Macht --> 1
 Sonic Adventure 2 --> 1
 Mafia II --> 1
 Life is Strange: Before the Storm --> 1
-Tales from the Borderlands --> 1
 Command & Conquer: Red Alert 2 --> 1
 The Bard's Tale --> 1
 Radiata Stories --> 1

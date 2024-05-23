@@ -46,7 +46,7 @@ Super Mario Bros. --> 1432
 Street Fighter II --> 1401
 Journey --> 1374
 The Legend of Zelda: Breath of the Wild --> 1341
-Bloodborne --> 1334
+Bloodborne --> 1336
 Diablo II --> 1329
 Super Mario Galaxy 2 --> 1329
 Grand Theft Auto: San Andreas --> 1306
@@ -94,8 +94,8 @@ Resident Evil --> 880
 Mario Kart 8 --> 872
 Mortal Kombat II --> 860
 Katamari Damacy --> 860
+Metal Gear Solid V: The Phantom Pain --> 859
 Baldur's Gate II: Shadows of Amn --> 858
-Metal Gear Solid V: The Phantom Pain --> 849
 Zork --> 844
 Fallout: New Vegas --> 842
 Inside --> 841
@@ -206,10 +206,10 @@ Elite --> 562
 Gunstar Heroes --> 562
 Papers, Please --> 561
 Uncharted 4: A Thief's End --> 559
+Super Mario Maker --> 557
 Super Smash Bros. --> 554
 Chrono Cross --> 553
 Streets of Rage 2 --> 552
-Super Mario Maker --> 552
 Fallout --> 550
 Star Wars --> 549
 Gauntlet --> 548
@@ -279,11 +279,11 @@ Habitat --> 424
 God of War II --> 422
 Fable II --> 421
 The Walking Dead --> 420
+Her Story --> 420
 Star Wars: Knights of the Old Republic II - The Sith Lords --> 420
 Warlords --> 417
 Day of the Tentacle --> 414
 NetHack --> 413
-Her Story --> 412
 Rez Infinite --> 410
 Manic Miner --> 409
 [x]Super Mario Sunshine --> 408
@@ -307,11 +307,11 @@ Frog Fractions --> 381
 Contra III: The Alien Wars --> 380
 Panzer Dragoon Saga --> 379
 Cart Life --> 377
+Rise of the Tomb Raider --> 376
 Donkey Kong Country 2: Diddy's Kong Quest --> 375
 Company of Heroes --> 373
 Animal Crossing: New Leaf --> 373
 Vampire: The Masquerade - Redemption --> 370
-Rise of the Tomb Raider --> 369
 Ultima Underworld: The Stygian Abyss --> 369
 Thief II: The Metal Age --> 368
 Vanquish --> 368
@@ -333,11 +333,11 @@ Vampire: The Masquerade - Bloodlines --> 357
 Spacewar! --> 355
 Monster Hunter: World --> 354
 Street Fighter IV --> 353
+Fallout 4 --> 353
 <7351> Doom --> 351
 Brothers: A Tale of Two Sons --> 351
 The Sims 3 --> 349
 Daytona USA --> 349
-Fallout 4 --> 349
 Castlevania --> 348
 Castlevania III: Dracula's Curse --> 348
 Battlezone --> 348
@@ -402,10 +402,10 @@ Missile Command --> 280
 A Mind Forever Voyaging --> 280
 F-Zero GX --> 277
 Dragon Age: Inquisition --> 277
+Batman: Arkham Knight --> 274
 <24869> Resident Evil [2002] --> 272
 God Hand --> 272
 King's Quest I: Quest for the Crown --> 272
-Batman: Arkham Knight --> 271
 The Jackbox Party Pack --> 268
 [x]Super Smash Bros. for Wii U --> 268
 Angry Birds --> 267
@@ -416,6 +416,7 @@ Impossible Mission --> 266
 Shantae and the Pirate's Curse --> 266
 Ghosts 'n Goblins --> 265
 Monster Hunter Generations --> 265
+Splatoon --> 264
 Disco Elysium --> 264
 <12515> Pokemon Go --> 262
 Sam & Max Hit the Road --> 258
@@ -424,7 +425,6 @@ Super Meat Boy --> 257
 NieR --> 257
 Command & Conquer: Red Alert --> 256
 Star Fox --> 256
-Splatoon --> 255
 Hotline Miami --> 254
 Crash Bandicoot: Warped --> 254
 Sega Rally Championship --> 251
@@ -597,9 +597,9 @@ Yakuza 6: The Song of Life --> 149
 Power Stone 2 --> 148
 R-Type Final --> 148
 Jet Set Radio Future --> 148
+Axiom Verge --> 148
 Sid Meier's Civilization: Beyond Earth --> 148
 Crash Bandicoot --> 147
-Axiom Verge --> 147
 Return to Castle Wolfenstein --> 147
 <5600> Metal Gear Solid [GBC] --> 146
 Doom Eternal --> 146
@@ -950,6 +950,7 @@ Chibi-Robo! --> 81
 Kid Icarus --> 81
 Donkey Kong Country: Tropical Freeze --> 80
 Military Madness --> 80
+Tales from the Borderlands --> 79
 Blaster Master --> 79
 The Curse of Monkey Island --> 78
 The Legend of Heroes: Trails in the Sky --> 78
@@ -966,7 +967,6 @@ Resident Evil 3: Nemesis --> 75
 Super Star Wars: Return of the Jedi --> 75
 Life is Strange: Before the Storm --> 74
 Tetris & Dr. Mario --> 74
-Tales from the Borderlands --> 73
 Baseball Stars --> 73
 Firewatch --> 72
 Demolition Racer --> 72
