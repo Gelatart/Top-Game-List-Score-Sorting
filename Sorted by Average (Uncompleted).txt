@@ -1,5 +1,4 @@
 <19903> Nights Into Dreams --> 1.0
-Kentucky Route Zero: Act III --> 1.0
 Gods Will Be Watching --> 1.0
 Galactic Civilizations II: Dark Avatar --> 1.0
 World of Warcraft: Wrath of the Lich King --> 1.0
@@ -189,6 +188,7 @@ Twisted Metal III --> 0.84
 Patapon 3 --> 0.84
 That Dragon, Cancer --> 0.84
 Super Punch-Out!! --> 0.84
+Kentucky Route Zero: Act III --> 0.8378378378378378
 Horizon Zero Dawn --> 0.8351409978308026
 Ancestors: The Humankind Odyssey --> 0.8333333333333334
 Madden NFL 2005 --> 0.8301282051282052
@@ -447,7 +447,6 @@ Gone Home --> 0.6040044493882091
 Defender --> 0.6038812785388128
 Overwatch --> 0.6032186459489456
 Thirty Flights of Loving --> 0.6032064128256514
-Middle-Earth: Shadow of Mordor --> 0.6025641025641025
 Tetris DX --> 0.6019417475728155
 Pac-Man: Championship Edition DX --> 0.6010016694490818
 Grand Theft Auto: Vice City --> 0.6004938271604938
@@ -467,6 +466,7 @@ Crash Bandicoot: Warped --> 0.594847775175644
 Persona 3 --> 0.5939933259176863
 WarioWare: Twisted! --> 0.5916030534351145
 Wolfenstein II: The New Colossus --> 0.5909090909090909
+Middle-earth: Shadow of Mordor --> 0.5888888888888889
 Counter-Strike --> 0.5858930602957907
 Wolfenstein 3D --> 0.5857699805068226
 E.V.O. : Search for Eden --> 0.5819672131147541
@@ -549,7 +549,6 @@ Metal Storm --> 0.55
 SoulCalibur --> 0.549276361130255
 Uncharted: The Lost Legacy --> 0.5483870967741935
 Micro Machines --> 0.5480093676814989
-Hearthstone --> 0.5471698113207547
 Dragon Warrior I & II --> 0.5466666666666666
 XCOM: Enemy Unknown --> 0.5463096960926194
 Danganronpa V3: Killing Harmony --> 0.5454545454545454
@@ -557,6 +556,7 @@ Danganronpa V3: Killing Harmony --> 0.5454545454545454
 Jak and Daxter: The Precursor Legacy --> 0.5432098765432098
 Advance Wars --> 0.5429769392033543
 Sid Meier's Civilization VI --> 0.5428571428571428
+Hearthstone --> 0.542756183745583
 Dragon Quest VIII: Journey of the Cursed King --> 0.5416058394160584
 Her Story --> 0.5413929040735874
 Game & Watch Gallery 3 --> 0.54
@@ -1020,6 +1020,7 @@ Dream Daddy: A Dad Dating Simulator --> 0.5
 Gorogoa --> 0.5
 Where the Water Tastes Like Wine --> 0.5
 Moss --> 0.5
+Rusty's Real Deal Baseball --> 0.5
 Nioh --> 0.5
 Injustice 2 --> 0.5
 A Way Out --> 0.5
@@ -1099,7 +1100,7 @@ Fez --> 0.4949928469241774
 EverQuest --> 0.49451476793248944
 <152752> Donkey Kong Country --> 0.4945054945054945
 Age of Empires II: The Age of Kings --> 0.4939668174962293
-Destiny --> 0.4935158501440922
+Destiny --> 0.49357142857142855
 Dead Cells --> 0.49333333333333335
 The Hitchhiker's Guide to the Galaxy --> 0.49298597194388777
 Rise of the Tomb Raider --> 0.492
@@ -1148,7 +1149,6 @@ Resident Evil 2 --> 0.4749262536873156
 SuperHot --> 0.4749262536873156
 Sonic the Hedgehog 3 --> 0.47491638795986624
 Duke Nukem 3D --> 0.47480106100795755
-Hearthstone: Heroes of Warcraft --> 0.47435897435897434
 Beyond Good & Evil --> 0.4739178690344062
 The Wolf Among Us --> 0.4738562091503268
 StarCraft II: Wings of Liberty --> 0.4732510288065844
@@ -1227,6 +1227,7 @@ Virginia --> 0.44
 Dead or Alive 2 --> 0.44
 La-Mulana EX --> 0.44
 Tomb Raider II --> 0.44
+Divinity: Original Sin --> 0.44
 The Legend of Zelda: Twilight Princess HD --> 0.44
 LittleBigPlanet 2 --> 0.44
 Rad Racer --> 0.44
@@ -1245,7 +1246,6 @@ Donkey Kong Country 3: Dixie Kong's Double Trouble! --> 0.43
 Gauntlet --> 0.42946708463949845
 Battlefield 1942 --> 0.429421768707483
 OutRun --> 0.42887029288702927
-Divinity: Original Sin --> 0.42857142857142855
 Split/Second --> 0.4282051282051282
 Ikaruga --> 0.42707554225878835
 Tennis for Two --> 0.42685370741482964
@@ -1421,6 +1421,7 @@ Eve Online --> 0.344
 Alpha Protocol --> 0.34375
 Frogger --> 0.34295227524972255
 Conker's Bad Fur Day --> 0.34234234234234234
+Threes! --> 0.3414179104477612
 <1289> Ratchet & Clank --> 0.3408521303258145
 Vanquish --> 0.34074074074074073
 Dragon Ball Z: Legendary Super Warriors --> 0.34
@@ -1429,7 +1430,6 @@ The Evil Within --> 0.34
 Tom Clancy's Splinter Cell: Blacklist --> 0.34
 Mega Man X3 --> 0.34
 E.Y.E: Divine Cybermancy --> 0.3388888888888889
-Threes! --> 0.3377862595419847
 God of War II --> 0.33706070287539935
 Wizardry: Proving Grounds of the Mad Overlord --> 0.3356164383561644
 Hot Shots Golf --> 0.3346693386773547
@@ -1498,8 +1498,8 @@ Mount & Blade: Warband --> 0.3066132264529058
 Fable II --> 0.30618181818181817
 Dark Messiah of Might and Magic --> 0.3055555555555556
 Company of Heroes --> 0.30424143556280586
+Dragon Age: Inquisition --> 0.30339539978094193
 <1164> Tomb Raider [2013] --> 0.3008595988538682
-Dragon Age: Inquisition --> 0.30077691453940064
 The Binding of Isaac --> 0.3
 <85578> Rayman --> 0.3
 Shining Force III --> 0.3
@@ -1739,10 +1739,10 @@ Super Tennis --> 0.17
 Shenmue II --> 0.1683748169838946
 <103337> Divinity: Original Sin II - Definitive Edition --> 0.16831683168316833
 Galaxian --> 0.16757741347905283
+Wolfenstein: The New Order --> 0.1672473867595819
 Prehistoric Kingdom --> 0.16666666666666666
 Xenoblade Chronicles X --> 0.16589861751152074
 Military Madness --> 0.16032064128256512
-Wolfenstein: The New Order --> 0.1601423487544484
 Child of Eden --> 0.16
 <118554> Harry Potter and the Sorcerer's Stone --> 0.16
 River Raid --> 0.16

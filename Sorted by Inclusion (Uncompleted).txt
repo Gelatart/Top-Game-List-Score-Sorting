@@ -90,6 +90,7 @@ Rocket League --> 10
 Advance Wars --> 10
 Metal Gear Solid V: The Phantom Pain --> 10
 Splatoon --> 10
+Hearthstone --> 10
 Assassin's Creed II --> 9
 Myst --> 9
 Mike Tyson's Punch-Out!! --> 9
@@ -104,6 +105,7 @@ Grand Theft Auto III --> 9
 Xenoblade Chronicles --> 9
 SoulCalibur --> 9
 Tony Hawk's Pro Skater 2 --> 9
+Destiny --> 9
 Mother 3 --> 8
 Fortnite --> 8
 Left 4 Dead 2 --> 8
@@ -127,7 +129,6 @@ The Elder Scrolls IV: Oblivion --> 8
 Quake III Arena --> 8
 Doom II: Hell on Earth --> 8
 Demon's Souls --> 8
-Destiny --> 8
 StarCraft II: Wings of Liberty --> 8
 Her Story --> 8
 The Legend of Zelda --> 8
@@ -136,6 +137,7 @@ Divinity: Original Sin II --> 8
 Mass Effect --> 8
 The Elder Scrolls III: Morrowind --> 8
 Fallout 4 --> 8
+Dragon Age: Inquisition --> 8
 Shovel Knight --> 8
 Marvel's Spider-Man --> 8
 Asteroids --> 7
@@ -170,7 +172,6 @@ XCOM: Enemy Unknown --> 7
 Dark Souls III --> 7
 Monster Hunter: World --> 7
 God of War II --> 7
-Dragon Age: Inquisition --> 7
 PUBG: Battlegrounds --> 7
 Dark Souls II --> 7
 Spy Hunter --> 6
@@ -235,7 +236,6 @@ Kerbal Space Program --> 5
 Vanquish --> 5
 Nidhogg --> 5
 <7351> Doom --> 5
-Hearthstone --> 5
 <186207> Contra --> 5
 Wolfenstein 3D --> 5
 Mortal Kombat --> 5
@@ -261,7 +261,9 @@ Valkyria Chronicles --> 5
 EverQuest --> 5
 Ori and the Blind Forest --> 5
 Tetris Effect --> 5
+Middle-earth: Shadow of Mordor --> 5
 No Man's Sky --> 5
+Wolfenstein: The New Order --> 5
 SuperHot --> 5
 Forza Horizon 3 --> 5
 Hades --> 5
@@ -336,10 +338,8 @@ The Legend of Zelda: Link's Awakening --> 4
 Legacy of Kain: Soul Reaver --> 4
 Into the Breach --> 4
 Mario + Rabbids Kingdom Battle --> 4
-Middle-Earth: Shadow of Mordor --> 4
-Hearthstone: Heroes of Warcraft --> 4
 This War of Mine --> 4
-Wolfenstein: The New Order --> 4
+Divinity: Original Sin --> 4
 <11157> Hitman --> 4
 Max Payne 2: The Fall of Max Payne --> 4
 The Chronicles of Riddick: Escape from Butcher Bay --> 4
@@ -462,8 +462,8 @@ Metal Gear Solid HD Collection --> 3
 PaRappa the Rapper --> 3
 South Park: The Stick of Truth --> 3
 The Vanishing of Ethan Carter --> 3
-Divinity: Original Sin --> 3
 The Banner Saga --> 3
+Threes! --> 3
 <7351> Doom [2016] --> 3
 Castlevania --> 3
 ESPN NFL 2K5 --> 3
@@ -650,9 +650,9 @@ Forza Horizon 2 --> 2
 Sid Meier's Civilization: Beyond Earth --> 2
 The Evil Within --> 2
 OlliOlli --> 2
-Threes! --> 2
 Luftrausers --> 2
 The Wolf Among Us --> 2
+Kentucky Route Zero: Act III --> 2
 Captain Toad: Treasure Tracker --> 2
 Axiom Verge --> 2
 The Wonderful 101 --> 2
@@ -1095,7 +1095,6 @@ Call of Duty: Advanced Warfare --> 1
 FIFA 15 --> 1
 Hohokum --> 1
 The Sailor's Dream --> 1
-Kentucky Route Zero: Act III --> 1
 Fantasia: Music Evolved --> 1
 Actual Sunlight --> 1
 Mountain --> 1
@@ -1492,6 +1491,7 @@ Dream Daddy: A Dad Dating Simulator --> 1
 Where the Water Tastes Like Wine --> 1
 Moss --> 1
 <11157> Hitman [2016] --> 1
+Rusty's Real Deal Baseball --> 1
 Beat Saber --> 1
 Gris --> 1
 Nioh --> 1

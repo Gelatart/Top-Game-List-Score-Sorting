@@ -87,6 +87,7 @@ for game in games_pulled_query:
 """
 
 print("Now it's time for us to pick some options in generating a report")
+print()
 
 #add in more answer checks later? or come up with a better way to do menu progression and repeated asking?
 
@@ -104,9 +105,9 @@ dev_queries = []
 misc_queries = []
 #^Try to split the natural or queries and the natural and queries? go by categories?
 
-#while(answer_check_main == False):
-while True:
-    print()
+#Loop for the main PrintReports program (this one should be answer_check_main because different case?)
+while(answer_check_main == False):
+#while True:
     print("Which filter category would you like to add on to your report?")
     print("1. Platform Inclusion")
     print("2. Main Platform")
@@ -125,8 +126,10 @@ while True:
     filter_category = input("Make selection here: ")
 
     if(filter_category == '1'):
+        print()
+        print("You have selected 1. Platform Inclusion")
+        print()
         while True:
-            print("You have selected 1. Platform Inclusion")
             print("Would you like to include single platforms, entire brands, generations of platform, or formats of platforms?")
             print("1. Single Platform")
             print("2. Brand of Platform")
@@ -183,6 +186,7 @@ while True:
                 print("51. Family Computer Disk System")
                 print("52. Arcade")
                 print("53. MSX2")
+                print("55. Mobile")
                 print("57. WonderSwan")
                 print("58. Super Famicom")
                 print("59. Atari 2600")
@@ -545,6 +549,7 @@ while True:
                         break
                     else:
                         print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.\n")
+                        print()
                         continue
                 break
             elif (platforms_option == '3'):
@@ -1102,31 +1107,43 @@ while True:
                         break
                     else:
                         print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.\n")
+                        print()
                         continue
                 break
             elif (platforms_option == '4'):
                 while True:
-                    # elif 4
                     print("Which format of platform would you like to include?")
                     print("1. Console")
                     print("2. Handheld")
-                    print("3. Computer")
+                    print("3. Computer / OS")
                     print("4. Arcade")
                     print("5. Mobile Phone")
-                    #vr?
-                    #platform?
-                    #operating system?
-                    #...
-                    #input("When you are ready, press Enter to go back to the main print menu\n")
-                    #break
+                    print("6. Virtual Reality")
+                    print("7. Platform")
+                    platform_format = input()
+                    if (platform_format == "1"):
+                        print()
+                        #... (console querying)
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    #other format querying
+                    else:
+                        print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.\n")
+                        print()
+                        continue
+                    #...?
                 break
             else:
                 print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.\n")
+                print()
                 continue
         print("Returning back to main menu")
+        print()
     elif (filter_category == '2'):
         #import some of the platform inclusion options over here?
+        print()
         print("You have selected 2. Main Platform")
+        print()
         print("Which platform would you like to be the main platform?")
         print("Note that the numbers are listed as so because they are the platform ID's listed in IGDB's API")
         input("Whenever you are ready, the platform options will be listed in full (For now use the text version)\n")
@@ -1175,6 +1192,7 @@ while True:
         print("51. Family Computer Disk System")
         print("52. Arcade")
         print("53. MSX2")
+        print("55. Mobile")
         print("57. WonderSwan")
         print("58. Super Famicom")
         print("59. Atari 2600")
@@ -1261,8 +1279,11 @@ while True:
         queries.append(new_query)
         platform_queries.append(new_query)
         print("Returning back to main menu")
+        print()
     elif (filter_category == '3'):
+        print()
         print("You have selected 3. Release Date")
+        print()
         print("Would you like to enter a specific date? Or specify a time range?")
         print("1. Specific date")
         print("2. Specified time range")
@@ -1290,9 +1311,13 @@ while True:
             #...
         else:
             print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+            print()
         print("Returning back to main menu")
+        print()
     elif (filter_category == '4'):
+        print()
         print("You have selected 4. Completion Status")
+        print()
         print("Would you like games you have completed? Or games you haven't completed?")
         print("1. Completed")
         print("2. Uncompleted")
@@ -1307,11 +1332,15 @@ while True:
             queries.append(new_query)
         else:
             print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+            print()
         print("Returning back to main menu")
+        print()
     elif (filter_category == '5'):
         #NOT WORKING YET!!!
         #try search api endpoint?
+        print()
         print("You have selected 5. Title")
+        print()
         print("Would you like to enter a filter string to use in filtering results?")
         title_search = input("If so, specify your filter string here: ")
         #new_query = { "Title": { "$text:": title_search}}
@@ -1322,8 +1351,11 @@ while True:
         #Trying to figure this out, not working properly, need to have properly built index I refer to?
         queries.append(new_query)
         print("Returning back to main menu")
+        print()
     elif (filter_category == '6'):
+        print()
         print("You have selected 6. Ranked Score")
+        print()
         print("Would you like to set a minimum threshold score? A maximum one? Or a target score value?")
         print("1. Minimum threshold score")
         print("2. Maximum threshold score")
@@ -1335,10 +1367,14 @@ while True:
             queries.append(new_query)
         else:
             print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+            print()
         #...
         print("Returning back to main menu")
+        print()
     elif (filter_category == '7'):
+        print()
         print("You have selected 7. Inclusion Score")
+        print()
         print("Would you like to set a minimum threshold score? A maximum one? Or a target score value?")
         print("1. Minimum threshold score")
         print("2. Maximum threshold score")
@@ -1350,10 +1386,14 @@ while True:
             queries.append(new_query)
         else:
             print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+            print()
         #...
         print("Returning back to main menu")
+        print()
     elif (filter_category == '8'):
+        print()
         print("You have selected 8. Average Score")
+        print()
         print("Would you like to set a minimum threshold score? A maximum one? Or a target score value?")
         print("1. Minimum threshold score")
         print("2. Maximum threshold score")
@@ -1365,10 +1405,14 @@ while True:
             queries.append(new_query)
         else:
             print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+            print()
         #...
         print("Returning back to main menu")
+        print()
     elif (filter_category == '9'):
+        print()
         print("You have selected 9. Player Count")
+        print()
         print("Would you like to select whether you want singleplayer or multiplayer?")
         print("Or select one-by-one which player counts you would like to include?")
         print("1. Singleplayer or Multiplayer")
@@ -1399,15 +1443,20 @@ while True:
                 target_count = "Battle Royale"
             else:
                 print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+                print()
             new_query = {"Player Count": target_count}
             queries.append(new_query)
             player_count_queries.append(new_query)
         else:
             print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+            print()
         #...
         print("Returning back to main menu")
+        print()
     elif (filter_category == '10'):
+        print()
         print("You have selected 10. Developers")
+        print()
         #print("Are you planning on selecting filters for developers or publishers right now?")
         print("For developers, are you looking for true Developers, or just any company that worked on a game?")
         print("Would you like to try entering in a name for the developer you are looking for? Or trying by their IGDB ID?")
@@ -1422,15 +1471,22 @@ while True:
             dev_queries.append(new_query)
         else:
             print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+            print()
         #going to be using involvedcompany and company?
         #...
         print("Returning back to main menu")
+        print()
     elif (filter_category == '11'):
+        print()
         print("You have selected 11. Miscellaneous")
+        print()
         print("This is for miscellaneous filter options that don't fit easily anywhere else")
+        print()
         #Fill this if anything comes to mind that I'd like to filter for that doesn't fit in one of the other options
         print("Returning back to main menu")
+        print()
     elif(filter_category == '12'):
+        print()
         #answer_check_main = True
         if(len(queries) == 0):
             print("Hey, there's nothing here! We have to go back to have something to work with")
@@ -1451,72 +1507,92 @@ while True:
                 for key, value in query.items():
                     custom_query[key] = value
             """
-            print("Would you like your queries to build in an AND approach, OR approach, or the most natural mix of both?")
-            print("1. AND approach")
-            print("2. OR approach")
-            print("3. Natural mix")
-            and_or_type = input()
-            print("How would you like your report sorted?")
-            print("1. By Ranked Score")
-            print("2. By Inclusion Score")
-            print("3. By Average Score")
-            print("4. Alphabetical")
-            print("5. Oldest First")
-            print("6. Newest First")
-            sort_type = input()
-            if(and_or_type == '1'):
-                #AND approach
-                if (sort_type == '1'):
-                    # games_pulled = mon_col.find(custom_query).sort("Ranked Score", -1)
-                    games_pulled = mon_col.find({'$and': queries}).sort("Ranked Score", -1)
-                elif (sort_type == '2'):
-                    games_pulled = mon_col.find({'$and': queries}).sort("Inclusion Score", -1)
-                elif (sort_type == '3'):
-                    games_pulled = mon_col.find({'$and': queries}).sort("Average Score", -1)
+            #Loop for the AND/OR approach and the sorting
+            while True:
+                print("Would you like your queries to build in an AND approach, OR approach, or the most natural mix of both?")
+                print("1. AND approach")
+                print("2. OR approach")
+                print("3. Natural mix")
+                and_or_type = input()
+                print("How would you like your report sorted?")
+                print("1. By Ranked Score")
+                print("2. By Inclusion Score")
+                print("3. By Average Score")
+                print("4. Alphabetical")
+                print("5. Oldest First")
+                print("6. Newest First")
+                sort_type = input()
+                if(and_or_type == '1'):
+                    #AND approach
+                    if (sort_type == '1'):
+                        # games_pulled = mon_col.find(custom_query).sort("Ranked Score", -1)
+                        games_pulled = mon_col.find({'$and': queries}).sort("Ranked Score", -1)
+                        break
+                    elif (sort_type == '2'):
+                        games_pulled = mon_col.find({'$and': queries}).sort("Inclusion Score", -1)
+                        break
+                    elif (sort_type == '3'):
+                        games_pulled = mon_col.find({'$and': queries}).sort("Average Score", -1)
+                        break
+                    else:
+                        print("Sorry, I don't understand")
+                        print()
+                        continue
+                        # check again
+                elif(and_or_type == '2'):
+                    #OR approach
+                    if(sort_type == '1'):
+                        games_pulled = mon_col.find({'$or': queries}).sort("Ranked Score", -1)
+                        break
+                    elif (sort_type == '2'):
+                        games_pulled = mon_col.find({'$or': queries}).sort("Inclusion Score", -1)
+                        break
+                    elif (sort_type == '3'):
+                        games_pulled = mon_col.find({'$or': queries}).sort("Average Score", -1)
+                        break
+                    else:
+                        print("Sorry, I don't understand")
+                        print()
+                        continue
+                        # check again
+                elif (and_or_type == '3'):
+                    #NATURAL approach
+                    """
+                    platform_queries = []
+                    player_count_queries = []
+                    dev_queries = []
+                    ---
+                    misc_queries = []
+                    """
+                    #Make sure that none of the arrays are empty because that'll break it, switch approach if so?
+                    natural_platform = {'$or': platform_queries}
+                    natural_player = {'$or': player_count_queries}
+                    natural_dev = {'$or': dev_queries}
+                    and_queries = []
+                    and_queries.append(natural_platform)
+                    and_queries.append(natural_player)
+                    and_queries.append(natural_dev)
+                    and_queries.append(misc_queries)
+                    natural_queries = {'$and': and_queries}
+                    if (sort_type == '1'):
+                        games_pulled = mon_col.find(natural_queries).sort("Ranked Score", -1)
+                        break
+                    elif (sort_type == '2'):
+                        games_pulled = mon_col.find(natural_queries).sort("Inclusion Score", -1)
+                        break
+                    elif (sort_type == '3'):
+                        games_pulled = mon_col.find(natural_queries).sort("Average Score", -1)
+                        break
+                    else:
+                        print("Sorry, I don't understand")
+                        print()
+                        continue
+                        # check again
                 else:
                     print("Sorry, I don't understand")
-                    # check again
-            elif(and_or_type == '2'):
-                #OR approach
-                if(sort_type == '1'):
-                    games_pulled = mon_col.find({'$or': queries}).sort("Ranked Score", -1)
-                elif (sort_type == '2'):
-                    games_pulled = mon_col.find({'$or': queries}).sort("Inclusion Score", -1)
-                elif (sort_type == '3'):
-                    games_pulled = mon_col.find({'$or': queries}).sort("Average Score", -1)
-                else:
-                    print("Sorry, I don't understand")
-                    # check again
-            elif (and_or_type == '3'):
-                #NATURAL approach
-                """
-                platform_queries = []
-                player_count_queries = []
-                dev_queries = []
-                ---
-                misc_queries = []
-                """
-                natural_platform = {'$or': platform_queries}
-                natural_player = {'$or': player_count_queries}
-                natural_dev = {'$or': dev_queries}
-                and_queries = []
-                and_queries.append(natural_platform)
-                and_queries.append(natural_player)
-                and_queries.append(natural_dev)
-                and_queries.append(misc_queries)
-                natural_queries = {'$and': and_queries}
-                if (sort_type == '1'):
-                    games_pulled = mon_col.find(natural_queries).sort("Ranked Score", -1)
-                elif (sort_type == '2'):
-                    games_pulled = mon_col.find(natural_queries).sort("Inclusion Score", -1)
-                elif (sort_type == '3'):
-                    games_pulled = mon_col.find(natural_queries).sort("Average Score", -1)
-                else:
-                    print("Sorry, I don't understand")
-                    # check again
-            else:
-                print("Sorry, I don't understand")
-                #check again
+                    print()
+                    continue
+                    #check again
             file_name = input("What would you like to name your file: ")
             #come up with a check if a particular file name already exists and whether they want to overwrite?
             file_name += "[CUSTOM GENERATION].txt"
@@ -1532,21 +1608,27 @@ while True:
                 entry += str(game['Ranked Score'])
                 file_print.write(entry)
                 file_print.write("\n")
-            print("Your custom report has finished printing! Would you like to print more reports? Or quit the program")
-            print("1. Print more reports")
-            print("2. Quit the program")
-            continue_check = input()
-            if(continue_check == '1'):
-                print("Alright, let's get back to the main printing menu!")
-            elif(continue_check == '2'):
-                answer_check_main = True
-                print("Hope you enjoyed printing reports! See you later!")
-                break
-            else:
-                print("I'm sorry, I don't understand")
-                #check again
+            while True:
+                print("Your custom report has finished printing! Would you like to print more reports? Or quit the program")
+                print("1. Print more reports")
+                print("2. Quit the program")
+                continue_check = input()
+                if(continue_check == '1'):
+                    print("Alright, let's get back to the main printing menu!")
+                    break
+                elif(continue_check == '2'):
+                    answer_check_main = True
+                    print("Hope you enjoyed printing reports! See you later!")
+                    print()
+                    break
+                else:
+                    print("I'm sorry, I don't understand")
+                    print()
+                    continue
+                    #check again
     else:
         print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+        print()
         continue
 
 #Close connection to open up socket (seemed to cause problems when running generator then trying printreports?)

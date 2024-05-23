@@ -837,7 +837,7 @@ while(igdb_check == False):
                             modes_message.ParseFromString(
                                 sub_request)  # Fills the protobuf message object with the response
                             new_modes = modes_message.gamemodes
-                            print(new_modes)
+                            #print(new_modes)
                             mode_type = new_modes[0].name
                             gameDb[game].player_counts.append(mode_type)
                             # input(mode_type)
