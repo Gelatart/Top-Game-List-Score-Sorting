@@ -354,6 +354,7 @@ while(igdb_check == False):
         print(games)
         # input("Here we pause")
 
+        #Figure out if I can be more efficient with endpoints to make it take quicker? taking very long now
         print("Time to go looking around")
         time_speedup = 0;
         #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
@@ -844,7 +845,7 @@ while(igdb_check == False):
                         # gameDb[game].player_counts = modes # Changes approach but for the better?
                     # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
                     developers = current_game.involved_companies
-                    print(developers)
+                    #print(developers)
                     if (len(developers) > 0):
                         for dev in developers:
                             dev_name = None

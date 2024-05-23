@@ -1,9 +1,9 @@
-RANKED: 69
+RANKED: 70
 UNRANKED: 33
 FORMER: 12
 UNUSED: 0
 ---
-TOTAL: 114
+TOTAL: 115
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -26,6 +26,7 @@ R-EDGE's Top 100 Games of All Time - 9-28-2015
 R-EDGE's Top 100 Games of All Time - 8-30-2017
 R-100 Greatest Video Games of All time - Slant Magazine - 6-9-2014
 R-100 Greatest Video Games of All Time - Slant Magazine - 6-8-2018
+R-The 100 Best Video Games of All Time - Slant - 4-13-2020
 R-IGN Top 100 Games of All Time - IGN - (2015 version)
 R-IGN Top 100 Games of All Time - IGN - (Post-12-31-2017 Version - March 2018)
 R-IGN Top 100 Games of All Time - IGN - (2019 Version)

@@ -150,7 +150,7 @@ while(answer_check_main == False):
                 print("9. PlayStation 3")
                 print("11. Xbox")
                 print("12. Xbox 360")
-                print("13. PC-DOS")
+                print("13. DOS")
                 print("14. Mac")
                 print("15. C64 & C128")
                 print("16. Amiga")
@@ -187,6 +187,7 @@ while(answer_check_main == False):
                 print("52. Arcade")
                 print("53. MSX2")
                 print("55. Mobile")
+                #print("56. WiiWare") #Removed?
                 print("57. WonderSwan")
                 print("58. Super Famicom")
                 print("59. Atari 2600")
@@ -201,6 +202,8 @@ while(answer_check_main == False):
                 print("68. ColecoVision")
                 print("70. Vectrex")
                 print("71. Commodore VIC-20")
+                print("73. BlackBerry OS")
+                print("74. Windows Phone")
                 print("75. Apple II")
                 print("78. Sega CD")
                 print("79. Neo Geo MVS")
@@ -257,6 +260,7 @@ while(answer_check_main == False):
                 print("412. Leapster")
                 print("413. Leapster Explorer/LeadPad Explorer")
                 print("414. LeapTV")
+                print("417. Palm OS")
                 print("439. V.Smile")
                 print("440. Visual Memory Unit / Visual Memory System")
                 print("441. PocketStation")
@@ -1115,18 +1119,75 @@ while(answer_check_main == False):
                     print("Which format of platform would you like to include?")
                     print("1. Console")
                     print("2. Handheld")
-                    print("3. Computer / OS")
+                    print("3. Computer / Desktop OS")
                     print("4. Arcade")
                     print("5. Mobile Phone")
                     print("6. Virtual Reality")
                     print("7. Platform")
                     platform_format = input()
                     if (platform_format == "1"):
+                        #Console
                         print()
                         #... (console querying)
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
-                    #other format querying
+                    elif (platform_format == "2"):
+                        #Handheld
+                        print()
+                        # ... (console querying)
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    elif (platform_format == "3"):
+                        #Computer / Desktop OS
+                        #DOS
+                        #PC (Microsoft Windows)
+                        print()
+                        # ... (console querying)
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    elif (platform_format == "4"):
+                        #Arcade
+                        print()
+                        print("Grabbing arcade platforms")
+                        print()
+                        #Arcade
+                        #Neo Geo MVS
+                        #Hyper Neo Geo 64
+                        #...?
+                        new_query = {"List of Platforms": "Arcade"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Neo Geo MVS"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Hyper Neo Geo 64"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        print("Arcade platforms added to querying!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    elif (platform_format == "5"):
+                        #Mobile Phone
+                        #iOS
+                        #BlackBerry OS
+                        #Windows Phone
+                        #Palm OS
+                        print()
+                        # ... (console querying)
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    elif (platform_format == "6"):
+                        #Virtual Reality
+                        print()
+                        # ... (console querying)
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    elif (platform_format == "7"):
+                        #Platform
+                        print()
+                        # ... (console querying)
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
                     else:
                         print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.\n")
                         print()
@@ -1156,7 +1217,7 @@ while(answer_check_main == False):
         print("9. PlayStation 3")
         print("11. Xbox")
         print("12. Xbox 360")
-        print("13. PC-DOS")
+        print("13. DOS")
         print("14. Mac")
         print("15. C64 & C128")
         print("16. Amiga")
@@ -1193,6 +1254,7 @@ while(answer_check_main == False):
         print("52. Arcade")
         print("53. MSX2")
         print("55. Mobile")
+        # print("56. WiiWare") #Removed?
         print("57. WonderSwan")
         print("58. Super Famicom")
         print("59. Atari 2600")
@@ -1207,6 +1269,8 @@ while(answer_check_main == False):
         print("68. ColecoVision")
         print("70. Vectrex")
         print("71. Commodore VIC-20")
+        print("73. BlackBerry OS")
+        print("74. Windows Phone")
         print("75. Apple II")
         print("78. Sega CD")
         print("79. Neo Geo MVS")
@@ -1263,6 +1327,7 @@ while(answer_check_main == False):
         print("412. Leapster")
         print("413. Leapster Explorer/LeadPad Explorer")
         print("414. LeapTV")
+        print("417. Palm OS")
         print("439. V.Smile")
         print("440. Visual Memory Unit / Visual Memory System")
         print("441. PocketStation")
