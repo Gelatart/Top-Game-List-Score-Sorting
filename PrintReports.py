@@ -141,6 +141,7 @@ while(answer_check_main == False):
                 print("Now we are going to list all of the options of platforms you can choose from")
                 print("Note that the numbers are listed as so because they are the platform ID's listed in IGDB's API")
                 input("Whenever you are ready, the platform options will be listed in full (For now use the text version)\n")
+                #store this list somewhere where it can be grabbed in its own function, doesn't need redundant copying?
                 print("3. Linux")
                 print("4. Nintendo 64")
                 print("5. Wii")
@@ -152,7 +153,7 @@ while(answer_check_main == False):
                 print("12. Xbox 360")
                 print("13. DOS")
                 print("14. Mac")
-                print("15. C64 & C128")
+                print("15. Commodore C64/128/MAX")
                 print("16. Amiga")
                 print("18. Nintendo Entertainment System")
                 print("19. Super Nintendo Entertainment System")
@@ -255,6 +256,7 @@ while(answer_check_main == False):
                 print("379. Game.com")
                 print("381. Playdate")
                 print("390. PlayStation VR2")
+                print("405. Windows Mobile")
                 print("407. HyperScan")
                 print("410. Atari Jaguar CD")
                 print("412. Leapster")
@@ -1139,10 +1141,20 @@ while(answer_check_main == False):
                         break
                     elif (platform_format == "3"):
                         #Computer / Desktop OS
+                        print()
+                        print("Grabbing computer and desktop OS platforms")
+                        print()
                         #DOS
                         #PC (Microsoft Windows)
-                        print()
-                        # ... (console querying)
+                        #Mac
+                        #Linux
+                        #Commodore C64/128/MAX
+                        #Amiga
+                        #MSX
+                        #ZX Spectrum
+                        #Amstrad CPC
+                        # ... (computer / desktop OS querying)
+                        print("Computer / Desktop OS platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (platform_format == "4"):
@@ -1168,10 +1180,16 @@ while(answer_check_main == False):
                         break
                     elif (platform_format == "5"):
                         #Mobile Phone
+                        print()
+                        print("Grabbing mobile phone platforms")
+                        print()
                         #iOS
+                        #Android
                         #BlackBerry OS
+                        #Windows Mobile
                         #Windows Phone
                         #Palm OS
+                        #...?
                         print()
                         # ... (console querying)
                         input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1219,7 +1237,7 @@ while(answer_check_main == False):
         print("12. Xbox 360")
         print("13. DOS")
         print("14. Mac")
-        print("15. C64 & C128")
+        print("15. Commodore C64/128/MAX")
         print("16. Amiga")
         print("18. Nintendo Entertainment System")
         print("19. Super Nintendo Entertainment System")
@@ -1322,6 +1340,7 @@ while(answer_check_main == False):
         print("379. Game.com")
         print("381. Playdate")
         print("390. PlayStation VR2")
+        print("405. Windows Mobile")
         print("407. HyperScan")
         print("410. Atari Jaguar CD")
         print("412. Leapster")
