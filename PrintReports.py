@@ -201,6 +201,7 @@ while(answer_check_main == False):
                 print("66. Atari 5200")
                 print("67. Intellivision")
                 print("68. ColecoVision")
+                print("69. BBC Microcomputer System")
                 print("70. Vectrex")
                 print("71. Commodore VIC-20")
                 print("73. BlackBerry OS")
@@ -1130,7 +1131,11 @@ while(answer_check_main == False):
                     if (platform_format == "1"):
                         #Console
                         print()
+                        print("Grabbing console platforms")
+                        print()
+                        #Nintendo 64
                         #... (console querying)
+                        print("Console platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (platform_format == "2"):
@@ -1285,6 +1290,7 @@ while(answer_check_main == False):
         print("66. Atari 5200")
         print("67. Intellivision")
         print("68. ColecoVision")
+        print("69. BBC Microcomputer System")
         print("70. Vectrex")
         print("71. Commodore VIC-20")
         print("73. BlackBerry OS")

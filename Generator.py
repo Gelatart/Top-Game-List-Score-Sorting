@@ -38,6 +38,8 @@ directory = r'GameLists\Ranked'
 
 "gameDb is a dict of string titles and game object values"
 gameDb = {}
+#modified_DB is meant to hold modified entries that originally had <> names, and put back into gameDB later
+modified_DB = {}
 "game object needs two scores"
 class GameObject:
     def __init__(self, rank):
@@ -291,6 +293,7 @@ No others at this time?
 #This is where the user sets whether they want to grab from the IGDB API or not
 #Maybe add options for how much to grab? How many games? What types of info? Other qualifiers?
 igdb_check = False
+igdb_answer = None
 while(igdb_check == False):
     print("Would you like to grab additional game data from the IGDB API at this moment? Y or N")
     igdb_answer = input("Make your selection: ")
@@ -358,13 +361,14 @@ while(igdb_check == False):
         print("Time to go looking around")
         time_speedup = 0;
         #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
-        #As of 4/15/24: 0-11 speedup, 12 is good (13)
         for game, details in gameDb.items():
-            if(time_speedup < 0):
+            #Set time speedup back to 0 if want full and accurate database for all items
+            #need to set value in both if and elif to work properly
+            if(time_speedup < 80):
                 print("SKIPPING!!")
                 time_speedup += 1
                 continue
-            elif(time_speedup == 0):
+            elif(time_speedup == 80):
                 time_speedup = 0
             check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
             check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
@@ -373,7 +377,10 @@ while(igdb_check == False):
             check_string += 'rating, rating_count, release_dates, screenshots, similar_games, standalone_expansions, '
             check_string += 'storyline, tags, themes, total_rating, total_rating_count, updated_at, videos, websites; '
             # Check if <> comes first, where we use ID instead of name, for titles hard to specify
-            if (game[0] == '<'):
+            #if (game[0] == '<'): #Replacing after discovering startswith() function?
+            #poem.startswith('All')
+            if(game.startswith('<')):
+                print(details)
                 print(game.strip())
                 #input("Turns out this is a special case!\n")
                 game_title = game.strip()
@@ -383,10 +390,18 @@ while(igdb_check == False):
                 pattern_match = r'[0-9]+'
                 substring = re.findall(pattern_match, game_title)
                 title_ID = substring[0]
+                #Try to use some info from the substring so we can grab the name of the game better for logging?
+                #consider string.replace() function?
+                removal = '<' + title_ID + '> '
+                #modified_title = game_title.strip(str(substring))
+                modified_title = game_title.strip(removal)
                 #input(substring)
+                #input(modified_title)
                 check_string += title_ID
                 #Maybe grab the name from IGDB here, to update the name before it gets sent to the cluster?
                 #Otherwise it might have <ID> in front of the name there?
+                #modified_DB[modified_title] = details
+                #input(modified_DB[modified_title])
             else:
                 check_string += 'where name = "'
                 check_string += game.strip()
@@ -454,127 +469,6 @@ while(igdb_check == False):
                     # print(plat_ID.value)
                     # print(plat_ID.id)
                     # match plat_ID:
-                    """
-                    if (plat_ID.id == 3):
-                        plat_name = "Linux"
-                    elif (plat_ID.id == 4):
-                        plat_name = "N64"
-                    elif (plat_ID.id == 5):
-                        plat_name = "Wii"
-                    elif (plat_ID.id == 6):
-                        plat_name = "PC (Windows)"
-                    elif (plat_ID.id == 7):
-                        plat_name = "PS1"
-                    elif (plat_ID.id == 8):
-                        plat_name = "PS2"
-                    elif (plat_ID.id == 9):
-                        plat_name = "PS3"
-                    elif (plat_ID.id == 11):
-                        plat_name = "Xbox"
-                    elif (plat_ID.id == 12):
-                        plat_name = "X360"
-                    elif (plat_ID.id == 13):
-                        plat_name = "PC-DOS"
-                    elif (plat_ID.id == 14):
-                        plat_name = "Mac"
-                    elif (plat_ID.id == 15):
-                        plat_name = "C64 & C128"
-                    elif (plat_ID.id == 16):
-                        plat_name = "Amiga"
-                    elif (plat_ID.id == 18):
-                        plat_name = "NES"
-                    elif (plat_ID.id == 19):
-                        plat_name = "SNES"
-                    elif (plat_ID.id == 20):
-                        plat_name = "DS"
-                    elif (plat_ID.id == 21):
-                        plat_name = "GCN"
-                    elif (plat_ID.id == 22):
-                        plat_name = "GBC"
-                    elif (plat_ID.id == 23):
-                        plat_name = "DC"
-                    elif (plat_ID.id == 24):
-                        plat_name = "GBA"
-                    elif (plat_ID.id == 25):
-                        plat_name = "Amstrad CPC"
-                    elif (plat_ID.id == 26):
-                        plat_name = "ZX Spectrum"
-                    elif (plat_ID.id == 27):
-                        plat_name = "MSX"
-                    elif (plat_ID.id == 29):
-                        plat_name = "GEN/MD"
-                    elif (plat_ID.id == 30):
-                        plat_name = "32X"
-                    elif (plat_ID.id == 32):
-                        plat_name = "SAT"
-                    elif (plat_ID.id == 33):
-                        plat_name = "GB"
-                    elif (plat_ID.id == 34):
-                        plat_name = "Android"
-                    elif (plat_ID.id == 35):
-                        plat_name = "Sega Game Gear"
-                    elif (plat_ID.id == 36):
-                        plat_name = "XBLA"
-                    elif (plat_ID.id == 37):
-                        plat_name = "3DS"
-                    elif (plat_ID.id == 38):
-                        plat_name = "PSP"
-                    elif (plat_ID.id == 39):
-                        plat_name = "iOS"
-                    elif (plat_ID.id == 41):
-                        plat_name = "Wii U"
-                    elif (plat_ID.id == 42):
-                        plat_name = "N-Gage"
-                    elif (plat_ID.id == 44):
-                        plat_name = "Tapwave Zodiac"
-                    elif (plat_ID.id == 45):
-                        plat_name = "PSN"
-                    elif (plat_ID.id == 46):
-                        plat_name = "Vita"
-                    elif (plat_ID.id == 48):
-                        plat_name = "PS4"
-                    elif (plat_ID.id == 49):
-                        plat_name = "XONE"
-                    elif (plat_ID.id == 52):
-                        plat_name = "Arcade"
-                    elif (plat_ID.id == 58):
-                        plat_name = "Super Famicom"
-                    elif (plat_ID.id == 59):
-                        plat_name = "2600"
-                    elif (plat_ID.id == 64):
-                        plat_name = "Sega Master System"
-                    elif (plat_ID.id == 65):
-                        plat_name = "Atari 8-bit"
-                    elif (plat_ID.id == 71):
-                        plat_name = "Commodore VIC-20"
-                    elif (plat_ID.id == 75):
-                        plat_name = "Apple II"
-                    elif (plat_ID.id == 79):
-                        plat_name = "Neo Geo MVS"
-                    elif (plat_ID.id == 80):
-                        plat_name = "Neo Geo AES"
-                    elif (plat_ID.id == 88):
-                        plat_name = "Magnavox Odyssey"
-                    elif (plat_ID.id == 99):
-                        plat_name = "Famicom"
-                    elif (plat_ID.id == 129):
-                        plat_name = "Texas Instruments TI-99"
-                    elif (plat_ID.id == 130):
-                        plat_name = "Switch"
-                    elif (plat_ID.id == 137):
-                        plat_name = "New Nintendo 3DS"
-                    elif (plat_ID.id == 149):
-                        plat_name = "PC-98"
-                    elif (plat_ID.id == 169):
-                        plat_name = "Xbox Series"
-                    elif (plat_ID.id == 306):
-                        plat_name = "Satellaview"
-                    elif (plat_ID.id == 379):
-                        plat_name = "Game.com"
-                    # test comment to make sure everything restored properly
-                    else:
-                        plat_name = "Unknown"
-                    """
                     sub_query = 'fields name; where id=' + str(plat_ID.id) + ';'
                     sub_request = wrapper.api_request(
                         'platforms.pb',  # Note the '.pb' suffix at the endpoint
@@ -653,7 +547,7 @@ while(igdb_check == False):
                         inv_companies_message.ParseFromString(sub_request_1)  # Fills the protobuf message object with the response
                         inv_companies = inv_companies_message.involvedcompanies
                         #print(inv_companies)
-                        print(len(inv_companies))
+                        #print(len(inv_companies))
                         if(len(inv_companies) == 0):
                             continue
                         #second query to look at the company specifically
@@ -862,8 +756,8 @@ while(igdb_check == False):
                             inv_companies_message.ParseFromString(
                                 sub_request_1)  # Fills the protobuf message object with the response
                             inv_companies = inv_companies_message.involvedcompanies
-                            print(inv_companies)
-                            print(len(inv_companies))
+                            #print(inv_companies)
+                            #print(len(inv_companies))
                             if (len(inv_companies) == 0):
                                 continue
                             # second query to look at the company specifically
@@ -876,7 +770,7 @@ while(igdb_check == False):
                             companies_message.ParseFromString(
                                 sub_request_2)  # Fills the protobuf message object with the response
                             companies = companies_message.companies
-                            print(companies)
+                            #print(companies)
                             dev_name = companies[0].name
                             gameDb[game].list_developers.append(dev_name)
                             #input(dev_name)
@@ -939,8 +833,20 @@ list_col = monDB["lists"]
 
 #INSERT ALL GAMES INTO DATABASE
 #Clear database to begin with?
-mon_col.drop()
-list_col.drop()
+while True:
+    print("Would you like to clear the database to start? Y or N")
+    clear_option = input()
+    if(clear_option == "Y" or clear_option == "y"):
+        print("Ok, clearing the game and list collections")
+        mon_col.drop()
+        list_col.drop()
+        break
+    elif (clear_option == "N" or clear_option == "n"):
+        print("Ok, leaving it as is")
+        break
+    else:
+        print("I'm sorry, I don't understand. Please enter valid input")
+        continue
 #export = []
 print("INSERTING INTO MONGODB!")
 for game, details in gameDb.items():
@@ -949,7 +855,18 @@ for game, details in gameDb.items():
     #insertion = mon_col.insert_one(gameDb[game])
     #export.append(details)
     export_dict = {}
-    export_dict["Title"] = game
+    if (game.startswith('<')):
+        #If I successfully improve how titles get put out to mongo cluster, make the IGDB ID the key I use there for ID
+        print(game)
+        pattern_match = r'[0-9]+'
+        substring = re.findall(pattern_match, game)
+        title_ID = substring[0]
+        removal = '<' + title_ID + '> '
+        modified_title = game.strip(removal)
+        #input(modified_title)
+        export_dict["Title"] = modified_title
+    else:
+        export_dict["Title"] = game
     export_dict["IGDB ID"] = details.igdb_ID
     export_dict["Ranked Score"] = details.ranked_score
     export_dict["Inclusion Score"] = details.list_count
@@ -966,7 +883,7 @@ for game, details in gameDb.items():
     #export_dict = dict(game)
     #^need to expand and clarify more?
     #export_dict = dict('Title' = game, 'IGDB ID' = details.igdb_ID, 'Ranked Score' = details.ranked_score)
-    print(export_dict)
+    #print(export_dict)
     insertion = mon_col.insert_one(export_dict)
 #insertion = mon_col.insert_many(gameDb)
 #insertion = mon_col.insert_many(export)
@@ -1018,13 +935,25 @@ file_average_uncompleted = open("Sorted by Average (Uncompleted).txt","w", encod
 
 for game in games_pulled_ranked:
     #print(game)
+
     entry = ""
     completed = game["Completed"]
     if (completed == True):
         entry += "[x]"
+    """
     entry += game['Title'].strip()
     entry += " --> "
     entry += str(game['Ranked Score'])
+    """
+    #entry += game['Title'].strip() + " [" + game['IGDB ID'] + "]" + " --> " + str(game['Inclusion Score'])
+    print(game['Title'])
+    print(game['Ranked Score'])
+    entry += game['Title'].strip()
+    if (igdb_answer == 'Y' or igdb_answer == 'Yes'):
+        #Needed while we are using timespeedup
+        if(game['IGDB ID'] != None):
+            entry += " [IGDB ID: " + str(game['IGDB ID']) + "]"
+    entry += " --> " + str(game['Ranked Score'])
     file_ranked.write(entry)
     file_ranked.write("\n")
     if (completed == False):
@@ -1036,9 +965,18 @@ for game in games_pulled_inclusion:
     completed = game["Completed"]
     if (completed == True):
         entry += "[x]"
+    """
     entry += game['Title'].strip()
     entry += " --> "
     entry += str(game['Inclusion Score'])
+    """
+    #entry += game['Title'].strip() + " [" + game['IGDB ID'] + "]" + " --> " + str(game['Inclusion Score'])
+    entry += game['Title'].strip()
+    if (igdb_answer == 'Y' or igdb_answer == 'Yes'):
+        # Needed while we are using timespeedup
+        if (game['IGDB ID'] != None):
+            entry += " [IGDB ID: " + str(game['IGDB ID']) + "]"
+    entry += " --> " + str(game['Inclusion Score'])
     file_inclusion.write(entry)
     file_inclusion.write("\n")
     if (completed == False):
@@ -1050,9 +988,18 @@ for game in games_pulled_average:
     completed = game["Completed"]
     if (completed == True):
         entry += "[x]"
+    """
     entry += game['Title'].strip()
     entry += " --> "
     entry += str(game['Average Score'])
+    """
+    #entry += game['Title'].strip() + " [" + game['IGDB ID'] + "]" + " --> " + str(game['Average Score'])
+    entry += game['Title'].strip()
+    if (igdb_answer == 'Y' or igdb_answer == 'Yes'):
+        # Needed while we are using timespeedup
+        if (game['IGDB ID'] != None):
+            entry += " [IGDB ID: " + str(game['IGDB ID']) + "]"
+    entry += " --> " + str(game['Average Score'])
     file_average.write(entry)
     file_average.write("\n")
     if (completed == False):
@@ -1063,57 +1010,79 @@ for game in games_pulled_average:
 bold_style = xlwt.easyxf('font: bold 1;')
 crossed_style = xlwt.easyxf('font: struck_out 1;')
 sheet1.write(0, 0, 'TITLE', bold_style)
-sheet1.write(0, 1, 'RANKED SCORE', bold_style)
-sheet1.write(0, 2, 'INCLUSION SCORE', bold_style)
-sheet1.write(0, 3, 'AVERAGE SCORE', bold_style)
-sheet1.write(0, 4, 'LISTS INCLUDED ON', bold_style)
-sheet1.write(0, 5, 'MAIN PLATFORM', bold_style)
-sheet1.write(0, 6, 'LIST OF PLATFORMS', bold_style)
-sheet1.write(0, 7, 'RELEASE DATE', bold_style)
-sheet1.write(0, 8, 'PLAYER COUNTS', bold_style)
-sheet1.write(0, 9, 'DEVELOPERS', bold_style)
+sheet1.write(0, 1, 'IGDB ID', bold_style)
+sheet1.write(0, 2, 'RANKED SCORE', bold_style)
+sheet1.write(0, 3, 'INCLUSION SCORE', bold_style)
+sheet1.write(0, 4, 'AVERAGE SCORE', bold_style)
+sheet1.write(0, 5, 'LISTS INCLUDED ON', bold_style)
+sheet1.write(0, 6, 'COMPLETED', bold_style)
+sheet1.write(0, 7, 'MAIN PLATFORM', bold_style)
+sheet1.write(0, 8, 'LIST OF PLATFORMS', bold_style)
+sheet1.write(0, 9, 'RELEASE DATE', bold_style)
+sheet1.write(0, 10, 'PLAYER COUNTS', bold_style)
+sheet1.write(0, 11, 'DEVELOPERS', bold_style)
 excel_count = 1
 for game in games_pulled:
     ranked_score = game['Ranked Score']
     inclusion_score = game['Inclusion Score']
     average_score = ranked_score / game['Total Count']
-    if(game['Completed'] == True):
+    completion_status = game['Completed']
+    #if(game['Completed'] == True):
+    if (completion_status == True):
         sheet1.write(excel_count, 0, game['Title'], crossed_style)
     else:
         sheet1.write(excel_count, 0, game['Title'])
-    sheet1.write(excel_count, 1, ranked_score)
-    sheet1.write(excel_count, 2, inclusion_score)
-    sheet1.write(excel_count, 3, average_score)
+    if (igdb_answer == 'Y' or igdb_answer == 'Yes'):
+        # Needed while we are using timespeedup
+        if (game['IGDB ID'] != None):
+            sheet1.write(excel_count, 1, game['IGDB ID'])
+    sheet1.write(excel_count, 2, ranked_score)
+    sheet1.write(excel_count, 3, inclusion_score)
+    sheet1.write(excel_count, 4, average_score)
+    """
+    #Replacing this approach with the newly discovered join() approach?
     output_lists = ""
     for ref_list in game['List of References']:
         output_lists += ref_list
         output_lists += ", "
-    sheet1.write(excel_count, 4, output_lists)
+    """
+    #crypto_string = ', '.join(crypto_list)
+    output_lists = ', '.join(game['List of References'])
+    sheet1.write(excel_count, 5, output_lists)
+    sheet1.write(excel_count, 6, completion_status)
     #sheet1.write(excel_count, 5, game['Main Platform'].strip())
-    sheet1.write(excel_count, 5, game['Main Platform'])
+    sheet1.write(excel_count, 7, game['Main Platform'])
     #Create a loop to deal with printing the platforms in a comma approach
+    """
     game_platforms = game['List of Platforms']
-    platforms_string = ""
-    plat_next = 1
     #print(game_platforms)
     #print(len(game_platforms))
     #input("Here are the number of platforms")
+    platforms_string = ""
+    plat_next = 1
+    #Replacing this approach with the newly discovered join() approach?
     for platform in game_platforms:
         platforms_string += platform
         if(plat_next < len(game_platforms)):
             platforms_string += ", "
         plat_next += 1
+    """
+    platforms_string = ', '.join(game['List of Platforms'])
     #sheet1.write(excel_count, 6, game['List of Platforms'])
-    sheet1.write(excel_count, 6, platforms_string)
+    sheet1.write(excel_count, 8, platforms_string)
     #sheet1.write(excel_count, 7, game['Release Date'].strip())
     #^Try to strip escape chars out earlier or the items themselves
-    sheet1.write(excel_count, 7, game['Release Date'])
-    sheet1.write(excel_count, 8, game['Player Counts'])
-    sheet1.write(excel_count, 9, game['Developers'])
+    sheet1.write(excel_count, 9, game['Release Date'])
+    players_string = ', '.join(game['Player Counts'])
+    #sheet1.write(excel_count, 8, game['Player Counts'])
+    sheet1.write(excel_count, 10, players_string)
+    devs_string = ', '.join(game['Developers'])
+    #sheet1.write(excel_count, 9, game['Developers'])
+    sheet1.write(excel_count, 11, devs_string)
     excel_count += 1
 wb.save('Sorted Database.xls')
 
-games_pulled = mon_col.find().limit(10)
+games_pulled = mon_col.find().limit(5)
 for game in games_pulled:
     print("Here is a game")
     print(game)
