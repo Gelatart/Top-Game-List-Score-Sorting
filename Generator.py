@@ -134,7 +134,8 @@ for filename in os.listdir(directory):
                 gameDb[line] = newObj
             #searchObj = gameDb.get(newObj, 0) + 1
             #gameDb[line].list_count = gameDb.get(newObj, 0) + 1
-            print("Score of {}: {}".format(count, line.strip()))
+            #print("Score of {}: {}".format(count, line.strip()))
+            print(f"Score of {count}: {line.strip()}")
             count -= 1
         games_lists.append(filename)
 
@@ -177,7 +178,8 @@ for filename in os.listdir(directory):
                 gameDb[line] = newObj
             #searchObj = gameDb.get(newObj, 0) + 1
             #gameDb[line].list_count = gameDb.get(newObj, 0) + 1
-            print("Score of {}: {}".format(count, line.strip()))
+            # print("Score of {}: {}".format(count, line.strip()))
+            print(f"Score of {count}: {line.strip()}")
             #count -= 1
         games_lists.append(filename)
 
@@ -213,7 +215,8 @@ for filename in os.listdir(directory):
                 gameDb[line] = newObj
             #searchObj = gameDb.get(newObj, 0) + 1
             #gameDb[line].list_count = gameDb.get(newObj, 0) + 1
-            print("Score of {}: {}".format(count, line.strip()))
+            # print("Score of {}: {}".format(count, line.strip()))
+            print(f"Score of {count}: {line.strip()}")
             #count -= 1
         games_lists.append(filename)
 
@@ -321,11 +324,14 @@ while(igdb_check == False):
         """
         client_id = os.getenv('CLIENT_ID')
         client_secret = os.getenv('CLIENT_SECRET')
+        """
         post = 'https://id.twitch.tv/oauth2/token?client_id='
         post += client_id
         post += '&client_secret='
         post += client_secret
         post += '&grant_type=client_credentials'
+        """
+        post = f'https://id.twitch.tv/oauth2/token?client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials'
 
         # page = requests.get(post) #404
         page = requests.post(post)  # gives access token we can use
@@ -364,11 +370,11 @@ while(igdb_check == False):
         for game, details in gameDb.items():
             #Set time speedup back to 0 if want full and accurate database for all items
             #need to set value in both if and elif to work properly
-            if(time_speedup < 80):
+            if(time_speedup < 11):
                 print("SKIPPING!!")
                 time_speedup += 1
                 continue
-            elif(time_speedup == 80):
+            elif(time_speedup == 11):
                 time_speedup = 0
             check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
             check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
@@ -907,12 +913,15 @@ for list in games_lists:
 
 #once gone through creating the lists, use separate files to mark the status of games? (completed, etc.)
 
-list_counts = "Ranked Lists: " + str(ranked_file_count)
-print(list_counts)
-list_counts = "Unranked Lists: " + str(unranked_file_count)
-print(list_counts)
-list_counts = "Former Lists: " + str(former_file_count)
-print(list_counts)
+#list_counts = "Ranked Lists: " + str(ranked_file_count)
+#print(list_counts)
+print(f"Ranked Lists: {ranked_file_count}")
+#list_counts = "Unranked Lists: " + str(unranked_file_count)
+#print(list_counts)
+print(f"Unranked Lists: {unranked_file_count}")
+#list_counts = "Former Lists: " + str(former_file_count)
+#print(list_counts)
+print(f"Former Lists: {former_file_count}")
 
 print("LISTS USED IN PROCESS:")
 for list in games_lists:

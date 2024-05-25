@@ -1134,6 +1134,9 @@ while(answer_check_main == False):
                         print("Grabbing console platforms")
                         print()
                         #Nintendo 64
+                        #Wii
+                        #PlayStation
+                        #PlayStation 2
                         #... (console querying)
                         print("Console platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
