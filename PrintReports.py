@@ -1133,10 +1133,20 @@ while(answer_check_main == False):
                         print()
                         print("Grabbing console platforms")
                         print()
+                        #Nintendo Entertainment System
+                        #Super Nintendo Entertainment System
                         #Nintendo 64
+                        #Nintendo GameCube
                         #Wii
+                        #Sega Mega Drive/Genesis
+                        #Sega 32X
+                        #Sega Saturn
+                        #Dreamcast
                         #PlayStation
                         #PlayStation 2
+                        #PlayStation 3
+                        #Xbox
+                        #Xbox 360
                         #... (console querying)
                         print("Console platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1144,7 +1154,15 @@ while(answer_check_main == False):
                     elif (platform_format == "2"):
                         #Handheld
                         print()
+                        print("Grabbing handheld platforms")
+                        print()
+                        # Game Boy
+                        # Game Boy Color
+                        # Game Boy Advance
+                        # Nintendo DS
+                        #Sega Game Gear
                         # ... (console querying)
+                        print("Handheld platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (platform_format == "3"):
@@ -1200,18 +1218,26 @@ while(answer_check_main == False):
                         #...?
                         print()
                         # ... (console querying)
+                        print("Mobile phone platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (platform_format == "6"):
                         #Virtual Reality
                         print()
+                        print("Grabbing VR platforms")
+                        print()
                         # ... (console querying)
+                        print("VR platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (platform_format == "7"):
                         #Platform
                         print()
+                        print("Grabbing platform-style platforms")
+                        print()
+                        #Xbox Live Arcade (?)
                         # ... (console querying)
+                        print("Platform-style platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     else:
