@@ -1133,20 +1133,52 @@ while(answer_check_main == False):
                         print()
                         print("Grabbing console platforms")
                         print()
+                        #Atari 2600
+                        #Atari 5200
+                        #Atari 7800
+                        #Atari Jaguar
                         #Nintendo Entertainment System
+                        #Family Computer
+                        #Family Computer Disk System
                         #Super Nintendo Entertainment System
+                        #Super Famicom
                         #Nintendo 64
                         #Nintendo GameCube
                         #Wii
+                        #Wii U
+                        #Nintendo Switch
+                        #Nintendo PlayStation
+                        #SG-1000
+                        #Sega Master System/Mark III
                         #Sega Mega Drive/Genesis
+                        #Sega CD
                         #Sega 32X
                         #Sega Saturn
                         #Dreamcast
                         #PlayStation
                         #PlayStation 2
                         #PlayStation 3
+                        #PlayStation 4
+                        #PlayStation 5
                         #Xbox
                         #Xbox 360
+                        #Xbox One
+                        #TurboGrafx-16/PC Engine
+                        #PC Engine SuperGrafx
+                        #Neo Geo AES
+                        #Neo Geo CD
+                        # Intellivision
+                        # ColecoVision
+                        #3DO Interactive Multiplayer
+                        #Philips CD-i
+                        #Vectrex
+                        #Odyssey
+                        #Odyssey 2 / Videopac G7000
+                        #Amiga CD32
+                        #Fairchild Channel F
+                        #Bally Astrocade
+                        #VC 4000
+                        #1292 Advanced Programmable Video System
                         #... (console querying)
                         print("Console platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1158,9 +1190,24 @@ while(answer_check_main == False):
                         print()
                         # Game Boy
                         # Game Boy Color
+                        #Virtual Boy
                         # Game Boy Advance
                         # Nintendo DS
+                        #Nintendo DSi
+                        #Nintendo 3DS
+                        #New Nintendo 3DS
+                        #Nintendo Switch
                         #Sega Game Gear
+                        #PlayStation Portable
+                        #PlayStation Vita
+                        #Atari Lynx
+                        #Neo Geo Pocket
+                        #Neo Geo Pocket Color
+                        #WonderSwan
+                        #WonderSwan Color
+                        #N-Gage
+                        #Microvision
+                        #Tapwave Zodiac
                         # ... (console querying)
                         print("Handheld platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1172,13 +1219,21 @@ while(answer_check_main == False):
                         print()
                         #DOS
                         #PC (Microsoft Windows)
+                        #Apple II
                         #Mac
                         #Linux
                         #Commodore C64/128/MAX
+                        #Commodore VIC-20
                         #Amiga
                         #MSX
+                        #MSX2
+                        #Atari ST/STE
+                        #Atari 8-bit
                         #ZX Spectrum
+                        #FM Towns
                         #Amstrad CPC
+                        #BBC Microcomputer System
+                        #Texas Instruments TI-99
                         # ... (computer / desktop OS querying)
                         print("Computer / Desktop OS platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1209,6 +1264,7 @@ while(answer_check_main == False):
                         print()
                         print("Grabbing mobile phone platforms")
                         print()
+                        #Mobile
                         #iOS
                         #Android
                         #BlackBerry OS
@@ -1235,6 +1291,9 @@ while(answer_check_main == False):
                         print()
                         print("Grabbing platform-style platforms")
                         print()
+                        #Virtual Console (?)
+                        #WiiWare (?, removed?)
+                        #PlayStation Network (?)
                         #Xbox Live Arcade (?)
                         # ... (console querying)
                         print("Platform-style platforms added to querying!")
