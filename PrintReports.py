@@ -1164,6 +1164,7 @@ while(answer_check_main == False):
                         #Xbox 360
                         #Xbox One
                         #TurboGrafx-16/PC Engine
+                        #Turbografx-16/PC Engine CD
                         #PC Engine SuperGrafx
                         #Neo Geo AES
                         #Neo Geo CD
@@ -1179,6 +1180,7 @@ while(answer_check_main == False):
                         #Bally Astrocade
                         #VC 4000
                         #1292 Advanced Programmable Video System
+                        #PC-50X Family
                         #... (console querying)
                         print("Console platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1229,8 +1231,10 @@ while(answer_check_main == False):
                         #MSX2
                         #Atari ST/STE
                         #Atari 8-bit
-                        #ZX Spectrum
+                        #PC-98
                         #FM Towns
+                        #FM-7
+                        # ZX Spectrum
                         #Amstrad CPC
                         #BBC Microcomputer System
                         #Texas Instruments TI-99
