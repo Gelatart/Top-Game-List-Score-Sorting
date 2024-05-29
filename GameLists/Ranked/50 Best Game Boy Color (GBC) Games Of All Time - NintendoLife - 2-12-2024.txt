@@ -13,7 +13,7 @@ Super Mario Bros. Deluxe
 <205600> Dragon Warrior III
 <135389> Mario Golf [GBC]
 Dragon Warrior Monsters
-<152752> Donkey Kong Country
+<152752> Donkey Kong Country [GBC]
 <4567> Pokemon Trading Card Game
 Tetris DX
 Shantae

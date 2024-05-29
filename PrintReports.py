@@ -7,6 +7,154 @@ import dotenv
 from dotenv import load_dotenv
 import datetime
 
+def print_platforms():
+    #Spun off into its own function so we don't have to worry about maintaining multiple versions of data in-code
+    #Just grab it from here when needed
+    print("Here are all the platforms that there are!")
+    print("3. Linux")
+    print("4. Nintendo 64")
+    print("5. Wii")
+    print("6. PC (Microsoft Windows)")
+    print("7. PlayStation")
+    print("8. PlayStation 2")
+    print("9. PlayStation 3")
+    print("11. Xbox")
+    print("12. Xbox 360")
+    print("13. DOS")
+    print("14. Mac")
+    print("15. Commodore C64/128/MAX")
+    print("16. Amiga")
+    print("18. Nintendo Entertainment System")
+    print("19. Super Nintendo Entertainment System")
+    print("20. Nintendo DS")
+    print("21. Nintendo GameCube")
+    print("22. Game Boy Color")
+    print("23. Dreamcast")
+    print("24. Game Boy Advance")
+    print("25. Amstrad CPC")
+    print("26. ZX Spectrum")
+    print("27. MSX")
+    print("29. Sega Mega Drive/Genesis")
+    print("30. Sega 32X")
+    print("32. Sega Saturn")
+    print("33. Game Boy")
+    print("34. Android")
+    print("35. Sega Game Gear")
+    print("36. Xbox Live Arcade")
+    print("37. Nintendo 3DS")
+    print("38. PlayStation Portable")
+    print("39. iOS")
+    print("41. Wii U")
+    print("42. N-Gage")
+    print("44. Tapwave Zodiac")
+    print("45. PlayStation Network")
+    print("46. PlayStation Vita")
+    print("47. Virtual Console")
+    print("48. PlayStation 4")
+    print("49. Xbox One")
+    print("50. 3DO Interactive Multiplayer")
+    print("51. Family Computer Disk System")
+    print("52. Arcade")
+    print("53. MSX2")
+    print("55. Mobile")
+    # print("56. WiiWare") #Removed?
+    print("57. WonderSwan")
+    print("58. Super Famicom")
+    print("59. Atari 2600")
+    print("60. Atari 7800")
+    print("61. Atari Lynx")
+    print("62. Atari Jaguar")
+    print("63. Atari ST/STE")
+    print("64. Sega Master System/Mark III")
+    print("65. Atari 8-bit")
+    print("66. Atari 5200")
+    print("67. Intellivision")
+    print("68. ColecoVision")
+    print("69. BBC Microcomputer System")
+    print("70. Vectrex")
+    print("71. Commodore VIC-20")
+    print("72. Ouya")
+    print("73. BlackBerry OS")
+    print("74. Windows Phone")
+    print("75. Apple II")
+    print("77. Sharp X1")
+    print("78. Sega CD")
+    print("79. Neo Geo MVS")
+    print("80. Neo Geo AES")
+    print("82. Web browser")
+    print("84. SG-1000")
+    print("85. Donner Model 30")
+    print("86. TurboGrafx-16/PC Engine")
+    print("87. Virtual Boy")
+    print("88. Odyssey")
+    print("89. Microvision")
+    print("90. Commodore PET")
+    print("91. Bally Astrocade")
+    #print("92. SteamOS") #Removed?
+    print("93. Commodore 16")
+    print("94. Commodore Plus/4")
+    print("95. PDP-1")
+    print("96. PDP-10")
+    print("97. PDP-8")
+    print("99. Family Computer")
+    print("114. Amiga CD32")
+    print("117. Philips CD-i")
+    print("118. FM Towns")
+    print("119. Neo Geo Pocket")
+    print("120. Neo Geo Pocket Color")
+    print("123. WonderSwan Color")
+    print("127. Fairchild Channel F")
+    print("128. PC Engine SuperGrafx")
+    print("129. Texas Instruments TI-99")
+    print("130. Nintendo Switch")
+    print("131. Nintendo PlayStation")
+    print("133. Odyssey 2 / Videopac G7000")
+    print("135. Hyper Neo Geo 64")
+    print("136. Neo Geo CD")
+    print("137. New Nintendo 3DS")
+    print("138. VC 4000")
+    print("139. 1292 Advanced Programmable Video System")
+    print("142. PC-50X Family")
+    print("149. PC-98")
+    print("150. Turbografx-16/PC Engine CD")
+    print("152. FM-7")
+    print("159. Nintendo DSi")
+    print("165. PlayStation VR")
+    print("166. Pokémon mini")
+    print("167. PlayStation 5")
+    print("169. Xbox Series X|S")
+    print("170. Google Stadia")
+    print("240. Zeebo")
+    print("274. PC-FX")
+    print("306. Satellaview")
+    print("307. Game & Watch")
+    print("308. Playdia")
+    print("309. Evercade")
+    print("339. Sega Pico")
+    print("375. Epoch Cassette Vision")
+    print("376. Epoch Super Cassette Vision")
+    print("378. Gamate")
+    print("379. Game.com")
+    print("381. Playdate")
+    print("390. PlayStation VR2")
+    print("405. Windows Mobile")
+    print("407. HyperScan")
+    print("410. Atari Jaguar CD")
+    print("412. Leapster")
+    print("413. Leapster Explorer/LeadPad Explorer")
+    print("414. LeapTV")
+    print("417. Palm OS")
+    print("439. V.Smile")
+    print("440. Visual Memory Unit / Visual Memory System")
+    print("441. PocketStation")
+    print("471. Meta Quest 3")
+    print("476. Apple Pippin")
+    print("477. Panasonic Jungle")
+    print("478. Panasonic M2")
+    print("486. Digiblast")
+    #input()
+    print()
+
 print("Welcome to PrintReports!")
 
 #print("For now let's start with a test pull. Best games for the Wii!")
@@ -141,137 +289,7 @@ while(answer_check_main == False):
                 print("Now we are going to list all of the options of platforms you can choose from")
                 print("Note that the numbers are listed as so because they are the platform ID's listed in IGDB's API")
                 input("Whenever you are ready, the platform options will be listed in full (For now use the text version)\n")
-                #store this list somewhere where it can be grabbed in its own function, doesn't need redundant copying?
-                print("3. Linux")
-                print("4. Nintendo 64")
-                print("5. Wii")
-                print("6. PC (Microsoft Windows)")
-                print("7. PlayStation")
-                print("8. PlayStation 2")
-                print("9. PlayStation 3")
-                print("11. Xbox")
-                print("12. Xbox 360")
-                print("13. DOS")
-                print("14. Mac")
-                print("15. Commodore C64/128/MAX")
-                print("16. Amiga")
-                print("18. Nintendo Entertainment System")
-                print("19. Super Nintendo Entertainment System")
-                print("20. Nintendo DS")
-                print("21. Nintendo GameCube")
-                print("22. Game Boy Color")
-                print("23. Dreamcast")
-                print("24. Game Boy Advance")
-                print("25. Amstrad CPC")
-                print("26. ZX Spectrum")
-                print("27. MSX")
-                print("29. Sega Mega Drive/Genesis")
-                print("30. Sega 32X")
-                print("32. Sega Saturn")
-                print("33. Game Boy")
-                print("34. Android")
-                print("35. Sega Game Gear")
-                print("36. Xbox Live Arcade")
-                print("37. Nintendo 3DS")
-                print("38. PlayStation Portable")
-                print("39. iOS")
-                print("41. Wii U")
-                print("42. N-Gage")
-                print("44. Tapwave Zodiac")
-                print("45. PlayStation Network")
-                print("46. PlayStation Vita")
-                print("47. Virtual Console")
-                print("48. PlayStation 4")
-                print("49. Xbox One")
-                print("50. 3DO Interactive Multiplayer")
-                print("51. Family Computer Disk System")
-                print("52. Arcade")
-                print("53. MSX2")
-                print("55. Mobile")
-                #print("56. WiiWare") #Removed?
-                print("57. WonderSwan")
-                print("58. Super Famicom")
-                print("59. Atari 2600")
-                print("60. Atari 7800")
-                print("61. Atari Lynx")
-                print("62. Atari Jaguar")
-                print("63. Atari ST/STE")
-                print("64. Sega Master System/Mark III")
-                print("65. Atari 8-bit")
-                print("66. Atari 5200")
-                print("67. Intellivision")
-                print("68. ColecoVision")
-                print("69. BBC Microcomputer System")
-                print("70. Vectrex")
-                print("71. Commodore VIC-20")
-                print("73. BlackBerry OS")
-                print("74. Windows Phone")
-                print("75. Apple II")
-                print("78. Sega CD")
-                print("79. Neo Geo MVS")
-                print("80. Neo Geo AES")
-                print("84. SG-1000")
-                print("86. TurboGrafx-16/PC Engine")
-                print("87. Virtual Boy")
-                print("88. Odyssey")
-                print("89. Microvision")
-                print("91. Bally Astrocade")
-                print("99. Family Computer")
-                print("114. Amiga CD32")
-                print("117. Philips CD-i")
-                print("118. FM Towns")
-                print("119. Neo Geo Pocket")
-                print("120. Neo Geo Pocket Color")
-                print("123. WonderSwan Color")
-                print("127. Fairchild Channel F")
-                print("128. PC Engine SuperGrafx")
-                print("129. Texas Instruments TI-99")
-                print("130. Nintendo Switch")
-                print("131. Nintendo PlayStation")
-                print("133. Odyssey 2 / Videopac G7000")
-                print("135. Hyper Neo Geo 64")
-                print("136. Neo Geo CD")
-                print("137. New Nintendo 3DS")
-                print("138. VC 4000")
-                print("139. 1292 Advanced Programmable Video System")
-                print("142. PC-50X Family")
-                print("149. PC-98")
-                print("150. Turbografx-16/PC Engine CD")
-                print("152. FM-7")
-                print("159. Nintendo DSi")
-                print("165. PlayStation VR")
-                print("166. Pokémon mini")
-                print("167. PlayStation 5")
-                print("169. Xbox Series X|S")
-                print("170. Google Stadia")
-                print("240. Zeebo")
-                print("274. PC-FX")
-                print("306. Satellaview")
-                print("307. Game & Watch")
-                print("308. Playdia")
-                print("309. Evercade")
-                print("339. Sega Pico")
-                print("375. Epoch Cassette Vision")
-                print("376. Epoch Super Cassette Vision")
-                print("378. Gamate")
-                print("379. Game.com")
-                print("381. Playdate")
-                print("390. PlayStation VR2")
-                print("405. Windows Mobile")
-                print("407. HyperScan")
-                print("410. Atari Jaguar CD")
-                print("412. Leapster")
-                print("413. Leapster Explorer/LeadPad Explorer")
-                print("414. LeapTV")
-                print("417. Palm OS")
-                print("439. V.Smile")
-                print("440. Visual Memory Unit / Visual Memory System")
-                print("441. PocketStation")
-                print("471. Meta Quest 3")
-                print("476. Apple Pippin")
-                print("477. Panasonic Jungle")
-                print("478. Panasonic M2")
-                print("486. Digiblast")
+                print_platforms() #Used to have all the info listed here
                 print("Which platform would you like to include?")
                 #have function to check if number just given was one of the valid options?
                 #going to go off of IGDB ID's for now, need to keep adding more
@@ -412,6 +430,7 @@ while(answer_check_main == False):
                             #Linux
                             #Android
                             #Google Stadia
+                            #Ouya (!)
                             new_query = {"List of Platforms": "Linux"}
                             queries.append(new_query)
                             platform_queries.append(new_query)
@@ -419,6 +438,9 @@ while(answer_check_main == False):
                             queries.append(new_query)
                             platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Google Stadia"}
+                            queries.append(new_query)
+                            platform_queries.append(new_query)
+                            new_query = {"List of Platforms": "Ouya"}
                             queries.append(new_query)
                             platform_queries.append(new_query)
                         elif (brand_option == 5):
@@ -690,6 +712,7 @@ while(answer_check_main == False):
                     #PlayStation Vita
                     #PlayStation VR
                     #Xbox One
+                    # Ouya
                     #Evercade
                     #LeapTV
                     #Panasonic Jungle (cancelled)
@@ -1053,6 +1076,7 @@ while(answer_check_main == False):
                         # PlayStation Vita
                         # PlayStation VR
                         # Xbox One
+                        # Ouya
                         # Evercade
                         # LeapTV
                         new_query = {"List of Platforms": "Wii U"}
@@ -1077,6 +1101,9 @@ while(answer_check_main == False):
                         queries.append(new_query)
                         platform_queries.append(new_query)
                         new_query = {"List of Platforms": "Xbox One"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Ouya"}
                         queries.append(new_query)
                         platform_queries.append(new_query)
                         new_query = {"List of Platforms": "Evercade"}
@@ -1137,6 +1164,7 @@ while(answer_check_main == False):
                         #Atari 5200
                         #Atari 7800
                         #Atari Jaguar
+                        #Atari Jaguar CD
                         #Nintendo Entertainment System
                         #Family Computer
                         #Family Computer Disk System
@@ -1155,6 +1183,7 @@ while(answer_check_main == False):
                         #Sega 32X
                         #Sega Saturn
                         #Dreamcast
+                        #Sega Pico
                         #PlayStation
                         #PlayStation 2
                         #PlayStation 3
@@ -1163,9 +1192,11 @@ while(answer_check_main == False):
                         #Xbox
                         #Xbox 360
                         #Xbox One
+                        #Xbox Series X|S
                         #TurboGrafx-16/PC Engine
                         #Turbografx-16/PC Engine CD
                         #PC Engine SuperGrafx
+                        #PC-FX
                         #Neo Geo AES
                         #Neo Geo CD
                         # Intellivision
@@ -1176,11 +1207,21 @@ while(answer_check_main == False):
                         #Odyssey
                         #Odyssey 2 / Videopac G7000
                         #Amiga CD32
+                        #Ouya
                         #Fairchild Channel F
                         #Bally Astrocade
                         #VC 4000
                         #1292 Advanced Programmable Video System
                         #PC-50X Family
+                        #Zeebo
+                        #Playdia
+                        #Epoch Cassette Vision
+                        #Epoch Super Cassette Vision
+                        #HyperScan
+                        #LeapTV
+                        #V.Smile
+                        #Apple Pippin
+                        #Panasonic M2
                         #... (console querying)
                         print("Console platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1190,6 +1231,7 @@ while(answer_check_main == False):
                         print()
                         print("Grabbing handheld platforms")
                         print()
+                        #Game & Watch
                         # Game Boy
                         # Game Boy Color
                         #Virtual Boy
@@ -1199,7 +1241,10 @@ while(answer_check_main == False):
                         #Nintendo 3DS
                         #New Nintendo 3DS
                         #Nintendo Switch
+                        #Pokémon mini
                         #Sega Game Gear
+                        #Visual Memory Unit / Visual Memory System
+                        #PocketStation
                         #PlayStation Portable
                         #PlayStation Vita
                         #Atari Lynx
@@ -1207,9 +1252,17 @@ while(answer_check_main == False):
                         #Neo Geo Pocket Color
                         #WonderSwan
                         #WonderSwan Color
+                        #Leapster
+                        #Leapster Explorer/LeadPad Explorer
                         #N-Gage
+                        #Game.com
                         #Microvision
                         #Tapwave Zodiac
+                        #Evercade
+                        #Gamate
+                        #Playdate
+                        #Digiblast
+                        #Panasonic Jungle
                         # ... (console querying)
                         print("Handheld platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1224,9 +1277,13 @@ while(answer_check_main == False):
                         #Apple II
                         #Mac
                         #Linux
+                        #SteamOS
                         #Commodore C64/128/MAX
                         #Commodore VIC-20
+                        #Commodore 16
                         #Amiga
+                        #Commodore PET
+                        #Commodore Plus/4
                         #MSX
                         #MSX2
                         #Atari ST/STE
@@ -1238,6 +1295,11 @@ while(answer_check_main == False):
                         #Amstrad CPC
                         #BBC Microcomputer System
                         #Texas Instruments TI-99
+                        #Sharp X1
+                        #Donner Model 30
+                        #PDP-1
+                        #PDP-10
+                        #PDP-8
                         # ... (computer / desktop OS querying)
                         print("Computer / Desktop OS platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1286,6 +1348,9 @@ while(answer_check_main == False):
                         print()
                         print("Grabbing VR platforms")
                         print()
+                        #PlayStation VR
+                        #PlayStation VR2
+                        #Meta Quest 3
                         # ... (console querying)
                         print("VR platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1295,10 +1360,13 @@ while(answer_check_main == False):
                         print()
                         print("Grabbing platform-style platforms")
                         print()
+                        #Web browser
+                        #Satellaview (?)
                         #Virtual Console (?)
                         #WiiWare (?, removed?)
                         #PlayStation Network (?)
                         #Xbox Live Arcade (?)
+                        #Google Stadia (?)
                         # ... (console querying)
                         print("Platform-style platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1323,6 +1391,7 @@ while(answer_check_main == False):
         print("Which platform would you like to be the main platform?")
         print("Note that the numbers are listed as so because they are the platform ID's listed in IGDB's API")
         input("Whenever you are ready, the platform options will be listed in full (For now use the text version)\n")
+        """
         print("3. Linux")
         print("4. Nintendo 64")
         print("5. Wii")
@@ -1385,18 +1454,24 @@ while(answer_check_main == False):
         print("69. BBC Microcomputer System")
         print("70. Vectrex")
         print("71. Commodore VIC-20")
+        print("72. Ouya")
         print("73. BlackBerry OS")
         print("74. Windows Phone")
         print("75. Apple II")
+        print("77. Sharp X1")
         print("78. Sega CD")
         print("79. Neo Geo MVS")
         print("80. Neo Geo AES")
+        print("82. Web browser")
         print("84. SG-1000")
+        print("85. Donner Model 30")
         print("86. TurboGrafx-16/PC Engine")
         print("87. Virtual Boy")
         print("88. Odyssey")
         print("89. Microvision")
+        print("90. Commodore PET")
         print("91. Bally Astrocade")
+        print("92. SteamOS")
         print("99. Family Computer")
         print("114. Amiga CD32")
         print("117. Philips CD-i")
@@ -1453,6 +1528,8 @@ while(answer_check_main == False):
         print("477. Panasonic Jungle")
         print("478. Panasonic M2")
         print("486. Digiblast")
+        """
+        print_platforms()
         print("Which platform would you like to include?")
         # have function to check if number just given was one of the valid options?
         # going to go off of IGDB ID's for now, need to keep adding more

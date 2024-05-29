@@ -370,11 +370,11 @@ while(igdb_check == False):
         for game, details in gameDb.items():
             #Set time speedup back to 0 if want full and accurate database for all items
             #need to set value in both if and elif to work properly
-            if(time_speedup < 5):
+            if(time_speedup < 0):
                 print("SKIPPING!!")
                 time_speedup += 1
                 continue
-            elif(time_speedup == 5):
+            elif(time_speedup == 0):
                 time_speedup = 0
             check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
             check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
@@ -451,7 +451,7 @@ while(igdb_check == False):
                         earliest_release = potential_release
                         earliest_game = result
                         # input(earliest_release)
-                    print(result)
+                    #print(result)
                 # print(earliest_game.slug)
                 # print(earliest_game.url)
                 # print(earliest_game.id)

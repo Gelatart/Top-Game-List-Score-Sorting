@@ -1,9 +1,9 @@
 RANKED: 70
-UNRANKED: 33
+UNRANKED: 34
 FORMER: 12
 UNUSED: 0
 ---
-TOTAL: 115
+TOTAL: 116
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -66,6 +66,10 @@ R-The 10 Best Post-Apocalyptic Video Games Ranked - Maxim - 8-31-2016
 TOP THEMATIC GENRE ALL TIME (PREHISTORIC):
 U-The 10 Best Prehistoric Video Games - Paste Magazine - 2-10-2016
 R-12 Best Prehistoric Video Games, Ranked - GameRant - 12-14-2022
+
+TOP FRANCHISE ALL TIME (STAR WARS):
+U-The Best and Worst Star Wars Video Games - Yahoo Tech - 12-10-2015
+<^Worst not included>
 
 TOP PLATFORM OF ALL TIME (ARCADE):
 U-The 50 best arcade games of all time ever - TechRadar - 3-7-2017
@@ -200,6 +204,7 @@ U-The 10 Best Video Games of 2015 - Vulture - 12-10-2015
 R-Top 10 Best Video Games of 2015 - Moviepilot - 12/15/2015
 U-2015s 10 best video games - LA Times - 12-11-2015
 R-The 10 Best (And 3 Worst) Video Games of 2015 - Entertainment Weekly - 12-11-2015
+<^: Ignoring the worst>
 
 TOP GAMES OF 2014:
 R-The 15 Best Video Games of 2014 - TIME - 12-23-2014
