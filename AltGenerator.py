@@ -293,21 +293,21 @@ with pymongo.MongoClient(monConnect, server_api=ServerApi('1')) as mon_client:
     #export = []
     print("INSERTING INTO MONGODB!")
     for game, details in gameDb.items():
-        exportDict = {}
-        exportDict["Title"] = game
-        exportDict["Ranked Score"] = details.ranked_score
-        exportDict["Inclusion Score"] = details.listCount
+        export_dict = {}
+        export_dict["Title"] = game
+        export_dict["Ranked Score"] = details.ranked_score
+        export_dict["Inclusion Score"] = details.listCount
         averageScore = details.ranked_score / details.totalCount
-        exportDict["Average Score"] = averageScore
-        exportDict["List of References"] = details.listsReferencing
-        exportDict["Completed"] = details.completed
-        exportDict["Main Platform"] = details.mainPlatform
-        exportDict["List of Platforms"] = details.listPlatforms
-        exportDict["Release Date"] = details.releaseDate
-        exportDict["Player Counts"] = details.playerCounts
-        exportDict["Developers"] = details.listDevelopers
-        exportDict["Total Count"] = details.totalCount
-        insertion = mon_col.insert_one(exportDict)
+        export_dict["Average Score"] = averageScore
+        export_dict["List of References"] = details.listsReferencing
+        export_dict["Completed"] = details.completed
+        export_dict["Main Platform"] = details.mainPlatform
+        export_dict["List of Platforms"] = details.listPlatforms
+        export_dict["Release Date"] = details.releaseDate
+        export_dict["Player Counts"] = details.playerCounts
+        export_dict["Developers"] = details.listDevelopers
+        export_dict["Total Count"] = details.totalCount
+        insertion = mon_col.insert_one(export_dict)
     #insertion = mon_col.insert_many(gameDb)
     #insertion = mon_col.insert_many(export)
     print("TIME TO INSERT THE LISTS INTO MONGODB!")

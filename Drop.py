@@ -17,10 +17,10 @@ print(fileContents)
 file.close()
 #config = dotenv_values(".env")
 print(f"MonConnect:{monConnect}")
-monClient = pymongo.MongoClient(monConnect, server_api=ServerApi('1'))
-monDB = monClient["GameSorting"]
+mon_client = pymongo.MongoClient(monConnect, server_api=ServerApi('1'))
+monDB = mon_client["GameSorting"]
 try:
-    monClient.admin.command('ping')
+    mon_client.admin.command('ping')
     print("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
     print("Uh-oh!")

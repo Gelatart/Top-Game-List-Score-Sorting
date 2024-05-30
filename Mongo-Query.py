@@ -32,7 +32,7 @@ while True:
     mongo_option = input()
     if(mongo_option == '1'):
         #Write out your full query
-        print("Alright! Please write out your full query below!\n")
+        print("Alright! Please write out your query below by key and value!\n")
         #full_query = input()
         full_query_key = input("Enter key: ")
         full_query_value = input("Enter value: ")

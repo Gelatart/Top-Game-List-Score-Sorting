@@ -9,11 +9,14 @@ import json
 load_dotenv()
 client_id = os.getenv('CLIENT_ID')
 client_secret = os.getenv('CLIENT_SECRET')
+"""
 post = 'https://id.twitch.tv/oauth2/token?client_id='
 post += client_id
 post += '&client_secret='
 post += client_secret
 post += '&grant_type=client_credentials'
+"""
+post = f'https://id.twitch.tv/oauth2/token?client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials'
 
 #page = requests.get(post) #404
 page = requests.post(post) #gives access token we can use

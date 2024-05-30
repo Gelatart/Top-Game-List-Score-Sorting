@@ -189,10 +189,7 @@ while(program_completed == False):
     #Print out the program that was selected
     print()
     program = str(program_selected)
-    #print("You have chosen: " + option)
-    #print("You have chosen: " + str(program_selected))
     print("You have chosen: " + program)
-    #print(str(program_selected) + " will be run now")
     print(program + " will be run now")
 
     #TIME TO RUN REAL PROGRAM
