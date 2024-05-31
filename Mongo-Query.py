@@ -33,10 +33,8 @@ while True:
     if(mongo_option == '1'):
         #Write out your full query
         print("Alright! Please write out your query below by key and value!\n")
-        #full_query = input()
         full_query_key = input("Enter key: ")
         full_query_value = input("Enter value: ")
-        #print(full_query)
         export_dict[full_query_key] = full_query_value
         #games_pulled = mon_col.find(full_query) #.sort("Ranked Score", -1) <- Do we have to ask to add sorting, or can that be handled on its own?
         games_pulled = mon_col.find(export_dict)

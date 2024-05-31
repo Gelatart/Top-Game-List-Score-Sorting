@@ -114,22 +114,31 @@ def print_platforms():
     print("113. OnLive Game System")
     print("114. Amiga CD32")
     print("115. Apple IIGS")
+    print("116. Acorn Archimedes")
     print("117. Philips CD-i")
     print("118. FM Towns")
     print("119. Neo Geo Pocket")
     print("120. Neo Geo Pocket Color")
+    print("121. Sharp X68000")
+    print("122. Nuon")
     print("123. WonderSwan Color")
+    print("124. SwanCrystal")
+    print("125. PC-8801")
+    print("126. TRS-80")
     print("127. Fairchild Channel F")
     print("128. PC Engine SuperGrafx")
     print("129. Texas Instruments TI-99")
     print("130. Nintendo Switch")
     print("131. Nintendo PlayStation")
+    print("132. Amazon Fire TV")
     print("133. Odyssey 2 / Videopac G7000")
+    print("134. Acorn Electron")
     print("135. Hyper Neo Geo 64")
     print("136. Neo Geo CD")
     print("137. New Nintendo 3DS")
     print("138. VC 4000")
     print("139. 1292 Advanced Programmable Video System")
+    print("140. AY-3-8500")
     print("142. PC-50X Family")
     print("149. PC-98")
     print("150. Turbografx-16/PC Engine CD")
@@ -229,27 +238,7 @@ print("Time to grab the games!")
 
 #print(games_pulled_query)
 
-"""
-for game in games_pulled:
-    print("Here is a game")
-    print(game)
-    if(game["Main Platform"] == "Wii"):
-        print("We found one!")
-        print(game)
-    print()
-"""
-
 #input("Brief pause\n")
-
-"""
-for game in games_pulled_query:
-    print("Here is a game")
-    print(game)
-    #if(game["Main Platform"] == "Wii"):
-    #    print("We found one!")
-    #    print(game)
-    print()
-"""
 
 print("Now it's time for us to pick some options in generating a report")
 print()
@@ -288,6 +277,7 @@ while(answer_check_main == False):
     print("11. Miscellaneous")
     print("12. Finish and Generate Report")
     #consider franchise option when that data is pulled? genre? other fields?
+    #store queries to pull for franchises somewhere else if have to do custom?
 
     filter_category = input("Make selection here: ")
 
@@ -616,133 +606,25 @@ while(answer_check_main == False):
                     # include options for non-gen platforms? Like PC/operating system, arcade, etc.?
                     generation_option = input()
                     # Generation 1:
-                    #Odyssey
-                    #PC-50X Family
-                    #---(^from igdb query for gen 1)
                     #Home Pong series (unfound?)
                     #TV Tennis Electrotennis (unfound?)
                     #Coleco Telstar (unfound?)
                     #Color TV-Game (unfound?)
-                    # ...?
-
-                    # Generation 2:
-                    #Atari 2600
-                    #Atari 5200
-                    #Intellivision
-                    #ColecoVision
-                    #Odyssey 2 / Videopac G7000
-                    #Game & Watch
-                    #Fairchild Channel F
-                    #Vectrex
-                    #Epoch Cassette Vision
-                    #1292 Advanced Programmable Video System
-                    #VC 4000
-                    #Bally Astrocade
-                    #Microvision
-                    # ...?
 
                     # Generation 3:
-                    #Nintendo Entertainment System
-                    #Family Computer
-                    #Family Computer Disk System
-                    #Sega Master System/Mark III
-                    #SG-1000
-                    #Atari 7800
-                    #Epoch Super Cassette Vision
-                    #___
                     #Atari XEGS (unfound?)
-                    # ...?
 
                     # Generation 4:
-                    #Super Nintendo Entertainment System
-                    #Super Famicom
-                    #Satellaview
-                    #Game Boy
-                    #Sega Mega Drive/Genesis
-                    #Sega CD
-                    #Sega 32X
-                    #Sega Game Gear
-                    #Sega Pico
-                    #TurboGrafx-16/PC Engine
-                    #Turbografx-16/PC Engine CD
-                    #PC Engine SuperGrafx
-                    #Neo Geo AES
-                    #Neo Geo CD
-                    #Atari Lynx
-                    #Philips CD-i
-                    #Gamate
                     #Nintendo PlayStation (cancelled)
-                    # ...?
 
                     #Generation 5:
-                    #Nintendo 64
-                    #Game Boy Color
-                    #Virtual Boy
-                    #Sega Saturn
-                    #PlayStation
-                    #PocketStation
-                    #PC-FX
-                    #Neo Geo Pocket
-                    #Neo Geo Pocket Color
-                    #Atari Jaguar
-                    #Atari Jaguar CD
-                    #3DO Interactive Multiplayer
-                    #Amiga CD32
-                    #WonderSwan
-                    #WonderSwan Color
-                    #Apple Pippin
-                    #Playdia
-                    #...?
                     #FM Towns Marty (unfound?)
 
                     #Generation 6:
-                    #Nintendo GameCube
-                    #Game Boy Advance
-                    #Dreamcast
-                    #Visual Memory Unit / Visual Memory System
-                    #PlayStation 2
-                    #Xbox
-                    #N-Gage
-                    #Leapster
-                    #V.Smile
                     #Panasonic M2 (cancelled)
-                    #...?
-
-                    #Generation 7:
-                    #Wii
-                    #Nintendo DS
-                    #Nintendo DSi
-                    #PlayStation 3
-                    #PlayStation Portable
-                    #Xbox 360
-                    #Zeebo
-                    #HyperScan
-                    #Leapster Explorer/LeadPad Explorer
-                    #Digiblast
-                    #...?
 
                     #Generation 8:
-                    #Wii U
-                    #Nintendo Switch (special case)
-                    #Nintendo 3DS
-                    #New Nintendo 3DS
-                    #PlayStation 4
-                    #PlayStation Vita
-                    #PlayStation VR
-                    #Xbox One
-                    # Ouya
-                    #Evercade
-                    #LeapTV
                     #Panasonic Jungle (cancelled)
-                    #...?
-
-                    #Generation 9:
-                    #PlayStation 5
-                    #PlayStation VR2
-                    #Xbox Series X|S
-                    #Meta Quest 3
-                    #Playdate
-                    # ...?
 
                     #Handhelds with no results:
                     #TurboExpress / PC Engine GT
@@ -1239,6 +1121,7 @@ while(answer_check_main == False):
                         #LeapTV
                         #V.Smile
                         #Apple Pippin
+                        #Nuon
                         #Panasonic M2
                         #... (console querying)
                         print("Console platforms added to querying!")
@@ -1270,6 +1153,7 @@ while(answer_check_main == False):
                         #Neo Geo Pocket Color
                         #WonderSwan
                         #WonderSwan Color
+                        #SwanCrystal
                         #Leapster
                         #Leapster Explorer/LeadPad Explorer
                         #N-Gage
@@ -1281,7 +1165,7 @@ while(answer_check_main == False):
                         #Playdate
                         #Digiblast
                         #Panasonic Jungle
-                        # ... (console querying)
+                        # ... (handheld querying)
                         print("Handheld platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
@@ -1292,6 +1176,8 @@ while(answer_check_main == False):
                         print()
                         #DOS
                         #PC (Microsoft Windows)
+                        # MSX
+                        # MSX2
                         #Apple II
                         #Apple IIGS
                         #Mac
@@ -1303,18 +1189,18 @@ while(answer_check_main == False):
                         #Amiga
                         #Commodore PET
                         #Commodore Plus/4
-                        #MSX
-                        #MSX2
                         #Atari ST/STE
                         #Atari 8-bit
                         #PC-98
+                        #PC-8801
                         #FM Towns
                         #FM-7
+                        # Sharp X1
+                        # Sharp X68000
                         # ZX Spectrum
                         #Amstrad CPC
                         #BBC Microcomputer System
                         #Texas Instruments TI-99
-                        #Sharp X1
                         #Donner Model 30
                         #PDP-1
                         #PDP-10
@@ -1332,6 +1218,10 @@ while(answer_check_main == False):
                         #PLATO
                         #Imlac PDS-1
                         #Microcomputer
+                        #Acorn Archimedes
+                        #Acorn Electron
+                        #TRS-80
+                        #AY-3-8500 (seems more like console to me?)
                         # ... (computer / desktop OS querying)
                         print("Computer / Desktop OS platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1400,6 +1290,7 @@ while(answer_check_main == False):
                         #PlayStation Network (?)
                         #Xbox Live Arcade (?)
                         #Google Stadia (?)
+                        #Amazon Fire TV
                         #OnLive Game System
                         # ... (console querying)
                         print("Platform-style platforms added to querying!")

@@ -36,9 +36,9 @@ directory = r'GameLists\Ranked'
 
 #ONCE CLEARED ALL OF AN UP TO LIST, THEN CONSIDER EXPANDING THE RANGE (LIKE FROM UP TO 100 TO UP TO 150)
 
-"gameDb is a dict of string titles and game object values"
-gameDb = {}
-#modified_DB is meant to hold modified entries that originally had <> names, and put back into gameDB later
+"game_DB is a dict of string titles and game object values"
+game_DB = {}
+#modified_DB is meant to hold modified entries that originally had <> names, and put back into game_DB later
 modified_DB = {}
 "game object needs two scores"
 class GameObject:
@@ -124,16 +124,16 @@ for filename in os.listdir(directory):
         for line in Lines:
             stripped_line = line.strip()
             line = stripped_line
-            if stripped_line in gameDb:
-                gameDb[line].ranked_score += count
-                gameDb[line].list_count += 1
-                gameDb[line].lists_referencing.append(f)
-                gameDb[line].total_count += original_count
+            if stripped_line in game_DB:
+                game_DB[line].ranked_score += count
+                game_DB[line].list_count += 1
+                game_DB[line].lists_referencing.append(f)
+                game_DB[line].total_count += original_count
             else:
                 newObj = GameObject(count, f, original_count)
-                gameDb[line] = newObj
-            #searchObj = gameDb.get(newObj, 0) + 1
-            #gameDb[line].list_count = gameDb.get(newObj, 0) + 1
+                game_DB[line] = newObj
+            #searchObj = game_DB.get(newObj, 0) + 1
+            #game_DB[line].list_count = game_DB.get(newObj, 0) + 1
             #print("Score of {}: {}".format(count, line.strip()))
             print(f"Score of {count}: {line.strip()}")
             count -= 1
@@ -168,16 +168,16 @@ for filename in os.listdir(directory):
         for line in Lines:
             stripped_line = line.strip()
             line = stripped_line
-            if stripped_line in gameDb:
-                gameDb[line].ranked_score += count
-                gameDb[line].list_count += 1
-                gameDb[line].lists_referencing.append(f)
-                gameDb[line].total_count += original_count
+            if stripped_line in game_DB:
+                game_DB[line].ranked_score += count
+                game_DB[line].list_count += 1
+                game_DB[line].lists_referencing.append(f)
+                game_DB[line].total_count += original_count
             else:
                 newObj = GameObject(count, f, original_count)
-                gameDb[line] = newObj
-            #searchObj = gameDb.get(newObj, 0) + 1
-            #gameDb[line].list_count = gameDb.get(newObj, 0) + 1
+                game_DB[line] = newObj
+            #searchObj = game_DB.get(newObj, 0) + 1
+            #game_DB[line].list_count = game_DB.get(newObj, 0) + 1
             # print("Score of {}: {}".format(count, line.strip()))
             print(f"Score of {count}: {line.strip()}")
             #count -= 1
@@ -205,16 +205,16 @@ for filename in os.listdir(directory):
         for line in Lines:
             stripped_line = line.strip()
             line = stripped_line
-            if stripped_line in gameDb:
-                gameDb[line].ranked_score += count
-                gameDb[line].list_count += 1
-                gameDb[line].lists_referencing.append(f)
-                gameDb[line].total_count += original_count
+            if stripped_line in game_DB:
+                game_DB[line].ranked_score += count
+                game_DB[line].list_count += 1
+                game_DB[line].lists_referencing.append(f)
+                game_DB[line].total_count += original_count
             else:
                 newObj = GameObject(count, f, original_count)
-                gameDb[line] = newObj
-            #searchObj = gameDb.get(newObj, 0) + 1
-            #gameDb[line].list_count = gameDb.get(newObj, 0) + 1
+                game_DB[line] = newObj
+            #searchObj = game_DB.get(newObj, 0) + 1
+            #game_DB[line].list_count = game_DB.get(newObj, 0) + 1
             # print("Score of {}: {}".format(count, line.strip()))
             print(f"Score of {count}: {line.strip()}")
             #count -= 1
@@ -225,8 +225,8 @@ completeLines = completeFile.readlines()
 for line in completeLines:
     stripped_line = line.strip()
     line = stripped_line
-    if line in gameDb:
-        gameDb[line].completed = True
+    if line in game_DB:
+        game_DB[line].completed = True
     #else: raise error because not in database? create it with 0 score? probably just ignore it?
 
 """
@@ -238,32 +238,32 @@ attributesLines = attributesFile.readlines()
 itr = iter(attributesLines)
 #for line in attributesLines:
 try:
-    #if line in gameDb:
+    #if line in game_DB:
     while True:
         #Properly parse through line and indented lines?
         title = next(itr)
-        if title in gameDb:
+        if title in game_DB:
             print(title)
             #main_platform
             attribute = next(itr)
             print(attribute)
-            gameDb[title].main_platform = attribute
+            game_DB[title].main_platform = attribute
             #list_platforms
             attribute = next(itr)
             print(attribute)
-            gameDb[title].list_platforms = attribute
+            game_DB[title].list_platforms = attribute
             #release_date
             attribute = next(itr)
             print(attribute)
-            gameDb[title].release_date = attribute
+            game_DB[title].release_date = attribute
             #player_counts
             attribute = next(itr)
             print(attribute)
-            gameDb[title].player_counts = attribute
+            game_DB[title].player_counts = attribute
             #list_developers
             attribute = next(itr)
             print(attribute)
-            gameDb[title].list_developers = attribute
+            game_DB[title].list_developers = attribute
             print('')
         #else: supposed to be in database?
 except StopIteration:
@@ -367,7 +367,7 @@ while(igdb_check == False):
         print("Time to go looking around")
         time_speedup = 0;
         #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
-        for game, details in gameDb.items():
+        for game, details in game_DB.items():
             #Set time speedup back to 0 if want full and accurate database for all items
             #need to set value in both if and elif to work properly
             if(time_speedup < 0):
@@ -459,8 +459,8 @@ while(igdb_check == False):
                 # print(earliest_release)
                 # input("Here we pause")
                 # Time to put the IGDB attributes into the game we are putting out to the cluster
-                gameDb[game].igdb_ID = earliest_game.id
-                gameDb[game].release_date = earliest_release
+                game_DB[game].igdb_ID = earliest_game.id
+                game_DB[game].release_date = earliest_release
                 # print("Time to go through platforms")
                 # Spin this while loop off into its own function eventually?
                 plat_counter = 0
@@ -503,13 +503,13 @@ while(igdb_check == False):
                     """
                     plat_counter += 1
                 # input("There they are!")
-                # gameDb[game].main_platform = earliest_game.platforms[0]
-                gameDb[game].main_platform = main_plat  # Will this always pull best choice?
+                # game_DB[game].main_platform = earliest_game.platforms[0]
+                game_DB[game].main_platform = main_plat  # Will this always pull best choice?
                 #^Seriously consider revising this to pull the first format with the earliest release date
                 #Because platform ID's are overruling too much (ex. wii is an early ID so overrides earlier releases)
-                # gameDb[game].list_platforms = earliest_game.platforms
+                # game_DB[game].list_platforms = earliest_game.platforms
                 if(len(list_plats) > 0):
-                    gameDb[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
+                    game_DB[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
                 modes = earliest_game.game_modes
                 #input(modes)
                 if(len(modes) > 0):
@@ -527,9 +527,9 @@ while(igdb_check == False):
                         new_modes = modes_message.gamemodes
                         #print(new_modes)
                         mode_type = new_modes[0].name
-                        gameDb[game].player_counts.append(mode_type)
+                        game_DB[game].player_counts.append(mode_type)
                         #input(mode_type)
-                    #gameDb[game].player_counts = modes # Changes approach but for the better?
+                    #game_DB[game].player_counts = modes # Changes approach but for the better?
                 # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
                 developers = earliest_game.involved_companies
                 #^consider a check for developer boolean? porting? supporting?
@@ -567,18 +567,18 @@ while(igdb_check == False):
                         companies = companies_message.companies
                         #print(companies)
                         dev_name = companies[0].name
-                        gameDb[game].list_developers.append(dev_name)
+                        game_DB[game].list_developers.append(dev_name)
                         #input(dev_name)
-                    #gameDb[game].list_developers = developers  # Will this grab the most definitive list?
+                    #game_DB[game].list_developers = developers  # Will this grab the most definitive list?
             elif (len(games) == 1):
                 try:
                     current_game = games[0]
                     try:
-                        gameDb[game].igdb_ID = current_game.id
+                        game_DB[game].igdb_ID = current_game.id
                     except IndexError as e:
                         print("Error:", e)
                         #print("Index", i, "is out of range")
-                    gameDb[game].release_date = current_game.first_release_date.ToDatetime()
+                    game_DB[game].release_date = current_game.first_release_date.ToDatetime()
                     plat_ID = current_game.platforms[0]
                     plat_name = None
                     sub_query = 'fields name; where id=' + str(plat_ID.id) + ';'
@@ -597,10 +597,10 @@ while(igdb_check == False):
                         main_plat = plat_name
                     # print(plat_name)
                     list_plats.append(plat_name)
-                    gameDb[game].main_platform = plat_name
+                    game_DB[game].main_platform = plat_name
                     list_plats = []
                     list_plats.append(plat_name)
-                    gameDb[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
+                    game_DB[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
                     modes = current_game.game_modes
                     if (len(modes) > 0):
                         for mode in modes:
@@ -618,9 +618,9 @@ while(igdb_check == False):
                             new_modes = modes_message.gamemodes
                             #print(new_modes)
                             mode_type = new_modes[0].name
-                            gameDb[game].player_counts.append(mode_type)
+                            game_DB[game].player_counts.append(mode_type)
                             # input(mode_type)
-                        # gameDb[game].player_counts = modes # Changes approach but for the better?
+                        # game_DB[game].player_counts = modes # Changes approach but for the better?
                     # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
                     developers = current_game.involved_companies
                     #print(developers)
@@ -656,7 +656,7 @@ while(igdb_check == False):
                             companies = companies_message.companies
                             #print(companies)
                             dev_name = companies[0].name
-                            gameDb[game].list_developers.append(dev_name)
+                            game_DB[game].list_developers.append(dev_name)
                             #input(dev_name)
                 except Exception as e:
                     print("An error has occurred:", e)
@@ -733,10 +733,10 @@ while True:
         continue
 #export = []
 print("INSERTING INTO MONGODB!")
-for game, details in gameDb.items():
+for game, details in game_DB.items():
     #print(details)
     #insertion = mon_col.insert_one(details)
-    #insertion = mon_col.insert_one(gameDb[game])
+    #insertion = mon_col.insert_one(game_DB[game])
     #export.append(details)
     export_dict = {}
     if (game.startswith('<')):
@@ -769,7 +769,7 @@ for game, details in gameDb.items():
     #export_dict = dict('Title' = game, 'IGDB ID' = details.igdb_ID, 'Ranked Score' = details.ranked_score)
     #print(export_dict)
     insertion = mon_col.insert_one(export_dict)
-#insertion = mon_col.insert_many(gameDb)
+#insertion = mon_col.insert_many(game_DB)
 #insertion = mon_col.insert_many(export)
 print("TIME TO INSERT THE LISTS INTO MONGODB!")
 for list in games_lists:

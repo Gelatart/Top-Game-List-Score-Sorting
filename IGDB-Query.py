@@ -150,8 +150,6 @@ elif(endpoint_option_1 == "2"):
 
 print("Successfully completed! Goodbye!")
 
-#POKEMON RED VERSION PAGE: https://www.igdb.com/games/pokemon-red-version
-
 #SPECIAL CASES KNOWN SO FAR:
 """
 (Seems like using the & symbol can break queries even when it's in the name?)

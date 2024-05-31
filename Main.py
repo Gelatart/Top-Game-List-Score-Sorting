@@ -193,8 +193,6 @@ while(program_completed == False):
     print(program + " will be run now")
 
     #TIME TO RUN REAL PROGRAM
-    #os.system(program_selected)
-    #os.system(program)
     subprocess.run(["python", program])
 
     option_check = False #To prevent the loop from going through again before it's ready
