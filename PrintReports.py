@@ -139,11 +139,30 @@ def print_platforms():
     print("138. VC 4000")
     print("139. 1292 Advanced Programmable Video System")
     print("140. AY-3-8500")
+    print("141. AY-3-8610")
     print("142. PC-50X Family")
+    print("143. AY-3-8760")
+    print("144. AY-3-8710")
+    print("145. AY-3-8603")
+    print("146. AY-3-8605")
+    print("147. AY-3-8606")
+    print("148. AY-3-8607")
     print("149. PC-98")
     print("150. Turbografx-16/PC Engine CD")
+    print("151. TRS-80 Color Computer")
     print("152. FM-7")
+    print("153. Dragon 32/64")
+    print("154. Amstrad PCW")
+    print("155. Tatung Einstein")
+    print("156. Thomson MO5")
+    print("157. NEC PC-6000 Series")
+    print("158. Commodore CDTV")
     print("159. Nintendo DSi")
+    # print("160. Nintendo eShop") #Removed?
+    print("161. Windows Mixed Reality")
+    print("162. Oculus VR")
+    print("163. SteamVR")
+    print("164. Daydream")
     print("165. PlayStation VR")
     print("166. Pokémon mini")
     print("167. PlayStation 5")
@@ -161,6 +180,7 @@ def print_platforms():
     print("378. Gamate")
     print("379. Game.com")
     print("381. Playdate")
+    print("382. Intellivision Amico")
     print("390. PlayStation VR2")
     print("405. Windows Mobile")
     print("407. HyperScan")
@@ -168,6 +188,7 @@ def print_platforms():
     print("412. Leapster")
     print("413. Leapster Explorer/LeadPad Explorer")
     print("414. LeapTV")
+    print("416. Nintendo 64DD")
     print("417. Palm OS")
     print("439. V.Smile")
     print("440. Visual Memory Unit / Visual Memory System")
@@ -456,6 +477,7 @@ while(answer_check_main == False):
                             #Nintendo Entertainment System
                             #Super Nintendo Entertainment System
                             #Nintendo 64
+                            #Nintendo 64DD
                             #Nintendo GameCube
                             #Wii
                             #Wii U
@@ -484,6 +506,9 @@ while(answer_check_main == False):
                             queries.append(new_query)
                             platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Nintendo 64"}
+                            queries.append(new_query)
+                            platform_queries.append(new_query)
+                            new_query = {"List of Platforms": "Nintendo 64DD"}
                             queries.append(new_query)
                             platform_queries.append(new_query)
                             new_query = {"List of Platforms": "Nintendo GameCube"}
@@ -810,6 +835,7 @@ while(answer_check_main == False):
                     elif (generation_option == "5"):
                         # Generation 5:
                         # Nintendo 64
+                        #Nintendo 64DD
                         # Game Boy Color
                         # Virtual Boy
                         # Sega Saturn
@@ -827,6 +853,9 @@ while(answer_check_main == False):
                         # Apple Pippin
                         # Playdia
                         new_query = {"List of Platforms": "Nintendo 64"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Nintendo 64DD"}
                         queries.append(new_query)
                         platform_queries.append(new_query)
                         new_query = {"List of Platforms": "Game Boy Color"}
@@ -1071,6 +1100,7 @@ while(answer_check_main == False):
                         #Super Nintendo Entertainment System
                         #Super Famicom
                         #Nintendo 64
+                        #Nintendo 64DD
                         #Nintendo GameCube
                         #Wii
                         #Wii U
@@ -1100,6 +1130,7 @@ while(answer_check_main == False):
                         #Neo Geo AES
                         #Neo Geo CD
                         # Intellivision
+                        #Intellivision Amico (unreleased?)
                         # ColecoVision
                         #3DO Interactive Multiplayer
                         #Philips CD-i
@@ -1122,7 +1153,13 @@ while(answer_check_main == False):
                         #V.Smile
                         #Apple Pippin
                         #Nuon
-                        #Panasonic M2
+                        #AY-3-8760
+                        #AY-3-8710
+                        #AY-3-8603
+                        #AY-3-8605
+                        #AY-3-8606
+                        #AY-3-8607
+                        #Panasonic M2 (cancelled)
                         #... (console querying)
                         print("Console platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1186,6 +1223,7 @@ while(answer_check_main == False):
                         #Commodore C64/128/MAX
                         #Commodore VIC-20
                         #Commodore 16
+                        #Commodore CDTV (seems a bit like a console?)
                         #Amiga
                         #Commodore PET
                         #Commodore Plus/4
@@ -1193,12 +1231,14 @@ while(answer_check_main == False):
                         #Atari 8-bit
                         #PC-98
                         #PC-8801
+                        #NEC PC-6000 Series
                         #FM Towns
                         #FM-7
                         # Sharp X1
                         # Sharp X68000
                         # ZX Spectrum
                         #Amstrad CPC
+                        #Amstrad PCW
                         #BBC Microcomputer System
                         #Texas Instruments TI-99
                         #Donner Model 30
@@ -1221,7 +1261,12 @@ while(answer_check_main == False):
                         #Acorn Archimedes
                         #Acorn Electron
                         #TRS-80
+                        #TRS-80 Color Computer
                         #AY-3-8500 (seems more like console to me?)
+                        #AY-3-8610 (seems more like console to me?)
+                        #Dragon 32/64
+                        #Tatung Einstein
+                        #Thomson MO5
                         # ... (computer / desktop OS querying)
                         print("Computer / Desktop OS platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1273,7 +1318,11 @@ while(answer_check_main == False):
                         print()
                         #PlayStation VR
                         #PlayStation VR2
+                        #Windows Mixed Reality
+                        #Oculus VR
                         #Meta Quest 3
+                        #SteamVR
+                        #Daydream
                         # ... (console querying)
                         print("VR platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1287,6 +1336,7 @@ while(answer_check_main == False):
                         #Satellaview (?)
                         #Virtual Console (?)
                         #WiiWare (?, removed?)
+                        #Nintendo eShop (?, removed?)
                         #PlayStation Network (?)
                         #Xbox Live Arcade (?)
                         #Google Stadia (?)
