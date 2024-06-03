@@ -6,6 +6,7 @@ Super Mario Galaxy
 Super Mario Galaxy 2
 The Legend of Zelda: Breath of the Wild
 Tony Hawk's Pro Skater 3
+Perfect Dark
 Red Dead Redemption 2
 Grand Theft Auto V
 Metroid Prime
@@ -66,9 +67,9 @@ Call of Duty 4: Modern Warfare
 BioShock Infinite
 Halo 3
 Ninja Gaiden Black
-Metal Gear Solid
 Grim Fandango
 Super Mario Advance 4: Super Mario Bros. 3
+Metal Gear Solid
 Tom Clancy's Splinter Cell: Chaos Theory
 <112875> God of War Ragnarok
 Resident Evil Code: Veronica
@@ -98,4 +99,3 @@ Super Mario 3D World
 StarCraft II: Wings of Liberty
 SSX
 Street Fighter IV
-Persona 4 Golden

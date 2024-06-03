@@ -3,7 +3,6 @@ Bayonetta 2
 The Binding of Isaac: Rebirth
 Blood
 Bloodborne: The Old Hunters
-Burnout 3: Takedown
 Danganronpa 2: Goodbye Despair
 Danganronpa V3: Killing Harmony
 Dark Souls: Artorias of the Abyss
@@ -11,9 +10,11 @@ Demon's Souls
 Diablo II: Lord of Destruction
 Doom
 Doom II: Hell on Earth
+Echo
 The Elder Scrolls III: Morrowind
 Gothic II
 Gothic II: The Night of the Raven
+Guilty Gear XX Accent Core Plus R
 Hades
 Half-Life
 Kentucky Route Zero
@@ -35,7 +36,6 @@ Persona 3
 <1558> Pokemon Gold Version
 Portal
 Red Dead Redemption
-Resident Evil 2
 Riven: The Sequel to Myst
 The Secret of Monkey Island
 <37094> Shadow of the Colossus [2018]

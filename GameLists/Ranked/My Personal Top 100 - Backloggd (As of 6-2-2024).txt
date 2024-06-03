@@ -2,7 +2,6 @@
 Half-Life 2
 Silent Hill 2
 Undertale
-Minecraft
 Paper Mario: The Thousand-Year Door
 Halo 3
 Halo: Combat Evolved
@@ -17,6 +16,7 @@ Grim Fandango
 The Legend of Zelda: Ocarina of Time
 Super Mario Galaxy
 The Legend of Zelda: Majora's Mask
+Minecraft
 Silent Hill 3
 Chibi-Robo!
 EarthBound
@@ -66,6 +66,7 @@ Assassin's Creed II
 Shin Megami Tensei: Nocturne
 Super Smash Bros. Brawl
 Super Mario 3D World
+Psychonauts
 Chrono Trigger
 Dr. Mario
 <2724> Pokemon XD: Gale of Darkness
@@ -89,7 +90,6 @@ The Sims 3
 The Last of Us
 Fortnite
 Super Mario 3D Land
-League of Legends
 MapleStory
 Luigi's Mansion
 MediEvil
