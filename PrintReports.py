@@ -56,7 +56,7 @@ def print_platforms():
     print("51. Family Computer Disk System")
     print("52. Arcade")
     print("53. MSX2")
-    print("55. Mobile")
+    print("55. Legacy Mobile Device")
     # print("56. WiiWare") #Removed?
     print("57. WonderSwan")
     print("58. Super Famicom")
@@ -168,6 +168,7 @@ def print_platforms():
     print("167. PlayStation 5")
     print("169. Xbox Series X|S")
     print("170. Google Stadia")
+    print("238. DVD Player")
     print("240. Zeebo")
     print("274. PC-FX")
     print("306. Satellaview")
@@ -179,12 +180,15 @@ def print_platforms():
     print("376. Epoch Super Cassette Vision")
     print("378. Gamate")
     print("379. Game.com")
+    print("380. Casio Loopy")
     print("381. Playdate")
     print("382. Intellivision Amico")
+    print("386. Meta Quest 2")
     print("390. PlayStation VR2")
     print("405. Windows Mobile")
     print("407. HyperScan")
     print("410. Atari Jaguar CD")
+    print("411. Handheld Electronic LCD")
     print("412. Leapster")
     print("413. Leapster Explorer/LeadPad Explorer")
     print("414. LeapTV")
@@ -194,6 +198,7 @@ def print_platforms():
     print("440. Visual Memory Unit / Visual Memory System")
     print("441. PocketStation")
     print("471. Meta Quest 3")
+    print("474. Gizmondo")
     print("476. Apple Pippin")
     print("477. Panasonic Jungle")
     print("478. Panasonic M2")
@@ -962,6 +967,7 @@ while(answer_check_main == False):
                         # HyperScan
                         # Leapster Explorer/LeadPad Explorer
                         # Digiblast
+                        #Gizmondo
                         new_query = {"List of Platforms": "Wii"}
                         queries.append(new_query)
                         platform_queries.append(new_query)
@@ -990,6 +996,9 @@ while(answer_check_main == False):
                         queries.append(new_query)
                         platform_queries.append(new_query)
                         new_query = {"List of Platforms": "Digiblast"}
+                        queries.append(new_query)
+                        platform_queries.append(new_query)
+                        new_query = {"List of Platforms": "Gizmondo"}
                         queries.append(new_query)
                         platform_queries.append(new_query)
                         print("Generation 7 consoles added to querying!")
@@ -1153,12 +1162,14 @@ while(answer_check_main == False):
                         #V.Smile
                         #Apple Pippin
                         #Nuon
+                        #Casio Loopy
                         #AY-3-8760
                         #AY-3-8710
                         #AY-3-8603
                         #AY-3-8605
                         #AY-3-8606
                         #AY-3-8607
+                        #DVD Player (does this seem fitting?)
                         #Panasonic M2 (cancelled)
                         #... (console querying)
                         print("Console platforms added to querying!")
@@ -1201,6 +1212,8 @@ while(answer_check_main == False):
                         #Gamate
                         #Playdate
                         #Digiblast
+                        #Gizmondo
+                        #Handheld Electronic LCD
                         #Panasonic Jungle
                         # ... (handheld querying)
                         print("Handheld platforms added to querying!")
@@ -1298,13 +1311,13 @@ while(answer_check_main == False):
                         print()
                         print("Grabbing mobile phone platforms")
                         print()
-                        #Mobile
                         #iOS
                         #Android
                         #BlackBerry OS
                         #Windows Mobile
                         #Windows Phone
                         #Palm OS
+                        # Legacy Mobile Device
                         #...?
                         print()
                         # ... (console querying)
@@ -1320,6 +1333,7 @@ while(answer_check_main == False):
                         #PlayStation VR2
                         #Windows Mixed Reality
                         #Oculus VR
+                        #Meta Quest 2
                         #Meta Quest 3
                         #SteamVR
                         #Daydream
