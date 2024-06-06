@@ -10,7 +10,7 @@ BioShock [IGDB ID: 20] --> 2035
 Dark Souls [IGDB ID: 2155] --> 2008
 Final Fantasy VII [IGDB ID: 427] --> 1990
 Final Fantasy VI [IGDB ID: 426] --> 1970
-Grand Theft Auto V [IGDB ID: 1020] --> 1916
+Grand Theft Auto V [IGDB ID: 1020] --> 1917
 Red Dead Redemption [IGDB ID: 434] --> 1915
 Metroid Prime [IGDB ID: 1105] --> 1815
 World of Warcraft [IGDB ID: 123] --> 1808
@@ -26,10 +26,10 @@ The Legend of Zelda: The Wind Waker [IGDB ID: 1033] --> 1633
 Doom [IGDB ID: 673] --> 1627
 Metal Gear Solid 3: Snake Eater [IGDB ID: 379] --> 1607
 Uncharted 2: Among Thieves [IGDB ID: 565] --> 1597
-Call of Duty 4: Modern Warfare [IGDB ID: 623] --> 1563
+Call of Duty 4: Modern Warfare [IGDB ID: 134651] --> 1563
 The Legend of Zelda: Majora's Mask [IGDB ID: 1030] --> 1545
 The Legend of Zelda: Breath of the Wild [IGDB ID: 7346] --> 1483
-Journey [IGDB ID: 298669] --> 1435
+Journey [IGDB ID: 85680] --> 1435
 Super Mario Bros. [IGDB ID: 358] --> 1432
 Super Mario Galaxy 2 [IGDB ID: 1078] --> 1413
 Bloodborne [IGDB ID: 7334] --> 1409
@@ -75,7 +75,7 @@ Katamari Damacy [IGDB ID: 6453] --> 893
 Ico [IGDB ID: 7170] --> 890
 Inside [IGDB ID: 80481] --> 885
 Resident Evil [IGDB ID: 424] --> 882
-Mario Kart 8 [IGDB ID: 2350] --> 872
+Mario Kart 8 [IGDB ID: 2350] --> 877
 Fallout 2 [IGDB ID: 14] --> 866
 Baldur's Gate II: Shadows of Amn [IGDB ID: 6] --> 865
 Mortal Kombat II [IGDB ID: 1619] --> 860
@@ -95,9 +95,9 @@ Persona 5 [IGDB ID: 9927] --> 792
 Demon's Souls [IGDB ID: 5619] --> 789
 Mike Tyson's Punch-Out!! [IGDB ID: 2195] --> 785
 The Elder Scrolls IV: Oblivion [IGDB ID: 59] --> 779
+Hearthstone [IGDB ID: 1279] --> 775
 Rez [IGDB ID: 11244] --> 772
 Sid Meier's Civilization V [IGDB ID: 866] --> 772
-Hearthstone [IGDB ID: 1279] --> 770
 Mega Man 2 [IGDB ID: 1715] --> 757
 The Sims [IGDB ID: 223] --> 757
 XCOM: Enemy Unknown [IGDB ID: 1318] --> 755
@@ -232,12 +232,12 @@ Another World [IGDB ID: 252601] --> 452
 Day of the Tentacle [IGDB ID: 193] --> 451
 Football Manager [IGDB ID: 23064] --> 449
 Final Fantasy VIII [IGDB ID: 425] --> 446
+Dark Souls II [IGDB ID: 2368] --> 444
 Super Smash Bros. Ultimate [IGDB ID: 90101] --> 443
 Dark Souls III [IGDB ID: 11133] --> 443
 Fire Emblem: Awakening [IGDB ID: 1443] --> 441
 Kirby's Adventure [IGDB ID: 3717] --> 440
 Virtua Racing [IGDB ID: 8172] --> 440
-Dark Souls II [IGDB ID: 2368] --> 439
 Tony Hawk's Pro Skater 3 [IGDB ID: 914] --> 437
 Sensible Soccer [IGDB ID: 165461] --> 431
 Street Fighter III: 3rd Strike [IGDB ID: 6710] --> 431
@@ -278,14 +278,14 @@ Rise of the Tomb Raider [IGDB ID: 7323] --> 376
 Animal Crossing: New Leaf [IGDB ID: 2687] --> 373
 Hades [IGDB ID: 80529] --> 373
 Company of Heroes [IGDB ID: 654] --> 372
+80 Days [IGDB ID: 68859] --> 371
 Yakuza 0 [IGDB ID: 11397] --> 370
 Vampire: The Masquerade - Redemption [IGDB ID: 12] --> 370
 Thief II: The Metal Age [IGDB ID: 1] --> 369
 Ultima Underworld: The Stygian Abyss [IGDB ID: 12908] --> 369
 Castlevania: Aria of Sorrow [IGDB ID: 1134] --> 368
 Double Dragon [IGDB ID: 6787] --> 367
-Alien: Isolation [IGDB ID: 4754] --> 366
-80 Days [IGDB ID: 68859] --> 366
+Alien: Isolation [IGDB ID: 4754] --> 367
 Mortal Kombat [IGDB ID: 1618] --> 365
 Dishonored 2 [IGDB ID: 11118] --> 364
 PUBG: Battlegrounds [IGDB ID: 27789] --> 361
@@ -463,6 +463,7 @@ The Legend of Dragoon [IGDB ID: 3140] --> 191
 I Have No Mouth, and I Must Scream [IGDB ID: 7578] --> 190
 Ninja Gaiden Black [IGDB ID: 18735] --> 189
 Sid Meier's Civilization [IGDB ID: 902] --> 189
+Threes! [IGDB ID: 9054] --> 188
 Lumines [IGDB ID: 4689] --> 187
 Tom Clancy's Rainbow Six Siege [IGDB ID: 7360] --> 187
 Zero Escape: Nine Hours, Nine Persons, Nine Doors [IGDB ID: 9543] --> 187
@@ -471,7 +472,6 @@ Marble Madness [IGDB ID: 301853] --> 187
 StarCraft: Brood War [IGDB ID: 456] --> 186
 Paradroid [IGDB ID: 22518] --> 186
 Wave Race 64 [IGDB ID: 3629] --> 186
-Threes! [IGDB ID: 9054] --> 183
 Descent [IGDB ID: 201122] --> 182
 Stubbs the Zombie in Rebel Without a Pulse [IGDB ID: 79] --> 181
 Metal Slug 3 [IGDB ID: 1408] --> 181
@@ -490,9 +490,9 @@ Pokemon Emerald Version [IGDB ID: 1517] --> 176
 Gunpoint [IGDB ID: 3242] --> 176
 Resident Evil Code: Veronica [IGDB ID: 968] --> 175
 Lunar Lander [IGDB ID: 9128] --> 175
+Elite: Dangerous [IGDB ID: 2955] --> 174
 Marvel vs. Capcom: Clash of Super Heroes [IGDB ID: 8246] --> 174
 The Sims 2 [IGDB ID: 224] --> 173
-Elite: Dangerous [IGDB ID: 2955] --> 173
 Final Fantasy XI Online [IGDB ID: 411] --> 173
 Mass Effect: Andromeda [IGDB ID: 7349] --> 173
 Miner 2049er [IGDB ID: 18651] --> 173
@@ -643,7 +643,7 @@ River City Girls 2 [IGDB ID: 152321] --> 141
 River City Melee Mach!! [IGDB ID: 115481] --> 141
 Scott Pilgrim vs. the World: The Game - Complete Edition [IGDB ID: 138765] --> 141
 Sifu [IGDB ID: 144022] --> 141
-Streets of Rage 4 [IGDB ID: 241863] --> 141
+Streets of Rage 4 [IGDB ID: 107262] --> 141
 Teenage Mutant Ninja Turtles: Shredder's Revenge [IGDB ID: 144465] --> 141
 Treachery in Beatdown City [IGDB ID: 62700] --> 141
 Brawlhalla [IGDB ID: 10233] --> 141
@@ -969,6 +969,7 @@ Metal Warriors [IGDB ID: 14386] --> 68
 Dragon Warrior III [IGDB ID: 205600] --> 67
 Gradius [IGDB ID: 262394] --> 67
 Street Fighter II Turbo: Hyper Fighting [IGDB ID: 20878] --> 66
+Middle-earth: Shadow of Mordor [IGDB ID: 3025] --> 66
 Kim Kardashian: Hollywood [IGDB ID: 18058] --> 66
 StarTropics [IGDB ID: 15901] --> 66
 SimCity [SNES] [IGDB ID: 180001] --> 66
@@ -996,7 +997,6 @@ Rayman Legends [IGDB ID: 193359] --> 61
 Race Driver: Grid [IGDB ID: 2159] --> 61
 Pac-Man Championship Edition [IGDB ID: 20900] --> 61
 Resident Evil 3: Nemesis [IGDB ID: 966] --> 61
-Middle-earth: Shadow of Mordor [IGDB ID: 3025] --> 61
 Need for Speed: Most Wanted [IGDB ID: 3193] --> 61
 Battletoads [IGDB ID: 2970] --> 61
 Earthworm Jim 2 [IGDB ID: 3481] --> 61
@@ -1108,6 +1108,7 @@ Robo Aleste [IGDB ID: 5430] --> 41
 Final Fantasy VII Rebirth [IGDB ID: 133236] --> 41
 Madden NFL 2004 [IGDB ID: 777] --> 41
 Cory in the House [IGDB ID: 47969] --> 41
+Never Alone [IGDB ID: 273575] --> 41
 Jade Empire [IGDB ID: 5867] --> 41
 Super C [IGDB ID: 84919] --> 41
 Disney's Aladdin [SNES] [IGDB ID: 2473] --> 41
@@ -1121,7 +1122,6 @@ Manhunt [IGDB ID: 1971] --> 40
 Ninja Gaiden II [IGDB ID: 198838] --> 40
 Christmas Nights into Dreams [IGDB ID: 45501] --> 40
 Halo 3: ODST [IGDB ID: 989] --> 40
-Never Alone [IGDB ID: 273575] --> 40
 Joe & Mac 2: Lost in the Tropics [IGDB ID: 42604] --> 40
 American McGee's Alice [IGDB ID: 337] --> 40
 Baten Kaitos: Eternal Wings and the Lost Ocean [IGDB ID: 3795] --> 40
@@ -1221,7 +1221,7 @@ Kentucky Route Zero: Act III [IGDB ID: 131729] --> 31
 Legendary Wings [IGDB ID: 39705] --> 31
 Skate 2 [IGDB ID: 2586] --> 30
 Wing Commander II: Vengeance of the Kilrathi [IGDB ID: 940] --> 30
-Ace Attorney Investigations 2 [IGDB ID: 84972] --> 30
+Ace Attorney Investigations 2 --> 30
 God of War Saga [IGDB ID: 23827] --> 30
 Pokemon XD: Gale of Darkness [IGDB ID: 2724] --> 30
 Earth Defense Force 2017 [IGDB ID: 5583] --> 30
@@ -1294,7 +1294,7 @@ Smash T.V. [IGDB ID: 20504] --> 25
 Dragon's Lair [IGDB ID: 4248] --> 25
 Metal Slug [IGDB ID: 1404] --> 25
 Golden Tee Golf [IGDB ID: 240840] --> 25
-Rampage [IGDB ID: 3055] --> 25
+Rampage [IGDB ID: 278064] --> 25
 Ivan Ironman Stewart’s Super Off Road [IGDB ID: 12735] --> 25
 Final Furlong [IGDB ID: 28394] --> 25
 Track & Field [IGDB ID: 6439] --> 25
@@ -1375,6 +1375,7 @@ Jagged Alliance 2: Wildfire [IGDB ID: 10466] --> 21
 Twisted Metal III [IGDB ID: 4697] --> 21
 Patapon 3 [IGDB ID: 18373] --> 21
 The Vanishing of Ethan Carter [IGDB ID: 2939] --> 21
+OlliOlli [IGDB ID: 7768] --> 21
 That Dragon, Cancer [IGDB ID: 15925] --> 21
 QWOP [IGDB ID: 8814] --> 21
 Skate [IGDB ID: 283373] --> 21
@@ -1437,7 +1438,6 @@ Halo 2: Multiplayer Map Pack [IGDB ID: 3122] --> 16
 Xenosaga Episode III: Also sprach Zarathustra [IGDB ID: 1229] --> 16
 Castlevania: The Dracula X Chronicles [IGDB ID: 21888] --> 16
 Mega Man Xtreme [IGDB ID: 1749] --> 16
-OlliOlli [IGDB ID: 7768] --> 16
 The Sailor's Dream [IGDB ID: 61229] --> 16
 Actual Sunlight [IGDB ID: 13230] --> 16
 Super Street Fighter IV: Arcade Edition [IGDB ID: 20586] --> 16
@@ -1460,6 +1460,7 @@ Metroid Prime 3: Corruption [IGDB ID: 1111] --> 14
 Guacamelee! [IGDB ID: 4838] --> 14
 Klonoa: Door to Phantomile [IGDB ID: 4959] --> 14
 Valkyria Chronicles 2 [IGDB ID: 14674] --> 14
+Luftrausers [IGDB ID: 5628] --> 14
 Oxenfree [IGDB ID: 14587] --> 14
 Cave Story [IGDB ID: 6189] --> 14
 Bionic Commando Rearmed [IGDB ID: 15856] --> 14
@@ -1601,7 +1602,6 @@ NFL 2K [IGDB ID: 8842] --> 9
 Retro Game Challenge [IGDB ID: 21251] --> 9
 Rogue Legacy [IGDB ID: 3221] --> 9
 Kingdom Hearts Birth by Sleep [IGDB ID: 1224] --> 9
-Luftrausers [IGDB ID: 5628] --> 9
 New Super Mario Bros. U [IGDB ID: 2171] --> 9
 Prison Architect [IGDB ID: 1338] --> 9
 Crimson Skies: High Road to Revenge [IGDB ID: 5793] --> 9
@@ -1644,6 +1644,7 @@ The Legend of Zelda: Phantom Hourglass [IGDB ID: 1037] --> 7
 Fire Emblem: Path of Radiance [IGDB ID: 1441] --> 7
 Uncharted: Golden Abyss [IGDB ID: 998] --> 7
 Mega Man Powered Up [IGDB ID: 12937] --> 7
+Hohokum [IGDB ID: 10088] --> 7
 Persona Q: Shadow of the Labyrinth [IGDB ID: 6887] --> 7
 Small Radios Big Televisions [IGDB ID: 24458] --> 7
 Tokyo Mirage Sessions #FE [IGDB ID: 5321] --> 7
@@ -1695,7 +1696,7 @@ Cibele [IGDB ID: 14702] --> 5
 Sunset [IGDB ID: 195533] --> 5
 Volume [IGDB ID: 9647] --> 5
 Tail of the Sun [IGDB ID: 20814] --> 5
-Tomba! [IGDB ID: 256467] --> 5
+Tomba! [IGDB ID: 4097] --> 5
 Primal Rage [IGDB ID: 199013] --> 5
 Lost Eden [IGDB ID: 2167] --> 5
 Caveman Ninja [IGDB ID: 12834] --> 5
@@ -1712,6 +1713,7 @@ Bob's Game [IGDB ID: 31240] --> 5
 Dream Daddy: A Dad Dating Simulator [IGDB ID: 38045] --> 5
 Where the Water Tastes Like Wine [IGDB ID: 15823] --> 5
 Moss [IGDB ID: 37095] --> 5
+Desert Golfing [IGDB ID: 22262] --> 5
 Clash Royale [IGDB ID: 15707] --> 5
 Everything [IGDB ID: 27910] --> 5
 Psycho Fox [IGDB ID: 46131] --> 5
@@ -1785,7 +1787,6 @@ Battlefield 1 [IGDB ID: 18320] --> 2
 Skies of Arcadia Legends [IGDB ID: 4152] --> 2
 Don't Starve [IGDB ID: 3152] --> 2
 Killzone: Liberation [IGDB ID: 1868] --> 2
-Hohokum [IGDB ID: 10088] --> 2
 Voodoo Vince [IGDB ID: 5466] --> 2
 Dark Cloud 2 [IGDB ID: 1215] --> 2
 OlliOlli2: Welcome to Olliwood [IGDB ID: 9523] --> 2
