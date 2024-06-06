@@ -1,9 +1,9 @@
 RANKED: 72
-UNRANKED: 34
-FORMER: 13
+UNRANKED: 35
+FORMER: 14
 UNUSED: 0
 ---
-TOTAL: 119
+TOTAL: 121
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -216,4 +216,6 @@ U-FORBES Best Video Games Of 2014 - Forbes - 1-5-2015
 <^4 Tiers: Platinum (1), Gold (2-4), Silver (5-8), Bronze (9-13)>
 U-The 12 Best Video Games Of 2014 - Kotaku - 1-2-2015
 R-Top 10 videogames of 2014 - Den of Geek - 12-23-2014
+	F-+ HONORABLE MENTIONS
+U-The Best Video Games of 2014 - The New Yorker
 	F-+ HONORABLE MENTIONS

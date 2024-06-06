@@ -123,7 +123,7 @@ def print_platforms():
     print("122. Nuon")
     print("123. WonderSwan Color")
     print("124. SwanCrystal")
-    print("125. PC-8801")
+    print("125. PC-8800 Series")
     print("126. TRS-80")
     print("127. Fairchild Channel F")
     print("128. PC Engine SuperGrafx")
@@ -147,7 +147,7 @@ def print_platforms():
     print("146. AY-3-8605")
     print("147. AY-3-8606")
     print("148. AY-3-8607")
-    print("149. PC-98")
+    print("149. PC-9800 Series")
     print("150. Turbografx-16/PC Engine CD")
     print("151. TRS-80 Color Computer")
     print("152. FM-7")
@@ -176,13 +176,18 @@ def print_platforms():
     print("308. Playdia")
     print("309. Evercade")
     print("339. Sega Pico")
+    print("372. OOParts")
+    print("374. Sharp MZ-2200")
     print("375. Epoch Cassette Vision")
     print("376. Epoch Super Cassette Vision")
+    print("377. Plug & Play")
     print("378. Gamate")
     print("379. Game.com")
     print("380. Casio Loopy")
     print("381. Playdate")
     print("382. Intellivision Amico")
+    print("384. Oculus Quest")
+    print("385. Oculus Rift")
     print("386. Meta Quest 2")
     print("390. PlayStation VR2")
     print("405. Windows Mobile")
@@ -1242,13 +1247,14 @@ while(answer_check_main == False):
                         #Commodore Plus/4
                         #Atari ST/STE
                         #Atari 8-bit
-                        #PC-98
-                        #PC-8801
+                        #PC-9800 Series
+                        #PC-8800 Series
                         #NEC PC-6000 Series
                         #FM Towns
                         #FM-7
                         # Sharp X1
                         # Sharp X68000
+                        #Sharp MZ-2200
                         # ZX Spectrum
                         #Amstrad CPC
                         #Amstrad PCW
@@ -1332,12 +1338,14 @@ while(answer_check_main == False):
                         #PlayStation VR
                         #PlayStation VR2
                         #Windows Mixed Reality
+                        #Oculus Rift
                         #Oculus VR
+                        #Oculus Quest
                         #Meta Quest 2
                         #Meta Quest 3
                         #SteamVR
                         #Daydream
-                        # ... (console querying)
+                        # ... (VR querying)
                         print("VR platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
@@ -1356,7 +1364,9 @@ while(answer_check_main == False):
                         #Google Stadia (?)
                         #Amazon Fire TV
                         #OnLive Game System
-                        # ... (console querying)
+                        #OOParts
+                        #Plug & Play (seems more like console)
+                        # ... (platform querying)
                         print("Platform-style platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
