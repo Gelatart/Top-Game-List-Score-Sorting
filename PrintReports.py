@@ -7,6 +7,8 @@ import dotenv
 from dotenv import load_dotenv
 import datetime
 
+#look for spots with redundancy to turn into inner functions?
+
 def print_platforms():
     #Spun off into its own function so we don't have to worry about maintaining multiple versions of data in-code
     #Just grab it from here when needed

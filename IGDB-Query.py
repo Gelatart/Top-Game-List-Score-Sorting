@@ -6,6 +6,214 @@ import requests
 from igdb.wrapper import IGDBWrapper
 import json
 
+#deal with query syntax errors better? here and in other progams? exception handling?
+
+def query_loop(endpoint_option):
+    while True:
+        query = input("Enter your query for the IGDB API here. Make sure to use the proper syntax to not have an error\n")
+        print(query)
+        """
+        check_string = 'fields *; exclude age_ratings, alternative_names, artworks, checksum, collections, cover, '
+        check_string += 'created_at, follows, game_localizations, genres, involved_companies, keywords, language_supports, '
+        check_string += 'player_perspectives, rating_count, release_dates, screenshots, similar_games, tags, themes, '
+        check_string += 'updated_at, videos, websites; '
+        check_string += 'where name = "'
+        check_string += game.strip()
+        check_string += '" & version_parent = null; offset 0;' #6 is cancelled,  & status != 6
+
+        Test query for Pokemon Red: 'fields *; where id = '1561'; offset 0;'
+        Additional query for Pokemon Red: 'fields *; where name = 'Pokémon Red Version'; offset 0;'
+
+        This works for FTL: Advanced Edition: fields *; where id = '20098'; offset 0;
+        fields *; where id = '20098' & version_parent = null; offset 0; //Doesn't get result in this case
+        """
+
+        # igdb_request = None
+
+        if (endpoint_option == "games"):
+            igdb_request = wrapper.api_request(
+                'games.pb',  # Note the '.pb' suffix at the endpoint
+                query
+            )
+            games_message = GameResult()
+            games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
+            games = games_message.games
+
+            print(games)
+
+            while True:
+                print()
+                print("Would you like to keep going with this endpoint?")
+                quit_answer = input()
+                if (quit_answer == 'Y' or quit_answer == 'Yes' or quit_answer == 'y' or quit_answer == 'yes'):
+                    print()
+                    print("Alright! Back to querying!")
+                    print()
+                    break
+                elif (quit_answer == 'N' or quit_answer == 'No' or quit_answer == 'n' or quit_answer == 'no'):
+                    print()
+                    print("Alright! Let's finish up with this endpoint!")
+                    print()
+                    return #To get out of function and back to main code
+                else:
+                    print()
+                    print("Sorry, I don't understand. Try again")
+                    continue
+        elif (endpoint_option == "1"):
+            # Game_Modes
+            igdb_request = wrapper.api_request(
+                'game_modes.pb',  # Note the '.pb' suffix at the endpoint
+                query
+            )
+            modes_message = GameModeResult()
+            modes_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
+            modes = modes_message.gamemodes  # Correct syntax for it is gamemodes
+
+            print(modes)
+            # Doing the fields *; query for this helped me find all of the types of game_modes
+
+            while True:
+                print()
+                print("Would you like to keep going with this endpoint?")
+                quit_answer = input()
+                if (quit_answer == 'Y' or quit_answer == 'Yes' or quit_answer == 'y' or quit_answer == 'yes'):
+                    print()
+                    print("Alright! Back to querying!")
+                    print()
+                    break
+                elif (quit_answer == 'N' or quit_answer == 'No' or quit_answer == 'n' or quit_answer == 'no'):
+                    print()
+                    print("Alright! Let's finish up with this endpoint!")
+                    print()
+                    return  # To get out of function and back to main code
+                else:
+                    print()
+                    print("Sorry, I don't understand. Try again")
+                    continue
+        elif (endpoint_option == "2"):
+            # Platforms
+            igdb_request = wrapper.api_request(
+                'platforms.pb',  # Note the '.pb' suffix at the endpoint
+                query
+            )
+            platforms_message = PlatformResult()
+            platforms_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
+            platforms = platforms_message.platforms  # Correct syntax for it is gamemodes
+
+            print(platforms)
+
+            while True:
+                print()
+                print("Would you like to keep going with this endpoint?")
+                quit_answer = input()
+                if (quit_answer == 'Y' or quit_answer == 'Yes' or quit_answer == 'y' or quit_answer == 'yes'):
+                    print()
+                    print("Alright! Back to querying!")
+                    print()
+                    break
+                elif (quit_answer == 'N' or quit_answer == 'No' or quit_answer == 'n' or quit_answer == 'no'):
+                    print()
+                    print("Alright! Let's finish up with this endpoint!")
+                    print()
+                    return  # To get out of function and back to main code
+                else:
+                    print()
+                    print("Sorry, I don't understand. Try again")
+                    continue
+        elif (endpoint_option == "3"):
+            # Platform Families
+            igdb_request = wrapper.api_request(
+                'platform_families.pb',  # Note the '.pb' suffix at the endpoint
+                query
+            )
+            platforms_message = PlatformFamilyResult()
+            platforms_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
+            platform_families = platforms_message.platformfamilies  # Correct syntax for it is gamemodes
+
+            print(platform_families)
+
+            while True:
+                print()
+                print("Would you like to keep going with this endpoint?")
+                quit_answer = input()
+                if (quit_answer == 'Y' or quit_answer == 'Yes' or quit_answer == 'y' or quit_answer == 'yes'):
+                    print()
+                    print("Alright! Back to querying!")
+                    print()
+                    break
+                elif (quit_answer == 'N' or quit_answer == 'No' or quit_answer == 'n' or quit_answer == 'no'):
+                    print()
+                    print("Alright! Let's finish up with this endpoint!")
+                    print()
+                    return  # To get out of function and back to main code
+                else:
+                    print()
+                    print("Sorry, I don't understand. Try again")
+                    continue
+        elif (endpoint_option == "4"):
+            # Involved Company
+            igdb_request = wrapper.api_request(
+                'involved_companies.pb',  # Note the '.pb' suffix at the endpoint
+                query
+            )
+            company_message = InvolvedCompanyResult()
+            company_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
+            companies = company_message.involvedcompanies
+
+            print(companies)
+
+            while True:
+                print()
+                print("Would you like to keep going with this endpoint?")
+                quit_answer = input()
+                if (quit_answer == 'Y' or quit_answer == 'Yes' or quit_answer == 'y' or quit_answer == 'yes'):
+                    print()
+                    print("Alright! Back to querying!")
+                    print()
+                    break
+                elif (quit_answer == 'N' or quit_answer == 'No' or quit_answer == 'n' or quit_answer == 'no'):
+                    print()
+                    print("Alright! Let's finish up with this endpoint!")
+                    print()
+                    return  # To get out of function and back to main code
+                else:
+                    print()
+                    print("Sorry, I don't understand. Try again")
+                    continue
+        elif (endpoint_option == "5"):
+            # Company
+            igdb_request = wrapper.api_request(
+                'companies.pb',  # Note the '.pb' suffix at the endpoint
+                query
+            )
+            company_message = CompanyResult()
+            company_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
+            companies = company_message.companies
+
+            print(companies)
+
+            while True:
+                print()
+                print("Would you like to keep going with this endpoint?")
+                quit_answer = input()
+                if (quit_answer == 'Y' or quit_answer == 'Yes' or quit_answer == 'y' or quit_answer == 'yes'):
+                    print()
+                    print("Alright! Back to querying!")
+                    print()
+                    break
+                elif (quit_answer == 'N' or quit_answer == 'No' or quit_answer == 'n' or quit_answer == 'no'):
+                    print()
+                    print("Alright! Let's finish up with this endpoint!")
+                    print()
+                    return  # To get out of function and back to main code
+                else:
+                    print()
+                    print("Sorry, I don't understand. Try again")
+                    continue
+        else:
+            print("Sorry, I don't understand. Try again")
+            continue
+
 load_dotenv()
 client_id = os.getenv('CLIENT_ID')
 client_secret = os.getenv('CLIENT_SECRET')
@@ -46,14 +254,23 @@ games = games_message.games
 #print(games)
 #input("Here we pause")
 
+endpoint_types = { '1': 'Game Modes', '2': 'Platforms', '3': 'Platform Family', '4': 'Involved Company', '5': 'Company'}
+
 while True:
 #give option to return back here or just to option already set upon
     print("Would you like to use the games endpoint or another?")
     print("1. Games")
     print("2. Another")
+    print("3. Quit Program")
     endpoint_option_1 = input()
-    if(endpoint_option_1 == "2"):
-        print("You have selected another? Which endpoint would you like to use?")
+    if(endpoint_option_1 == "1"):
+        print()
+        print("You have selected Games, the usual. Let's get started!")
+        print()
+        query_loop('games')
+    elif(endpoint_option_1 == "2"):
+        print()
+        print("You have selected another. Which endpoint would you like to use?")
         print("1. Game Modes")
         print("2. Platform")
         print("3. Platform Family")
@@ -61,151 +278,20 @@ while True:
         print("5. Company")
         #...
         endpoint_option_2 = input()
-
-        query = input("Enter your query for the IGDB API here. Make sure to use the proper syntax to not have an error\n")
-        print(query)
-        """
-        check_string = 'fields *; exclude age_ratings, alternative_names, artworks, checksum, collections, cover, '
-        check_string += 'created_at, follows, game_localizations, genres, involved_companies, keywords, language_supports, '
-        check_string += 'player_perspectives, rating_count, release_dates, screenshots, similar_games, tags, themes, '
-        check_string += 'updated_at, videos, websites; '
-        check_string += 'where name = "'
-        check_string += game.strip()
-        check_string += '" & version_parent = null; offset 0;' #6 is cancelled,  & status != 6
-        
-        Test query for Pokemon Red: 'fields *; where id = '1561'; offset 0;'
-        Additional query for Pokemon Red: 'fields *; where name = 'Pokémon Red Version'; offset 0;'
-        
-        This works for FTL: Advanced Edition: fields *; where id = '20098'; offset 0;
-        fields *; where id = '20098' & version_parent = null; offset 0; //Doesn't get result in this case
-        """
-
-        #igdb_request = None
-
-        if(endpoint_option_1 == "1"):
-            igdb_request = wrapper.api_request(
-                'games.pb',  # Note the '.pb' suffix at the endpoint
-                query
-            )
-            games_message = GameResult()
-            games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
-            games = games_message.games
-
-            print(games)
-
-            print("Would you like to keep going with the progam?")
-            quit_answer = input()
-            if (quit_answer == 'Y' or quit_answer == 'Yes'):
-                print("Alright! Back to the main menu!")
-                continue
-            elif (quit_answer == 'N' or quit_answer == 'No'):
-                print("Alright! Let's finish up!")
-                break
-        elif(endpoint_option_1 == "2"):
-            if(endpoint_option_2 == "1"):
-                #Game_Modes
-                igdb_request = wrapper.api_request(
-                    'game_modes.pb',  # Note the '.pb' suffix at the endpoint
-                    query
-                )
-                modes_message = GameModeResult()
-                modes_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
-                modes = modes_message.gamemodes #Correct syntax for it is gamemodes
-
-                print(modes)
-                #Doing the fields *; query for this helped me find all of the types of game_modes
-
-                print("Would you like to keep going with the progam?")
-                quit_answer = input()
-                if (quit_answer == 'Y' or quit_answer == 'Yes'):
-                    print("Alright! Back to the main menu!")
-                    continue
-                elif (quit_answer == 'N' or quit_answer == 'No'):
-                    print("Alright! Let's finish up!")
-                    break
-            elif (endpoint_option_2 == "2"):
-                # Platforms
-                igdb_request = wrapper.api_request(
-                    'platforms.pb',  # Note the '.pb' suffix at the endpoint
-                    query
-                )
-                platforms_message = PlatformResult()
-                platforms_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
-                platforms = platforms_message.platforms  # Correct syntax for it is gamemodes
-
-                print(platforms)
-
-                print("Would you like to keep going with the progam?")
-                quit_answer = input()
-                if (quit_answer == 'Y' or quit_answer == 'Yes'):
-                    print("Alright! Back to the main menu!")
-                    continue
-                elif (quit_answer == 'N' or quit_answer == 'No'):
-                    print("Alright! Let's finish up!")
-                    break
-            elif (endpoint_option_2 == "3"):
-                # Platform Families
-                igdb_request = wrapper.api_request(
-                    'platform_families.pb',  # Note the '.pb' suffix at the endpoint
-                    query
-                )
-                platforms_message = PlatformFamilyResult()
-                platforms_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
-                platform_families = platforms_message.platformfamilies  # Correct syntax for it is gamemodes
-
-                print(platform_families)
-
-                print("Would you like to keep going with the progam?")
-                quit_answer = input()
-                if (quit_answer == 'Y' or quit_answer == 'Yes'):
-                    print("Alright! Back to the main menu!")
-                    continue
-                elif (quit_answer == 'N' or quit_answer == 'No'):
-                    print("Alright! Let's finish up!")
-                    break
-            elif (endpoint_option_2 == "4"):
-                # Involved Company
-                igdb_request = wrapper.api_request(
-                    'involved_companies.pb',  # Note the '.pb' suffix at the endpoint
-                    query
-                )
-                company_message = InvolvedCompanyResult()
-                company_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
-                companies = company_message.involvedcompanies
-
-                print(companies)
-
-                print("Would you like to keep going with the progam?")
-                quit_answer = input()
-                if (quit_answer == 'Y' or quit_answer == 'Yes'):
-                    print("Alright! Back to the main menu!")
-                    continue
-                elif (quit_answer == 'N' or quit_answer == 'No'):
-                    print("Alright! Let's finish up!")
-                    break
-            elif (endpoint_option_2 == "5"):
-                # Company
-                igdb_request = wrapper.api_request(
-                    'companies.pb',  # Note the '.pb' suffix at the endpoint
-                    query
-                )
-                company_message = CompanyResult()
-                company_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
-                companies = company_message.companies
-
-                print(companies)
-
-                print("Would you like to keep going with the progam?")
-                quit_answer = input()
-                if(quit_answer == 'Y' or quit_answer == 'Yes'):
-                    print("Alright! Back to the main menu!")
-                    continue
-                elif(quit_answer == 'N' or quit_answer == 'No'):
-                    print("Alright! Let's finish up!")
-                    break
-            else:
-                print("Sorry, I don't understand. Try again")
-                continue
+        print()
+        print(f"You have selected: {endpoint_types[endpoint_option_2]}")
+        print()
+        query_loop(endpoint_option_2)
+    elif (endpoint_option_1 == "3"):
+        print()
+        print("Alright! Wrapping up the program!")
+        print()
+        break
+    else:
+        print()
+        print("Sorry, I don't understand. Try again")
+        print()
+        continue
 
 print("Successfully completed! Goodbye!")
 
