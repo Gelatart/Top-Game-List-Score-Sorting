@@ -18,6 +18,8 @@ import json
 import pandas
 import re
 
+#add ability to put comments in text files? ex. jackbox party pack quintpack is actually jackbox party pack 1-6
+
 load_dotenv()
 #^To actually populate what we will need from mongo connection
 

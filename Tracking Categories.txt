@@ -1,9 +1,9 @@
-RANKED: 72
+RANKED: 74
 UNRANKED: 35
 FORMER: 14
 UNUSED: 0
 ---
-TOTAL: 121
+TOTAL: 123
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -160,6 +160,12 @@ U-The 50 most important PC games of all time - PC Gamer - 1-18-2016
 
 ESSENTIAL LIST FROM NICHE TASTE:
 U-Essential Patriciancore - /v/ - Posted roughly 9-24-2013 (Grabbed from /v/ Recommended Games Wiki)
+
+TOP GAMES OF DECADE: 2010s: 
+R-The 100 best games of the decade (2010-2019) - Polygon - 11-4-2019
+
+TOP GAMES OF 2019:
+R-The 25 best games of 2019 - GamesRadar - 4-1-2022
 
 TOP GAMES OF 2018:
 U-The 20 best video games of 2018 - Business Insider - 12-24-2018
