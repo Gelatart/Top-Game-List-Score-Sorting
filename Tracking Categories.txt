@@ -1,9 +1,9 @@
-RANKED: 74
+RANKED: 78
 UNRANKED: 35
 FORMER: 14
 UNUSED: 0
 ---
-TOTAL: 123
+TOTAL: 127
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -163,6 +163,18 @@ U-Essential Patriciancore - /v/ - Posted roughly 9-24-2013 (Grabbed from /v/ Rec
 
 TOP GAMES OF DECADE: 2010s: 
 R-The 100 best games of the decade (2010-2019) - Polygon - 11-4-2019
+
+TOP GAMES OF 2023:
+R-The 25 best games of 2023 - GamesRadar - 12-11-2023
+
+TOP GAMES OF 2022:
+R-The 25 best games of 2022 - GamesRadar - 12-19-2022
+
+TOP GAMES OF 2021:
+R-The 25 best games of 2021 - GamesRadar - 12-13-2021
+
+TOP GAMES OF 2020:
+R-The 25 best games of 2020 - GamesRadar - 12-21-2020
 
 TOP GAMES OF 2019:
 R-The 25 best games of 2019 - GamesRadar - 4-1-2022
