@@ -214,6 +214,21 @@ def print_platforms():
     #input()
     print()
 
+def add_query(category, value):
+    #new_query = {"List of Platforms": "Odyssey"}
+    new_query = {category: value}
+    global queries
+    queries.append(new_query)
+    #platform_queries.append(new_query)
+
+def add_plat_query(category, value):
+    #Including adding to queries in general in this function, because we will always want to do that?
+    new_query = {category: value}
+    global queries
+    queries.append(new_query)
+    global platform_queries
+    platform_queries.append(new_query)
+
 print("Welcome to PrintReports!")
 
 #print("For now let's start with a test pull. Best games for the Wii!")
@@ -411,7 +426,8 @@ while(answer_check_main == False):
                             #Xbox
                             #Xbox 360
                             #Xbox One
-                            #
+                            #Xbox Series X|S
+                            """
                             new_query = {"List of Platforms": "Xbox"}
                             queries.append(new_query)
                             platform_queries.append(new_query)
@@ -424,6 +440,11 @@ while(answer_check_main == False):
                             new_query = {"List of Platforms": "Xbox Series X|S"}
                             queries.append(new_query)
                             platform_queries.append(new_query)
+                            """
+                            add_plat_query("List of Platforms", "Xbox")
+                            add_plat_query("List of Platforms", "Xbox 360")
+                            add_plat_query("List of Platforms", "Xbox One")
+                            add_plat_query("List of Platforms", "Xbox Series X|S")
                         elif (brand_option == 3):
                             #sega family
                             #SG-1000
@@ -472,6 +493,7 @@ while(answer_check_main == False):
                             #Android
                             #Google Stadia
                             #Ouya (!)
+                            """
                             new_query = {"List of Platforms": "Linux"}
                             queries.append(new_query)
                             platform_queries.append(new_query)
@@ -484,6 +506,11 @@ while(answer_check_main == False):
                             new_query = {"List of Platforms": "Ouya"}
                             queries.append(new_query)
                             platform_queries.append(new_query)
+                            """
+                            add_plat_query("List of Platforms", "Linux")
+                            add_plat_query("List of Platforms", "Android")
+                            add_plat_query("List of Platforms", "Google Stadia")
+                            add_plat_query("List of Platforms", "Ouya")
                         elif (brand_option == 5):
                             #nintendo family
                             #Nintendo Entertainment System
@@ -672,12 +699,16 @@ while(answer_check_main == False):
                         # Generation 1:
                         # Odyssey
                         # PC-50X Family
+                        """
                         new_query = {"List of Platforms": "Odyssey"}
                         queries.append(new_query)
                         platform_queries.append(new_query)
                         new_query = {"List of Platforms": "PC-50X Family"}
                         queries.append(new_query)
                         platform_queries.append(new_query)
+                        """
+                        add_plat_query("List of Platforms", "Odyssey")
+                        add_plat_query("List of Platforms", "PC-50X Family")
                         print("Generation 1 consoles added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
@@ -696,6 +727,7 @@ while(answer_check_main == False):
                         # VC 4000
                         # Bally Astrocade
                         # Microvision
+                        """
                         new_query = {"List of Platforms": "Atari 2600"}
                         queries.append(new_query)
                         platform_queries.append(new_query)
@@ -735,6 +767,20 @@ while(answer_check_main == False):
                         new_query = {"List of Platforms": "Microvision"}
                         queries.append(new_query)
                         platform_queries.append(new_query)
+                        """
+                        add_plat_query("List of Platforms", "Atari 2600")
+                        add_plat_query("List of Platforms", "Atari 5200")
+                        add_plat_query("List of Platforms", "Intellivision")
+                        add_plat_query("List of Platforms", "ColecoVision")
+                        add_plat_query("List of Platforms", "Odyssey 2 / Videopac G7000")
+                        add_plat_query("List of Platforms", "Game & Watch")
+                        add_plat_query("List of Platforms", "Fairchild Channel F")
+                        add_plat_query("List of Platforms", "Vectrex")
+                        add_plat_query("List of Platforms", "Epoch Cassette Vision")
+                        add_plat_query("List of Platforms", "1292 Advanced Programmable Video System")
+                        add_plat_query("List of Platforms", "VC 4000")
+                        add_plat_query("List of Platforms", "Bally Astrocade")
+                        add_plat_query("List of Platforms", "Microvision")
                         print("Generation 2 consoles added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
