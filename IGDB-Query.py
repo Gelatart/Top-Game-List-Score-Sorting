@@ -390,6 +390,7 @@ Punch-Out!! [Wii]: IGDB ID: 2194
 Ratchet and Clank (name seems to be crashing IGDB API request?): IGDB ID: 1289
 Ratchet and Clank: Up Your Arsenal (name seems to be crashing IGDB API request?): IGDB ID: 1773
 Rayman GBC: IGDB ID: 85578
+Rayman 2: The Great Escape [Dreamcast]: IGDB ID: 193314
 Resident Evil 2002: IGDB ID: 24869
 Resident Evil 2002 HD REMASTER: IGDB ID: 8254
 Resident Evil 2 2019: IGDB ID: 19686
