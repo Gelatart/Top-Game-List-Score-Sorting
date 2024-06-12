@@ -310,6 +310,7 @@ Baku Baku [Master System]: IGDB ID: 69785
 Batman the Video Game GB: IGDB ID: 49227
 Batman: Arkham City - Game of the Year Edition (not matching some reason?): IGDB ID: 21704
 Battletoads GB: IGDB ID: 136619
+Blade Runner [1997]: IGDB ID: 322
 Chrono Trigger DS: IGDB ID: 20398
 Command & Conquer: Red Alert 2 (name seems to be crashing request?): IGDB ID: 245
 Contra NES: IGDB ID: 186207

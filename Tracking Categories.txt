@@ -1,9 +1,9 @@
-RANKED: 79
+RANKED: 80
 UNRANKED: 35
 FORMER: 14
 UNUSED: 0
 ---
-TOTAL: 128
+TOTAL: 129
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -166,6 +166,9 @@ R-The 100 best games of the decade (2010-2019) - Polygon - 11-4-2019
 
 TOP GAMES OF DECADE: 2000s:
 R-The 100 Best Video Games and PC Games From the 2000s - Complex - 8-23-2022
+
+TOP GAMES OF DECADE: 1990s:
+R-100 Greatest Video Games of the 1990s - DigitalDreamDoor - 12-28-2021
 
 TOP GAMES OF 2023:
 R-The 25 best games of 2023 - GamesRadar - 12-11-2023
