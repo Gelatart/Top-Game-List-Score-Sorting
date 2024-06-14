@@ -295,6 +295,13 @@ while True:
 
 print("Successfully completed! Goodbye!")
 
+#create a function/program that scans IGDB ID's for duplicates so I can give them consistent formatting
+#display all titles found for a certain ID so I can compare and determine best title
+#give functionality to rewrite them in the files based on that?
+#process would likely take long so leave it in the background to come back to
+#have it pause itself, or keep track of what noted to have me review through the end of the process?
+#build up a stack to go through at the very end
+
 #SPECIAL CASES KNOWN SO FAR:
 """
 (Seems like using the & symbol can break queries even when it's in the name?)
@@ -403,6 +410,7 @@ Shadowrun SNES: IGDB ID: 7640
 SimCity SNES: IGDB ID: 180001
 Singstar 2007 (had in my list that we had a 2008 one?): IGDB ID: 15180
 Spider-Man [PlayStation]: IGDB ID: 3603
+Stanley Parable [2013] (standalone): IGDB ID: 3035
 Star Wars: Battlefront I/II are the originals, Star Wars Battlefront I/II are the EA post-Disney ones
 Teenage Mutant Ninja Turtles ARCADE: IGDB ID: 3815
 Teenage Mutant Ninja Turtles NES: IGDB ID: 86386
