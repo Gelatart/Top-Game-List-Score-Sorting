@@ -9,6 +9,9 @@ import datetime
 
 #look for spots with redundancy to turn into inner functions?
 
+#make program that can run a bunch of different report generations at once based on custom preset configs?
+#use files to supply these configs?
+
 def print_platforms():
     #Spun off into its own function so we don't have to worry about maintaining multiple versions of data in-code
     #Just grab it from here when needed
@@ -229,7 +232,32 @@ def add_plat_query(category, value):
     global platform_queries
     platform_queries.append(new_query)
 
+def add_playcount_query(category, value):
+    new_query = {category: value}
+    global queries
+    queries.append(new_query)
+    global player_count_queries
+    player_count_queries.append(new_query)
+
+def add_dev_query(category, value):
+    new_query = {category: value}
+    global queries
+    queries.append(new_query)
+    global dev_queries
+    dev_queries.append(new_query)
+
 #make more queries options for other types of queries? see if these will support?
+
+#or queries: platform, player count, dev
+#and queries: Misc, the rest
+
+def add_misc_query(category, value):
+    #This is meant for all the misc queries that would be ANDed in a natural approach
+    new_query = {category: value}
+    global queries
+    queries.append(new_query)
+    global misc_queries
+    misc_queries.append(new_query)
 
 print("Welcome to PrintReports!")
 
@@ -257,25 +285,51 @@ REFERENCE: https://stackoverflow.com/questions/11269680/dynamically-building-que
 #Load the env variables from .env
 load_dotenv()
 
-#Start connecting to Mongo cluster
+#Prep for mongo connection
 mon_connect = os.getenv('MONGO_URI')
-#print(mon_connect)
-mon_client = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
-#mon_client = pymongo.MongoClient(mon_connect)
-mon_db = mon_client["GameSorting"]
-try:
-    mon_client.admin.command('ping')
-    print("Pinged your deployment. You successfully connected to MongoDB!")
-except Exception as e:
-    print(e)
-mon_col = mon_db["games"]
-list_col = mon_db["lists"]
+# print(mon_connect)
+mon_connected = False
+mon_client = None
+mon_db = None
+mon_col = None
+list_col = None
+
+while True:
+#Ask the user if they want to connect to the Mongo cluster yet, or wait until later
+#If later, make sure there is a mechanism to ensure connection later on
+    print("Would you like to check to make sure you can connect to the Mongo cluster now? Or later?")
+    print("1. Now")
+    print("2. Later")
+    monconnect_option = input()
+
+    if(monconnect_option == '1'):
+        # Start connecting to Mongo cluster
+        print("Alright! Let's try out the connection")
+        mon_client = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
+        # mon_client = pymongo.MongoClient(mon_connect)
+        mon_db = mon_client["GameSorting"]
+        try:
+            mon_client.admin.command('ping')
+            print("Pinged your deployment. You successfully connected to MongoDB!")
+        except Exception as e:
+            print(e)
+        mon_col = mon_db["games"]
+        list_col = mon_db["lists"]
+        mon_connected = True
+        break
+    elif (monconnect_option == '2'):
+        print("Ok, just keep in mind you won't know if you can successfully connect to the cluster until you generate the report")
+        break
+    else:
+        print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.\n")
+        print()
+        continue
 
 #test_query = {"Main Platform": "Wii"}
 #test_query = {"Main Platform": {"$exists": True}}
 #test_query = {"Ranked Score": { "$gt": 2400 } }
 
-print("Time to grab the games!")
+#print("Time to grab the games!")
 #games_pulled = mon_db.mon_col.find().limit(15)
 #games_pulled = mon_col.find().limit(10)
 #games_pulled = GameSorting.games.find().limit(10)
@@ -352,11 +406,6 @@ while(answer_check_main == False):
                 #have function to check if number just given was one of the valid options?
                 #going to go off of IGDB ID's for now, need to keep adding more
                 platform_selection = input()
-                """
-                new_query = {"List of Platforms": platform_selection}
-                queries.append(new_query)
-                platform_queries.append(new_query)
-                """
                 add_plat_query("List of Platforms", platform_selection)
                 input("When you are ready, press Enter to go back to the main print menu\n")
                 break
@@ -386,48 +435,6 @@ while(answer_check_main == False):
                         print("ONE OF THE FAMILY OPTIONS")
                         if (brand_option == 1):
                             #playstation family
-                            #PlayStation
-                            #PlayStation 2
-                            #PlayStation 3
-                            #PlayStation 4
-                            #PlayStation 5
-                            #PlayStation Portable
-                            #PlayStation Vita
-                            #PlayStation VR
-                            #PlayStation VR2
-                            #PocketStation
-                            """
-                            new_query = {"List of Platforms": "PlayStation"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "PlayStation 2"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "PlayStation 3"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "PlayStation 4"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "PlayStation 5"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "PlayStation Portable"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "PlayStation Vita"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "PlayStation VR"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "PlayStation VR2"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "PocketStation"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            """
                             add_plat_query("List of Platforms", "PlayStation")
                             add_plat_query("List of Platforms", "PlayStation 2")
                             add_plat_query("List of Platforms", "PlayStation 3")
@@ -440,72 +447,12 @@ while(answer_check_main == False):
                             add_plat_query("List of Platforms", "PocketStation")
                         elif (brand_option == 2):
                             #xbox family
-                            #Xbox
-                            #Xbox 360
-                            #Xbox One
-                            #Xbox Series X|S
-                            """
-                            new_query = {"List of Platforms": "Xbox"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Xbox 360"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Xbox One"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Xbox Series X|S"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            """
                             add_plat_query("List of Platforms", "Xbox")
                             add_plat_query("List of Platforms", "Xbox 360")
                             add_plat_query("List of Platforms", "Xbox One")
                             add_plat_query("List of Platforms", "Xbox Series X|S")
                         elif (brand_option == 3):
                             #sega family
-                            #SG-1000
-                            #Sega Master System/Mark III
-                            #Sega Mega Drive/Genesis
-                            #Sega CD
-                            #Sega 32X
-                            #Sega Saturn
-                            #Dreamcast
-                            #Visual Memory Unit / Visual Memory System
-                            #Sega Game Gear
-                            #Sega Pico
-                            """
-                            new_query = {"List of Platforms": "SG-1000"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Sega Master System/Mark III"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Sega Mega Drive/Genesis"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Sega CD"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Sega 32X"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Sega Saturn"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Dreamcast"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Visual Memory Unit / Visual Memory System"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Sega Game Gear"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Sega Pico"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            """
                             add_plat_query("List of Platforms", "SG-1000")
                             add_plat_query("List of Platforms", "Sega Master System/Mark III")
                             add_plat_query("List of Platforms", "Sega Mega Drive/Genesis")
@@ -518,123 +465,13 @@ while(answer_check_main == False):
                             add_plat_query("List of Platforms", "Sega Pico")
                         elif (brand_option == 4):
                             #linux family
-                            #Linux
-                            #Android
-                            #Google Stadia
-                            #Ouya (!)
-                            """
-                            new_query = {"List of Platforms": "Linux"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Android"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Google Stadia"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Ouya"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            """
                             add_plat_query("List of Platforms", "Linux")
                             add_plat_query("List of Platforms", "Android")
                             add_plat_query("List of Platforms", "Google Stadia")
-                            add_plat_query("List of Platforms", "Ouya")
+                            add_plat_query("List of Platforms", "Ouya") #(!)
                         elif (brand_option == 5):
                             #nintendo family
-                            #Nintendo Entertainment System
-                            #Super Nintendo Entertainment System
-                            #Nintendo 64
-                            #Nintendo 64DD
-                            #Nintendo GameCube
-                            #Wii
-                            #Wii U
-                            #Nintendo Switch
-                            #Game & Watch
-                            #Game Boy
-                            #Game Boy Color
-                            #Virtual Boy
-                            #Game Boy Advance
-                            #Nintendo DS
-                            #Nintendo DSi
-                            #Nintendo 3DS
-                            #New Nintendo 3DS
-                            #Family Computer
-                            #Family Computer Disk System
-                            #Super Famicom
-                            #Satellaview
-                            #Pokémon mini
-                            #Virtual Console
-                            #Nintendo PlayStation
                             #any others missing? wiiware (removed?)? nintendo eshop (removed?)?
-                            """
-                            new_query = {"List of Platforms": "Nintendo Entertainment System"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Super Nintendo Entertainment System"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Nintendo 64"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Nintendo 64DD"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Nintendo GameCube"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Wii"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Wii U"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Nintendo Switch"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Game Boy"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Game Boy Color"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Virtual Boy"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Game Boy Advance"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Nintendo DS"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Nintendo DSi"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Nintendo 3DS"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "New Nintendo 3DS"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Family Computer"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Family Computer Disk System"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Super Famicom"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Pokémon mini"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Virtual Console"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            new_query = {"List of Platforms": "Nintendo PlayStation"}
-                            queries.append(new_query)
-                            platform_queries.append(new_query)
-                            """
                             add_plat_query("List of Platforms", "Nintendo Entertainment System")
                             add_plat_query("List of Platforms", "Super Nintendo Entertainment System")
                             add_plat_query("List of Platforms", "Nintendo 64")
@@ -663,43 +500,6 @@ while(answer_check_main == False):
                         #we arrange this one ourselves for atari options
                         #consider making my own atari family in a platform family category in the mongo cluster?
                         print("LONER ATARI")
-                        """
-                        ATARI PLATFORMS:
-                        Atari 2600 (59)
-                        Atari 7800 (60)
-                        Atari Lynx (61)
-                        Atari Jaguar (62)
-                        Atari ST/STE (63)
-                        Atari 8-bit (65)
-                        Atari 5200 (66)
-                        Atari Jaguar CD (410)
-                        """
-                        """
-                        new_query = {"List of Platforms": "Atari 2600"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Atari 7800"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Atari Lynx"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Atari Jaguar"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Atari ST/STE"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Atari 8-bit"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Atari 5200"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Atari Jaguar CD"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        """
                         add_plat_query("List of Platforms", "Atari 2600")
                         add_plat_query("List of Platforms", "Atari 7800")
                         add_plat_query("List of Platforms", "Atari Lynx")
@@ -759,16 +559,6 @@ while(answer_check_main == False):
 
                     if(generation_option == "1"):
                         # Generation 1:
-                        # Odyssey
-                        # PC-50X Family
-                        """
-                        new_query = {"List of Platforms": "Odyssey"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "PC-50X Family"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        """
                         add_plat_query("List of Platforms", "Odyssey")
                         add_plat_query("List of Platforms", "PC-50X Family")
                         print("Generation 1 consoles added to querying!")
@@ -776,60 +566,6 @@ while(answer_check_main == False):
                         break
                     elif(generation_option == "2"):
                         # Generation 2:
-                        # Atari 2600
-                        # Atari 5200
-                        # Intellivision
-                        # ColecoVision
-                        # Odyssey 2 / Videopac G7000
-                        # Game & Watch
-                        # Fairchild Channel F
-                        # Vectrex
-                        # Epoch Cassette Vision
-                        # 1292 Advanced Programmable Video System
-                        # VC 4000
-                        # Bally Astrocade
-                        # Microvision
-                        """
-                        new_query = {"List of Platforms": "Atari 2600"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Atari 5200"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Intellivision"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "ColecoVision"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Odyssey 2 / Videopac G7000"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Game & Watch"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Fairchild Channel F"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Vectrex"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Epoch Cassette Vision"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "1292 Advanced Programmable Video System"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "VC 4000"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Bally Astrocade"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Microvision"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        """
                         add_plat_query("List of Platforms", "Atari 2600")
                         add_plat_query("List of Platforms", "Atari 5200")
                         add_plat_query("List of Platforms", "Intellivision")
@@ -848,36 +584,6 @@ while(answer_check_main == False):
                         break
                     elif (generation_option == "3"):
                         # Generation 3:
-                        # Nintendo Entertainment System
-                        # Family Computer
-                        # Family Computer Disk System
-                        # Sega Master System/Mark III
-                        # SG-1000
-                        # Atari 7800
-                        # Epoch Super Cassette Vision
-                        """
-                        new_query = {"List of Platforms": "Nintendo Entertainment System"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Family Computer"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Family Computer Disk System"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Sega Master System/Mark III"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "SG-1000"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Atari 7800"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Epoch Super Cassette Vision"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        """
                         add_plat_query("List of Platforms", "Nintendo Entertainment System")
                         add_plat_query("List of Platforms", "Family Computer")
                         add_plat_query("List of Platforms", "Family Computer Disk System")
@@ -890,76 +596,6 @@ while(answer_check_main == False):
                         break
                     elif (generation_option == "4"):
                         # Generation 4:
-                        # Super Nintendo Entertainment System
-                        # Super Famicom
-                        # Satellaview
-                        # Game Boy
-                        # Sega Mega Drive/Genesis
-                        # Sega CD
-                        # Sega 32X
-                        # Sega Game Gear
-                        # Sega Pico
-                        # TurboGrafx-16/PC Engine
-                        # Turbografx-16/PC Engine CD
-                        # PC Engine SuperGrafx
-                        # Neo Geo AES
-                        # Neo Geo CD
-                        # Atari Lynx
-                        # Philips CD-i
-                        # Gamate
-                        """
-                        new_query = {"List of Platforms": "Super Nintendo Entertainment System"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Super Famicom"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Satellaview"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Game Boy"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Sega Mega Drive/Genesis"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Sega CD"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Sega 32X"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Sega Game Gear"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Sega Pico"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "TurboGrafx-16/PC Engine"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Turbografx-16/PC Engine CD"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "PC Engine SuperGrafx"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Neo Geo AES"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Neo Geo CD"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Atari Lynx"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Philips CD-i"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Gamate"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        """
                         add_plat_query("List of Platforms", "Super Nintendo Entertainment System")
                         add_plat_query("List of Platforms", "Super Famicom")
                         add_plat_query("List of Platforms", "Satellaview")
@@ -982,80 +618,6 @@ while(answer_check_main == False):
                         break
                     elif (generation_option == "5"):
                         # Generation 5:
-                        # Nintendo 64
-                        #Nintendo 64DD
-                        # Game Boy Color
-                        # Virtual Boy
-                        # Sega Saturn
-                        # PlayStation
-                        # PocketStation
-                        # PC-FX
-                        # Neo Geo Pocket
-                        # Neo Geo Pocket Color
-                        # Atari Jaguar
-                        # Atari Jaguar CD
-                        # 3DO Interactive Multiplayer
-                        # Amiga CD32
-                        # WonderSwan
-                        # WonderSwan Color
-                        # Apple Pippin
-                        # Playdia
-                        """
-                        new_query = {"List of Platforms": "Nintendo 64"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Nintendo 64DD"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Game Boy Color"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Virtual Boy"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Sega Saturn"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "PlayStation"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "PocketStation"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "PC-FX"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Neo Geo Pocket"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Neo Geo Pocket Color"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Atari Jaguar"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Atari Jaguar CD"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "3DO Interactive Multiplayer"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Amiga CD32"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "WonderSwan"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "WonderSwan Color"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Apple Pippin"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Playdia"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        """
                         add_plat_query("List of Platforms", "Nintendo 64")
                         add_plat_query("List of Platforms", "Nintendo 64DD")
                         add_plat_query("List of Platforms", "Game Boy Color")
@@ -1079,44 +641,6 @@ while(answer_check_main == False):
                         break
                     elif (generation_option == "6"):
                         # Generation 6:
-                        # Nintendo GameCube
-                        # Game Boy Advance
-                        # Dreamcast
-                        # Visual Memory Unit / Visual Memory System
-                        # PlayStation 2
-                        # Xbox
-                        # N-Gage
-                        # Leapster
-                        # V.Smile
-                        """
-                        new_query = {"List of Platforms": "Nintendo GameCube"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Game Boy Advance"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Dreamcast"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Visual Memory Unit / Visual Memory System"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "PlayStation 2"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Xbox"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "N-Gage"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Leapster"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "V.Smile"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        """
                         add_plat_query("List of Platforms", "Nintendo GameCube")
                         add_plat_query("List of Platforms", "Game Boy Advance")
                         add_plat_query("List of Platforms", "Dreamcast")
@@ -1131,52 +655,6 @@ while(answer_check_main == False):
                         break
                     elif (generation_option == "7"):
                         # Generation 7:
-                        # Wii
-                        # Nintendo DS
-                        # Nintendo DSi
-                        # PlayStation 3
-                        # PlayStation Portable
-                        # Xbox 360
-                        # Zeebo
-                        # HyperScan
-                        # Leapster Explorer/LeadPad Explorer
-                        # Digiblast
-                        #Gizmondo
-                        """
-                        new_query = {"List of Platforms": "Wii"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Nintendo DS"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Nintendo DSi"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "PlayStation 3"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "PlayStation Portable"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Xbox 360"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Zeebo"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "HyperScan"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Leapster Explorer/LeadPad Explorer"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Digiblast"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Gizmondo"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        """
                         add_plat_query("List of Platforms", "Wii")
                         add_plat_query("List of Platforms", "Nintendo DS")
                         add_plat_query("List of Platforms", "Nintendo DSi")
@@ -1193,52 +671,6 @@ while(answer_check_main == False):
                         break
                     elif (generation_option == "8"):
                         # Generation 8:
-                        # Wii U
-                        # Nintendo Switch (special case)
-                        # Nintendo 3DS
-                        # New Nintendo 3DS
-                        # PlayStation 4
-                        # PlayStation Vita
-                        # PlayStation VR
-                        # Xbox One
-                        # Ouya
-                        # Evercade
-                        # LeapTV
-                        """
-                        new_query = {"List of Platforms": "Wii U"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Nintendo Switch"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Nintendo 3DS"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "New Nintendo 3DS"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "PlayStation 4"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "PlayStation Vita"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "PlayStation VR"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Xbox One"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Ouya"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Evercade"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "LeapTV"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        """
                         add_plat_query("List of Platforms", "Wii U")
                         add_plat_query("List of Platforms", "Nintendo Switch")
                         add_plat_query("List of Platforms", "Nintendo 3DS")
@@ -1254,28 +686,7 @@ while(answer_check_main == False):
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (generation_option == "9"):
-                        # PlayStation 5
-                        # PlayStation VR2
-                        # Xbox Series X|S
-                        # Meta Quest 3
-                        # Playdate
-                        """
-                        new_query = {"List of Platforms": "PlayStation 5"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "PlayStation VR2"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Xbox Series X|S"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Meta Quest 3"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Playdate"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        """
+                        #Generation 9:
                         add_plat_query("List of Platforms", "PlayStation 5")
                         add_plat_query("List of Platforms", "PlayStation VR2")
                         add_plat_query("List of Platforms", "Xbox Series X|S")
@@ -1305,80 +716,6 @@ while(answer_check_main == False):
                         print()
                         print("Grabbing console platforms")
                         print()
-                        #Atari 2600
-                        #Atari 5200
-                        #Atari 7800
-                        #Atari Jaguar
-                        #Atari Jaguar CD
-                        #Nintendo Entertainment System
-                        #Family Computer
-                        #Family Computer Disk System
-                        #Super Nintendo Entertainment System
-                        #Super Famicom
-                        #Nintendo 64
-                        #Nintendo 64DD
-                        #Nintendo GameCube
-                        #Wii
-                        #Wii U
-                        #Nintendo Switch
-                        #Nintendo PlayStation
-                        #SG-1000
-                        #Sega Master System/Mark III
-                        #Sega Mega Drive/Genesis
-                        #Sega CD
-                        #Sega 32X
-                        #Sega Saturn
-                        #Dreamcast
-                        #Sega Pico
-                        #PlayStation
-                        #PlayStation 2
-                        #PlayStation 3
-                        #PlayStation 4
-                        #PlayStation 5
-                        #Xbox
-                        #Xbox 360
-                        #Xbox One
-                        #Xbox Series X|S
-                        #TurboGrafx-16/PC Engine
-                        #Turbografx-16/PC Engine CD
-                        #PC Engine SuperGrafx
-                        #PC-FX
-                        #Neo Geo AES
-                        #Neo Geo CD
-                        # Intellivision
-                        #Intellivision Amico (unreleased?)
-                        # ColecoVision
-                        #3DO Interactive Multiplayer
-                        #Philips CD-i
-                        #Vectrex
-                        #Odyssey
-                        #Odyssey 2 / Videopac G7000
-                        #Amiga CD32
-                        #Ouya
-                        #Fairchild Channel F
-                        #Bally Astrocade
-                        #VC 4000
-                        #1292 Advanced Programmable Video System
-                        #PC-50X Family
-                        #Zeebo
-                        #Playdia
-                        #Epoch Cassette Vision
-                        #Epoch Super Cassette Vision
-                        #HyperScan
-                        #LeapTV
-                        #V.Smile
-                        #Apple Pippin
-                        #Nuon
-                        #Casio Loopy
-                        #AY-3-8760
-                        #AY-3-8710
-                        #AY-3-8603
-                        #AY-3-8605
-                        #AY-3-8606
-                        #AY-3-8607
-                        #DVD Player (does this seem fitting?)
-                        #Panasonic M2 (cancelled)
-                        #... (console querying)
                         add_plat_query("List of Platforms", "Atari 2600")
                         add_plat_query("List of Platforms", "Atari 5200")
                         add_plat_query("List of Platforms", "Atari 7800")
@@ -1460,42 +797,6 @@ while(answer_check_main == False):
                         print()
                         print("Grabbing handheld platforms")
                         print()
-                        #Game & Watch
-                        # Game Boy
-                        # Game Boy Color
-                        #Virtual Boy
-                        # Game Boy Advance
-                        # Nintendo DS
-                        #Nintendo DSi
-                        #Nintendo 3DS
-                        #New Nintendo 3DS
-                        #Nintendo Switch
-                        #Pokémon mini
-                        #Sega Game Gear
-                        #Visual Memory Unit / Visual Memory System
-                        #PocketStation
-                        #PlayStation Portable
-                        #PlayStation Vita
-                        #Atari Lynx
-                        #Neo Geo Pocket
-                        #Neo Geo Pocket Color
-                        #WonderSwan
-                        #WonderSwan Color
-                        #SwanCrystal
-                        #Leapster
-                        #Leapster Explorer/LeadPad Explorer
-                        #N-Gage
-                        #Game.com
-                        #Microvision
-                        #Tapwave Zodiac
-                        #Evercade
-                        #Gamate
-                        #Playdate
-                        #Digiblast
-                        #Gizmondo
-                        #Handheld Electronic LCD
-                        #Panasonic Jungle
-                        # ... (handheld querying)
                         add_plat_query("List of Platforms", "Game & Watch")
                         add_plat_query("List of Platforms", "Game Boy")
                         add_plat_query("List of Platforms", "Game Boy Color")
@@ -1539,64 +840,6 @@ while(answer_check_main == False):
                         print()
                         print("Grabbing computer and desktop OS platforms")
                         print()
-                        #DOS
-                        #PC (Microsoft Windows)
-                        # MSX
-                        # MSX2
-                        #Apple II
-                        #Apple IIGS
-                        #Mac
-                        #Linux
-                        #SteamOS
-                        #Commodore C64/128/MAX
-                        #Commodore VIC-20
-                        #Commodore 16
-                        #Commodore CDTV (seems a bit like a console?)
-                        #Amiga
-                        #Commodore PET
-                        #Commodore Plus/4
-                        #Atari ST/STE
-                        #Atari 8-bit
-                        #PC-9800 Series
-                        #PC-8800 Series
-                        #NEC PC-6000 Series
-                        #FM Towns
-                        #FM-7
-                        # Sharp X1
-                        # Sharp X68000
-                        #Sharp MZ-2200
-                        # ZX Spectrum
-                        #Amstrad CPC
-                        #Amstrad PCW
-                        #BBC Microcomputer System
-                        #Texas Instruments TI-99
-                        #Donner Model 30
-                        #PDP-1
-                        #PDP-10
-                        #PDP-8
-                        #PDP-7
-                        #PDP-11
-                        #DEC GT40
-                        #Ferranti Nimrod Computer
-                        #EDSAC
-                        #HP 2100
-                        #HP 3000
-                        #SDS Sigma 7
-                        #Call-A-Computer time-shared mainframe computer system
-                        #CDC Cyber 70
-                        #PLATO
-                        #Imlac PDS-1
-                        #Microcomputer
-                        #Acorn Archimedes
-                        #Acorn Electron
-                        #TRS-80
-                        #TRS-80 Color Computer
-                        #AY-3-8500 (seems more like console to me?)
-                        #AY-3-8610 (seems more like console to me?)
-                        #Dragon 32/64
-                        #Tatung Einstein
-                        #Thomson MO5
-                        # ... (computer / desktop OS querying)
                         add_plat_query("List of Platforms", "DOS")
                         add_plat_query("List of Platforms", "PC (Microsoft Windows)")
                         add_plat_query("List of Platforms", "MSX")
@@ -1662,25 +905,10 @@ while(answer_check_main == False):
                         print()
                         print("Grabbing arcade platforms")
                         print()
-                        #Arcade
-                        #Neo Geo MVS
-                        #Hyper Neo Geo 64
-                        #Analogue electronics (?, should be misc maybe?)
-                        #...?
-                        """
-                        new_query = {"List of Platforms": "Arcade"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Neo Geo MVS"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        new_query = {"List of Platforms": "Hyper Neo Geo 64"}
-                        queries.append(new_query)
-                        platform_queries.append(new_query)
-                        """
                         add_plat_query("List of Platforms", "Arcade")
                         add_plat_query("List of Platforms", "Neo Geo MVS")
                         add_plat_query("List of Platforms", "Hyper Neo Geo 64")
+                        add_plat_query("List of Platforms", "Analogue electronics") # (?, should be misc maybe?)
                         print("Arcade platforms added to querying!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
@@ -1689,16 +917,6 @@ while(answer_check_main == False):
                         print()
                         print("Grabbing mobile phone platforms")
                         print()
-                        #iOS
-                        #Android
-                        #BlackBerry OS
-                        #Windows Mobile
-                        #Windows Phone
-                        #Palm OS
-                        # Legacy Mobile Device
-                        #...?
-                        print()
-                        # ... (console querying)
                         add_plat_query("List of Platforms", "iOS")
                         add_plat_query("List of Platforms", "Android")
                         add_plat_query("List of Platforms", "BlackBerry OS")
@@ -1714,17 +932,6 @@ while(answer_check_main == False):
                         print()
                         print("Grabbing VR platforms")
                         print()
-                        #PlayStation VR
-                        #PlayStation VR2
-                        #Windows Mixed Reality
-                        #Oculus Rift
-                        #Oculus VR
-                        #Oculus Quest
-                        #Meta Quest 2
-                        #Meta Quest 3
-                        #SteamVR
-                        #Daydream
-                        # ... (VR querying)
                         add_plat_query("List of Platforms", "PlayStation VR")
                         add_plat_query("List of Platforms", "PlayStation VR2")
                         add_plat_query("List of Platforms", "Windows Mixed Reality")
@@ -1743,19 +950,6 @@ while(answer_check_main == False):
                         print()
                         print("Grabbing platform-style platforms")
                         print()
-                        #Web browser
-                        #Satellaview (?)
-                        #Virtual Console (?)
-                        #WiiWare (?, removed?)
-                        #Nintendo eShop (?, removed?)
-                        #PlayStation Network (?)
-                        #Xbox Live Arcade (?)
-                        #Google Stadia (?)
-                        #Amazon Fire TV
-                        #OnLive Game System
-                        #OOParts
-                        #Plug & Play (seems more like console)
-                        # ... (platform querying)
                         add_plat_query("List of Platforms", "Web browser")
                         add_plat_query("List of Platforms", "Satellaview") # (?)
                         add_plat_query("List of Platforms", "Virtual Console") # (?)
@@ -1779,7 +973,7 @@ while(answer_check_main == False):
                 break
             else:
                 print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.\n")
-                print()
+                #print()
                 continue
         print("Returning back to main menu")
         print()
@@ -1793,14 +987,9 @@ while(answer_check_main == False):
         input("Whenever you are ready, the platform options will be listed in full (For now use the text version)\n")
         print_platforms()
         print("Which platform would you like to include?")
-        # have function to check if number just given was one of the valid options?
+        # have function to check if number or text just given was one of the valid options? reject if invalid, loop it
         # going to go off of IGDB ID's for now, need to keep adding more
         platform_selection = input()
-        """
-        new_query = {"Main Platform": platform_selection}
-        queries.append(new_query)
-        platform_queries.append(new_query)
-        """
         add_plat_query("Main Platform", platform_selection)
         print("Returning back to main menu")
         print()
@@ -1808,55 +997,158 @@ while(answer_check_main == False):
         print()
         print("You have selected 3. Release Date")
         print()
-        print("Would you like to enter a specific date? Or specify a time range?")
-        print("1. Specific date")
-        print("2. Specified time range")
-        time_style_option = input()
-        if (time_style_option == '1'):
-            print("Type in the date you would like to filter for")
-            print("First type in the year, then the month, then the day")
-            date_year = int(input())
-            date_month = int(input())
-            date_day = int(input())
-            filter_date = datetime.datetime(date_year, date_month, date_day)
-            print(filter_date)
-            new_query = {"Release Date": filter_date}
-            queries.append(new_query)
-        elif (time_style_option == '2'):
-            print("Here are the time range options")
-            print("1. Specific year")
-            print("2. Specific decade")
-            print("3. Before a date")
-            print("4. After a date")
-            print("5. In between two dates")
-            print("6. 20th Century")
-            print("7. 21st Century")
-            time_range_option = input()
-            #...
-        else:
-            print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
-            print()
+        while True:
+            print("Would you like to enter a specific date? Or specify a time range?")
+            print("1. Specific date")
+            print("2. Specified time range")
+            time_style_option = input()
+            if (time_style_option == '1'):
+                print("Type in the date you would like to filter for")
+                print("First type in the year, then the month, then the day")
+                date_year = int(input())
+                date_month = int(input())
+                date_day = int(input())
+                filter_date = datetime.datetime(date_year, date_month, date_day)
+                print(filter_date)
+                """
+                new_query = {"Release Date": filter_date}
+                queries.append(new_query)
+                """
+                add_misc_query("Release Date", filter_date)
+                break
+            elif (time_style_option == '2'):
+                while True:
+                    print("Here are the time range options to choose from")
+                    print("1. Specific year")
+                    print("2. Specific decade")
+                    print("3. Before a date")
+                    print("4. After a date")
+                    print("5. In between two dates")
+                    print("6. 20th Century")
+                    print("7. 21st Century")
+                    time_range_option = input()
+                    if (time_range_option == '1'):
+                        #fix these and others to use datetime?
+                        #give prompts to return to main menu
+                        print("You have selected 1. Specific year")
+                        print()
+                        print("Please enter the year you would like to query for")
+                        year_input = input()
+                        #{ "address": { "$gt": "S" } }
+                        value = { "$gte": f"{year_input}-01-01", "$lt": f"{str(int(year_input)+1)}-01-01" }
+                        add_misc_query("Release Date", value)
+                        #check to make sure this works?
+                        break
+                    elif (time_range_option == '2'):
+                        print("You have selected 2. Specific decade")
+                        print()
+                        print("Please enter the decade you would like to query for (ex. 199)")
+                        decade_input = input()
+                        value = {"$gte": f"{decade_input}0-01-01", "$lt": f"{str(int(decade_input) + 1)}0-01-01"}
+                        add_misc_query("Release Date", value)
+                        break
+                    elif (time_range_option == '3'):
+                        print("You have selected 3. Before a date")
+                        print()
+                        print("Please select the date you would like to query for earlier than")
+                        print("First type in the year, then the month, then the day")
+                        date_year = int(input())
+                        date_month = int(input())
+                        date_day = int(input())
+                        filter_date = datetime.datetime(date_year, date_month, date_day)
+                        print(filter_date)
+                        value = {"$lt": f"{filter_date}"}
+                        add_misc_query("Release Date", value)
+                        break
+                    elif (time_range_option == '4'):
+                        print("You have selected 4. After a date")
+                        print()
+                        print("Please select the date you would like to query for later than")
+                        print("First type in the year, then the month, then the day")
+                        date_year = int(input())
+                        date_month = int(input())
+                        date_day = int(input())
+                        filter_date = datetime.datetime(date_year, date_month, date_day+1) #+1 so can gte after the day
+                        print(filter_date)
+                        value = {"$gte": f"{filter_date}"}
+                        add_misc_query("Release Date", value)
+                        break
+                    elif (time_range_option == '5'):
+                        print("You have selected 5. In between two dates")
+                        print()
+                        print("First, please select the date you would like to query for later than")
+                        print("First type in the year, then the month, then the day")
+                        date_year_1 = int(input())
+                        date_month_1 = int(input())
+                        date_day_1 = int(input())
+                        filter_date_1 = datetime.datetime(date_year_1, date_month_1, date_day_1 + 1)  # +1 so can gte after the day
+                        print(filter_date_1)
+                        print("Now, please select the date you would like to query for earlier than")
+                        print("First type in the year, then the month, then the day")
+                        date_year_2 = int(input())
+                        date_month_2 = int(input())
+                        date_day_2 = int(input())
+                        filter_date_2 = datetime.datetime(date_year_2, date_month_2, date_day_2)  # +1 so can gte after the day
+                        print(filter_date_2)
+                        value = {"$gte": f"{filter_date_1}", "$lt": f"{filter_date_2}"}
+                        add_misc_query("Release Date", value)
+                        break
+                    elif (time_range_option == '6'):
+                        print("You have selected 6. 20th Century")
+                        print()
+                        value = {"$gte": datetime.datetime(1970, 1, 1), "$lt": datetime.datetime(2000, 1, 1)}
+                        add_misc_query("Release Date", value)
+                        print("20th century query added")
+                        print()
+                        break
+                    elif (time_range_option == '7'):
+                        print("You have selected 7. 21st Century")
+                        print()
+                        value = {"$gte": datetime.datetime(2000, 1, 1), "$lt": datetime.datetime.now()}
+                        add_misc_query("Release Date", value)
+                        print("21st century query added")
+                        print()
+                        break
+                    else:
+                        print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.\n")
+                        print()
+                        continue
+                break
+            else:
+                print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+                print()
+                continue
         print("Returning back to main menu")
         print()
     elif (filter_category == '4'):
         print()
         print("You have selected 4. Completion Status")
         print()
-        print("Would you like games you have completed? Or games you haven't completed?")
-        print("1. Completed")
-        print("2. Uncompleted")
-        completed_option = input()
-        if(completed_option == '1'):
-            print("Including games you have completed")
-            new_query = {"Completed": True}
-            queries.append(new_query)
-        elif(completed_option == '2'):
-            print("Including games you have not completed")
-            new_query = {"Completed": False}
-            queries.append(new_query)
-        else:
-            print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
-            print()
+        while True:
+            print("Would you like games you have completed? Or games you haven't completed?")
+            print("1. Completed")
+            print("2. Uncompleted")
+            completed_option = input()
+            if(completed_option == '1'):
+                print("Including games you have completed")
+                """
+                new_query = {"Completed": True}
+                queries.append(new_query)
+                """
+                add_misc_query("Completed", True)
+                break
+            elif(completed_option == '2'):
+                print("Including games you have not completed")
+                """
+                new_query = {"Completed": False}
+                queries.append(new_query)
+                """
+                add_misc_query("Completed", False)
+                break
+            else:
+                print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+                print()
+                continue
         print("Returning back to main menu")
         print()
     elif (filter_category == '5'):
@@ -1874,107 +1166,198 @@ while(answer_check_main == False):
         #new_query = {"Title": {"$search": title_search}}
         #Trying to figure this out, not working properly, need to have properly built index I refer to?
         queries.append(new_query)
+        #put in an add_misc_query here when figure out proper formatting?
         print("Returning back to main menu")
         print()
     elif (filter_category == '6'):
         print()
         print("You have selected 6. Ranked Score")
         print()
-        print("Would you like to set a minimum threshold score? A maximum one? Or a target score value?")
-        print("1. Minimum threshold score")
-        print("2. Maximum threshold score")
-        print("3. Target score")
-        score_option = input()
-        if (score_option == '3'):
-            target_score = input("Set your target score: ")
-            new_query = {"Ranked Score": target_score}
-            queries.append(new_query)
-        else:
-            print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
-            print()
-        #...
+        while True:
+            print("Would you like to set a minimum threshold score? A maximum one? Or a target score value?")
+            print("1. Minimum threshold score")
+            print("2. Maximum threshold score")
+            print("3. Target score")
+            score_option = input()
+            if (score_option == '1'):
+                print("You have selected 1. Minimum threshold score")
+                print()
+                target_score = input("Set your target minimum score: ")
+                value = {"$gte": int(target_score)}
+                add_misc_query("Ranked Score", value)
+                break
+            elif (score_option == '2'):
+                print("You have selected 2. Maximum threshold score")
+                print()
+                target_score = input("Set your target maximum score: ")
+                value = {"$lte": int(target_score)}
+                add_misc_query("Ranked Score", value)
+                break
+            elif (score_option == '3'):
+                print("You have selected 3. Target score")
+                print()
+                target_score = input("Set your target score: ")
+                """
+                new_query = {"Ranked Score": target_score}
+                queries.append(new_query)
+                """
+                add_misc_query("Ranked Score", target_score)
+                break
+            else:
+                print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+                print()
+                continue
         print("Returning back to main menu")
         print()
     elif (filter_category == '7'):
         print()
         print("You have selected 7. Inclusion Score")
         print()
-        print("Would you like to set a minimum threshold score? A maximum one? Or a target score value?")
-        print("1. Minimum threshold score")
-        print("2. Maximum threshold score")
-        print("3. Target score")
-        score_option = input()
-        if (score_option == '3'):
-            target_score = input("Set your target score: ")
-            new_query = {"Inclusion Score": target_score}
-            queries.append(new_query)
-        else:
-            print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
-            print()
-        #...
+        while True:
+            print("Would you like to set a minimum threshold score? A maximum one? Or a target score value?")
+            print("1. Minimum threshold score")
+            print("2. Maximum threshold score")
+            print("3. Target score")
+            score_option = input()
+            if (score_option == '1'):
+                print("You have selected 1. Minimum threshold score")
+                print()
+                target_score = input("Set your target minimum score: ")
+                value = {"$gte": int(target_score)}
+                add_misc_query("Inclusion Score", value)
+                break
+            elif (score_option == '2'):
+                print("You have selected 2. Maximum threshold score")
+                print()
+                target_score = input("Set your target maximum score: ")
+                value = {"$lte": int(target_score)}
+                add_misc_query("Inclusion Score", value)
+                break
+            elif (score_option == '3'):
+                print("You have selected 3. Target score")
+                print()
+                target_score = input("Set your target score: ")
+                """
+                new_query = {"Inclusion Score": target_score}
+                queries.append(new_query)
+                """
+                add_misc_query("Inclusion Score", target_score)
+                break
+            else:
+                print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+                print()
+                continue
         print("Returning back to main menu")
         print()
     elif (filter_category == '8'):
         print()
         print("You have selected 8. Average Score")
         print()
-        print("Would you like to set a minimum threshold score? A maximum one? Or a target score value?")
-        print("1. Minimum threshold score")
-        print("2. Maximum threshold score")
-        print("3. Target score")
-        score_option = input()
-        if (score_option == '3'):
-            target_score = input("Set your target score: ")
-            new_query = {"Average Score": target_score}
-            queries.append(new_query)
-        else:
-            print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
-            print()
-        #...
+        while True:
+            print("Would you like to set a minimum threshold score? A maximum one? Or a target score value?")
+            print("1. Minimum threshold score")
+            print("2. Maximum threshold score")
+            print("3. Target score")
+            score_option = input()
+            if (score_option == '1'):
+                print("You have selected 1. Minimum threshold score")
+                print()
+                target_score = input("Set your target minimum score: ")
+                value = {"$gte": int(target_score)}
+                add_misc_query("Average Score", value)
+                break
+            elif (score_option == '2'):
+                print("You have selected 2. Maximum threshold score")
+                print()
+                target_score = input("Set your target maximum score: ")
+                value = {"$lte": int(target_score)}
+                add_misc_query("Average Score", value)
+                break
+            elif (score_option == '3'):
+                print("You have selected 3. Target score")
+                print()
+                target_score = input("Set your target score: ")
+                """
+                new_query = {"Average Score": target_score}
+                queries.append(new_query)
+                """
+                add_misc_query("Average Score", target_score)
+                break
+            else:
+                print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+                print()
+                continue
         print("Returning back to main menu")
         print()
     elif (filter_category == '9'):
         print()
         print("You have selected 9. Player Count")
         print()
-        print("Would you like to select whether you want singleplayer or multiplayer?")
-        print("Or select one-by-one which player counts you would like to include?")
-        print("1. Singleplayer or Multiplayer")
-        print("2. Pick player counts individually")
-        player_type_option = input()
-        if(player_type_option == '2'):
-            print("Here are the player count options")
-            #more elaborate multiplayer mode options?
-            print("1. Single player")
-            print("2. Multiplayer")
-            print("3. Co-operative")
-            print("4. Split screen")
-            print("5. Massively Multiplayer Online (MMO)")
-            print("6. Battle Royale")
-            player_count_option = input()
-            target_count = None
-            if(player_count_option == '1'):
-                target_count = "Single player"
-            elif(player_count_option == '2'):
-                target_count = "Multiplayer"
-            elif (player_count_option == '3'):
-                target_count = "Co-operative"
-            elif (player_count_option == '4'):
-                target_count = "Split screen"
-            elif (player_count_option == '5'):
-                target_count = "Massively Multiplayer Online (MMO)"
-            elif (player_count_option == '6'):
-                target_count = "Battle Royale"
+        while True:
+            print("Would you like to select whether you want singleplayer or multiplayer?")
+            print("Or select one-by-one which player counts you would like to include?")
+            print("1. Singleplayer or Multiplayer")
+            print("2. Pick player counts individually")
+            player_type_option = input()
+            if (player_type_option == '1'):
+                print("You have selected 1. Singleplayer or Multiplayer")
+                print()
+                while True:
+                    print("Which of the two would you like?")
+                    print("1. Singleplayer")
+                    print("2. Multiplayer")
+                    sm_option = input()
+                    if(sm_option == '1'):
+                        # add_playcount_query("Player Count", "Single player")
+                        break
+                    elif(sm_option == '2'):
+                        break
+                    else:
+                        print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+                        print()
+                        continue
+                #...
+                break
+            elif(player_type_option == '2'):
+                print("You have selected 2. Pick player counts individually")
+                print()
+                print("Here are the player count options")
+                #more elaborate multiplayer mode options?
+                print("1. Single player")
+                print("2. Multiplayer")
+                print("3. Co-operative")
+                print("4. Split screen")
+                print("5. Massively Multiplayer Online (MMO)")
+                print("6. Battle Royale")
+                player_count_option = input()
+                target_count = None
+                if(player_count_option == '1'):
+                    target_count = "Single player"
+                elif(player_count_option == '2'):
+                    target_count = "Multiplayer"
+                elif (player_count_option == '3'):
+                    target_count = "Co-operative"
+                elif (player_count_option == '4'):
+                    target_count = "Split screen"
+                elif (player_count_option == '5'):
+                    target_count = "Massively Multiplayer Online (MMO)"
+                elif (player_count_option == '6'):
+                    target_count = "Battle Royale"
+                else:
+                    print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+                    print()
+                    continue
+                """
+                new_query = {"Player Count": target_count}
+                queries.append(new_query)
+                player_count_queries.append(new_query)
+                """
+                add_playcount_query("Player Count", target_count)
+                break
             else:
                 print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
                 print()
-            new_query = {"Player Count": target_count}
-            queries.append(new_query)
-            player_count_queries.append(new_query)
-        else:
-            print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
-            print()
-        #...
+                continue
         print("Returning back to main menu")
         print()
     elif (filter_category == '10'):
@@ -1990,9 +1373,12 @@ while(answer_check_main == False):
         if(dev_type_option == '1'):
             print("Which developer are you wanting to filter for? For now you'll want to be pretty exact.")
             dev_search = input()
+            """
             new_query = {"Developers": dev_search}
             queries.append(new_query)
             dev_queries.append(new_query)
+            """
+            add_dev_query("Developers", dev_search)
         else:
             print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
             print()
@@ -2012,6 +1398,7 @@ while(answer_check_main == False):
     elif(filter_category == '12'):
         print()
         #answer_check_main = True
+        #print all the queries used at the top of the file for posterity?
         if(len(queries) == 0):
             print("Hey, there's nothing here! We have to go back to have something to work with")
             input("When you are ready, press Enter to go back to the main print menu\n")
@@ -2021,6 +1408,21 @@ while(answer_check_main == False):
             custom_query = {}
             print(queries)
             #for query, value in queries.items():
+            #Check if mongo connection was tested yet
+            if(mon_connected == False):
+                print("First we have to do a little test now to make sure we can connect to the cluster")
+                print("Just hold a second while we verify this, press Enter when you are ready to test")
+                mon_wait = input()
+                mon_client = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
+                mon_db = mon_client["GameSorting"]
+                try:
+                    mon_client.admin.command('ping')
+                    print("Pinged your deployment. You successfully connected to MongoDB!")
+                except Exception as e:
+                    print(e)
+                mon_col = mon_db["games"]
+                list_col = mon_db["lists"]
+                mon_connected = True
             """
             COMMENTING UNTIL WE HAVE AND APPROACH
             for query in queries:
@@ -2172,4 +1574,5 @@ Getting dictionary keys as variables: https://stackoverflow.com/questions/354533
 Creating datetime objects: https://www.w3schools.com/python/python_datetime.asp
 Ask user for input until get valid response: https://www.python-engineer.com/posts/ask-user-for-input/
 Building queries with AND and OR: https://stackoverflow.com/questions/11196101/mongodb-queries-both-with-and-and-or
+How to query for specific year among datetime: https://stackoverflow.com/questions/49174399/mongodb-find-query-by-year
 """
