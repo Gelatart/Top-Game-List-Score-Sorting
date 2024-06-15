@@ -1308,51 +1308,57 @@ while(answer_check_main == False):
                     print("2. Multiplayer")
                     sm_option = input()
                     if(sm_option == '1'):
-                        # add_playcount_query("Player Count", "Single player")
+                        add_playcount_query("Player Count", "Single player")
                         break
                     elif(sm_option == '2'):
+                        add_playcount_query("Player Count", "Multiplayer")
+                        add_playcount_query("Player Count", "Co-operative")
+                        add_playcount_query("Player Count", "Split screen")
+                        add_playcount_query("Player Count", "Massively Multiplayer Online (MMO)")
+                        add_playcount_query("Player Count", "Battle Royale")
                         break
                     else:
                         print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
                         print()
                         continue
-                #...
                 break
             elif(player_type_option == '2'):
                 print("You have selected 2. Pick player counts individually")
                 print()
-                print("Here are the player count options")
-                #more elaborate multiplayer mode options?
-                print("1. Single player")
-                print("2. Multiplayer")
-                print("3. Co-operative")
-                print("4. Split screen")
-                print("5. Massively Multiplayer Online (MMO)")
-                print("6. Battle Royale")
-                player_count_option = input()
-                target_count = None
-                if(player_count_option == '1'):
-                    target_count = "Single player"
-                elif(player_count_option == '2'):
-                    target_count = "Multiplayer"
-                elif (player_count_option == '3'):
-                    target_count = "Co-operative"
-                elif (player_count_option == '4'):
-                    target_count = "Split screen"
-                elif (player_count_option == '5'):
-                    target_count = "Massively Multiplayer Online (MMO)"
-                elif (player_count_option == '6'):
-                    target_count = "Battle Royale"
-                else:
-                    print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
-                    print()
-                    continue
-                """
-                new_query = {"Player Count": target_count}
-                queries.append(new_query)
-                player_count_queries.append(new_query)
-                """
-                add_playcount_query("Player Count", target_count)
+                while True:
+                    print("Here are the player count options")
+                    #more elaborate multiplayer mode options?
+                    print("1. Single player")
+                    print("2. Multiplayer")
+                    print("3. Co-operative")
+                    print("4. Split screen")
+                    print("5. Massively Multiplayer Online (MMO)")
+                    print("6. Battle Royale")
+                    player_count_option = input()
+                    target_count = None
+                    if(player_count_option == '1'):
+                        target_count = "Single player"
+                    elif(player_count_option == '2'):
+                        target_count = "Multiplayer"
+                    elif (player_count_option == '3'):
+                        target_count = "Co-operative"
+                    elif (player_count_option == '4'):
+                        target_count = "Split screen"
+                    elif (player_count_option == '5'):
+                        target_count = "Massively Multiplayer Online (MMO)"
+                    elif (player_count_option == '6'):
+                        target_count = "Battle Royale"
+                    else:
+                        print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+                        print()
+                        continue
+                    """
+                    new_query = {"Player Count": target_count}
+                    queries.append(new_query)
+                    player_count_queries.append(new_query)
+                    """
+                    add_playcount_query("Player Count", target_count)
+                    break
                 break
             else:
                 print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
@@ -1364,26 +1370,49 @@ while(answer_check_main == False):
         print()
         print("You have selected 10. Developers")
         print()
-        #print("Are you planning on selecting filters for developers or publishers right now?")
-        print("For developers, are you looking for true Developers, or just any company that worked on a game?")
-        print("Would you like to try entering in a name for the developer you are looking for? Or trying by their IGDB ID?")
-        print("1. Search by name")
-        print("2. Search by ID")
-        dev_type_option = input()
-        if(dev_type_option == '1'):
-            print("Which developer are you wanting to filter for? For now you'll want to be pretty exact.")
-            dev_search = input()
-            """
-            new_query = {"Developers": dev_search}
-            queries.append(new_query)
-            dev_queries.append(new_query)
-            """
-            add_dev_query("Developers", dev_search)
-        else:
-            print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
-            print()
-        #going to be using involvedcompany and company?
-        #...
+        while True:
+            #print("Are you planning on selecting filters for developers or publishers right now?")
+            print("For developers, are you looking for true Developers, Publishers, or just any company that worked on a game?")
+            print("1. True Developers")
+            print("2. Publishers")
+            print("3. Any company that worked on a game")
+            dev_company_option = input()
+            if(dev_company_option == '1'):
+                print("Would you like to try entering in a name for the developer you are looking for? Or trying by their IGDB ID?")
+                print("1. Search by name")
+                print("2. Search by ID")
+                dev_type_option = input()
+                if(dev_type_option == '1'):
+                    print("Which developer are you wanting to filter for? For now you'll want to be pretty exact.")
+                    dev_search = input()
+                    """
+                    new_query = {"Developers": dev_search}
+                    queries.append(new_query)
+                    dev_queries.append(new_query)
+                    """
+                    add_dev_query("Developers", dev_search)
+                #...
+                break
+            elif(dev_company_option == '2'):
+                print("Would you like to try entering in a name for the publisher you are looking for? Or trying by their IGDB ID?")
+                print("1. Search by name")
+                print("2. Search by ID")
+                pub_type_option = input()
+                #...
+                break
+            elif (dev_company_option == '3'):
+                print("Would you like to try entering in a name for the company you are looking for? Or trying by their IGDB ID?")
+                print("1. Search by name")
+                print("2. Search by ID")
+                comp_type_option = input()
+                #...
+                break
+            else:
+                print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+                print()
+                continue
+            #going to be using involvedcompany and company?
+            #...
         print("Returning back to main menu")
         print()
     elif (filter_category == '11'):
