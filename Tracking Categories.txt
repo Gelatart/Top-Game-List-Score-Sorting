@@ -1,9 +1,9 @@
-RANKED: 81
+RANKED: 83
 UNRANKED: 35
 FORMER: 14
 UNUSED: 0
 ---
-TOTAL: 130
+TOTAL: 132
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -246,3 +246,9 @@ U-The Best Video Games of 2014 - The New Yorker
 
 TOP GAMES OF 2013:
 R-The 25 Best Video Games of 2013 - Slant Magazine - 12-9-2013
+
+TOP GAMES OF 2012:
+R-The 25 Best Video Games of 2012 - Slant Magazine - 12-10-2012
+
+TOP GAMES OF 2011:
+R-The 25 Best Video Games of 2011 - Slant Magazine - 12-11-2011

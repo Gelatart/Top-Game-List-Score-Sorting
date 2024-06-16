@@ -359,6 +359,7 @@ Mario Tennis GBC: IGDB ID: 128874
 Metal Gear NES: IGDB ID: 133917
 Metal Gear Solid GBC: IGDB ID: 5600
 Microsoft Flight Simulator 2020: IGDB ID: 119295
+Mortal Kombat [2011]: IGDB ID: 119
 Mr. Driller GBC: IGDB ID: 254519
 Myst [2020]: IGDB ID: 
 Need for Speed: Most Wanted 2012: IGDB ID: 3193
@@ -418,6 +419,7 @@ Tetris TENGEN: IGDB ID: 180278
 Tomb Raider 2013: IGDB ID: 1164 
 Tony Hawk's Pro Skater 2 GBA: IGDB ID: 229927
 Trials of Mana 2020: IGDB ID: 119391
+Twisted Metal [2012]: IGDB ID: 5416
 Viva Piñata (the ñ might be throwing off the query?): IGDB ID: 7236
 The Walking Dead: The Complete First Season (not matching for some reason?): IGDB ID: 41623
 Warcraft II Battle.net edition (name doesn't seem to match?): IGDB ID: 127782
