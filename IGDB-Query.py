@@ -322,6 +322,7 @@ Chrono Trigger DS: IGDB ID: 20398
 Command & Conquer: Red Alert 2 (name seems to be crashing request?): IGDB ID: 245
 Contra NES: IGDB ID: 186207
 Cyberpunk 2077: Ultimate Edition (not matching some reason?): IGDB ID: 277807
+Dante's Inferno [2010]: IGDB ID: 6958
 Daytona USA Sega Saturn: IDGB ID: 177619
 Daytona USA 2001: IGDB ID: 22007
 Dead Space 2023: IGDB ID: 159119

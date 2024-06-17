@@ -1,9 +1,9 @@
 RANKED: 83
-UNRANKED: 35
+UNRANKED: 37
 FORMER: 14
 UNUSED: 0
 ---
-TOTAL: 132
+TOTAL: 134
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -252,3 +252,9 @@ R-The 25 Best Video Games of 2012 - Slant Magazine - 12-10-2012
 
 TOP GAMES OF 2011:
 R-The 25 Best Video Games of 2011 - Slant Magazine - 12-11-2011
+
+TOP GAMES OF 2010:
+U-Remembering 2010 - The Biggest Games Turning 10 This Year - GameSpot - 1-27-2020
+
+TOP GAMES OF 2009:
+U-Remembering 2009 - The Games That Turn 10 This Year - GameSpot - 8-25-2019
