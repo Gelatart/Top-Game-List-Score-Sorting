@@ -1,9 +1,9 @@
 RANKED: 83
-UNRANKED: 37
+UNRANKED: 40
 FORMER: 14
 UNUSED: 0
 ---
-TOTAL: 134
+TOTAL: 137
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -258,3 +258,12 @@ U-Remembering 2010 - The Biggest Games Turning 10 This Year - GameSpot - 1-27-20
 
 TOP GAMES OF 2009:
 U-Remembering 2009 - The Games That Turn 10 This Year - GameSpot - 8-25-2019
+
+TOP GAMES OF 2008:
+U-Remembering 2008 - Biggest Games Turning 10 This Year - GameSpot -10-4-2018
+
+TOP GAMES OF 2007:
+U-Remembering 2007 - The Biggest Games That Turned 10 This Year - GameSpot - 12-22-2017
+
+TOP GAMES OF 2006:
+U-Our games of the year - 2006 - GameSpot - 12-19-2006
