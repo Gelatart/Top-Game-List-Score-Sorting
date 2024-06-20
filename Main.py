@@ -7,6 +7,8 @@
 #The CLI may even offer opportunities for micro-operations that don't require their own files? Or could later be spun off?
 #Allow the printing of reports with various customizations?
 
+#Start implementing a unit testing framework of some kind?
+
 #POST-FIRST STORY PLANNING:
 #Potential features to include in the future
     #Basic GUI? rather than pure CLI?

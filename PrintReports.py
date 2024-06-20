@@ -380,8 +380,9 @@ while(answer_check_main == False):
     print("10. Developers")
     print("11. Miscellaneous")
     print("12. Finish and Generate Report")
-    #consider franchise option when that data is pulled? genre? other fields?
+    #consider franchise option when that data is pulled? genre? country developed in? other fields?
     #store queries to pull for franchises somewhere else if have to do custom?
+    #genres are gameplay genres, themes are thematic genres
 
     filter_category = input("Make selection here: ")
 
@@ -1015,6 +1016,8 @@ while(answer_check_main == False):
                 queries.append(new_query)
                 """
                 add_misc_query("Release Date", filter_date)
+                print("Query added!")
+                input("When you are ready, press Enter to go back to the main print menu\n")
                 break
             elif (time_style_option == '2'):
                 while True:
@@ -1038,6 +1041,8 @@ while(answer_check_main == False):
                         value = { "$gte": f"{year_input}-01-01", "$lt": f"{str(int(year_input)+1)}-01-01" }
                         add_misc_query("Release Date", value)
                         #check to make sure this works?
+                        print("Query added!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (time_range_option == '2'):
                         print("You have selected 2. Specific decade")
@@ -1046,6 +1051,8 @@ while(answer_check_main == False):
                         decade_input = input()
                         value = {"$gte": f"{decade_input}0-01-01", "$lt": f"{str(int(decade_input) + 1)}0-01-01"}
                         add_misc_query("Release Date", value)
+                        print("Query added!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (time_range_option == '3'):
                         print("You have selected 3. Before a date")
@@ -1059,6 +1066,8 @@ while(answer_check_main == False):
                         print(filter_date)
                         value = {"$lt": f"{filter_date}"}
                         add_misc_query("Release Date", value)
+                        print("Query added!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (time_range_option == '4'):
                         print("You have selected 4. After a date")
@@ -1072,6 +1081,8 @@ while(answer_check_main == False):
                         print(filter_date)
                         value = {"$gte": f"{filter_date}"}
                         add_misc_query("Release Date", value)
+                        print("Query added!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (time_range_option == '5'):
                         print("You have selected 5. In between two dates")
@@ -1092,6 +1103,8 @@ while(answer_check_main == False):
                         print(filter_date_2)
                         value = {"$gte": f"{filter_date_1}", "$lt": f"{filter_date_2}"}
                         add_misc_query("Release Date", value)
+                        print("Query added!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (time_range_option == '6'):
                         print("You have selected 6. 20th Century")
@@ -1100,6 +1113,8 @@ while(answer_check_main == False):
                         add_misc_query("Release Date", value)
                         print("20th century query added")
                         print()
+                        print("Query added!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (time_range_option == '7'):
                         print("You have selected 7. 21st Century")
@@ -1108,6 +1123,8 @@ while(answer_check_main == False):
                         add_misc_query("Release Date", value)
                         print("21st century query added")
                         print()
+                        print("Query added!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     else:
                         print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.\n")
@@ -1136,6 +1153,8 @@ while(answer_check_main == False):
                 queries.append(new_query)
                 """
                 add_misc_query("Completed", True)
+                print("Query added!")
+                input("When you are ready, press Enter to go back to the main print menu\n")
                 break
             elif(completed_option == '2'):
                 print("Including games you have not completed")
@@ -1144,6 +1163,8 @@ while(answer_check_main == False):
                 queries.append(new_query)
                 """
                 add_misc_query("Completed", False)
+                print("Query added!")
+                input("When you are ready, press Enter to go back to the main print menu\n")
                 break
             else:
                 print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
@@ -1185,6 +1206,8 @@ while(answer_check_main == False):
                 target_score = input("Set your target minimum score: ")
                 value = {"$gte": int(target_score)}
                 add_misc_query("Ranked Score", value)
+                print("Query added!")
+                input("When you are ready, press Enter to go back to the main print menu\n")
                 break
             elif (score_option == '2'):
                 print("You have selected 2. Maximum threshold score")
@@ -1192,6 +1215,8 @@ while(answer_check_main == False):
                 target_score = input("Set your target maximum score: ")
                 value = {"$lte": int(target_score)}
                 add_misc_query("Ranked Score", value)
+                print("Query added!")
+                input("When you are ready, press Enter to go back to the main print menu\n")
                 break
             elif (score_option == '3'):
                 print("You have selected 3. Target score")
@@ -1202,6 +1227,8 @@ while(answer_check_main == False):
                 queries.append(new_query)
                 """
                 add_misc_query("Ranked Score", target_score)
+                print("Query added!")
+                input("When you are ready, press Enter to go back to the main print menu\n")
                 break
             else:
                 print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
@@ -1225,6 +1252,8 @@ while(answer_check_main == False):
                 target_score = input("Set your target minimum score: ")
                 value = {"$gte": int(target_score)}
                 add_misc_query("Inclusion Score", value)
+                print("Query added!")
+                input("When you are ready, press Enter to go back to the main print menu\n")
                 break
             elif (score_option == '2'):
                 print("You have selected 2. Maximum threshold score")
@@ -1232,6 +1261,8 @@ while(answer_check_main == False):
                 target_score = input("Set your target maximum score: ")
                 value = {"$lte": int(target_score)}
                 add_misc_query("Inclusion Score", value)
+                print("Query added!")
+                input("When you are ready, press Enter to go back to the main print menu\n")
                 break
             elif (score_option == '3'):
                 print("You have selected 3. Target score")
@@ -1242,6 +1273,8 @@ while(answer_check_main == False):
                 queries.append(new_query)
                 """
                 add_misc_query("Inclusion Score", target_score)
+                print("Query added!")
+                input("When you are ready, press Enter to go back to the main print menu\n")
                 break
             else:
                 print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
@@ -1265,6 +1298,8 @@ while(answer_check_main == False):
                 target_score = input("Set your target minimum score: ")
                 value = {"$gte": int(target_score)}
                 add_misc_query("Average Score", value)
+                print("Query added!")
+                input("When you are ready, press Enter to go back to the main print menu\n")
                 break
             elif (score_option == '2'):
                 print("You have selected 2. Maximum threshold score")
@@ -1272,6 +1307,8 @@ while(answer_check_main == False):
                 target_score = input("Set your target maximum score: ")
                 value = {"$lte": int(target_score)}
                 add_misc_query("Average Score", value)
+                print("Query added!")
+                input("When you are ready, press Enter to go back to the main print menu\n")
                 break
             elif (score_option == '3'):
                 print("You have selected 3. Target score")
@@ -1282,6 +1319,8 @@ while(answer_check_main == False):
                 queries.append(new_query)
                 """
                 add_misc_query("Average Score", target_score)
+                print("Query added!")
+                input("When you are ready, press Enter to go back to the main print menu\n")
                 break
             else:
                 print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
@@ -1309,6 +1348,8 @@ while(answer_check_main == False):
                     sm_option = input()
                     if(sm_option == '1'):
                         add_playcount_query("Player Count", "Single player")
+                        print("Query added!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif(sm_option == '2'):
                         add_playcount_query("Player Count", "Multiplayer")
@@ -1316,6 +1357,8 @@ while(answer_check_main == False):
                         add_playcount_query("Player Count", "Split screen")
                         add_playcount_query("Player Count", "Massively Multiplayer Online (MMO)")
                         add_playcount_query("Player Count", "Battle Royale")
+                        print("Query added!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     else:
                         print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
@@ -1358,6 +1401,8 @@ while(answer_check_main == False):
                     player_count_queries.append(new_query)
                     """
                     add_playcount_query("Player Count", target_count)
+                    print("Query added!")
+                    input("When you are ready, press Enter to go back to the main print menu\n")
                     break
                 break
             else:
@@ -1378,41 +1423,85 @@ while(answer_check_main == False):
             print("3. Any company that worked on a game")
             dev_company_option = input()
             if(dev_company_option == '1'):
-                print("Would you like to try entering in a name for the developer you are looking for? Or trying by their IGDB ID?")
-                print("1. Search by name")
-                print("2. Search by ID")
-                dev_type_option = input()
-                if(dev_type_option == '1'):
-                    print("Which developer are you wanting to filter for? For now you'll want to be pretty exact.")
-                    dev_search = input()
-                    """
-                    new_query = {"Developers": dev_search}
-                    queries.append(new_query)
-                    dev_queries.append(new_query)
-                    """
-                    add_dev_query("Developers", dev_search)
-                #...
+                while True:
+                    print("Would you like to try entering in a name for the developer you are looking for? Or trying by their IGDB ID?")
+                    print("1. Search by name")
+                    print("2. Search by ID [NOT IMPLEMENTED! MAY BECOME DEPRECATED!]")
+                    dev_type_option = input()
+                    if (dev_type_option == '1'):
+                        print("Which developer are you wanting to filter for? For now you'll want to be pretty exact.")
+                        dev_search = input()
+                        """
+                        new_query = {"Developers": dev_search}
+                        queries.append(new_query)
+                        dev_queries.append(new_query)
+                        """
+                        add_dev_query("Developers", dev_search)
+                        print("Query added!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    elif (dev_type_option == '2'):
+                        #print("Enter the ID of the developer you are looking for")
+                        #dev_ID = input()
+                        # would have to query IGDB API for this? unless started treating developers as tuples that contain IGDB as well
+                        #add_dev_query("Developers", dev_search)  # wrong?
+                        print("I was initially intending this feature, but I'm not sure anymore")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    else:
+                        print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+                        print()
+                        continue
                 break
             elif(dev_company_option == '2'):
-                print("Would you like to try entering in a name for the publisher you are looking for? Or trying by their IGDB ID?")
-                print("1. Search by name")
-                print("2. Search by ID")
-                pub_type_option = input()
-                #...
+                while True:
+                    print("Would you like to try entering in a name for the publisher you are looking for? Or trying by their IGDB ID?")
+                    print("1. Search by name")
+                    print("2. Search by ID [NOT IMPLEMENTED! MAY BECOME DEPRECATED!]")
+                    pub_type_option = input()
+                    if (pub_type_option == '1'):
+                        print("Which publisher are you wanting to filter for? For now you'll want to be pretty exact.")
+                        dev_search = input()
+                        add_dev_query("Publishers", dev_search)
+                        print("Query added!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    elif (pub_type_option == '2'):
+                        print("I was initially intending this feature, but I'm not sure anymore")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    else:
+                        print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+                        print()
+                        continue
                 break
             elif (dev_company_option == '3'):
-                print("Would you like to try entering in a name for the company you are looking for? Or trying by their IGDB ID?")
-                print("1. Search by name")
-                print("2. Search by ID")
-                comp_type_option = input()
-                #...
+                while True:
+                    print("Would you like to try entering in a name for the company you are looking for? Or trying by their IGDB ID?")
+                    print("1. Search by name")
+                    print("2. Search by ID [NOT IMPLEMENTED! MAY BECOME DEPRECATED!]")
+                    comp_type_option = input()
+                    if (comp_type_option == '1'):
+                        print("Which company are you wanting to filter for? For now you'll want to be pretty exact.")
+                        dev_search = input()
+                        add_dev_query("Companies", dev_search)
+                        print("Query added!")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    elif (comp_type_option == '2'):
+                        print("I was initially intending this feature, but I'm not sure anymore")
+                        input("When you are ready, press Enter to go back to the main print menu\n")
+                        break
+                    else:
+                        print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+                        print()
+                        continue
                 break
             else:
                 print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
                 print()
                 continue
             #going to be using involvedcompany and company?
-            #...
         print("Returning back to main menu")
         print()
     elif (filter_category == '11'):
@@ -1420,6 +1509,7 @@ while(answer_check_main == False):
         print("You have selected 11. Miscellaneous")
         print()
         print("This is for miscellaneous filter options that don't fit easily anywhere else")
+        print("As of now, we haven't really thought of anything, but that could change!")
         print()
         #Fill this if anything comes to mind that I'd like to filter for that doesn't fit in one of the other options
         print("Returning back to main menu")
@@ -1437,8 +1527,8 @@ while(answer_check_main == False):
             custom_query = {}
             print(queries)
             #for query, value in queries.items():
-            #Check if mongo connection was tested yet
-            if(mon_connected == False):
+            # Check if mongo connection was tested yet
+            if (mon_connected == False):
                 print("First we have to do a little test now to make sure we can connect to the cluster")
                 print("Just hold a second while we verify this, press Enter when you are ready to test")
                 mon_wait = input()
@@ -1469,6 +1559,13 @@ while(answer_check_main == False):
                 print("2. OR approach")
                 print("3. Natural mix")
                 and_or_type = input()
+                if (and_or_type != '1' or and_or_type != '2' or and_or_type != '3'):
+                    print("Please try again with valid input")
+                    continue
+                else:
+                    print(f"Your choice of {and_or_type} has been noted")
+                    break
+            while True:
                 print("How would you like your report sorted?")
                 print("1. By Ranked Score")
                 print("2. By Inclusion Score")
@@ -1489,6 +1586,16 @@ while(answer_check_main == False):
                     elif (sort_type == '3'):
                         games_pulled = mon_col.find({'$and': queries}).sort("Average Score", -1)
                         break
+                    elif (sort_type == '4'):
+                        games_pulled = mon_col.find({'$and': queries}).sort("Title", 1)
+                        #consider a sorting name field so we can disregard words like "the"? use regex?
+                        break
+                    elif (sort_type == '5'):
+                        games_pulled = mon_col.find({'$and': queries}).sort("Release Date", 1)
+                        break
+                    elif (sort_type == '6'):
+                        games_pulled = mon_col.find({'$and': queries}).sort("Release Date", -1)
+                        break
                     else:
                         print("Sorry, I don't understand")
                         print()
@@ -1504,6 +1611,15 @@ while(answer_check_main == False):
                         break
                     elif (sort_type == '3'):
                         games_pulled = mon_col.find({'$or': queries}).sort("Average Score", -1)
+                        break
+                    elif (sort_type == '4'):
+                        games_pulled = mon_col.find({'$or': queries}).sort("Title", 1)
+                        break
+                    elif (sort_type == '5'):
+                        games_pulled = mon_col.find({'$or': queries}).sort("Release Date", 1)
+                        break
+                    elif (sort_type == '6'):
+                        games_pulled = mon_col.find({'$or': queries}).sort("Release Date", -1)
                         break
                     else:
                         print("Sorry, I don't understand")
@@ -1537,6 +1653,15 @@ while(answer_check_main == False):
                         break
                     elif (sort_type == '3'):
                         games_pulled = mon_col.find(natural_queries).sort("Average Score", -1)
+                        break
+                    elif (sort_type == '4'):
+                        games_pulled = mon_col.find(natural_queries).sort("Title", 1)
+                        break
+                    elif (sort_type == '5'):
+                        games_pulled = mon_col.find(natural_queries).sort("Release Date", 1)
+                        break
+                    elif (sort_type == '6'):
+                        games_pulled = mon_col.find(natural_queries).sort("Release Date", -1)
                         break
                     else:
                         print("Sorry, I don't understand")

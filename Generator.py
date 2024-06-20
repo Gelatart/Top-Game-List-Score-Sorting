@@ -18,6 +18,15 @@ import json
 import pandas
 import re
 
+#Store a version of the games database externally so we can refer to it rather than keep having to override it each time?
+#Unless we pick a manual option to clear it? option to just update scores based on new lists?
+#check to see if already in database before we bother to get info
+#Have different phases of external database?
+#First phase would be purely the names we grab from lists
+#Second phase would be after IGDB information put into it
+#we send off the second phase info to mongo, maybe give option just to do only that off of what we already have
+#then we pull the mongo info in to a real listed sortable form
+
 #add ability to put comments in text files? ex. jackbox party pack quintpack is actually jackbox party pack 1-6
 
 load_dotenv()
@@ -56,6 +65,8 @@ class GameObject:
         self.release_date = 'Unknown' #Can I set this to some date value?
         self.player_counts = []
         self.list_developers = []
+        self.list_publishers = []
+        self.list_companies = []
 
     #consider storing a constantly updated average score?
 
@@ -76,6 +87,8 @@ class GameObject:
         self.release_date = 'Unknown'  # Can I set this to some date value?
         self.player_counts = []
         self.list_developers = []
+        self.list_publishers = []
+        self.list_companies = []
 
     def __init__(self, rank, list, total):
         self.igdb_ID = None
@@ -90,6 +103,8 @@ class GameObject:
         self.release_date = 'Unknown'  # Can I set this to some date value?
         self.player_counts = []
         self.list_developers = []
+        self.list_publishers = []
+        self.list_companies = []
 
     #CONSIDER MAKING AN EXPORT FUNCTION FOR THE CLASS TO CONVERT TO DICTIONARY?
 
@@ -297,6 +312,7 @@ No others at this time?
 
 #This is where the user sets whether they want to grab from the IGDB API or not
 #Maybe add options for how much to grab? How many games? What types of info? Other qualifiers?
+#Maybe do a quick pass and long pass version? Quick pass doesn't use additional endpoints? Long pass makes more user facing?
 igdb_check = False
 igdb_answer = None
 while(igdb_check == False):
@@ -546,7 +562,8 @@ while(igdb_check == False):
                         #FIX THE REST OF THIS!!! (involved company, company?)
                         #first query to look at involved companies
                         #sub_query = 'fields *;'
-                        sub_query_1 = 'fields *; where id=' + str(dev.id) + ' & developer=true;'
+                        #sub_query_1 = 'fields *; where id=' + str(dev.id) + ' & developer=true;'
+                        sub_query_1 = 'fields *; where id=' + str(dev.id) + ';'
                         sub_request_1 = wrapper.api_request(
                             'involved_companies.pb',  # Note the '.pb' suffix at the endpoint
                             sub_query_1
@@ -559,6 +576,10 @@ while(igdb_check == False):
                         if(len(inv_companies) == 0):
                             continue
                         #second query to look at the company specifically
+                        is_dev = inv_companies[0].developer
+                        print(is_dev)
+                        is_pub = inv_companies[0].publisher
+                        print(is_pub)
                         sub_query_2 = 'fields name; where id=' + str(inv_companies[0].company.id) + ';'
                         sub_request_2 = wrapper.api_request(
                             'companies.pb',  # Note the '.pb' suffix at the endpoint
@@ -569,7 +590,14 @@ while(igdb_check == False):
                         companies = companies_message.companies
                         #print(companies)
                         dev_name = companies[0].name
-                        game_DB[game].list_developers.append(dev_name)
+                        game_DB[game].list_companies.append(dev_name)
+                        #if dev true: add to devs
+                        #if pub true: add to pubs
+                        #also consider supporting boolean in addition to developer and publisher? porting?
+                        if(is_dev):
+                            game_DB[game].list_developers.append(dev_name)
+                        if (is_pub):
+                            game_DB[game].list_publishers.append(dev_name)
                         #input(dev_name)
                     #game_DB[game].list_developers = developers  # Will this grab the most definitive list?
             elif (len(games) == 1):
@@ -633,7 +661,8 @@ while(igdb_check == False):
                             # FIX THE REST OF THIS!!! (involved company, company?)
                             # first query to look at involved companies
                             # sub_query = 'fields *;'
-                            sub_query_1 = 'fields *; where id=' + str(dev.id) + ' & developer=true;'
+                            #sub_query_1 = 'fields *; where id=' + str(dev.id) + ' & developer=true;'
+                            sub_query_1 = 'fields *; where id=' + str(dev.id) + ';'
                             sub_request_1 = wrapper.api_request(
                                 'involved_companies.pb',  # Note the '.pb' suffix at the endpoint
                                 sub_query_1
@@ -647,6 +676,10 @@ while(igdb_check == False):
                             if (len(inv_companies) == 0):
                                 continue
                             # second query to look at the company specifically
+                            is_dev = inv_companies[0].developer
+                            print(is_dev)
+                            is_pub = inv_companies[0].publisher
+                            print(is_pub)
                             sub_query_2 = 'fields name; where id=' + str(inv_companies[0].company.id) + ';'
                             sub_request_2 = wrapper.api_request(
                                 'companies.pb',  # Note the '.pb' suffix at the endpoint
@@ -658,7 +691,11 @@ while(igdb_check == False):
                             companies = companies_message.companies
                             #print(companies)
                             dev_name = companies[0].name
-                            game_DB[game].list_developers.append(dev_name)
+                            game_DB[game].list_companies.append(dev_name)
+                            if (is_dev):
+                                game_DB[game].list_developers.append(dev_name)
+                            if (is_pub):
+                                game_DB[game].list_publishers.append(dev_name)
                             #input(dev_name)
                 except Exception as e:
                     print("An error has occurred:", e)
@@ -765,6 +802,8 @@ for game, details in game_DB.items():
     export_dict["Release Date"] = details.release_date
     export_dict["Player Counts"] = details.player_counts
     export_dict["Developers"] = details.list_developers
+    export_dict["Publishers"] = details.list_publishers
+    export_dict["Companies"] = details.list_companies
     export_dict["Total Count"] = details.total_count
     #export_dict = dict(game)
     #^need to expand and clarify more?
@@ -910,6 +949,8 @@ sheet1.write(0, 8, 'LIST OF PLATFORMS', bold_style)
 sheet1.write(0, 9, 'RELEASE DATE', bold_style)
 sheet1.write(0, 10, 'PLAYER COUNTS', bold_style)
 sheet1.write(0, 11, 'DEVELOPERS', bold_style)
+sheet1.write(0, 12, 'PUBLISHERS', bold_style)
+sheet1.write(0, 13, 'COMPANIES', bold_style)
 excel_count = 1
 for game in games_pulled:
     ranked_score = game['Ranked Score']
@@ -968,6 +1009,10 @@ for game in games_pulled:
     devs_string = ', '.join(game['Developers'])
     #sheet1.write(excel_count, 9, game['Developers'])
     sheet1.write(excel_count, 11, devs_string)
+    pubs_string = ', '.join(game['Publishers'])
+    sheet1.write(excel_count, 12, pubs_string)
+    comps_string = ', '.join(game['Companies'])
+    sheet1.write(excel_count, 12, comps_string)
     excel_count += 1
 wb.save('Sorted Database.xls')
 
