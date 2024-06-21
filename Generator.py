@@ -55,6 +55,7 @@ modified_DB = {}
 class GameObject:
     def __init__(self, rank):
         self.igdb_ID = None
+        self.igdb_found = False
         self.ranked_score = rank
         self.list_count = 1
         self.lists_referencing = []
@@ -76,6 +77,7 @@ class GameObject:
 
     def __init__(self, rank, list):
         self.igdb_ID = None
+        self.igdb_found = False
         self.ranked_score = rank
         self.list_count = 1
         self.lists_referencing = []
@@ -92,6 +94,7 @@ class GameObject:
 
     def __init__(self, rank, list, total):
         self.igdb_ID = None
+        self.igdb_found = False
         self.ranked_score = rank
         self.list_count = 1
         self.lists_referencing = []
@@ -310,15 +313,68 @@ TYPE FOR PLATFORM FAMILIES (Based on id #):
 No others at this time?
 """
 
+"""
+self.igdb_ID = None
+        self.ranked_score = rank
+        self.list_count = 1
+        self.lists_referencing = []
+        self.total_count = 0
+        self.completed = False
+        self.main_platform = 'None'
+        self.list_platforms = []
+        self.release_date = 'Unknown' #Can I set this to some date value?
+        self.player_counts = []
+        self.list_developers = []
+        self.list_publishers = []
+        self.list_companies = []
+"""
+
+#Taking custom class objects and making them JSON exportable
+export_DB = {}
+
+for game, details in game_DB.items():
+    export_DB[game] = json.dumps(details.__dict__)
+
+#Initial print of what we have in the games database
+with open ("games_pre.json", "w") as outfile:
+    json.dump(export_DB, outfile)
+
+import_DB = {}
+
+with open("games.json") as json_file:
+    first_char = json_file.read(1)
+    if not first_char:
+        print("Looks like we don't have anything in games.json yet")
+    else:
+        import_DB = json.load(json_file)
+print(import_DB)
+input()
+
 #This is where the user sets whether they want to grab from the IGDB API or not
 #Maybe add options for how much to grab? How many games? What types of info? Other qualifiers?
 #Maybe do a quick pass and long pass version? Quick pass doesn't use additional endpoints? Long pass makes more user facing?
 igdb_check = False
 igdb_answer = None
+scratch_answer = False
 while(igdb_check == False):
     print("Would you like to grab additional game data from the IGDB API at this moment? Y or N")
     igdb_answer = input("Make your selection: ")
     if(igdb_answer == 'Y' or igdb_answer == 'Yes'):
+        while True:
+            print("Would you like to start from scratch? Or only deal with games that don't already have IGDB information?")
+            print("1. Start from scratch")
+            print("2. Only deal with games without IGDB info already")
+            scratch_option = input()
+            if(scratch_option == "1"):
+                scratch_answer = True
+                break
+            elif(scratch_option == "2"):
+                scratch_answer = False
+                break
+            else:
+                print("Please enter a valid response")
+                print()
+                continue
         # START SCRAPING FOR ATTRIBUTES
         # (Look into close-enough matches that can match when it’s not exact?)
         # (Have the option to replace data manually when database info isn’t good enough or is missing?)
@@ -354,14 +410,14 @@ while(igdb_check == False):
         # page = requests.get(post) #404
         page = requests.post(post)  # gives access token we can use
         print(page.text)
-        input("Here we pause")
+        #input("Here we pause")
 
         # wrapper = IGDBWrapper("YOUR_CLIENT_ID", "YOUR_APP_ACCESS_TOKEN")
         received = json.loads(page.text)
         access_token = received["access_token"]
         print(access_token)
         wrapper = IGDBWrapper(client_id, access_token)
-        input("Here we pause")
+        #input("Here we pause")
 
         from igdb.igdbapi_pb2 import GameResult
         from igdb.igdbapi_pb2 import GameModeResult
@@ -386,6 +442,10 @@ while(igdb_check == False):
         time_speedup = 0;
         #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
         for game, details in game_DB.items():
+            if(scratch_answer == True and game in import_DB):
+                print("Hey, we already got this one!")
+                game_DB[game] = import_DB[game]
+                continue
             #Set time speedup back to 0 if want full and accurate database for all items
             #need to set value in both if and elif to work properly
             if(time_speedup < 0):
@@ -478,6 +538,7 @@ while(igdb_check == False):
                 # input("Here we pause")
                 # Time to put the IGDB attributes into the game we are putting out to the cluster
                 game_DB[game].igdb_ID = earliest_game.id
+                game_DB[game].igdb_found = True
                 game_DB[game].release_date = earliest_release
                 # print("Time to go through platforms")
                 # Spin this while loop off into its own function eventually?
@@ -608,6 +669,7 @@ while(igdb_check == False):
                     except IndexError as e:
                         print("Error:", e)
                         #print("Index", i, "is out of range")
+                    game_DB[game].igdb_found = True
                     game_DB[game].release_date = current_game.first_release_date.ToDatetime()
                     plat_ID = current_game.platforms[0]
                     plat_name = None
@@ -646,7 +708,6 @@ while(igdb_check == False):
                             modes_message.ParseFromString(
                                 sub_request)  # Fills the protobuf message object with the response
                             new_modes = modes_message.gamemodes
-                            #print(new_modes)
                             mode_type = new_modes[0].name
                             game_DB[game].player_counts.append(mode_type)
                             # input(mode_type)
@@ -657,7 +718,6 @@ while(igdb_check == False):
                     if (len(developers) > 0):
                         for dev in developers:
                             dev_name = None
-                            # input(dev)
                             # FIX THE REST OF THIS!!! (involved company, company?)
                             # first query to look at involved companies
                             # sub_query = 'fields *;'
@@ -689,7 +749,6 @@ while(igdb_check == False):
                             companies_message.ParseFromString(
                                 sub_request_2)  # Fills the protobuf message object with the response
                             companies = companies_message.companies
-                            #print(companies)
                             dev_name = companies[0].name
                             game_DB[game].list_companies.append(dev_name)
                             if (is_dev):
@@ -737,6 +796,12 @@ while(igdb_check == False):
         print("Answer not understood, try again.")
         print()
 
+#Once we've gotten the IGDB data we need, print it out to a JSON file to store long term
+for game, details in game_DB.items():
+    export_DB[game] = json.dumps(details.__dict__)
+
+with open ("games.json", "w") as outfile:
+    json.dump(export_DB, outfile)
 
 #START USING PYMONGO FOR OUTPUTTING TO MONGODB DATABASE
 #Used code sample from Atlas on how to connect with Pymongo for assistance here
@@ -1080,4 +1145,8 @@ Closing pymongo connection: https://stackoverflow.com/questions/18401015/how-to-
 Close cursors, try 'with' connections: https://www.mongodb.com/community/forums/t/i-am-using-pymongo-do-i-have-to-close-a-mongoclient-after-use/213511
 Dealing with out of index in list errors: https://rollbar.com/blog/how-to-fix-python-list-index-out-of-range-error-in-for-loops/#
 Python dict() function: https://www.w3schools.com/python/ref_func_dict.asp
+Converting Python dictionary to JSON: https://www.geeksforgeeks.org/how-to-convert-python-dictionary-to-json/
+Converting class object to JSON: https://www.geeksforgeeks.org/convert-class-object-to-json-in-python/#
+Solve JSON Type error: https://stackoverflow.com/questions/69270727/how-to-solve-typeerror-the-json-object-must-be-str-bytes-or-bytearray-not-t
+Check if text file empty: https://www.geeksforgeeks.org/check-if-a-text-file-empty-in-python/
 """
