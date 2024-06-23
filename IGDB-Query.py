@@ -405,6 +405,7 @@ Resident Evil 2002: IGDB ID: 24869
 Resident Evil 2002 HD REMASTER: IGDB ID: 8254
 Resident Evil 2 2019: IGDB ID: 19686
 Resident Evil 4 2023: IGDB ID: 132181
+The Room [2012]: IGDB ID: 11625
 Samurai Showdown 2019: IGDB ID: 109277
 Sapiens 2022: IGDB ID: 117186
 Shadow of the Colossus [2018]: IGDB ID: 37094
@@ -414,6 +415,7 @@ Singstar 2007 (had in my list that we had a 2008 one?): IGDB ID: 15180
 Spider-Man [PlayStation]: IGDB ID: 3603
 Stanley Parable [2013] (standalone): IGDB ID: 3035
 Star Wars: Battlefront I/II are the originals, Star Wars Battlefront I/II are the EA post-Disney ones
+System Shock [2023]: IGDB ID: 18375
 Teenage Mutant Ninja Turtles ARCADE: IGDB ID: 3815
 Teenage Mutant Ninja Turtles NES: IGDB ID: 86386
 Tetris TENGEN: IGDB ID: 180278
