@@ -1,9 +1,9 @@
-RANKED: 87
+RANKED: 93
 UNRANKED: 45
 FORMER: 14
 UNUSED: 0
 ---
-TOTAL: 146
+TOTAL: 152
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -61,6 +61,11 @@ U-The 20 JRPGs You Must Play - Kotaku - 12-29-2015
 TOP GAMEPLAY GENRE ALL TIME (PLATFORMER):
 R-The best platform games ever (that arent Mario) - GamesRadar - 7-3-2015
 
+TOP SEASONAL THEME ALL TIME (SPRING):
+R-Top 10 Best Video Game Forest Levels of All Time - Blockfort
+R-Top 10 Best Video Game Swamp Levels of All Time - Blockfort
+R-Top 10 Best Video Game Sky Levels of All Time - Blockfort
+
 TOP SEASONAL THEME ALL TIME (SUMMER):
 U-The Best Summer-Themed Games And Levels - Kotaku - 7-22-2022
 U-The Best Summer Video Games - GreenManGaming - 7-29-2022
@@ -69,10 +74,15 @@ R-Top 10 Best Video Game Beach Levels of All Time - Blockfort
 R-Top 10 Best Video Game Desert Levels of All Time - Blockfort
 R-Top 10 Best Summer Themes in Gaming - Blockfort
 U-8 Summer Themed Video Games - CozyShiro
+R-Top 10 Best Video Game Fire Levels of All Time - Blockfort
 
 TOP SEASONAL THEME ALL TIME (FALL/HALLOWEEN):
 U-13 Spooky Video Games We Love for Halloween - New York Times - 10-19-2023
 R-10 Best Halloween-Themed Levels In Video Games - CBR - 10-27-2022
+R-Top 10 Best Video Game Space Levels of All Time - Blockfort
+
+TOP SEASONAL THEME ALL TIME (WINTER/CHRISTMAS):
+R-Top 10 Best Video Game Ice Levels of All Time - Blockfort
 
 TOP THEMATIC GENRE ALL TIME (POST-APOCALYPSE):
 R-The 10 Best Post-Apocalyptic Video Games Ranked - Maxim - 8-31-2016
