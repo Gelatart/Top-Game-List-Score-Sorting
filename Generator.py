@@ -394,12 +394,17 @@ with open("games.json") as json_file:
 print(import_DB)
 input()
 
+#Make sure fresh for actual process once done testing
+import_DB.clear()
+
 #This is where the user sets whether they want to grab from the IGDB API or not
 #Maybe add options for how much to grab? How many games? What types of info? Other qualifiers?
 #Maybe do a quick pass and long pass version? Quick pass doesn't use additional endpoints? Long pass makes more user facing?
 igdb_check = False
 igdb_answer = None
 scratch_answer = False
+limit_answer = False
+limit_number = 0
 while(igdb_check == False):
     print("Would you like to grab additional game data from the IGDB API at this moment? Y or N")
     igdb_answer = input("Make your selection: ")
@@ -414,6 +419,31 @@ while(igdb_check == False):
                 break
             elif(scratch_option == "2"):
                 scratch_answer = False
+                break
+            else:
+                print("Please enter a valid response")
+                print()
+                continue
+        while True:
+            print("Would you like to set a limit on how many games to grab info for? This process can take a long time, so this can help get your foot in the door")
+            print("1. Set a limit")
+            print("2. Just try for all games")
+            limit_option = input()
+            if (limit_option == "1"):
+                limit_answer = True
+                while True:
+                    print("Would you like to set the limit to? Please provide a valid number")
+                    limit_set = input()
+                    if(limit_set.isnumeric()):
+                        limit_number = int(limit_set)
+                        break
+                    else:
+                        print("Please enter a valid response")
+                        print()
+                        continue
+                break
+            elif (limit_option == "2"):
+                limit_answer = False
                 break
             else:
                 print("Please enter a valid response")
@@ -504,6 +534,8 @@ while(igdb_check == False):
             check_string += 'keywords, language_supports, player_perspectives, '
             check_string += 'rating, rating_count, release_dates, screenshots, similar_games, standalone_expansions, '
             check_string += 'storyline, tags, themes, total_rating, total_rating_count, updated_at, videos, websites; '
+            if(limit_answer):
+                check_string += f' limit {limit_number}; '
             # Check if <> comes first, where we use ID instead of name, for titles hard to specify
             #if (game[0] == '<'): #Replacing after discovering startswith() function?
             #poem.startswith('All')
@@ -939,16 +971,11 @@ for list in games_lists:
 
 #print totals of the numbers of lists in each category?
 
-#once gone through creating the lists, use separate files to mark the status of games? (completed, etc.)
+#Files to mark additional personal statuses of games so far:
+#Completed
 
-#list_counts = "Ranked Lists: " + str(ranked_file_count)
-#print(list_counts)
 print(f"Ranked Lists: {ranked_file_count}")
-#list_counts = "Unranked Lists: " + str(unranked_file_count)
-#print(list_counts)
 print(f"Unranked Lists: {unranked_file_count}")
-#list_counts = "Former Lists: " + str(former_file_count)
-#print(list_counts)
 print(f"Former Lists: {former_file_count}")
 
 print("LISTS USED IN PROCESS:")
@@ -1025,11 +1052,6 @@ for game in games_pulled_average:
     completed = game["Completed"]
     if (completed == True):
         entry += "[x]"
-    """
-    entry += game['Title'].strip()
-    entry += " --> "
-    entry += str(game['Average Score'])
-    """
     #entry += game['Title'].strip() + " [" + game['IGDB ID'] + "]" + " --> " + str(game['Average Score'])
     entry += game['Title'].strip()
     if (igdb_answer == 'Y' or igdb_answer == 'Yes'):
@@ -1085,7 +1107,6 @@ for game in games_pulled:
         output_lists += ref_list
         output_lists += ", "
     """
-    #crypto_string = ', '.join(crypto_list)
     output_lists = ', '.join(game['List of References'])
     sheet1.write(excel_count, 5, output_lists)
     sheet1.write(excel_count, 6, completion_status)
