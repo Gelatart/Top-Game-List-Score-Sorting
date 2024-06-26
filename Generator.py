@@ -331,19 +331,63 @@ self.igdb_ID = None
 
 #Taking custom class objects and making them JSON exportable
 export_DB = {}
+#export_DB["games"] = []
+#export_DB = []
 
-for game, details in game_DB.items():
-    export_DB[game] = json.dumps(details.__dict__)
+import itertools
+
+#for game, details in game_DB.items():
+for game, details in itertools.islice(game_DB.items(),0,3):
+    #export_DB[game] = json.loads(details.__dict__)
+    export_DB[game] = json.loads(json.dumps(details.__dict__))
+    #export_DB["games"].append(json.dumps(details.__dict__))
+    #export_string = json.dumps(details.__dict__)
+    #export_DB.append(export_string)
+
+print(export_DB)
+
+json_string = ','.join(export_DB)
+#json_dict = json.loads(export_DB)
+#json_dict = json.loads(json_string)
 
 #Initial print of what we have in the games database
 with open ("games_pre.json", "w") as outfile:
-    json.dump(export_DB, outfile)
+    out_json = json.dump(export_DB, outfile)
+    #out_json = json.dump(json_dict, outfile)
+    #out_json = json.dump(json_string, outfile)
+    print(out_json)
 
-import_DB = {}
+#import_DB = {}
+#import_DB = []
+#import_DB["games"] = []
+
+input("Let's test pulling from JSON!\n")
+
+with open("games_pre.json", "r") as json_file:
+    #Reading the first character throws everything off
+    #import_DB = json.load(json_file)
+    #first_char = json_file.read(1)
+    #if not first_char:
+    if(os.stat("games_pre.json").st_size == 0):
+        print("Looks like we don't have anything in games_pre.json yet")
+    else:
+        import_DB = json.load(json_file)
+        #import_DB = json.loads(json_file.read())
+        #import_DB = json.loads(json_file)
+        #for line in json_file:
+            #import_DB.append(json.loads(line))
+            #import_DB["games"].append(json.loads(line))
+            #import_DB.append(json.loads(line))
+        print(import_DB)
+        input()
+
+#having issue with jsondecodeerror: extra data, s, end OR str object has no attribute read (load vs. loads)
+#seems like putting all into a "games" array doesn't help things
 
 with open("games.json") as json_file:
-    first_char = json_file.read(1)
-    if not first_char:
+    #first_char = json_file.read(1)
+    #if not first_char:
+    if (os.stat("games.json").st_size == 0):
         print("Looks like we don't have anything in games.json yet")
     else:
         import_DB = json.load(json_file)
@@ -1149,4 +1193,7 @@ Converting Python dictionary to JSON: https://www.geeksforgeeks.org/how-to-conve
 Converting class object to JSON: https://www.geeksforgeeks.org/convert-class-object-to-json-in-python/#
 Solve JSON Type error: https://stackoverflow.com/questions/69270727/how-to-solve-typeerror-the-json-object-must-be-str-bytes-or-bytearray-not-t
 Check if text file empty: https://www.geeksforgeeks.org/check-if-a-text-file-empty-in-python/
+JSON Decode error, how to handle more than one JSON object imported: https://stackoverflow.com/questions/21058935/python-json-loads-shows-valueerror-extra-data
+Dealing with JSON Decode error: https://stackoverflow.com/questions/48140858/json-decoder-jsondecodeerror-extra-data-line-2-column-1-char-190
+Check if file is empty: https://stackoverflow.com/questions/2507808/how-to-check-whether-a-file-is-empty-or-not
 """
