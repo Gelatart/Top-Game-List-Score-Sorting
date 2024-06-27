@@ -216,19 +216,62 @@ def query_loop(endpoint_option):
                 'genres.pb',  # Note the '.pb' suffix at the endpoint
                 query
             )
+            #GENRE SEEMS TO BE BROKEN STILL?
             genre_message = GenreResult() #not finding this quite yet?
             genre_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
             genres = genre_message.genres
 
             print(genres)
-            #...
+
+            while True:
+                print()
+                print("Would you like to keep going with this endpoint?")
+                quit_answer = input()
+                if (quit_answer == 'Y' or quit_answer == 'Yes' or quit_answer == 'y' or quit_answer == 'yes'):
+                    print()
+                    print("Alright! Back to querying!")
+                    print()
+                    break
+                elif (quit_answer == 'N' or quit_answer == 'No' or quit_answer == 'n' or quit_answer == 'no'):
+                    print()
+                    print("Alright! Let's finish up with this endpoint!")
+                    print()
+                    return  # To get out of function and back to main code
+                else:
+                    print()
+                    print("Sorry, I don't understand. Try again")
+                    continue
         elif (endpoint_option == "7"):
             # THEME
             igdb_request = wrapper.api_request(
                 'themes.pb',  # Note the '.pb' suffix at the endpoint
                 query
             )
-            #...
+            #TEST THIS!!!
+            theme_message = ThemeResult()  # not finding this quite yet?
+            theme_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
+            themes = theme_message.themes
+
+            print(themes)
+
+            while True:
+                print()
+                print("Would you like to keep going with this endpoint?")
+                quit_answer = input()
+                if (quit_answer == 'Y' or quit_answer == 'Yes' or quit_answer == 'y' or quit_answer == 'yes'):
+                    print()
+                    print("Alright! Back to querying!")
+                    print()
+                    break
+                elif (quit_answer == 'N' or quit_answer == 'No' or quit_answer == 'n' or quit_answer == 'no'):
+                    print()
+                    print("Alright! Let's finish up with this endpoint!")
+                    print()
+                    return  # To get out of function and back to main code
+                else:
+                    print()
+                    print("Sorry, I don't understand. Try again")
+                    continue
         else:
             print("Sorry, I don't understand. Try again")
             continue
@@ -371,6 +414,7 @@ Hitman 2016: IGDB ID: 11157
 Ikari Warriors [NES]: IGDB ID: 274081
 Ivan "Ironman" Stewart's Super Off Road (name seems to be crashing IGDB API request?): IGDB ID: 12735
 Killer Instinct 2013: IGDB ID: 10354
+Kirby's Return to Dream Land (name seems to crash it, maybe the apostrophe?): IGDB ID: 3725
 Legend of Mana [Remastered]: IGDB ID: 143616
 The Lost World: Jurassic Park [Arcade]: IGDB ID: 132135
 The Lost World: Jurassic Park [Genesis]: IGDB ID: 8075

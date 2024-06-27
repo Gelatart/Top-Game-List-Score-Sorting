@@ -542,8 +542,6 @@ while(igdb_check == False):
             check_string += 'keywords, language_supports, player_perspectives, '
             check_string += 'rating, rating_count, release_dates, screenshots, similar_games, standalone_expansions, '
             check_string += 'storyline, tags, themes, total_rating, total_rating_count, updated_at, videos, websites; '
-            if(limit_answer):
-                check_string += f' limit {limit_number}; '
             # Check if <> comes first, where we use ID instead of name, for titles hard to specify
             #if (game[0] == '<'): #Replacing after discovering startswith() function?
             #poem.startswith('All')
@@ -574,7 +572,10 @@ while(igdb_check == False):
                 check_string += 'where name = "'
                 check_string += game.strip()
                 check_string += '"'
-            check_string += '; offset 0;'  # 6 is cancelled,  & status != 6
+            check_string += '; '
+            if (limit_answer):
+                check_string += f'limit {limit_number}; '
+            check_string += 'offset 0;'  # 6 is cancelled,  & status != 6
             # Had & version_parent = null in the check_string before, but probably won't work in cases we do want port, might just want
             # more specificity in some cases
             # | category = 3  (attempted to insert this into the query)
