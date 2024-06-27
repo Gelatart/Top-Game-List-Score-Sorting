@@ -68,6 +68,8 @@ class GameObject:
         self.list_developers = []
         self.list_publishers = []
         self.list_companies = []
+        self.genres = []
+        self.themes = []
 
     #consider storing a constantly updated average score?
 
@@ -91,6 +93,8 @@ class GameObject:
         self.list_developers = []
         self.list_publishers = []
         self.list_companies = []
+        self.genres = []
+        self.themes = []
 
     def __init__(self, rank, list, total):
         self.igdb_ID = None
@@ -108,6 +112,8 @@ class GameObject:
         self.list_developers = []
         self.list_publishers = []
         self.list_companies = []
+        self.genres = []
+        self.themes = []
 
     #CONSIDER MAKING AN EXPORT FUNCTION FOR THE CLASS TO CONVERT TO DICTIONARY?
 
@@ -327,6 +333,8 @@ self.igdb_ID = None
         self.list_developers = []
         self.list_publishers = []
         self.list_companies = []
+        self.genres = []
+        self.themes = []
 """
 
 #Taking custom class objects and making them JSON exportable
@@ -736,6 +744,9 @@ while(igdb_check == False):
                         if (is_pub):
                             game_DB[game].list_publishers.append(dev_name)
                         #input(dev_name)
+                        #ADD GENRES
+
+                        #ADD THEMES
                     #game_DB[game].list_developers = developers  # Will this grab the most definitive list?
             elif (len(games) == 1):
                 try:
@@ -832,6 +843,8 @@ while(igdb_check == False):
                             if (is_pub):
                                 game_DB[game].list_publishers.append(dev_name)
                             #input(dev_name)
+                            #ADD GENRES
+                            #ADD THEMES
                 except Exception as e:
                     print("An error has occurred:", e)
                     #it starts hitting errors when it gets to some of the new games featured in metacritic user scores?
@@ -945,6 +958,8 @@ for game, details in game_DB.items():
     export_dict["Developers"] = details.list_developers
     export_dict["Publishers"] = details.list_publishers
     export_dict["Companies"] = details.list_companies
+    export_dict["Genres"] = details.genres
+    export_dict["Themes"] = details.themes
     export_dict["Total Count"] = details.total_count
     #export_dict = dict(game)
     #^need to expand and clarify more?

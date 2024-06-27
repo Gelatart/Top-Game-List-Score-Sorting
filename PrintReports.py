@@ -378,6 +378,8 @@ while(answer_check_main == False):
     print("8. Average Score")
     print("9. Player Count")
     print("10. Developers")
+    #Genre (Gamplay)
+    #Theme (Thematic genre)
     print("11. Miscellaneous")
     print("12. Finish and Generate Report")
     #consider franchise option when that data is pulled? genre? country developed in? other fields?
@@ -518,7 +520,6 @@ while(answer_check_main == False):
                 break
             elif (platforms_option == '3'):
                 while True:
-                    # elif 3
                     print("Which generation of platform would you like to include?")
                     print("Note: For formats not split by generation (ex. PC and Arcade), you will likely want to go by format")
                     print("1. 1st-Generation Consoles")
@@ -1113,7 +1114,6 @@ while(answer_check_main == False):
                         add_misc_query("Release Date", value)
                         print("20th century query added")
                         print()
-                        print("Query added!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (time_range_option == '7'):
@@ -1123,7 +1123,6 @@ while(answer_check_main == False):
                         add_misc_query("Release Date", value)
                         print("21st century query added")
                         print()
-                        print("Query added!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     else:
@@ -1600,7 +1599,6 @@ while(answer_check_main == False):
                         print("Sorry, I don't understand")
                         print()
                         continue
-                        # check again
                 elif(and_or_type == '2'):
                     #OR approach
                     if(sort_type == '1'):

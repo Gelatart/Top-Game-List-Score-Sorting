@@ -210,6 +210,25 @@ def query_loop(endpoint_option):
                     print()
                     print("Sorry, I don't understand. Try again")
                     continue
+        elif (endpoint_option == "6"):
+            #GENRE
+            igdb_request = wrapper.api_request(
+                'genres.pb',  # Note the '.pb' suffix at the endpoint
+                query
+            )
+            genre_message = GenreResult() #not finding this quite yet?
+            genre_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
+            genres = genre_message.genres
+
+            print(genres)
+            #...
+        elif (endpoint_option == "7"):
+            # THEME
+            igdb_request = wrapper.api_request(
+                'themes.pb',  # Note the '.pb' suffix at the endpoint
+                query
+            )
+            #...
         else:
             print("Sorry, I don't understand. Try again")
             continue
@@ -251,10 +270,8 @@ igdb_request = wrapper.api_request(
 games_message = GameResult()
 games_message.ParseFromString(igdb_request) # Fills the protobuf message object with the response
 games = games_message.games
-#print(games)
-#input("Here we pause")
 
-endpoint_types = { '1': 'Game Modes', '2': 'Platforms', '3': 'Platform Family', '4': 'Involved Company', '5': 'Company'}
+endpoint_types = { '1': 'Game Modes', '2': 'Platforms', '3': 'Platform Family', '4': 'Involved Company', '5': 'Company', '6': 'Genre', '7': 'Theme'}
 
 while True:
 #give option to return back here or just to option already set upon
@@ -276,6 +293,8 @@ while True:
         print("3. Platform Family")
         print("4. Involved Company")
         print("5. Company")
+        print("6. Genre")
+        print("7. Theme")
         #...
         endpoint_option_2 = input()
         print()
