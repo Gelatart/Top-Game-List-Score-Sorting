@@ -217,6 +217,32 @@ def print_platforms():
     #input()
     print()
 
+#def print_genres
+#Point-and-click (2)
+#Fighting (4)
+#Shooter (5)
+#Music (7)
+#Platform (8)
+#Puzzle (9)
+#Racing (10)
+#Real Time Strategy (RTS) (11)
+#Role-playing (RPG) (12)
+#Simulator (13)
+#Sport (14)
+#Strategy (15)
+#Turn-based strategy (TBS) (16)
+#Tactical (24)
+#Hack and slash/Beat \'em up (25)
+#Quiz/Trivia (26)
+#Pinball (30)
+#Adventure (31)
+#Indie (32)
+#Arcade (33)
+#Visual Novel (34)
+#Card & Board Game (35)
+#MOBA (36)
+#...
+
 def add_query(category, value):
     #new_query = {"List of Platforms": "Odyssey"}
     new_query = {category: value}

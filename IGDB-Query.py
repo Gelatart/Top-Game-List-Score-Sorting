@@ -6,6 +6,15 @@ import requests
 from igdb.wrapper import IGDBWrapper
 import json
 
+from igdb.igdbapi_pb2 import GameResult
+from igdb.igdbapi_pb2 import GameModeResult
+from igdb.igdbapi_pb2 import PlatformResult
+from igdb.igdbapi_pb2 import PlatformFamilyResult
+from igdb.igdbapi_pb2 import InvolvedCompanyResult
+from igdb.igdbapi_pb2 import CompanyResult
+from igdb.igdbapi_pb2 import GenreResult
+from igdb.igdbapi_pb2 import ThemeResult
+
 #deal with query syntax errors better? here and in other progams? exception handling?
 
 def query_loop(endpoint_option):
@@ -299,12 +308,6 @@ access_token = received["access_token"]
 wrapper = IGDBWrapper(client_id, access_token)
 #input("Here we pause")
 
-from igdb.igdbapi_pb2 import GameResult
-from igdb.igdbapi_pb2 import GameModeResult
-from igdb.igdbapi_pb2 import PlatformResult
-from igdb.igdbapi_pb2 import PlatformFamilyResult
-from igdb.igdbapi_pb2 import InvolvedCompanyResult
-from igdb.igdbapi_pb2 import CompanyResult
 igdb_request = wrapper.api_request(
             'games.pb', # Note the '.pb' suffix at the endpoint
             #'fields name, rating; limit 5; offset 0;'
