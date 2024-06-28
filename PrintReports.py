@@ -217,31 +217,66 @@ def print_platforms():
     #input()
     print()
 
-#def print_genres
-#Point-and-click (2)
-#Fighting (4)
-#Shooter (5)
-#Music (7)
-#Platform (8)
-#Puzzle (9)
-#Racing (10)
-#Real Time Strategy (RTS) (11)
-#Role-playing (RPG) (12)
-#Simulator (13)
-#Sport (14)
-#Strategy (15)
-#Turn-based strategy (TBS) (16)
-#Tactical (24)
-#Hack and slash/Beat \'em up (25)
-#Quiz/Trivia (26)
-#Pinball (30)
-#Adventure (31)
-#Indie (32)
-#Arcade (33)
-#Visual Novel (34)
-#Card & Board Game (35)
-#MOBA (36)
-#...
+def print_genres():
+    #Spun off into its own function so we don't have to worry about maintaining multiple versions of data in-code
+    #Just grab it from here when needed
+    print("Here are all the genres that there are!")
+    print("2. Point-and-click")
+    print("4. Fighting")
+    print("5. Shooter")
+    print("7. Music")
+    print("8. Platform")
+    print("9. Puzzle")
+    print("10. Racing")
+    print("11. Real Time Strategy (RTS)")
+    print("12. Role-playing (RPG)")
+    print("13. Simulator")
+    print("14. Sport")
+    print("15. Strategy")
+    print("16. Turn-based strategy (TBS)")
+    print("24. Tactical")
+    print("25. Hack and slash/Beat \'em up")
+    print("26. Quiz/Trivia")
+    print("30. Pinball")
+    print("31. Adventure")
+    print("32. Indie")
+    print("33. Arcade")
+    print("34. Visual Novel")
+    print("35. Card & Board Game")
+    print("36. MOBA")
+    # any others needed?
+    print()
+
+def print_themes():
+    #Spun off into its own function so we don't have to worry about maintaining multiple versions of data in-code
+    #Just grab it from here when needed
+    print("Here are all the themes that there are!")
+    print("1. Action")
+    print("17. Fantasy")
+    print("18. Science fiction")
+    print("19. Horror")
+    print("20. Thriller")
+    print("21. Survival")
+    print("22. Historical")
+    print("23. Stealth")
+    print("27. Comedy")
+    print("28. Business")
+    print("31. Drama")
+    print("32. Non-fiction")
+    print("33. Sandbox")
+    print("34. Educational")
+    print("35. Kids")
+    print("38. Open world")
+    #...
+    # any others needed?
+    print()
+#Warfare (39)
+#Party (40)
+#4X (explore, expand, exploit, and exterminate) (41)
+#Erotic (42)
+#Mystery (43)
+#Romance (44)
+#...?
 
 def add_query(category, value):
     #new_query = {"List of Platforms": "Odyssey"}
