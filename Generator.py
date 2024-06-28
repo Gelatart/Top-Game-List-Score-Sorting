@@ -73,10 +73,6 @@ class GameObject:
 
     #consider storing a constantly updated average score?
 
-    #def __init__(self, rank, count):
-    #    self.ranked_score = rank
-    #    self.list_count = count
-
     def __init__(self, rank, list):
         self.igdb_ID = None
         self.igdb_found = False
@@ -344,8 +340,8 @@ export_DB = {}
 
 import itertools
 
-#for game, details in game_DB.items():
-for game, details in itertools.islice(game_DB.items(),0,3):
+for game, details in game_DB.items():
+#for game, details in itertools.islice(game_DB.items(),0,3):
     #export_DB[game] = json.loads(details.__dict__)
     export_DB[game] = json.loads(json.dumps(details.__dict__))
     #export_DB["games"].append(json.dumps(details.__dict__))
@@ -365,7 +361,7 @@ with open ("games_pre.json", "w") as outfile:
     #out_json = json.dump(json_string, outfile)
     print(out_json)
 
-#import_DB = {}
+import_DB = {}
 #import_DB = []
 #import_DB["games"] = []
 
@@ -392,6 +388,9 @@ with open("games_pre.json", "r") as json_file:
 #having issue with jsondecodeerror: extra data, s, end OR str object has no attribute read (load vs. loads)
 #seems like putting all into a "games" array doesn't help things
 
+#Make sure fresh for actual process once done testing
+import_DB.clear()
+
 with open("games.json") as json_file:
     #first_char = json_file.read(1)
     #if not first_char:
@@ -400,10 +399,8 @@ with open("games.json") as json_file:
     else:
         import_DB = json.load(json_file)
 print(import_DB)
+print(game_DB.items().__class__)
 input()
-
-#Make sure fresh for actual process once done testing
-import_DB.clear()
 
 #This is where the user sets whether they want to grab from the IGDB API or not
 #Maybe add options for how much to grab? How many games? What types of info? Other qualifiers?
@@ -492,14 +489,12 @@ while(igdb_check == False):
         # page = requests.get(post) #404
         page = requests.post(post)  # gives access token we can use
         print(page.text)
-        #input("Here we pause")
 
         # wrapper = IGDBWrapper("YOUR_CLIENT_ID", "YOUR_APP_ACCESS_TOKEN")
         received = json.loads(page.text)
         access_token = received["access_token"]
         print(access_token)
         wrapper = IGDBWrapper(client_id, access_token)
-        #input("Here we pause")
 
         from igdb.igdbapi_pb2 import GameResult
         from igdb.igdbapi_pb2 import GameModeResult
@@ -523,8 +518,8 @@ while(igdb_check == False):
         print("Time to go looking around")
         time_speedup = 0;
         #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
-        for game, details in game_DB.items():
-            if(scratch_answer == True and game in import_DB):
+        for game, details in itertools.islice(game_DB.items(),0,limit_number):
+            if(scratch_answer == False and game in import_DB and details.igdb_found == True):
                 print("Hey, we already got this one!")
                 game_DB[game] = import_DB[game]
                 continue
@@ -573,8 +568,8 @@ while(igdb_check == False):
                 check_string += game.strip()
                 check_string += '"'
             check_string += '; '
-            if (limit_answer):
-                check_string += f'limit {limit_number}; '
+            #if (limit_answer):
+                #check_string += f'limit {limit_number}; '
             check_string += 'offset 0;'  # 6 is cancelled,  & status != 6
             # Had & version_parent = null in the check_string before, but probably won't work in cases we do want port, might just want
             # more specificity in some cases
@@ -586,6 +581,7 @@ while(igdb_check == False):
             # Also dealing with compilation games? Add points to individual games? Create field to track subgames in a compilation?
             # check_string += ';'
             print(check_string)
+            print(details.lists_referencing)
             igdb_request = wrapper.api_request(
                 'games.pb',  # Note the '.pb' suffix at the endpoint
                 check_string
@@ -624,10 +620,12 @@ while(igdb_check == False):
                 # Time to put the IGDB attributes into the game we are putting out to the cluster
                 game_DB[game].igdb_ID = earliest_game.id
                 game_DB[game].igdb_found = True
-                game_DB[game].release_date = earliest_release
+                #game_DB[game].release_date = earliest_release
+                game_DB[game].release_date = earliest_release.isoformat() #To make Json serializable?
                 # print("Time to go through platforms")
                 # Spin this while loop off into its own function eventually?
                 plat_counter = 0
+                #plat_counter not defined error?
                 main_plat = None
                 plat_name = None
                 list_plats = []
@@ -758,7 +756,8 @@ while(igdb_check == False):
                         print("Error:", e)
                         #print("Index", i, "is out of range")
                     game_DB[game].igdb_found = True
-                    game_DB[game].release_date = current_game.first_release_date.ToDatetime()
+                    #game_DB[game].release_date = current_game.first_release_date.ToDatetime()
+                    game_DB[game].release_date = current_game.first_release_date.ToDatetime().isoformat() #To make JSON serializable?
                     plat_ID = current_game.platforms[0]
                     plat_name = None
                     sub_query = 'fields name; where id=' + str(plat_ID.id) + ';'
@@ -886,21 +885,34 @@ while(igdb_check == False):
         print("Answer not understood, try again.")
         print()
 
+print(game_DB.items().__class__)
+for game, details in itertools.islice(game_DB.items(),0,3):
+    print(game)
+    print(details)
+    print(details.__class__)
+
 #Once we've gotten the IGDB data we need, print it out to a JSON file to store long term
 for game, details in game_DB.items():
-    export_DB[game] = json.dumps(details.__dict__)
+    if(isinstance(details, str)):
+        #if already made a json string
+        export_DB[game] = json.loads(details)  # Now it's already json formatted
+    else:
+    #export_DB[game] = json.dumps(details.__dict__)
+        export_DB[game] = json.loads(json.dumps(details.__dict__))
 
 with open ("games.json", "w") as outfile:
     json.dump(export_DB, outfile)
+
+print("Games exported to games.json!")
 
 #START USING PYMONGO FOR OUTPUTTING TO MONGODB DATABASE
 #Used code sample from Atlas on how to connect with Pymongo for assistance here
 #Connecting to env file to get private login data
 mon_connect = os.getenv('MONGO_URI')
-#mon_client = pymongo.MongoClient(mon_connect)
 mon_client = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
 monDB = mon_client["GameSorting"]
 #input(mon_connect)
+input("About to attempt connection to Mongo, press ENTER when you are ready")
 try:
     mon_client.admin.command('ping')
     print("Pinged your deployment. You successfully connected to MongoDB!")
@@ -1233,4 +1245,5 @@ Check if text file empty: https://www.geeksforgeeks.org/check-if-a-text-file-emp
 JSON Decode error, how to handle more than one JSON object imported: https://stackoverflow.com/questions/21058935/python-json-loads-shows-valueerror-extra-data
 Dealing with JSON Decode error: https://stackoverflow.com/questions/48140858/json-decoder-jsondecodeerror-extra-data-line-2-column-1-char-190
 Check if file is empty: https://stackoverflow.com/questions/2507808/how-to-check-whether-a-file-is-empty-or-not
+Limiting iterations of loop: https://stackoverflow.com/questions/36106712/how-can-i-limit-iterations-of-a-loop
 """
