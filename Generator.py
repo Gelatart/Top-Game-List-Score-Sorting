@@ -4,8 +4,6 @@ import math
 # Writing to an excel sheet using Python
 import xlwt
 from xlwt import Workbook
-#import sqlite3
-#^Replaced the need for SQL with MongoDB and Pymongo
 import pymongo
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
@@ -173,9 +171,8 @@ for filename in os.listdir(directory):
         unranked_file_count += 1
         starting_line = file1.readline()
         Lines = file1.readlines()
-        #count = int(starting_line)
-        floatCount = float(starting_line)
-        count = math.floor(floatCount)
+        float_count = float(starting_line)
+        count = math.floor(float_count)
         count = len(Lines)
         print(count)
         original_count = count
@@ -745,10 +742,40 @@ while(igdb_check == False):
                         if (is_pub):
                             game_DB[game].list_publishers.append(dev_name)
                         #input(dev_name)
-                        #ADD GENRES
-
-                        #ADD THEMES
-                    #game_DB[game].list_developers = developers  # Will this grab the most definitive list?
+                    # game_DB[game].list_developers = developers  # Will this grab the most definitive list?
+                #ADD GENRES
+                genres = earliest_game.genres
+                if (len(genres) > 0):
+                    for genre in genres:
+                        genre_type = None
+                        sub_query = 'fields name; where id=' + str(genre.id) + ';'
+                        sub_request = wrapper.api_request(
+                            'genres.pb',  # Note the '.pb' suffix at the endpoint
+                            sub_query
+                        )
+                        genres_message = GenreResult()
+                        genres_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
+                        new_genres = genres_message.genres
+                        genre_type = new_genres[0].name
+                        game_DB[game].genres.append(genre_type)
+                        input(genre_type)
+                #ADD THEMES
+                themes = earliest_game.themes
+                if (len(themes) > 0):
+                    for theme in themes:
+                        theme_type = None
+                        sub_query = 'fields name; where id=' + str(theme.id) + ';'
+                        sub_request = wrapper.api_request(
+                            'themes.pb',  # Note the '.pb' suffix at the endpoint
+                            sub_query
+                        )
+                        themes_message = ThemeResult()
+                        themes_message.ParseFromString(
+                            sub_request)  # Fills the protobuf message object with the response
+                        new_themes = themes_message.themes
+                        theme_type = new_themes[0].name
+                        game_DB[game].themes.append(theme_type)
+                        input(theme_type)
             elif (len(games) == 1):
                 try:
                     current_game = games[0]
@@ -845,8 +872,38 @@ while(igdb_check == False):
                             if (is_pub):
                                 game_DB[game].list_publishers.append(dev_name)
                             #input(dev_name)
-                            #ADD GENRES
-                            #ADD THEMES
+                    # ADD GENRES
+                    genres = earliest_game.genres
+                    if (len(genres) > 0):
+                        for genre in genres:
+                            genre_type = None
+                            sub_query = 'fields name; where id=' + str(genre.id) + ';'
+                            sub_request = wrapper.api_request(
+                                'genres.pb',  # Note the '.pb' suffix at the endpoint
+                                sub_query
+                            )
+                            genres_message = GenreResult()
+                            genres_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
+                            new_genres = genres_message.genres
+                            genre_type = new_genres[0].name
+                            game_DB[game].genres.append(genre_type)
+                            input(genre_type)
+                    # ADD THEMES
+                    themes = earliest_game.themes
+                    if (len(themes) > 0):
+                        for theme in themes:
+                            theme_type = None
+                            sub_query = 'fields name; where id=' + str(theme.id) + ';'
+                            sub_request = wrapper.api_request(
+                                'themes.pb',  # Note the '.pb' suffix at the endpoint
+                                sub_query
+                            )
+                            themes_message = ThemeResult()
+                            themes_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
+                            new_themes = themes_message.themes
+                            theme_type = new_themes[0].name
+                            game_DB[game].themes.append(theme_type)
+                            input(theme_type)
                 except Exception as e:
                     print("An error has occurred:", e)
                     #it starts hitting errors when it gets to some of the new games featured in metacritic user scores?
@@ -1059,11 +1116,6 @@ for game in games_pulled_inclusion:
     completed = game["Completed"]
     if (completed == True):
         entry += "[x]"
-    """
-    entry += game['Title'].strip()
-    entry += " --> "
-    entry += str(game['Inclusion Score'])
-    """
     #entry += game['Title'].strip() + " [" + game['IGDB ID'] + "]" + " --> " + str(game['Inclusion Score'])
     entry += game['Title'].strip()
     if (igdb_answer == 'Y' or igdb_answer == 'Yes'):
@@ -1112,6 +1164,8 @@ sheet1.write(0, 10, 'PLAYER COUNTS', bold_style)
 sheet1.write(0, 11, 'DEVELOPERS', bold_style)
 sheet1.write(0, 12, 'PUBLISHERS', bold_style)
 sheet1.write(0, 13, 'COMPANIES', bold_style)
+sheet1.write(0, 14, 'GENRES', bold_style)
+sheet1.write(0, 15, 'THEMES', bold_style)
 excel_count = 1
 for game in games_pulled:
     ranked_score = game['Ranked Score']
@@ -1172,7 +1226,11 @@ for game in games_pulled:
     pubs_string = ', '.join(game['Publishers'])
     sheet1.write(excel_count, 12, pubs_string)
     comps_string = ', '.join(game['Companies'])
-    sheet1.write(excel_count, 12, comps_string)
+    sheet1.write(excel_count, 13, comps_string)
+    genres_string = ', '.join(game['Genres'])
+    sheet1.write(excel_count, 14, genres_string)
+    themes_string = ', '.join(game['Themes'])
+    sheet1.write(excel_count, 15, themes_string)
     excel_count += 1
 wb.save('Sorted Database.xls')
 

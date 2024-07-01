@@ -267,16 +267,14 @@ def print_themes():
     print("34. Educational")
     print("35. Kids")
     print("38. Open world")
-    #...
+    print("39. Warfare")
+    print("40. Party")
+    print("41. 4X (explore, expand, exploit, and exterminate)")
+    print("42. Erotic")
+    print("43. Mystery")
+    print("44. Romance")
     # any others needed?
     print()
-#Warfare (39)
-#Party (40)
-#4X (explore, expand, exploit, and exterminate) (41)
-#Erotic (42)
-#Mystery (43)
-#Romance (44)
-#...?
 
 def add_query(category, value):
     #new_query = {"List of Platforms": "Odyssey"}
@@ -439,10 +437,10 @@ while(answer_check_main == False):
     print("8. Average Score")
     print("9. Player Count")
     print("10. Developers")
-    #Genre (Gamplay)
-    #Theme (Thematic genre)
-    print("11. Miscellaneous")
-    print("12. Finish and Generate Report")
+    print("11. Gameplay Genre")
+    print("12. Thematic Genre")
+    print("13. Miscellaneous")
+    print("14. Finish and Generate Report")
     #consider franchise option when that data is pulled? genre? country developed in? other fields?
     #store queries to pull for franchises somewhere else if have to do custom?
     #genres are gameplay genres, themes are thematic genres
@@ -1208,20 +1206,12 @@ while(answer_check_main == False):
             completed_option = input()
             if(completed_option == '1'):
                 print("Including games you have completed")
-                """
-                new_query = {"Completed": True}
-                queries.append(new_query)
-                """
                 add_misc_query("Completed", True)
                 print("Query added!")
                 input("When you are ready, press Enter to go back to the main print menu\n")
                 break
             elif(completed_option == '2'):
                 print("Including games you have not completed")
-                """
-                new_query = {"Completed": False}
-                queries.append(new_query)
-                """
                 add_misc_query("Completed", False)
                 print("Query added!")
                 input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1491,11 +1481,6 @@ while(answer_check_main == False):
                     if (dev_type_option == '1'):
                         print("Which developer are you wanting to filter for? For now you'll want to be pretty exact.")
                         dev_search = input()
-                        """
-                        new_query = {"Developers": dev_search}
-                        queries.append(new_query)
-                        dev_queries.append(new_query)
-                        """
                         add_dev_query("Developers", dev_search)
                         print("Query added!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1565,8 +1550,30 @@ while(answer_check_main == False):
         print("Returning back to main menu")
         print()
     elif (filter_category == '11'):
+        #GENRE
         print()
-        print("You have selected 11. Miscellaneous")
+        print("You have selected 11. Gameplay Genre")
+        print()
+        print("Now we are going to list all of the options of genres (gameplay) you can choose from")
+        print("Note that the numbers are listed as so because they are the platform ID's listed in IGDB's API")
+        input("Whenever you are ready, the platform options will be listed in full (For now use the text version)\n")
+        print_platforms()  # Used to have all the info listed here
+        print("Which platform would you like to include?")
+        # have function to check if number just given was one of the valid options?
+        # going to go off of IGDB ID's for now, need to keep adding more
+        platform_selection = input()
+        add_plat_query("List of Platforms", platform_selection)
+        input("When you are ready, press Enter to go back to the main print menu\n")
+        #...
+    elif (filter_category == '12'):
+        #THEME
+        print()
+        print("You have selected 12. Thematic Genre")
+        print()
+        #...
+    elif (filter_category == '13'):
+        print()
+        print("You have selected 13. Miscellaneous")
         print()
         print("This is for miscellaneous filter options that don't fit easily anywhere else")
         print("As of now, we haven't really thought of anything, but that could change!")
@@ -1574,7 +1581,7 @@ while(answer_check_main == False):
         #Fill this if anything comes to mind that I'd like to filter for that doesn't fit in one of the other options
         print("Returning back to main menu")
         print()
-    elif(filter_category == '12'):
+    elif(filter_category == '14'):
         print()
         #answer_check_main = True
         #print all the queries used at the top of the file for posterity?
