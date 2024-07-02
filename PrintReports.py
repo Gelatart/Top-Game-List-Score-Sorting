@@ -12,9 +12,9 @@ import datetime
 #make program that can run a bunch of different report generations at once based on custom preset configs?
 #use files to supply these configs?
 
+#option to clear off built queries?
 def print_platforms():
-    #Spun off into its own function so we don't have to worry about maintaining multiple versions of data in-code
-    #Just grab it from here when needed
+    #Lists all of the platform options available to us
     print("Here are all the platforms that there are!")
     print("3. Linux")
     print("4. Nintendo 64")
@@ -214,12 +214,10 @@ def print_platforms():
     print("478. Panasonic M2")
     print("486. Digiblast")
     #any others needed?
-    #input()
     print()
 
 def print_genres():
-    #Spun off into its own function so we don't have to worry about maintaining multiple versions of data in-code
-    #Just grab it from here when needed
+    #Lists all of the genre options available to us
     print("Here are all the genres that there are!")
     print("2. Point-and-click")
     print("4. Fighting")
@@ -248,8 +246,7 @@ def print_genres():
     print()
 
 def print_themes():
-    #Spun off into its own function so we don't have to worry about maintaining multiple versions of data in-code
-    #Just grab it from here when needed
+    #Lists all of the theme options available to us
     print("Here are all the themes that there are!")
     print("1. Action")
     print("17. Fantasy")
@@ -635,7 +632,6 @@ while(answer_check_main == False):
                     #...?
 
                     if(generation_option == "1"):
-                        # Generation 1:
                         add_plat_query("List of Platforms", "Odyssey")
                         add_plat_query("List of Platforms", "PC-50X Family")
                         print("Generation 1 consoles added to querying!")
@@ -1575,14 +1571,23 @@ while(answer_check_main == False):
         # have function to check if number just given was one of the valid options?
         # going to go off of IGDB ID's for now, need to keep adding more
         genre_selection = input()
-        add_plat_query("Genres", genre_selection)
+        add_genre_query("Genres", genre_selection)
         input("When you are ready, press Enter to go back to the main print menu\n")
     elif (filter_category == '12'):
         #THEME
         print()
         print("You have selected 12. Thematic Genre")
         print()
-        #...
+        print("Now we are going to list all of the options of genres (thematic) you can choose from")
+        print("Note that the numbers are listed as so because they are the theme ID's listed in IGDB's API")
+        input("Whenever you are ready, the theme options will be listed in full (For now use the text version)\n")
+        print_themes()  # Used to have all the info listed here
+        print("Which genre would you like to include?")
+        # have function to check if number just given was one of the valid options?
+        # going to go off of IGDB ID's for now, need to keep adding more
+        theme_selection = input()
+        add_theme_query("Themes", theme_selection)
+        input("When you are ready, press Enter to go back to the main print menu\n")
     elif (filter_category == '13'):
         print()
         print("You have selected 13. Miscellaneous")
@@ -1590,6 +1595,7 @@ while(answer_check_main == False):
         print("This is for miscellaneous filter options that don't fit easily anywhere else")
         print("As of now, we haven't really thought of anything, but that could change!")
         print()
+        #put in option to clear queries?
         #Fill this if anything comes to mind that I'd like to filter for that doesn't fit in one of the other options
         print("Returning back to main menu")
         print()
@@ -1638,7 +1644,7 @@ while(answer_check_main == False):
                 print("2. OR approach")
                 print("3. Natural mix")
                 and_or_type = input()
-                if (and_or_type != '1' or and_or_type != '2' or and_or_type != '3'):
+                if (and_or_type != '1' and and_or_type != '2' and and_or_type != '3'):
                     print("Please try again with valid input")
                     continue
                 else:
@@ -1755,10 +1761,13 @@ while(answer_check_main == False):
                     print()
                     continue
                     #check again
+            #for game in games_pulled:
+                #print(game['Title'].strip())
             file_name = input("What would you like to name your file: ")
             #come up with a check if a particular file name already exists and whether they want to overwrite?
             file_name += "[CUSTOM GENERATION].txt"
             file_print = open(file_name, "w", encoding="utf-8")
+            input("File created\n")
             for game in games_pulled:
                 # print(game)
                 entry = ""
@@ -1768,8 +1777,11 @@ while(answer_check_main == False):
                 entry += game['Title'].strip()
                 entry += " --> "
                 entry += str(game['Ranked Score'])
+                print(entry)
                 file_print.write(entry)
                 file_print.write("\n")
+            file_print.close() #Absence of this caused file printing to be delayed
+            input("The file should have been printed to by now...")
             while True:
                 print("Your custom report has finished printing! Would you like to print more reports? Or quit the program")
                 print("1. Print more reports")
