@@ -1556,7 +1556,7 @@ Actual Sunlight --> 16
 Super Street Fighter IV: Arcade Edition --> 16
 Spider-Man and Venom: Maximum Carnage --> 16
 Rune Factory 4 --> 16
-Hitman 2 --> 15
+Hitman 2 [IGDB ID: 103210] --> 15
 Rayman [GBC] --> 15
 Shining Force III --> 15
 Yakuza --> 15

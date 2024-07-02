@@ -2012,7 +2012,7 @@ Double Dribble --> 0.13
 Out of the Park Baseball 2007 --> 0.13
 Tekken 6 --> 0.13
 Zombie Nation --> 0.13
-Hitman 2 --> 0.12396694214876033
+Hitman 2 [IGDB ID: 103210] --> 0.12396694214876033
 Need for Speed: Most Wanted --> 0.12224448897795591
 Valkyrie Profile --> 0.12
 Perfect Dark [GBC] --> 0.12

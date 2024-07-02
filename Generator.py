@@ -52,6 +52,7 @@ modified_DB = {}
 "game object needs two scores"
 class GameObject:
     def __init__(self, rank):
+        #Add seasonal attribute? Would have to set manually in my own text files?
         self.igdb_ID = None
         self.igdb_found = False
         self.ranked_score = rank
@@ -101,7 +102,7 @@ class GameObject:
         self.completed = False
         self.main_platform = 'None'
         self.list_platforms = []
-        self.release_date = 'Unknown'  # Can I set this to some date value?
+        self.release_date = 'Unknown'
         self.player_counts = []
         self.list_developers = []
         self.list_publishers = []
@@ -312,24 +313,6 @@ TYPE FOR PLATFORM FAMILIES (Based on id #):
 No others at this time?
 """
 
-"""
-self.igdb_ID = None
-        self.ranked_score = rank
-        self.list_count = 1
-        self.lists_referencing = []
-        self.total_count = 0
-        self.completed = False
-        self.main_platform = 'None'
-        self.list_platforms = []
-        self.release_date = 'Unknown' #Can I set this to some date value?
-        self.player_counts = []
-        self.list_developers = []
-        self.list_publishers = []
-        self.list_companies = []
-        self.genres = []
-        self.themes = []
-"""
-
 #Taking custom class objects and making them JSON exportable
 export_DB = {}
 #export_DB["games"] = []
@@ -532,10 +515,10 @@ while(igdb_check == False):
                 time_speedup = 0
             check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
             check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
-            check_string += 'external_games, follows, franchises, game_localizations, genres, '
+            check_string += 'external_games, follows, franchises, game_localizations, '
             check_string += 'keywords, language_supports, player_perspectives, '
             check_string += 'rating, rating_count, release_dates, screenshots, similar_games, standalone_expansions, '
-            check_string += 'storyline, tags, themes, total_rating, total_rating_count, updated_at, videos, websites; '
+            check_string += 'storyline, tags, total_rating, total_rating_count, updated_at, videos, websites; '
             # Check if <> comes first, where we use ID instead of name, for titles hard to specify
             #if (game[0] == '<'): #Replacing after discovering startswith() function?
             #poem.startswith('All')
@@ -758,7 +741,7 @@ while(igdb_check == False):
                         new_genres = genres_message.genres
                         genre_type = new_genres[0].name
                         game_DB[game].genres.append(genre_type)
-                        input(genre_type)
+                        #input(genre_type)
                 #ADD THEMES
                 themes = earliest_game.themes
                 if (len(themes) > 0):
@@ -775,7 +758,7 @@ while(igdb_check == False):
                         new_themes = themes_message.themes
                         theme_type = new_themes[0].name
                         game_DB[game].themes.append(theme_type)
-                        input(theme_type)
+                        #input(theme_type)
             elif (len(games) == 1):
                 try:
                     current_game = games[0]
@@ -798,8 +781,6 @@ while(igdb_check == False):
                     platforms_message.ParseFromString(
                         sub_request)  # Fills the protobuf message object with the response
                     platforms = platforms_message.platforms
-                    #print("Main Plat")
-                    #input(platforms)
                     plat_name = platforms[0].name
                     if (plat_counter == 0):
                         main_plat = plat_name
@@ -887,7 +868,7 @@ while(igdb_check == False):
                             new_genres = genres_message.genres
                             genre_type = new_genres[0].name
                             game_DB[game].genres.append(genre_type)
-                            input(genre_type)
+                            #input(genre_type)
                     # ADD THEMES
                     themes = earliest_game.themes
                     if (len(themes) > 0):
@@ -903,7 +884,7 @@ while(igdb_check == False):
                             new_themes = themes_message.themes
                             theme_type = new_themes[0].name
                             game_DB[game].themes.append(theme_type)
-                            input(theme_type)
+                            #input(theme_type)
                 except Exception as e:
                     print("An error has occurred:", e)
                     #it starts hitting errors when it gets to some of the new games featured in metacritic user scores?

@@ -714,7 +714,7 @@ Call of Duty: Modern Warfare --> 0.5261437908496732
 Vampire Survivors --> 0.5261437908496732
 System Shock 2 --> 0.5254921756688541
 Vampire: The Masquerade - Bloodlines --> 0.525
-[x]Kingdom Hearts --> 0.5247706422018349
+[x]Kingdom Hearts [IGDB ID: 1219] --> 0.5247706422018349
 World of Warcraft: Wrath of the Lich King --> 0.5238095238095238
 Astro Bot: Rescue Mission --> 0.5238095238095238
 Star Fox --> 0.5235507246376812
@@ -2065,7 +2065,7 @@ Double Dribble --> 0.13
 Out of the Park Baseball 2007 --> 0.13
 Tekken 6 --> 0.13
 Zombie Nation --> 0.13
-Hitman 2 --> 0.12396694214876033
+Hitman 2 [IGDB ID: 103210] --> 0.12396694214876033
 Need for Speed: Most Wanted --> 0.12224448897795591
 Valkyrie Profile --> 0.12
 Perfect Dark [GBC] --> 0.12

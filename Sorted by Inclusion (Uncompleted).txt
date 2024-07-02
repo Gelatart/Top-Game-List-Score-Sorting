@@ -312,7 +312,7 @@ What Remains of Edith Finch --> 5
 Hitman [2016] --> 5
 Forza Horizon 3 --> 5
 Paper Mario --> 5
-Hitman 2 --> 4
+Hitman 2 [IGDB ID: 103210] --> 4
 TimeSplitters 2 --> 4
 Dungeon Master --> 4
 Elite Beat Agents --> 4

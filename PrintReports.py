@@ -305,9 +305,23 @@ def add_dev_query(category, value):
     global dev_queries
     dev_queries.append(new_query)
 
+def add_genre_query(category, value):
+    new_query = {category: value}
+    global queries
+    queries.append(new_query)
+    global genre_queries
+    genre_queries.append(new_query)
+
+def add_theme_query(category, value):
+    new_query = {category: value}
+    global queries
+    queries.append(new_query)
+    global theme_queries
+    theme_queries.append(new_query)
+
 #make more queries options for other types of queries? see if these will support?
 
-#or queries: platform, player count, dev
+#or queries: platform, player count, dev, genres, themes
 #and queries: Misc, the rest
 
 def add_misc_query(category, value):
@@ -418,6 +432,8 @@ and_queries = []
 platform_queries = []
 player_count_queries = []
 dev_queries = []
+genre_queries = []
+theme_queries = []
 #release date? title? misc?
 misc_queries = []
 #^Try to split the natural or queries and the natural and queries? go by categories?
@@ -731,7 +747,6 @@ while(answer_check_main == False):
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (generation_option == "8"):
-                        # Generation 8:
                         add_plat_query("List of Platforms", "Wii U")
                         add_plat_query("List of Platforms", "Nintendo Switch")
                         add_plat_query("List of Platforms", "Nintendo 3DS")
@@ -747,7 +762,6 @@ while(answer_check_main == False):
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif (generation_option == "9"):
-                        #Generation 9:
                         add_plat_query("List of Platforms", "PlayStation 5")
                         add_plat_query("List of Platforms", "PlayStation VR2")
                         add_plat_query("List of Platforms", "Xbox Series X|S")
@@ -1097,7 +1111,6 @@ while(answer_check_main == False):
                         print()
                         print("Please enter the year you would like to query for")
                         year_input = input()
-                        #{ "address": { "$gt": "S" } }
                         value = { "$gte": f"{year_input}-01-01", "$lt": f"{str(int(year_input)+1)}-01-01" }
                         add_misc_query("Release Date", value)
                         #check to make sure this works?
@@ -1555,16 +1568,15 @@ while(answer_check_main == False):
         print("You have selected 11. Gameplay Genre")
         print()
         print("Now we are going to list all of the options of genres (gameplay) you can choose from")
-        print("Note that the numbers are listed as so because they are the platform ID's listed in IGDB's API")
-        input("Whenever you are ready, the platform options will be listed in full (For now use the text version)\n")
-        print_platforms()  # Used to have all the info listed here
-        print("Which platform would you like to include?")
+        print("Note that the numbers are listed as so because they are the genre ID's listed in IGDB's API")
+        input("Whenever you are ready, the genre options will be listed in full (For now use the text version)\n")
+        print_genres()  # Used to have all the info listed here
+        print("Which genre would you like to include?")
         # have function to check if number just given was one of the valid options?
         # going to go off of IGDB ID's for now, need to keep adding more
-        platform_selection = input()
-        add_plat_query("List of Platforms", platform_selection)
+        genre_selection = input()
+        add_plat_query("Genres", genre_selection)
         input("When you are ready, press Enter to go back to the main print menu\n")
-        #...
     elif (filter_category == '12'):
         #THEME
         print()
@@ -1705,10 +1717,14 @@ while(answer_check_main == False):
                     natural_platform = {'$or': platform_queries}
                     natural_player = {'$or': player_count_queries}
                     natural_dev = {'$or': dev_queries}
+                    natural_genre = {'$or': genre_queries}
+                    natural_theme = {'$or': theme_queries}
                     and_queries = []
                     and_queries.append(natural_platform)
                     and_queries.append(natural_player)
                     and_queries.append(natural_dev)
+                    and_queries.append(natural_genre)
+                    and_queries.append(natural_theme)
                     and_queries.append(misc_queries)
                     natural_queries = {'$and': and_queries}
                     if (sort_type == '1'):
