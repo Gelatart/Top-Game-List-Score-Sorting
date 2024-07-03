@@ -370,6 +370,9 @@ with open("games_pre.json", "r") as json_file:
 
 #Make sure fresh for actual process once done testing
 import_DB.clear()
+export_DB.clear()
+
+#eventually try for functionality where we only update the games that have updated scores? or new games?
 
 with open("games.json") as json_file:
     #first_char = json_file.read(1)
@@ -501,7 +504,8 @@ while(igdb_check == False):
         time_speedup = 0;
         #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
         for game, details in itertools.islice(game_DB.items(),0,limit_number):
-            if(scratch_answer == False and game in import_DB and details.igdb_found == True):
+            #if(scratch_answer == False and game in import_DB and details.igdb_found == True):
+            if (scratch_answer == False and game in import_DB):
                 print("Hey, we already got this one!")
                 game_DB[game] = import_DB[game]
                 continue
@@ -935,10 +939,24 @@ for game, details in itertools.islice(game_DB.items(),0,3):
 for game, details in game_DB.items():
     if(isinstance(details, str)):
         #if already made a json string
-        export_DB[game] = json.loads(details)  # Now it's already json formatted
+        if (details.igdb_found == False):
+            print("Nothing found for this yet (string)")
+            continue
+        else:
+            export_DB[game] = json.loads(details)  # Now it's already json formatted
+    elif(isinstance(details, dict)):
+        if (details['igdb_found'] == False):
+            print("Nothing found for this yet (dict)")
+            continue
+        else:
+            export_DB[game] = json.loads(json.dumps(details))
     else:
     #export_DB[game] = json.dumps(details.__dict__)
-        export_DB[game] = json.loads(json.dumps(details.__dict__))
+        if (details.igdb_found == False):
+            print("Nothing found for this yet (other)")
+            continue
+        else:
+            export_DB[game] = json.loads(json.dumps(details.__dict__))
 
 with open ("games.json", "w") as outfile:
     json.dump(export_DB, outfile)
@@ -977,10 +995,36 @@ while True:
     else:
         print("I'm sorry, I don't understand. Please enter valid input")
         continue
+mongo_limit = len(game_DB.items())
+while True:
+    print("Would you like to set a limit on how many records to put into Mongo?")
+    print("1. Same limit as for IGDB pulling")
+    print("2. New set limit")
+    print("3. No limit")
+    mongo_option = input()
+    if(mongo_option == '1'):
+        mongo_limit = limit_number
+        break
+    elif(mongo_option == '2'):
+        print("Set your limit here")
+        #add input verification
+        mongo_limit = input()
+        break
+    elif (mongo_option == '3'):
+        break
+    else:
+        print("I'm sorry, I don't understand. Please enter valid input")
+        continue
 #export = []
 print("INSERTING INTO MONGODB!")
-for game, details in game_DB.items():
-    #print(details)
+for game, details in itertools.islice(game_DB.items(),0,mongo_limit):
+    print(game_DB.items().__class__)
+    print(details.__class__)
+    #If they're all from scratch, details is a gameobject, otherwise it's a dict
+    if(isinstance(details, GameObject)):
+        print("This one's a game object!")
+        details = json.loads(json.dumps(details.__dict__))
+    print(details.__class__)
     #insertion = mon_col.insert_one(details)
     #insertion = mon_col.insert_one(game_DB[game])
     #export.append(details)
@@ -997,23 +1041,39 @@ for game, details in game_DB.items():
         export_dict["Title"] = modified_title
     else:
         export_dict["Title"] = game
-    export_dict["IGDB ID"] = details.igdb_ID
-    export_dict["Ranked Score"] = details.ranked_score
-    export_dict["Inclusion Score"] = details.list_count
-    averageScore = details.ranked_score / details.total_count
-    export_dict["Average Score"] = averageScore
-    export_dict["List of References"] = details.lists_referencing
-    export_dict["Completed"] = details.completed
-    export_dict["Main Platform"] = details.main_platform
-    export_dict["List of Platforms"] = details.list_platforms
-    export_dict["Release Date"] = details.release_date
-    export_dict["Player Counts"] = details.player_counts
-    export_dict["Developers"] = details.list_developers
-    export_dict["Publishers"] = details.list_publishers
-    export_dict["Companies"] = details.list_companies
-    export_dict["Genres"] = details.genres
-    export_dict["Themes"] = details.themes
-    export_dict["Total Count"] = details.total_count
+    #export_dict["IGDB ID"] = details.igdb_ID
+    export_dict["IGDB ID"] = details['igdb_ID']
+    #export_dict["Ranked Score"] = details.ranked_score
+    export_dict["Ranked Score"] = details['ranked_score']
+    #export_dict["Inclusion Score"] = details.list_count
+    export_dict["Inclusion Score"] = details['list_count']
+    #average_score = details.ranked_score / details.total_count
+    average_score = details['ranked_score'] / details['total_count']
+    export_dict["Average Score"] = average_score
+    #export_dict["List of References"] = details.lists_referencing
+    export_dict["List of References"] = details['lists_referencing']
+    #export_dict["Completed"] = details.completed
+    export_dict["Completed"] = details['completed']
+    #export_dict["Main Platform"] = details.main_platform
+    export_dict["Main Platform"] = details['main_platform']
+    #export_dict["List of Platforms"] = details.list_platforms
+    export_dict["List of Platforms"] = details['list_platforms']
+    #export_dict["Release Date"] = details.release_date
+    export_dict["Release Date"] = details['release_date']
+    #export_dict["Player Counts"] = details.player_counts
+    export_dict["Player Counts"] = details['player_counts']
+    #export_dict["Developers"] = details.list_developers
+    export_dict["Developers"] = details['list_developers']
+    #export_dict["Publishers"] = details.list_publishers
+    export_dict["Publishers"] = details['list_publishers']
+    #export_dict["Companies"] = details.list_companies
+    export_dict["Companies"] = details['list_companies']
+    #export_dict["Genres"] = details.genres
+    export_dict["Genres"] = details['genres']
+    #export_dict["Themes"] = details.themes
+    export_dict["Themes"] = details['themes']
+    #export_dict["Total Count"] = details.total_count
+    export_dict["Total Count"] = details['total_count']
     #export_dict = dict(game)
     #^need to expand and clarify more?
     #export_dict = dict('Title' = game, 'IGDB ID' = details.igdb_ID, 'Ranked Score' = details.ranked_score)
@@ -1023,7 +1083,6 @@ for game, details in game_DB.items():
 #insertion = mon_col.insert_many(export)
 print("TIME TO INSERT THE LISTS INTO MONGODB!")
 for list in games_lists:
-    #print(list)
     # could keep track of what type of list it is, other variables?
     #list_dict = {}
     #list_dict["Title"] = list
@@ -1077,7 +1136,6 @@ for game in games_pulled_ranked:
     entry += " --> "
     entry += str(game['Ranked Score'])
     """
-    #entry += game['Title'].strip() + " [" + game['IGDB ID'] + "]" + " --> " + str(game['Inclusion Score'])
     print(game['Title'])
     print(game['Ranked Score'])
     entry += game['Title'].strip()
@@ -1097,7 +1155,6 @@ for game in games_pulled_inclusion:
     completed = game["Completed"]
     if (completed == True):
         entry += "[x]"
-    #entry += game['Title'].strip() + " [" + game['IGDB ID'] + "]" + " --> " + str(game['Inclusion Score'])
     entry += game['Title'].strip()
     if (igdb_answer == 'Y' or igdb_answer == 'Yes'):
         # Needed while we are using timespeedup
@@ -1115,7 +1172,6 @@ for game in games_pulled_average:
     completed = game["Completed"]
     if (completed == True):
         entry += "[x]"
-    #entry += game['Title'].strip() + " [" + game['IGDB ID'] + "]" + " --> " + str(game['Average Score'])
     entry += game['Title'].strip()
     if (igdb_answer == 'Y' or igdb_answer == 'Yes'):
         # Needed while we are using timespeedup

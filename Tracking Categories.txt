@@ -1,9 +1,9 @@
-RANKED: 95
+RANKED: 96
 UNRANKED: 45
 FORMER: 14
 UNUSED: 0
 ---
-TOTAL: 154
+TOTAL: 155
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -81,7 +81,6 @@ U-13 Spooky Video Games We Love for Halloween - New York Times - 10-19-2023
 R-10 Best Halloween-Themed Levels In Video Games - CBR - 10-27-2022
 R-Top 10 Best Video Game Space Levels of All Time - Blockfort
 R-Top 10 Best Video Game Sewer Levels of All Time - Blockfort
-R-Top 10 Best Video Game Minecart Levels of All Time - Blockfort
 
 TOP SEASONAL THEME ALL TIME (WINTER/CHRISTMAS):
 R-Top 10 Best Video Game Ice Levels of All Time - Blockfort
@@ -171,6 +170,9 @@ R-The Top 25 Xbox Games of All Time - IGN - 3-16-2007
 TOP PLATFORM OF ALL TIME (X360):
 R-The best Xbox 360 games - Digital Trends - 1-4-2019
 
+TOP PLATFORM OF ALL TIME (PC-98):
+R-Top 10 Best PC-98 Games of All Time - Blockfort
+
 BEST GAMES TO GET (PC):
 U-The Best PC Games - PCMag (As of 5-4-2024)
 	F-+ FORMER
@@ -194,6 +196,9 @@ R-The 100 Best Video Games and PC Games From the 2000s - Complex - 8-23-2022
 
 TOP GAMES OF DECADE: 1990s:
 R-100 Greatest Video Games of the 1990s - DigitalDreamDoor - 12-28-2021
+
+TOP GAMES OF DECADE: 1980s:
+R-The 50 best games of the 80s, ranked - GamesRadar - 1-12-2024
 
 TOP GAMES OF 2023:
 R-The 25 best games of 2023 - GamesRadar - 12-11-2023
