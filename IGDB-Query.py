@@ -35,6 +35,8 @@ def query_loop(endpoint_option):
 
         This works for FTL: Advanced Edition: fields *; where id = '20098'; offset 0;
         fields *; where id = '20098' & version_parent = null; offset 0; //Doesn't get result in this case
+        
+        fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, external_games, follows, franchises, game_localizations, keywords, language_supports, player_perspectives, rating, rating_count, release_dates, screenshots, similar_games, standalone_expansions, storyline, tags, total_rating, total_rating_count, updated_at, videos, websites; where name = "Animal Crossing: New Horizons"; offset 0;
         """
 
         # igdb_request = None
@@ -306,7 +308,6 @@ received = json.loads(page.text)
 access_token = received["access_token"]
 #print(access_token)
 wrapper = IGDBWrapper(client_id, access_token)
-#input("Here we pause")
 
 igdb_request = wrapper.api_request(
             'games.pb', # Note the '.pb' suffix at the endpoint

@@ -10,7 +10,6 @@ Doom [IGDB ID: 673] --> 1749
 Street Fighter II [IGDB ID: 3186] --> 1522
 Super Mario Kart [IGDB ID: 2332] --> 1334
 Ms. Pac-Man [IGDB ID: 7452] --> 1331
-Mother 3 [IGDB ID: 3683] --> 927
 Banjo-Kazooie [IGDB ID: 2148] --> 677
 Bully [IGDB ID: 2720] --> 169
 Donkey Kong 64 [IGDB ID: 1096] --> 106

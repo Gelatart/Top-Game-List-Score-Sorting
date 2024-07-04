@@ -16,7 +16,6 @@ Ms. Pac-Man [IGDB ID: 7452] --> 14
 Super Mario Kart [IGDB ID: 2332] --> 13
 Street Fighter II [IGDB ID: 3186] --> 11
 [x]Kingdom Hearts [IGDB ID: 1219] --> 9
-Mother 3 [IGDB ID: 3683] --> 8
 Animal Crossing: New Horizons [IGDB ID: 109462] --> 5
 Bully [IGDB ID: 2720] --> 5
 Hitman 2 [IGDB ID: 103210] --> 4

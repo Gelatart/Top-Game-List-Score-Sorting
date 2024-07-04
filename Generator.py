@@ -138,7 +138,6 @@ for filename in os.listdir(directory):
         Lines = file1.readlines()
         #count = int(starting_line)
         count = len(Lines)
-        #print(len(Lines))
         #input('Wait to review\n')
         original_count = count
         # Strips the newline character
@@ -774,6 +773,10 @@ while(igdb_check == False):
                     game_DB[game].igdb_found = True
                     #game_DB[game].release_date = current_game.first_release_date.ToDatetime()
                     game_DB[game].release_date = current_game.first_release_date.ToDatetime().isoformat() #To make JSON serializable?
+
+                    #this version gave animal crossing: new horizons switch and n64
+                    #current approach giving that game nothing for platforms?
+                    """
                     plat_ID = current_game.platforms[0]
                     plat_name = None
                     sub_query = 'fields name; where id=' + str(plat_ID.id) + ';'
@@ -782,8 +785,7 @@ while(igdb_check == False):
                         sub_query
                     )
                     platforms_message = PlatformResult()
-                    platforms_message.ParseFromString(
-                        sub_request)  # Fills the protobuf message object with the response
+                    platforms_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
                     platforms = platforms_message.platforms
                     plat_name = platforms[0].name
                     if (plat_counter == 0):
@@ -794,6 +796,32 @@ while(igdb_check == False):
                     list_plats = []
                     list_plats.append(plat_name)
                     game_DB[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
+                    """
+                    #PASTED FROM ABOVE WITHOUT COMMENTS
+                    plat_counter = 0
+                    main_plat = None
+                    plat_name = None
+                    list_plats = []
+                    #input(current_game.platforms)
+                    while (plat_counter < len(current_game.platforms)):
+                        plat_ID = current_game.platforms[plat_counter]
+                        sub_query = 'fields name; where id=' + str(plat_ID.id) + ';'
+                        sub_request = wrapper.api_request(
+                            'platforms.pb',  # Note the '.pb' suffix at the endpoint
+                            sub_query
+                        )
+                        platforms_message = PlatformResult()
+                        platforms_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
+                        platforms = platforms_message.platforms
+                        plat_name = platforms[0].name
+                        if (plat_counter == 0):
+                            main_plat = plat_name
+                        list_plats.append(plat_name)
+                        plat_counter += 1
+                    game_DB[game].main_platform = main_plat
+                    if (len(list_plats) > 0):
+                        game_DB[game].list_platforms = list_plats
+
                     modes = current_game.game_modes
                     if (len(modes) > 0):
                         for mode in modes:
@@ -856,7 +884,6 @@ while(igdb_check == False):
                                 game_DB[game].list_developers.append(dev_name)
                             if (is_pub):
                                 game_DB[game].list_publishers.append(dev_name)
-                            #input(dev_name)
                     # ADD GENRES
                     genres = earliest_game.genres
                     if (len(genres) > 0):
@@ -1258,7 +1285,6 @@ for game in games_pulled:
     #sheet1.write(excel_count, 8, game['Player Counts'])
     sheet1.write(excel_count, 10, players_string)
     devs_string = ', '.join(game['Developers'])
-    #sheet1.write(excel_count, 9, game['Developers'])
     sheet1.write(excel_count, 11, devs_string)
     pubs_string = ', '.join(game['Publishers'])
     sheet1.write(excel_count, 12, pubs_string)

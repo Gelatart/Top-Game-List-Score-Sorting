@@ -12,6 +12,8 @@ import datetime
 #make program that can run a bunch of different report generations at once based on custom preset configs?
 #use files to supply these configs?
 
+#give option to go back once selected menu option? either type break or numbered option?
+
 #option to clear off built queries?
 def print_platforms():
     #Lists all of the platform options available to us
@@ -504,7 +506,7 @@ while(answer_check_main == False):
                     print("6. Atari") #doesn't have a family
                     #others? neo geo? apple? windows?
                     brand_option = int(input())
-                    if (brand_option > 0 and brand_option < 5):
+                    if (brand_option > 0 and brand_option < 6):
                         #platform family approach, just grab the value and plug it in?
                         #store platform family value? if/elif case or api endpoint to store it?
                         print("ONE OF THE FAMILY OPTIONS")
@@ -1040,11 +1042,9 @@ while(answer_check_main == False):
                         print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.\n")
                         print()
                         continue
-                    #...?
                 break
             else:
                 print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.\n")
-                #print()
                 continue
         print("Returning back to main menu")
         print()
@@ -1074,6 +1074,7 @@ while(answer_check_main == False):
             print("2. Specified time range")
             time_style_option = input()
             if (time_style_option == '1'):
+                #Seems to not work properly yet, might require troubleshooting?
                 print("Type in the date you would like to filter for")
                 print("First type in the year, then the month, then the day")
                 date_year = int(input())
@@ -1454,11 +1455,6 @@ while(answer_check_main == False):
                         print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
                         print()
                         continue
-                    """
-                    new_query = {"Player Count": target_count}
-                    queries.append(new_query)
-                    player_count_queries.append(new_query)
-                    """
                     add_playcount_query("Player Count", target_count)
                     print("Query added!")
                     input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1593,9 +1589,28 @@ while(answer_check_main == False):
         print("You have selected 13. Miscellaneous")
         print()
         print("This is for miscellaneous filter options that don't fit easily anywhere else")
-        print("As of now, we haven't really thought of anything, but that could change!")
+        #print("As of now, we haven't really thought of anything, but that could change!")
         print()
-        #put in option to clear queries?
+        while True:
+            print("Would you like to do any of the following?")
+            print("1. Clear all queries")
+            misc_option = input()
+            if(misc_option == '1'):
+                queries.clear()
+                or_queries.clear()
+                and_queries.clear()
+                platform_queries.clear()
+                player_count_queries.clear()
+                dev_queries.clear()
+                genre_queries.clear()
+                theme_queries.clear()
+                misc_queries.clear()
+                print("All queries cleared!")
+                break
+            else:
+                print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
+                print()
+                continue
         #Fill this if anything comes to mind that I'd like to filter for that doesn't fit in one of the other options
         print("Returning back to main menu")
         print()
