@@ -1246,7 +1246,9 @@ while(answer_check_main == False):
         #new_query = { "Title": { "$text:": title_search}}
         #new_query = mon_col.aggregate([{"$search": {"text:": {"query": title_search, "path": "Title"}}}])
         #new_query = mon_col.find({"$text": {"$search": title_search}})
-        new_query = {"$text": {"$search": title_search}}
+        #new_query = {"$text": {"$search": title_search}}
+        new_query = {"Title": {"$regex": title_search}}
+        #{Title: { $regex: "Pokemon"}}
         #new_query = {"Title": {"$search": title_search}}
         #Trying to figure this out, not working properly, need to have properly built index I refer to?
         queries.append(new_query)

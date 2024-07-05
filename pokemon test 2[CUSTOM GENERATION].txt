@@ -1,0 +1,17 @@
+[x]Pokemon Black Version --> 139
+Pokemon Black Version --> 110
+Pokemon Crystal Version --> 246
+[x]Pokemon Diamond Version --> 44
+Pokemon Emerald Version --> 176
+Pokemon Fire Red Version --> 28
+Pokemon Go --> 358
+[x]Pokemon Gold Version --> 881
+Pokemon Heart Gold Version --> 301
+Pokemon Mystery Dungeon: Explorers of Sky --> 89
+Pokemon Pinball --> 52
+Pokemon Puzzle Challenge --> 42
+[x]Pokemon Red Version --> 1399
+[x]Pokemon Ruby Version --> 250
+Pokemon Trading Card Game --> 44
+Pokemon XD: Gale of Darkness --> 30
+[x]Pokemon Yellow Version --> 388
