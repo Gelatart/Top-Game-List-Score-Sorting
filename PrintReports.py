@@ -446,7 +446,8 @@ while(answer_check_main == False):
     print("2. Main Platform")
     print("3. Release Date")
     print("4. Completion Status")
-    print("5. Title")
+    print("5. Title") #gives error so far? pymongo.errors.OperationFailure: text index required for $text query?
+    #^create index? do that when database generates?
     print("6. Ranked Score")
     print("7. Inclusion Score")
     print("8. Average Score")
@@ -1082,6 +1083,8 @@ while(answer_check_main == False):
                 date_day = int(input())
                 filter_date = datetime.datetime(date_year, date_month, date_day)
                 print(filter_date)
+                filter_date = filter_date.isoformat() #Makes querying work properly in mongo
+                print(filter_date)
                 """
                 new_query = {"Release Date": filter_date}
                 queries.append(new_query)
@@ -1179,7 +1182,7 @@ while(answer_check_main == False):
                     elif (time_range_option == '6'):
                         print("You have selected 6. 20th Century")
                         print()
-                        value = {"$gte": datetime.datetime(1970, 1, 1), "$lt": datetime.datetime(2000, 1, 1)}
+                        value = {"$gte": datetime.datetime(1970, 1, 1).isoformat(), "$lt": datetime.datetime(2000, 1, 1).isoformat()}
                         add_misc_query("Release Date", value)
                         print("20th century query added")
                         print()
@@ -1188,7 +1191,7 @@ while(answer_check_main == False):
                     elif (time_range_option == '7'):
                         print("You have selected 7. 21st Century")
                         print()
-                        value = {"$gte": datetime.datetime(2000, 1, 1), "$lt": datetime.datetime.now()}
+                        value = {"$gte": datetime.datetime(2000, 1, 1).isoformat(), "$lt": datetime.datetime.now().isoformat()}
                         add_misc_query("Release Date", value)
                         print("21st century query added")
                         print()
@@ -1286,7 +1289,7 @@ while(answer_check_main == False):
                 new_query = {"Ranked Score": target_score}
                 queries.append(new_query)
                 """
-                add_misc_query("Ranked Score", target_score)
+                add_misc_query("Ranked Score", int(target_score))
                 print("Query added!")
                 input("When you are ready, press Enter to go back to the main print menu\n")
                 break
@@ -1332,7 +1335,7 @@ while(answer_check_main == False):
                 new_query = {"Inclusion Score": target_score}
                 queries.append(new_query)
                 """
-                add_misc_query("Inclusion Score", target_score)
+                add_misc_query("Inclusion Score", int(target_score))
                 print("Query added!")
                 input("When you are ready, press Enter to go back to the main print menu\n")
                 break
@@ -1378,7 +1381,7 @@ while(answer_check_main == False):
                 new_query = {"Average Score": target_score}
                 queries.append(new_query)
                 """
-                add_misc_query("Average Score", target_score)
+                add_misc_query("Average Score", int(target_score))
                 print("Query added!")
                 input("When you are ready, press Enter to go back to the main print menu\n")
                 break
@@ -1791,7 +1794,13 @@ while(answer_check_main == False):
                     entry += "[x]"
                 entry += game['Title'].strip()
                 entry += " --> "
-                entry += str(game['Ranked Score'])
+                #give option to choose what type of score is listed here?
+                if(sort_type == '2'):
+                    entry += str(game['Inclusion Score'])
+                elif (sort_type == '3'):
+                    entry += str(game['Average Score'])
+                else:
+                    entry += str(game['Ranked Score'])
                 print(entry)
                 file_print.write(entry)
                 file_print.write("\n")

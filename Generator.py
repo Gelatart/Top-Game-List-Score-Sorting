@@ -1006,6 +1006,9 @@ except Exception as e:
 mon_col = monDB["games"]
 list_col = monDB["lists"]
 
+#Create index on title so can do partial title searching, don't mark as unique because some titles won't be
+mon_col.create_index('Title')
+
 #INSERT ALL GAMES INTO DATABASE
 #Clear database to begin with?
 while True:
@@ -1369,4 +1372,5 @@ JSON Decode error, how to handle more than one JSON object imported: https://sta
 Dealing with JSON Decode error: https://stackoverflow.com/questions/48140858/json-decoder-jsondecodeerror-extra-data-line-2-column-1-char-190
 Check if file is empty: https://stackoverflow.com/questions/2507808/how-to-check-whether-a-file-is-empty-or-not
 Limiting iterations of loop: https://stackoverflow.com/questions/36106712/how-can-i-limit-iterations-of-a-loop
+Creating index in Pymongo: https://www.geeksforgeeks.org/how-to-create-index-for-mongodb-collection-using-python/#
 """

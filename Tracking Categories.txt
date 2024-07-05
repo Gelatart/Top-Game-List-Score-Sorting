@@ -1,9 +1,9 @@
-RANKED: 96
+RANKED: 97
 UNRANKED: 45
 FORMER: 14
 UNUSED: 0
 ---
-TOTAL: 155
+TOTAL: 156
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -65,6 +65,7 @@ TOP SEASONAL THEME ALL TIME (SPRING):
 R-Top 10 Best Video Game Forest Levels of All Time - Blockfort
 R-Top 10 Best Video Game Swamp Levels of All Time - Blockfort
 R-Top 10 Best Video Game Sky Levels of All Time - Blockfort
+R-Top 10 Best Video Game Water Levels of All Time - Blockfort
 
 TOP SEASONAL THEME ALL TIME (SUMMER):
 U-The Best Summer-Themed Games And Levels - Kotaku - 7-22-2022
