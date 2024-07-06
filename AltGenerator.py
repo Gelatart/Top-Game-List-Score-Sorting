@@ -1,13 +1,14 @@
 #THIS IS AN ALTERNATE VERSION OF GENERATOR, THAT ONLY ADDS NEW FILES NOT IN DATABASE
 
+#AT THIS POINT THIS HAS BECOME A LOT BEHIND WHERE GENERATOR IS
+#AT SOME POINT WE NEED TO BRING IT UP TO WHERE GENERATOR IS, TRY TO KEEP BOTH UP TO DATE
+#MAYBE HAVE BOTH DRAW FROM COMMON SOURCES? COMMON INHERITANCE?
+
 # import required module
 import os
 import math
 import xlwt
 from xlwt import Workbook
-#SQLite
-import sqlite3
-#^Replacing with mongodb?
 import pymongo
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
@@ -31,8 +32,10 @@ gameDb = {}
 "game object needs two scores"
 class GameObject:
     def __init__(self, rank):
-        self.rankedScore = rank
-        self.listCount = 1
+        self.igdb_ID = None
+        self.igdb_found = False
+        self.ranked_score = rank
+        self.list_count = 1
         self.listsReferencing = []
         self.totalCount = 0
         self.completed = False
@@ -41,16 +44,18 @@ class GameObject:
         self.releaseDate = 'Unknown' #Can I set this to some date value?
         self.playerCounts = []
         self.listDevelopers = []
+        self.list_publishers = []
+        self.list_companies = []
+        self.genres = []
+        self.themes = []
 
     #consider storing a constantly updated average score?
 
-    #def __init__(self, rank, count):
-    #    self.rankedScore = rank
-    #    self.listCount = count
-
     def __init__(self, rank, list):
-        self.rankedScore = rank
-        self.listCount = 1
+        self.igdb_ID = None
+        self.igdb_found = False
+        self.ranked_score = rank
+        self.list_count = 1
         self.listsReferencing = []
         self.listsReferencing.append(list)
         self.totalCount = 0
@@ -60,10 +65,16 @@ class GameObject:
         self.releaseDate = 'Unknown'  # Can I set this to some date value?
         self.playerCounts = []
         self.listDevelopers = []
+        self.list_publishers = []
+        self.list_companies = []
+        self.genres = []
+        self.themes = []
 
     def __init__(self, rank, list, total):
-        self.rankedScore = rank
-        self.listCount = 1
+        self.igdb_ID = None
+        self.igdb_found = False
+        self.ranked_score = rank
+        self.list_count = 1
         self.listsReferencing = []
         self.listsReferencing.append(list)
         self.totalCount = total
@@ -73,6 +84,10 @@ class GameObject:
         self.releaseDate = 'Unknown'  # Can I set this to some date value?
         self.playerCounts = []
         self.listDevelopers = []
+        self.list_publishers = []
+        self.list_companies = []
+        self.genres = []
+        self.themes = []
 
     #CONSIDER MAKING AN EXPORT FUNCTION FOR THE CLASS TO CONVERT TO DICTIONARY?
 
@@ -136,15 +151,15 @@ with pymongo.MongoClient(monConnect, server_api=ServerApi('1')) as mon_client:
                 # Strips the newline character
                 for line in Lines:
                     if line in gameDb:
-                        gameDb[line].rankedScore += count
-                        gameDb[line].listCount += 1
+                        gameDb[line].ranked_score += count
+                        gameDb[line].list_count += 1
                         gameDb[line].listsReferencing.append(f)
                         gameDb[line].totalCount += originalCount
                     else:
                         newObj = GameObject(count, f, originalCount)
                         gameDb[line] = newObj
                     #searchObj = gameDb.get(newObj, 0) + 1
-                    #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
+                    #gameDb[line].list_count = gameDb.get(newObj, 0) + 1
                     #print("Score of {}: {}".format(count, line.strip()))
                     count -= 1
                 games_lists.append(filename)
@@ -189,15 +204,15 @@ with pymongo.MongoClient(monConnect, server_api=ServerApi('1')) as mon_client:
                 # Strips the newline character
                 for line in Lines:
                     if line in gameDb:
-                        gameDb[line].rankedScore += count
-                        gameDb[line].listCount += 1
+                        gameDb[line].ranked_score += count
+                        gameDb[line].list_count += 1
                         gameDb[line].listsReferencing.append(f)
                         gameDb[line].totalCount += originalCount
                     else:
                         newObj = GameObject(count, f, originalCount)
                         gameDb[line] = newObj
                     #searchObj = gameDb.get(newObj, 0) + 1
-                    #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
+                    #gameDb[line].list_count = gameDb.get(newObj, 0) + 1
                     #print("Score of {}: {}".format(count, line.strip()))
                     #count -= 1
                 games_lists.append(filename)
@@ -209,13 +224,9 @@ with pymongo.MongoClient(monConnect, server_api=ServerApi('1')) as mon_client:
         if os.path.isfile(f):
             list_query = {"Title": filename}
             list_count = list_col.count_documents(list_query)
-            # print(filename)
-            # print(list_count)
             # if(list_col.find(list_query) != None):
             if (list_count > 0):
-                # print(list_col.find(list_query).count())
                 print("List was already logged!")
-                # input('Wait to review\n')
                 continue
             else:
                 print("Brand new list to log!")
@@ -229,20 +240,18 @@ with pymongo.MongoClient(monConnect, server_api=ServerApi('1')) as mon_client:
                 originalCount = count
                 #^find out how to read the line amount ahead of time
                 #originalCount = len(Lines)
-                #print(originalCount)
                 # Strips the newline character
                 for line in Lines:
                     if line in gameDb:
-                        gameDb[line].rankedScore += count
-                        gameDb[line].listCount += 1
+                        gameDb[line].ranked_score += count
+                        gameDb[line].list_count += 1
                         gameDb[line].listsReferencing.append(f)
                         gameDb[line].totalCount += originalCount
                     else:
                         newObj = GameObject(count, f, originalCount)
                         gameDb[line] = newObj
                     #searchObj = gameDb.get(newObj, 0) + 1
-                    #gameDb[line].listCount = gameDb.get(newObj, 0) + 1
-                    #print("Score of {}: {}".format(count, line.strip()))
+                    #gameDb[line].list_count = gameDb.get(newObj, 0) + 1
                     #count -= 1
                 games_lists.append(filename)
 
@@ -299,26 +308,25 @@ with pymongo.MongoClient(monConnect, server_api=ServerApi('1')) as mon_client:
     #export = []
     print("INSERTING INTO MONGODB!")
     for game, details in gameDb.items():
-        exportDict = {}
-        exportDict["Title"] = game
-        exportDict["Ranked Score"] = details.rankedScore
-        exportDict["Inclusion Score"] = details.listCount
-        averageScore = details.rankedScore / details.totalCount
-        exportDict["Average Score"] = averageScore
-        exportDict["List of References"] = details.listsReferencing
-        exportDict["Completed"] = details.completed
-        exportDict["Main Platform"] = details.mainPlatform
-        exportDict["List of Platforms"] = details.listPlatforms
-        exportDict["Release Date"] = details.releaseDate
-        exportDict["Player Counts"] = details.playerCounts
-        exportDict["Developers"] = details.listDevelopers
-        exportDict["Total Count"] = details.totalCount
-        insertion = mon_col.insert_one(exportDict)
+        export_dict = {}
+        export_dict["Title"] = game
+        export_dict["Ranked Score"] = details.ranked_score
+        export_dict["Inclusion Score"] = details.list_count
+        average_score = details.ranked_score / details.totalCount
+        export_dict["Average Score"] = average_score
+        export_dict["List of References"] = details.listsReferencing
+        export_dict["Completed"] = details.completed
+        export_dict["Main Platform"] = details.mainPlatform
+        export_dict["List of Platforms"] = details.listPlatforms
+        export_dict["Release Date"] = details.releaseDate
+        export_dict["Player Counts"] = details.playerCounts
+        export_dict["Developers"] = details.listDevelopers
+        export_dict["Total Count"] = details.totalCount
+        insertion = mon_col.insert_one(export_dict)
     #insertion = mon_col.insert_many(gameDb)
     #insertion = mon_col.insert_many(export)
     print("TIME TO INSERT THE LISTS INTO MONGODB!")
     for list in games_lists:
-        #print(list)
         listDict = {}
         listDict["Title"] = list
         #could keep track of what type of list it is, other variables?
@@ -346,15 +354,15 @@ with pymongo.MongoClient(monConnect, server_api=ServerApi('1')) as mon_client:
     sheet1.write(0, 9, 'DEVELOPERS', boldStyle)
     excelCount = 1
     for game, details in gameDb.items():
-        rScore = details.rankedScore
-        iScore = details.listCount
+        rScore = details.ranked_score
+        iScore = details.list_count
         aScore = rScore / details.totalCount
         if(details.completed == True):
             sheet1.write(excelCount, 0, game, crossedStyle)
         else:
             sheet1.write(excelCount, 0, game)
-        #sheet1.write(excelCount, 1, details.rankedScore)
-        #sheet1.write(excelCount, 2, details.listCount)
+        #sheet1.write(excelCount, 1, details.ranked_score)
+        #sheet1.write(excelCount, 2, details.list_count)
         sheet1.write(excelCount, 1, rScore)
         sheet1.write(excelCount, 2, iScore)
         sheet1.write(excelCount, 3, aScore)
@@ -375,9 +383,9 @@ with pymongo.MongoClient(monConnect, server_api=ServerApi('1')) as mon_client:
         sheet1.write(excelCount, 9, lDevs)
         excelCount += 1
         #add to the individual databases
-        #gameDbRanked[game] = details.rankedScore
-        #gameDbInclusion[game] = details.listCount
-        #gameDbAverage[game] = averageScore
+        #gameDbRanked[game] = details.ranked_score
+        #gameDbInclusion[game] = details.list_count
+        #gameDbAverage[game] = average_score
         gameDbRanked[game] = rScore
         gameDbInclusion[game] = iScore
         gameDbAverage[game] = aScore

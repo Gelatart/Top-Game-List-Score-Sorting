@@ -1,14 +1,14 @@
-RANKED: 63
-UNRANKED: 25
-FORMER: 12
+RANKED: 97
+UNRANKED: 45
+FORMER: 14
 UNUSED: 0
 ---
-TOTAL: 100
+TOTAL: 156
 
 <^> indicates special notes for scoring that are not currently implemented
 
 MY TOP 100:
-My Personal Top 100 - Backloggd (As of 5-2-2024)
+My Personal Top 100 - Backloggd (As of 6-2-2024)
 
 TOP 100(+) ALL TIME:
 R-Reader's Choice Top 300 Games of All Time - GameInformer - 3-19-2018
@@ -26,6 +26,7 @@ R-EDGE's Top 100 Games of All Time - 9-28-2015
 R-EDGE's Top 100 Games of All Time - 8-30-2017
 R-100 Greatest Video Games of All time - Slant Magazine - 6-9-2014
 R-100 Greatest Video Games of All Time - Slant Magazine - 6-8-2018
+R-The 100 Best Video Games of All Time - Slant - 4-13-2020
 R-IGN Top 100 Games of All Time - IGN - (2015 version)
 R-IGN Top 100 Games of All Time - IGN - (Post-12-31-2017 Version - March 2018)
 R-IGN Top 100 Games of All Time - IGN - (2019 Version)
@@ -39,14 +40,15 @@ R-The 50 Best Video Games of All Time - TIME - 8-23-2016
 R-Top 10 Video Games - CNET - 7-5-2008
 
 SCORE AGGREGATION (CRITICS):
-R-Metacritic (Critic Scores, Metascore, Up to 100) (As of 5-2-2024)
+R-Metacritic (Critic Scores, Metascore, Up to 100) (As of 6-2-2024)
 	F-+ FORMER
 
 SCORE AGGREGATION (USERS):
-R-Glitchwave Top Game Chart (Up to 100) (As of 5-2-2024)
+R-Glitchwave Top Game Chart (Up to 100) (As of 6-2-2024)
 	F-+ FORMER
-R-Metacritic (User Scores, Up to 100) (As of 5-3-2024)
+R-Metacritic (User Scores, Up to 100) (As of 6-2-2024)
 	F-+ FORMER
+R-Top 100 - Best Games - IGDB (As of 6-2-2024)
 
 SCORE AGGREGATION (DISCONTINUED):
 R-GameRankings [Up to 100] (Accessed by gr.blade.sk) [DISCONTINUED DECEMBER 2019]
@@ -59,12 +61,41 @@ U-The 20 JRPGs You Must Play - Kotaku - 12-29-2015
 TOP GAMEPLAY GENRE ALL TIME (PLATFORMER):
 R-The best platform games ever (that arent Mario) - GamesRadar - 7-3-2015
 
+TOP SEASONAL THEME ALL TIME (SPRING):
+R-Top 10 Best Video Game Forest Levels of All Time - Blockfort
+R-Top 10 Best Video Game Swamp Levels of All Time - Blockfort
+R-Top 10 Best Video Game Sky Levels of All Time - Blockfort
+R-Top 10 Best Video Game Water Levels of All Time - Blockfort
+
+TOP SEASONAL THEME ALL TIME (SUMMER):
+U-The Best Summer-Themed Games And Levels - Kotaku - 7-22-2022
+U-The Best Summer Video Games - GreenManGaming - 7-29-2022
+U-Best Summer Video Games - LadiesGamers - 8-3-2022
+R-Top 10 Best Video Game Beach Levels of All Time - Blockfort
+R-Top 10 Best Video Game Desert Levels of All Time - Blockfort
+R-Top 10 Best Summer Themes in Gaming - Blockfort
+U-8 Summer Themed Video Games - CozyShiro
+R-Top 10 Best Video Game Fire Levels of All Time - Blockfort
+
+TOP SEASONAL THEME ALL TIME (FALL/HALLOWEEN):
+U-13 Spooky Video Games We Love for Halloween - New York Times - 10-19-2023
+R-10 Best Halloween-Themed Levels In Video Games - CBR - 10-27-2022
+R-Top 10 Best Video Game Space Levels of All Time - Blockfort
+R-Top 10 Best Video Game Sewer Levels of All Time - Blockfort
+
+TOP SEASONAL THEME ALL TIME (WINTER/CHRISTMAS):
+R-Top 10 Best Video Game Ice Levels of All Time - Blockfort
+
 TOP THEMATIC GENRE ALL TIME (POST-APOCALYPSE):
 R-The 10 Best Post-Apocalyptic Video Games Ranked - Maxim - 8-31-2016
 
 TOP THEMATIC GENRE ALL TIME (PREHISTORIC):
 U-The 10 Best Prehistoric Video Games - Paste Magazine - 2-10-2016
 R-12 Best Prehistoric Video Games, Ranked - GameRant - 12-14-2022
+
+TOP FRANCHISE ALL TIME (STAR WARS):
+U-The Best and Worst Star Wars Video Games - Yahoo Tech - 12-10-2015
+<^Worst not included>
 
 TOP PLATFORM OF ALL TIME (ARCADE):
 U-The 50 best arcade games of all time ever - TechRadar - 3-7-2017
@@ -140,12 +171,15 @@ R-The Top 25 Xbox Games of All Time - IGN - 3-16-2007
 TOP PLATFORM OF ALL TIME (X360):
 R-The best Xbox 360 games - Digital Trends - 1-4-2019
 
+TOP PLATFORM OF ALL TIME (PC-98):
+R-Top 10 Best PC-98 Games of All Time - Blockfort
+
 BEST GAMES TO GET (PC):
 U-The Best PC Games - PCMag (As of 5-4-2024)
 	F-+ FORMER
 
 UNRANKED LIST OF GREAT/IMPORTANT GAMES:
-U-List of video games considered the best - Wikipedia (As of 5-5-2024)
+U-List of video games considered the best - Wikipedia (As of 6-2-2024)
 	F-+ FORMER
 
 UNRANKED LIST OF GREAT/IMPORTANT GAMES (PC):
@@ -154,6 +188,33 @@ U-The 50 most important PC games of all time - PC Gamer - 1-18-2016
 
 ESSENTIAL LIST FROM NICHE TASTE:
 U-Essential Patriciancore - /v/ - Posted roughly 9-24-2013 (Grabbed from /v/ Recommended Games Wiki)
+
+TOP GAMES OF DECADE: 2010s: 
+R-The 100 best games of the decade (2010-2019) - Polygon - 11-4-2019
+
+TOP GAMES OF DECADE: 2000s:
+R-The 100 Best Video Games and PC Games From the 2000s - Complex - 8-23-2022
+
+TOP GAMES OF DECADE: 1990s:
+R-100 Greatest Video Games of the 1990s - DigitalDreamDoor - 12-28-2021
+
+TOP GAMES OF DECADE: 1980s:
+R-The 50 best games of the 80s, ranked - GamesRadar - 1-12-2024
+
+TOP GAMES OF 2023:
+R-The 25 best games of 2023 - GamesRadar - 12-11-2023
+
+TOP GAMES OF 2022:
+R-The 25 best games of 2022 - GamesRadar - 12-19-2022
+
+TOP GAMES OF 2021:
+R-The 25 best games of 2021 - GamesRadar - 12-13-2021
+
+TOP GAMES OF 2020:
+R-The 25 best games of 2020 - GamesRadar - 12-21-2020
+
+TOP GAMES OF 2019:
+R-The 25 best games of 2019 - GamesRadar - 4-1-2022
 
 TOP GAMES OF 2018:
 U-The 20 best video games of 2018 - Business Insider - 12-24-2018
@@ -189,3 +250,51 @@ U-The 11 best video games of 2016 - The Verge - 12-14-2016
 U-Here are the best video games of 2016 - CNET - 12-7-2016
 U-The Best Video Games of 2016 - The New Yorker - 12-24-2016
 	F-+ HONORABLE MENTIONS
+
+TOP GAMES OF 2015:
+U-The Best Video Games of 2015 - The New Yorker - 12-14-2015
+U-The 15 Best Video Games of 2015 - Sun Times National - 12-11-2015
+U-The Best Video Games of 2015 - Mirror Online - 12-20-2015
+U-The 10 Best Video Games of 2015 - The Verge - 12-19-2015
+U-The 10 Best Video Games of 2015 - Vulture - 12-10-2015
+R-Top 10 Best Video Games of 2015 - Moviepilot - 12/15/2015
+U-2015s 10 best video games - LA Times - 12-11-2015
+R-The 10 Best (And 3 Worst) Video Games of 2015 - Entertainment Weekly - 12-11-2015
+<^: Ignoring the worst>
+
+TOP GAMES OF 2014:
+R-The 15 Best Video Games of 2014 - TIME - 12-23-2014
+R-The 25 best video games of 2014 - The Guardian - 12-19-2014
+R-The 25 best video games of 2014 - The Telegraph - 12-30-2014
+R-The 25 Best Videogames of 2014 - PasteMagazine - 12-5-2014
+U-FORBES Best Video Games Of 2014 - Forbes - 1-5-2015
+<^4 Tiers: Platinum (1), Gold (2-4), Silver (5-8), Bronze (9-13)>
+U-The 12 Best Video Games Of 2014 - Kotaku - 1-2-2015
+R-Top 10 videogames of 2014 - Den of Geek - 12-23-2014
+	F-+ HONORABLE MENTIONS
+U-The Best Video Games of 2014 - The New Yorker
+	F-+ HONORABLE MENTIONS
+
+TOP GAMES OF 2013:
+R-The 25 Best Video Games of 2013 - Slant Magazine - 12-9-2013
+
+TOP GAMES OF 2012:
+R-The 25 Best Video Games of 2012 - Slant Magazine - 12-10-2012
+
+TOP GAMES OF 2011:
+R-The 25 Best Video Games of 2011 - Slant Magazine - 12-11-2011
+
+TOP GAMES OF 2010:
+U-Remembering 2010 - The Biggest Games Turning 10 This Year - GameSpot - 1-27-2020
+
+TOP GAMES OF 2009:
+U-Remembering 2009 - The Games That Turn 10 This Year - GameSpot - 8-25-2019
+
+TOP GAMES OF 2008:
+U-Remembering 2008 - Biggest Games Turning 10 This Year - GameSpot -10-4-2018
+
+TOP GAMES OF 2007:
+U-Remembering 2007 - The Biggest Games That Turned 10 This Year - GameSpot - 12-22-2017
+
+TOP GAMES OF 2006:
+U-Our games of the year - 2006 - GameSpot - 12-19-2006

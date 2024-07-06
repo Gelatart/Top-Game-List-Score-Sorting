@@ -12,24 +12,22 @@ load_dotenv()
 monConnect = os.getenv('MONGO_URI')
 #file = open('var.env', 'r', encoding="utf-8")
 file = open('.env', 'r', encoding="utf-8")
-fileContents = file.read()
-print(fileContents)
+file_contents = file.read()
+print(file_contents)
 file.close()
 #config = dotenv_values(".env")
-#print(config)
-#print(monConnect)
 print(f"MonConnect:{monConnect}")
-monClient = pymongo.MongoClient(monConnect, server_api=ServerApi('1'))
-monDB = monClient["GameSorting"]
+mon_client = pymongo.MongoClient(monConnect, server_api=ServerApi('1'))
+monDB = mon_client["GameSorting"]
 try:
-    monClient.admin.command('ping')
+    mon_client.admin.command('ping')
     print("Pinged your deployment. You successfully connected to MongoDB!")
 except Exception as e:
     print("Uh-oh!")
     print(e)
-monCol = monDB["games"]
+mon_col = monDB["games"]
 listCol = monDB["lists"]
-monCol.drop()
+mon_col.drop()
 listCol.drop()
 print("Successfully dropped the games collection!")
 print("Successfully dropped the lists collection!")

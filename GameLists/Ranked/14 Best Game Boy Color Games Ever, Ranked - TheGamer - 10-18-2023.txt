@@ -13,5 +13,5 @@ Shantae
 Tetris DX
 <128874> Mario Tennis [GBC]
 <4567> Pokemon Trading Card Game
-<152752> Donkey Kong Country
+<152752> Donkey Kong Country [GBC]
 Kirby Tilt 'n' Tumble

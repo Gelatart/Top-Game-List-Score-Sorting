@@ -203,7 +203,7 @@ Bushido Blade 2
 Fallout: New Vegas
 Metal Gear Solid 3: Snake Eater
 Virtua Fighter 2
-WarioWare, Inc.: Mega Microgames!
+WarioWare, Inc.: Mega Microgame$!
 Mega Man X
 Metal Gear Solid V: The Phantom Pain
 Stardew Valley
@@ -340,11 +340,11 @@ Yakuza 0
 Bayonetta 2
 Dead Space
 Advanced Dungeons & Dragons: Pool of Radiance
-<5972> Ninja Gaiden
+<210484> Ninja Gaiden [NES]
 RollerCoaster Tycoon
 Fruit Ninja
 Bastion
-<11157> Hitman
+<11157> Hitman [2016]
 Max Payne 2: The Fall of Max Payne
 Tony Hawk's Pro Skater 3
 Forza Motorsport 4

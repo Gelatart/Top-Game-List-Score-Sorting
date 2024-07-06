@@ -10,12 +10,12 @@ Dragon Warrior
 Bionic Commando
 Disney's DuckTales
 Final Fantasy
-<186207> Contra
+<186207> Contra [NES]
 R.C. Pro-Am
 Excitebike
 River City Ransom
 Mega Man 3
-<210484> Ninja Gaiden
+<210484> Ninja Gaiden [NES]
 Super Mario Bros. 2
 Castlevania
 Kid Icarus

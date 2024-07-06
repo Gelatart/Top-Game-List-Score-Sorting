@@ -7,6 +7,8 @@
 #The CLI may even offer opportunities for micro-operations that don't require their own files? Or could later be spun off?
 #Allow the printing of reports with various customizations?
 
+#Start implementing a unit testing framework of some kind?
+
 #POST-FIRST STORY PLANNING:
 #Potential features to include in the future
     #Basic GUI? rather than pure CLI?
@@ -27,8 +29,7 @@
         #can be reviewed later, lines removed if felt they aren't worth concern
     #give options to change what database format using? provide support for more than mongodb? option to switch?
     #make a txt file that branches games into family groupings?
-    #make a version/option for generator on whether it grabs from the IGDB API or not
-        #spin IGDB generation into its own file?
+    #spin IGDB generation into its own file?
     #chatgpt: try to figure out web scraping to extract data from websites?
         #review the data afterwards to see how useful it was, give a check to original source to make sure fits my standards?
     #chatgpt: consider what other user-friendly options and interactive features I could add?
@@ -142,7 +143,8 @@ while(program_completed == False):
         print("4. Drop.py: Drop the collections to empty the databases in the cluster and start with a clean slate")
         print("5. QuickMath.py: Not entirely related to this project, more personal use for tracking hours in games I've played")
         print("6. IGDB-Query.py: Tool for writing up command line querying of the IGDB API for testing purposes")
-        print("7. Quit/Exit: Quit this program and finish your business")
+        print("7. Mongo-Query.py: Tool for writing up command line querying of the MongoDB Cluster for testing purposes")
+        print("8. Quit/Exit: Quit this program and finish your business")
         print()
 
         #Let user pick their option of program
@@ -170,7 +172,10 @@ while(program_completed == False):
         elif (option == '6' or option == 'IGDB-Query.py' or option == 'IGDB-Query' or option == 'igdb-query' or option == 'igdb-query.py'):
             option_check = True
             program_selected = 'IGDB-Query.py'
-        elif(option == '7' or option == 'Quit' or option == 'quit' or option == 'Exit' or option == 'exit'):
+        elif (option == '7' or option == 'Mongo-Query.py' or option == 'Mongo-Query' or option == 'mongo-query' or option == 'mongo-query.py'):
+            option_check = True
+            program_selected = 'Mongo-Query.py'
+        elif(option == '8' or option == 'Quit' or option == 'quit' or option == 'Exit' or option == 'exit'):
             option_check = True
             print("Thank you for spending time with this program.")
             program_completed = True
@@ -186,15 +191,10 @@ while(program_completed == False):
     #Print out the program that was selected
     print()
     program = str(program_selected)
-    #print("You have chosen: " + option)
-    #print("You have chosen: " + str(program_selected))
     print("You have chosen: " + program)
-    #print(str(program_selected) + " will be run now")
     print(program + " will be run now")
 
     #TIME TO RUN REAL PROGRAM
-    #os.system(program_selected)
-    #os.system(program)
     subprocess.run(["python", program])
 
     option_check = False #To prevent the loop from going through again before it's ready
