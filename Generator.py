@@ -885,6 +885,7 @@ while(igdb_check == False):
                             if (is_pub):
                                 game_DB[game].list_publishers.append(dev_name)
                     # ADD GENRES
+                    #genre seems to be pulling in too many results right now, unrelated?
                     genres = earliest_game.genres
                     if (len(genres) > 0):
                         for genre in genres:
@@ -901,6 +902,7 @@ while(igdb_check == False):
                             game_DB[game].genres.append(genre_type)
                             #input(genre_type)
                     # ADD THEMES
+                    #theme seems to be pulling in too many results right now, unrelated?
                     themes = earliest_game.themes
                     if (len(themes) > 0):
                         for theme in themes:

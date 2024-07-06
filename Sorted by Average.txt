@@ -1,19 +1,34 @@
 Nights Into Dreams [IGDB ID: 19903] --> 1.0
+Deathloop [IGDB ID: 113598] --> 1.0
+Gods Will Be Watching [IGDB ID: 7543] --> 1.0
+Call of Duty: Black Ops II [IGDB ID: 1122] --> 0.9803921568627451
 Age of Empires II: The Conquerors [IGDB ID: 599] --> 0.98
 Master of Orion II: Battle at Antares [IGDB ID: 68] --> 0.97
 Digimon World [IGDB ID: 8614] --> 0.96
+The Outer Worlds [IGDB ID: 113114] --> 0.96
+Ratchet & Clank: Rift Apart [IGDB ID: 134582] --> 0.96
+Severed [IGDB ID: 6066] --> 0.96
+Apex Legends [IGDB ID: 114795] --> 0.9578947368421052
 Ace Combat 5: The Unsung War [IGDB ID: 14753] --> 0.93
+God of War: Ghost of Sparta [IGDB ID: 550] --> 0.9230769230769231
 Super Breakout [IGDB ID: 12321] --> 0.92
 Nights Into Dreams [IGDB ID: 19903] --> 0.92
 Umineko When They Cry: Answer Arcs [IGDB ID: 75081] --> 0.92
 Madden NFL 10 [IGDB ID: 4985] --> 0.92
+Psychonauts 2 [IGDB ID: 14741] --> 0.92
 Dawn of Man [IGDB ID: 102163] --> 0.9166666666666666
 The Legend of Zelda: Oracle of Ages [IGDB ID: 1041] --> 0.9029126213592233
 Age of Wonders [IGDB ID: 589] --> 0.9
 The Legend of Zelda: Link's Awakening DX [IGDB ID: 1027] --> 0.8932038834951457
+Metal Gear Solid HD Collection [IGDB ID: 20741] --> 0.8888888888888888
 Diablo II: Lord of Destruction [IGDB ID: 246] --> 0.8811881188118812
 Fighters Megamix [IGDB ID: 1550] --> 0.88
 Mario & Luigi: Bowser's Inside Story [IGDB ID: 3363] --> 0.88
+Star Wars Jedi: Fallen Order [IGDB ID: 74701] --> 0.88
+Marvel's Spider-Man: Miles Morales [IGDB ID: 134581] --> 0.88
+Horizon Forbidden West [IGDB ID: 112874] --> 0.88
+Marvel's Spider-Man 2 [IGDB ID: 127044] --> 0.88
+Daxter [IGDB ID: 1533] --> 0.88
 The Legend of Zelda: Oracle of Seasons [IGDB ID: 1032] --> 0.8737864077669902
 The Legend of Zelda: A Link to the Past [IGDB ID: 1026] --> 0.8711841663871184
 NBA 2K2 [IGDB ID: 4029] --> 0.87
@@ -23,6 +38,12 @@ Winning Eleven: Pro Evolution Soccer 2007 [IGDB ID: 2484] --> 0.8613861386138614
 Heroes of Might and Magic III: Armageddon's Blade [IGDB ID: 365] --> 0.86
 Street Fighter Anniversary Collection [IGDB ID: 6178] --> 0.85
 Dungeon Keeper 2 [IGDB ID: 36] --> 0.85
+Immortality [IGDB ID: 152288] --> 0.84
+Cocoon [IGDB ID: 204627] --> 0.84
+Twisted Metal III [IGDB ID: 4697] --> 0.84
+Patapon 3 [IGDB ID: 18373] --> 0.84
+That Dragon, Cancer [IGDB ID: 15925] --> 0.84
+Kentucky Route Zero: Act III [IGDB ID: 131729] --> 0.8378378378378378
 Ancestors: The Humankind Odyssey [IGDB ID: 10032] --> 0.8333333333333334
 Madden NFL 2005 [IGDB ID: 778] --> 0.8301282051282052
 Super Street Fighter II Turbo [IGDB ID: 4238] --> 0.83
@@ -43,22 +64,32 @@ Street Fighter II [IGDB ID: 3186] --> 0.8010526315789473
 Radiant Silvergun [IGDB ID: 5422] --> 0.8
 [x]Mario Kart DS [IGDB ID: 2345] --> 0.8
 Sunset Overdrive [IGDB ID: 3247] --> 0.8
+Chicory: A Colorful Tale [IGDB ID: 117266] --> 0.8
+Grand Theft Auto: Vice City Stories [IGDB ID: 3262] --> 0.8
 Warlords [IGDB ID: 17251] --> 0.7958015267175572
 The Elder Scrolls III: Morrowind [IGDB ID: 56] --> 0.7944325481798715
 Persona 3 Reload [IGDB ID: 252647] --> 0.79
 [x]Resident Evil 4 [IGDB ID: 974] --> 0.7863173216885008
 Mother 3 [IGDB ID: 3683] --> 0.7862595419847328
+Half-Life 2: Episode One [IGDB ID: 338] --> 0.78125
 Chrono Trigger [IGDB ID: 1802] --> 0.7796238244514107
 Doom [IGDB ID: 673] --> 0.776988005330964
 [x]Super Mario 64 [IGDB ID: 1074] --> 0.7751891074130106
+The Wonderful 101 [IGDB ID: 2639] --> 0.7703703703703704
+Super Mario Bros. Wonder [IGDB ID: 254339] --> 0.7692307692307693
 The Legend of Zelda: Breath of the Wild [IGDB ID: 7346] --> 0.7668444013572467
 Grand Theft Auto V [IGDB ID: 1020] --> 0.7657728706624606
 [x]Half-Life 2 [IGDB ID: 233] --> 0.7600875821082265
 Dig Dug [IGDB ID: 218861] --> 0.76
 Pathologic 2 [IGDB ID: 55322] --> 0.76
 The House in Fata Morgana: Dreams of the Revenants Edition [IGDB ID: 119577] --> 0.76
+Untitled Goose Game [IGDB ID: 72813] --> 0.76
+Xenoblade Chronicles 3 [IGDB ID: 191411] --> 0.76
+Darksiders II [IGDB ID: 1269] --> 0.76
+Antichamber [IGDB ID: 2064] --> 0.76
 Mass Effect 3 [IGDB ID: 75] --> 0.7530695770804912
 Saurian [IGDB ID: 19384] --> 0.75
+Uncharted 3: Drake's Deception [IGDB ID: 512] --> 0.7454545454545455
 [x]Portal [IGDB ID: 14546] --> 0.7442716857610474
 Dark Souls [IGDB ID: 2155] --> 0.7423442449841605
 Tecmo Bowl [IGDB ID: 8168] --> 0.7417582417582418
@@ -83,6 +114,10 @@ Shadow of the Colossus [IGDB ID: 2207] --> 0.7216260162601627
 Kentucky Route Zero [IGDB ID: 5614] --> 0.72125
 Dance Dance Revolution [IGDB ID: 3679] --> 0.7202868852459017
 Demolition Racer [IGDB ID: 43940] --> 0.72
+Mario + Rabbids Sparks of Hope [IGDB ID: 152201] --> 0.72
+Star Wars Jedi: Survivor [IGDB ID: 201156] --> 0.72
+Monster Hunter Freedom [IGDB ID: 2269] --> 0.72
+Sleeping Dogs [IGDB ID: 1267] --> 0.72
 Metal Gear Solid [GBC] [IGDB ID: 5600] --> 0.7192118226600985
 [x]Pikmin 2 [IGDB ID: 2240] --> 0.7142857142857143
 Mario Golf [GBC] [IGDB ID: 135389] --> 0.7126436781609196
@@ -121,6 +156,12 @@ Minecraft [IGDB ID: 121] --> 0.6809971098265896
 EarthBound [IGDB ID: 2899] --> 0.6802238805970149
 Sega Ages [IGDB ID: 131525] --> 0.68
 Daytona USA 2001 [IGDB ID: 22007] --> 0.68
+Sayonara Wild Hearts [IGDB ID: 113107] --> 0.68
+Pentiment [IGDB ID: 204623] --> 0.68
+Power Stone Collection [IGDB ID: 13107] --> 0.68
+Final Fantasy XIII-2 [IGDB ID: 384] --> 0.68
+Fantasia: Music Evolved [IGDB ID: 83509] --> 0.68
+Nintendo Land [IGDB ID: 2172] --> 0.68
 P.T. [IGDB ID: 11654] --> 0.679465776293823
 [x]Half-Life [IGDB ID: 231] --> 0.6793861468270427
 Rock Band 2 [IGDB ID: 2692] --> 0.6792656587473002
@@ -169,9 +210,17 @@ Red Dead Redemption 2 [IGDB ID: 25076] --> 0.6432160804020101
 Hitman: Blood Money [IGDB ID: 1048] --> 0.6414686825053996
 Tiger Woods PGA Tour 2004 [IGDB ID: 243022] --> 0.64
 Valiant Hearts: The Great War [IGDB ID: 7327] --> 0.64
+Luigi's Mansion 3 [IGDB ID: 109455] --> 0.64
+Marvel's Guardians of the Galaxy [IGDB ID: 152249] --> 0.64
+Pokemon Legends: Arceus [IGDB ID: 144054] --> 0.64
+Castlevania: The Dracula X Chronicles [IGDB ID: 21888] --> 0.64
+Mega Man Xtreme [IGDB ID: 1749] --> 0.64
+The Sailor's Dream [IGDB ID: 61229] --> 0.64
+Actual Sunlight [IGDB ID: 13230] --> 0.64
 Alan Wake [IGDB ID: 1062] --> 0.6391752577319587
 The Last Guardian [IGDB ID: 117] --> 0.6391304347826087
 The Legend of Dragoon [IGDB ID: 3140] --> 0.6366666666666667
+Valheim [IGDB ID: 104967] --> 0.6363636363636364
 Ultra Street Fighter IV [IGDB ID: 6656] --> 0.6361746361746362
 The Elder Scrolls V: Skyrim [IGDB ID: 472] --> 0.6345660930062248
 Gone Home [IGDB ID: 1906] --> 0.6343416370106761
@@ -195,6 +244,7 @@ Uncharted 4: A Thief's End [IGDB ID: 7331] --> 0.625
 NBA Jam [IGDB ID: 8995] --> 0.6239837398373984
 [x]Halo: Reach [IGDB ID: 990] --> 0.6228868660598179
 Journey [IGDB ID: 85680] --> 0.6222222222222222
+Astro's Playroom [IGDB ID: 134597] --> 0.6216216216216216
 Never Alone [IGDB ID: 273575] --> 0.6212121212121212
 Pong [IGDB ID: 209337] --> 0.6203615604186489
 The Warriors [IGDB ID: 6030] --> 0.62
@@ -225,6 +275,7 @@ The Legend of Zelda: The Wind Waker [IGDB ID: 1033] --> 0.6070528967254408
 Mario Kart 8 [IGDB ID: 2350] --> 0.6070478723404256
 Resident Evil 4 [2023] [IGDB ID: 132181] --> 0.6069364161849711
 The Walking Dead: The Complete First Season [IGDB ID: 41623] --> 0.6057906458797327
+Dredge [IGDB ID: 164867] --> 0.6052631578947368
 Madden NFL 2004 [IGDB ID: 777] --> 0.605
 Ultima Online [IGDB ID: 3126] --> 0.6030881017257039
 Grand Theft Auto: San Andreas [IGDB ID: 732] --> 0.6027903159622486
@@ -237,10 +288,16 @@ Hydro Thunder [IGDB ID: 3370] --> 0.6
 Kingdom Hearts HD 2.5 Remix [IGDB ID: 7841] --> 0.6
 Rayman 2: The Great Escape [DC] [IGDB ID: 193314] --> 0.6
 Super Mario Run [IGDB ID: 23796] --> 0.6
+Life is Strange: True Colors [IGDB ID: 144765] --> 0.6
+LEGO Star Wars: The Skywalker Saga [IGDB ID: 119305] --> 0.6
+Odin Sphere: Leifthrasir [IGDB ID: 15709] --> 0.6
+Dance Central 2 [IGDB ID: 20091] --> 0.6
+Pikmin 3 [IGDB ID: 2241] --> 0.6
 Pac-Man: Championship Edition DX [IGDB ID: 21737] --> 0.5993322203672788
 Counter-Strike [IGDB ID: 241] --> 0.5979547900968784
 Tom Clancy's Splinter Cell: Chaos Theory [IGDB ID: 243021] --> 0.5979216626698641
 Deus Ex [IGDB ID: 41] --> 0.5956043956043956
+The Legend of Zelda: The Wind Waker HD [IGDB ID: 2276] --> 0.5952380952380952
 Persona 3 [IGDB ID: 9577] --> 0.5939933259176863
 Tetris Effect [IGDB ID: 103221] --> 0.593939393939394
 Sid Meier's Civilization [IGDB ID: 902] --> 0.5936254980079682
@@ -263,8 +320,10 @@ Rez [IGDB ID: 11244] --> 0.580015026296018
 Hamtaro: Ham-Hams Unite! [IGDB ID: 22228] --> 0.58
 Heroes of Might and Magic III: The Shadow of Death [IGDB ID: 366] --> 0.58
 Dragon Quest Builders [IGDB ID: 24069] --> 0.58
+Forza Horizon 2 [IGDB ID: 7326] --> 0.58
 [x]Danganronpa: Trigger Happy Havoc [IGDB ID: 7842] --> 0.5798816568047337
 Final Fantasy XI Online [IGDB ID: 411] --> 0.5785953177257525
+Ni no Kuni: Wrath of the White Witch [IGDB ID: 1864] --> 0.5777777777777777
 Her Story [IGDB ID: 11346] --> 0.5774971297359357
 Tony Hawk's Pro Skater 2 [IGDB ID: 913] --> 0.577133907595928
 Grand Theft Auto: Vice City [IGDB ID: 733] --> 0.5770786516853933
@@ -274,6 +333,7 @@ Diablo [IGDB ID: 125] --> 0.575
 Virtua Fighter 2 [IGDB ID: 199020] --> 0.5730593607305936
 SoulCalibur [IGDB ID: 1564] --> 0.5729695431472082
 [x]Call of Duty: Modern Warfare 2 [IGDB ID: 559] --> 0.5725552050473186
+Zero Escape: Virtue's Last Reward [IGDB ID: 6614] --> 0.5719489981785064
 Pokemon Pinball [IGDB ID: 4068] --> 0.5714285714285714
 [x]The Last of Us Remastered [IGDB ID: 6036] --> 0.57
 FIFA Soccer 09 [IGDB ID: 3134] --> 0.57
@@ -294,6 +354,7 @@ Borderlands 2 [IGDB ID: 1011] --> 0.5637707948243993
 Mortal Kombat II [IGDB ID: 1619] --> 0.5635820895522388
 Baldur's Gate II: Shadows of Amn [IGDB ID: 6] --> 0.5631510416666666
 Gears of War [IGDB ID: 547] --> 0.5630662020905923
+The Dig [IGDB ID: 207] --> 0.5625
 SimCity 2000 [IGDB ID: 330] --> 0.5621890547263682
 Animal Crossing [IGDB ID: 2655] --> 0.5621198957428323
 Pokemon Puzzle Challenge [IGDB ID: 49857] --> 0.56
@@ -302,6 +363,14 @@ Q*bert [IGDB ID: 218444] --> 0.56
 Disgaea: Afternoon of Darkness [IGDB ID: 22528] --> 0.56
 P.N.03 [IGDB ID: 4060] --> 0.56
 FIFA 17 [IGDB ID: 240450] --> 0.56
+Pokemon Sword Version [IGDB ID: 37382] --> 0.56
+Kena: Bridge of Spirits [IGDB ID: 134588] --> 0.56
+Citizen Sleeper [IGDB ID: 152271] --> 0.56
+The Cosmic Wheel Sisterhood [IGDB ID: 247578] --> 0.56
+Sound Shapes [IGDB ID: 7729] --> 0.56
+Guacamelee! [IGDB ID: 4838] --> 0.56
+Valkyria Chronicles 2 [IGDB ID: 14674] --> 0.56
+Saints Row IV [IGDB ID: 1981] --> 0.56
 Super Smash Bros. Ultimate [IGDB ID: 90101] --> 0.5586380832282472
 Doom [IGDB ID: 7351] --> 0.5580286168521462
 [x]Pokemon Black Version [IGDB ID: 1521] --> 0.556
@@ -318,6 +387,7 @@ Cart Life [IGDB ID: 252496] --> 0.5507868383404864
 Virtua Cop 2 [IGDB ID: 2470] --> 0.55
 Madden NFL 2003 [IGDB ID: 243290] --> 0.55
 Pokemon Black Version [IGDB ID: 8284] --> 0.55
+Captain Toad: Treasure Tracker [IGDB ID: 7337] --> 0.55
 Uncharted: The Lost Legacy [IGDB ID: 26193] --> 0.5483870967741935
 Suikoden II [IGDB ID: 1454] --> 0.5468926553672316
 Dragon Warrior I & II [IGDB ID: 205230] --> 0.5466666666666666
@@ -326,8 +396,10 @@ XCOM: Enemy Unknown [IGDB ID: 1318] --> 0.5465529495380241
 BioShock Infinite [IGDB ID: 538] --> 0.5459770114942529
 Perfect Dark [IGDB ID: 141537] --> 0.5457656116338752
 Danganronpa V3: Killing Harmony [IGDB ID: 12579] --> 0.5454545454545454
+Far Cry 3 [IGDB ID: 529] --> 0.5447761194029851
 Jak and Daxter: The Precursor Legacy [IGDB ID: 1528] --> 0.5432098765432098
 Dragon Quest VIII: Journey of the Cursed King [IGDB ID: 1819] --> 0.5416058394160584
+Hades [IGDB ID: 80529] --> 0.5407608695652174
 Hearthstone [IGDB ID: 1279] --> 0.5400696864111498
 Game & Watch Gallery 3 [IGDB ID: 77907] --> 0.54
 LittleBigPlanet 3 [IGDB ID: 7330] --> 0.54
@@ -337,21 +409,30 @@ Auto Chess [IGDB ID: 119188] --> 0.54
 Rock Band 3 [IGDB ID: 2691] --> 0.5398579321231255
 Resident Evil Code: Veronica [IGDB ID: 968] --> 0.5384615384615384
 Max Payne [IGDB ID: 196251] --> 0.5364656381486677
+Assassin's Creed Valhalla [IGDB ID: 133004] --> 0.5359477124183006
+Stray [IGDB ID: 177394] --> 0.5359477124183006
 Fallout 3 [IGDB ID: 15] --> 0.5354330708661418
 The Legend of Zelda: Link's Awakening [IGDB ID: 1028] --> 0.5349922239502333
 Wing Commander [IGDB ID: 924] --> 0.5341745531019979
 Dragon Warrior Monsters [IGDB ID: 24818] --> 0.5333333333333333
+Hitman 3 [IGDB ID: 134595] --> 0.5326797385620915
 Far Cry 4 [IGDB ID: 6801] --> 0.5325131810193322
 Banjo-Kazooie [IGDB ID: 2148] --> 0.5322327044025157
+Tom Clancy's Splinter Cell: Double Agent [IGDB ID: 7469] --> 0.53125
 The Walking Dead: Season One - Episode 5: No Time Left [IGDB ID: 114944] --> 0.53
+Halo Infinite [IGDB ID: 103281] --> 0.5294117647058824
 Ratchet & Clank: Going Commando [IGDB ID: 1770] --> 0.5275
 Gears of War 3 [IGDB ID: 492] --> 0.5274261603375527
 Alien: Isolation [IGDB ID: 4754] --> 0.5265423242467718
+Call of Duty: Modern Warfare [IGDB ID: 119177] --> 0.5261437908496732
+Vampire Survivors [IGDB ID: 186725] --> 0.5261437908496732
 System Shock 2 [IGDB ID: 22] --> 0.5254921756688541
 Vampire: The Masquerade - Bloodlines [IGDB ID: 11] --> 0.525
 [x]Kingdom Hearts [IGDB ID: 1219] --> 0.5247706422018349
 Star Fox [IGDB ID: 23854] --> 0.5235507246376812
 Baldur's Gate [IGDB ID: 5] --> 0.5231958762886598
+Call of Duty: Warzone [IGDB ID: 131800] --> 0.5228758169934641
+Resident Evil Village [IGDB ID: 55163] --> 0.5228758169934641
 Left 4 Dead 2 [IGDB ID: 124] --> 0.5227418321588725
 Far Cry: Primal [IGDB ID: 13182] --> 0.5221843003412969
 [x]Batman: Arkham Asylum [IGDB ID: 240941] --> 0.5215189873417722
@@ -365,13 +446,20 @@ Metal Gear Solid: The Twin Snakes [IGDB ID: 4006] --> 0.52
 Trials Fusion [IGDB ID: 3191] --> 0.52
 Sea of Thieves [IGDB ID: 11137] --> 0.52
 Shadow Complex [IGDB ID: 11328] --> 0.52
+Days Gone [IGDB ID: 19561] --> 0.52
+OlliOlli World [IGDB ID: 145782] --> 0.52
+Final Fantasy XVI [IGDB ID: 31551] --> 0.52
+LocoRoco 2 [IGDB ID: 1461] --> 0.52
+Dead Rising 3 [IGDB ID: 3199] --> 0.52
 Mario Kart 64 [IGDB ID: 2342] --> 0.5197215777262181
 Katamari Damacy [IGDB ID: 6453] --> 0.5197030268418047
 The World Ends with You [IGDB ID: 1343] --> 0.5196078431372549
+Fall Guys [IGDB ID: 119313] --> 0.5196078431372549
 Crash Bandicoot [IGDB ID: 247270] --> 0.5189309576837416
 Gran Turismo [IGDB ID: 1594] --> 0.5186206896551724
 Demon's Souls [IGDB ID: 5619] --> 0.5170857511283043
 Tekken 2 [IGDB ID: 248207] --> 0.5169082125603864
+Diablo IV [IGDB ID: 125165] --> 0.5163398692810458
 Battlefield: Bad Company 2 [IGDB ID: 352] --> 0.514792899408284
 Dragon Ball FighterZ [IGDB ID: 36911] --> 0.5144694533762058
 Xenoblade Chronicles [IGDB ID: 2364] --> 0.5134926754047803
@@ -382,6 +470,7 @@ Jet Set Radio [IGDB ID: 279629] --> 0.5122121423586881
 Final Fantasy XIV Online [A Realm Reborn] [IGDB ID: 386] --> 0.512
 God of War [2018] [IGDB ID: 19560] --> 0.5113031914893617
 Tekken 3 [IGDB ID: 1244] --> 0.5110689437065149
+Dead Space [2023] [IGDB ID: 159119] --> 0.5109717868338558
 Crash Bandicoot: Warped [IGDB ID: 1187] --> 0.5108695652173914
 [x]League of Legends [IGDB ID: 115] --> 0.5107003891050583
 Warcraft III: Reign of Chaos [IGDB ID: 132] --> 0.5106571936056838
@@ -390,6 +479,7 @@ Fallout [IGDB ID: 13] --> 0.5104
 No Man's Sky [IGDB ID: 3225] --> 0.5102040816326531
 Blades of Steel [IGDB ID: 7788] --> 0.51
 SSX 3 [IGDB ID: 4174] --> 0.5098039215686274
+Cyberpunk 2077 [IGDB ID: 1877] --> 0.5098039215686274
 [x]Sonic the Hedgehog 2 [IGDB ID: 112884] --> 0.5085714285714286
 Destiny 2 [IGDB ID: 25657] --> 0.5081206496519721
 Virtua Racing [IGDB ID: 8172] --> 0.5068349106203995
@@ -399,9 +489,12 @@ Killer7 [IGDB ID: 3966] --> 0.50625
 Skies of Arcadia [IGDB ID: 19007] --> 0.5047169811320755
 Half-Life: Alyx [IGDB ID: 126098] --> 0.504424778761062
 Batman: Arkham Knight [IGDB ID: 5503] --> 0.5036764705882353
+Tony Hawk's Pro Skater 1+2 [IGDB ID: 133887] --> 0.5032679738562091
+Returnal [IGDB ID: 134584] --> 0.5032679738562091
 Dota 2 [IGDB ID: 2963] --> 0.5032467532467533
 WarioWare, Inc.: Mega Microgame$! [IGDB ID: 1703] --> 0.5030165912518854
 Ghosts 'n Goblins [IGDB ID: 6807] --> 0.5028462998102466
+Hi-Fi Rush [IGDB ID: 233585] --> 0.501628664495114
 The Oregon Trail [IGDB ID: 11325] --> 0.5007541478129713
 Phantasy Star Online [IGDB ID: 21968] --> 0.5005417118093174
 Donkey Kong Country [IGDB ID: 1090] --> 0.5003422313483915
@@ -412,9 +505,13 @@ PowerSlave [IGDB ID: 8338] --> 0.5
 The Ultimate Doom [IGDB ID: 10192] --> 0.5
 Battle Chef Brigade [IGDB ID: 23689] --> 0.5
 Inside & Limbo Bundle [IGDB ID: 165866] --> 0.5
+Metroid Dread [IGDB ID: 233651] --> 0.5
+Resistance 3 [IGDB ID: 3206] --> 0.5
 Dead Space 2 [IGDB ID: 264868] --> 0.498567335243553
 Tony Hawk's Pro Skater [IGDB ID: 6692] --> 0.4982698961937716
 Bayonetta [IGDB ID: 2136] --> 0.4968094804010939
+Forza Horizon 5 [IGDB ID: 141503] --> 0.49673202614379086
+Starfield [IGDB ID: 96437] --> 0.49673202614379086
 Dishonored [IGDB ID: 533] --> 0.4967188288743059
 Into the Breach [IGDB ID: 27117] --> 0.496551724137931
 Destiny [IGDB ID: 181550] --> 0.49645390070921985
@@ -422,29 +519,39 @@ Death Stranding [IGDB ID: 19564] --> 0.49606299212598426
 [x]Mario Kart: Double Dash!! [IGDB ID: 2344] --> 0.496
 Fez [IGDB ID: 1991] --> 0.4958563535911602
 Fortnite [IGDB ID: 1905] --> 0.4954128440366973
+Oddworld: Abe's Oddysee [IGDB ID: 999] --> 0.49523809523809526
 Rise of the Tomb Raider [IGDB ID: 7323] --> 0.49473684210526314
 Donkey Kong Country [GBC] [IGDB ID: 152752] --> 0.4945054945054945
 Donkey Kong [IGDB ID: 1086] --> 0.4936708860759494
+Genshin Impact [IGDB ID: 119277] --> 0.4934640522875817
+Sea of Stars [IGDB ID: 131890] --> 0.4934640522875817
 Dead Cells [IGDB ID: 26855] --> 0.49333333333333335
 Dark Souls II [IGDB ID: 2368] --> 0.4928806133625411
 Sonic the Hedgehog 3 & Knuckles [IGDB ID: 11219] --> 0.49206349206349204
 God of War III [IGDB ID: 499] --> 0.49119170984455957
 Animal Crossing: New Leaf [IGDB ID: 2687] --> 0.4908200734394125
+Sifu [IGDB ID: 144022] --> 0.49019607843137253
+Armored Core VI: Fires of Rubicon [IGDB ID: 228542] --> 0.49019607843137253
 Disgaea: Hour of Darkness [IGDB ID: 11610] --> 0.49
 Onimusha: Warlords [IGDB ID: 5845] --> 0.49
 Jagged Alliance 2 [IGDB ID: 9] --> 0.4888888888888889
 South Park: The Fractured But Whole [IGDB ID: 11161] --> 0.4887459807073955
 Marvel vs. Capcom 2: New Age of Heroes [IGDB ID: 8247] --> 0.4885114885114885
 MechWarrior 2: 31st Century Combat [IGDB ID: 784] --> 0.48711943793911006
+Forza Horizon 3 [IGDB ID: 19539] --> 0.4862236628849271
 Warcraft II: Tides of Darkness [IGDB ID: 130] --> 0.4860111910471623
 Kentucky Route Zero: Act IV [IGDB ID: 131730] --> 0.4857142857142857
+Tomb Raider II [IGDB ID: 1156] --> 0.4857142857142857
 [x]Batman: Arkham City [IGDB ID: 501] --> 0.48465080583269377
 Bayonetta 2 [IGDB ID: 2135] --> 0.4843869002284844
+Sid Meier's Civilization: Beyond Earth [IGDB ID: 6038] --> 0.48366013071895425
 Dark Souls III [IGDB ID: 11133] --> 0.4836244541484716
 The Elder Scrolls IV: Oblivion [IGDB ID: 59] --> 0.4836112708453134
 Shenmue [IGDB ID: 1217] --> 0.4835820895522388
 EverQuest [IGDB ID: 282] --> 0.48244274809160304
 Super Mario 3D Land [IGDB ID: 1079] --> 0.4807692307692308
+Yakuza: Like a Dragon [IGDB ID: 36550] --> 0.4803921568627451
+Assassin's Creed Mirage [IGDB ID: 215060] --> 0.4803921568627451
 Counter-Strike: Global Offensive [IGDB ID: 1372] --> 0.4802065404475043
 Duke Nukem 3D [IGDB ID: 342] --> 0.4800796812749004
 Harvest Moon 2 GBC [IGDB ID: 3379] --> 0.48
@@ -452,9 +559,18 @@ Daytona USA [IGDB ID: 177619] --> 0.48
 Yume 2kki [IGDB ID: 80668] --> 0.48
 Fire Emblem: The Blazing Blade [IGDB ID: 1439] --> 0.48
 Castlevania: Portrait of Ruin [IGDB ID: 1138] --> 0.48
+The Legend of Zelda: Link's Awakening [2019] [IGDB ID: 115284] --> 0.48
+If Found... [IGDB ID: 123333] --> 0.48
+Marvel Snap [IGDB ID: 202279] --> 0.48
+Dragon's Crown [IGDB ID: 3002] --> 0.48
+Persona 3 Portable [IGDB ID: 11416] --> 0.48
+Max Payne 3 [IGDB ID: 960] --> 0.48
+Affordable Space Adventures [IGDB ID: 9673] --> 0.48
 Phantasy Star IV: The End of the Millennium [IGDB ID: 1230] --> 0.47907771135781385
 [x]Team Fortress 2 [IGDB ID: 891] --> 0.47844063792085056
 Zork [IGDB ID: 1944] --> 0.47758716104039844
+Bugsnax [IGDB ID: 134602] --> 0.477124183006536
+Monster Hunter Rise [IGDB ID: 138950] --> 0.477124183006536
 [x]Pokemon Ruby Version [IGDB ID: 1557] --> 0.4770992366412214
 Sega Rally Championship [IGDB ID: 1571] --> 0.476280834914611
 Metroid Fusion [IGDB ID: 1104] --> 0.47619047619047616
@@ -462,13 +578,16 @@ Quake III Arena [IGDB ID: 355] --> 0.47587354409317806
 X-COM: UFO Defense [IGDB ID: 24] --> 0.47576832151300236
 Chrono Cross [IGDB ID: 1804] --> 0.47547169811320755
 Sonic the Hedgehog 3 [IGDB ID: 6797] --> 0.47491638795986624
+The Wolf Among Us [IGDB ID: 2993] --> 0.4738562091503268
 StarCraft II: Wings of Liberty [IGDB ID: 239] --> 0.47361389445557783
 Prince of Persia: The Sands of Time [IGDB ID: 142650] --> 0.4722483537158984
 Warframe [IGDB ID: 2903] --> 0.47129909365558914
 Tales of Symphonia [IGDB ID: 1204] --> 0.47058823529411764
+Blasphemous II [IGDB ID: 165390] --> 0.47058823529411764
 Resident Evil 2 [IGDB ID: 210710] --> 0.4701918092275791
 Paper Mario: The Thousand-Year Door [IGDB ID: 3349] --> 0.4688967136150235
 Axiom Verge [IGDB ID: 8652] --> 0.46835443037974683
+Ghost of Tsushima [IGDB ID: 75235] --> 0.46825396825396826
 Burnout 3: Takedown [IGDB ID: 5761] --> 0.4676395939086294
 Tecmo Super Bowl [IGDB ID: 16595] --> 0.4672330097087379
 Beyond Good & Evil [IGDB ID: 1341] --> 0.46684831970935514
@@ -480,8 +599,11 @@ Combat [IGDB ID: 16759] --> 0.46650998824911866
 Sensible Soccer [IGDB ID: 165461] --> 0.4654427645788337
 Uncharted: Drake's Fortune [IGDB ID: 431] --> 0.46543778801843316
 Myst [IGDB ID: 236] --> 0.46517262265293763
+Gears 5 [IGDB ID: 103292] --> 0.46405228758169936
+Street Fighter 6 [IGDB ID: 191692] --> 0.46405228758169936
 Demon Attack [IGDB ID: 5670] --> 0.4618320610687023
 [x]Super Mario Sunshine [IGDB ID: 1075] --> 0.4616840113528855
+Dissidia 012 Final Fantasy [IGDB ID: 24288] --> 0.46153846153846156
 Metroid Prime: Trilogy [IGDB ID: 1112] --> 0.46078431372549017
 Final Fantasy X [IGDB ID: 418] --> 0.46060606060606063
 Harvest Moon 3 GBC [IGDB ID: 3381] --> 0.46
@@ -521,16 +643,27 @@ Metroid Prime Remastered [IGDB ID: 236663] --> 0.44
 Portal: Still Alive [IGDB ID: 21798] --> 0.44
 [x]Pokemon Diamond Version [IGDB ID: 1560] --> 0.44
 Dead or Alive 2 [IGDB ID: 1388] --> 0.44
+Telling Lies [IGDB ID: 51528] --> 0.44
+Final Fantasy VII Remake [IGDB ID: 11169] --> 0.44
+Kirby and the Forgotten Land [IGDB ID: 172427] --> 0.44
+La-Mulana EX [IGDB ID: 22186] --> 0.44
+Mortal Kombat [2011] [IGDB ID: 119] --> 0.44
+The Stanley Parable [2013] [IGDB ID: 3035] --> 0.44
+Divinity: Original Sin [IGDB ID: 5082] --> 0.44
+The Legend of Zelda: Twilight Princess HD [IGDB ID: 18017] --> 0.44
 Monster Hunter: World [IGDB ID: 36926] --> 0.43952095808383235
 Mario + Rabbids Kingdom Battle [IGDB ID: 28414] --> 0.43902439024390244
 Streets of Rage 2 [IGDB ID: 1653] --> 0.4386440677966102
 Pokemon Go [IGDB ID: 12515] --> 0.43658536585365854
+It Takes Two [IGDB ID: 135243] --> 0.4365079365079365
 Tempest 2000 [IGDB ID: 9791] --> 0.43628509719222464
+Metal Gear Rising: Revengeance [IGDB ID: 378] --> 0.43596059113300495
 Super Street Fighter IV [IGDB ID: 7198] --> 0.4351464435146444
 Tomb Raider [IGDB ID: 196567] --> 0.43485714285714283
 Resident Evil 2 [IGDB ID: 19686] --> 0.43462897526501765
 The Walking Dead [IGDB ID: 1871] --> 0.4343240651965484
 Night in the Woods [IGDB ID: 10148] --> 0.43333333333333335
+Call of Duty: Advanced Warfare [IGDB ID: 6632] --> 0.43333333333333335
 TowerFall [IGDB ID: 109280] --> 0.4322120285423038
 Subsurface Circular [IGDB ID: 54780] --> 0.43
 God of War [IGDB ID: 273174] --> 0.42997118155619596
@@ -539,6 +672,7 @@ Battlefield 1942 [IGDB ID: 240] --> 0.429421768707483
 The Legend of Zelda: Ocarina of Time 3D [IGDB ID: 1039] --> 0.4291845493562232
 Ico [IGDB ID: 7170] --> 0.42697674418604653
 SuperHot [IGDB ID: 7205] --> 0.4267161410018553
+The Legend of Zelda: A Link Between Worlds [IGDB ID: 2909] --> 0.4266666666666667
 Rocket League [IGDB ID: 11198] --> 0.4261576971214018
 Call of Duty: Black Ops [IGDB ID: 545] --> 0.4247104247104247
 The Stanley Parable [IGDB ID: 18453] --> 0.42428035043804757
@@ -556,6 +690,7 @@ Grand Theft Auto [IGDB ID: 980] --> 0.415929203539823
 FTL: Advanced Edition [IGDB ID: 20098] --> 0.415
 Resident Evil 7: Biohazard [IGDB ID: 19562] --> 0.4147465437788018
 Deus Ex: Human Revolution [IGDB ID: 43] --> 0.41333333333333333
+DmC: Devil May Cry [IGDB ID: 1254] --> 0.41333333333333333
 Deadly Premonition [IGDB ID: 1276] --> 0.4111969111969112
 Pac-Man Vs. [IGDB ID: 4062] --> 0.41
 Robo Aleste [IGDB ID: 5430] --> 0.41
@@ -589,9 +724,15 @@ Christmas Nights into Dreams [IGDB ID: 45501] --> 0.4
 Tom Clancy's Rainbow Six 3: Raven Shield [IGDB ID: 908] --> 0.4
 Super Mario Party [IGDB ID: 103339] --> 0.4
 NBA 2K [IGDB ID: 8832] --> 0.4
+Far Cry 6 [IGDB ID: 126290] --> 0.4
+Return to Monkey Island [IGDB ID: 195517] --> 0.4
+Gran Turismo [IGDB ID: 20426] --> 0.4
+Prototype 2 [IGDB ID: 2988] --> 0.4
+NES Remix Pack [IGDB ID: 51151] --> 0.4
 The Sims 3 [IGDB ID: 248567] --> 0.3984547461368653
 Resident Evil [2002] [IGDB ID: 24869] --> 0.39628040057224606
 Metal Gear Solid 3: Subsistence [IGDB ID: 479] --> 0.3953488372093023
+Ooblets [IGDB ID: 27366] --> 0.39473684210526316
 [x]Dead Space [IGDB ID: 37] --> 0.39313984168865435
 The Curse of Monkey Island [IGDB ID: 62] --> 0.39111111111111113
 Day of the Tentacle [IGDB ID: 193] --> 0.3908216136195411
@@ -644,6 +785,13 @@ Grand Theft Auto Online [IGDB ID: 134710] --> 0.36
 Ninja Gaiden [2004] [IGDB ID: 5972] --> 0.36
 NFL 2K [IGDB ID: 8842] --> 0.36
 Retro Game Challenge [IGDB ID: 21251] --> 0.36
+Tetris 99 [IGDB ID: 115282] --> 0.36
+Valorant [IGDB ID: 126459] --> 0.36
+Age of Empires IV [IGDB ID: 55029] --> 0.36
+Rogue Legacy [IGDB ID: 3221] --> 0.36
+Kingdom Hearts Birth by Sleep [IGDB ID: 1224] --> 0.36
+Kingdom Hearts 3D: Dream Drop Distance [IGDB ID: 1226] --> 0.36
+Beyond: Two Souls [IGDB ID: 1342] --> 0.36
 Flower [IGDB ID: 179226] --> 0.358560794044665
 Fable [IGDB ID: 2960] --> 0.3584905660377358
 Daytona USA [IGDB ID: 199000] --> 0.35758196721311475
@@ -657,9 +805,12 @@ Hotline Miami [IGDB ID: 1384] --> 0.35135135135135137
 Battletoads [IGDB ID: 2970] --> 0.3511111111111111
 Gears of War 2: Game of the Year Edition [IGDB ID: 47465] --> 0.35
 God of War: Chains of Olympus [IGDB ID: 552] --> 0.35
+OlliOlli [IGDB ID: 7768] --> 0.35
 Final Fantasy XII [IGDB ID: 398] --> 0.3492769744160178
+LittleBigPlanet 2 [IGDB ID: 2140] --> 0.3466666666666667
 Ratchet & Clank [IGDB ID: 1289] --> 0.3463414634146341
 Donkey Kong Country: Tropical Freeze [IGDB ID: 2923] --> 0.34576271186440677
+Threes! [IGDB ID: 9054] --> 0.3443223443223443
 Eve Online [IGDB ID: 2584] --> 0.344
 Frogger [IGDB ID: 218320] --> 0.34295227524972255
 Cuphead [IGDB ID: 9061] --> 0.34274193548387094
@@ -668,6 +819,7 @@ Kerbal Space Program [IGDB ID: 3102] --> 0.3402692778457772
 Dragon Ball Z: Legendary Super Warriors [IGDB ID: 49856] --> 0.34
 Metal Torrent [IGDB ID: 67703] --> 0.34
 Universal Paperclips [IGDB ID: 74837] --> 0.34
+The Evil Within [IGDB ID: 4786] --> 0.34
 Celeste [IGDB ID: 26226] --> 0.33856502242152464
 Battlefield 3 [IGDB ID: 273136] --> 0.33714285714285713
 Heavy Rain [IGDB ID: 493] --> 0.3365200764818356
@@ -690,21 +842,35 @@ F-Zero GX [IGDB ID: 3492] --> 0.32511737089201875
 Thief: The Dark Project [IGDB ID: 2] --> 0.324459234608985
 Banjo-Tooie [IGDB ID: 3418] --> 0.3239130434782609
 Super Castlevania IV [IGDB ID: 1124] --> 0.3235014272121789
+Hitman [2016] [IGDB ID: 11157] --> 0.3212996389891697
 [x]Spyro the Dragon [IGDB ID: 1576] --> 0.32075471698113206
 Amplitude [IGDB ID: 2141] --> 0.32
 Lufia: The Legend Returns [IGDB ID: 1179] --> 0.32
 DecAthlete [IGDB ID: 45387] --> 0.32
 Pilotwings 64 [IGDB ID: 3573] --> 0.32
 Owlboy [IGDB ID: 12597] --> 0.32
+Metro Exodus [IGDB ID: 37016] --> 0.32
+Solar Ash [IGDB ID: 116156] --> 0.32
+Neon White [IGDB ID: 143612] --> 0.32
+Planet of Lana [IGDB ID: 152071] --> 0.32
+Lost Dimension [IGDB ID: 19099] --> 0.32
+Ape Escape: On the Loose [IGDB ID: 44530] --> 0.32
+Infamous 2 [IGDB ID: 515] --> 0.32
+Hitman: Absolution [IGDB ID: 530] --> 0.32
+Mountain [IGDB ID: 11736] --> 0.32
+Monster Hunter 3 Ultimate [IGDB ID: 2271] --> 0.32
+Half-Life 2: Episode Two [IGDB ID: 247] --> 0.32
 Kirby Tilt 'n' Tumble [IGDB ID: 3729] --> 0.31868131868131866
 God Hand [IGDB ID: 8803] --> 0.3185437997724687
 God of War II [IGDB ID: 551] --> 0.3182827535159141
 Fable II [IGDB ID: 522] --> 0.31728813559322033
 Street Fighter IV [IGDB ID: 884] --> 0.317115551694179
 Dead Rising [IGDB ID: 4797] --> 0.3170731707317073
+LEGO City Undercover [IGDB ID: 2177] --> 0.3142857142857143
 Lunar: Silver Star Story Complete [IGDB ID: 13905] --> 0.3132832080200501
 Control [IGDB ID: 103329] --> 0.312
 Dragon Age: Inquisition [IGDB ID: 1887] --> 0.31094257854821233
+Radiant Historia [IGDB ID: 6516] --> 0.3103448275862069
 Ridge Racer 2 [IGDB ID: 140479] --> 0.31
 Cruelty Squad [IGDB ID: 142076] --> 0.31
 Metal Gear Solid: The Legacy Collection [IGDB ID: 20196] --> 0.31
@@ -739,6 +905,7 @@ Viewtiful Joe [IGDB ID: 4229] --> 0.29411764705882354
 Tomb Raider [2013] [IGDB ID: 1164] --> 0.29411764705882354
 Fire Emblem: Awakening [IGDB ID: 1443] --> 0.29381443298969073
 Dragon Warrior IV [IGDB ID: 16584] --> 0.29333333333333333
+The Banner Saga [IGDB ID: 5508] --> 0.29333333333333333
 Braid [IGDB ID: 2853] --> 0.2914409534127844
 Frequency [IGDB ID: 9111] --> 0.29
 LostWinds [IGDB ID: 21486] --> 0.29
@@ -763,7 +930,21 @@ Metroid: Zero Mission [IGDB ID: 1107] --> 0.28
 Pokemon Fire Red Version [IGDB ID: 1559] --> 0.28
 ChuChu Rocket! [IGDB ID: 6347] --> 0.28
 The Legend of Zelda: Phantom Hourglass [IGDB ID: 1037] --> 0.28
+What the Golf? [IGDB ID: 87983] --> 0.28
+Demon's Souls [2020] [IGDB ID: 134606] --> 0.28
+The Artful Escape [IGDB ID: 25935] --> 0.28
+Cult of the Lamb [IGDB ID: 165351] --> 0.28
+Lies of P [IGDB ID: 148241] --> 0.28
+Uncharted: Golden Abyss [IGDB ID: 998] --> 0.28
+Klonoa: Door to Phantomile [IGDB ID: 4959] --> 0.28
+Mega Man Powered Up [IGDB ID: 12937] --> 0.28
+Paper Mario: Sticker Star [IGDB ID: 3350] --> 0.28
+The Vanishing of Ethan Carter [IGDB ID: 2939] --> 0.28
+Persona Q: Shadow of the Labyrinth [IGDB ID: 6887] --> 0.28
+Small Radios Big Televisions [IGDB ID: 24458] --> 0.28
+Tokyo Mirage Sessions #FE [IGDB ID: 5321] --> 0.28
 Devil May Cry [IGDB ID: 134] --> 0.27945472249269715
+Pokemon X Version [IGDB ID: 2286] --> 0.2767175572519084
 Drop7 [IGDB ID: 29044] --> 0.27545909849749584
 Angry Birds [IGDB ID: 2035] --> 0.2735655737704918
 Battlefield 4 [IGDB ID: 1979] --> 0.27307692307692305
@@ -773,13 +954,16 @@ BioShock 2: Minerva's Den [IGDB ID: 14543] --> 0.27
 Age of Mythology [IGDB ID: 324] --> 0.27
 Two Dots [IGDB ID: 14047] --> 0.27
 Lumines [IGDB ID: 4689] --> 0.26933701657458564
+Fire Emblem: Path of Radiance [IGDB ID: 1441] --> 0.2692307692307692
 Ghost Trick: Phantom Detective [IGDB ID: 1348] --> 0.2676282051282051
 Xenoblade Chronicles X [IGDB ID: 2366] --> 0.2672811059907834
 Forza Motorsport 4 [IGDB ID: 3068] --> 0.2671118530884808
 Three Fourths Home [IGDB ID: 10989] --> 0.265
 Child of Eden [IGDB ID: 6936] --> 0.264
 Super Mario World: Super Mario Advance 2 [IGDB ID: 16617] --> 0.264
+Death's Door [IGDB ID: 145099] --> 0.2631578947368421
 Tearaway [IGDB ID: 6363] --> 0.26222222222222225
+South Park: The Stick of Truth [IGDB ID: 1262] --> 0.26136363636363635
 Legend of the River King 2 [IGDB ID: 20516] --> 0.26
 Burnout 2: Point of Impact [IGDB ID: 3840] --> 0.26
 Gran Turismo 2 [IGDB ID: 1597] --> 0.2589641434262948
@@ -790,6 +974,7 @@ Full Throttle [IGDB ID: 46843] --> 0.25738396624472576
 Far Cry 2 [IGDB ID: 361] --> 0.2565284178187404
 Tales from the Borderlands [IGDB ID: 6707] --> 0.255663430420712
 Killer Instinct [IGDB ID: 2907] --> 0.25333333333333335
+Tom Clancy's Splinter Cell: Blacklist [IGDB ID: 1305] --> 0.25333333333333335
 OutRun 2006: Coast 2 Coast [IGDB ID: 2054] --> 0.2525
 Crazy Taxi [IGDB ID: 279633] --> 0.2522255192878338
 Jurassic World Evolution 2 [IGDB ID: 152064] --> 0.25
@@ -799,6 +984,7 @@ Alone in the Dark [IGDB ID: 1956] --> 0.24830261881668284
 Spy Hunter [IGDB ID: 4167] --> 0.24761904761904763
 Life is Strange: Before the Storm [IGDB ID: 29004] --> 0.24749163879598662
 FTL: Faster Than Light [IGDB ID: 3075] --> 0.24564183835182252
+Metal Gear Solid: Peace Walker [IGDB ID: 382] --> 0.24511545293072823
 Golden Sun [IGDB ID: 1172] --> 0.24336283185840707
 Splatoon [IGDB ID: 7335] --> 0.2410958904109589
 Final Fantasy III [IGDB ID: 77234] --> 0.24056603773584906
@@ -808,10 +994,24 @@ Croc: Legend of the Gobbos [IGDB ID: 7901] --> 0.24
 Football Manager 2007 [IGDB ID: 945] --> 0.24
 Kirby Super Star Ultra [IGDB ID: 2647] --> 0.24
 Super Scribblenauts [IGDB ID: 8808] --> 0.24
+Cadence of Hyrule: Crypt of the NecroDancer Featuring the Legend of Zelda [IGDB ID: 116419] --> 0.24
+Eastward [IGDB ID: 24417] --> 0.24
+Call of Duty: Modern Warfare II [IGDB ID: 200165] --> 0.24
+Wipeout 2048 [IGDB ID: 1545] --> 0.24
+Spider-Man [PlayStation] [IGDB ID: 3603] --> 0.24
+Ys Seven [IGDB ID: 10948] --> 0.24
+Rainbow Islands [IGDB ID: 194445] --> 0.24
+Call of Duty: Modern Warfare 3 [IGDB ID: 979] --> 0.24
+New Super Mario Bros. U [IGDB ID: 2171] --> 0.24
+Drakengard 3 [IGDB ID: 8576] --> 0.24
+Reigns [IGDB ID: 22436] --> 0.24
 Star Fox 64 [IGDB ID: 2591] --> 0.23792016806722688
 Power Stone 2 [IGDB ID: 13106] --> 0.23717948717948717
 Titanfall [IGDB ID: 2115] --> 0.2342857142857143
+Tunic [IGDB ID: 23733] --> 0.23333333333333334
+Luftrausers [IGDB ID: 5628] --> 0.23333333333333334
 Peggle [IGDB ID: 95409] --> 0.23110151187904968
+TimeSplitters: Future Perfect [IGDB ID: 2144] --> 0.23076923076923078
 Kessen III [IGDB ID: 20200] --> 0.23
 Zoo Tycoon [IGDB ID: 334] --> 0.23
 Command & Conquer: Red Alert 2 [IGDB ID: 245] --> 0.22742474916387959
@@ -848,6 +1048,15 @@ Mad Max [IGDB ID: 3034] --> 0.2
 A Hat in Time [IGDB ID: 6705] --> 0.2
 Dandara [IGDB ID: 296666] --> 0.2
 [x]Mario Kart Wii [IGDB ID: 191437] --> 0.2
+Dragon Quest V: Hand of the Heavenly Bride [IGDB ID: 16585] --> 0.2
+Kingdom Hearts III [IGDB ID: 2933] --> 0.2
+Marvel's Midnight Suns [IGDB ID: 165347] --> 0.2
+Jusant [IGDB ID: 252836] --> 0.2
+Lumines Electronic Symphony [IGDB ID: 4693] --> 0.2
+Every Extend Extra [IGDB ID: 23106] --> 0.2
+Donkey Kong Land III [IGDB ID: 1095] --> 0.2
+Kirby's Return to Dream Land [IGDB ID: 3725] --> 0.2
+Hohokum [IGDB ID: 10088] --> 0.2
 Zero Escape: Nine Hours, Nine Persons, Nine Doors [IGDB ID: 9543] --> 0.19865642994241842
 Radiata Stories [IGDB ID: 19160] --> 0.19732441471571907
 Breath of Fire III [IGDB ID: 18055] --> 0.1941747572815534
@@ -875,6 +1084,7 @@ Flappy Bird [IGDB ID: 7671] --> 0.17
 Shenmue II [IGDB ID: 1218] --> 0.1683748169838946
 Divinity: Original Sin II - Definitive Edition [IGDB ID: 103337] --> 0.16831683168316833
 Prehistoric Kingdom [IGDB ID: 54499] --> 0.16666666666666666
+Wolfenstein: The New Order [IGDB ID: 2031] --> 0.1660958904109589
 Spec Ops: The Line [IGDB ID: 1377] --> 0.1625615763546798
 Xenoblade Chronicles 2 [IGDB ID: 26766] --> 0.16181229773462782
 Harry Potter and the Sorcerer's Stone [IGDB ID: 118554] --> 0.16
@@ -882,6 +1092,17 @@ River Raid [IGDB ID: 5693] --> 0.16
 Burning Rangers [IGDB ID: 19666] --> 0.16
 SingStar [IGDB ID: 15180] --> 0.16
 Halo 2: Multiplayer Map Pack [IGDB ID: 3122] --> 0.16
+Sonic Rush [IGDB ID: 19258] --> 0.16
+Borderlands 3 [IGDB ID: 19164] --> 0.16
+Crash Bandicoot 4: It's About Time [IGDB ID: 135254] --> 0.16
+Wildermyth [IGDB ID: 83504] --> 0.16
+Horizon Call of the Mountain [IGDB ID: 186309] --> 0.16
+Driver [IGDB ID: 675] --> 0.16
+Secret Agent Clank [IGDB ID: 1793] --> 0.16
+Tomb Raider: Curse of the Sword [IGDB ID: 49993] --> 0.16
+Twisted Metal [2012] [IGDB ID: 5416] --> 0.16
+Fantasy Life [IGDB ID: 6770] --> 0.16
+Deus Ex: Human Revolution - Director's Cut [IGDB ID: 9740] --> 0.16
 Donkey Kong '94 [IGDB ID: 1089] --> 0.15873015873015872
 Sly Cooper and the Thievius Raccoonus [IGDB ID: 1798] --> 0.15719063545150502
 Snatcher [IGDB ID: 197937] --> 0.15692821368948248
@@ -919,6 +1140,12 @@ Virtua Cop [IGDB ID: 199018] --> 0.12
 Mass Destruction [IGDB ID: 2613] --> 0.12
 [x]Luigi's Mansion [IGDB ID: 2485] --> 0.12
 The Typing of the Dead [IGDB ID: 11605] --> 0.12
+Trauma Center: Under the Knife 2 [IGDB ID: 1526] --> 0.12
+Hardspace: Shipbreaker [IGDB ID: 130216] --> 0.12
+Jeanne d'Arc [IGDB ID: 11326] --> 0.12
+Scribblenauts Unmasked: A DC Comics Adventure [IGDB ID: 5033] --> 0.12
+FIFA 15 [IGDB ID: 240427] --> 0.12
+ZombiU [IGDB ID: 1591] --> 0.12
 Assassin's Creed [IGDB ID: 128] --> 0.11965811965811966
 [x]The Simpsons: Hit & Run [IGDB ID: 2844] --> 0.11818181818181818
 Hellblade: Senua's Sacrifice [IGDB ID: 7603] --> 0.11688311688311688
@@ -935,6 +1162,7 @@ Overcooked! [IGDB ID: 18433] --> 0.1
 Farpoint [IGDB ID: 19575] --> 0.1
 Heat Signature [IGDB ID: 10160] --> 0.1
 Sid Meier's Civilization Revolution [IGDB ID: 2152] --> 0.1
+Gravity Rush [IGDB ID: 11701] --> 0.0965391621129326
 Loom [IGDB ID: 240705] --> 0.096
 Street Fighter Alpha 2 [IGDB ID: 6703] --> 0.096
 Virginia [IGDB ID: 21599] --> 0.096
@@ -958,6 +1186,16 @@ Berzerk [IGDB ID: 2391] --> 0.08
 Space Giraffe [IGDB ID: 15991] --> 0.08
 Dead or Alive 1 Ultimate [IGDB ID: 1391] --> 0.08
 Total War: Three Kingdoms [IGDB ID: 80961] --> 0.08
+Skies of Arcadia Legends [IGDB ID: 4152] --> 0.08
+Tom Clancy's The Division 2 [IGDB ID: 90099] --> 0.08
+Teardown [IGDB ID: 122666] --> 0.08
+The Forgotten City [IGDB ID: 297448] --> 0.08
+A Plague Tale: Requiem [IGDB ID: 152242] --> 0.08
+Viewfinder [IGDB ID: 142549] --> 0.08
+Don't Starve [IGDB ID: 3152] --> 0.08
+Killzone: Liberation [IGDB ID: 1868] --> 0.08
+Bit.Trip Flux [IGDB ID: 15281] --> 0.08
+Transformers: Fall of Cybertron [IGDB ID: 8361] --> 0.08
 Catherine [IGDB ID: 2151] --> 0.07973421926910298
 Final Fantasy XIV: Shadowbringers [IGDB ID: 112412] --> 0.07920792079207921
 Ori and the Blind Forest [IGDB ID: 7344] --> 0.0784729586426299
@@ -984,6 +1222,17 @@ World Soccer Winning Eleven 7 International [IGDB ID: 936] --> 0.04
 The Evil Within: The Assignment [IGDB ID: 9183] --> 0.04
 Trauma Center: Under the Knife [IGDB ID: 1523] --> 0.04
 Sega Bass Fishing [IGDB ID: 5147] --> 0.04
+Kirby Mass Attack [IGDB ID: 3724] --> 0.04
+Super Mario Strikers [IGDB ID: 2256] --> 0.04
+Kentucky Route Zero: TV Edition [IGDB ID: 55198] --> 0.04
+Unpacking [IGDB ID: 134276] --> 0.04
+Norco [IGDB ID: 129097] --> 0.04
+Killzone: Mercenary [IGDB ID: 1869] --> 0.04
+Tenchu 2: Birth of the Stealth Assassins [IGDB ID: 4114] --> 0.04
+Half-Minute Hero [IGDB ID: 21943] --> 0.04
+Classic Bubble Bobble [IGDB ID: 69953] --> 0.04
+Persona 4 Arena [IGDB ID: 5650] --> 0.04
+Metro: Last Light [IGDB ID: 539] --> 0.04
 Mega Man X4 [IGDB ID: 1744] --> 0.038922155688622756
 OverBlood [IGDB ID: 19999] --> 0.03678929765886288
 Super Hexagon [IGDB ID: 3251] --> 0.035

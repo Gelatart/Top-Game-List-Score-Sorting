@@ -242,6 +242,7 @@ Ori and the Blind Forest [IGDB ID: 7344] --> 7
 Resident Evil 7: Biohazard [IGDB ID: 19562] --> 7
 Dishonored 2 [IGDB ID: 11118] --> 7
 SuperHot [IGDB ID: 7205] --> 7
+Hades [IGDB ID: 80529] --> 7
 Tecmo Super Bowl [IGDB ID: 16595] --> 6
 Spy Hunter [IGDB ID: 4167] --> 6
 Earthworm Jim [IGDB ID: 282759] --> 6
@@ -293,6 +294,7 @@ Valkyria Chronicles [IGDB ID: 7477] --> 6
 Dead Cells [IGDB ID: 26855] --> 6
 Tetris Effect [IGDB ID: 103221] --> 6
 No Man's Sky [IGDB ID: 3225] --> 6
+Wolfenstein: The New Order [IGDB ID: 2031] --> 6
 Animal Crossing: New Horizons [IGDB ID: 109462] --> 5
 Bully [IGDB ID: 2720] --> 5
 Teenage Mutant Ninja Turtles IV: Turtles in Time [IGDB ID: 14697] --> 5
@@ -348,6 +350,8 @@ Sonic Mania [IGDB ID: 21062] --> 5
 Into the Breach [IGDB ID: 27117] --> 5
 What Remains of Edith Finch [IGDB ID: 11233] --> 5
 SimCity [IGDB ID: 1272] --> 5
+Hitman [2016] [IGDB ID: 11157] --> 5
+Forza Horizon 3 [IGDB ID: 19539] --> 5
 Hitman 2 [IGDB ID: 103210] --> 4
 TimeSplitters 2 [IGDB ID: 2143] --> 4
 Elite Beat Agents [IGDB ID: 9109] --> 4
@@ -433,6 +437,10 @@ Crazy Taxi [IGDB ID: 279633] --> 4
 Never Alone [IGDB ID: 273575] --> 4
 This War of Mine [IGDB ID: 180418] --> 4
 80 Days [IGDB ID: 68859] --> 4
+Uncharted 3: Drake's Deception [IGDB ID: 512] --> 4
+Divinity: Original Sin [IGDB ID: 5082] --> 4
+Threes! [IGDB ID: 9054] --> 4
+Half-Life 2: Episode Two [IGDB ID: 247] --> 4
 Donkey Kong 64 [IGDB ID: 1096] --> 3
 Twisted Metal [IGDB ID: 4695] --> 3
 Ghosts 'n Goblins [IGDB ID: 6807] --> 3
@@ -556,6 +564,28 @@ Dead Rising [IGDB ID: 4797] --> 3
 Valiant Hearts: The Great War [IGDB ID: 7327] --> 3
 Monument Valley [IGDB ID: 8900] --> 3
 Professor Layton and the Unwound Future [IGDB ID: 1399] --> 3
+Radiant Historia [IGDB ID: 6516] --> 3
+Ghost of Tsushima [IGDB ID: 75235] --> 3
+Astro's Playroom [IGDB ID: 134597] --> 3
+It Takes Two [IGDB ID: 135243] --> 3
+Dead Space [2023] [IGDB ID: 159119] --> 3
+Hi-Fi Rush [IGDB ID: 233585] --> 3
+Gravity Rush [IGDB ID: 11701] --> 3
+Metal Gear Solid HD Collection [IGDB ID: 20741] --> 3
+Zero Escape: Virtue's Last Reward [IGDB ID: 6614] --> 3
+Metal Gear Solid: Peace Walker [IGDB ID: 382] --> 3
+LittleBigPlanet 2 [IGDB ID: 2140] --> 3
+Far Cry 3 [IGDB ID: 529] --> 3
+The Legend of Zelda: A Link Between Worlds [IGDB ID: 2909] --> 3
+Metal Gear Rising: Revengeance [IGDB ID: 378] --> 3
+South Park: The Stick of Truth [IGDB ID: 1262] --> 3
+The Vanishing of Ethan Carter [IGDB ID: 2939] --> 3
+The Banner Saga [IGDB ID: 5508] --> 3
+OlliOlli [IGDB ID: 7768] --> 3
+Luftrausers [IGDB ID: 5628] --> 3
+Captain Toad: Treasure Tracker [IGDB ID: 7337] --> 3
+The Legend of Zelda: The Wind Waker HD [IGDB ID: 2276] --> 3
+The Wonderful 101 [IGDB ID: 2639] --> 3
 [x]The Simpsons: Hit & Run [IGDB ID: 2844] --> 2
 Sonic Adventure 2 [IGDB ID: 7858] --> 2
 Forza Motorsport 4 [IGDB ID: 3068] --> 2
@@ -719,6 +749,65 @@ Space Channel 5 [IGDB ID: 6602] --> 2
 New Super Mario Bros. [IGDB ID: 1076] --> 2
 Kirby: Canvas Curse [IGDB ID: 3722] --> 2
 Picross 3D [IGDB ID: 10631] --> 2
+Fire Emblem: Path of Radiance [IGDB ID: 1441] --> 2
+TimeSplitters: Future Perfect [IGDB ID: 2144] --> 2
+Apex Legends [IGDB ID: 114795] --> 2
+Call of Duty: Modern Warfare [IGDB ID: 119177] --> 2
+Gears 5 [IGDB ID: 103292] --> 2
+Assassin's Creed Valhalla [IGDB ID: 133004] --> 2
+Call of Duty: Warzone [IGDB ID: 131800] --> 2
+Fall Guys [IGDB ID: 119313] --> 2
+Cyberpunk 2077 [IGDB ID: 1877] --> 2
+Tony Hawk's Pro Skater 1+2 [IGDB ID: 133887] --> 2
+Genshin Impact [IGDB ID: 119277] --> 2
+Ooblets [IGDB ID: 27366] --> 2
+Yakuza: Like a Dragon [IGDB ID: 36550] --> 2
+Bugsnax [IGDB ID: 134602] --> 2
+Hitman 3 [IGDB ID: 134595] --> 2
+Halo Infinite [IGDB ID: 103281] --> 2
+Resident Evil Village [IGDB ID: 55163] --> 2
+Valheim [IGDB ID: 104967] --> 2
+Returnal [IGDB ID: 134584] --> 2
+Metroid Dread [IGDB ID: 233651] --> 2
+Forza Horizon 5 [IGDB ID: 141503] --> 2
+Monster Hunter Rise [IGDB ID: 138950] --> 2
+Death's Door [IGDB ID: 145099] --> 2
+Stray [IGDB ID: 177394] --> 2
+Vampire Survivors [IGDB ID: 186725] --> 2
+Sifu [IGDB ID: 144022] --> 2
+Tunic [IGDB ID: 23733] --> 2
+Super Mario Bros. Wonder [IGDB ID: 254339] --> 2
+Diablo IV [IGDB ID: 125165] --> 2
+Dredge [IGDB ID: 164867] --> 2
+Starfield [IGDB ID: 96437] --> 2
+Sea of Stars [IGDB ID: 131890] --> 2
+Armored Core VI: Fires of Rubicon [IGDB ID: 228542] --> 2
+Assassin's Creed Mirage [IGDB ID: 215060] --> 2
+Blasphemous II [IGDB ID: 165390] --> 2
+Street Fighter 6 [IGDB ID: 191692] --> 2
+Dragon's Crown [IGDB ID: 3002] --> 2
+Sound Shapes [IGDB ID: 7729] --> 2
+Oddworld: Abe's Oddysee [IGDB ID: 999] --> 2
+Tomb Raider II [IGDB ID: 1156] --> 2
+Klonoa: Door to Phantomile [IGDB ID: 4959] --> 2
+God of War: Ghost of Sparta [IGDB ID: 550] --> 2
+Dissidia 012 Final Fantasy [IGDB ID: 24288] --> 2
+Resistance 3 [IGDB ID: 3206] --> 2
+New Super Mario Bros. U [IGDB ID: 2171] --> 2
+DmC: Devil May Cry [IGDB ID: 1254] --> 2
+Ni no Kuni: Wrath of the White Witch [IGDB ID: 1864] --> 2
+Pokemon X Version [IGDB ID: 2286] --> 2
+Pikmin 3 [IGDB ID: 2241] --> 2
+Tom Clancy's Splinter Cell: Blacklist [IGDB ID: 1305] --> 2
+Forza Horizon 2 [IGDB ID: 7326] --> 2
+Call of Duty: Advanced Warfare [IGDB ID: 6632] --> 2
+Sid Meier's Civilization: Beyond Earth [IGDB ID: 6038] --> 2
+The Evil Within [IGDB ID: 4786] --> 2
+Hohokum [IGDB ID: 10088] --> 2
+The Wolf Among Us [IGDB ID: 2993] --> 2
+Kentucky Route Zero: Act III [IGDB ID: 131729] --> 2
+LEGO City Undercover [IGDB ID: 2177] --> 2
+Call of Duty: Black Ops II [IGDB ID: 1122] --> 2
 Crash Team Racing Nitro-Fueled [IGDB ID: 113113] --> 1
 You Don't Know Jack Vol. 1 XL [IGDB ID: 30236] --> 1
 Street Fighter II: Champion Edition [IGDB ID: 39496] --> 1
@@ -999,3 +1088,163 @@ Castlevania: Portrait of Ruin [IGDB ID: 1138] --> 1
 Retro Game Challenge [IGDB ID: 21251] --> 1
 The Legend of Zelda: Phantom Hourglass [IGDB ID: 1037] --> 1
 Super Scribblenauts [IGDB ID: 8808] --> 1
+Dragon Quest V: Hand of the Heavenly Bride [IGDB ID: 16585] --> 1
+Sonic Rush [IGDB ID: 19258] --> 1
+Trauma Center: Under the Knife 2 [IGDB ID: 1526] --> 1
+Kirby Mass Attack [IGDB ID: 3724] --> 1
+Skies of Arcadia Legends [IGDB ID: 4152] --> 1
+Super Mario Strikers [IGDB ID: 2256] --> 1
+The Outer Worlds [IGDB ID: 113114] --> 1
+Star Wars Jedi: Fallen Order [IGDB ID: 74701] --> 1
+Untitled Goose Game [IGDB ID: 72813] --> 1
+Sayonara Wild Hearts [IGDB ID: 113107] --> 1
+Luigi's Mansion 3 [IGDB ID: 109455] --> 1
+Pokemon Sword Version [IGDB ID: 37382] --> 1
+Days Gone [IGDB ID: 19561] --> 1
+The Legend of Zelda: Link's Awakening [2019] [IGDB ID: 115284] --> 1
+Telling Lies [IGDB ID: 51528] --> 1
+Tetris 99 [IGDB ID: 115282] --> 1
+Metro Exodus [IGDB ID: 37016] --> 1
+What the Golf? [IGDB ID: 87983] --> 1
+Cadence of Hyrule: Crypt of the NecroDancer Featuring the Legend of Zelda [IGDB ID: 116419] --> 1
+Kingdom Hearts III [IGDB ID: 2933] --> 1
+Borderlands 3 [IGDB ID: 19164] --> 1
+Tom Clancy's The Division 2 [IGDB ID: 90099] --> 1
+Marvel's Spider-Man: Miles Morales [IGDB ID: 134581] --> 1
+If Found... [IGDB ID: 123333] --> 1
+Final Fantasy VII Remake [IGDB ID: 11169] --> 1
+Valorant [IGDB ID: 126459] --> 1
+Demon's Souls [2020] [IGDB ID: 134606] --> 1
+Crash Bandicoot 4: It's About Time [IGDB ID: 135254] --> 1
+Teardown [IGDB ID: 122666] --> 1
+Kentucky Route Zero: TV Edition [IGDB ID: 55198] --> 1
+Deathloop [IGDB ID: 113598] --> 1
+Ratchet & Clank: Rift Apart [IGDB ID: 134582] --> 1
+Psychonauts 2 [IGDB ID: 14741] --> 1
+Chicory: A Colorful Tale [IGDB ID: 117266] --> 1
+Marvel's Guardians of the Galaxy [IGDB ID: 152249] --> 1
+Life is Strange: True Colors [IGDB ID: 144765] --> 1
+Kena: Bridge of Spirits [IGDB ID: 134588] --> 1
+Far Cry 6 [IGDB ID: 126290] --> 1
+Age of Empires IV [IGDB ID: 55029] --> 1
+Solar Ash [IGDB ID: 116156] --> 1
+The Artful Escape [IGDB ID: 25935] --> 1
+Eastward [IGDB ID: 24417] --> 1
+Wildermyth [IGDB ID: 83504] --> 1
+The Forgotten City [IGDB ID: 297448] --> 1
+Unpacking [IGDB ID: 134276] --> 1
+Horizon Forbidden West [IGDB ID: 112874] --> 1
+Immortality [IGDB ID: 152288] --> 1
+Xenoblade Chronicles 3 [IGDB ID: 191411] --> 1
+Mario + Rabbids Sparks of Hope [IGDB ID: 152201] --> 1
+Pentiment [IGDB ID: 204623] --> 1
+Pokemon Legends: Arceus [IGDB ID: 144054] --> 1
+LEGO Star Wars: The Skywalker Saga [IGDB ID: 119305] --> 1
+Citizen Sleeper [IGDB ID: 152271] --> 1
+OlliOlli World [IGDB ID: 145782] --> 1
+Marvel Snap [IGDB ID: 202279] --> 1
+Kirby and the Forgotten Land [IGDB ID: 172427] --> 1
+Return to Monkey Island [IGDB ID: 195517] --> 1
+Neon White [IGDB ID: 143612] --> 1
+Cult of the Lamb [IGDB ID: 165351] --> 1
+Call of Duty: Modern Warfare II [IGDB ID: 200165] --> 1
+Marvel's Midnight Suns [IGDB ID: 165347] --> 1
+Hardspace: Shipbreaker [IGDB ID: 130216] --> 1
+A Plague Tale: Requiem [IGDB ID: 152242] --> 1
+Norco [IGDB ID: 129097] --> 1
+Marvel's Spider-Man 2 [IGDB ID: 127044] --> 1
+Cocoon [IGDB ID: 204627] --> 1
+Star Wars Jedi: Survivor [IGDB ID: 201156] --> 1
+The Cosmic Wheel Sisterhood [IGDB ID: 247578] --> 1
+Final Fantasy XVI [IGDB ID: 31551] --> 1
+Planet of Lana [IGDB ID: 152071] --> 1
+Lies of P [IGDB ID: 148241] --> 1
+Jusant [IGDB ID: 252836] --> 1
+Horizon Call of the Mountain [IGDB ID: 186309] --> 1
+Viewfinder [IGDB ID: 142549] --> 1
+Severed [IGDB ID: 6066] --> 1
+Odin Sphere: Leifthrasir [IGDB ID: 15709] --> 1
+Guacamelee! [IGDB ID: 4838] --> 1
+La-Mulana EX [IGDB ID: 22186] --> 1
+Rogue Legacy [IGDB ID: 3221] --> 1
+Lost Dimension [IGDB ID: 19099] --> 1
+Uncharted: Golden Abyss [IGDB ID: 998] --> 1
+Wipeout 2048 [IGDB ID: 1545] --> 1
+Lumines Electronic Symphony [IGDB ID: 4693] --> 1
+Don't Starve [IGDB ID: 3152] --> 1
+Killzone: Mercenary [IGDB ID: 1869] --> 1
+Twisted Metal III [IGDB ID: 4697] --> 1
+Spider-Man [PlayStation] [IGDB ID: 3603] --> 1
+Driver [IGDB ID: 675] --> 1
+Tenchu 2: Birth of the Stealth Assassins [IGDB ID: 4114] --> 1
+Daxter [IGDB ID: 1533] --> 1
+Patapon 3 [IGDB ID: 18373] --> 1
+Grand Theft Auto: Vice City Stories [IGDB ID: 3262] --> 1
+Monster Hunter Freedom [IGDB ID: 2269] --> 1
+Power Stone Collection [IGDB ID: 13107] --> 1
+Castlevania: The Dracula X Chronicles [IGDB ID: 21888] --> 1
+Valkyria Chronicles 2 [IGDB ID: 14674] --> 1
+LocoRoco 2 [IGDB ID: 1461] --> 1
+Persona 3 Portable [IGDB ID: 11416] --> 1
+Gran Turismo [IGDB ID: 20426] --> 1
+Kingdom Hearts Birth by Sleep [IGDB ID: 1224] --> 1
+Ape Escape: On the Loose [IGDB ID: 44530] --> 1
+Mega Man Powered Up [IGDB ID: 12937] --> 1
+Ys Seven [IGDB ID: 10948] --> 1
+Every Extend Extra [IGDB ID: 23106] --> 1
+Secret Agent Clank [IGDB ID: 1793] --> 1
+Jeanne d'Arc [IGDB ID: 11326] --> 1
+Killzone: Liberation [IGDB ID: 1868] --> 1
+Half-Minute Hero [IGDB ID: 21943] --> 1
+Mega Man Xtreme [IGDB ID: 1749] --> 1
+Rainbow Islands [IGDB ID: 194445] --> 1
+Donkey Kong Land III [IGDB ID: 1095] --> 1
+Tomb Raider: Curse of the Sword [IGDB ID: 49993] --> 1
+Classic Bubble Bobble [IGDB ID: 69953] --> 1
+Dance Central 2 [IGDB ID: 20091] --> 1
+Mortal Kombat [2011] [IGDB ID: 119] --> 1
+Infamous 2 [IGDB ID: 515] --> 1
+Call of Duty: Modern Warfare 3 [IGDB ID: 979] --> 1
+Kirby's Return to Dream Land [IGDB ID: 3725] --> 1
+Bit.Trip Flux [IGDB ID: 15281] --> 1
+Darksiders II [IGDB ID: 1269] --> 1
+Sleeping Dogs [IGDB ID: 1267] --> 1
+Final Fantasy XIII-2 [IGDB ID: 384] --> 1
+Max Payne 3 [IGDB ID: 960] --> 1
+Prototype 2 [IGDB ID: 2988] --> 1
+Kingdom Hearts 3D: Dream Drop Distance [IGDB ID: 1226] --> 1
+Hitman: Absolution [IGDB ID: 530] --> 1
+Paper Mario: Sticker Star [IGDB ID: 3350] --> 1
+Twisted Metal [2012] [IGDB ID: 5416] --> 1
+Transformers: Fall of Cybertron [IGDB ID: 8361] --> 1
+Persona 4 Arena [IGDB ID: 5650] --> 1
+Antichamber [IGDB ID: 2064] --> 1
+Saints Row IV [IGDB ID: 1981] --> 1
+Dead Rising 3 [IGDB ID: 3199] --> 1
+The Stanley Parable [2013] [IGDB ID: 3035] --> 1
+Beyond: Two Souls [IGDB ID: 1342] --> 1
+Scribblenauts Unmasked: A DC Comics Adventure [IGDB ID: 5033] --> 1
+Metro: Last Light [IGDB ID: 539] --> 1
+FIFA 15 [IGDB ID: 240427] --> 1
+The Sailor's Dream [IGDB ID: 61229] --> 1
+Fantasia: Music Evolved [IGDB ID: 83509] --> 1
+Actual Sunlight [IGDB ID: 13230] --> 1
+Mountain [IGDB ID: 11736] --> 1
+Persona Q: Shadow of the Labyrinth [IGDB ID: 6887] --> 1
+Drakengard 3 [IGDB ID: 8576] --> 1
+Fantasy Life [IGDB ID: 6770] --> 1
+That Dragon, Cancer [IGDB ID: 15925] --> 1
+Small Radios Big Televisions [IGDB ID: 24458] --> 1
+Reigns [IGDB ID: 22436] --> 1
+Nintendo Land [IGDB ID: 2172] --> 1
+Affordable Space Adventures [IGDB ID: 9673] --> 1
+The Legend of Zelda: Twilight Princess HD [IGDB ID: 18017] --> 1
+NES Remix Pack [IGDB ID: 51151] --> 1
+Monster Hunter 3 Ultimate [IGDB ID: 2271] --> 1
+Tokyo Mirage Sessions #FE [IGDB ID: 5321] --> 1
+Deus Ex: Human Revolution - Director's Cut [IGDB ID: 9740] --> 1
+ZombiU [IGDB ID: 1591] --> 1
+Gods Will Be Watching [IGDB ID: 7543] --> 1
+Half-Life 2: Episode One [IGDB ID: 338] --> 1
+The Dig [IGDB ID: 207] --> 1
+Tom Clancy's Splinter Cell: Double Agent [IGDB ID: 7469] --> 1

@@ -451,7 +451,7 @@ while(answer_check_main == False):
     print("6. Ranked Score")
     print("7. Inclusion Score")
     print("8. Average Score")
-    print("9. Player Count")
+    print("9. Player Counts")
     print("10. Developers")
     print("11. Gameplay Genre")
     print("12. Thematic Genre")
@@ -1361,7 +1361,8 @@ while(answer_check_main == False):
                 print("You have selected 1. Minimum threshold score")
                 print()
                 target_score = input("Set your target minimum score: ")
-                value = {"$gte": int(target_score)}
+                #value = {"$gte": int(target_score)}
+                value = {"$gte": float(target_score)}
                 add_misc_query("Average Score", value)
                 print("Query added!")
                 input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1370,7 +1371,8 @@ while(answer_check_main == False):
                 print("You have selected 2. Maximum threshold score")
                 print()
                 target_score = input("Set your target maximum score: ")
-                value = {"$lte": int(target_score)}
+                #value = {"$lte": int(target_score)}
+                value = {"$lte": float(target_score)}
                 add_misc_query("Average Score", value)
                 print("Query added!")
                 input("When you are ready, press Enter to go back to the main print menu\n")
@@ -1383,7 +1385,8 @@ while(answer_check_main == False):
                 new_query = {"Average Score": target_score}
                 queries.append(new_query)
                 """
-                add_misc_query("Average Score", int(target_score))
+                #add_misc_query("Average Score", int(target_score))
+                add_misc_query("Average Score", float(target_score))
                 print("Query added!")
                 input("When you are ready, press Enter to go back to the main print menu\n")
                 break
@@ -1395,7 +1398,7 @@ while(answer_check_main == False):
         print()
     elif (filter_category == '9'):
         print()
-        print("You have selected 9. Player Count")
+        print("You have selected 9. Player Counts")
         print()
         while True:
             print("Would you like to select whether you want singleplayer or multiplayer?")
@@ -1412,16 +1415,16 @@ while(answer_check_main == False):
                     print("2. Multiplayer")
                     sm_option = input()
                     if(sm_option == '1'):
-                        add_playcount_query("Player Count", "Single player")
+                        add_playcount_query("Player Counts", "Single player")
                         print("Query added!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
                     elif(sm_option == '2'):
-                        add_playcount_query("Player Count", "Multiplayer")
-                        add_playcount_query("Player Count", "Co-operative")
-                        add_playcount_query("Player Count", "Split screen")
-                        add_playcount_query("Player Count", "Massively Multiplayer Online (MMO)")
-                        add_playcount_query("Player Count", "Battle Royale")
+                        add_playcount_query("Player Counts", "Multiplayer")
+                        add_playcount_query("Player Counts", "Co-operative")
+                        add_playcount_query("Player Counts", "Split screen")
+                        add_playcount_query("Player Counts", "Massively Multiplayer Online (MMO)")
+                        add_playcount_query("Player Counts", "Battle Royale")
                         print("Query added!")
                         input("When you are ready, press Enter to go back to the main print menu\n")
                         break
@@ -1460,7 +1463,7 @@ while(answer_check_main == False):
                         print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.")
                         print()
                         continue
-                    add_playcount_query("Player Count", target_count)
+                    add_playcount_query("Player Counts", target_count)
                     print("Query added!")
                     input("When you are ready, press Enter to go back to the main print menu\n")
                     break
@@ -1590,6 +1593,7 @@ while(answer_check_main == False):
         add_theme_query("Themes", theme_selection)
         input("When you are ready, press Enter to go back to the main print menu\n")
     elif (filter_category == '13'):
+        #put in seasonal option in here for being based very much on how I'd lay it out?
         print()
         print("You have selected 13. Miscellaneous")
         print()
@@ -1663,6 +1667,7 @@ while(answer_check_main == False):
                 print("1. AND approach")
                 print("2. OR approach")
                 print("3. Natural mix")
+                #Natural crashes it if there are empty arrays? figure out how to deal with it?
                 and_or_type = input()
                 if (and_or_type != '1' and and_or_type != '2' and and_or_type != '3'):
                     print("Please try again with valid input")
@@ -1740,19 +1745,27 @@ while(answer_check_main == False):
                     misc_queries = []
                     """
                     #Make sure that none of the arrays are empty because that'll break it, switch approach if so?
-                    natural_platform = {'$or': platform_queries}
-                    natural_player = {'$or': player_count_queries}
-                    natural_dev = {'$or': dev_queries}
-                    natural_genre = {'$or': genre_queries}
-                    natural_theme = {'$or': theme_queries}
+                    #Now it's complaining that pymongo.errors.OperationFailure: $or/$and/$nor entries need to be full objects?
                     and_queries = []
-                    and_queries.append(natural_platform)
-                    and_queries.append(natural_player)
-                    and_queries.append(natural_dev)
-                    and_queries.append(natural_genre)
-                    and_queries.append(natural_theme)
-                    and_queries.append(misc_queries)
-                    natural_queries = {'$and': and_queries}
+                    natural_queries = []
+                    if platform_queries:
+                        natural_platform = {"$or": platform_queries}
+                        and_queries.append(natural_platform)
+                    if player_count_queries:
+                        natural_player = {"$or": player_count_queries}
+                        and_queries.append(natural_player)
+                    if dev_queries:
+                        natural_dev = {"$or": dev_queries}
+                        and_queries.append(natural_dev)
+                    if genre_queries:
+                        natural_genre = {"$or": genre_queries}
+                        and_queries.append(natural_genre)
+                    if theme_queries:
+                        natural_theme = {"$or": theme_queries}
+                        and_queries.append(natural_theme)
+                    if misc_queries:
+                        and_queries.append(misc_queries)
+                        natural_queries = {"$and": and_queries}
                     if (sort_type == '1'):
                         games_pulled = mon_col.find(natural_queries).sort("Ranked Score", -1)
                         break
@@ -1788,6 +1801,7 @@ while(answer_check_main == False):
             file_name += "[CUSTOM GENERATION].txt"
             file_print = open(file_name, "w", encoding="utf-8")
             input("File created\n")
+            print(games_pulled.next())
             for game in games_pulled:
                 # print(game)
                 entry = ""
@@ -1849,4 +1863,5 @@ Creating datetime objects: https://www.w3schools.com/python/python_datetime.asp
 Ask user for input until get valid response: https://www.python-engineer.com/posts/ask-user-for-input/
 Building queries with AND and OR: https://stackoverflow.com/questions/11196101/mongodb-queries-both-with-and-and-or
 How to query for specific year among datetime: https://stackoverflow.com/questions/49174399/mongodb-find-query-by-year
+Check if list empty: https://www.geeksforgeeks.org/python-check-if-list-empty-not/
 """
