@@ -1,9 +1,9 @@
-RANKED: 99
-UNRANKED: 46
-FORMER: 14
+RANKED: 102
+UNRANKED: 50
+FORMER: 15
 UNUSED: 0
 ---
-TOTAL: 159
+TOTAL: 167
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -66,6 +66,9 @@ R-Top 10 Best Video Game Forest Levels of All Time - Blockfort
 R-Top 10 Best Video Game Swamp Levels of All Time - Blockfort
 R-Top 10 Best Video Game Sky Levels of All Time - Blockfort
 R-Top 10 Best Video Game Water Levels of All Time - Blockfort
+U-Best Spring-Themed Video Games - G2A - 3-21-2024
+R-10 Games To Get You Pumped For Spring - TheGamer - 3-13-2022
+U-10 Best Video Games That Take Place In The Spring - ScreenRant - 3-4-2022
 
 TOP SEASONAL THEME ALL TIME (SUMMER):
 U-The Best Summer-Themed Games And Levels - Kotaku - 7-22-2022
@@ -88,6 +91,11 @@ R-Top 10 Best Video Game Sewer Levels of All Time - Blockfort
 
 TOP SEASONAL THEME ALL TIME (WINTER/CHRISTMAS):
 R-Top 10 Best Video Game Ice Levels of All Time - Blockfort
+U-The 10 best snow levels in video games - Den of Geek - 12-11-2019
+U-The Best Winter Levels in Games - DarkZero - 12-25-2015
+R-Top 10 Snow Levels - DEATH BATTLE! - 12-20-2018
+R-Top 10 Winter Areas in Video Games - dukey03 - 12-24-2022
+	F-+ HONORABLE MENTIONS
 
 TOP THEMATIC GENRE ALL TIME (POST-APOCALYPSE):
 R-The 10 Best Post-Apocalyptic Video Games Ranked - Maxim - 8-31-2016

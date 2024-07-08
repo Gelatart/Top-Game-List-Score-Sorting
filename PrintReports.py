@@ -1668,6 +1668,7 @@ while(answer_check_main == False):
                 print("2. OR approach")
                 print("3. Natural mix")
                 #Natural crashes it if there are empty arrays? figure out how to deal with it?
+                #Dad broke natural mix when trying to do games 1995-2013, minimum RS 1000, console format
                 and_or_type = input()
                 if (and_or_type != '1' and and_or_type != '2' and and_or_type != '3'):
                     print("Please try again with valid input")
