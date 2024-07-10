@@ -40,6 +40,7 @@ LittleBigPlanet
 The Legend of Zelda: Collector's Edition
 Gran Turismo 3: A-Spec
 Halo 2
+Elden Ring: Shadow of the Erdtree
 The Legend of Zelda: Majora's Mask
 The Legend of Zelda: A Link to the Past & Four Swords
 The Last of Us
@@ -67,9 +68,9 @@ Call of Duty 4: Modern Warfare
 BioShock Infinite
 Halo 3
 Ninja Gaiden Black
+Metal Gear Solid
 Grim Fandango
 Super Mario Advance 4: Super Mario Bros. 3
-Metal Gear Solid
 Tom Clancy's Splinter Cell: Chaos Theory
 <112875> God of War Ragnarok
 Resident Evil Code: Veronica
@@ -98,4 +99,3 @@ God of War II
 Super Mario 3D World
 StarCraft II: Wings of Liberty
 SSX
-Street Fighter IV

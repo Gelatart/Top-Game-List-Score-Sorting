@@ -436,6 +436,7 @@ Ninja Gaiden 2004: IGDB ID: 5972
 Ninja Gaiden NES: IGDB ID: 210484 (Will it be an issue that this is a port with a parent, the arcade original?)
 Ōkami/Okami: IGDB ID: 1271
 Ōkami/Okami HD: IGDB ID: 20744
+Paper Mario: The Thousand-Year Door [2024]: IGDB ID: 266690
 Perfect Dark GBC: IGDB ID: 1464
 Pokemon Black Version (what about white?): IGDB ID: 1521
 Pokemon Black Version 2 (what about white 2?): IGDB ID: 8284

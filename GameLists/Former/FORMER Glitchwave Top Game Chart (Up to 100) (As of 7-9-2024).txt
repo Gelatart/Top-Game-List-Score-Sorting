@@ -3,6 +3,7 @@ Bayonetta 2
 The Binding of Isaac: Rebirth
 Blood
 Bloodborne: The Old Hunters
+Burnout 3: Takedown
 Danganronpa 2: Goodbye Despair
 Danganronpa V3: Killing Harmony
 Dark Souls: Artorias of the Abyss
@@ -48,7 +49,6 @@ Super Mario All-Stars + Super Mario World
 Super Mario Bros. 3
 Super Smash Bros. Ultimate
 Thief: The Dark Project
-The Witcher 3: Wild Hunt
 The Witcher 3: Wild Hunt - Blood and Wine
 The Witcher 3: Wild Hunt - Hearts of Stone
 Wonderful Everyday: Down the Rabbit-Hole
