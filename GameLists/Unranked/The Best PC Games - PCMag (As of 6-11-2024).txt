@@ -46,6 +46,7 @@ Red Dead Redemption 2
 Rise of the Tomb Raider
 Sackboy: A Big Adventure
 Sekiro: Shadows Die Twice
+Senua's Saga: Hellblade II
 Shadow Complex Remastered
 Shadow of the Tomb Raider
 Shenmue I & II
@@ -101,7 +102,6 @@ The Last Blade
 Marvel vs. Capcom: Infinite
 Mortal Kombat XL
 Mortal Kombat 11
-MultiVersus
 <109277> Samurai Shodown [2019]
 Samurai Shodown NeoGeo Collection
 Skullgirls: 2nd Encore
@@ -113,6 +113,7 @@ Street Fighter 6
 Tekken 7
 Ultimate Marvel vs. Capcom 3
 Ultra Street Fighter IV
+Alan Wake II: Night Springs
 Alien: Isolation
 Dead Island
 Dead Rising 2: Off the Record
@@ -178,6 +179,7 @@ Genshin Impact
 Hades
 Hogwarts Legacy
 Honkai: Star Rail
+Horizon Zero Dawn: Complete Edition
 <143616> Legend of Mana [Remastered]
 Mass Effect: Andromeda
 Mass Effect Legendary Edition

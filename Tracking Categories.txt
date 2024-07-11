@@ -1,9 +1,9 @@
 RANKED: 102
 UNRANKED: 50
-FORMER: 15
+FORMER: 16
 UNUSED: 0
 ---
-TOTAL: 167
+TOTAL: 168
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -48,7 +48,8 @@ R-Glitchwave Top Game Chart (Up to 100) (As of 7-9-2024)
 	F-+ FORMER
 R-Metacritic (User Scores, Up to 100) (As of 7-9-2024)
 	F-+ FORMER
-R-Top 100 - Best Games - IGDB (As of 6-2-2024)
+R-Top 100 - Best Games - IGDB (As of 7-10-2024)
+	F-+ FORMER
 
 SCORE AGGREGATION (DISCONTINUED):
 R-GameRankings [Up to 100] (Accessed by gr.blade.sk) [DISCONTINUED DECEMBER 2019]
@@ -186,7 +187,7 @@ TOP PLATFORM OF ALL TIME (PC-98):
 R-Top 10 Best PC-98 Games of All Time - Blockfort
 
 BEST GAMES TO GET (PC):
-U-The Best PC Games - PCMag (As of 5-4-2024)
+U-The Best PC Games - PCMag (As of 6-11-2024)
 	F-+ FORMER
 
 UNRANKED LIST OF GREAT/IMPORTANT GAMES:
