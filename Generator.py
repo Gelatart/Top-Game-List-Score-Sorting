@@ -69,6 +69,7 @@ class GameObject:
         self.list_companies = []
         self.genres = []
         self.themes = []
+        self.order_inserted = 0
 
     #consider storing a constantly updated average score?
 
@@ -90,6 +91,7 @@ class GameObject:
         self.list_companies = []
         self.genres = []
         self.themes = []
+        self.order_inserted = 0
 
     def __init__(self, rank, list, total):
         self.igdb_ID = None
@@ -109,6 +111,7 @@ class GameObject:
         self.list_companies = []
         self.genres = []
         self.themes = []
+        self.order_inserted = 0
 
     #CONSIDER MAKING AN EXPORT FUNCTION FOR THE CLASS TO CONVERT TO DICTIONARY?
 
@@ -486,6 +489,7 @@ while(igdb_check == False):
         from igdb.igdbapi_pb2 import CompanyResult
         from igdb.igdbapi_pb2 import GenreResult
         from igdb.igdbapi_pb2 import ThemeResult
+        from igdb.igdbapi_pb2 import ReleaseDateResult
 
         igdb_request = wrapper.api_request(
             'games.pb',  # Note the '.pb' suffix at the endpoint
@@ -501,6 +505,8 @@ while(igdb_check == False):
         #Figure out if I can be more efficient with endpoints to make it take quicker? taking very long now
         print("Time to go looking around")
         time_speedup = 0;
+        order_of_insert = 1
+        #resets every time we start the process partway through? any workaround for this?
         #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
         for game, details in itertools.islice(game_DB.items(),0,limit_number):
             #if(scratch_answer == False and game in import_DB and details.igdb_found == True):
@@ -552,6 +558,7 @@ while(igdb_check == False):
                 check_string += 'where name = "'
                 check_string += game.strip()
                 check_string += '"'
+            check_string += ' & (status = (0,2,3,4,5,8) | status = null)'
             check_string += '; '
             #if (limit_answer):
                 #check_string += f'limit {limit_number}; '
@@ -651,6 +658,35 @@ while(igdb_check == False):
                     plat_counter += 1
                 # input("There they are!")
                 # game_DB[game].main_platform = earliest_game.platforms[0]
+                earliest_plat_release = None
+                earliest_plat_date = datetime.datetime.now()
+                for release in earliest_game.release_dates:
+                    print("Going through releases")
+                    release_ID = None
+                    sub_query = 'fields name; where id=' + str(release) + ';'
+                    sub_request = wrapper.api_request(
+                        'release_dates.pb',  # Note the '.pb' suffix at the endpoint
+                        sub_query
+                    )
+                    releases_message = ReleaseDateResult()
+                    releases_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
+                    releases = releases_message.releasedates
+                    # print(new_modes)
+                    curr_release = releases[0]
+                    if earliest_plat_release == None or earliest_plat > curr_release.date:
+                        earliest_plat_release = curr_release
+                        earliest_plat_date = curr_release.date
+                        main_plat = curr_release.platform
+                sub_query = 'fields name; where id=' + str(main_plat) + ';'
+                sub_request = wrapper.api_request(
+                    'platforms.pb',  # Note the '.pb' suffix at the endpoint
+                    sub_query
+                )
+                platforms_message = PlatformResult()
+                platforms_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
+                platforms = platforms_message.platforms
+                # input(platforms)
+                main_plat = platforms[0].name
                 game_DB[game].main_platform = main_plat  # Will this always pull best choice?
                 #^Seriously consider revising this to pull the first format with the earliest release date
                 #Because platform ID's are overruling too much (ex. wii is an early ID so overrides earlier releases)
@@ -762,6 +798,7 @@ while(igdb_check == False):
                         theme_type = new_themes[0].name
                         game_DB[game].themes.append(theme_type)
                         #input(theme_type)
+                game_DB[game].order_inserted = order_of_insert
             elif (len(games) == 1):
                 try:
                     current_game = games[0]
@@ -918,6 +955,7 @@ while(igdb_check == False):
                             theme_type = new_themes[0].name
                             game_DB[game].themes.append(theme_type)
                             #input(theme_type)
+                    game_DB[game].order_inserted = order_of_insert
                 except Exception as e:
                     print("An error has occurred:", e)
                     #it starts hitting errors when it gets to some of the new games featured in metacritic user scores?
@@ -925,6 +963,7 @@ while(igdb_check == False):
                 # print(result)
                 print("Not found with that name!")
                 input("Maybe you need to alter the title somehow?\n")
+            order_of_insert += 1
 
         # When there is ID confusion, need to clarify ID when putting entries
         # Have a process that runs through when generating databases and pauses
@@ -1106,6 +1145,7 @@ for game, details in itertools.islice(game_DB.items(),0,mongo_limit):
     export_dict["Themes"] = details['themes']
     #export_dict["Total Count"] = details.total_count
     export_dict["Total Count"] = details['total_count']
+    export_dict["Order Inserted"] = details['order_inserted']
     #export_dict = dict(game)
     #^need to expand and clarify more?
     #export_dict = dict('Title' = game, 'IGDB ID' = details.igdb_ID, 'Ranked Score' = details.ranked_score)

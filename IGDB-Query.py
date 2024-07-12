@@ -14,6 +14,7 @@ from igdb.igdbapi_pb2 import InvolvedCompanyResult
 from igdb.igdbapi_pb2 import CompanyResult
 from igdb.igdbapi_pb2 import GenreResult
 from igdb.igdbapi_pb2 import ThemeResult
+from igdb.igdbapi_pb2 import ReleaseDateResult
 
 #deal with query syntax errors better? here and in other progams? exception handling?
 
@@ -51,6 +52,7 @@ def query_loop(endpoint_option):
             games = games_message.games
 
             print(games)
+            print(len(games))
 
             while True:
                 print()
