@@ -1,9 +1,9 @@
 RANKED: 104
-UNRANKED: 50
+UNRANKED: 53
 FORMER: 16
 UNUSED: 0
 ---
-TOTAL: 170
+TOTAL: 173
 
 <^> indicates special notes for scoring that are not currently implemented
 
@@ -90,6 +90,8 @@ R-10 Best Halloween-Themed Levels In Video Games - CBR - 10-27-2022
 R-Top 10 Best Video Game Space Levels of All Time - Blockfort
 R-Top 10 Best Video Game Sewer Levels of All Time - Blockfort
 R-13 Games To Get You Into The Autumn Spirit - TheGamer - 9-17-2022
+U-10 Games to Ring in the Fall - Paste Magazine - 9-22-2022
+U-Feature - The Best Autumnal Levels In Video Games To Get You In The Fall Mood - NintendoLife - 10-9-2022
 
 TOP SEASONAL THEME ALL TIME (WINTER/CHRISTMAS):
 R-Top 10 Best Video Game Ice Levels of All Time - Blockfort
@@ -99,6 +101,7 @@ R-Top 10 Snow Levels - DEATH BATTLE! - 12-20-2018
 R-Top 10 Winter Areas in Video Games - dukey03 - 12-24-2022
 	F-+ HONORABLE MENTIONS
 R-12 Best Games Set During Christmas - GameRant - 11-29-2023
+U-10 Best Video Games That Take Place During The Winter - ScreenRant - 12-4-2021
 
 TOP THEMATIC GENRE ALL TIME (POST-APOCALYPSE):
 R-The 10 Best Post-Apocalyptic Video Games Ranked - Maxim - 8-31-2016

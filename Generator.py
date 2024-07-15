@@ -15,6 +15,7 @@ from igdb.wrapper import IGDBWrapper
 import json
 import pandas
 import re
+import datetime
 
 #Store a version of the games database externally so we can refer to it rather than keep having to override it each time?
 #Unless we pick a manual option to clear it? option to just update scores based on new lists?
@@ -141,7 +142,6 @@ for filename in os.listdir(directory):
         Lines = file1.readlines()
         #count = int(starting_line)
         count = len(Lines)
-        #input('Wait to review\n')
         original_count = count
         # Strips the newline character
         for line in Lines:
@@ -210,7 +210,6 @@ for filename in os.listdir(directory):
     f = os.path.join(directory, filename)
     # checking if it is a file
     if os.path.isfile(f):
-        #print(f)
         # Using readlines()
         # file1 = open(f, 'r')
         file1 = open(f, 'r', encoding="utf-8")
@@ -500,7 +499,6 @@ while(igdb_check == False):
         games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
         games = games_message.games
         print(games)
-        # input("Here we pause")
 
         #Figure out if I can be more efficient with endpoints to make it take quicker? taking very long now
         print("Time to go looking around")
@@ -686,7 +684,7 @@ while(igdb_check == False):
                 platforms_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
                 platforms = platforms_message.platforms
                 # input(platforms)
-                main_plat = platforms[0].name
+                #main_plat = platforms[0].name
                 game_DB[game].main_platform = main_plat  # Will this always pull best choice?
                 #^Seriously consider revising this to pull the first format with the earliest release date
                 #Because platform ID's are overruling too much (ex. wii is an early ID so overrides earlier releases)
@@ -855,6 +853,35 @@ while(igdb_check == False):
                             main_plat = plat_name
                         list_plats.append(plat_name)
                         plat_counter += 1
+                    earliest_plat_release = None
+                    earliest_plat_date = datetime.datetime.now()
+                    for release in earliest_game.release_dates:
+                        print("Going through releases")
+                        release_ID = None
+                        sub_query = 'fields name; where id=' + str(release) + ';'
+                        sub_request = wrapper.api_request(
+                            'release_dates.pb',  # Note the '.pb' suffix at the endpoint
+                            sub_query
+                        )
+                        releases_message = ReleaseDateResult()
+                        releases_message.ParseFromString(
+                            sub_request)  # Fills the protobuf message object with the response
+                        releases = releases_message.releasedates
+                        # print(new_modes)
+                        curr_release = releases[0]
+                        if earliest_plat_release == None or earliest_plat > curr_release.date:
+                            earliest_plat_release = curr_release
+                            earliest_plat_date = curr_release.date
+                            main_plat = curr_release.platform
+                    sub_query = 'fields name; where id=' + str(main_plat) + ';'
+                    sub_request = wrapper.api_request(
+                        'platforms.pb',  # Note the '.pb' suffix at the endpoint
+                        sub_query
+                    )
+                    platforms_message = PlatformResult()
+                    platforms_message.ParseFromString(
+                        sub_request)  # Fills the protobuf message object with the response
+                    platforms = platforms_message.platforms
                     game_DB[game].main_platform = main_plat
                     if (len(list_plats) > 0):
                         game_DB[game].list_platforms = list_plats
