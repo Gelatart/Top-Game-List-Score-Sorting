@@ -459,6 +459,7 @@ Pokemon Red Version (what about blue?): IGDB ID: 1561
 Pokemon Ruby Version (what about Sapphire?): IGDB ID: 1557
 Pokemon SNAP: IGDB ID: 2324
 Pokemon Stadium: IGDB ID: 2289
+Pokemon Sun Version: IGDB ID: 18100
 Pokemon Trading Card Game GBC: IGDB ID: 4567
 Pokemon Ultra Sun (what about ultra moon?): IGDB ID: 36792
 Pokemon X (what about y?): IGDB ID: 2286
