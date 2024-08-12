@@ -25,4 +25,39 @@ Metro 2033 Redux
 Metro: Last Light Redux
 Metro Exodus
 Tom Clancy's The Division
+SnowRunner
+Overlord II
+Monster Hunter: World - Iceborne
+Silent Hill
+Resident Evil Village
+Until Dawn
+The Thing
+D2
+Lost Planet: Extreme Condition
+Lost Planet 2
+Lost Planet 3
+The Long Dark
+Far Cry 4
+Uncharted 2: Among Thieves
+Metal Gear Solid
+Rise of the Tomb Raider
+Celeste
+Steep
+Frostpunk
+Company of Heroes 2
+Sekiro: Shadows Die Twice
+South Park: The Stick of Truth
+South Park: The Fractured But Whole
+Max Payne
+Donkey Kong Country: Tropical Freeze
+Wasteland 3
+Disco Elysium
+Kona
+Never Alone: Kisima Ingitchuna
+Indigo Prophecy
+The Banner Saga
+Subnautica: Below Zero
+Gears 5
+Freedom Fighters
+Brothers: A Tale of Two Sons
 ...
