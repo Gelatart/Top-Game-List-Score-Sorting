@@ -355,6 +355,7 @@ Final Fantasy VII --> 0.6945538057742782
 The Witcher 3: Wild Hunt --> 0.6943281309478493
 Mass Effect 2 --> 0.6929206251915415
 Paper Mario: The Origami King --> 0.6923076923076923
+Paper Mario: The Origami King --> 0.6923076923076923
 Hollow Knight --> 0.6904761904761905
 Metroid Prime --> 0.6903781355297641
 Geometry Wars: Retro Evolved 2 --> 0.69

@@ -1106,7 +1106,7 @@ while True:
     elif(mongo_option == '2'):
         print("Set your limit here")
         #add input verification
-        mongo_limit = input()
+        mongo_limit = int(input())
         break
     elif (mongo_option == '3'):
         break
