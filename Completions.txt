@@ -34,6 +34,7 @@ Pikmin 2
 <1512> Pokemon Yellow Version
 Portal
 Portal 2
+Psychonauts
 Resident Evil 4
 Silent Hill
 Silent Hill 2
