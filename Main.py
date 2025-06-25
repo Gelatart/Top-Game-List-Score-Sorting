@@ -154,27 +154,27 @@ while(program_completed == False):
         if(option == '1' or option == 'Generator.py' or option == 'Generator' or option == 'generator' or option == 'generator.py'):
             #print("Generator.py will be run now")
             option_check = True
-            program_selected = 'Generator.py'
+            program_selected = 'src/Generator.py'
         elif(option == '2' or option == 'AltGenerator.py' or option == 'AltGenerator' or option == 'altgenerator' or option == 'altgenerator.py'):
             #print("AltGenerator.py will be run now")
             option_check = True
-            program_selected = 'AltGenerator.py'
+            program_selected = 'src/AltGenerator.py'
         elif (option == '3' or option == 'PrintReports.py' or option == 'PrintReports' or option == 'printreports' or option == 'printreports.py'):
             option_check = True
-            program_selected = 'PrintReports.py'
+            program_selected = 'src/PrintReports.py'
         elif (option == '4' or option == 'Drop.py' or option == 'Drop' or option == 'drop' or option == 'drop.py'):
             #print("Drop.py will be run now")
             option_check = True
-            program_selected = 'Drop.py'
+            program_selected = 'src/Drop.py'
         elif (option == '5' or option == 'QuickMath.py' or option == 'QuickMath' or option == 'quickmath' or option == 'quickmath.py'):
             option_check = True
-            program_selected = 'QuickMath.py'
+            program_selected = 'src/QuickMath.py'
         elif (option == '6' or option == 'IGDB-Query.py' or option == 'IGDB-Query' or option == 'igdb-query' or option == 'igdb-query.py'):
             option_check = True
-            program_selected = 'IGDB-Query.py'
+            program_selected = 'src/IGDB-Query.py'
         elif (option == '7' or option == 'Mongo-Query.py' or option == 'Mongo-Query' or option == 'mongo-query' or option == 'mongo-query.py'):
             option_check = True
-            program_selected = 'Mongo-Query.py'
+            program_selected = 'src/Mongo-Query.py'
         elif(option == '8' or option == 'Quit' or option == 'quit' or option == 'Exit' or option == 'exit'):
             option_check = True
             print("Thank you for spending time with this program.")
