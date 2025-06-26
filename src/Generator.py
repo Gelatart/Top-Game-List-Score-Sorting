@@ -17,6 +17,8 @@ import pandas
 import re
 import datetime
 
+#Put this code into chatgpt to see its suggestions on cleaning, reorganizing, and extension
+
 #Store a version of the games database externally so we can refer to it rather than keep having to override it each time?
 #Unless we pick a manual option to clear it? option to just update scores based on new lists?
 #check to see if already in database before we bother to get info
@@ -30,6 +32,17 @@ import datetime
 
 load_dotenv()
 #^To actually populate what we will need from mongo connection
+
+#Make a function to append to file names based on src? To add ..\ if they need to go back up on directory
+def check_for_src(potential_filename):
+    cwd = os.getcwd()
+    #input("We are currently in " + cwd)
+    if_src = cwd[-3:]
+    #input(if_src)
+    if(if_src == "src"):
+        potential_filename = "..\\" + potential_filename
+    #input(potential_filename)
+    return potential_filename
 
 def mongo_connect():
     #Replace the part where this originally happened later in the code with this function?
@@ -49,11 +62,78 @@ def mongo_connect():
         connect_message = e
     return connect_message
 
+"game_DB is a dict of string titles and game object values"
+game_DB = {}
+#modified_DB is meant to hold modified entries that originally had <> names, and put back into game_DB later
+modified_DB = {}
+"game object needs two scores"
+class GameObject:
+    def __init__(self, rank):
+        #Add seasonal attribute? Would have to set manually in my own text files?
+        self.igdb_ID = None
+        self.igdb_found = False
+        self.ranked_score = rank
+        self.list_count = 1
+        self.lists_referencing = []
+        self.total_count = 0
+        self.completed = False
+        self.main_platform = 'None'
+        self.list_platforms = []
+        self.release_date = 'Unknown' #Can I set this to some date value?
+        self.player_counts = []
+        self.list_developers = []
+        self.list_publishers = []
+        self.list_companies = []
+        self.genres = []
+        self.themes = []
+        self.order_inserted = 0
+
+    def __init__(self, rank, list):
+        self.igdb_ID = None
+        self.igdb_found = False
+        self.ranked_score = rank
+        self.list_count = 1
+        self.lists_referencing = []
+        self.lists_referencing.append(list)
+        self.total_count = 0
+        self.completed = False
+        self.main_platform = 'None'
+        self.list_platforms = []
+        self.release_date = 'Unknown'  # Can I set this to some date value?
+        self.player_counts = []
+        self.list_developers = []
+        self.list_publishers = []
+        self.list_companies = []
+        self.genres = []
+        self.themes = []
+        self.order_inserted = 0
+
+    def __init__(self, rank, list, total):
+        self.igdb_ID = None
+        self.igdb_found = False
+        self.ranked_score = rank
+        self.list_count = 1
+        self.lists_referencing = []
+        self.lists_referencing.append(list)
+        self.total_count = total
+        self.completed = False
+        self.main_platform = 'None'
+        self.list_platforms = []
+        self.release_date = 'Unknown'
+        self.player_counts = []
+        self.list_developers = []
+        self.list_publishers = []
+        self.list_companies = []
+        self.genres = []
+        self.themes = []
+        self.order_inserted = 0
+    # CONSIDER MAKING AN EXPORT FUNCTION FOR THE CLASS TO CONVERT TO DICTIONARY?
+
 def main():
     #Basic solution to get testing functions to work for now, make a cleaner solution later?
     # assign directory
     #directory = 'C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameLists\Ranked'
-    directory = r'GameLists\Ranked'
+    directory = check_for_src(r'GameLists\Ranked')
     #then do unranked and former
 
     #LOOK INTO PANDAS FOR DEALING WITH TABULAR DATA IN PYTHON
@@ -65,76 +145,7 @@ def main():
     #SEE IF BACKLOGGD CHARTS COMPARE, IF CAN DO SIMILAR THINGS TO GLITCHWAVE (ALSO LOOK INTO GROUVEE?)
 
     #ONCE CLEARED ALL OF AN UP TO LIST, THEN CONSIDER EXPANDING THE RANGE (LIKE FROM UP TO 100 TO UP TO 150)
-
-    "game_DB is a dict of string titles and game object values"
-    game_DB = {}
-    #modified_DB is meant to hold modified entries that originally had <> names, and put back into game_DB later
-    modified_DB = {}
-    "game object needs two scores"
-    class GameObject:
-        def __init__(self, rank):
-            #Add seasonal attribute? Would have to set manually in my own text files?
-            self.igdb_ID = None
-            self.igdb_found = False
-            self.ranked_score = rank
-            self.list_count = 1
-            self.lists_referencing = []
-            self.total_count = 0
-            self.completed = False
-            self.main_platform = 'None'
-            self.list_platforms = []
-            self.release_date = 'Unknown' #Can I set this to some date value?
-            self.player_counts = []
-            self.list_developers = []
-            self.list_publishers = []
-            self.list_companies = []
-            self.genres = []
-            self.themes = []
-            self.order_inserted = 0
-
         #consider storing a constantly updated average score?
-
-        def __init__(self, rank, list):
-            self.igdb_ID = None
-            self.igdb_found = False
-            self.ranked_score = rank
-            self.list_count = 1
-            self.lists_referencing = []
-            self.lists_referencing.append(list)
-            self.total_count = 0
-            self.completed = False
-            self.main_platform = 'None'
-            self.list_platforms = []
-            self.release_date = 'Unknown'  # Can I set this to some date value?
-            self.player_counts = []
-            self.list_developers = []
-            self.list_publishers = []
-            self.list_companies = []
-            self.genres = []
-            self.themes = []
-            self.order_inserted = 0
-
-        def __init__(self, rank, list, total):
-            self.igdb_ID = None
-            self.igdb_found = False
-            self.ranked_score = rank
-            self.list_count = 1
-            self.lists_referencing = []
-            self.lists_referencing.append(list)
-            self.total_count = total
-            self.completed = False
-            self.main_platform = 'None'
-            self.list_platforms = []
-            self.release_date = 'Unknown'
-            self.player_counts = []
-            self.list_developers = []
-            self.list_publishers = []
-            self.list_companies = []
-            self.genres = []
-            self.themes = []
-            self.order_inserted = 0
-
-        #CONSIDER MAKING AN EXPORT FUNCTION FOR THE CLASS TO CONVERT TO DICTIONARY?
 
     #Start collecting the lists used in a list, put to a new collection in MongoDB
     games_lists = []
@@ -182,7 +193,7 @@ def main():
                 count -= 1
             games_lists.append(filename)
 
-    directory = r'GameLists\Unranked'
+    directory = check_for_src(r'GameLists\Unranked')
 
     for filename in os.listdir(directory):
         f = os.path.join(directory, filename)
@@ -225,7 +236,7 @@ def main():
                 #count -= 1
             games_lists.append(filename)
 
-    directory = r'GameLists\Former'
+    directory = check_for_src(r'GameLists\Former')
     for filename in os.listdir(directory):
         f = os.path.join(directory, filename)
         # checking if it is a file
@@ -261,7 +272,7 @@ def main():
                 #count -= 1
             games_lists.append(filename)
 
-    completeFile = open('Completions.txt', 'r')
+    completeFile = open(check_for_src('Completions.txt'), 'r')
     completeLines = completeFile.readlines()
     for line in completeLines:
         stripped_line = line.strip()
@@ -356,7 +367,7 @@ def main():
     #json_dict = json.loads(json_string)
 
     #Initial print of what we have in the games database
-    with open ("games_pre.json", "w") as outfile:
+    with open (check_for_src("games_pre.json"), "w") as outfile:
         out_json = json.dump(export_DB, outfile)
         #out_json = json.dump(json_dict, outfile)
         #out_json = json.dump(json_string, outfile)
@@ -368,12 +379,12 @@ def main():
 
     input("Let's test pulling from JSON!\n")
 
-    with open("games_pre.json", "r") as json_file:
+    with open(check_for_src("games_pre.json"), "r") as json_file:
         #Reading the first character throws everything off
         #import_DB = json.load(json_file)
         #first_char = json_file.read(1)
         #if not first_char:
-        if(os.stat("games_pre.json").st_size == 0):
+        if(os.stat(check_for_src("games_pre.json")).st_size == 0):
             print("Looks like we don't have anything in games_pre.json yet")
         else:
             import_DB = json.load(json_file)
@@ -395,10 +406,10 @@ def main():
 
     #eventually try for functionality where we only update the games that have updated scores? or new games?
 
-    with open("games.json") as json_file:
+    with open(check_for_src("games.json")) as json_file:
         #first_char = json_file.read(1)
         #if not first_char:
-        if (os.stat("games.json").st_size == 0):
+        if (os.stat(check_for_src("games.json")).st_size == 0):
             print("Looks like we don't have anything in games.json yet")
         else:
             import_DB = json.load(json_file)
@@ -1073,7 +1084,7 @@ def main():
             else:
                 export_DB[game] = json.loads(json.dumps(details.__dict__))
 
-    with open ("games.json", "w") as outfile:
+    with open (check_for_src("games.json"), "w") as outfile:
         json.dump(export_DB, outfile)
 
     print("Games exported to games.json!")
@@ -1236,12 +1247,12 @@ def main():
     games_pulled_average = mon_col.find().sort("Average Score", -1)
 
     #Opening the files that we are going to be writing to
-    file_ranked = open("Sorted by Ranked.txt","w", encoding="utf-8")
-    file_inclusion = open("Sorted by Inclusion.txt","w", encoding="utf-8")
-    file_average = open("Sorted by Average.txt","w", encoding="utf-8")
-    file_ranked_uncompleted = open("Sorted by Ranked (Uncompleted).txt", "w", encoding="utf-8")
-    file_inclusion_uncompleted = open("Sorted by Inclusion (Uncompleted).txt","w", encoding="utf-8")
-    file_average_uncompleted = open("Sorted by Average (Uncompleted).txt","w", encoding="utf-8")
+    file_ranked = open(check_for_src("Sorted by Ranked.txt"),"w", encoding="utf-8")
+    file_inclusion = open(check_for_src("Sorted by Inclusion.txt"),"w", encoding="utf-8")
+    file_average = open(check_for_src("Sorted by Average.txt"),"w", encoding="utf-8")
+    file_ranked_uncompleted = open(check_for_src("Sorted by Ranked (Uncompleted).txt"), "w", encoding="utf-8")
+    file_inclusion_uncompleted = open(check_for_src("Sorted by Inclusion (Uncompleted).txt"),"w", encoding="utf-8")
+    file_average_uncompleted = open(check_for_src("Sorted by Average (Uncompleted).txt"),"w", encoding="utf-8")
 
     for game in games_pulled_ranked:
         #print(game)
@@ -1387,7 +1398,7 @@ def main():
         themes_string = ', '.join(game['Themes'])
         sheet1.write(excel_count, 15, themes_string)
         excel_count += 1
-    wb.save('Sorted Database.xls')
+    wb.save(check_for_src('Sorted Database.xls'))
 
     games_pulled = mon_col.find().limit(5)
     for game in games_pulled:
@@ -1407,6 +1418,10 @@ def main():
     games_pulled_inclusion.close()
 
     print("Successfully completed! Have a good day!")
+
+"Where we start the main function"
+if __name__ == "__main__":
+    main()
 
 """"
 REFERENCES:
