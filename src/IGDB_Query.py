@@ -18,6 +18,13 @@ from igdb.igdbapi_pb2 import ReleaseDateResult
 
 #deal with query syntax errors better? here and in other progams? exception handling?
 
+def query_build_func(query):
+    igdb_request = wrapper.api_request(
+        'games.pb',  # Note the '.pb' suffix at the endpoint
+        query
+    )
+    return igdb_request
+
 def query_loop(endpoint_option):
     while True:
         query = input("Enter your query for the IGDB API here. Make sure to use the proper syntax to not have an error\n")
@@ -289,79 +296,84 @@ def query_loop(endpoint_option):
             print("Sorry, I don't understand. Try again")
             continue
 
-load_dotenv()
-client_id = os.getenv('CLIENT_ID')
-client_secret = os.getenv('CLIENT_SECRET')
-"""
-post = 'https://id.twitch.tv/oauth2/token?client_id='
-post += client_id
-post += '&client_secret='
-post += client_secret
-post += '&grant_type=client_credentials'
-"""
-post = f'https://id.twitch.tv/oauth2/token?client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials'
+def main():
+    load_dotenv()
+    client_id = os.getenv('CLIENT_ID')
+    client_secret = os.getenv('CLIENT_SECRET')
+    """
+    post = 'https://id.twitch.tv/oauth2/token?client_id='
+    post += client_id
+    post += '&client_secret='
+    post += client_secret
+    post += '&grant_type=client_credentials'
+    """
+    post = f'https://id.twitch.tv/oauth2/token?client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials'
 
-#page = requests.get(post) #404
-page = requests.post(post) #gives access token we can use
-print(page.text)
+    #page = requests.get(post) #404
+    page = requests.post(post) #gives access token we can use
+    print(page.text)
 
-#wrapper = IGDBWrapper("YOUR_CLIENT_ID", "YOUR_APP_ACCESS_TOKEN")
-received = json.loads(page.text)
-access_token = received["access_token"]
-#print(access_token)
-wrapper = IGDBWrapper(client_id, access_token)
+    #wrapper = IGDBWrapper("YOUR_CLIENT_ID", "YOUR_APP_ACCESS_TOKEN")
+    received = json.loads(page.text)
+    access_token = received["access_token"]
+    #print(access_token)
+    wrapper = IGDBWrapper(client_id, access_token)
 
-igdb_request = wrapper.api_request(
-            'games.pb', # Note the '.pb' suffix at the endpoint
-            #'fields name, rating; limit 5; offset 0;'
-            'fields name, rating; offset 0;'
-          )
-games_message = GameResult()
-games_message.ParseFromString(igdb_request) # Fills the protobuf message object with the response
-games = games_message.games
+    igdb_request = wrapper.api_request(
+                'games.pb', # Note the '.pb' suffix at the endpoint
+                #'fields name, rating; limit 5; offset 0;'
+                'fields name, rating; offset 0;'
+              )
+    games_message = GameResult()
+    games_message.ParseFromString(igdb_request) # Fills the protobuf message object with the response
+    games = games_message.games
 
-endpoint_types = { '1': 'Game Modes', '2': 'Platforms', '3': 'Platform Family', '4': 'Involved Company', '5': 'Company', '6': 'Genre', '7': 'Theme'}
+    endpoint_types = { '1': 'Game Modes', '2': 'Platforms', '3': 'Platform Family', '4': 'Involved Company', '5': 'Company', '6': 'Genre', '7': 'Theme'}
 
-while True:
-#give option to return back here or just to option already set upon
-    print("Would you like to use the games endpoint or another?")
-    print("1. Games")
-    print("2. Another")
-    print("3. Quit Program")
-    endpoint_option_1 = input()
-    if(endpoint_option_1 == "1"):
-        print()
-        print("You have selected Games, the usual. Let's get started!")
-        print()
-        query_loop('games')
-    elif(endpoint_option_1 == "2"):
-        print()
-        print("You have selected another. Which endpoint would you like to use?")
-        print("1. Game Modes")
-        print("2. Platform")
-        print("3. Platform Family")
-        print("4. Involved Company")
-        print("5. Company")
-        print("6. Genre")
-        print("7. Theme")
-        #...
-        endpoint_option_2 = input()
-        print()
-        print(f"You have selected: {endpoint_types[endpoint_option_2]}")
-        print()
-        query_loop(endpoint_option_2)
-    elif (endpoint_option_1 == "3"):
-        print()
-        print("Alright! Wrapping up the program!")
-        print()
-        break
-    else:
-        print()
-        print("Sorry, I don't understand. Try again")
-        print()
-        continue
+    while True:
+    #give option to return back here or just to option already set upon
+        print("Would you like to use the games endpoint or another?")
+        print("1. Games")
+        print("2. Another")
+        print("3. Quit Program")
+        endpoint_option_1 = input()
+        if(endpoint_option_1 == "1"):
+            print()
+            print("You have selected Games, the usual. Let's get started!")
+            print()
+            query_loop('games')
+        elif(endpoint_option_1 == "2"):
+            print()
+            print("You have selected another. Which endpoint would you like to use?")
+            print("1. Game Modes")
+            print("2. Platform")
+            print("3. Platform Family")
+            print("4. Involved Company")
+            print("5. Company")
+            print("6. Genre")
+            print("7. Theme")
+            #...
+            endpoint_option_2 = input()
+            print()
+            print(f"You have selected: {endpoint_types[endpoint_option_2]}")
+            print()
+            query_loop(endpoint_option_2)
+        elif (endpoint_option_1 == "3"):
+            print()
+            print("Alright! Wrapping up the program!")
+            print()
+            break
+        else:
+            print()
+            print("Sorry, I don't understand. Try again")
+            print()
+            continue
 
-print("Successfully completed! Goodbye!")
+    print("Successfully completed! Goodbye!")
+
+"Where we start the main function"
+if __name__ == "__main__":
+    main()
 
 #create a function/program that scans IGDB ID's for duplicates so I can give them consistent formatting
 #display all titles found for a certain ID so I can compare and determine best title
