@@ -17,23 +17,15 @@ import pandas
 import re
 import datetime
 
-#Put this code into chatgpt to see its suggestions on cleaning, reorganizing, and extension
-
-#Store a version of the games database externally so we can refer to it rather than keep having to override it each time?
-#Unless we pick a manual option to clear it? option to just update scores based on new lists?
-#check to see if already in database before we bother to get info
-#Have different phases of external database?
-#First phase would be purely the names we grab from lists
-#Second phase would be after IGDB information put into it
-#we send off the second phase info to mongo, maybe give option just to do only that off of what we already have
-#then we pull the mongo info in to a real listed sortable form
-
-#add ability to put comments in text files? ex. jackbox party pack quintpack is actually jackbox party pack 1-6
+from .config import check_for_src
+from .config import get_env_var
+from .game_object import GameObject
 
 load_dotenv()
 #^To actually populate what we will need from mongo connection
 
 #Make a function to append to file names based on src? To add ..\ if they need to go back up on directory
+"""
 def check_for_src(potential_filename):
     cwd = os.getcwd()
     #input("We are currently in " + cwd)
@@ -41,15 +33,15 @@ def check_for_src(potential_filename):
     #input(if_src)
     if(if_src == "src"):
         potential_filename = "..\\" + potential_filename
-    #input(potential_filename)
     return potential_filename
+"""
 
 def mongo_connect():
     #Replace the part where this originally happened later in the code with this function?
-    mon_connect = os.getenv('MONGO_URI')
+    #mon_connect = os.getenv('MONGO_URI')
+    mon_connect = get_env_var('MONGO_URI')
     mon_client = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
     monDB = mon_client["GameSorting"]
-    #input("About to attempt connection to Mongo, press ENTER when you are ready")
     #^Have this part happen before the function actually goes?
     connect_message = ""
     try:
@@ -66,7 +58,9 @@ def mongo_connect():
 game_DB = {}
 #modified_DB is meant to hold modified entries that originally had <> names, and put back into game_DB later
 modified_DB = {}
+
 "game object needs two scores"
+"""
 class GameObject:
     def __init__(self, rank):
         #Add seasonal attribute? Would have to set manually in my own text files?
@@ -128,6 +122,7 @@ class GameObject:
         self.themes = []
         self.order_inserted = 0
     # CONSIDER MAKING AN EXPORT FUNCTION FOR THE CLASS TO CONVERT TO DICTIONARY?
+"""
 
 def main():
     #Basic solution to get testing functions to work for now, make a cleaner solution later?
@@ -135,8 +130,6 @@ def main():
     #directory = 'C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameLists\Ranked'
     directory = check_for_src(r'GameLists\Ranked')
     #then do unranked and former
-
-    #LOOK INTO PANDAS FOR DEALING WITH TABULAR DATA IN PYTHON
 
     #START FLESHING OUT GLITCHWAVE USAGE
         #FILL OUT RATINGS, COLLECTION, PLAYTHROUGHS, ETC.
@@ -188,7 +181,6 @@ def main():
                     game_DB[line] = newObj
                 #searchObj = game_DB.get(newObj, 0) + 1
                 #game_DB[line].list_count = game_DB.get(newObj, 0) + 1
-                #print("Score of {}: {}".format(count, line.strip()))
                 print(f"Score of {count}: {line.strip()}")
                 count -= 1
             games_lists.append(filename)
@@ -231,7 +223,6 @@ def main():
                     game_DB[line] = newObj
                 #searchObj = game_DB.get(newObj, 0) + 1
                 #game_DB[line].list_count = game_DB.get(newObj, 0) + 1
-                # print("Score of {}: {}".format(count, line.strip()))
                 print(f"Score of {count}: {line.strip()}")
                 #count -= 1
             games_lists.append(filename)
@@ -267,7 +258,6 @@ def main():
                     game_DB[line] = newObj
                 #searchObj = game_DB.get(newObj, 0) + 1
                 #game_DB[line].list_count = game_DB.get(newObj, 0) + 1
-                # print("Score of {}: {}".format(count, line.strip()))
                 print(f"Score of {count}: {line.strip()}")
                 #count -= 1
             games_lists.append(filename)
@@ -348,7 +338,6 @@ def main():
     #Taking custom class objects and making them JSON exportable
     export_DB = {}
     #export_DB["games"] = []
-    #export_DB = []
 
     import itertools
 
@@ -356,7 +345,6 @@ def main():
     #for game, details in itertools.islice(game_DB.items(),0,3):
         #export_DB[game] = json.loads(details.__dict__)
         export_DB[game] = json.loads(json.dumps(details.__dict__))
-        #export_DB["games"].append(json.dumps(details.__dict__))
         #export_string = json.dumps(details.__dict__)
         #export_DB.append(export_string)
 
@@ -374,7 +362,6 @@ def main():
         print(out_json)
 
     import_DB = {}
-    #import_DB = []
     #import_DB["games"] = []
 
     input("Let's test pulling from JSON!\n")
@@ -490,15 +477,9 @@ def main():
                 Body: "fields *;"
         
             """
-            client_id = os.getenv('CLIENT_ID')
-            client_secret = os.getenv('CLIENT_SECRET')
-            """
-            post = 'https://id.twitch.tv/oauth2/token?client_id='
-            post += client_id
-            post += '&client_secret='
-            post += client_secret
-            post += '&grant_type=client_credentials'
-            """
+            client_id = get_env_var('CLIENT_ID')
+            #client_secret = os.getenv('CLIENT_SECRET')
+            client_secret = get_env_var('CLIENT_SECRET')
             post = f'https://id.twitch.tv/oauth2/token?client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials'
 
             # page = requests.get(post) #404
@@ -524,7 +505,6 @@ def main():
             igdb_request = wrapper.api_request(
                 'games.pb',  # Note the '.pb' suffix at the endpoint
                  'fields name, rating; limit 5; offset 0;'
-                # 'fields name, rating; offset 0;'
             )
             games_message = GameResult()
             games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
@@ -576,7 +556,6 @@ def main():
                     removal = '<' + title_ID + '> '
                     #modified_title = game_title.strip(str(substring))
                     modified_title = game_title.strip(removal)
-                    #input(substring)
                     #input(modified_title)
                     check_string += title_ID
                     #Maybe grab the name from IGDB here, to update the name before it gets sent to the cluster?
@@ -614,7 +593,6 @@ def main():
                     versions_counter = 0
                     # print(games[0])
                     # earliest_release = int(round(games[0].first_release_date))
-                    # earliest_release = games[0].first_release_date
                     # earliest_release = games[0].first_release_date.to_pydatetime()
                     earliest_release = games[0].first_release_date.ToDatetime()
                     earliest_game = games[0]
@@ -667,7 +645,6 @@ def main():
                         platforms_message.ParseFromString(
                             sub_request)  # Fills the protobuf message object with the response
                         platforms = platforms_message.platforms
-                        #input(platforms)
                         plat_name = platforms[0].name
                         if (plat_counter == 0):
                             main_plat = plat_name
@@ -700,7 +677,6 @@ def main():
                         releases_message = ReleaseDateResult()
                         releases_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
                         releases = releases_message.releasedates
-                        # print(new_modes)
                         curr_release = releases[0]
                         if earliest_plat_release == None or earliest_plat > curr_release.date:
                             earliest_plat_release = curr_release
@@ -714,7 +690,6 @@ def main():
                     platforms_message = PlatformResult()
                     platforms_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
                     platforms = platforms_message.platforms
-                    # input(platforms)
                     #main_plat = platforms[0].name
                     game_DB[game].main_platform = main_plat  # Will this always pull best choice?
                     #^Seriously consider revising this to pull the first format with the earliest release date
@@ -766,7 +741,6 @@ def main():
                             inv_companies_message.ParseFromString(sub_request_1)  # Fills the protobuf message object with the response
                             inv_companies = inv_companies_message.involvedcompanies
                             #print(inv_companies)
-                            #print(len(inv_companies))
                             if(len(inv_companies) == 0):
                                 continue
                             #second query to look at the company specifically
@@ -792,7 +766,6 @@ def main():
                                 game_DB[game].list_developers.append(dev_name)
                             if (is_pub):
                                 game_DB[game].list_publishers.append(dev_name)
-                            #input(dev_name)
                         # game_DB[game].list_developers = developers  # Will this grab the most definitive list?
                     #ADD GENRES
                     genres = earliest_game.genres
@@ -826,7 +799,6 @@ def main():
                             new_themes = themes_message.themes
                             theme_type = new_themes[0].name
                             game_DB[game].themes.append(theme_type)
-                            #input(theme_type)
                     game_DB[game].order_inserted = order_of_insert
                 elif (len(games) == 1):
                     try:
@@ -868,7 +840,6 @@ def main():
                         main_plat = None
                         plat_name = None
                         list_plats = []
-                        #input(current_game.platforms)
                         while (plat_counter < len(current_game.platforms)):
                             plat_ID = current_game.platforms[plat_counter]
                             sub_query = 'fields name; where id=' + str(plat_ID.id) + ';'
@@ -898,7 +869,6 @@ def main():
                             releases_message.ParseFromString(
                                 sub_request)  # Fills the protobuf message object with the response
                             releases = releases_message.releasedates
-                            # print(new_modes)
                             curr_release = releases[0]
                             if earliest_plat_release == None or earliest_plat > curr_release.date:
                                 earliest_plat_release = curr_release
@@ -921,7 +891,6 @@ def main():
                         if (len(modes) > 0):
                             for mode in modes:
                                 mode_type = None
-                                # input(mode)
                                 # sub_query = 'fields *;'
                                 sub_query = 'fields name; where id=' + str(mode.id) + ';'
                                 sub_request = wrapper.api_request(
@@ -934,7 +903,6 @@ def main():
                                 new_modes = modes_message.gamemodes
                                 mode_type = new_modes[0].name
                                 game_DB[game].player_counts.append(mode_type)
-                                # input(mode_type)
                             # game_DB[game].player_counts = modes # Changes approach but for the better?
                         # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
                         developers = current_game.involved_companies
@@ -956,7 +924,6 @@ def main():
                                     sub_request_1)  # Fills the protobuf message object with the response
                                 inv_companies = inv_companies_message.involvedcompanies
                                 #print(inv_companies)
-                                #print(len(inv_companies))
                                 if (len(inv_companies) == 0):
                                     continue
                                 # second query to look at the company specifically
@@ -1012,13 +979,11 @@ def main():
                                 new_themes = themes_message.themes
                                 theme_type = new_themes[0].name
                                 game_DB[game].themes.append(theme_type)
-                                #input(theme_type)
                         game_DB[game].order_inserted = order_of_insert
                     except Exception as e:
                         print("An error has occurred:", e)
                         #it starts hitting errors when it gets to some of the new games featured in metacritic user scores?
                 else:
-                    # print(result)
                     print("Not found with that name!")
                     input("Maybe you need to alter the title somehow?\n")
                 order_of_insert += 1
@@ -1089,10 +1054,10 @@ def main():
 
     print("Games exported to games.json!")
 
-    #START USING PYMONGO FOR OUTPUTTING TO MONGODB DATABASE
     #Used code sample from Atlas on how to connect with Pymongo for assistance here
     #Connecting to env file to get private login data
-    mon_connect = os.getenv('MONGO_URI')
+    #mon_connect = os.getenv('MONGO_URI')
+    mon_connect = get_env_var('MONGO_URI')
     mon_client = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
     monDB = mon_client["GameSorting"]
     #input(mon_connect)
@@ -1144,7 +1109,6 @@ def main():
         else:
             print("I'm sorry, I don't understand. Please enter valid input")
             continue
-    #export = []
     print("INSERTING INTO MONGODB!")
     for game, details in itertools.islice(game_DB.items(),0,mongo_limit):
         print(game_DB.items().__class__)
@@ -1156,7 +1120,6 @@ def main():
         print(details.__class__)
         #insertion = mon_col.insert_one(details)
         #insertion = mon_col.insert_one(game_DB[game])
-        #export.append(details)
         export_dict = {}
         if (game.startswith('<')):
             #If I successfully improve how titles get put out to mongo cluster, make the IGDB ID the key I use there for ID
@@ -1166,7 +1129,6 @@ def main():
             title_ID = substring[0]
             removal = '<' + title_ID + '> '
             modified_title = game.strip(removal)
-            #input(modified_title)
             export_dict["Title"] = modified_title
         else:
             export_dict["Title"] = game
@@ -1207,7 +1169,6 @@ def main():
         #export_dict = dict(game)
         #^need to expand and clarify more?
         #export_dict = dict('Title' = game, 'IGDB ID' = details.igdb_ID, 'Ranked Score' = details.ranked_score)
-        #print(export_dict)
         insertion = mon_col.insert_one(export_dict)
     #insertion = mon_col.insert_many(game_DB)
     #insertion = mon_col.insert_many(export)
@@ -1261,11 +1222,6 @@ def main():
         completed = game["Completed"]
         if (completed == True):
             entry += "[x]"
-        """
-        entry += game['Title'].strip()
-        entry += " --> "
-        entry += str(game['Ranked Score'])
-        """
         print(game['Title'])
         print(game['Ranked Score'])
         entry += game['Title'].strip()
@@ -1339,7 +1295,6 @@ def main():
         inclusion_score = game['Inclusion Score']
         average_score = ranked_score / game['Total Count']
         completion_status = game['Completed']
-        #if(game['Completed'] == True):
         if (completion_status == True):
             sheet1.write(excel_count, 0, game['Title'], crossed_style)
         else:
@@ -1351,13 +1306,6 @@ def main():
         sheet1.write(excel_count, 2, ranked_score)
         sheet1.write(excel_count, 3, inclusion_score)
         sheet1.write(excel_count, 4, average_score)
-        """
-        #Replacing this approach with the newly discovered join() approach?
-        output_lists = ""
-        for ref_list in game['List of References']:
-            output_lists += ref_list
-            output_lists += ", "
-        """
         output_lists = ', '.join(game['List of References'])
         sheet1.write(excel_count, 5, output_lists)
         sheet1.write(excel_count, 6, completion_status)
@@ -1379,13 +1327,11 @@ def main():
             plat_next += 1
         """
         platforms_string = ', '.join(game['List of Platforms'])
-        #sheet1.write(excel_count, 6, game['List of Platforms'])
         sheet1.write(excel_count, 8, platforms_string)
         #sheet1.write(excel_count, 7, game['Release Date'].strip())
         #^Try to strip escape chars out earlier or the items themselves
         sheet1.write(excel_count, 9, game['Release Date'])
         players_string = ', '.join(game['Player Counts'])
-        #sheet1.write(excel_count, 8, game['Player Counts'])
         sheet1.write(excel_count, 10, players_string)
         devs_string = ', '.join(game['Developers'])
         sheet1.write(excel_count, 11, devs_string)

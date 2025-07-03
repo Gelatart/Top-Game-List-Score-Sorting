@@ -2,15 +2,32 @@ from dataclasses import dataclass, field
 import pytest
 import os
 from dotenv import load_dotenv
+import json
+
 import pymongo
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
+
+#import igdb
 from igdb.wrapper import IGDBWrapper
+import requests
 
 #import src.Generator #change this to from...import... when I start having real functions in generator
 from src.Generator import mongo_connect
 from src.Generator import check_for_src
 from src.IGDB_Query import query_build_func
+
+#IGDB CREDENTIALS
+client_id = os.getenv('CLIENT_ID')
+client_secret = os.getenv('CLIENT_SECRET')
+post = f'https://id.twitch.tv/oauth2/token?client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials'
+page = requests.post(post)  # gives access token we can use
+print(page.text)
+# wrapper = IGDBWrapper("YOUR_CLIENT_ID", "YOUR_APP_ACCESS_TOKEN")
+received = json.loads(page.text)
+access_token = received["access_token"]
+print(access_token)
+wrapper = IGDBWrapper(client_id, access_token)
 
 def test_non_class_test():
     #This one exists just so we can call it with :: from the command line and not have to worry about being part of a class
@@ -20,6 +37,7 @@ class TestGenerator:
 
     load_dotenv()
 
+    #Turn this into a mock test because of external logic
     def test_mongo_connection(self):
         #Tests to make sure mongo connection works properly based on env details
         #Mongo connection doesn't seem to work on my netgear quite yet may need to configure
@@ -60,18 +78,21 @@ class TestGenerator:
         assert check_for_src("Generator.py") == "..\Generator.py"
     """
 
+igdb_request_1 = wrapper.api_request(
+        'games.pb',
+        "fields id, name; where name = 'Tetris';"
+        )
+igdb_request_2 = wrapper.api_request(
+        'games.pb',
+        "fields id, name; where name = 'Resident Evil';"
+        )
+
 @pytest.mark.parametrize(
     #try a way of passing in the actual os.getcwd()?
     "query_text, resulting_request",
     [
-        ("fields *; where name = 'Tetris';",wrapper.api_request(
-        'games.pb',
-        "fields *; where name = 'Tetris';"
-        )),
-        ("fields *; where name = 'Resident Evil';",wrapper.api_request(
-        'games.pb',
-        "fields *; where name = 'Resident Evil';"
-        )),
+        ("fields id, name; where name = 'Tetris';", igdb_request_1),
+        ("fields id, name; where name = 'Resident Evil';", igdb_request_2),
     ],
 )
 def test_query_build_func(query_text):
