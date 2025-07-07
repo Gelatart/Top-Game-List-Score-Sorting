@@ -16,13 +16,22 @@ import json
 import pandas
 import re
 import datetime
+from enum import Enum
+
+import sqlite3
 
 from .config import check_for_src
 from .config import get_env_var
 from .game_object import GameObject
+#file_loader imports next
 
 load_dotenv()
 #^To actually populate what we will need from mongo connection
+
+class ListType(Enum):
+    RANKED = 1
+    UNRANKED = 2
+    FORMER = 3
 
 #Make a function to append to file names based on src? To add ..\ if they need to go back up on directory
 """
