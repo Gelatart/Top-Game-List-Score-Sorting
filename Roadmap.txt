@@ -90,4 +90,13 @@ GENERATOR.PY comments:
 #we send off the second phase info to mongo, maybe give option just to do only that off of what we already have
 #then we pull the mongo info in to a real listed sortable form
 
+	#START FLESHING OUT GLITCHWAVE USAGE
+        #FILL OUT RATINGS, COLLECTION, PLAYTHROUGHS, ETC.
+        #IMPORT REVIEWS
+        #START LOOKING AT GENRE (INFLUENCE?), YEAR, PLATFORM, ETC. CHARTS
+    #SEE IF BACKLOGGD CHARTS COMPARE, IF CAN DO SIMILAR THINGS TO GLITCHWAVE (ALSO LOOK INTO GROUVEE?)
+
+    #ONCE CLEARED ALL OF AN UP TO LIST, THEN CONSIDER EXPANDING THE RANGE (LIKE FROM UP TO 100 TO UP TO 150)
+        #consider storing a constantly updated average score?
+
 #add ability to put comments in text files? ex. jackbox party pack quintpack is actually jackbox party pack 1-6

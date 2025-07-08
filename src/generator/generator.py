@@ -16,22 +16,16 @@ import json
 import pandas
 import re
 import datetime
-from enum import Enum
 
 import sqlite3
 
-from .config import check_for_src
-from .config import get_env_var
+from .config import check_for_src, get_env_var
 from .game_object import GameObject
-#file_loader imports next
+from .file_loader import ListType, get_files_in_dir, read_game_list, read_attributed_games
+#from .database import DatabaseManager
 
 load_dotenv()
 #^To actually populate what we will need from mongo connection
-
-class ListType(Enum):
-    RANKED = 1
-    UNRANKED = 2
-    FORMER = 3
 
 #Make a function to append to file names based on src? To add ..\ if they need to go back up on directory
 """
@@ -63,222 +57,112 @@ def mongo_connect():
         connect_message = e
     return connect_message
 
-"game_DB is a dict of string titles and game object values"
-game_DB = {}
-#modified_DB is meant to hold modified entries that originally had <> names, and put back into game_DB later
-modified_DB = {}
+def run_generator():
+    "game_DB is a dict of string titles and game object values"
+    game_DB = {}
+    "modified_DB is meant to hold modified entries that originally had <> names, and put back into game_DB later"
+    modified_DB = {}
 
-"game object needs two scores"
-"""
-class GameObject:
-    def __init__(self, rank):
-        #Add seasonal attribute? Would have to set manually in my own text files?
-        self.igdb_ID = None
-        self.igdb_found = False
-        self.ranked_score = rank
-        self.list_count = 1
-        self.lists_referencing = []
-        self.total_count = 0
-        self.completed = False
-        self.main_platform = 'None'
-        self.list_platforms = []
-        self.release_date = 'Unknown' #Can I set this to some date value?
-        self.player_counts = []
-        self.list_developers = []
-        self.list_publishers = []
-        self.list_companies = []
-        self.genres = []
-        self.themes = []
-        self.order_inserted = 0
+    "Start collecting the lists used in a list, put to a new collection in MongoDB"
+    #Find way to track what type of list it is?
+    games_lists = []
 
-    def __init__(self, rank, list):
-        self.igdb_ID = None
-        self.igdb_found = False
-        self.ranked_score = rank
-        self.list_count = 1
-        self.lists_referencing = []
-        self.lists_referencing.append(list)
-        self.total_count = 0
-        self.completed = False
-        self.main_platform = 'None'
-        self.list_platforms = []
-        self.release_date = 'Unknown'  # Can I set this to some date value?
-        self.player_counts = []
-        self.list_developers = []
-        self.list_publishers = []
-        self.list_companies = []
-        self.genres = []
-        self.themes = []
-        self.order_inserted = 0
+    completed_titles = set(read_attributed_games("game_lists\Completions.txt"))
 
-    def __init__(self, rank, list, total):
-        self.igdb_ID = None
-        self.igdb_found = False
-        self.ranked_score = rank
-        self.list_count = 1
-        self.lists_referencing = []
-        self.lists_referencing.append(list)
-        self.total_count = total
-        self.completed = False
-        self.main_platform = 'None'
-        self.list_platforms = []
-        self.release_date = 'Unknown'
-        self.player_counts = []
-        self.list_developers = []
-        self.list_publishers = []
-        self.list_companies = []
-        self.genres = []
-        self.themes = []
-        self.order_inserted = 0
-    # CONSIDER MAKING AN EXPORT FUNCTION FOR THE CLASS TO CONVERT TO DICTIONARY?
-"""
+    ranked_file_count = 0
+    unranked_file_count = 0
+    former_file_count = 0
+
+    # Step 1: Load and process ranked lists
+    ranked_files = get_files_in_dir("game_lists/ranked")
+    for filepath in ranked_files:
+        ranked_file_count += 1
+        for title, score, total in read_game_list(filepath, ListType.RANKED):
+            game = game_DB.get(title)
+            if not game:
+                game = GameObject(ranked_score=score, list_source=filepath, total_count=total)
+                game_DB[title] = game
+            else:
+                game.ranked_score += score
+                game.total_count += total
+                game.list_count += 1
+                game.lists_referencing.append(filepath)
+            print(f"Score of {score}: {title}")
+        games_lists.append(filepath)
+
+    # Step 2: Load and process unranked lists
+    unranked_files = get_files_in_dir("game_lists/unranked")
+    for filepath in unranked_files:
+        unranked_file_count += 1
+        for title, score, total in read_game_list(filepath, ListType.UNRANKED):
+            game = game_DB.get(title)
+            if not game:
+                game = GameObject(ranked_score=score, list_source=filepath, total_count=total)
+                game_DB[title] = game
+            else:
+                game.ranked_score += score
+                game.total_count += total
+                game.list_count += 1
+                game.lists_referencing.append(filepath)
+            print(f"Score of {score}: {title}")
+        games_lists.append(filepath)
+
+    # Step 3: Load and process former lists
+    former_files = get_files_in_dir("game_lists/former")
+    for filepath in former_files:
+        former_file_count += 1
+        for title, score, total in read_game_list(filepath, ListType.FORMER):
+            game = game_DB.get(title)
+            if not game:
+                game = GameObject(ranked_score=score, list_source=filepath, total_count=total)
+                game_DB[title] = game
+            else:
+                game.ranked_score += score
+                game.total_count += total
+                game.list_count += 1
+                game.lists_referencing.append(filepath)
+            print(f"Score of {score}: {title}")
+        games_lists.append(filepath)
+
+    # Step 4: Mark completed games
+    for title in completed_titles:
+        if title in game_DB:
+            game_DB[title].completed = True
+
+    # Step 5: Save to database
+    #Wait until database manager is implemented to put this in
+    """
+    db = DatabaseManager(use_mongo=True, use_sql=True)
+    for game in game_DB.values():
+        db.insert_game(game)
+    db.close()
+    """
+
+    input(print(f"Successfully processed {len(game_DB)} games."))
 
 def main():
     #Basic solution to get testing functions to work for now, make a cleaner solution later?
+
+    run_generator()
+
+    "game_DB is a dict of string titles and game object values"
+    #game_DB = {}
+    # modified_DB is meant to hold modified entries that originally had <> names, and put back into game_DB later
+    #modified_DB = {}
+
     # assign directory
     #directory = 'C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameLists\Ranked'
-    directory = check_for_src(r'GameLists\Ranked')
+    #directory = check_for_src(r'GameLists\Ranked')
     #then do unranked and former
 
-    #START FLESHING OUT GLITCHWAVE USAGE
-        #FILL OUT RATINGS, COLLECTION, PLAYTHROUGHS, ETC.
-        #IMPORT REVIEWS
-        #START LOOKING AT GENRE (INFLUENCE?), YEAR, PLATFORM, ETC. CHARTS
-    #SEE IF BACKLOGGD CHARTS COMPARE, IF CAN DO SIMILAR THINGS TO GLITCHWAVE (ALSO LOOK INTO GROUVEE?)
-
-    #ONCE CLEARED ALL OF AN UP TO LIST, THEN CONSIDER EXPANDING THE RANGE (LIKE FROM UP TO 100 TO UP TO 150)
-        #consider storing a constantly updated average score?
-
     #Start collecting the lists used in a list, put to a new collection in MongoDB
-    games_lists = []
+    #games_lists = []
 
     # Workbook is created
     wb = Workbook()
 
     # add_sheet is used to create sheet.
     sheet1 = wb.add_sheet('Sheet 1')
-
-    ranked_file_count = 0
-    unranked_file_count = 0
-    former_file_count = 0
-
-    "Loop of getting the database information"
-    #RANKED DIRECTORY
-    for filename in os.listdir(directory):
-        f = os.path.join(directory, filename)
-        # checking if it is a file
-        if os.path.isfile(f):
-            # Using readlines()
-            file1 = open(f, 'r', encoding="utf-8")
-            ranked_file_count += 1
-            starting_line = file1.readline()
-            Lines = file1.readlines()
-            #count = int(starting_line)
-            count = len(Lines)
-            original_count = count
-            # Strips the newline character
-            for line in Lines:
-                stripped_line = line.strip()
-                line = stripped_line
-                if stripped_line in game_DB:
-                    game_DB[line].ranked_score += count
-                    game_DB[line].list_count += 1
-                    game_DB[line].lists_referencing.append(f)
-                    game_DB[line].total_count += original_count
-                else:
-                    newObj = GameObject(count, f, original_count)
-                    game_DB[line] = newObj
-                #searchObj = game_DB.get(newObj, 0) + 1
-                #game_DB[line].list_count = game_DB.get(newObj, 0) + 1
-                print(f"Score of {count}: {line.strip()}")
-                count -= 1
-            games_lists.append(filename)
-
-    directory = check_for_src(r'GameLists\Unranked')
-
-    for filename in os.listdir(directory):
-        f = os.path.join(directory, filename)
-        # checking if it is a file
-        if os.path.isfile(f):
-            #print(f)
-            # Using readlines()
-            file1 = open(f, 'r', encoding="utf-8")
-            unranked_file_count += 1
-            starting_line = file1.readline()
-            Lines = file1.readlines()
-            float_count = float(starting_line)
-            count = math.floor(float_count)
-            count = len(Lines)
-            print(count)
-            original_count = count
-            #do a sum of all numbers in that count
-            count = original_count * (original_count + 1) // 2
-            #divide the factorial by the original count
-            count //= original_count
-            print(count)
-            print(f)
-            #input('Wait to review\n')
-            # Strips the newline character
-            for line in Lines:
-                stripped_line = line.strip()
-                line = stripped_line
-                if stripped_line in game_DB:
-                    game_DB[line].ranked_score += count
-                    game_DB[line].list_count += 1
-                    game_DB[line].lists_referencing.append(f)
-                    game_DB[line].total_count += original_count
-                else:
-                    newObj = GameObject(count, f, original_count)
-                    game_DB[line] = newObj
-                #searchObj = game_DB.get(newObj, 0) + 1
-                #game_DB[line].list_count = game_DB.get(newObj, 0) + 1
-                print(f"Score of {count}: {line.strip()}")
-                #count -= 1
-            games_lists.append(filename)
-
-    directory = check_for_src(r'GameLists\Former')
-    for filename in os.listdir(directory):
-        f = os.path.join(directory, filename)
-        # checking if it is a file
-        if os.path.isfile(f):
-            # Using readlines()
-            # file1 = open(f, 'r')
-            file1 = open(f, 'r', encoding="utf-8")
-            former_file_count += 1
-            starting_line = file1.readline()
-            Lines = file1.readlines()
-            #count = 1
-            count = int(starting_line)
-            original_count = count
-            #^find out how to read the line amount ahead of time
-            #original_count = len(Lines)
-            print(original_count)
-            # Strips the newline character
-            for line in Lines:
-                stripped_line = line.strip()
-                line = stripped_line
-                if stripped_line in game_DB:
-                    game_DB[line].ranked_score += count
-                    game_DB[line].list_count += 1
-                    game_DB[line].lists_referencing.append(f)
-                    game_DB[line].total_count += original_count
-                else:
-                    newObj = GameObject(count, f, original_count)
-                    game_DB[line] = newObj
-                #searchObj = game_DB.get(newObj, 0) + 1
-                #game_DB[line].list_count = game_DB.get(newObj, 0) + 1
-                print(f"Score of {count}: {line.strip()}")
-                #count -= 1
-            games_lists.append(filename)
-
-    completeFile = open(check_for_src('Completions.txt'), 'r')
-    completeLines = completeFile.readlines()
-    for line in completeLines:
-        stripped_line = line.strip()
-        line = stripped_line
-        if line in game_DB:
-            game_DB[line].completed = True
-        #else: raise error because not in database? create it with 0 score? probably just ignore it?
 
     """
     #ADD SECTION WHERE WE START GRABBING ADDITIONAL ATTRIBUTES FOR GAME DATABASE?
@@ -349,6 +233,8 @@ def main():
     #export_DB["games"] = []
 
     import itertools
+
+    #Breaks at this point because doesn't have game_DB? Make sure game_DB can be accessed by exporter? In run_generator()?
 
     for game, details in game_DB.items():
     #for game, details in itertools.islice(game_DB.items(),0,3):
