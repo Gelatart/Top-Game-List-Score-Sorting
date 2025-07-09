@@ -58,6 +58,10 @@ def mongo_connect():
     return connect_message
 
 def run_generator():
+    """
+    The main logic of the generator function, that calls other functions from other files
+    """
+
     "game_DB is a dict of string titles and game object values"
     game_DB = {}
     "modified_DB is meant to hold modified entries that originally had <> names, and put back into game_DB later"
@@ -140,70 +144,89 @@ def run_generator():
 
     input(print(f"Successfully processed {len(game_DB)} games."))
 
+    #REST OF FORMER MAIN FUNCTION FOLLOWS:
+
+    # Taking custom class objects and making them JSON exportable
+    export_DB = {}
+    # export_DB["games"] = []
+
+    import itertools
+
+    # Breaks at this point because doesn't have game_DB? Make sure game_DB can be accessed by exporter? In run_generator()?
+
+    for game, details in game_DB.items():
+        # for game, details in itertools.islice(game_DB.items(),0,3):
+        # export_DB[game] = json.loads(details.__dict__)
+        export_DB[game] = json.loads(json.dumps(details.__dict__))
+        # export_DB.append(export_string)
+
+    print(export_DB)
+
+    json_string = ','.join(export_DB)
+    # json_dict = json.loads(export_DB)
+    # json_dict = json.loads(json_string)
+
+    # Initial print of what we have in the games database
+    with open(check_for_src("games_pre.json"), "w") as outfile:
+        out_json = json.dump(export_DB, outfile)
+        # out_json = json.dump(json_dict, outfile)
+        # out_json = json.dump(json_string, outfile)
+        print(out_json)
+
+    import_DB = {}
+    # import_DB["games"] = []
+
+    input("Let's test pulling from JSON!\n")
+
+    with open(check_for_src("games_pre.json"), "r") as json_file:
+        # Reading the first character throws everything off
+        # import_DB = json.load(json_file)
+        # first_char = json_file.read(1)
+        # if not first_char:
+        if (os.stat(check_for_src("games_pre.json")).st_size == 0):
+            print("Looks like we don't have anything in games_pre.json yet")
+        else:
+            import_DB = json.load(json_file)
+            # import_DB = json.loads(json_file.read())
+            # import_DB = json.loads(json_file)
+            # for line in json_file:
+            # import_DB.append(json.loads(line))
+            # import_DB["games"].append(json.loads(line))
+            # import_DB.append(json.loads(line))
+            print(import_DB)
+            input()
+
+    # having issue with jsondecodeerror: extra data, s, end OR str object has no attribute read (load vs. loads)
+    # seems like putting all into a "games" array doesn't help things
+
+    # Make sure fresh for actual process once done testing
+    import_DB.clear()
+    export_DB.clear()
+
+    # eventually try for functionality where we only update the games that have updated scores? or new games?
+
+    with open(check_for_src("games.json")) as json_file:
+        # first_char = json_file.read(1)
+        # if not first_char:
+        if (os.stat(check_for_src("games.json")).st_size == 0):
+            print("Looks like we don't have anything in games.json yet")
+        else:
+            import_DB = json.load(json_file)
+    print(import_DB)
+    print(game_DB.items().__class__)
+    input()
+
+
 def main():
     #Basic solution to get testing functions to work for now, make a cleaner solution later?
 
     run_generator()
-
-    "game_DB is a dict of string titles and game object values"
-    #game_DB = {}
-    # modified_DB is meant to hold modified entries that originally had <> names, and put back into game_DB later
-    #modified_DB = {}
-
-    # assign directory
-    #directory = 'C:\Users\danie\Documents\Top-Game-List-Score-Sorting\GameLists\Ranked'
-    #directory = check_for_src(r'GameLists\Ranked')
-    #then do unranked and former
-
-    #Start collecting the lists used in a list, put to a new collection in MongoDB
-    #games_lists = []
 
     # Workbook is created
     wb = Workbook()
 
     # add_sheet is used to create sheet.
     sheet1 = wb.add_sheet('Sheet 1')
-
-    """
-    #ADD SECTION WHERE WE START GRABBING ADDITIONAL ATTRIBUTES FOR GAME DATABASE?
-    #Purposefully naming this wrong for now so we don't grab from it, only from IGDB for now?
-    print("Time for attributes!")
-    attributesFile = open('AdditionalAttributes.txt', 'r')
-    attributesLines = attributesFile.readlines()
-    itr = iter(attributesLines)
-    #for line in attributesLines:
-    try:
-        #if line in game_DB:
-        while True:
-            #Properly parse through line and indented lines?
-            title = next(itr)
-            if title in game_DB:
-                print(title)
-                #main_platform
-                attribute = next(itr)
-                print(attribute)
-                game_DB[title].main_platform = attribute
-                #list_platforms
-                attribute = next(itr)
-                print(attribute)
-                game_DB[title].list_platforms = attribute
-                #release_date
-                attribute = next(itr)
-                print(attribute)
-                game_DB[title].release_date = attribute
-                #player_counts
-                attribute = next(itr)
-                print(attribute)
-                game_DB[title].player_counts = attribute
-                #list_developers
-                attribute = next(itr)
-                print(attribute)
-                game_DB[title].list_developers = attribute
-                print('')
-            #else: supposed to be in database?
-    except StopIteration:
-            pass
-    """
 
     """
     TYPES FOR GAME_MODES (Based on id #):
@@ -228,80 +251,7 @@ def main():
     No others at this time?
     """
 
-    #Taking custom class objects and making them JSON exportable
-    export_DB = {}
-    #export_DB["games"] = []
-
-    import itertools
-
-    #Breaks at this point because doesn't have game_DB? Make sure game_DB can be accessed by exporter? In run_generator()?
-
-    for game, details in game_DB.items():
-    #for game, details in itertools.islice(game_DB.items(),0,3):
-        #export_DB[game] = json.loads(details.__dict__)
-        export_DB[game] = json.loads(json.dumps(details.__dict__))
-        #export_string = json.dumps(details.__dict__)
-        #export_DB.append(export_string)
-
-    print(export_DB)
-
-    json_string = ','.join(export_DB)
-    #json_dict = json.loads(export_DB)
-    #json_dict = json.loads(json_string)
-
-    #Initial print of what we have in the games database
-    with open (check_for_src("games_pre.json"), "w") as outfile:
-        out_json = json.dump(export_DB, outfile)
-        #out_json = json.dump(json_dict, outfile)
-        #out_json = json.dump(json_string, outfile)
-        print(out_json)
-
-    import_DB = {}
-    #import_DB["games"] = []
-
-    input("Let's test pulling from JSON!\n")
-
-    with open(check_for_src("games_pre.json"), "r") as json_file:
-        #Reading the first character throws everything off
-        #import_DB = json.load(json_file)
-        #first_char = json_file.read(1)
-        #if not first_char:
-        if(os.stat(check_for_src("games_pre.json")).st_size == 0):
-            print("Looks like we don't have anything in games_pre.json yet")
-        else:
-            import_DB = json.load(json_file)
-            #import_DB = json.loads(json_file.read())
-            #import_DB = json.loads(json_file)
-            #for line in json_file:
-                #import_DB.append(json.loads(line))
-                #import_DB["games"].append(json.loads(line))
-                #import_DB.append(json.loads(line))
-            print(import_DB)
-            input()
-
-    #having issue with jsondecodeerror: extra data, s, end OR str object has no attribute read (load vs. loads)
-    #seems like putting all into a "games" array doesn't help things
-
-    #Make sure fresh for actual process once done testing
-    import_DB.clear()
-    export_DB.clear()
-
-    #eventually try for functionality where we only update the games that have updated scores? or new games?
-
-    with open(check_for_src("games.json")) as json_file:
-        #first_char = json_file.read(1)
-        #if not first_char:
-        if (os.stat(check_for_src("games.json")).st_size == 0):
-            print("Looks like we don't have anything in games.json yet")
-        else:
-            import_DB = json.load(json_file)
-    print(import_DB)
-    print(game_DB.items().__class__)
-    input()
-
     #This is where the user sets whether they want to grab from the IGDB API or not
-    #Maybe add options for how much to grab? How many games? What types of info? Other qualifiers?
-    #Maybe do a quick pass and long pass version? Quick pass doesn't use additional endpoints? Long pass makes more user facing?
     igdb_check = False
     igdb_answer = None
     scratch_answer = False
@@ -1103,12 +1053,12 @@ def main():
     games_pulled_average = mon_col.find().sort("Average Score", -1)
 
     #Opening the files that we are going to be writing to
-    file_ranked = open(check_for_src("Sorted by Ranked.txt"),"w", encoding="utf-8")
-    file_inclusion = open(check_for_src("Sorted by Inclusion.txt"),"w", encoding="utf-8")
-    file_average = open(check_for_src("Sorted by Average.txt"),"w", encoding="utf-8")
-    file_ranked_uncompleted = open(check_for_src("Sorted by Ranked (Uncompleted).txt"), "w", encoding="utf-8")
-    file_inclusion_uncompleted = open(check_for_src("Sorted by Inclusion (Uncompleted).txt"),"w", encoding="utf-8")
-    file_average_uncompleted = open(check_for_src("Sorted by Average (Uncompleted).txt"),"w", encoding="utf-8")
+    file_ranked = open(check_for_src("reports/Sorted by Ranked.txt"),"w", encoding="utf-8")
+    file_inclusion = open(check_for_src("reports/Sorted by Inclusion.txt"),"w", encoding="utf-8")
+    file_average = open(check_for_src("reports/Sorted by Average.txt"),"w", encoding="utf-8")
+    file_ranked_uncompleted = open(check_for_src("reports/Sorted by Ranked (Uncompleted).txt"), "w", encoding="utf-8")
+    file_inclusion_uncompleted = open(check_for_src("reports/Sorted by Inclusion (Uncompleted).txt"),"w", encoding="utf-8")
+    file_average_uncompleted = open(check_for_src("reports/Sorted by Average (Uncompleted).txt"),"w", encoding="utf-8")
 
     for game in games_pulled_ranked:
         #print(game)
@@ -1239,7 +1189,7 @@ def main():
         themes_string = ', '.join(game['Themes'])
         sheet1.write(excel_count, 15, themes_string)
         excel_count += 1
-    wb.save(check_for_src('Sorted Database.xls'))
+    wb.save(check_for_src('reports/Sorted Database.xls'))
 
     games_pulled = mon_col.find().limit(5)
     for game in games_pulled:
@@ -1263,59 +1213,3 @@ def main():
 "Where we start the main function"
 if __name__ == "__main__":
     main()
-
-""""
-REFERENCES:
-Iterate over files in directory: https://www.geeksforgeeks.org/how-to-iterate-over-files-in-directory-using-python/
-Python dictionaries: https://www.w3schools.com/python/python_dictionaries.asp
-https://www.geeksforgeeks.org/read-a-file-line-by-line-in-python/
-https://www.geeksforgeeks.org/convert-string-to-integer-in-python/
-https://www.geeksforgeeks.org/python-initializing-dictionary-with-empty-lists/
-https://linuxhint.com/initialize-dictionary-python/#:~:text=Another%20way%20to%20initialize%20a,print%20out%20the%20initialized%20dictionary.
-https://www.geeksforgeeks.org/writing-excel-sheet-using-python/
-https://stackoverflow.com/questions/9848299/importerror-no-module-named-xlwt
-https://www.geeksforgeeks.org/python-increment-value-in-dictionary/
-https://www.educative.io/answers/how-to-check-if-a-key-exists-in-a-python-dictionary
-Factorial in python: https://www.geeksforgeeks.org/factorial-in-python/
-https://stackoverflow.com/questions/1347791/unicode-error-unicodeescape-codec-cant-decode-bytes-cannot-open-text-file
-https://kodify.net/python/math/round-integers/
-https://stackoverflow.com/questions/27946595/how-to-manage-division-of-huge-numbers-in-python
-Adding strings in Python: https://www.geeksforgeeks.org/python-add-one-string-to-another/
-Counting the number of lines in file: https://pynative.com/python-count-number-of-lines-in-file/
-https://www.freecodecamp.org/news/sort-dictionary-by-value-in-python/
-https://www.geeksforgeeks.org/reading-writing-text-files-python/
-Converting integer to string in Python: https://www.geeksforgeeks.org/convert-integer-to-string-in-python/
-Removing newline character from string in Python: https://www.geeksforgeeks.org/python-removing-newline-character-from-string/
-https://github.com/python-excel/xlwt/blob/master/xlwt/Style.py
-https://www.digitalocean.com/community/tutorials/python-wait-time-wait-for-input
-https://www.tutorialspoint.com/sqlite/sqlite_python.htm
-https://www.geeksforgeeks.org/iterate-over-a-list-in-python/
-Pymongo Tutorial: https://www.w3schools.com/python/python_mongodb_getstarted.asp
-Mongodb Tutorial: https://www.w3schools.com/mongodb/mongodb_get_started.php
-Add to a list: https://www.w3schools.com/python/python_lists_add.asp
-How to keep sensitive data safe in an ENV file: https://forum.freecodecamp.org/t/how-to-store-a-mongodb-username-and-password-persistently-using-dotenv/50994
-How to setup ENV file to work with Python: https://configu.com/blog/using-py-dotenv-python-dotenv-package-to-manage-env-variables/
-Pre-commit safety: https://docs.gitguardian.com/ggshield-docs/integrations/git-hooks/pre-commit?utm_source=product&utm_medium=GitHub_checks&utm_campaign=check_run
-Fix for UnicodeEncodeError after pre-commit safety integration: https://github.com/mwouts/jupytext/issues/770
-Python Requests post: https://www.w3schools.com/python/ref_requests_post.asp
-Python IGDB API Wrapper: https://github.com/twitchtv/igdb-api-python
-Reading JSON files in python: https://www.geeksforgeeks.org/read-json-file-using-python/
-Converting datetime to integer timestamp: https://www.geeksforgeeks.org/python-datetime-to-integer-timestamp/
-Converting Pandas timestamp to python datetime: https://pandas.pydata.org/docs/reference/api/pandas.Timestamp.to_pydatetime.html#pandas.Timestamp.to_pydatetime
-Switch statement equivalent in Python: https://www.geeksforgeeks.org/switch-case-in-python-replacement/
-Substringing a string in Python: https://www.geeksforgeeks.org/how-to-substring-a-string-in-python/
-Regex Python: https://www.geeksforgeeks.org/python-regex-re-search-vs-re-findall/
-Closing pymongo connection: https://stackoverflow.com/questions/18401015/how-to-close-a-mongodb-python-connection
-Close cursors, try 'with' connections: https://www.mongodb.com/community/forums/t/i-am-using-pymongo-do-i-have-to-close-a-mongoclient-after-use/213511
-Dealing with out of index in list errors: https://rollbar.com/blog/how-to-fix-python-list-index-out-of-range-error-in-for-loops/#
-Python dict() function: https://www.w3schools.com/python/ref_func_dict.asp
-Converting Python dictionary to JSON: https://www.geeksforgeeks.org/how-to-convert-python-dictionary-to-json/
-Converting class object to JSON: https://www.geeksforgeeks.org/convert-class-object-to-json-in-python/#
-Solve JSON Type error: https://stackoverflow.com/questions/69270727/how-to-solve-typeerror-the-json-object-must-be-str-bytes-or-bytearray-not-t
-Check if text file empty: https://www.geeksforgeeks.org/check-if-a-text-file-empty-in-python/
-JSON Decode error, how to handle more than one JSON object imported: https://stackoverflow.com/questions/21058935/python-json-loads-shows-valueerror-extra-data
-Dealing with JSON Decode error: https://stackoverflow.com/questions/48140858/json-decoder-jsondecodeerror-extra-data-line-2-column-1-char-190
-Check if file is empty: https://stackoverflow.com/questions/2507808/how-to-check-whether-a-file-is-empty-or-not
-Limiting iterations of loop: https://stackoverflow.com/questions/36106712/how-can-i-limit-iterations-of-a-loop
-Creating index in Pymongo: https://www.geeksforgeeks.org/how-to-create-index-for-mongodb-collection-using-python/#
-"""

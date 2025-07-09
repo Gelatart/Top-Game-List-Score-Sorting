@@ -100,3 +100,7 @@ GENERATOR.PY comments:
         #consider storing a constantly updated average score?
 
 #add ability to put comments in text files? ex. jackbox party pack quintpack is actually jackbox party pack 1-6
+
+-IGDB API part of generator.py:
+#Maybe add options for how much to grab? How many games? What types of info? Other qualifiers?
+    #Maybe do a quick pass and long pass version? Quick pass doesn't use additional endpoints? Long pass makes more user facing?
