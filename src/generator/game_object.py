@@ -5,6 +5,7 @@ from typing import Optional
 class GameObject:
     #add seasonal attribute? would have to set manually in its own text file?
     #Attributes without defaults
+    title: str
     ranked_score: int #rank input
     list_source: str #list input
     total_count: int #total input

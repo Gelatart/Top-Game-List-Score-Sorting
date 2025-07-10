@@ -77,6 +77,12 @@ def run_generator():
     unranked_file_count = 0
     former_file_count = 0
 
+    # Workbook is created
+    wb = Workbook()
+
+    # add_sheet is used to create sheet.
+    sheet1 = wb.add_sheet('Sheet 1')
+
     # Step 1: Load and process ranked lists
     ranked_files = get_files_in_dir("game_lists/ranked")
     for filepath in ranked_files:
@@ -84,7 +90,7 @@ def run_generator():
         for title, score, total in read_game_list(filepath, ListType.RANKED):
             game = game_DB.get(title)
             if not game:
-                game = GameObject(ranked_score=score, list_source=filepath, total_count=total)
+                game = GameObject(game, ranked_score=score, list_source=filepath, total_count=total)
                 game_DB[title] = game
             else:
                 game.ranked_score += score
@@ -101,7 +107,7 @@ def run_generator():
         for title, score, total in read_game_list(filepath, ListType.UNRANKED):
             game = game_DB.get(title)
             if not game:
-                game = GameObject(ranked_score=score, list_source=filepath, total_count=total)
+                game = GameObject(game, ranked_score=score, list_source=filepath, total_count=total)
                 game_DB[title] = game
             else:
                 game.ranked_score += score
@@ -118,7 +124,7 @@ def run_generator():
         for title, score, total in read_game_list(filepath, ListType.FORMER):
             game = game_DB.get(title)
             if not game:
-                game = GameObject(ranked_score=score, list_source=filepath, total_count=total)
+                game = GameObject(game, ranked_score=score, list_source=filepath, total_count=total)
                 game_DB[title] = game
             else:
                 game.ranked_score += score
@@ -188,7 +194,6 @@ def run_generator():
         else:
             import_DB = json.load(json_file)
             # import_DB = json.loads(json_file.read())
-            # import_DB = json.loads(json_file)
             # for line in json_file:
             # import_DB.append(json.loads(line))
             # import_DB["games"].append(json.loads(line))
@@ -221,12 +226,6 @@ def main():
     #Basic solution to get testing functions to work for now, make a cleaner solution later?
 
     run_generator()
-
-    # Workbook is created
-    wb = Workbook()
-
-    # add_sheet is used to create sheet.
-    sheet1 = wb.add_sheet('Sheet 1')
 
     """
     TYPES FOR GAME_MODES (Based on id #):
