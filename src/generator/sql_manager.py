@@ -17,12 +17,17 @@ class SQLManager:
     def _create_table(self):
         #id INTEGER PRIMARY KEY AUTOINCREMENT,
         #title TEXT UNIQUE,
-        #Changing it so id is the primary key that we autoincrement, but I might want to try to use igdb_ID as the primary key later when we have it
+        #Changing it so id is the primary key that we autoincrement
+        #but I might want to try to use igdb_ID as the primary key later when we have it?
+        #keep new id as the primary key for simplicity's sake and not having to spend time on IGDB until we need it
+        #maybe make igdb_id a secondary key?
+        #keep IGDB ID <> in part of title at start
+        #have later function to go through and look for games with that, and update title, but keep unique ID?
         self.cursor.execute("""
         CREATE TABLE IF NOT EXISTS games (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             igdb_id INTEGER,
-            title TEXT UNIQUE,
+            title TEXT,
             ranked_score INTEGER,
             list_source TEXT,
             total_count INTEGER,
@@ -37,7 +42,8 @@ class SQLManager:
         self.cursor.execute("""
         INSERT INTO games (title, ranked_score, list_source, total_count)
         VALUES (?, ?, ?, ?)
-        ON CONFLICT(title) DO UPDATE SET
+        ON CONFLICT(id) DO UPDATE SET
+            title=excluded.title,
             ranked_score=excluded.ranked_score,
             list_source=excluded.list_source,
             total_count=excluded.total_count
@@ -51,23 +57,20 @@ class SQLManager:
 
     def insert_or_update_game(self, game: GameObject):
         self.cursor.execute("""
-        INSERT INTO games (igdb_id, title, ranked_score, list_count, total_count, completed, release_date)
-        VALUES (?, ?, ?, ?, ?, ?, ?)
-        ON CONFLICT(igdb_id) DO UPDATE SET
+        INSERT INTO games (igdb_id, title, ranked_score, list_source, total_count)
+        VALUES (?, ?, ?, ?, ?)
+        ON CONFLICT(id) DO UPDATE SET
+            igdb_id=excluded.igdb_id,
             title=excluded.title,
             ranked_score=excluded.ranked_score,
-            list_count=excluded.list_count,
-            total_count=excluded.total_count,
-            completed=excluded.completed,
-            release_date=excluded.release_date
+            list_source=excluded.list_count,
+            total_count=excluded.total_count
         """, (
+            game.igdb_ID,
             game.title,
-            game.list_source,
             game.ranked_score,
-            game.list_count,
-            game.total_count,
-            game.completed,
-            game.release_date
+            game.list_source,
+            game.total_count
         ))
         self.conn.commit()
 

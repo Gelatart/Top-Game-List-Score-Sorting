@@ -22,7 +22,7 @@ import sqlite3
 from .config import check_for_src, get_env_var
 from .game_object import GameObject
 from .file_loader import ListType, get_files_in_dir, read_game_list, read_attributed_games
-#from .database import DatabaseManager
+from .database_interface import DatabaseManager
 
 load_dotenv()
 #^To actually populate what we will need from mongo connection
@@ -140,13 +140,18 @@ def run_generator():
             game_DB[title].completed = True
 
     # Step 5: Save to database
-    #Wait until database manager is implemented to put this in
-    """
+    #Doing basic insert to mongo at this point, and then we can add other values later on? After IGDB pulling?
+    #Have the user be able to set a flag if they want use_mongo at this point, so they don't have to deal with trying to connect?
+
+    #First testing the mongo connection and notifying user
+    input("About to attempt connection to Mongo, press ENTER when you are ready")
+    mongo_connect()
+
     db = DatabaseManager(use_mongo=True, use_sql=True)
     for game in game_DB.values():
-        db.insert_game(game)
-    db.close()
-    """
+        db.insert_game_pre_ID(game)
+    db.close() #close later on? like when program concludes? or when user sets they want to close connections?
+    #or just set database manager whenever we want to connect to do stuff again and don't leave open?
 
     input(print(f"Successfully processed {len(game_DB)} games."))
 
@@ -221,12 +226,6 @@ def run_generator():
     print(game_DB.items().__class__)
     input()
 
-
-def main():
-    #Basic solution to get testing functions to work for now, make a cleaner solution later?
-
-    run_generator()
-
     """
     TYPES FOR GAME_MODES (Based on id #):
     1: Singleplayer?
@@ -237,10 +236,10 @@ def main():
     5: MMO?
     6: Battle Royale?
     No others at this time?
-    
+
     FOR INVOLVED_COMPANIES, WE WILL LIKELY NEED TO USE A DIFFERENT ENDPOINT TO FIGURE OUT WHAT THEY ALL ARE,
     BECAUSE SO MANY POTENTIAL ID NUMBERS
-    
+
     TYPE FOR PLATFORM FAMILIES (Based on id #):
     1: PlayStation
     2: Xbox
@@ -249,6 +248,12 @@ def main():
     5: Nintendo
     No others at this time?
     """
+
+
+def main():
+    #Basic solution to get testing functions to work for now, make a cleaner solution later?
+
+    run_generator()
 
     #This is where the user sets whether they want to grab from the IGDB API or not
     igdb_check = False
@@ -1060,8 +1065,6 @@ def main():
     file_average_uncompleted = open(check_for_src("reports/Sorted by Average (Uncompleted).txt"),"w", encoding="utf-8")
 
     for game in games_pulled_ranked:
-        #print(game)
-
         entry = ""
         completed = game["Completed"]
         if (completed == True):

@@ -498,6 +498,7 @@ Singstar 2007 (had in my list that we had a 2008 one?): IGDB ID: 15180
 Spider-Man [PlayStation]: IGDB ID: 3603
 Stanley Parable [2013] (standalone): IGDB ID: 3035
 Star Wars: Battlefront I/II are the originals, Star Wars Battlefront I/II are the EA post-Disney ones
+Star Wars: The Empire Strikes Back [NES]: IGDB ID: 12594
 System Shock [2023]: IGDB ID: 18375
 Teenage Mutant Ninja Turtles ARCADE: IGDB ID: 3815
 Teenage Mutant Ninja Turtles NES: IGDB ID: 86386
