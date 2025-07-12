@@ -2,7 +2,7 @@ from .mongo_manager import MongoManager
 from .sql_manager import SQLManager
 from .game_object import GameObject
 
-class DatabaseManager:
+class DatabaseInterface:
     def __init__(self, use_mongo=True, use_sql=False):
         self.mongo = MongoManager() if use_mongo else None
         self.sql = SQLManager() if use_sql else None

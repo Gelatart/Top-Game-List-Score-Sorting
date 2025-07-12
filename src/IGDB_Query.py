@@ -316,7 +316,6 @@ def main():
     #wrapper = IGDBWrapper("YOUR_CLIENT_ID", "YOUR_APP_ACCESS_TOKEN")
     received = json.loads(page.text)
     access_token = received["access_token"]
-    #print(access_token)
     wrapper = IGDBWrapper(client_id, access_token)
 
     igdb_request = wrapper.api_request(
@@ -391,6 +390,7 @@ if __name__ == "__main__":
 (Need to make a page for Anito Legends)
 
 (Sonic the Hedgehog 8-bit from Master System seems not to be in API?)
+(Ape Escape should be put here because there is a commodore version from 80's that might match?)
 
 1080 Snowboarding: IGDB ID: 3328
 Baku Baku [Master System]: IGDB ID: 69785

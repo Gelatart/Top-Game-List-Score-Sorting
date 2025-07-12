@@ -35,4 +35,4 @@ def export_to_text(games: List[GameObject], output_path: str):
     #Add logic for completed games
     with open(output_path, 'w', encoding='utf-8') as f:
         for game in games:
-            f.write(f"{game.list_source}: {game.ranked_score}\n")
+            f.write(f"[{game.igdb_ID}] {game.title}: {game.ranked_score}\n")

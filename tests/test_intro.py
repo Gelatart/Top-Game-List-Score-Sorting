@@ -4,6 +4,7 @@ import os
 from dotenv import load_dotenv
 import json
 
+from src.generator.exporter import export_to_text
 from src.generator.file_loader import read_game_list, read_attributed_games
 from src.generator.game_object import GameObject
 from src.generator.sql_manager import SQLManager
@@ -14,6 +15,23 @@ def test_non_class_test():
     and not have to worry about being part of a class
     """
     assert("Test") == "Test"
+
+#Split this file into separate testers for each of the individual classes based on what chatgpt said?
+
+
+"""
+Exporter Tests
+"""
+def test_export_to_text(tmp_path):
+    path = tmp_path / "games.txt"
+    games = [
+        GameObject(title="Test 1", ranked_score=10, list_source="List1", total_count=100),
+        GameObject(title="Test 2", ranked_score=20, list_source="List2", total_count=100),
+    ]
+    export_to_text(games, str(path))
+    contents = path.read_text()
+    assert "Test 1: 10" in contents
+    assert "Test 2: 20" in contents
 
 """
 File_Loader Tests

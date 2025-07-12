@@ -22,7 +22,7 @@ import sqlite3
 from .config import check_for_src, get_env_var
 from .game_object import GameObject
 from .file_loader import ListType, get_files_in_dir, read_game_list, read_attributed_games
-from .database_interface import DatabaseManager
+from .database_interface import DatabaseInterface
 
 load_dotenv()
 #^To actually populate what we will need from mongo connection
@@ -147,7 +147,7 @@ def run_generator():
     input("About to attempt connection to Mongo, press ENTER when you are ready")
     mongo_connect()
 
-    db = DatabaseManager(use_mongo=True, use_sql=True)
+    db = DatabaseInterface(use_mongo=True, use_sql=True)
     for game in game_DB.values():
         db.insert_game_pre_ID(game)
     db.close() #close later on? like when program concludes? or when user sets they want to close connections?
@@ -167,7 +167,6 @@ def run_generator():
 
     for game, details in game_DB.items():
         # for game, details in itertools.islice(game_DB.items(),0,3):
-        # export_DB[game] = json.loads(details.__dict__)
         export_DB[game] = json.loads(json.dumps(details.__dict__))
         # export_DB.append(export_string)
 
@@ -249,31 +248,29 @@ def run_generator():
     No others at this time?
     """
 
-
-def main():
-    #Basic solution to get testing functions to work for now, make a cleaner solution later?
-
-    run_generator()
-
-    #This is where the user sets whether they want to grab from the IGDB API or not
+    # This is where the user sets whether they want to grab from the IGDB API or not
+    #Set a series of flags on whether to pull certain attributes or not into the database?
+    #Set specific functions for every potential attribute to grab?
+    # Try to find ways to make IGDB pulling run in the background so I can work on other things while it's going
     igdb_check = False
     igdb_answer = None
     scratch_answer = False
     limit_answer = False
     limit_number = 0
-    while(igdb_check == False):
+    while (igdb_check == False):
         print("Would you like to grab additional game data from the IGDB API at this moment? Y or N")
         igdb_answer = input("Make your selection: ")
-        if(igdb_answer == 'Y' or igdb_answer == 'Yes'):
+        if (igdb_answer == 'Y' or igdb_answer == 'Yes'):
             while True:
-                print("Would you like to start from scratch? Or only deal with games that don't already have IGDB information?")
+                print(
+                    "Would you like to start from scratch? Or only deal with games that don't already have IGDB information?")
                 print("1. Start from scratch")
                 print("2. Only deal with games without IGDB info already")
                 scratch_option = input()
-                if(scratch_option == "1"):
+                if (scratch_option == "1"):
                     scratch_answer = True
                     break
-                elif(scratch_option == "2"):
+                elif (scratch_option == "2"):
                     scratch_answer = False
                     break
                 else:
@@ -281,7 +278,8 @@ def main():
                     print()
                     continue
             while True:
-                print("Would you like to set a limit on how many games to grab info for? This process can take a long time, so this can help get your foot in the door")
+                print(
+                    "Would you like to set a limit on how many games to grab info for? This process can take a long time, so this can help get your foot in the door")
                 print("1. Set a limit")
                 print("2. Just try for all games")
                 limit_option = input()
@@ -290,7 +288,7 @@ def main():
                     while True:
                         print("Would you like to set the limit to? Please provide a valid number")
                         limit_set = input()
-                        if(limit_set.isnumeric()):
+                        if (limit_set.isnumeric()):
                             limit_number = int(limit_set)
                             break
                         else:
@@ -317,17 +315,16 @@ def main():
                 Authorization: Bearer access_token
             Take special care of the capitalisation. Bearer should be hard-coded infront of your access_token
             You use the BODY of your request to specify the fields you want to retrieve as well as any other filters, sorting etc
-        
+
             Example
             If your Client ID is abcdefg12345 and your access_token is access12345token, a simple request to get information about 10 games would be.
                 POST: https://api.igdb.com/v4/games
                 Client-ID: abcdefg12345
                 Authorization: Bearer access12345token
                 Body: "fields *;"
-        
+
             """
             client_id = get_env_var('CLIENT_ID')
-            #client_secret = os.getenv('CLIENT_SECRET')
             client_secret = get_env_var('CLIENT_SECRET')
             post = f'https://id.twitch.tv/oauth2/token?client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials'
 
@@ -353,32 +350,32 @@ def main():
 
             igdb_request = wrapper.api_request(
                 'games.pb',  # Note the '.pb' suffix at the endpoint
-                 'fields name, rating; limit 5; offset 0;'
+                'fields name, rating; limit 5; offset 0;'
             )
             games_message = GameResult()
             games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
             games = games_message.games
             print(games)
 
-            #Figure out if I can be more efficient with endpoints to make it take quicker? taking very long now
+            # Figure out if I can be more efficient with endpoints to make it take quicker? taking very long now
             print("Time to go looking around")
             time_speedup = 0;
             order_of_insert = 1
-            #resets every time we start the process partway through? any workaround for this?
-            #^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
-            for game, details in itertools.islice(game_DB.items(),0,limit_number):
-                #if(scratch_answer == False and game in import_DB and details.igdb_found == True):
+            # resets every time we start the process partway through? any workaround for this?
+            # ^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
+            for game, details in itertools.islice(game_DB.items(), 0, limit_number):
+                # if(scratch_answer == False and game in import_DB and details.igdb_found == True):
                 if (scratch_answer == False and game in import_DB):
                     print("Hey, we already got this one!")
                     game_DB[game] = import_DB[game]
                     continue
-                #Set time speedup back to 0 if want full and accurate database for all items
-                #need to set value in both if and elif to work properly
-                if(time_speedup < 0):
+                # Set time speedup back to 0 if want full and accurate database for all items
+                # need to set value in both if and elif to work properly
+                if (time_speedup < 0):
                     print("SKIPPING!!")
                     time_speedup += 1
                     continue
-                elif(time_speedup == 0):
+                elif (time_speedup == 0):
                     time_speedup = 0
                 check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
                 check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
@@ -387,12 +384,10 @@ def main():
                 check_string += 'rating, rating_count, release_dates, screenshots, similar_games, standalone_expansions, '
                 check_string += 'storyline, tags, total_rating, total_rating_count, updated_at, videos, websites; '
                 # Check if <> comes first, where we use ID instead of name, for titles hard to specify
-                #if (game[0] == '<'): #Replacing after discovering startswith() function?
-                #poem.startswith('All')
-                if(game.startswith('<')):
+                if (game.startswith('<')):
                     print(details)
                     print(game.strip())
-                    #input("Turns out this is a special case!\n")
+                    # input("Turns out this is a special case!\n")
                     game_title = game.strip()
                     # pull the ID from the <> part of the string
                     check_string += 'where id = '
@@ -400,25 +395,25 @@ def main():
                     pattern_match = r'[0-9]+'
                     substring = re.findall(pattern_match, game_title)
                     title_ID = substring[0]
-                    #Try to use some info from the substring so we can grab the name of the game better for logging?
-                    #consider string.replace() function?
+                    # Try to use some info from the substring so we can grab the name of the game better for logging?
+                    # consider string.replace() function?
                     removal = '<' + title_ID + '> '
-                    #modified_title = game_title.strip(str(substring))
+                    # modified_title = game_title.strip(str(substring))
                     modified_title = game_title.strip(removal)
-                    #input(modified_title)
+                    # input(modified_title)
                     check_string += title_ID
-                    #Maybe grab the name from IGDB here, to update the name before it gets sent to the cluster?
-                    #Otherwise it might have <ID> in front of the name there?
-                    #modified_DB[modified_title] = details
-                    #input(modified_DB[modified_title])
+                    # Maybe grab the name from IGDB here, to update the name before it gets sent to the cluster?
+                    # Otherwise it might have <ID> in front of the name there?
+                    # modified_DB[modified_title] = details
+                    # input(modified_DB[modified_title])
                 else:
                     check_string += 'where name = "'
                     check_string += game.strip()
                     check_string += '"'
                 check_string += ' & (status = (0,2,3,4,5,8) | status = null)'
                 check_string += '; '
-                #if (limit_answer):
-                    #check_string += f'limit {limit_number}; '
+                # if (limit_answer):
+                # check_string += f'limit {limit_number}; '
                 check_string += 'offset 0;'  # 6 is cancelled,  & status != 6
                 # Had & version_parent = null in the check_string before, but probably won't work in cases we do want port, might just want
                 # more specificity in some cases
@@ -458,28 +453,27 @@ def main():
                             earliest_release = potential_release
                             earliest_game = result
                             # input(earliest_release)
-                        #print(result)
+                        # print(result)
                     # print(earliest_game.slug)
                     # print(earliest_game.url)
                     # print(earliest_game.id)
                     # print(earliest_game.platforms)
                     # print(earliest_release)
-                    # input("Here we pause")
                     # Time to put the IGDB attributes into the game we are putting out to the cluster
                     game_DB[game].igdb_ID = earliest_game.id
                     game_DB[game].igdb_found = True
-                    #game_DB[game].release_date = earliest_release
-                    game_DB[game].release_date = earliest_release.isoformat() #To make Json serializable?
+                    # game_DB[game].release_date = earliest_release
+                    game_DB[game].release_date = earliest_release.isoformat()  # To make Json serializable?
                     # print("Time to go through platforms")
                     # Spin this while loop off into its own function eventually?
                     plat_counter = 0
-                    #plat_counter not defined error?
+                    # plat_counter not defined error?
                     main_plat = None
                     plat_name = None
                     list_plats = []
-                    #REPLACE THIS WITH A REQUEST THAT LOOKS AT THE ID AND THEN CONSULTS PLATFORMS ENDPOINT?
+                    # REPLACE THIS WITH A REQUEST THAT LOOKS AT THE ID AND THEN CONSULTS PLATFORMS ENDPOINT?
                     while (plat_counter < len(earliest_game.platforms)):
-                        #plat_next = plat_counter + 1
+                        # plat_next = plat_counter + 1
                         plat_ID = earliest_game.platforms[plat_counter]
                         # print(plat_ID)
                         # print(plat_ID.value)
@@ -497,7 +491,6 @@ def main():
                         plat_name = platforms[0].name
                         if (plat_counter == 0):
                             main_plat = plat_name
-                        # print(plat_name)
                         list_plats.append(plat_name)
                         """
                         sub_query = 'fields name; where id=' + str(plat_ID.platform_family) + ';'
@@ -511,7 +504,6 @@ def main():
                         input(platformfamilies)
                         """
                         plat_counter += 1
-                    # input("There they are!")
                     # game_DB[game].main_platform = earliest_game.platforms[0]
                     earliest_plat_release = None
                     earliest_plat_date = datetime.datetime.now()
@@ -524,7 +516,8 @@ def main():
                             sub_query
                         )
                         releases_message = ReleaseDateResult()
-                        releases_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
+                        releases_message.ParseFromString(
+                            sub_request)  # Fills the protobuf message object with the response
                         releases = releases_message.releasedates
                         curr_release = releases[0]
                         if earliest_plat_release == None or earliest_plat > curr_release.date:
@@ -537,62 +530,64 @@ def main():
                         sub_query
                     )
                     platforms_message = PlatformResult()
-                    platforms_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
+                    platforms_message.ParseFromString(
+                        sub_request)  # Fills the protobuf message object with the response
                     platforms = platforms_message.platforms
-                    #main_plat = platforms[0].name
+                    # main_plat = platforms[0].name
                     game_DB[game].main_platform = main_plat  # Will this always pull best choice?
-                    #^Seriously consider revising this to pull the first format with the earliest release date
-                    #Because platform ID's are overruling too much (ex. wii is an early ID so overrides earlier releases)
+                    # ^Seriously consider revising this to pull the first format with the earliest release date
+                    # Because platform ID's are overruling too much (ex. wii is an early ID so overrides earlier releases)
                     # game_DB[game].list_platforms = earliest_game.platforms
-                    if(len(list_plats) > 0):
+                    if (len(list_plats) > 0):
                         game_DB[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
                     modes = earliest_game.game_modes
-                    #input(modes)
-                    if(len(modes) > 0):
+                    if (len(modes) > 0):
                         for mode in modes:
                             mode_type = None
-                            #input(mode)
-                            #sub_query = 'fields *;'
+                            # input(mode)
+                            # sub_query = 'fields *;'
                             sub_query = 'fields name; where id=' + str(mode.id) + ';'
                             sub_request = wrapper.api_request(
                                 'game_modes.pb',  # Note the '.pb' suffix at the endpoint
                                 sub_query
                             )
                             modes_message = GameModeResult()
-                            modes_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
+                            modes_message.ParseFromString(
+                                sub_request)  # Fills the protobuf message object with the response
                             new_modes = modes_message.gamemodes
-                            #print(new_modes)
+                            # print(new_modes)
                             mode_type = new_modes[0].name
                             game_DB[game].player_counts.append(mode_type)
-                            #input(mode_type)
-                        #game_DB[game].player_counts = modes # Changes approach but for the better?
+                            # input(mode_type)
+                        # game_DB[game].player_counts = modes # Changes approach but for the better?
                     # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
                     developers = earliest_game.involved_companies
-                    #^consider a check for developer boolean? porting? supporting?
-                    #do we count publishers?
-                    #consider more categories for game objects later like publishers
-                    #input(developers)
-                    #print(developers)
-                    if(len(developers) > 0):
+                    # ^consider a check for developer boolean? porting? supporting?
+                    # do we count publishers?
+                    # consider more categories for game objects later like publishers
+                    # input(developers)
+                    # print(developers)
+                    if (len(developers) > 0):
                         for dev in developers:
                             dev_name = None
-                            #input(dev)
-                            #FIX THE REST OF THIS!!! (involved company, company?)
-                            #first query to look at involved companies
-                            #sub_query = 'fields *;'
-                            #sub_query_1 = 'fields *; where id=' + str(dev.id) + ' & developer=true;'
+                            # input(dev)
+                            # FIX THE REST OF THIS!!! (involved company, company?)
+                            # first query to look at involved companies
+                            # sub_query = 'fields *;'
+                            # sub_query_1 = 'fields *; where id=' + str(dev.id) + ' & developer=true;'
                             sub_query_1 = 'fields *; where id=' + str(dev.id) + ';'
                             sub_request_1 = wrapper.api_request(
                                 'involved_companies.pb',  # Note the '.pb' suffix at the endpoint
                                 sub_query_1
                             )
                             inv_companies_message = InvolvedCompanyResult()
-                            inv_companies_message.ParseFromString(sub_request_1)  # Fills the protobuf message object with the response
+                            inv_companies_message.ParseFromString(
+                                sub_request_1)  # Fills the protobuf message object with the response
                             inv_companies = inv_companies_message.involvedcompanies
-                            #print(inv_companies)
-                            if(len(inv_companies) == 0):
+                            # print(inv_companies)
+                            if (len(inv_companies) == 0):
                                 continue
-                            #second query to look at the company specifically
+                            # second query to look at the company specifically
                             is_dev = inv_companies[0].developer
                             print(is_dev)
                             is_pub = inv_companies[0].publisher
@@ -603,20 +598,21 @@ def main():
                                 sub_query_2
                             )
                             companies_message = CompanyResult()
-                            companies_message.ParseFromString(sub_request_2)  # Fills the protobuf message object with the response
+                            companies_message.ParseFromString(
+                                sub_request_2)  # Fills the protobuf message object with the response
                             companies = companies_message.companies
-                            #print(companies)
+                            # print(companies)
                             dev_name = companies[0].name
                             game_DB[game].list_companies.append(dev_name)
-                            #if dev true: add to devs
-                            #if pub true: add to pubs
-                            #also consider supporting boolean in addition to developer and publisher? porting?
-                            if(is_dev):
+                            # if dev true: add to devs
+                            # if pub true: add to pubs
+                            # also consider supporting boolean in addition to developer and publisher? porting?
+                            if (is_dev):
                                 game_DB[game].list_developers.append(dev_name)
                             if (is_pub):
                                 game_DB[game].list_publishers.append(dev_name)
                         # game_DB[game].list_developers = developers  # Will this grab the most definitive list?
-                    #ADD GENRES
+                    # ADD GENRES
                     genres = earliest_game.genres
                     if (len(genres) > 0):
                         for genre in genres:
@@ -627,12 +623,12 @@ def main():
                                 sub_query
                             )
                             genres_message = GenreResult()
-                            genres_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
+                            genres_message.ParseFromString(
+                                sub_request)  # Fills the protobuf message object with the response
                             new_genres = genres_message.genres
                             genre_type = new_genres[0].name
                             game_DB[game].genres.append(genre_type)
-                            #input(genre_type)
-                    #ADD THEMES
+                    # ADD THEMES
                     themes = earliest_game.themes
                     if (len(themes) > 0):
                         for theme in themes:
@@ -656,13 +652,13 @@ def main():
                             game_DB[game].igdb_ID = current_game.id
                         except IndexError as e:
                             print("Error:", e)
-                            #print("Index", i, "is out of range")
+                            # print("Index", i, "is out of range")
                         game_DB[game].igdb_found = True
-                        #game_DB[game].release_date = current_game.first_release_date.ToDatetime()
-                        game_DB[game].release_date = current_game.first_release_date.ToDatetime().isoformat() #To make JSON serializable?
+                        game_DB[game].release_date = current_game.first_release_date.ToDatetime().isoformat()
+                        # ^To make JSON serializable?
 
-                        #this version gave animal crossing: new horizons switch and n64
-                        #current approach giving that game nothing for platforms?
+                        # this version gave animal crossing: new horizons switch and n64
+                        # current approach giving that game nothing for platforms?
                         """
                         plat_ID = current_game.platforms[0]
                         plat_name = None
@@ -684,7 +680,7 @@ def main():
                         list_plats.append(plat_name)
                         game_DB[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
                         """
-                        #PASTED FROM ABOVE WITHOUT COMMENTS
+                        # PASTED FROM ABOVE WITHOUT COMMENTS
                         plat_counter = 0
                         main_plat = None
                         plat_name = None
@@ -697,7 +693,8 @@ def main():
                                 sub_query
                             )
                             platforms_message = PlatformResult()
-                            platforms_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
+                            platforms_message.ParseFromString(
+                                sub_request)  # Fills the protobuf message object with the response
                             platforms = platforms_message.platforms
                             plat_name = platforms[0].name
                             if (plat_counter == 0):
@@ -755,14 +752,14 @@ def main():
                             # game_DB[game].player_counts = modes # Changes approach but for the better?
                         # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
                         developers = current_game.involved_companies
-                        #print(developers)
+                        # print(developers)
                         if (len(developers) > 0):
                             for dev in developers:
                                 dev_name = None
                                 # FIX THE REST OF THIS!!! (involved company, company?)
                                 # first query to look at involved companies
                                 # sub_query = 'fields *;'
-                                #sub_query_1 = 'fields *; where id=' + str(dev.id) + ' & developer=true;'
+                                # sub_query_1 = 'fields *; where id=' + str(dev.id) + ' & developer=true;'
                                 sub_query_1 = 'fields *; where id=' + str(dev.id) + ';'
                                 sub_request_1 = wrapper.api_request(
                                     'involved_companies.pb',  # Note the '.pb' suffix at the endpoint
@@ -772,7 +769,7 @@ def main():
                                 inv_companies_message.ParseFromString(
                                     sub_request_1)  # Fills the protobuf message object with the response
                                 inv_companies = inv_companies_message.involvedcompanies
-                                #print(inv_companies)
+                                # print(inv_companies)
                                 if (len(inv_companies) == 0):
                                     continue
                                 # second query to look at the company specifically
@@ -796,7 +793,7 @@ def main():
                                 if (is_pub):
                                     game_DB[game].list_publishers.append(dev_name)
                         # ADD GENRES
-                        #genre seems to be pulling in too many results right now, unrelated?
+                        # genre seems to be pulling in too many results right now, unrelated?
                         genres = earliest_game.genres
                         if (len(genres) > 0):
                             for genre in genres:
@@ -807,13 +804,14 @@ def main():
                                     sub_query
                                 )
                                 genres_message = GenreResult()
-                                genres_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
+                                genres_message.ParseFromString(
+                                    sub_request)  # Fills the protobuf message object with the response
                                 new_genres = genres_message.genres
                                 genre_type = new_genres[0].name
                                 game_DB[game].genres.append(genre_type)
-                                #input(genre_type)
+                                # input(genre_type)
                         # ADD THEMES
-                        #theme seems to be pulling in too many results right now, unrelated?
+                        # theme seems to be pulling in too many results right now, unrelated?
                         themes = earliest_game.themes
                         if (len(themes) > 0):
                             for theme in themes:
@@ -824,14 +822,15 @@ def main():
                                     sub_query
                                 )
                                 themes_message = ThemeResult()
-                                themes_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
+                                themes_message.ParseFromString(
+                                    sub_request)  # Fills the protobuf message object with the response
                                 new_themes = themes_message.themes
                                 theme_type = new_themes[0].name
                                 game_DB[game].themes.append(theme_type)
                         game_DB[game].order_inserted = order_of_insert
                     except Exception as e:
                         print("An error has occurred:", e)
-                        #it starts hitting errors when it gets to some of the new games featured in metacritic user scores?
+                        # it starts hitting errors when it gets to some of the new games featured in metacritic user scores?
                 else:
                     print("Not found with that name!")
                     input("Maybe you need to alter the title somehow?\n")
@@ -862,7 +861,7 @@ def main():
             books = soup.find_all("div", class_ = "book-item")
             """
             igdb_check = True
-        elif(igdb_answer == 'N' or igdb_answer == 'No'):
+        elif (igdb_answer == 'N' or igdb_answer == 'No'):
             print("Understood, skipping to next step.")
             igdb_check = True
         else:
@@ -870,7 +869,7 @@ def main():
             print()
 
     print(game_DB.items().__class__)
-    for game, details in itertools.islice(game_DB.items(),0,3):
+    for game, details in itertools.islice(game_DB.items(), 0, 3):
         print(game)
         print(details)
         print(details.__class__)
@@ -905,7 +904,6 @@ def main():
 
     #Used code sample from Atlas on how to connect with Pymongo for assistance here
     #Connecting to env file to get private login data
-    #mon_connect = os.getenv('MONGO_URI')
     mon_connect = get_env_var('MONGO_URI')
     mon_client = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
     monDB = mon_client["GameSorting"]
@@ -981,9 +979,7 @@ def main():
             export_dict["Title"] = modified_title
         else:
             export_dict["Title"] = game
-        #export_dict["IGDB ID"] = details.igdb_ID
         export_dict["IGDB ID"] = details['igdb_ID']
-        #export_dict["Ranked Score"] = details.ranked_score
         export_dict["Ranked Score"] = details['ranked_score']
         #export_dict["Inclusion Score"] = details.list_count
         export_dict["Inclusion Score"] = details['list_count']
@@ -1012,13 +1008,18 @@ def main():
         export_dict["Genres"] = details['genres']
         #export_dict["Themes"] = details.themes
         export_dict["Themes"] = details['themes']
-        #export_dict["Total Count"] = details.total_count
         export_dict["Total Count"] = details['total_count']
         export_dict["Order Inserted"] = details['order_inserted']
         #export_dict = dict(game)
         #^need to expand and clarify more?
         #export_dict = dict('Title' = game, 'IGDB ID' = details.igdb_ID, 'Ranked Score' = details.ranked_score)
         insertion = mon_col.insert_one(export_dict)
+
+def main():
+    #Basic solution to get testing functions to work for now, make a cleaner solution later?
+
+    run_generator()
+
     #insertion = mon_col.insert_many(game_DB)
     #insertion = mon_col.insert_many(export)
     print("TIME TO INSERT THE LISTS INTO MONGODB!")
@@ -1161,7 +1162,6 @@ def main():
         #Create a loop to deal with printing the platforms in a comma approach
         """
         game_platforms = game['List of Platforms']
-        #print(game_platforms)
         #print(len(game_platforms))
         #input("Here are the number of platforms")
         platforms_string = ""
