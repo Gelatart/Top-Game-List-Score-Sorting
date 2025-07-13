@@ -431,6 +431,7 @@ Harry Potter and the Sorcerer's Stone GBC: IGDB ID: 118554
 Hitman 2016: IGDB ID: 11157
 Ikari Warriors [NES]: IGDB ID: 274081
 Ivan "Ironman" Stewart's Super Off Road (name seems to be crashing IGDB API request?): IGDB ID: 12735
+Killer Instinct [SNES]: IGDB ID: 324152
 Killer Instinct 2013: IGDB ID: 10354
 Kirby's Return to Dream Land (name seems to crash it, maybe the apostrophe?): IGDB ID: 3725
 Legend of Mana [Remastered]: IGDB ID: 143616

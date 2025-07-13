@@ -809,7 +809,6 @@ def run_generator():
                                 new_genres = genres_message.genres
                                 genre_type = new_genres[0].name
                                 game_DB[game].genres.append(genre_type)
-                                # input(genre_type)
                         # ADD THEMES
                         # theme seems to be pulling in too many results right now, unrelated?
                         themes = earliest_game.themes
@@ -1015,11 +1014,6 @@ def run_generator():
         #export_dict = dict('Title' = game, 'IGDB ID' = details.igdb_ID, 'Ranked Score' = details.ranked_score)
         insertion = mon_col.insert_one(export_dict)
 
-def main():
-    #Basic solution to get testing functions to work for now, make a cleaner solution later?
-
-    run_generator()
-
     #insertion = mon_col.insert_many(game_DB)
     #insertion = mon_col.insert_many(export)
     print("TIME TO INSERT THE LISTS INTO MONGODB!")
@@ -1031,6 +1025,11 @@ def main():
         print(list_dict)
         list_insert = list_col.insert_one(list_dict)
         #list_dict["Title"].append(list)
+
+def main():
+    #Basic solution to get testing functions to work for now, make a cleaner solution later?
+
+    run_generator()
 
     #after printed out everything to excel, then make three printed sorted lists?
     #each time, sort excel a certain way, then print out excel factors to list?
