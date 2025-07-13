@@ -7,76 +7,9 @@
 #The CLI may even offer opportunities for micro-operations that don't require their own files? Or could later be spun off?
 #Allow the printing of reports with various customizations?
 
-#Start implementing a unit testing framework of some kind?
-
-#POST-FIRST STORY PLANNING:
-#Potential features to include in the future
-    #Basic GUI? rather than pure CLI?
-        #libraries exist for this? chatgpt suggests Tkinter, PyQt, or Kivy for visual interfaces
-    #Run a mongo shell program directly interacting with the cluster?
-    #Give the user the ability to create shell versions of new files with certain names?
-        #allow them to start doing command line editing and saving of the files to get started?
-    #Give the user the ability to write new lists within the program?
-        #name the list, what type it is, and all the needed lines and such and rest will create it?
-    #Create new functions/files that allow for customizable reports to be made, that we can title ourselves?
-        #set platform filters, what types of ranking criteria, developer filters, title filters, etc.
-        #allow more than just basic txt files? give other options that allow for more graphic/organize customization?
-    #Create new file that only generates all the files locally and doesn't bother with mongodb?
-        #Make sure altgenerator can fill in the gaps to the cluster when this is done? Without duplicates?
-    #allow the user to write down ideas of potential new features to add in the future
-        #have these automatically logged to a persistent file that keeps track across sessions
-        #when writing it just appends to the already existing file
-        #can be reviewed later, lines removed if felt they aren't worth concern
-    #give options to change what database format using? provide support for more than mongodb? option to switch?
-    #make a txt file that branches games into family groupings?
-    #spin IGDB generation into its own file?
-    #chatgpt: try to figure out web scraping to extract data from websites?
-        #review the data afterwards to see how useful it was, give a check to original source to make sure fits my standards?
-    #chatgpt: consider what other user-friendly options and interactive features I could add?
-    #chatgpt: do data analysis and visualization on the data once I have it? generate visual/interactive reports/programs?
-        #chatgpt: try to identify trends and patterns, in ratings over time or across genres?
-        #create charts or graphs to represent aggregated scores/rankings?
-        #chatgpt: "Implement statistical analysis to find correlations between different factors such as genre, platform, or release year and game ratings."
-    #chatgpt: allow users to customize aggregation process
-        #chatgpt: specify which sources to include, weighting scores differently, filtering games off criteria
-        #chatgpt: "Implement settings to control how the data is displayed and analyzed, such as sorting options or filtering by platform or release date."
-    #chatgpt: use database to enable more complex queries
-        #chatgpt: "Implement functionality to update the database with new game releases and ratings automatically."
-    #recommendation system
-        #chatgpt: "Develop a recommendation engine that suggests games based on user preferences and aggregated scores."
-        #this would require a system that tracks users and their history of preferences, which seems like a real interesting way to go
-        #could try to integrate with services like glitchwave and backloggd to see what a user's preferences are to try to have a recommendation algorithm?
-        #or just have my own databases to track users and their ratings of games?
-        #chatgpt: "Utilize machine learning techniques to improve the accuracy of recommendations over time."
-    #community features
-        #chatgpt: "Add social features like user profiles, comments, and sharing capabilities to allow users to discuss and recommend games within the application."
-        #chatgpt: "Implement user ratings and reviews to complement aggregated scores from professional sources."
-        #another approach I wasn't really considering, that definitely pushes it more public oriented
-        #I guess that means I would have a mass aggregation service that establishes its definitive rankings
-        #but users could have recommendations from a mix of their tastes and the "official" tastes?
-        #maybe allow users to try to enter their own lists? have a process that qualifies what they submit? allow them to submit from other sources?
-        #maybe have a public facing version that cleans things up more generally
-        #and my private facing version that aggregates based on the way I do things
-        #might have to introduce more significant weighting options at some point if I go along this road
-    #localization and internationalization
-        #chatgpt: "Support multiple languages by implementing localization features."
-        #chatgpt: "Integrate data from international sources to provide a more diverse range of game ratings and reviews."
-        #I guess provide some support in the background that could pull different text for different languages?
-        #But I def think I should prioritize international sources of data (should try to push that in tracking more)
-    #Error Handling and Logging:
-        #chatgpt: "Improve error handling to provide informative error messages and gracefully handle unexpected situations."
-        #chatgpt: "Implement logging to track program activities and debug issues more effectively."
-        #not sure if things are at the level where there are much errors to handle yet
-        #will have to keep in mind as it gets more advanced and robust
-    #Performance Optimization:
-        #chatgpt: "Profile the application to identify performance bottlenecks and optimize critical sections of the code."
-        #chatgpt: "Implement caching mechanisms to reduce the need for repeated data retrieval and processing."
-        #might be worth analyzing with tools, and looking for redundancies
-        #though I think for now that might not be something that could help too much, not until it gets more advanced
-    #SEE IF CAN GET OTHER USEFUL IDEAS/BRAINSTORMS FROM CHATGPT?
-
-#import os #To run a python script from this file in a new shell, doesn't seem to work right now
+import os #To run a python script from this file in a new shell, doesn't seem to work right now
 import subprocess #Used to run other py files as a subprocess
+import sys
 
 #Introduce users to the main program
 print("Welcome to Gelatart's Top-Game-List-Score-Sorting project!")
@@ -151,30 +84,27 @@ while(program_completed == False):
         option = input("Select what you would like to choose to run: ")
 
         #Potential valid options
-        if(option == '1' or option == 'Generator.py' or option == 'Generator' or option == 'generator' or option == 'generator.py'):
-            #print("Generator.py will be run now")
+        if(option == '1' or option == 'generator.py' or option == 'Generator' or option == 'generator' or option == 'generator.py'):
             option_check = True
-            program_selected = 'Generator.py'
-        elif(option == '2' or option == 'AltGenerator.py' or option == 'AltGenerator' or option == 'altgenerator' or option == 'altgenerator.py'):
-            #print("AltGenerator.py will be run now")
+            program_selected = 'src.generator.generator'
+        elif(option == '2' or option == 'alt_generator.py' or option == 'AltGenerator' or option == 'altgenerator' or option == 'altgenerator.py'):
             option_check = True
-            program_selected = 'AltGenerator.py'
-        elif (option == '3' or option == 'PrintReports.py' or option == 'PrintReports' or option == 'printreports' or option == 'printreports.py'):
+            program_selected = 'src.alt_generator'
+        elif (option == '3' or option == 'print_reports.py' or option == 'PrintReports' or option == 'printreports' or option == 'printreports.py'):
             option_check = True
-            program_selected = 'PrintReports.py'
-        elif (option == '4' or option == 'Drop.py' or option == 'Drop' or option == 'drop' or option == 'drop.py'):
-            #print("Drop.py will be run now")
+            program_selected = 'src.print_reports'
+        elif (option == '4' or option == 'drop.py' or option == 'Drop' or option == 'drop' or option == 'drop.py'):
             option_check = True
-            program_selected = 'Drop.py'
-        elif (option == '5' or option == 'QuickMath.py' or option == 'QuickMath' or option == 'quickmath' or option == 'quickmath.py'):
+            program_selected = 'src.drop'
+        elif (option == '5' or option == 'quick_math.py' or option == 'QuickMath' or option == 'quickmath' or option == 'quickmath.py'):
             option_check = True
-            program_selected = 'QuickMath.py'
-        elif (option == '6' or option == 'IGDB-Query.py' or option == 'IGDB-Query' or option == 'igdb-query' or option == 'igdb-query.py'):
+            program_selected = 'src.quick_math'
+        elif (option == '6' or option == 'igdb_query.py' or option == 'IGDB-Query' or option == 'igdb-query' or option == 'igdb-query.py'):
             option_check = True
-            program_selected = 'IGDB-Query.py'
-        elif (option == '7' or option == 'Mongo-Query.py' or option == 'Mongo-Query' or option == 'mongo-query' or option == 'mongo-query.py'):
+            program_selected = 'src.igdb_query'
+        elif (option == '7' or option == 'mongo_query.py' or option == 'Mongo-Query' or option == 'mongo-query' or option == 'mongo-query.py'):
             option_check = True
-            program_selected = 'Mongo-Query.py'
+            program_selected = 'src.mongo_query'
         elif(option == '8' or option == 'Quit' or option == 'quit' or option == 'Exit' or option == 'exit'):
             option_check = True
             print("Thank you for spending time with this program.")
@@ -194,8 +124,15 @@ while(program_completed == False):
     print("You have chosen: " + program)
     print(program + " will be run now")
 
+    # Set PYTHONPATH to include 'src' so imports like 'from generator...' work
+    env = os.environ.copy()
+    env["PYTHONPATH"] = os.path.abspath("src")
+
     #TIME TO RUN REAL PROGRAM
-    subprocess.run(["python", program])
+    #subprocess.run(["python", program])
+    # Run the program with modified environment
+    #subprocess.run([sys.executable, program], env=env)
+    subprocess.run([sys.executable, "-m", program])
 
     option_check = False #To prevent the loop from going through again before it's ready
 
