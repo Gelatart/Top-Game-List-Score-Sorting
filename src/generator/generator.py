@@ -57,6 +57,25 @@ def mongo_connect():
         connect_message = e
     return connect_message
 
+def load_list(files, file_count, game_DB, games_lists, type: ListType):
+    """
+    Function for loading and processing different directories of lists, rather than rewriting the logic multiple times slightly differently
+    """
+    #Do I make some of these variables global? Declared outside any specific functions?
+    for filepath in files:
+        file_count += 1
+        for title, score, total in read_game_list(filepath, type):
+            if title not in game_DB:
+                game_DB[title] = GameObject(title, ranked_score=score, list_source=filepath, total_count=total)
+            else:
+                game = game_DB[title]
+                game.ranked_score += score
+                game.total_count += total
+                game.list_count += 1
+                game.lists_referencing.append(filepath)
+            print(f"Score of {score}: {title}")
+        games_lists.append(filepath)
+
 def run_generator():
     """
     The main logic of the generator function, that calls other functions from other files
@@ -166,9 +185,8 @@ def run_generator():
     # Breaks at this point because doesn't have game_DB? Make sure game_DB can be accessed by exporter? In run_generator()?
 
     for game, details in game_DB.items():
-        # for game, details in itertools.islice(game_DB.items(),0,3):
         export_DB[game] = json.loads(json.dumps(details.__dict__))
-        # export_DB.append(export_string)
+        #^See if I can use the new to_dict functionality?
 
     print(export_DB)
 
@@ -400,7 +418,6 @@ def run_generator():
                     removal = '<' + title_ID + '> '
                     # modified_title = game_title.strip(str(substring))
                     modified_title = game_title.strip(removal)
-                    # input(modified_title)
                     check_string += title_ID
                     # Maybe grab the name from IGDB here, to update the name before it gets sent to the cluster?
                     # Otherwise it might have <ID> in front of the name there?
@@ -1026,15 +1043,15 @@ def run_generator():
         list_insert = list_col.insert_one(list_dict)
         #list_dict["Title"].append(list)
 
+    #after printed out everything to excel, then make three printed sorted lists?
+    #each time, sort excel a certain way, then print out excel factors to list?
+
+    # further sort by keys after sorted by values?
+
 def main():
     #Basic solution to get testing functions to work for now, make a cleaner solution later?
 
     run_generator()
-
-    #after printed out everything to excel, then make three printed sorted lists?
-    #each time, sort excel a certain way, then print out excel factors to list?
-
-    #further sort by keys after sorted by values?
 
     #print totals of the numbers of lists in each category?
 
