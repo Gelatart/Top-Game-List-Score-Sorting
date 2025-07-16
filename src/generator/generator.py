@@ -96,6 +96,9 @@ def run_generator():
     unranked_file_count = 0
     former_file_count = 0
 
+    client = IGDB_Client()
+    db = DatabaseManager(use_mongo=True, use_sql=True)
+
     # Workbook is created
     wb = Workbook()
 
@@ -103,7 +106,9 @@ def run_generator():
     sheet1 = wb.add_sheet('Sheet 1')
 
     # Step 1: Load and process ranked lists
-    ranked_files = get_files_in_dir("game_lists/ranked")
+    #ranked_files = get_files_in_dir("game_lists/ranked")
+    load_list(get_files_in_dir("game_lists/ranked"), ranked_file_count, game_DB, games_lists, ListType.RANKED)
+    """
     for filepath in ranked_files:
         ranked_file_count += 1
         for title, score, total in read_game_list(filepath, ListType.RANKED):
@@ -118,9 +123,12 @@ def run_generator():
                 game.lists_referencing.append(filepath)
             print(f"Score of {score}: {title}")
         games_lists.append(filepath)
+    """
 
     # Step 2: Load and process unranked lists
-    unranked_files = get_files_in_dir("game_lists/unranked")
+    #unranked_files = get_files_in_dir("game_lists/unranked")
+    load_list(get_files_in_dir("game_lists/unranked"), unranked_file_count, game_DB, games_lists, ListType.UNRANKED)
+    """
     for filepath in unranked_files:
         unranked_file_count += 1
         for title, score, total in read_game_list(filepath, ListType.UNRANKED):
@@ -135,9 +143,12 @@ def run_generator():
                 game.lists_referencing.append(filepath)
             print(f"Score of {score}: {title}")
         games_lists.append(filepath)
+    """
 
     # Step 3: Load and process former lists
-    former_files = get_files_in_dir("game_lists/former")
+    #former_files = get_files_in_dir("game_lists/former")
+    load_list(get_files_in_dir("game_lists/former"), former_file_count, game_DB, games_lists, ListType.FORMER)
+    """
     for filepath in former_files:
         former_file_count += 1
         for title, score, total in read_game_list(filepath, ListType.FORMER):
@@ -152,13 +163,18 @@ def run_generator():
                 game.lists_referencing.append(filepath)
             print(f"Score of {score}: {title}")
         games_lists.append(filepath)
+    """
 
     # Step 4: Mark completed games
     for title in completed_titles:
         if title in game_DB:
             game_DB[title].completed = True
 
-    # Step 5: Save to database
+    # Step 5: Enrich with IGDB Data
+    for game in game_DB.values():
+        client.enrich_game_object(game)
+
+    # Step 6: Save to database
     #Doing basic insert to mongo at this point, and then we can add other values later on? After IGDB pulling?
     #Have the user be able to set a flag if they want use_mongo at this point, so they don't have to deal with trying to connect?
 
@@ -166,13 +182,22 @@ def run_generator():
     input("About to attempt connection to Mongo, press ENTER when you are ready")
     mongo_connect()
 
-    db = DatabaseInterface(use_mongo=True, use_sql=True)
+    #db = DatabaseInterface(use_mongo=True, use_sql=True)
     for game in game_DB.values():
         db.insert_game_pre_ID(game)
     db.close() #close later on? like when program concludes? or when user sets they want to close connections?
     #or just set database manager whenever we want to connect to do stuff again and don't leave open?
 
-    input(print(f"Successfully processed {len(game_DB)} games."))
+    #input(print(f"Successfully processed {len(game_DB)} games."))
+
+    # Step 7: Export results
+    # Add all of the specialized reports I was having before?
+    export_list = list(game_DB.values())
+    export_to_json(export_list, "reports/games.json")
+    export_to_excel(export_list, "reports/games.xlsx")
+    export_to_text(export_list, "reports/games.txt")
+
+    input(print(f"Successfully processed and stored {len(export_list)} games."))
 
     #REST OF FORMER MAIN FUNCTION FOLLOWS:
 
@@ -1048,15 +1073,15 @@ def run_generator():
 
     # further sort by keys after sorted by values?
 
+    # print totals of the numbers of lists in each category?
+
+    # Files to mark additional personal statuses of games so far:
+    # Completed
+
 def main():
     #Basic solution to get testing functions to work for now, make a cleaner solution later?
 
     run_generator()
-
-    #print totals of the numbers of lists in each category?
-
-    #Files to mark additional personal statuses of games so far:
-    #Completed
 
     print(f"Ranked Lists: {ranked_file_count}")
     print(f"Unranked Lists: {unranked_file_count}")
