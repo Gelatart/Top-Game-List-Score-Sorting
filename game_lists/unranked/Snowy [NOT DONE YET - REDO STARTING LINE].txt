@@ -150,3 +150,6 @@ TimeSplitters 2
 <324152> Killer Instinct [SNES]
 Mortal Kombat
 LEGO Harry Potter: Years 1-4
+Tenchu: Stealth Assassins
+<1560> Pokemon Diamond Version
+Ratchet & Clank

@@ -20,9 +20,11 @@ import datetime
 import sqlite3
 
 from .config import check_for_src, get_env_var
-from .game_object import GameObject
-from .file_loader import ListType, get_files_in_dir, read_game_list, read_attributed_games
 from .database_interface import DatabaseInterface
+from .file_loader import ListType, get_files_in_dir, read_game_list, read_attributed_games
+from .game_object import GameObject
+from .igdb_client import IGDB_Client
+
 
 load_dotenv()
 #^To actually populate what we will need from mongo connection
@@ -97,7 +99,7 @@ def run_generator():
     former_file_count = 0
 
     client = IGDB_Client()
-    db = DatabaseManager(use_mongo=True, use_sql=True)
+    db = DatabaseInterface(use_mongo=True, use_sql=True)
 
     # Workbook is created
     wb = Workbook()
@@ -223,7 +225,6 @@ def run_generator():
     with open(check_for_src("games_pre.json"), "w") as outfile:
         out_json = json.dump(export_DB, outfile)
         # out_json = json.dump(json_dict, outfile)
-        # out_json = json.dump(json_string, outfile)
         print(out_json)
 
     import_DB = {}
@@ -794,7 +795,6 @@ def run_generator():
                             # game_DB[game].player_counts = modes # Changes approach but for the better?
                         # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
                         developers = current_game.involved_companies
-                        # print(developers)
                         if (len(developers) > 0):
                             for dev in developers:
                                 dev_name = None
@@ -1022,7 +1022,6 @@ def run_generator():
             export_dict["Title"] = game
         export_dict["IGDB ID"] = details['igdb_ID']
         export_dict["Ranked Score"] = details['ranked_score']
-        #export_dict["Inclusion Score"] = details.list_count
         export_dict["Inclusion Score"] = details['list_count']
         #average_score = details.ranked_score / details.total_count
         average_score = details['ranked_score'] / details['total_count']
@@ -1078,11 +1077,6 @@ def run_generator():
     # Files to mark additional personal statuses of games so far:
     # Completed
 
-def main():
-    #Basic solution to get testing functions to work for now, make a cleaner solution later?
-
-    run_generator()
-
     print(f"Ranked Lists: {ranked_file_count}")
     print(f"Unranked Lists: {unranked_file_count}")
     print(f"Former Lists: {former_file_count}")
@@ -1097,6 +1091,11 @@ def main():
     games_pulled_ranked = mon_col.find().sort("Ranked Score", -1)
     games_pulled_inclusion = mon_col.find().sort("Inclusion Score", -1)
     games_pulled_average = mon_col.find().sort("Average Score", -1)
+
+def main():
+    #Basic solution to get testing functions to work for now, make a cleaner solution later?
+
+    run_generator()
 
     #Opening the files that we are going to be writing to
     file_ranked = open(check_for_src("reports/Sorted by Ranked.txt"),"w", encoding="utf-8")

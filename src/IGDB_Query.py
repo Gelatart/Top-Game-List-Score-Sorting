@@ -456,7 +456,7 @@ Perfect Dark GBC: IGDB ID: 1464
 Pokemon Black Version (what about white?): IGDB ID: 1521
 Pokemon Black Version 2 (what about white 2?): IGDB ID: 8284
 Pokemon Crystal Version: IGDB ID: 1514
-Pokemon Diamond Version (what about peral?): IGDB ID: 1560
+Pokemon Diamond Version (what about pearl?): IGDB ID: 1560
 Pokemon Emerald Version): IGDB ID: 1517
 Pokemon Fire Red Version (what about leaf green?): IGDB ID: 1559
 Pokemon GO: IGDB ID: 12515

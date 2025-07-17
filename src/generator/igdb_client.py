@@ -21,9 +21,23 @@ class IGDB_Client:
         """
         Search IGDB for a game title and return the most relevant result.
         """
-        query = f'search "{title}"; fields id, name, genres.name, release_dates.date, platforms.name, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1;'
+        #Add logic for parsing when it starts with <> at the start of the name
+        query = f'search "{title}"; fields id, name, genres.name, platforms.name, release_dates.date, platforms.name, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1;'
+        print(title)
+        #query = f'search "{title}"; fields id, name; limit 1;'
+        print(query)
+        #query = f'search "zelda"; fields id, name; limit 1;'
+        #query = f'fields name, rating; limit 1;'
         #is developer and publisher a little overkill for now?
         response = self.wrapper.api_request("games", query)
+        """
+        response = self.wrapper.api_request(
+            'games.pb',  # Note the '.pb' suffix at the endpoint
+            'fields name, rating; limit 5; offset 0;'
+        )
+        """
+        print(response)
+        print(response[0])
         #Trying out json approach instead of protobuf response I used to use
         #games_data = json.loads(response.decode('utf-8'))
         return response[0] if response else {}
@@ -34,7 +48,7 @@ class IGDB_Client:
         """
         Update GameObject fields based on IGDB API result.
         """
-        igdb_data = self.search_game_by_title(game_obj.list_source)
+        igdb_data = self.search_game_by_title(game_obj.title)
         #give option to search by igdb_ID?
 
         if not igdb_data:
