@@ -1,14 +1,15 @@
 import sqlite3
 
+from .create_schema import create_schema
 from .game_object import GameObject
-
 #Use try, except, finally logic to deal with errors and close the connection?
 
 class SQLManager:
     def __init__(self, db_path="games.db"):
+        create_schema(db_path)
         self.conn = sqlite3.connect(db_path)
         self.cursor = self.conn.cursor()
-        self._create_table()
+        #self._create_table()
 
     #Have a first pass to grab from IGDB just ID's for all of the games and create a basic table off that
     #Then the optional second pass to grab the rest of the attributes we will need
@@ -26,17 +27,27 @@ class SQLManager:
         self.cursor.execute("""
         CREATE TABLE IF NOT EXISTS games (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
-            igdb_id INTEGER,
-            title TEXT,
+            title TEXT UNIQUE,
+            igdb_found BOOLEAN,
+            igdb_id INTEGER UNIQUE,
             ranked_score INTEGER,
-            list_source TEXT,
+            list_count INTEGER,
             total_count INTEGER,
             completed BOOLEAN,
-            release_date TEXT
+            release_date TEXT,
+            main_platform TEXT,
+            list_source TEXT,
+            order_inserted INTEGER
         );
         """)
-        #More values?
+        #Make release_date a datetime value instead?
+        #Do I actually want an order_inserted value? Is it useful?
         self.conn.commit()
+
+    def get_or_create_id(self, table, name):
+        self.cursor.execute(f"INSERT OR IGNORE INTO {table}(name) VALUES (?)", (name,))
+        self.cursor.execute(f"SELECT id FROM {table} WHERE name=?", (name,))
+        return self.cursor.fetchone()[0]
 
     def insert_or_update_game_pre_ID(self, game: GameObject):
         self.cursor.execute("""

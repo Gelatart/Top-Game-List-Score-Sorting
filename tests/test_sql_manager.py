@@ -12,3 +12,4 @@ def test_sql_insert_and_fetch_pre_ID():
     results = db.get_all_games()
     assert len(results) == 1
     db.close()
+    #Right now saying no such table: games, need to find need way to initialize?

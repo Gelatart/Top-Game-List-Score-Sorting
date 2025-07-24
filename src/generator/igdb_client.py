@@ -1,5 +1,6 @@
 import os
 import json
+import re
 import requests
 from igdb.wrapper import IGDBWrapper
 
@@ -17,30 +18,55 @@ class IGDB_Client:
         self.access_token = received["access_token"]
         self.wrapper = IGDBWrapper(self.client_id, self.access_token)
 
+    def search_game_by_ID(self, igdb_id: int) -> dict:
+        query = f'fields id, name, genres.name, platforms.name, release_dates.date, platforms.name, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1; where id = {igdb_id};'
+        response = self.wrapper.api_request("games", query)
+        games_data = json.loads(response.decode("utf-8"))
+        return games_data[0] if games_data else {}
+
     def search_game_by_title(self, title: str) -> dict:
         """
         Search IGDB for a game title and return the most relevant result.
         """
         #Add logic for parsing when it starts with <> at the start of the name
-        query = f'search "{title}"; fields id, name, genres.name, platforms.name, release_dates.date, platforms.name, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1;'
-        print(title)
-        #query = f'search "{title}"; fields id, name; limit 1;'
-        print(query)
-        #query = f'search "zelda"; fields id, name; limit 1;'
-        #query = f'fields name, rating; limit 1;'
-        #is developer and publisher a little overkill for now?
-        response = self.wrapper.api_request("games", query)
-        """
-        response = self.wrapper.api_request(
-            'games.pb',  # Note the '.pb' suffix at the endpoint
-            'fields name, rating; limit 5; offset 0;'
-        )
-        """
-        print(response)
-        print(response[0])
-        #Trying out json approach instead of protobuf response I used to use
-        #games_data = json.loads(response.decode('utf-8'))
-        return response[0] if response else {}
+        if (title.startswith('<')):
+            new_title = title.strip()
+            pattern_match = r'[0-9]+'
+            substring = re.findall(pattern_match, new_title)
+            title_ID = substring[0]
+            #removal = '<' + title_ID + '> '
+            #modified_title = game_title.strip(removal)
+            return self.search_game_by_ID(title_ID)
+        else:
+            query = f'search "{title}"; fields id, name, genres.name, platforms.name, release_dates.date, platforms.name, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1;'
+            print(title)
+            #query = f'search "{title}"; fields id, name; limit 1;'
+            print(query)
+            #query = f'search "zelda"; fields id, name; limit 1;'
+            #query = f'fields name, rating; limit 1;'
+            #is developer and publisher a little overkill for now?
+            response = self.wrapper.api_request("games", query)
+            """
+            response = self.wrapper.api_request(
+                'games.pb',  # Note the '.pb' suffix at the endpoint
+                'fields name, rating; limit 5; offset 0;'
+            )
+            """
+            #print(response)
+            #print(type(response))
+            #print(response[0]) if response else print("")
+            if isinstance(response, bytes):
+                games_data = json.loads(response.decode("utf-8"))
+            elif isinstance(response, str):
+                games_data = json.loads(response)
+            else:
+                games_data = response
+            print(type(games_data))
+            print(type(games_data[0])) if games_data else print("")
+            #Trying out json approach instead of protobuf response I used to use
+            #return response[0] if response else {}
+            #return response if response else {}
+            return games_data[0] if games_data else {}
 
     #make a search_game_by_igdb_id function
 

@@ -43,7 +43,6 @@ def check_for_src(potential_filename):
 
 def mongo_connect():
     #Replace the part where this originally happened later in the code with this function?
-    #mon_connect = os.getenv('MONGO_URI')
     mon_connect = get_env_var('MONGO_URI')
     mon_client = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
     monDB = mon_client["GameSorting"]
@@ -218,7 +217,6 @@ def run_generator():
     print(export_DB)
 
     json_string = ','.join(export_DB)
-    # json_dict = json.loads(export_DB)
     # json_dict = json.loads(json_string)
 
     # Initial print of what we have in the games database
@@ -587,7 +585,6 @@ def run_generator():
                     if (len(modes) > 0):
                         for mode in modes:
                             mode_type = None
-                            # input(mode)
                             # sub_query = 'fields *;'
                             sub_query = 'fields name; where id=' + str(mode.id) + ';'
                             sub_request = wrapper.api_request(
@@ -601,7 +598,6 @@ def run_generator():
                             # print(new_modes)
                             mode_type = new_modes[0].name
                             game_DB[game].player_counts.append(mode_type)
-                            # input(mode_type)
                         # game_DB[game].player_counts = modes # Changes approach but for the better?
                     # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
                     developers = earliest_game.involved_companies
@@ -811,7 +807,6 @@ def run_generator():
                                 inv_companies_message.ParseFromString(
                                     sub_request_1)  # Fills the protobuf message object with the response
                                 inv_companies = inv_companies_message.involvedcompanies
-                                # print(inv_companies)
                                 if (len(inv_companies) == 0):
                                     continue
                                 # second query to look at the company specifically
@@ -1028,9 +1023,7 @@ def run_generator():
         export_dict["Average Score"] = average_score
         #export_dict["List of References"] = details.lists_referencing
         export_dict["List of References"] = details['lists_referencing']
-        #export_dict["Completed"] = details.completed
         export_dict["Completed"] = details['completed']
-        #export_dict["Main Platform"] = details.main_platform
         export_dict["Main Platform"] = details['main_platform']
         #export_dict["List of Platforms"] = details.list_platforms
         export_dict["List of Platforms"] = details['list_platforms']
@@ -1091,11 +1084,6 @@ def run_generator():
     games_pulled_ranked = mon_col.find().sort("Ranked Score", -1)
     games_pulled_inclusion = mon_col.find().sort("Inclusion Score", -1)
     games_pulled_average = mon_col.find().sort("Average Score", -1)
-
-def main():
-    #Basic solution to get testing functions to work for now, make a cleaner solution later?
-
-    run_generator()
 
     #Opening the files that we are going to be writing to
     file_ranked = open(check_for_src("reports/Sorted by Ranked.txt"),"w", encoding="utf-8")
@@ -1178,6 +1166,7 @@ def main():
     sheet1.write(0, 14, 'GENRES', bold_style)
     sheet1.write(0, 15, 'THEMES', bold_style)
     excel_count = 1
+
     for game in games_pulled:
         ranked_score = game['Ranked Score']
         inclusion_score = game['Inclusion Score']
@@ -1241,6 +1230,11 @@ def main():
             print("We found one!")
             print(game)
         print()
+
+def main():
+    #Basic solution to get testing functions to work for now, make a cleaner solution later?
+
+    run_generator()
 
     #Close connection to open up socket (seemed to cause problems when running generator then trying printreports?)
     mon_client.close()
