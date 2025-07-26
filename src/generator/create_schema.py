@@ -1,7 +1,7 @@
 import sqlite3
 
-def create_schema(db_path="games.db"):
-    conn = sqlite3.connect(db_path)
+def create_schema(conn, db_path="games.db"):
+    #conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
     # === Main Game Table ===
@@ -64,7 +64,7 @@ def create_schema(db_path="games.db"):
         """)
 
     conn.commit()
-    conn.close()
+    #conn.close()
     print("Database schema created.")
 
 # Optional direct run

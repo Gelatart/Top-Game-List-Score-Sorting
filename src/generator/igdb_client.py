@@ -2,6 +2,7 @@ import os
 import json
 import re
 import requests
+import unicodedata
 from igdb.wrapper import IGDBWrapper
 
 from .config import get_env_var
@@ -38,8 +39,11 @@ class IGDB_Client:
             #modified_title = game_title.strip(removal)
             return self.search_game_by_ID(title_ID)
         else:
-            query = f'search "{title}"; fields id, name, genres.name, platforms.name, release_dates.date, platforms.name, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1;'
-            print(title)
+            #Normalize the title so it doesn't have any characters that will cause the IGDB API request to fail
+            normalized_title = unicodedata.normalize("NFKD", title).encode("ascii", "ignore").decode("utf-8")
+            #Come up with functionality where if this normalized version isn't found, bring it to user's attention? So we can know to use IGDB ID instead?
+            query = f'search "{normalized_title}"; fields id, name, genres.name, platforms.name, release_dates.date, platforms.name, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1;'
+            #print(title)
             #query = f'search "{title}"; fields id, name; limit 1;'
             print(query)
             #query = f'search "zelda"; fields id, name; limit 1;'
@@ -61,8 +65,8 @@ class IGDB_Client:
                 games_data = json.loads(response)
             else:
                 games_data = response
-            print(type(games_data))
-            print(type(games_data[0])) if games_data else print("")
+            #print(type(games_data))
+            #print(type(games_data[0])) if games_data else print("")
             #Trying out json approach instead of protobuf response I used to use
             #return response[0] if response else {}
             #return response if response else {}

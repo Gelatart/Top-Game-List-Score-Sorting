@@ -6,8 +6,8 @@ from .game_object import GameObject
 
 class SQLManager:
     def __init__(self, db_path="games.db"):
-        create_schema(db_path)
         self.conn = sqlite3.connect(db_path)
+        create_schema(self.conn, db_path)
         self.cursor = self.conn.cursor()
         #self._create_table()
 

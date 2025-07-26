@@ -1,14 +1,15 @@
 # import required module
+import dotenv
+from dotenv import load_dotenv
+import itertools
 import os
 import math
-# Writing to an excel sheet using Python
-import xlwt
-from xlwt import Workbook
 import pymongo
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
-import dotenv
-from dotenv import load_dotenv
+# Writing to an excel sheet using Python
+import xlwt
+from xlwt import Workbook
 from bs4 import BeautifulSoup
 import requests
 from igdb.wrapper import IGDBWrapper
@@ -25,21 +26,8 @@ from .file_loader import ListType, get_files_in_dir, read_game_list, read_attrib
 from .game_object import GameObject
 from .igdb_client import IGDB_Client
 
-
-load_dotenv()
+#load_dotenv()
 #^To actually populate what we will need from mongo connection
-
-#Make a function to append to file names based on src? To add ..\ if they need to go back up on directory
-"""
-def check_for_src(potential_filename):
-    cwd = os.getcwd()
-    #input("We are currently in " + cwd)
-    if_src = cwd[-3:]
-    #input(if_src)
-    if(if_src == "src"):
-        potential_filename = "..\\" + potential_filename
-    return potential_filename
-"""
 
 def mongo_connect():
     #Replace the part where this originally happened later in the code with this function?
@@ -51,7 +39,6 @@ def mongo_connect():
     try:
         mon_client.admin.command('ping')
         connect_message = "Pinged your deployment. You successfully connected to MongoDB!"
-        #print("Pinged your deployment. You successfully connected to MongoDB!")
         print(connect_message)
     except Exception as e:
         print(e)
@@ -107,108 +94,28 @@ def run_generator():
     sheet1 = wb.add_sheet('Sheet 1')
 
     # Step 1: Load and process ranked lists
-    #ranked_files = get_files_in_dir("game_lists/ranked")
     load_list(get_files_in_dir("game_lists/ranked"), ranked_file_count, game_DB, games_lists, ListType.RANKED)
-    """
-    for filepath in ranked_files:
-        ranked_file_count += 1
-        for title, score, total in read_game_list(filepath, ListType.RANKED):
-            game = game_DB.get(title)
-            if not game:
-                game = GameObject(game, ranked_score=score, list_source=filepath, total_count=total)
-                game_DB[title] = game
-            else:
-                game.ranked_score += score
-                game.total_count += total
-                game.list_count += 1
-                game.lists_referencing.append(filepath)
-            print(f"Score of {score}: {title}")
-        games_lists.append(filepath)
-    """
 
     # Step 2: Load and process unranked lists
     #unranked_files = get_files_in_dir("game_lists/unranked")
     load_list(get_files_in_dir("game_lists/unranked"), unranked_file_count, game_DB, games_lists, ListType.UNRANKED)
-    """
-    for filepath in unranked_files:
-        unranked_file_count += 1
-        for title, score, total in read_game_list(filepath, ListType.UNRANKED):
-            game = game_DB.get(title)
-            if not game:
-                game = GameObject(game, ranked_score=score, list_source=filepath, total_count=total)
-                game_DB[title] = game
-            else:
-                game.ranked_score += score
-                game.total_count += total
-                game.list_count += 1
-                game.lists_referencing.append(filepath)
-            print(f"Score of {score}: {title}")
-        games_lists.append(filepath)
-    """
 
     # Step 3: Load and process former lists
     #former_files = get_files_in_dir("game_lists/former")
     load_list(get_files_in_dir("game_lists/former"), former_file_count, game_DB, games_lists, ListType.FORMER)
-    """
-    for filepath in former_files:
-        former_file_count += 1
-        for title, score, total in read_game_list(filepath, ListType.FORMER):
-            game = game_DB.get(title)
-            if not game:
-                game = GameObject(game, ranked_score=score, list_source=filepath, total_count=total)
-                game_DB[title] = game
-            else:
-                game.ranked_score += score
-                game.total_count += total
-                game.list_count += 1
-                game.lists_referencing.append(filepath)
-            print(f"Score of {score}: {title}")
-        games_lists.append(filepath)
-    """
 
     # Step 4: Mark completed games
     for title in completed_titles:
         if title in game_DB:
             game_DB[title].completed = True
 
-    # Step 5: Enrich with IGDB Data
-    for game in game_DB.values():
-        client.enrich_game_object(game)
-
-    # Step 6: Save to database
-    #Doing basic insert to mongo at this point, and then we can add other values later on? After IGDB pulling?
-    #Have the user be able to set a flag if they want use_mongo at this point, so they don't have to deal with trying to connect?
-
-    #First testing the mongo connection and notifying user
-    input("About to attempt connection to Mongo, press ENTER when you are ready")
-    mongo_connect()
-
-    #db = DatabaseInterface(use_mongo=True, use_sql=True)
-    for game in game_DB.values():
-        db.insert_game_pre_ID(game)
-    db.close() #close later on? like when program concludes? or when user sets they want to close connections?
-    #or just set database manager whenever we want to connect to do stuff again and don't leave open?
-
-    #input(print(f"Successfully processed {len(game_DB)} games."))
-
-    # Step 7: Export results
-    # Add all of the specialized reports I was having before?
-    export_list = list(game_DB.values())
-    export_to_json(export_list, "reports/games.json")
-    export_to_excel(export_list, "reports/games.xlsx")
-    export_to_text(export_list, "reports/games.txt")
-
-    input(print(f"Successfully processed and stored {len(export_list)} games."))
-
-    #REST OF FORMER MAIN FUNCTION FOLLOWS:
+    #THIS IS OUR OLD JSON LOADING AND PULLING FUNCTIONALITY BEFORE THE IGDB CHECKING
 
     # Taking custom class objects and making them JSON exportable
     export_DB = {}
     # export_DB["games"] = []
 
-    import itertools
-
-    # Breaks at this point because doesn't have game_DB? Make sure game_DB can be accessed by exporter? In run_generator()?
+    #Am I still going to need to export to JSON and pull before I do IGDB and database stuff?
 
     for game, details in game_DB.items():
         export_DB[game] = json.loads(json.dumps(details.__dict__))
@@ -217,7 +124,6 @@ def run_generator():
     print(export_DB)
 
     json_string = ','.join(export_DB)
-    # json_dict = json.loads(json_string)
 
     # Initial print of what we have in the games database
     with open(check_for_src("games_pre.json"), "w") as outfile:
@@ -233,17 +139,10 @@ def run_generator():
     with open(check_for_src("games_pre.json"), "r") as json_file:
         # Reading the first character throws everything off
         # import_DB = json.load(json_file)
-        # first_char = json_file.read(1)
-        # if not first_char:
         if (os.stat(check_for_src("games_pre.json")).st_size == 0):
             print("Looks like we don't have anything in games_pre.json yet")
         else:
             import_DB = json.load(json_file)
-            # import_DB = json.loads(json_file.read())
-            # for line in json_file:
-            # import_DB.append(json.loads(line))
-            # import_DB["games"].append(json.loads(line))
-            # import_DB.append(json.loads(line))
             print(import_DB)
             input()
 
@@ -257,8 +156,6 @@ def run_generator():
     # eventually try for functionality where we only update the games that have updated scores? or new games?
 
     with open(check_for_src("games.json")) as json_file:
-        # first_char = json_file.read(1)
-        # if not first_char:
         if (os.stat(check_for_src("games.json")).st_size == 0):
             print("Looks like we don't have anything in games.json yet")
         else:
@@ -290,15 +187,24 @@ def run_generator():
     No others at this time?
     """
 
+    # Step 5: Enrich with IGDB Data
+    for game in game_DB.values():
+        client.enrich_game_object(game)
+
+    #THIS IS THE OLD SETUP FOR THE IGDB PROCESS, INVOLVES CHECKING AND SUCH,
+    # VERY COMPLEX AND LENGTHY, CONSIDER TAKING FROM BUT REPLACING WITH NEW MORE
+    # CONDENSED STUFF THAT WORKS BETTER
+
     # This is where the user sets whether they want to grab from the IGDB API or not
-    #Set a series of flags on whether to pull certain attributes or not into the database?
-    #Set specific functions for every potential attribute to grab?
+    # Set a series of flags on whether to pull certain attributes or not into the database?
+    # Set specific functions for every potential attribute to grab?
     # Try to find ways to make IGDB pulling run in the background so I can work on other things while it's going
     igdb_check = False
     igdb_answer = None
     scratch_answer = False
     limit_answer = False
     limit_number = 0
+
     while (igdb_check == False):
         print("Would you like to grab additional game data from the IGDB API at this moment? Y or N")
         igdb_answer = input("Make your selection: ")
@@ -433,7 +339,6 @@ def run_generator():
                     game_title = game.strip()
                     # pull the ID from the <> part of the string
                     check_string += 'where id = '
-                    # pattern_match = r'<[0-9]+>'
                     pattern_match = r'[0-9]+'
                     substring = re.findall(pattern_match, game_title)
                     title_ID = substring[0]
@@ -476,7 +381,6 @@ def run_generator():
                 games = games_message.games
                 if (len(games) > 1):
                     versions_counter = 0
-                    # print(games[0])
                     # earliest_release = int(round(games[0].first_release_date))
                     # earliest_release = games[0].first_release_date.to_pydatetime()
                     earliest_release = games[0].first_release_date.ToDatetime()
@@ -496,7 +400,6 @@ def run_generator():
                             # input(earliest_release)
                         # print(result)
                     # print(earliest_game.slug)
-                    # print(earliest_game.url)
                     # print(earliest_game.id)
                     # print(earliest_game.platforms)
                     # print(earliest_release)
@@ -640,7 +543,6 @@ def run_generator():
                             companies_message.ParseFromString(
                                 sub_request_2)  # Fills the protobuf message object with the response
                             companies = companies_message.companies
-                            # print(companies)
                             dev_name = companies[0].name
                             game_DB[game].list_companies.append(dev_name)
                             # if dev true: add to devs
@@ -712,7 +614,6 @@ def run_generator():
                         plat_name = platforms[0].name
                         if (plat_counter == 0):
                             main_plat = plat_name
-                        # print(plat_name)
                         list_plats.append(plat_name)
                         game_DB[game].main_platform = plat_name
                         list_plats = []
@@ -910,23 +811,23 @@ def run_generator():
         print(details)
         print(details.__class__)
 
-    #Once we've gotten the IGDB data we need, print it out to a JSON file to store long term
+    # Once we've gotten the IGDB data we need, print it out to a JSON file to store long term
     for game, details in game_DB.items():
-        if(isinstance(details, str)):
-            #if already made a json string
+        if (isinstance(details, str)):
+            # if already made a json string
             if (details.igdb_found == False):
                 print("Nothing found for this yet (string)")
                 continue
             else:
                 export_DB[game] = json.loads(details)  # Now it's already json formatted
-        elif(isinstance(details, dict)):
+        elif (isinstance(details, dict)):
             if (details['igdb_found'] == False):
                 print("Nothing found for this yet (dict)")
                 continue
             else:
                 export_DB[game] = json.loads(json.dumps(details))
         else:
-        #export_DB[game] = json.dumps(details.__dict__)
+            # export_DB[game] = json.dumps(details.__dict__)
             if (details.igdb_found == False):
                 print("Nothing found for this yet (other)")
                 continue
@@ -938,12 +839,31 @@ def run_generator():
 
     print("Games exported to games.json!")
 
-    #Used code sample from Atlas on how to connect with Pymongo for assistance here
-    #Connecting to env file to get private login data
+    # Step 6: Save to database
+    #Doing basic insert to mongo at this point, and then we can add other values later on? After IGDB pulling?
+    #Have the user be able to set a flag if they want use_mongo at this point, so they don't have to deal with trying to connect?
+
+    #First testing the mongo connection and notifying user
+    input("About to attempt connection to Mongo, press ENTER when you are ready")
+    mongo_connect()
+
+    #db = DatabaseInterface(use_mongo=True, use_sql=True)
+    for game in game_DB.values():
+        db.insert_game_pre_ID(game)
+    db.close() #close later on? like when program concludes? or when user sets they want to close connections?
+    #or just set database manager whenever we want to connect to do stuff again and don't leave open?
+
+    #input(print(f"Successfully processed {len(game_DB)} games."))
+
+    # THIS IS THE OLD SETUP FOR THE MONGO DATABASE PROCESS, SEE ABOUT PULLING
+    # WHAT I NEED AND REPLACING WHAT I DON'T
+
+    # Used code sample from Atlas on how to connect with Pymongo for assistance here
+    # Connecting to env file to get private login data
     mon_connect = get_env_var('MONGO_URI')
     mon_client = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
     monDB = mon_client["GameSorting"]
-    #input(mon_connect)
+    # input(mon_connect)
     input("About to attempt connection to Mongo, press ENTER when you are ready")
     try:
         mon_client.admin.command('ping')
@@ -953,15 +873,15 @@ def run_generator():
     mon_col = monDB["games"]
     list_col = monDB["lists"]
 
-    #Create index on title so can do partial title searching, don't mark as unique because some titles won't be
+    # Create index on title so can do partial title searching, don't mark as unique because some titles won't be
     mon_col.create_index('Title')
 
-    #INSERT ALL GAMES INTO DATABASE
-    #Clear database to begin with?
+    # INSERT ALL GAMES INTO DATABASE
+    # Clear database to begin with?
     while True:
         print("Would you like to clear the database to start? Y or N")
         clear_option = input()
-        if(clear_option == "Y" or clear_option == "y"):
+        if (clear_option == "Y" or clear_option == "y"):
             print("Ok, clearing the game and list collections")
             mon_col.drop()
             list_col.drop()
@@ -979,12 +899,12 @@ def run_generator():
         print("2. New set limit")
         print("3. No limit")
         mongo_option = input()
-        if(mongo_option == '1'):
+        if (mongo_option == '1'):
             mongo_limit = limit_number
             break
-        elif(mongo_option == '2'):
+        elif (mongo_option == '2'):
             print("Set your limit here")
-            #add input verification
+            # add input verification
             mongo_limit = int(input())
             break
         elif (mongo_option == '3'):
@@ -992,20 +912,21 @@ def run_generator():
         else:
             print("I'm sorry, I don't understand. Please enter valid input")
             continue
+
     print("INSERTING INTO MONGODB!")
-    for game, details in itertools.islice(game_DB.items(),0,mongo_limit):
+    for game, details in itertools.islice(game_DB.items(), 0, mongo_limit):
         print(game_DB.items().__class__)
         print(details.__class__)
-        #If they're all from scratch, details is a gameobject, otherwise it's a dict
-        if(isinstance(details, GameObject)):
+        # If they're all from scratch, details is a gameobject, otherwise it's a dict
+        if (isinstance(details, GameObject)):
             print("This one's a game object!")
             details = json.loads(json.dumps(details.__dict__))
         print(details.__class__)
-        #insertion = mon_col.insert_one(details)
-        #insertion = mon_col.insert_one(game_DB[game])
+        # insertion = mon_col.insert_one(details)
+        # insertion = mon_col.insert_one(game_DB[game])
         export_dict = {}
         if (game.startswith('<')):
-            #If I successfully improve how titles get put out to mongo cluster, make the IGDB ID the key I use there for ID
+            # If I successfully improve how titles get put out to mongo cluster, make the IGDB ID the key I use there for ID
             print(game)
             pattern_match = r'[0-9]+'
             substring = re.findall(pattern_match, game)
@@ -1018,52 +939,63 @@ def run_generator():
         export_dict["IGDB ID"] = details['igdb_ID']
         export_dict["Ranked Score"] = details['ranked_score']
         export_dict["Inclusion Score"] = details['list_count']
-        #average_score = details.ranked_score / details.total_count
+        # average_score = details.ranked_score / details.total_count
         average_score = details['ranked_score'] / details['total_count']
         export_dict["Average Score"] = average_score
-        #export_dict["List of References"] = details.lists_referencing
+        # export_dict["List of References"] = details.lists_referencing
         export_dict["List of References"] = details['lists_referencing']
         export_dict["Completed"] = details['completed']
         export_dict["Main Platform"] = details['main_platform']
-        #export_dict["List of Platforms"] = details.list_platforms
+        # export_dict["List of Platforms"] = details.list_platforms
         export_dict["List of Platforms"] = details['list_platforms']
-        #export_dict["Release Date"] = details.release_date
+        # export_dict["Release Date"] = details.release_date
         export_dict["Release Date"] = details['release_date']
-        #export_dict["Player Counts"] = details.player_counts
+        # export_dict["Player Counts"] = details.player_counts
         export_dict["Player Counts"] = details['player_counts']
-        #export_dict["Developers"] = details.list_developers
+        # export_dict["Developers"] = details.list_developers
         export_dict["Developers"] = details['list_developers']
-        #export_dict["Publishers"] = details.list_publishers
+        # export_dict["Publishers"] = details.list_publishers
         export_dict["Publishers"] = details['list_publishers']
-        #export_dict["Companies"] = details.list_companies
+        # export_dict["Companies"] = details.list_companies
         export_dict["Companies"] = details['list_companies']
-        #export_dict["Genres"] = details.genres
+        # export_dict["Genres"] = details.genres
         export_dict["Genres"] = details['genres']
-        #export_dict["Themes"] = details.themes
+        # export_dict["Themes"] = details.themes
         export_dict["Themes"] = details['themes']
         export_dict["Total Count"] = details['total_count']
         export_dict["Order Inserted"] = details['order_inserted']
-        #export_dict = dict(game)
-        #^need to expand and clarify more?
-        #export_dict = dict('Title' = game, 'IGDB ID' = details.igdb_ID, 'Ranked Score' = details.ranked_score)
+        # export_dict = dict(game)
+        # ^need to expand and clarify more?
+        # export_dict = dict('Title' = game, 'IGDB ID' = details.igdb_ID, 'Ranked Score' = details.ranked_score)
         insertion = mon_col.insert_one(export_dict)
 
-    #insertion = mon_col.insert_many(game_DB)
-    #insertion = mon_col.insert_many(export)
+    # insertion = mon_col.insert_many(game_DB)
+    # insertion = mon_col.insert_many(export)
     print("TIME TO INSERT THE LISTS INTO MONGODB!")
     for list in games_lists:
         # could keep track of what type of list it is, other variables?
-        #list_dict = {}
-        #list_dict["Title"] = list
-        list_dict = dict(Title = list)
+        # list_dict = {}
+        # list_dict["Title"] = list
+        list_dict = dict(Title=list)
         print(list_dict)
         list_insert = list_col.insert_one(list_dict)
-        #list_dict["Title"].append(list)
+         # list_dict["Title"].append(list)
 
-    #after printed out everything to excel, then make three printed sorted lists?
-    #each time, sort excel a certain way, then print out excel factors to list?
+    # after printed out everything to excel, then make three printed sorted lists?
+     # each time, sort excel a certain way, then print out excel factors to list?
 
     # further sort by keys after sorted by values?
+
+    # Step 7: Export results
+    # Add all of the specialized reports I was having before?
+    export_list = list(game_DB.values())
+    export_to_json(export_list, "reports/games.json")
+    export_to_excel(export_list, "reports/games.xlsx")
+    export_to_text(export_list, "reports/games.txt")
+
+    input(print(f"Successfully processed and stored {len(export_list)} games."))
+
+    #REST OF FORMER MAIN FUNCTION FOLLOWS:
 
     # print totals of the numbers of lists in each category?
 
@@ -1186,7 +1118,6 @@ def run_generator():
         output_lists = ', '.join(game['List of References'])
         sheet1.write(excel_count, 5, output_lists)
         sheet1.write(excel_count, 6, completion_status)
-        #sheet1.write(excel_count, 5, game['Main Platform'].strip())
         sheet1.write(excel_count, 7, game['Main Platform'])
         #Create a loop to deal with printing the platforms in a comma approach
         """
@@ -1231,11 +1162,6 @@ def run_generator():
             print(game)
         print()
 
-def main():
-    #Basic solution to get testing functions to work for now, make a cleaner solution later?
-
-    run_generator()
-
     #Close connection to open up socket (seemed to cause problems when running generator then trying printreports?)
     mon_client.close()
     #Close cursors too?
@@ -1243,6 +1169,11 @@ def main():
     games_pulled_ranked.close()
     games_pulled_average.close()
     games_pulled_inclusion.close()
+
+def main():
+    #Basic solution to get testing functions to work for now, make a cleaner solution later?
+
+    run_generator()
 
     print("Successfully completed! Have a good day!")
 
