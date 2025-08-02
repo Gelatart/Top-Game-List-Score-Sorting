@@ -109,3 +109,26 @@ class IGDB_Client:
             if c.get("publisher"):
                 game_obj.list_publishers.append(name)
             game_obj.list_companies.append(name)
+
+    """
+    TYPES FOR GAME_MODES (Based on id #):
+    1: Singleplayer?
+        2, 3: Multiplayer? (2 might just be some form of singleplayer? multi against npcs's?)
+    2: Multiplayer?
+    3: Co-op?
+    4: Split-screen?
+    5: MMO?
+    6: Battle Royale?
+    No others at this time?
+
+    FOR INVOLVED_COMPANIES, WE WILL LIKELY NEED TO USE A DIFFERENT ENDPOINT TO FIGURE OUT WHAT THEY ALL ARE,
+    BECAUSE SO MANY POTENTIAL ID NUMBERS
+
+    TYPE FOR PLATFORM FAMILIES (Based on id #):
+    1: PlayStation
+    2: Xbox
+    3: Sega
+    4: Linux
+    5: Nintendo
+    No others at this time?
+    """

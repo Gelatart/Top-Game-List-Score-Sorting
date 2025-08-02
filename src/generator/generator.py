@@ -22,12 +22,10 @@ import sqlite3
 
 from .config import check_for_src, get_env_var
 from .database_interface import DatabaseInterface
+from .exporter import export_to_json, export_to_excel, export_to_text
 from .file_loader import ListType, get_files_in_dir, read_game_list, read_attributed_games
 from .game_object import GameObject
 from .igdb_client import IGDB_Client
-
-#load_dotenv()
-#^To actually populate what we will need from mongo connection
 
 def mongo_connect():
     #Replace the part where this originally happened later in the code with this function?
@@ -109,36 +107,28 @@ def run_generator():
         if title in game_DB:
             game_DB[title].completed = True
 
-    #THIS IS OUR OLD JSON LOADING AND PULLING FUNCTIONALITY BEFORE THE IGDB CHECKING
+    #JSON LOADING AND PULLING BEFORE IGDB CHECKING
 
-    # Taking custom class objects and making them JSON exportable
-    export_DB = {}
-    # export_DB["games"] = []
+    #Initial JSON export of what we have in the games database
+    #Not entirely sure why we were using this and if we still need it, possibly for old IGDB setup
+    #Used to have export_DB = {}, which used the game titles from game_DB as key, and got a __dict__ of the
+    # value as the new value (with json.loads and json.dumps of the dict)
+    export_list = list(game_DB.values())
+    export_to_json(export_list, "reports/games_pre.json")
+    #Print to check the json first?
 
-    #Am I still going to need to export to JSON and pull before I do IGDB and database stuff?
-
-    for game, details in game_DB.items():
-        export_DB[game] = json.loads(json.dumps(details.__dict__))
-        #^See if I can use the new to_dict functionality?
-
-    print(export_DB)
-
-    json_string = ','.join(export_DB)
-
-    # Initial print of what we have in the games database
-    with open(check_for_src("games_pre.json"), "w") as outfile:
-        out_json = json.dump(export_DB, outfile)
-        # out_json = json.dump(json_dict, outfile)
-        print(out_json)
+    """
+    def export_to_json(games: List[GameObject], output_path: str):
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump([g.to_dict() for g in games], f, indent=4, ensure_ascii=False)
+    """
 
     import_DB = {}
-    # import_DB["games"] = []
 
     input("Let's test pulling from JSON!\n")
 
     with open(check_for_src("games_pre.json"), "r") as json_file:
         # Reading the first character throws everything off
-        # import_DB = json.load(json_file)
         if (os.stat(check_for_src("games_pre.json")).st_size == 0):
             print("Looks like we don't have anything in games_pre.json yet")
         else:
@@ -149,9 +139,13 @@ def run_generator():
     # having issue with jsondecodeerror: extra data, s, end OR str object has no attribute read (load vs. loads)
     # seems like putting all into a "games" array doesn't help things
 
+    #THIS IS OUR OLD JSON LOADING AND PULLING FUNCTIONALITY BEFORE THE IGDB CHECKING
+    #Am I still going to need to export to JSON and pull before I do IGDB and database stuff?
+
+    #... (being replaced above)
+
     # Make sure fresh for actual process once done testing
     import_DB.clear()
-    export_DB.clear()
 
     # eventually try for functionality where we only update the games that have updated scores? or new games?
 
@@ -161,31 +155,7 @@ def run_generator():
         else:
             import_DB = json.load(json_file)
     print(import_DB)
-    print(game_DB.items().__class__)
     input()
-
-    """
-    TYPES FOR GAME_MODES (Based on id #):
-    1: Singleplayer?
-        2, 3: Multiplayer? (2 might just be some form of singleplayer? multi against npcs's?)
-    2: Multiplayer?
-    3: Co-op?
-    4: Split-screen?
-    5: MMO?
-    6: Battle Royale?
-    No others at this time?
-
-    FOR INVOLVED_COMPANIES, WE WILL LIKELY NEED TO USE A DIFFERENT ENDPOINT TO FIGURE OUT WHAT THEY ALL ARE,
-    BECAUSE SO MANY POTENTIAL ID NUMBERS
-
-    TYPE FOR PLATFORM FAMILIES (Based on id #):
-    1: PlayStation
-    2: Xbox
-    3: Sega
-    4: Linux
-    5: Nintendo
-    No others at this time?
-    """
 
     # Step 5: Enrich with IGDB Data
     for game in game_DB.values():
@@ -333,7 +303,6 @@ def run_generator():
                 check_string += 'storyline, tags, total_rating, total_rating_count, updated_at, videos, websites; '
                 # Check if <> comes first, where we use ID instead of name, for titles hard to specify
                 if (game.startswith('<')):
-                    print(details)
                     print(game.strip())
                     # input("Turns out this is a special case!\n")
                     game_title = game.strip()
@@ -345,7 +314,6 @@ def run_generator():
                     # Try to use some info from the substring so we can grab the name of the game better for logging?
                     # consider string.replace() function?
                     removal = '<' + title_ID + '> '
-                    # modified_title = game_title.strip(str(substring))
                     modified_title = game_title.strip(removal)
                     check_string += title_ID
                     # Maybe grab the name from IGDB here, to update the name before it gets sent to the cluster?
@@ -399,7 +367,6 @@ def run_generator():
                             earliest_game = result
                             # input(earliest_release)
                         # print(result)
-                    # print(earliest_game.slug)
                     # print(earliest_game.id)
                     # print(earliest_game.platforms)
                     # print(earliest_release)
@@ -498,7 +465,6 @@ def run_generator():
                             modes_message.ParseFromString(
                                 sub_request)  # Fills the protobuf message object with the response
                             new_modes = modes_message.gamemodes
-                            # print(new_modes)
                             mode_type = new_modes[0].name
                             game_DB[game].player_counts.append(mode_type)
                         # game_DB[game].player_counts = modes # Changes approach but for the better?
@@ -507,8 +473,6 @@ def run_generator():
                     # ^consider a check for developer boolean? porting? supporting?
                     # do we count publishers?
                     # consider more categories for game objects later like publishers
-                    # input(developers)
-                    # print(developers)
                     if (len(developers) > 0):
                         for dev in developers:
                             dev_name = None
@@ -531,7 +495,6 @@ def run_generator():
                                 continue
                             # second query to look at the company specifically
                             is_dev = inv_companies[0].developer
-                            print(is_dev)
                             is_pub = inv_companies[0].publisher
                             print(is_pub)
                             sub_query_2 = 'fields name; where id=' + str(inv_companies[0].company.id) + ';'
@@ -697,7 +660,6 @@ def run_generator():
                                 dev_name = None
                                 # FIX THE REST OF THIS!!! (involved company, company?)
                                 # first query to look at involved companies
-                                # sub_query = 'fields *;'
                                 # sub_query_1 = 'fields *; where id=' + str(dev.id) + ' & developer=true;'
                                 sub_query_1 = 'fields *; where id=' + str(dev.id) + ';'
                                 sub_request_1 = wrapper.api_request(
@@ -712,9 +674,7 @@ def run_generator():
                                     continue
                                 # second query to look at the company specifically
                                 is_dev = inv_companies[0].developer
-                                print(is_dev)
                                 is_pub = inv_companies[0].publisher
-                                print(is_pub)
                                 sub_query_2 = 'fields name; where id=' + str(inv_companies[0].company.id) + ';'
                                 sub_request_2 = wrapper.api_request(
                                     'companies.pb',  # Note the '.pb' suffix at the endpoint
@@ -805,7 +765,6 @@ def run_generator():
             print("Answer not understood, try again.")
             print()
 
-    print(game_DB.items().__class__)
     for game, details in itertools.islice(game_DB.items(), 0, 3):
         print(game)
         print(details)
@@ -858,12 +817,10 @@ def run_generator():
     # THIS IS THE OLD SETUP FOR THE MONGO DATABASE PROCESS, SEE ABOUT PULLING
     # WHAT I NEED AND REPLACING WHAT I DON'T
 
-    # Used code sample from Atlas on how to connect with Pymongo for assistance here
     # Connecting to env file to get private login data
     mon_connect = get_env_var('MONGO_URI')
     mon_client = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
     monDB = mon_client["GameSorting"]
-    # input(mon_connect)
     input("About to attempt connection to Mongo, press ENTER when you are ready")
     try:
         mon_client.admin.command('ping')
@@ -946,7 +903,6 @@ def run_generator():
         export_dict["List of References"] = details['lists_referencing']
         export_dict["Completed"] = details['completed']
         export_dict["Main Platform"] = details['main_platform']
-        # export_dict["List of Platforms"] = details.list_platforms
         export_dict["List of Platforms"] = details['list_platforms']
         # export_dict["Release Date"] = details.release_date
         export_dict["Release Date"] = details['release_date']
@@ -972,11 +928,11 @@ def run_generator():
     # insertion = mon_col.insert_many(game_DB)
     # insertion = mon_col.insert_many(export)
     print("TIME TO INSERT THE LISTS INTO MONGODB!")
-    for list in games_lists:
+    for game_list in games_lists:
         # could keep track of what type of list it is, other variables?
         # list_dict = {}
         # list_dict["Title"] = list
-        list_dict = dict(Title=list)
+        list_dict = dict(Title=game_list)
         print(list_dict)
         list_insert = list_col.insert_one(list_dict)
          # list_dict["Title"].append(list)
@@ -986,6 +942,18 @@ def run_generator():
 
     # further sort by keys after sorted by values?
 
+    # Files to mark additional personal statuses of games so far:
+    # Completed
+
+    # Prints total counts of lists used for each category
+    print(f"Ranked Lists: {ranked_file_count}")
+    print(f"Unranked Lists: {unranked_file_count}")
+    print(f"Former Lists: {former_file_count}")
+
+    print("LISTS USED IN PROCESS:")
+    for game_list in games_lists:
+        print(game_list)
+
     # Step 7: Export results
     # Add all of the specialized reports I was having before?
     export_list = list(game_DB.values())
@@ -993,22 +961,7 @@ def run_generator():
     export_to_excel(export_list, "reports/games.xlsx")
     export_to_text(export_list, "reports/games.txt")
 
-    input(print(f"Successfully processed and stored {len(export_list)} games."))
-
-    #REST OF FORMER MAIN FUNCTION FOLLOWS:
-
-    # print totals of the numbers of lists in each category?
-
-    # Files to mark additional personal statuses of games so far:
-    # Completed
-
-    print(f"Ranked Lists: {ranked_file_count}")
-    print(f"Unranked Lists: {unranked_file_count}")
-    print(f"Former Lists: {former_file_count}")
-
-    print("LISTS USED IN PROCESS:")
-    for list in games_lists:
-        print(list)
+    #OLD EXPORT PROCESS
 
     print()
     print("Time to grab the games from the database!")
@@ -1017,21 +970,20 @@ def run_generator():
     games_pulled_inclusion = mon_col.find().sort("Inclusion Score", -1)
     games_pulled_average = mon_col.find().sort("Average Score", -1)
 
-    #Opening the files that we are going to be writing to
-    file_ranked = open(check_for_src("reports/Sorted by Ranked.txt"),"w", encoding="utf-8")
-    file_inclusion = open(check_for_src("reports/Sorted by Inclusion.txt"),"w", encoding="utf-8")
-    file_average = open(check_for_src("reports/Sorted by Average.txt"),"w", encoding="utf-8")
+    # Opening the files that we are going to be writing to
+    file_ranked = open(check_for_src("reports/Sorted by Ranked.txt"), "w", encoding="utf-8")
+    file_inclusion = open(check_for_src("reports/Sorted by Inclusion.txt"), "w", encoding="utf-8")
+    file_average = open(check_for_src("reports/Sorted by Average.txt"), "w", encoding="utf-8")
     file_ranked_uncompleted = open(check_for_src("reports/Sorted by Ranked (Uncompleted).txt"), "w", encoding="utf-8")
-    file_inclusion_uncompleted = open(check_for_src("reports/Sorted by Inclusion (Uncompleted).txt"),"w", encoding="utf-8")
-    file_average_uncompleted = open(check_for_src("reports/Sorted by Average (Uncompleted).txt"),"w", encoding="utf-8")
+    file_inclusion_uncompleted = open(check_for_src("reports/Sorted by Inclusion (Uncompleted).txt"), "w",
+                                      encoding="utf-8")
+    file_average_uncompleted = open(check_for_src("reports/Sorted by Average (Uncompleted).txt"), "w", encoding="utf-8")
 
     for game in games_pulled_ranked:
         entry = ""
         completed = game["Completed"]
         if (completed == True):
             entry += "[x]"
-        print(game['Title'])
-        print(game['Ranked Score'])
         entry += game['Title'].strip()
         if (igdb_answer == 'Y' or igdb_answer == 'Yes'):
             #Needed while we are using timespeedup
@@ -1078,7 +1030,7 @@ def run_generator():
             file_average_uncompleted.write(entry)
             file_average_uncompleted.write("\n")
 
-    #Writing to excel using new approach from MongoDB Atlas
+    # Writing to excel using new approach from MongoDB Atlas
     bold_style = xlwt.easyxf('font: bold 1;')
     crossed_style = xlwt.easyxf('font: struck_out 1;')
     sheet1.write(0, 0, 'TITLE', bold_style)
@@ -1157,22 +1109,24 @@ def run_generator():
     for game in games_pulled:
         print("Here is a game")
         print(game)
-        if(game["Main Platform"] == "Wii"):
+        if (game["Main Platform"] == "Wii"):
             print("We found one!")
             print(game)
         print()
 
-    #Close connection to open up socket (seemed to cause problems when running generator then trying printreports?)
+    # Close connection to open up socket (seemed to cause problems when running generator then trying printreports?)
     mon_client.close()
-    #Close cursors too?
+    # Close cursors too?
     games_pulled.close()
     games_pulled_ranked.close()
     games_pulled_average.close()
     games_pulled_inclusion.close()
 
-def main():
-    #Basic solution to get testing functions to work for now, make a cleaner solution later?
+    #COMPLETION OF NEW PROCESS
 
+    input(print(f"Successfully processed and stored {len(export_list)} games."))
+
+def main():
     run_generator()
 
     print("Successfully completed! Have a good day!")
