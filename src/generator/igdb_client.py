@@ -6,6 +6,7 @@ import unicodedata
 from igdb.wrapper import IGDBWrapper
 
 from .config import get_env_var
+from .cache_manager import CacheManager
 
 class IGDB_Client:
     def __init__(self):
@@ -18,12 +19,21 @@ class IGDB_Client:
         received = json.loads(page.text)
         self.access_token = received["access_token"]
         self.wrapper = IGDBWrapper(self.client_id, self.access_token)
+        self.cache = CacheManager()
 
     def search_game_by_ID(self, igdb_id: int) -> dict:
+        cached = self.cache.get(igdb_id)
+        if cached:
+            return cached
+
         query = f'fields id, name, genres.name, platforms.name, release_dates.date, platforms.name, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1; where id = {igdb_id};'
         response = self.wrapper.api_request("games", query)
         games_data = json.loads(response.decode("utf-8"))
-        return games_data[0] if games_data else {}
+        result = games_data[0] if games_data else {}
+
+        if result.get("id"):
+            self.cache.set(result["id"], result)
+        return result
 
     def search_game_by_title(self, title: str) -> dict:
         """
@@ -34,13 +44,26 @@ class IGDB_Client:
             new_title = title.strip()
             pattern_match = r'[0-9]+'
             substring = re.findall(pattern_match, new_title)
+            #input(new_title)
             title_ID = substring[0]
-            #removal = '<' + title_ID + '> '
-            #modified_title = game_title.strip(removal)
+            removal = '<' + title_ID + '> '
+            modified_title = title.strip(removal)
+
+            # Check the cache to see if we already got the IGDB info we need
+            #cached = self.cache.get(modified_title)
+            #if cached:
+                #return cached
             return self.search_game_by_ID(title_ID)
         else:
             #Normalize the title so it doesn't have any characters that will cause the IGDB API request to fail
             normalized_title = unicodedata.normalize("NFKD", title).encode("ascii", "ignore").decode("utf-8")
+
+            #Check the cache to see if we already got the IGDB info we need
+            #cached = self.cache.get(normalized_title)
+            #if cached:
+                #return cached
+
+            #If it's not cached, time for an API call
             #Come up with functionality where if this normalized version isn't found, bring it to user's attention? So we can know to use IGDB ID instead?
             query = f'search "{normalized_title}"; fields id, name, genres.name, platforms.name, release_dates.date, platforms.name, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1;'
             #print(title)
@@ -70,7 +93,19 @@ class IGDB_Client:
             #Trying out json approach instead of protobuf response I used to use
             #return response[0] if response else {}
             #return response if response else {}
-            return games_data[0] if games_data else {}
+            result = games_data[0] if games_data else {}
+
+            if result.get("id"):
+                cached = self.cache.get(result["id"])
+                if cached:
+                    return cached
+                else:
+                    self.cache.set(result["id"], result)
+
+            #Store the title in our cache
+            #self.cache.set(normalized_title, result)
+
+            return result
 
     #make a search_game_by_igdb_id function
 

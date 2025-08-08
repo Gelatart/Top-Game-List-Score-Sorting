@@ -1,4 +1,4 @@
-1
+187
 Batman Arkham Origins
 Marvel's Spider-Man: Miles Morales
 Dead Rising 4
@@ -185,3 +185,4 @@ Twisted Metal III
 Mass Effect
 <1271> Okami
 Shenmue
+Kirby's Epic Yarn

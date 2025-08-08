@@ -6,7 +6,6 @@ Fallout 3
 Gears of War 2
 Hades
 Homeworld
-Jet Set Radio
 Metal Gear Solid V: The Phantom Pain
 Minecraft
 NCAA Football 2004
@@ -15,9 +14,12 @@ Persona 4 Golden
 Persona 5
 Quake III Arena
 SoulCalibur II
+SSX
 SSX 3
+StarCraft II: Wings of Liberty
 Street Fighter IV
 Street Fighter Alpha 3
+Super Mario 3D World
 Super Mario 64
 Tetris Effect: Connected
 Tom Clancy's Splinter Cell

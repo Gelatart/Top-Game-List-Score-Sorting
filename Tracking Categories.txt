@@ -1,14 +1,14 @@
 RANKED: 109
-UNRANKED: 58
+UNRANKED: 59
 FORMER: 16
 UNUSED: 0
 ---
-TOTAL: 183
+TOTAL: 184
 
 <^> indicates special notes for scoring that are not currently implemented
 
 MY TOP 100:
-My Personal Top 100 - Backloggd (As of 7-9-2024)
+R-My Personal Top 100 - Backloggd (As of 7-9-2024)
 
 TOP 100(+) ALL TIME:
 R-Reader's Choice Top 300 Games of All Time - GameInformer - 3-19-2018
@@ -40,7 +40,7 @@ R-The 50 Best Video Games of All Time - TIME - 8-23-2016
 R-Top 10 Video Games - CNET - 7-5-2008
 
 SCORE AGGREGATION (CRITICS):
-R-Metacritic (Critic Scores, Metascore, Up to 100) (As of 7-9-2024)
+R-Metacritic (Critic Scores, Metascore, Up to 100) (As of 8-8-2025)
 	F-+ FORMER
 
 SCORE AGGREGATION (USERS):
@@ -112,6 +112,7 @@ R-Top 10 Winter Areas in Video Games - dukey03 - 12-24-2022
 	F-+ HONORABLE MENTIONS
 R-12 Best Games Set During Christmas - GameRant - 11-29-2023
 U-10 Best Video Games That Take Place During The Winter - ScreenRant - 12-4-2021
+U-A big fat list of snowy and Christmassy games to play this winter - Reddit r/PatientGamers - Sometime 2021-2022?
 
 TOP THEMATIC GENRE ALL TIME (POST-APOCALYPSE):
 R-The 10 Best Post-Apocalyptic Video Games Ranked - Maxim - 8-31-2016

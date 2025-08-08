@@ -104,3 +104,14 @@ def test_search_game_title_variants_bytes(mock_igdb_client, input_title, expecte
 def test_search_game_title_variants_bytes(mock_igdb_client, test_case):
     result = mock_igdb_client.search_game_by_title_bytes(test_case.input_title)
     assert result["name"] == test_case.expected_output
+
+def test_api_request_raises_connection_error(monkeypatch):
+    client = IGDB_Client()
+
+    def mock_api_request(endpoint, query):
+        raise ConnectionError("Connection failed")
+
+    monkeypatch.setattr(client.wrapper, "api_request", mock_api_request)
+
+    with pytest.raises(ConnectionError, match="Connection failed"):
+        client.search_game_by_title("Test Game")

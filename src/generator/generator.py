@@ -490,7 +490,6 @@ def run_generator():
                             inv_companies_message.ParseFromString(
                                 sub_request_1)  # Fills the protobuf message object with the response
                             inv_companies = inv_companies_message.involvedcompanies
-                            # print(inv_companies)
                             if (len(inv_companies) == 0):
                                 continue
                             # second query to look at the company specifically
@@ -786,7 +785,6 @@ def run_generator():
             else:
                 export_DB[game] = json.loads(json.dumps(details))
         else:
-            # export_DB[game] = json.dumps(details.__dict__)
             if (details.igdb_found == False):
                 print("Nothing found for this yet (other)")
                 continue
