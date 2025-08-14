@@ -134,7 +134,6 @@ def run_generator():
         else:
             import_DB = json.load(json_file)
             print(import_DB)
-            input()
 
     # having issue with jsondecodeerror: extra data, s, end OR str object has no attribute read (load vs. loads)
     # seems like putting all into a "games" array doesn't help things
@@ -155,11 +154,18 @@ def run_generator():
         else:
             import_DB = json.load(json_file)
     print(import_DB)
-    input()
 
     # Step 5: Enrich with IGDB Data
-    for game in game_DB.values():
-        client.enrich_game_object(game)
+    igdb_check = False
+    while (igdb_check == False):
+        igdb_answer = input("Would you like to pull data from IGDB right now or do it later? Answer True or False to continue: ")
+        if(igdb_answer == "True" or igdb_answer == "False"):
+            igdb_check = True
+        else:
+            print("Sorry, please enter correct input")
+    if(igdb_answer == "True"):
+        for game in game_DB.values():
+            client.enrich_game_object(game)
 
     #THIS IS THE OLD SETUP FOR THE IGDB PROCESS, INVOLVES CHECKING AND SUCH,
     # VERY COMPLEX AND LENGTHY, CONSIDER TAKING FROM BUT REPLACING WITH NEW MORE
@@ -435,7 +441,11 @@ def run_generator():
                             earliest_plat_release = curr_release
                             earliest_plat_date = curr_release.date
                             main_plat = curr_release.platform
+
+                    #Is this below section even needed? Seems to crash with a bad request, and main_plat already giving a string name value when it does?
+                    """
                     sub_query = 'fields name; where id=' + str(main_plat) + ';'
+                    input(f"{sub_query}, {main_plat}, {plat_counter}")
                     sub_request = wrapper.api_request(
                         'platforms.pb',  # Note the '.pb' suffix at the endpoint
                         sub_query
@@ -445,6 +455,8 @@ def run_generator():
                         sub_request)  # Fills the protobuf message object with the response
                     platforms = platforms_message.platforms
                     # main_plat = platforms[0].name
+                    """
+
                     game_DB[game].main_platform = main_plat  # Will this always pull best choice?
                     # ^Seriously consider revising this to pull the first format with the earliest release date
                     # Because platform ID's are overruling too much (ex. wii is an early ID so overrides earlier releases)
@@ -476,7 +488,6 @@ def run_generator():
                     if (len(developers) > 0):
                         for dev in developers:
                             dev_name = None
-                            # input(dev)
                             # FIX THE REST OF THIS!!! (involved company, company?)
                             # first query to look at involved companies
                             # sub_query = 'fields *;'
@@ -767,7 +778,6 @@ def run_generator():
     for game, details in itertools.islice(game_DB.items(), 0, 3):
         print(game)
         print(details)
-        print(details.__class__)
 
     # Once we've gotten the IGDB data we need, print it out to a JSON file to store long term
     for game, details in game_DB.items():

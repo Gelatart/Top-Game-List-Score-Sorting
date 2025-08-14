@@ -1,5 +1,7 @@
 import sqlite3
 
+#SQL_CLI seems to indicate the table is getting created but a lot of the fields are not populating properly
+
 from .create_schema import create_schema
 from .game_object import GameObject
 #Use try, except, finally logic to deal with errors and close the connection?
@@ -89,6 +91,64 @@ class SQLManager:
 
     def get_all_games(self):
         self.cursor.execute("SELECT * FROM games")
+        return self.cursor.fetchall()
+
+    def get_top_n_games(self, n=10):
+        """
+        Example of ORDER BY + LIMIT
+        """
+        self.cursor.execute("""
+            SELECT title, igdb_id, ranked_score
+            FROM games
+            ORDER BY ranked_score DESC
+            LIMIT ?
+        """, (n,))
+        return self.cursor.fetchall()
+
+    def get_games_by_main_platform(self, platform_name):
+        """
+        Example of filtering results with WHERE
+        """
+        self.cursor.execute("""
+            SELECT title, igdb_id, ranked_score, main_platform
+            FROM games
+            WHERE main_platform = ?
+            ORDER BY ranked_score DESC
+        """, (platform_name,))
+        return self.cursor.fetchall()
+
+    def get_games_with_developers(self):
+        """
+        Example of JOIN — assuming you have a 'developers' table
+        """
+        self.cursor.execute("""
+            SELECT g.title, g.igdb_id, d.name AS developer
+            FROM games g
+            JOIN developers d ON g.developer_id = d.id
+        """)
+        return self.cursor.fetchall()
+
+    def get_score_statistics(self):
+        """
+        Example of aggregation with GROUP BY
+        """
+        self.cursor.execute("""
+            SELECT main_platform, COUNT(*) AS game_count, AVG(ranked_score) AS avg_score
+            FROM games
+            GROUP BY main_platform
+        """)
+        return self.cursor.fetchall()
+
+    def union_example(self):
+        #Seemingly not very helpful, just a random example I can build on?
+        """
+        Example of UNION — combine two queries
+        """
+        self.cursor.execute("""
+            SELECT title FROM games WHERE ranked_score >= 90
+            UNION
+            SELECT title FROM games WHERE main_platform = 'PC'
+        """)
         return self.cursor.fetchall()
 
     def clear_table(self):
