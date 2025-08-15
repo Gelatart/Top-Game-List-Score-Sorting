@@ -24,6 +24,8 @@ class IGDB_Client:
     def search_game_by_ID(self, igdb_id: int) -> dict:
         cached = self.cache.get(igdb_id)
         if cached:
+            print("We already have this!")
+            print(cached)
             return cached
 
         query = f'fields id, name, genres.name, platforms.name, release_dates.date, platforms.name, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1; where id = {igdb_id};'
@@ -98,6 +100,8 @@ class IGDB_Client:
             if result.get("id"):
                 cached = self.cache.get(result["id"])
                 if cached:
+                    print("We already have this!")
+                    print(cached)
                     return cached
                 else:
                     self.cache.set(result["id"], result)

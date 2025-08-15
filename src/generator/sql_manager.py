@@ -55,8 +55,7 @@ class SQLManager:
         self.cursor.execute("""
         INSERT INTO games (title, ranked_score, list_source, total_count)
         VALUES (?, ?, ?, ?)
-        ON CONFLICT(id) DO UPDATE SET
-            title=excluded.title,
+        ON CONFLICT(title) DO UPDATE SET
             ranked_score=excluded.ranked_score,
             list_source=excluded.list_source,
             total_count=excluded.total_count
@@ -72,7 +71,7 @@ class SQLManager:
         self.cursor.execute("""
         INSERT INTO games (igdb_id, title, ranked_score, list_source, total_count)
         VALUES (?, ?, ?, ?, ?)
-        ON CONFLICT(id) DO UPDATE SET
+        ON CONFLICT(igdb_id) DO UPDATE SET
             igdb_id=excluded.igdb_id,
             title=excluded.title,
             ranked_score=excluded.ranked_score,

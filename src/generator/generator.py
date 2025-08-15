@@ -83,7 +83,7 @@ def run_generator():
     former_file_count = 0
 
     client = IGDB_Client()
-    db = DatabaseInterface(use_mongo=True, use_sql=True)
+    db = None
 
     # Workbook is created
     wb = Workbook()
@@ -164,8 +164,32 @@ def run_generator():
         else:
             print("Sorry, please enter correct input")
     if(igdb_answer == "True"):
-        for game in game_DB.values():
+        #could elaborate so limit only applies to games missing igdb data?
+        limit_number = None #Defaults to no limit
+        while True:
+            print("Would you like to set a limit on how many games to grab info for, to save time?")
+            print("1. Set a limit")
+            print("2. Just try for all games")
+            limit_option = input("> ").strip()
+            if (limit_option == "1"):
+                while True:
+                    limit_set = input("Enter a positive number: ").strip()
+                    if (limit_set.isnumeric() and int(limit_set) > 0):
+                        limit_number = int(limit_set)
+                        break
+                    else:
+                        print("Please enter a valid positive number")
+                break
+            elif (limit_option == "2"):
+                break
+            else:
+                print("Invalid choice. Please enter 1 or 2.")
+        # Iterate with optional limit
+        for i, game in enumerate(game_DB.values(), start=1):
             client.enrich_game_object(game)
+            print(f"Processed {i}/{limit_number if limit_number else len(game_DB)} games")
+            if limit_number and i >= limit_number:
+                break
 
     #THIS IS THE OLD SETUP FOR THE IGDB PROCESS, INVOLVES CHECKING AND SUCH,
     # VERY COMPLEX AND LENGTHY, CONSIDER TAKING FROM BUT REPLACING WITH NEW MORE
@@ -201,6 +225,8 @@ def run_generator():
                     print("Please enter a valid response")
                     print()
                     continue
+
+            #Potentially duplicating this functionality earlier so might be able to get rid of?
             while True:
                 print(
                     "Would you like to set a limit on how many games to grab info for? This process can take a long time, so this can help get your foot in the door")
@@ -227,6 +253,7 @@ def run_generator():
                     print("Please enter a valid response")
                     print()
                     continue
+
             # START SCRAPING FOR ATTRIBUTES
             # (Look into close-enough matches that can match when it’s not exact?)
             # (Have the option to replace data manually when database info isn’t good enough or is missing?)
@@ -776,45 +803,31 @@ def run_generator():
             print()
 
     for game, details in itertools.islice(game_DB.items(), 0, 3):
-        print(game)
         print(details)
-
-    # Once we've gotten the IGDB data we need, print it out to a JSON file to store long term
-    for game, details in game_DB.items():
-        if (isinstance(details, str)):
-            # if already made a json string
-            if (details.igdb_found == False):
-                print("Nothing found for this yet (string)")
-                continue
-            else:
-                export_DB[game] = json.loads(details)  # Now it's already json formatted
-        elif (isinstance(details, dict)):
-            if (details['igdb_found'] == False):
-                print("Nothing found for this yet (dict)")
-                continue
-            else:
-                export_DB[game] = json.loads(json.dumps(details))
-        else:
-            if (details.igdb_found == False):
-                print("Nothing found for this yet (other)")
-                continue
-            else:
-                export_DB[game] = json.loads(json.dumps(details.__dict__))
-
-    with open (check_for_src("games.json"), "w") as outfile:
-        json.dump(export_DB, outfile)
-
-    print("Games exported to games.json!")
 
     # Step 6: Save to database
     #Doing basic insert to mongo at this point, and then we can add other values later on? After IGDB pulling?
     #Have the user be able to set a flag if they want use_mongo at this point, so they don't have to deal with trying to connect?
 
-    #First testing the mongo connection and notifying user
-    input("About to attempt connection to Mongo, press ENTER when you are ready")
-    mongo_connect()
-
-    #db = DatabaseInterface(use_mongo=True, use_sql=True)
+    # See if we want to connect to Mongo cluster right now, so we can shut down that aspect if we don't want to deal with it
+    db = None
+    while True:
+        print("Would you like to connect to Mongo at this time or just local SQLite?")
+        print("1. Connect to both")
+        print("2. Only connect to SQLite")
+        choice = input("> ").strip()
+        if (choice == "1"):
+            db = DatabaseInterface(use_mongo=True, use_sql=True)
+            # First testing the mongo connection and notifying user
+            # Try adding try, catch, except logic to mongo connection attempts?
+            input("About to attempt connection to Mongo, press ENTER when you are ready")
+            mongo_connect()
+            break
+        elif (choice == "2"):
+            db = DatabaseInterface(use_mongo=False, use_sql=True)
+            break
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
     for game in game_DB.values():
         db.insert_game_pre_ID(game)
     db.close() #close later on? like when program concludes? or when user sets they want to close connections?

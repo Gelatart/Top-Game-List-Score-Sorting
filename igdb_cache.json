@@ -170981,5 +170981,395 @@
         "name": "Adventure"
       }
     ]
+  },
+  "51624": {
+    "id": 51624,
+    "genres": [
+      {
+        "id": 5,
+        "name": "Shooter"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 201967,
+        "company": {
+          "id": 1010,
+          "name": "Microsoft Studios"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 331344,
+        "company": {
+          "id": 31125,
+          "name": "Live Wire"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 331345,
+        "company": {
+          "id": 861,
+          "name": "Treasure"
+        },
+        "developer": true,
+        "publisher": false
+      }
+    ],
+    "name": "Radiant Silvergun",
+    "platforms": [
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 12,
+        "name": "Xbox 360"
+      },
+      {
+        "id": 130,
+        "name": "Nintendo Switch"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 541171,
+        "date": 1698883200
+      },
+      {
+        "id": 774143,
+        "date": 1663027200
+      },
+      {
+        "id": 774144,
+        "date": 1315958400
+      }
+    ]
+  },
+  "338106": {
+    "id": 338106,
+    "genres": [
+      {
+        "id": 8,
+        "name": "Platform"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 314004,
+        "company": {
+          "id": 7902,
+          "name": "Nintendo EPD"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 314005,
+        "company": {
+          "id": 70,
+          "name": "Nintendo"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 330791,
+        "company": {
+          "id": 45213,
+          "name": "Nintendo EPD Production Group No. 8"
+        },
+        "developer": true,
+        "publisher": false
+      }
+    ],
+    "name": "Donkey Kong Bananza",
+    "platforms": [
+      {
+        "id": 508,
+        "name": "Nintendo Switch 2"
+      },
+      {
+        "id": 130,
+        "name": "Nintendo Switch"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 722868,
+        "date": 1752710400
+      },
+      {
+        "id": 774192
+      }
+    ]
+  },
+  "305152": {
+    "id": 305152,
+    "genres": [
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 16,
+        "name": "Turn-based strategy (TBS)"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 270373,
+        "company": {
+          "id": 55283,
+          "name": "Sandfall Interactive"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 269688,
+        "company": {
+          "id": 37893,
+          "name": "Kepler Interactive"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Clair Obscur: Expedition 33",
+    "platforms": [
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 694047,
+        "date": 1745452800
+      },
+      {
+        "id": 694048,
+        "date": 1745452800
+      },
+      {
+        "id": 694049,
+        "date": 1745452800
+      }
+    ]
+  },
+  "251833": {
+    "id": 251833,
+    "genres": [
+      {
+        "id": 15,
+        "name": "Strategy"
+      },
+      {
+        "id": 16,
+        "name": "Turn-based strategy (TBS)"
+      },
+      {
+        "id": 32,
+        "name": "Indie"
+      },
+      {
+        "id": 35,
+        "name": "Card & Board Game"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 287332,
+        "company": {
+          "id": 53072,
+          "name": "LocalThunk"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 287333,
+        "company": {
+          "id": 15299,
+          "name": "Playstack"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Balatro",
+    "platforms": [
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 34,
+        "name": "Android"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 39,
+        "name": "iOS"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      },
+      {
+        "id": 14,
+        "name": "Mac"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      },
+      {
+        "id": 130,
+        "name": "Nintendo Switch"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 638793,
+        "date": 1709251200
+      },
+      {
+        "id": 638798,
+        "date": 1708387200
+      },
+      {
+        "id": 638799,
+        "date": 1708387200
+      },
+      {
+        "id": 638795,
+        "date": 1708387200
+      },
+      {
+        "id": 638797,
+        "date": 1708387200
+      },
+      {
+        "id": 638801,
+        "date": 1727308800
+      },
+      {
+        "id": 638800,
+        "date": 1727308800
+      },
+      {
+        "id": 638794,
+        "date": 1708387200
+      },
+      {
+        "id": 638796,
+        "date": 1708387200
+      }
+    ]
+  },
+  "228525": {
+    "id": 228525,
+    "genres": [
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 25,
+        "name": "Hack and slash/Beat 'em up"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      },
+      {
+        "id": 32,
+        "name": "Indie"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 195877,
+        "company": {
+          "id": 928,
+          "name": "Supergiant Games"
+        },
+        "developer": true,
+        "publisher": true
+      }
+    ],
+    "name": "Hades II",
+    "platforms": [
+      {
+        "id": 508,
+        "name": "Nintendo Switch 2"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 14,
+        "name": "Mac"
+      },
+      {
+        "id": 130,
+        "name": "Nintendo Switch"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 591682,
+        "date": 1714953600
+      },
+      {
+        "id": 655046,
+        "date": 1729036800
+      },
+      {
+        "id": 757799,
+        "date": 1767139200
+      },
+      {
+        "id": 757800,
+        "date": 1767139200
+      },
+      {
+        "id": 757801,
+        "date": 1767139200
+      },
+      {
+        "id": 757802,
+        "date": 1767139200
+      }
+    ]
   }
 }
