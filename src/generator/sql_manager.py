@@ -9,8 +9,11 @@ from .game_object import GameObject
 class SQLManager:
     def __init__(self, db_path="games.db"):
         self.conn = sqlite3.connect(db_path)
-        create_schema(self.conn, db_path)
+        #Clear table at the start so we avoid any issues with unique constraints (should mongo do similar?)
+        #Expand this to clear other tables later on so all is a blank slate?
         self.cursor = self.conn.cursor()
+        self.cursor.execute("DELETE FROM games")
+        create_schema(self.conn, db_path)
         #self._create_table()
 
     #Have a first pass to grab from IGDB just ID's for all of the games and create a basic table off that
@@ -75,7 +78,7 @@ class SQLManager:
             igdb_id=excluded.igdb_id,
             title=excluded.title,
             ranked_score=excluded.ranked_score,
-            list_source=excluded.list_count,
+            list_source=excluded.list_source,
             total_count=excluded.total_count
         """, (
             game.igdb_ID,
@@ -83,6 +86,40 @@ class SQLManager:
             game.ranked_score,
             game.list_source,
             game.total_count
+        ))
+        self.conn.commit()
+
+    def insert_or_update_game_full(self, game: GameObject):
+        #right now only does the games table, expand this for the other tables too
+        #ignore order_inserted for now because I don't know if we handle this or how we should
+        #put function logic later for determining main_platform in terms of a tie? any way to determine best candidate?
+        #make a function at some point that examines for suspect values in fields (ex: release dates on 1970)
+        #print(game)
+        self.cursor.execute("""
+        INSERT INTO games (igdb_id, title, igdb_found, ranked_score, list_count, total_count, completed, release_date, main_platform, list_source)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ON CONFLICT(igdb_id) DO UPDATE SET
+            igdb_id=excluded.igdb_id,
+            title=excluded.title,
+            igdb_found = excluded.igdb_found,
+            ranked_score=excluded.ranked_score,
+            list_count=excluded.list_count,
+            total_count=excluded.total_count,
+            completed = excluded.completed,
+            release_date = excluded.release_date,
+            main_platform = excluded.main_platform,
+            list_source=excluded.list_source
+        """, (
+            game.igdb_ID,
+            game.title,
+            game.igdb_found,
+            game.ranked_score,
+            game.list_count,
+            game.total_count,
+            game.completed,
+            game.release_date,
+            game.main_platform,
+            game.list_source
         ))
         self.conn.commit()
 

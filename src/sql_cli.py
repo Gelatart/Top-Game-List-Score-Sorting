@@ -6,18 +6,23 @@ def run_sql_cli(db_path="games.db"):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
     print(f"Connected to {db_path}")
-    print("Type SQL commands and press Enter. Type 'exit' to quit.")
+    print("Type SQL commands and press Enter. Type 'exit' or 'quit' to quit.")
 
     while True:
-        cmd = input("SQL> ")
-        if cmd.strip().lower() in ("exit", "quit"):
+        query = input("SQL> ").strip()
+        if query.lower() in ("exit", "quit"):
             break
         try:
-            cursor.execute(cmd)
-            if cmd.strip().lower().startswith("select"):
+            cursor.execute(query)
+            if query.lower().startswith("select"):
                 rows = cursor.fetchall()
+                #Get column names
+                col_names = [desc[0] for desc in cursor.description]
+                print(" | ".join(col_names))
+                print("-" * (len(" | ".join(col_names))))
                 for row in rows:
-                    print(row)
+                    #print(row)
+                    print(" | ".join(str(val) if val is not None else "NULL" for val in row))
             else:
                 conn.commit()
                 print("Query executed successfully.")

@@ -138,22 +138,7 @@ def run_generator():
     # having issue with jsondecodeerror: extra data, s, end OR str object has no attribute read (load vs. loads)
     # seems like putting all into a "games" array doesn't help things
 
-    #THIS IS OUR OLD JSON LOADING AND PULLING FUNCTIONALITY BEFORE THE IGDB CHECKING
-    #Am I still going to need to export to JSON and pull before I do IGDB and database stuff?
-
-    #... (being replaced above)
-
-    # Make sure fresh for actual process once done testing
-    import_DB.clear()
-
     # eventually try for functionality where we only update the games that have updated scores? or new games?
-
-    with open(check_for_src("games.json")) as json_file:
-        if (os.stat(check_for_src("games.json")).st_size == 0):
-            print("Looks like we don't have anything in games.json yet")
-        else:
-            import_DB = json.load(json_file)
-    print(import_DB)
 
     # Step 5: Enrich with IGDB Data
     igdb_check = False
@@ -164,6 +149,22 @@ def run_generator():
         else:
             print("Sorry, please enter correct input")
     if(igdb_answer == "True"):
+        full_answer = False
+        while True:
+            #Add options to mix and match eventually
+            #start with games table but later make sure all tables are getting all fields they need
+            print("Would you like to store all potential data on games or just the minimum")
+            print("1. Just the minimum")
+            print("2. All potential data")
+            data_option = input("> ").strip()
+            if (data_option == "1"):
+                full_answer = False
+                break
+            elif (data_option == "2"):
+                full_answer = True
+                break
+            else:
+                print("Invalid choice. Please enter 1 or 2.")
         #could elaborate so limit only applies to games missing igdb data?
         limit_number = None #Defaults to no limit
         while True:
@@ -186,7 +187,8 @@ def run_generator():
                 print("Invalid choice. Please enter 1 or 2.")
         # Iterate with optional limit
         for i, game in enumerate(game_DB.values(), start=1):
-            client.enrich_game_object(game)
+            if(full_answer == True):
+                client.enrich_game_object(game)
             print(f"Processed {i}/{limit_number if limit_number else len(game_DB)} games")
             if limit_number and i >= limit_number:
                 break
@@ -829,7 +831,13 @@ def run_generator():
         else:
             print("Invalid choice. Please enter 1 or 2.")
     for game in game_DB.values():
-        db.insert_game_pre_ID(game)
+        #Use the pre-ID option in other cases? But here we should already have it?
+        #Have the option to save to database before we bother to grab IGDB data? And then update with what we have gotten?
+        #Give option to set limit on how many records to put out to databases?
+        if(full_answer):
+            db.insert_game_full(game)
+        else:
+            db.insert_game(game)
     db.close() #close later on? like when program concludes? or when user sets they want to close connections?
     #or just set database manager whenever we want to connect to do stuff again and don't leave open?
 
@@ -920,12 +928,10 @@ def run_generator():
         # average_score = details.ranked_score / details.total_count
         average_score = details['ranked_score'] / details['total_count']
         export_dict["Average Score"] = average_score
-        # export_dict["List of References"] = details.lists_referencing
         export_dict["List of References"] = details['lists_referencing']
         export_dict["Completed"] = details['completed']
         export_dict["Main Platform"] = details['main_platform']
         export_dict["List of Platforms"] = details['list_platforms']
-        # export_dict["Release Date"] = details.release_date
         export_dict["Release Date"] = details['release_date']
         # export_dict["Player Counts"] = details.player_counts
         export_dict["Player Counts"] = details['player_counts']
@@ -937,7 +943,6 @@ def run_generator():
         export_dict["Companies"] = details['list_companies']
         # export_dict["Genres"] = details.genres
         export_dict["Genres"] = details['genres']
-        # export_dict["Themes"] = details.themes
         export_dict["Themes"] = details['themes']
         export_dict["Total Count"] = details['total_count']
         export_dict["Order Inserted"] = details['order_inserted']

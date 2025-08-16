@@ -1,4 +1,4 @@
-327
+337
 The Oregon Trail
 Pong
 Combat
@@ -97,7 +97,6 @@ Donkey Kong Country
 Doom II: Hell on Earth
 EarthBound
 Final Fantasy VI
-Sega Rally Championship
 Sensible World of Soccer
 Star Wars: TIE Fighter
 Super Metroid
@@ -108,6 +107,7 @@ X-COM: UFO Defense
 Chrono Trigger
 Command & Conquer
 MechWarrior 2: 31st Century Combat
+Sega Rally Championship
 Warcraft II: Tides of Darkness
 Wipeout
 Worms
@@ -163,6 +163,7 @@ Quake III Arena
 Shenmue
 Silent Hill
 System Shock 2
+Tony Hawk's Pro Skater
 Unreal Tournament
 Baldur's Gate II: Shadows of Amn
 Counter-Strike
@@ -217,6 +218,7 @@ Half-Life 2
 Halo 2
 Katamari Damacy
 Metal Gear Solid 3: Snake Eater
+Paper Mario: The Thousand-Year Door
 Rome: Total War
 The Sims 2
 World of Warcraft
@@ -225,6 +227,7 @@ Sid Meier's Civilization IV
 Devil May Cry 3: Dante's Awakening
 God of War
 Guitar Hero
+Kingdom Hearts II
 Psychonauts
 Resident Evil 4
 Shadow of the Colossus
@@ -272,8 +275,11 @@ Dragon Age: Origins
 League of Legends
 Left 4 Dead 2
 Plants vs. Zombies
+The Sims 3
 Uncharted 2: Among Thieves
+Assassin's Creed Brotherhood
 Sid Meier's Civilization V
+Fallout: New Vegas
 God of War III
 Heavy Rain
 Limbo
@@ -318,11 +324,15 @@ Persona 5
 Stardew Valley
 Uncharted 4: A Thief's End
 Fortnite
+Hollow Knight
 The Legend of Zelda: Breath of the Wild
 Super Mario Odyssey
+Celeste
 <19560> God of War [2018]
 Red Dead Redemption 2
 Super Smash Bros. Ultimate
 Disco Elysium
+Animal Crossing: New Horizons
 Hades
 Elden Ring
+Baldur's Gate III

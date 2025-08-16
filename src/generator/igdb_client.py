@@ -115,7 +115,7 @@ class IGDB_Client:
 
     def enrich_game_object(self, game_obj):
         """
-        Update GameObject fields based on IGDB API result.
+        Update GameObject fields based on IGDB API result. Should get all fields we will need.
         """
         igdb_data = self.search_game_by_title(game_obj.title)
         #give option to search by igdb_ID?
