@@ -123,6 +123,63 @@ class SQLManager:
         ))
         self.conn.commit()
 
+    def insert_or_update_game_full_with_relations(self, game: GameObject):
+        # 1. Insert/update game row
+        self.cursor.execute("""
+        INSERT INTO games (igdb_id, title, igdb_found, ranked_score, list_count, total_count, completed, release_date, main_platform, list_source)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        ON CONFLICT(igdb_id) DO UPDATE SET
+            igdb_id=excluded.igdb_id,
+            title=excluded.title,
+            igdb_found = excluded.igdb_found,
+            ranked_score=excluded.ranked_score,
+            list_count=excluded.list_count,
+            total_count=excluded.total_count,
+            completed = excluded.completed,
+            release_date = excluded.release_date,
+            main_platform = excluded.main_platform,
+            list_source=excluded.list_source
+        """, (
+            game.igdb_ID,
+            game.title,
+            game.igdb_found,
+            game.ranked_score,
+            game.list_count,
+            game.total_count,
+            game.completed,
+            game.release_date,
+            game.main_platform,
+            game.list_source
+        ))
+        self.conn.commit()
+
+        #2. Get the game_id for foreign key linking
+        self.cursor.execute("SELECT id FROM games WHERE igdb_id=?", (game.igdb_ID,))
+        game_id = self.cursor.fetchone()[0]
+
+        # 3. Insert genres into normalized tables + link table
+        for genre in game.genres:
+            genre_id = self.get_or_create_id("genres", genre)
+            self.cursor.execute("INSERT OR IGNORE INTO game_genres (game_id, genre_id) VALUES (?, ?)",
+                                (game_id, genre_id))
+
+        # 4. Insert platforms
+        for platform in game.platforms:
+            platform_id = self.get_or_create_id("platforms", platform)
+            self.cursor.execute("INSERT OR IGNORE INTO game_platforms (game_id, platform_id) VALUES (?, ?)",
+                                (game_id, platform_id))
+
+        # 5. Insert themes
+        for theme in game.themes:
+            theme_id = self.get_or_create_id("themes", theme)
+            self.cursor.execute("INSERT OR IGNORE INTO game_themes (game_id, theme_id) VALUES (?, ?)",
+                                (game_id, theme_id))
+
+        # More tables needed after this point?
+
+        self.conn.commit()
+
+
     #make functions for inserting specific fields? have a base version needed and functions for all the others?
 
     def get_all_games(self):
