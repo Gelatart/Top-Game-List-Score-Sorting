@@ -2,6 +2,9 @@ import sqlite3
 
 #Give an option to use SQL manager rather than directly write commands?
 
+#To find all tables, write: SELECT name FROM sqlite_master WHERE type='table';
+#To also see indexes and views (and what is table, index, or view): SELECT name, type FROM sqlite_master;
+
 def run_sql_cli(db_path="games.db"):
     conn = sqlite3.connect(db_path)
     cursor = conn.cursor()

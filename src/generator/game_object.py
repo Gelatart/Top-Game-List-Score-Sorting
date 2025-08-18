@@ -19,6 +19,7 @@ class GameObject:
     list_platforms: list[str] = field(default_factory=list)
     release_date: str = 'Unknown' #can this be a date value?
     player_counts: list[str] = field(default_factory=list)
+    #update player_counts to a more fitting name like player_modes? game_modes?
     list_developers: list[str] = field(default_factory=list)
     list_publishers: list[str] = field(default_factory=list)
     list_companies: list[str] = field(default_factory=list)

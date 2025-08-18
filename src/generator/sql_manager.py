@@ -154,8 +154,14 @@ class SQLManager:
         self.conn.commit()
 
         #2. Get the game_id for foreign key linking
-        self.cursor.execute("SELECT id FROM games WHERE igdb_id=?", (game.igdb_ID,))
-        game_id = self.cursor.fetchone()[0]
+        #Use title pre-IGDB pass, igdb_id after enriching?
+        self.cursor.execute("SELECT id FROM games WHERE igdb_id=? OR title=?", (game.igdb_ID, game.title))
+        #game_id = self.cursor.fetchone()[0]
+        row = self.cursor.fetchone()
+        if row:
+            game_id = row[0]
+        else:
+            raise ValueError(f"Could not find game in database after insert: {game.title}")
 
         # 3. Insert genres into normalized tables + link table
         for genre in game.genres:
@@ -164,7 +170,7 @@ class SQLManager:
                                 (game_id, genre_id))
 
         # 4. Insert platforms
-        for platform in game.platforms:
+        for platform in game.list_platforms:
             platform_id = self.get_or_create_id("platforms", platform)
             self.cursor.execute("INSERT OR IGNORE INTO game_platforms (game_id, platform_id) VALUES (?, ?)",
                                 (game_id, platform_id))
@@ -175,10 +181,41 @@ class SQLManager:
             self.cursor.execute("INSERT OR IGNORE INTO game_themes (game_id, theme_id) VALUES (?, ?)",
                                 (game_id, theme_id))
 
-        # More tables needed after this point?
+        # 6. Player Modes (game modes like single-player or multiplayer)
+        for mode in game.player_counts:
+            mode_id = self.get_or_create_id("player_modes", mode)
+            self.cursor.execute("INSERT OR IGNORE INTO game_player_modes (game_id, mode_id) VALUES (?, ?)", (game_id, mode_id))
+
+         # 7. Developers
+        for dev in game.list_developers:
+            dev_id = self.get_or_create_id("developers", dev)
+            self.cursor.execute("INSERT OR IGNORE INTO game_developers (game_id, developer_id) VALUES (?, ?)", (game_id, dev_id))
+
+        # 8. Publishers
+        for pub in game.list_publishers:
+            pub_id = self.get_or_create_id("publishers", pub)
+            self.cursor.execute("INSERT OR IGNORE INTO game_publishers (game_id, publisher_id) VALUES (?, ?)", (game_id, pub_id))
+
+        # 9. Companies (other involved companies that don’t neatly fit as dev/pub)
+        for comp in game.list_companies:
+            comp_id = self.get_or_create_id("companies", comp)
+            self.cursor.execute("INSERT OR IGNORE INTO game_companies (game_id, company_id) VALUES (?, ?)", (game_id, comp_id))
+
+        # 10. Lists Referencing
+        # If game.list_source is a single string, you could normalize it here
+        sources = game.list_source if isinstance(game.list_source, list) else [game.list_source]
+        for src in sources:
+            self.cursor.execute("""
+                INSERT OR IGNORE INTO lists_referencing (game_id, source_file)
+                VALUES (?, ?)
+            """, (game_id, src))
+
+        #getattr(game, "themes", []) method instead of game.themes can guard against errors if a gameobject doesn't have a list for the attributes?
+        #could be more normalized to have developers and publishers unified into companies with a role field instead of a separate Table?
+        #IGDB structures it that way too?
+        #ordering could be done by adding extra column to link table for "role" or "priority"?
 
         self.conn.commit()
-
 
     #make functions for inserting specific fields? have a base version needed and functions for all the others?
 

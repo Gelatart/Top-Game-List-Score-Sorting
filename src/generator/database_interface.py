@@ -24,8 +24,11 @@ class DatabaseInterface:
         if self.mongo:
             #have mongo have a split between full and minimum? unnecessary?
             self.mongo.insert_or_update_game(game)
+            print("Inserting game into MongoDB")
         if self.sql:
-            self.sql.insert_or_update_game_full(game)
+            #self.sql.insert_or_update_game_full(game)
+            self.sql.insert_or_update_game_full_with_relations(game)
+            print("Inserting game into SQLite")
 
     def get_all_games(self):
         #split into mongo and sql functions so don't return both at same time?
