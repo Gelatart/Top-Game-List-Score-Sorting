@@ -28,7 +28,7 @@ class IGDB_Client:
             print(cached)
             return cached
 
-        query = f'fields id, name, genres.name, platforms.name, release_dates.date, platforms.name, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1; where id = {igdb_id};'
+        query = f'fields id, name, genres.name, themes, game_modes, platforms.name, release_dates.date, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1; where id = {igdb_id};'
         response = self.wrapper.api_request("games", query)
         games_data = json.loads(response.decode("utf-8"))
         result = games_data[0] if games_data else {}
@@ -67,7 +67,7 @@ class IGDB_Client:
 
             #If it's not cached, time for an API call
             #Come up with functionality where if this normalized version isn't found, bring it to user's attention? So we can know to use IGDB ID instead?
-            query = f'search "{normalized_title}"; fields id, name, genres.name, platforms.name, release_dates.date, platforms.name, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1;'
+            query = f'search "{normalized_title}"; fields id, name, genres.name, themes, game_modes, platforms.name, release_dates.date, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1;'
             #print(title)
             #query = f'search "{title}"; fields id, name; limit 1;'
             print(query)
@@ -118,6 +118,7 @@ class IGDB_Client:
         Update GameObject fields based on IGDB API result. Should get all fields we will need.
         """
         igdb_data = self.search_game_by_title(game_obj.title)
+        input(f"IGDB_DATA: {igdb_data}")
         #give option to search by igdb_ID?
 
         if not igdb_data:
@@ -136,7 +137,14 @@ class IGDB_Client:
             game_obj.main_platform = game_obj.list_platforms[0]
 
         genres = igdb_data.get("genres", [])
+        input(genres)
+        themes = igdb_data.get("themes", [])
+        input(themes)
+        player_counts = igdb_data.get("game_modes", [])
+        input(player_counts)
         game_obj.genres = [g.get("name") for g in genres if g.get("name")]
+        game_obj.themes = [t.get("name") for t in themes if t.get("name")]
+        game_obj.player_counts = [p.get("name") for p in player_counts if p.get("name")]
 
         companies = igdb_data.get("involved_companies", [])
         for c in companies:

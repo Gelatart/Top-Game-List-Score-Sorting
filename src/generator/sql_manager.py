@@ -176,12 +176,14 @@ class SQLManager:
                                 (game_id, platform_id))
 
         # 5. Insert themes
+        input(game.themes)
         for theme in game.themes:
             theme_id = self.get_or_create_id("themes", theme)
             self.cursor.execute("INSERT OR IGNORE INTO game_themes (game_id, theme_id) VALUES (?, ?)",
                                 (game_id, theme_id))
 
         # 6. Player Modes (game modes like single-player or multiplayer)
+        input(game.player_counts)
         for mode in game.player_counts:
             mode_id = self.get_or_create_id("player_modes", mode)
             self.cursor.execute("INSERT OR IGNORE INTO game_player_modes (game_id, mode_id) VALUES (?, ?)", (game_id, mode_id))
@@ -203,12 +205,15 @@ class SQLManager:
 
         # 10. Lists Referencing
         # If game.list_source is a single string, you could normalize it here
-        sources = game.list_source if isinstance(game.list_source, list) else [game.list_source]
-        for src in sources:
+        #sources = game.list_source if isinstance(game.list_source, list) else [game.list_source]
+        #for src in sources:
+        for ref_list in game.lists_referencing:
             self.cursor.execute("""
                 INSERT OR IGNORE INTO lists_referencing (game_id, source_file)
                 VALUES (?, ?)
-            """, (game_id, src))
+            """, (game_id, ref_list))
+
+        #themes and game_themes, player_modes and game_player_modes not properly grabbing?
 
         #getattr(game, "themes", []) method instead of game.themes can guard against errors if a gameobject doesn't have a list for the attributes?
         #could be more normalized to have developers and publishers unified into companies with a role field instead of a separate Table?
