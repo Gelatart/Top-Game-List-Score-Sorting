@@ -12,7 +12,7 @@ class SQLManager:
         #Clear table at the start so we avoid any issues with unique constraints (should mongo do similar?)
         #Expand this to clear other tables later on so all is a blank slate?
         self.cursor = self.conn.cursor()
-        self.cursor.execute("DELETE FROM games")
+        #self.cursor.execute("DELETE FROM games")
         create_schema(self.conn, db_path)
         #self._create_table()
 
@@ -176,14 +176,14 @@ class SQLManager:
                                 (game_id, platform_id))
 
         # 5. Insert themes
-        input(game.themes)
+        #input(game.themes)
         for theme in game.themes:
             theme_id = self.get_or_create_id("themes", theme)
             self.cursor.execute("INSERT OR IGNORE INTO game_themes (game_id, theme_id) VALUES (?, ?)",
                                 (game_id, theme_id))
 
         # 6. Player Modes (game modes like single-player or multiplayer)
-        input(game.player_counts)
+        #input(game.player_counts)
         for mode in game.player_counts:
             mode_id = self.get_or_create_id("player_modes", mode)
             self.cursor.execute("INSERT OR IGNORE INTO game_player_modes (game_id, mode_id) VALUES (?, ?)", (game_id, mode_id))

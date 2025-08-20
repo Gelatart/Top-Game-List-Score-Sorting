@@ -6,6 +6,8 @@ class DatabaseInterface:
     def __init__(self, use_mongo=False, use_sql=True):
         self.mongo = MongoManager() if use_mongo else None
         self.sql = SQLManager() if use_sql else None
+        if use_sql:
+            self.sql.clear_table()
 
     def insert_game_pre_ID(self, game: GameObject):
         if self.mongo:
