@@ -21,7 +21,10 @@ def main():
     platform_parser = subparsers.add_parser("games_by_platform", help="Get games for a specific platform")
     platform_parser.add_argument("platform", help="Platform name (e.g., 'PC')")
 
-    # Get score statistics
+    # Get games with developers (JOIN)
+    subparsers.add_parser("games_with_developers", help="Get games with developers (JOIN example)")
+
+    # Get score statistics (GROUP BY / aggregation)
     subparsers.add_parser("score_stats", help="Show score statistics grouped by platform")
 
     # Run a UNION example
@@ -30,34 +33,37 @@ def main():
     # Clear the table
     subparsers.add_parser("clear", help="Clear all games from the database")
 
+    # Run a freeform SQL query
+    query_parser = subparsers.add_parser("run_sql", help="Run a custom SQL query")
+    query_parser.add_argument("sql", help="SQL query string to execute")
+
     args = parser.parse_args()
 
     db = SQLManager("games.db")
 
     if args.command == "get_all_games":
         results = db.get_all_games()
-        for row in results:
-            print(row)
+        print_rows(results)
 
     elif args.command == "top_games":
         results = db.get_top_n_games(args.n)
-        for row in results:
-            print(row)
+        print_rows(results)
 
     elif args.command == "games_by_platform":
         results = db.get_games_by_main_platform(args.platform)
-        for row in results:
-            print(row)
+        print_rows(results)
+
+    elif args.command == "games_with_developers":
+        results = db.get_games_with_developers()
+        print_rows(results)
 
     elif args.command == "score_stats":
         results = db.get_score_statistics()
-        for row in results:
-            print(row)
+        print_rows(results)
 
     elif args.command == "union_example":
         results = db.union_example()
-        for row in results:
-            print(row)
+        print_rows(results)
 
     elif args.command == "clear":
         confirm = input("Are you sure you want to clear all games? (y/n): ")
@@ -65,10 +71,25 @@ def main():
             db.clear_table()
             print("All games cleared.")
 
+    elif args.command == "run_sql":
+        try:
+            db.cursor.execute(args.sql)
+            results = db.cursor.fetchall()
+            print_rows(results)
+        except Exception as e:
+            print(f"SQL error: {e}")
+
     else:
         parser.print_help()
 
     db.close()
+
+def print_rows(rows):
+    if not rows:
+        print("No results.")
+    else:
+        for row in rows:
+            print(row)
 
 if __name__ == "__main__":
     main()
