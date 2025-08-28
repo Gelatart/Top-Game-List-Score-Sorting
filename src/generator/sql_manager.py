@@ -228,6 +228,57 @@ class SQLManager:
         self.cursor.execute("SELECT * FROM games")
         return self.cursor.fetchall()
 
+    def get_full_game_info(self, game_id=None, limit=10):
+        """
+        Get a denormalized view of games, joining related tables into comma-separated lists.
+        If game_id is provided, return only that game. Otherwise return up to `limit` games.
+        """
+        query = """
+        SELECT
+            g.id,
+            g.title,
+            g.igdb_id,
+            g.ranked_score,
+            g.total_count,
+            g.release_date,
+            g.main_platform,
+            g.list_source,
+            GROUP_CONCAT(DISTINCT genres.name) AS genres,
+            GROUP_CONCAT(DISTINCT themes.name) AS themes,
+            GROUP_CONCAT(DISTINCT player_modes.name) AS player_modes,
+            GROUP_CONCAT(DISTINCT platforms.name) AS platforms,
+            GROUP_CONCAT(DISTINCT developers.name) AS developers,
+            GROUP_CONCAT(DISTINCT publishers.name) AS publishers,
+            GROUP_CONCAT(DISTINCT companies.name) AS companies,
+            GROUP_CONCAT(DISTINCT lr.source_file) AS referenced_in
+        FROM games g
+        LEFT JOIN game_genres       gg ON g.id = gg.game_id
+        LEFT JOIN genres            ON gg.genre_id = genres.id
+        LEFT JOIN game_themes       gt ON g.id = gt.game_id
+        LEFT JOIN themes            ON gt.theme_id = themes.id
+        LEFT JOIN game_player_modes gpm ON g.id = gpm.game_id
+        LEFT JOIN player_modes      ON gpm.mode_id = player_modes.id
+        LEFT JOIN game_platforms    gp ON g.id = gp.game_id
+        LEFT JOIN platforms         ON gp.platform_id = platforms.id
+        LEFT JOIN game_developers   gd ON g.id = gd.game_id
+        LEFT JOIN developers        ON gd.developer_id = developers.id
+        LEFT JOIN game_publishers   gpub ON g.id = gpub.game_id
+        LEFT JOIN publishers        ON gpub.publisher_id = publishers.id
+        LEFT JOIN game_companies    gc ON g.id = gc.game_id
+        LEFT JOIN companies         ON gc.company_id = companies.id
+        LEFT JOIN lists_referencing lr ON g.id = lr.game_id
+        """
+
+        if game_id:
+            query += " WHERE g.id = ?"
+            params = (game_id,)
+        else:
+            query += " GROUP BY g.id LIMIT ?"
+            params = (limit,)
+
+        self.cursor.execute(query, params)
+        return self.cursor.fetchall()
+
     def get_top_n_games(self, n=10):
         """
         Example of ORDER BY + LIMIT

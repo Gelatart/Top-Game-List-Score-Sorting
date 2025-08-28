@@ -125,19 +125,6 @@ def run_generator():
 
     import_DB = {}
 
-    input("Let's test pulling from JSON!\n")
-
-    with open(check_for_src("games_pre.json"), "r") as json_file:
-        # Reading the first character throws everything off
-        if (os.stat(check_for_src("games_pre.json")).st_size == 0):
-            print("Looks like we don't have anything in games_pre.json yet")
-        else:
-            import_DB = json.load(json_file)
-            print(import_DB)
-
-    # having issue with jsondecodeerror: extra data, s, end OR str object has no attribute read (load vs. loads)
-    # seems like putting all into a "games" array doesn't help things
-
     # eventually try for functionality where we only update the games that have updated scores? or new games?
 
     # Step 5: Enrich with IGDB Data
@@ -831,6 +818,7 @@ def run_generator():
         else:
             print("Invalid choice. Please enter 1 or 2.")
     for game in game_DB.values():
+        #enumerate or whatever so I can keep track of how many insertions are being done so progress is more clear on CLI
         #Use the pre-ID option in other cases? But here we should already have it?
         #Have the option to save to database before we bother to grab IGDB data? And then update with what we have gotten?
         #Give option to set limit on how many records to put out to databases?
@@ -841,21 +829,13 @@ def run_generator():
     db.close() #close later on? like when program concludes? or when user sets they want to close connections?
     #or just set database manager whenever we want to connect to do stuff again and don't leave open?
 
-    #input(print(f"Successfully processed {len(game_DB)} games."))
+    print(f"Successfully processed {len(game_DB)} games.")
 
     # THIS IS THE OLD SETUP FOR THE MONGO DATABASE PROCESS, SEE ABOUT PULLING
     # WHAT I NEED AND REPLACING WHAT I DON'T
 
-    # Connecting to env file to get private login data
-    mon_connect = get_env_var('MONGO_URI')
-    mon_client = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
-    monDB = mon_client["GameSorting"]
-    input("About to attempt connection to Mongo, press ENTER when you are ready")
-    try:
-        mon_client.admin.command('ping')
-        print("Pinged your deployment. You successfully connected to MongoDB!")
-    except Exception as e:
-        print(e)
+    input("FROM THIS PART ONWARD CLEAR MONGO BITS, ONLY ATTEMPT MONGO CONNECTION IF WE INTEND SO")
+
     mon_col = monDB["games"]
     list_col = monDB["lists"]
 
