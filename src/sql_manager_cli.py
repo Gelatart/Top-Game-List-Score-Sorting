@@ -1,4 +1,5 @@
 import argparse
+import sys
 from tabulate import tabulate
 from generator.game_object import GameObject
 from generator.sql_manager import SQLManager
@@ -6,17 +7,20 @@ from generator.sql_manager import SQLManager
 #Create an input interface where I can write out commands and keep running them
 
 COMMANDS = [
-    ("List all games", "list_games"),
+    ("Show all games (basic)", "list_games"),
+    ("Show all games (full joined info)", "list_games_full"),
+    ("Show a game's full info (by ID)", "show_game_id"),
+    ("Show a game's full info (by Title)", "show_game_title"),
+    ("Show a game's full info (by IGDB ID)", "show_game_igdb"),
+    ("Insert/Update game (pre-ID)", "insert_preid"),
+    ("Insert/Update game (with IGDB ID)", "insert_id"),
     ("Get top N games by ranked score", "top_games"),
-    ("Get games by platform", "games_by_platform"),
+    ("Get games by main platform", "games_by_platform"),
     ("Get games with developers", "games_with_developers"),
     ("Show score statistics grouped by platform", "score_stats"),
     ("Run UNION example query", "union_example"),
     ("Clear all games", "clear"),
     ("Run a custom SQL query", "run_sql"),
-    ("Insert/Update game (pre-ID)", "insert_preid"),
-    ("Insert/Update game (with IGDB ID)", "insert_id"),
-    ("Show full denormalized game info", "full_game_info"),
 ]
 
 def main():
@@ -28,6 +32,8 @@ def main():
     # --- Basic Commands ---
     # Get all games
     subparsers.add_parser("list_games", help="List all games in the database")
+
+    subparsers.add_parser("list_games_full", help="List all games in the database and all of their data from all tables")
 
     # Get top N games
     top_parser = subparsers.add_parser("top_games", help="Get top N games by ranked score")
@@ -75,8 +81,11 @@ def main():
     db.conn.row_factory = sqlite3.Row
     db.cursor = db.conn.cursor()
 
+    # if a command is passed on the command line, run once and exit
     if args.command:
         run_command(db, args.command, args)
+        db.close()
+        return
     else:
         """
         #Return to this as an alternate option? Choose if want to type out or do numbered entries
@@ -132,7 +141,9 @@ def interactive_menu(db):
         args = argparse.Namespace(command=command)
 
         # Ask for arguments interactively
-        if command == "top_games":
+        if command == "show_game_id":
+            args.id = int(input("Enter game_id: "))
+        elif command == "top_games":
             args.n = int(input("Enter N: "))
         elif command == "games_by_platform":
             args.platform = input("Enter platform: ")
@@ -155,6 +166,40 @@ def interactive_menu(db):
 def run_command(db, command, args):
     if command == "list_games":
         print_rows(db.get_all_games(), db.cursor)
+
+    #make a version of this that actually does take a limit, in between all and one
+    elif command == "list_games_full":
+        print_rows(db.get_all_full_game_info(), db.cursor)
+
+    elif command == "show_game_id":
+        pass
+
+    elif command == "show_game_title":
+        pass
+
+    elif command == "show_game_igdb":
+        pass
+
+    elif command == "insert_preid":
+        game = GameObject(
+            title=args.title,
+            ranked_score=args.ranked_score,
+            list_source=args.list_source,
+            total_count=args.total_count
+        )
+        db.insert_or_update_game_pre_ID(game)
+        print(f"Inserted/Updated game (pre-ID): {args.title}")
+
+    elif command == "insert_id":
+        game = GameObject(
+            igdb_ID=args.igdb_id,
+            title=args.title,
+            ranked_score=args.ranked_score,
+            list_source=args.list_source,
+            total_count=args.total_count
+        )
+        db.insert_or_update_game(game)
+        print(f"Inserted/Updated game (IGDB-ID): {args.title}")
 
     elif command == "top_games":
         print_rows(db.get_top_n_games(args.n), db.cursor)
@@ -188,37 +233,8 @@ def run_command(db, command, args):
 
     #get_or_create_id?
 
-    elif command == "insert_preid":
-        game = GameObject(
-            title=args.title,
-            ranked_score=args.ranked_score,
-            list_source=args.list_source,
-            total_count=args.total_count
-        )
-        db.insert_or_update_game_pre_ID(game)
-        print(f"Inserted/Updated game (pre-ID): {args.title}")
-
-    elif command == "insert_id":
-        game = GameObject(
-            igdb_ID=args.igdb_id,
-            title=args.title,
-            ranked_score=args.ranked_score,
-            list_source=args.list_source,
-            total_count=args.total_count
-        )
-        db.insert_or_update_game(game)
-        print(f"Inserted/Updated game (IGDB-ID): {args.title}")
-
     #insert_or_update_game_full?
     #insert_or_update_game_full_with_relations?
-
-    elif command == "full_game_info":
-        #Currently this prints pretty ugly, with a lot of space at the end, and a bunch of dashes at the end, look into fixing?
-        if hasattr(args, "game_id") and args.game_id:
-            print_rows(db.get_full_game_info(game_id=args.game_id), db.cursor)
-        else:
-            #Let user set their own limit?
-            print_rows(db.get_full_game_info(limit=5), db.cursor)
 
     else:
         print(f"Unknown command: {command}")

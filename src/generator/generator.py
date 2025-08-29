@@ -109,20 +109,6 @@ def run_generator():
 
     #JSON LOADING AND PULLING BEFORE IGDB CHECKING
 
-    #Initial JSON export of what we have in the games database
-    #Not entirely sure why we were using this and if we still need it, possibly for old IGDB setup
-    #Used to have export_DB = {}, which used the game titles from game_DB as key, and got a __dict__ of the
-    # value as the new value (with json.loads and json.dumps of the dict)
-    export_list = list(game_DB.values())
-    export_to_json(export_list, "reports/games_pre.json")
-    #Print to check the json first?
-
-    """
-    def export_to_json(games: List[GameObject], output_path: str):
-        with open(output_path, 'w', encoding='utf-8') as f:
-            json.dump([g.to_dict() for g in games], f, indent=4, ensure_ascii=False)
-    """
-
     import_DB = {}
 
     # eventually try for functionality where we only update the games that have updated scores? or new games?
@@ -191,7 +177,6 @@ def run_generator():
     igdb_check = False
     igdb_answer = None
     scratch_answer = False
-    limit_answer = False
     limit_number = 0
 
     while (igdb_check == False):
@@ -209,34 +194,6 @@ def run_generator():
                     break
                 elif (scratch_option == "2"):
                     scratch_answer = False
-                    break
-                else:
-                    print("Please enter a valid response")
-                    print()
-                    continue
-
-            #Potentially duplicating this functionality earlier so might be able to get rid of?
-            while True:
-                print(
-                    "Would you like to set a limit on how many games to grab info for? This process can take a long time, so this can help get your foot in the door")
-                print("1. Set a limit")
-                print("2. Just try for all games")
-                limit_option = input()
-                if (limit_option == "1"):
-                    limit_answer = True
-                    while True:
-                        print("Would you like to set the limit to? Please provide a valid number")
-                        limit_set = input()
-                        if (limit_set.isnumeric()):
-                            limit_number = int(limit_set)
-                            break
-                        else:
-                            print("Please enter a valid response")
-                            print()
-                            continue
-                    break
-                elif (limit_option == "2"):
-                    limit_answer = False
                     break
                 else:
                     print("Please enter a valid response")
@@ -299,24 +256,13 @@ def run_generator():
 
             # Figure out if I can be more efficient with endpoints to make it take quicker? taking very long now
             print("Time to go looking around")
-            time_speedup = 0;
             order_of_insert = 1
             # resets every time we start the process partway through? any workaround for this?
-            # ^A feature I'm implementing to cut down how many games parsed through so that we can have an easier first attempt
             for game, details in itertools.islice(game_DB.items(), 0, limit_number):
-                # if(scratch_answer == False and game in import_DB and details.igdb_found == True):
                 if (scratch_answer == False and game in import_DB):
                     print("Hey, we already got this one!")
                     game_DB[game] = import_DB[game]
                     continue
-                # Set time speedup back to 0 if want full and accurate database for all items
-                # need to set value in both if and elif to work properly
-                if (time_speedup < 0):
-                    print("SKIPPING!!")
-                    time_speedup += 1
-                    continue
-                elif (time_speedup == 0):
-                    time_speedup = 0
                 check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
                 check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
                 check_string += 'external_games, follows, franchises, game_localizations, '
@@ -348,8 +294,6 @@ def run_generator():
                     check_string += '"'
                 check_string += ' & (status = (0,2,3,4,5,8) | status = null)'
                 check_string += '; '
-                # if (limit_answer):
-                # check_string += f'limit {limit_number}; '
                 check_string += 'offset 0;'  # 6 is cancelled,  & status != 6
                 # Had & version_parent = null in the check_string before, but probably won't work in cases we do want port, might just want
                 # more specificity in some cases
@@ -408,9 +352,6 @@ def run_generator():
                     while (plat_counter < len(earliest_game.platforms)):
                         # plat_next = plat_counter + 1
                         plat_ID = earliest_game.platforms[plat_counter]
-                        # print(plat_ID)
-                        # print(plat_ID.value)
-                        # print(plat_ID.id)
                         # match plat_ID:
                         sub_query = 'fields name; where id=' + str(plat_ID.id) + ';'
                         sub_request = wrapper.api_request(
@@ -905,7 +846,6 @@ def run_generator():
         export_dict["IGDB ID"] = details['igdb_ID']
         export_dict["Ranked Score"] = details['ranked_score']
         export_dict["Inclusion Score"] = details['list_count']
-        # average_score = details.ranked_score / details.total_count
         average_score = details['ranked_score'] / details['total_count']
         export_dict["Average Score"] = average_score
         export_dict["List of References"] = details['lists_referencing']
@@ -913,15 +853,10 @@ def run_generator():
         export_dict["Main Platform"] = details['main_platform']
         export_dict["List of Platforms"] = details['list_platforms']
         export_dict["Release Date"] = details['release_date']
-        # export_dict["Player Counts"] = details.player_counts
         export_dict["Player Counts"] = details['player_counts']
-        # export_dict["Developers"] = details.list_developers
         export_dict["Developers"] = details['list_developers']
-        # export_dict["Publishers"] = details.list_publishers
         export_dict["Publishers"] = details['list_publishers']
-        # export_dict["Companies"] = details.list_companies
         export_dict["Companies"] = details['list_companies']
-        # export_dict["Genres"] = details.genres
         export_dict["Genres"] = details['genres']
         export_dict["Themes"] = details['themes']
         export_dict["Total Count"] = details['total_count']

@@ -228,10 +228,11 @@ class SQLManager:
         self.cursor.execute("SELECT * FROM games")
         return self.cursor.fetchall()
 
-    def get_full_game_info(self, game_id=None, limit=10):
+    #def get_all_full_game_info(self, limit=25):
+    def get_all_full_game_info(self):
         """
-        Get a denormalized view of games, joining related tables into comma-separated lists.
-        If game_id is provided, return only that game. Otherwise return up to `limit` games.
+        Return a denormalized view of ALL games, joining related tables into comma-separated lists (with GROUP_CONCAT for related fields).
+        Make a version that is limited to `limit` rows by default.
         """
         query = """
         SELECT
@@ -252,32 +253,97 @@ class SQLManager:
             GROUP_CONCAT(DISTINCT companies.name) AS companies,
             GROUP_CONCAT(DISTINCT lr.source_file) AS referenced_in
         FROM games g
-        LEFT JOIN game_genres       gg ON g.id = gg.game_id
+        LEFT JOIN game_genres       gg   ON g.id = gg.game_id
         LEFT JOIN genres            ON gg.genre_id = genres.id
-        LEFT JOIN game_themes       gt ON g.id = gt.game_id
+        LEFT JOIN game_themes       gt   ON g.id = gt.game_id
         LEFT JOIN themes            ON gt.theme_id = themes.id
-        LEFT JOIN game_player_modes gpm ON g.id = gpm.game_id
+        LEFT JOIN game_player_modes gpm  ON g.id = gpm.game_id
         LEFT JOIN player_modes      ON gpm.mode_id = player_modes.id
-        LEFT JOIN game_platforms    gp ON g.id = gp.game_id
+        LEFT JOIN game_platforms    gp   ON g.id = gp.game_id
         LEFT JOIN platforms         ON gp.platform_id = platforms.id
-        LEFT JOIN game_developers   gd ON g.id = gd.game_id
+        LEFT JOIN game_developers   gd   ON g.id = gd.game_id
         LEFT JOIN developers        ON gd.developer_id = developers.id
         LEFT JOIN game_publishers   gpub ON g.id = gpub.game_id
         LEFT JOIN publishers        ON gpub.publisher_id = publishers.id
-        LEFT JOIN game_companies    gc ON g.id = gc.game_id
+        LEFT JOIN game_companies    gc   ON g.id = gc.game_id
         LEFT JOIN companies         ON gc.company_id = companies.id
-        LEFT JOIN lists_referencing lr ON g.id = lr.game_id
+        LEFT JOIN lists_referencing lr   ON g.id = lr.game_id
+        GROUP BY g.id
         """
-
-        if game_id:
-            query += " WHERE g.id = ?"
-            params = (game_id,)
-        else:
-            query += " GROUP BY g.id LIMIT ?"
-            params = (limit,)
-
-        self.cursor.execute(query, params)
+        #LIMIT ?
+        #self.cursor.execute(query, (limit,))
+        self.cursor.execute(query)
         return self.cursor.fetchall()
+
+    def get_full_game_info_by_id(self, game_id):
+        """
+        Get full denormalized info for a single game by internal game_id.
+        """
+        query = """
+        SELECT
+            g.id,
+            g.title,
+            g.igdb_id,
+            g.ranked_score,
+            g.total_count,
+            g.release_date,
+            g.main_platform,
+            g.list_source,
+            GROUP_CONCAT(DISTINCT genres.name) AS genres,
+            GROUP_CONCAT(DISTINCT themes.name) AS themes,
+            GROUP_CONCAT(DISTINCT player_modes.name) AS player_modes,
+            GROUP_CONCAT(DISTINCT platforms.name) AS platforms,
+            GROUP_CONCAT(DISTINCT developers.name) AS developers,
+            GROUP_CONCAT(DISTINCT publishers.name) AS publishers,
+            GROUP_CONCAT(DISTINCT companies.name) AS companies,
+            GROUP_CONCAT(DISTINCT lr.source_file) AS referenced_in
+        FROM games g
+        LEFT JOIN game_genres gg ON g.id = gg.game_id
+        LEFT JOIN genres      ON gg.genre_id = genres.id
+        LEFT JOIN game_themes gt ON g.id = gt.game_id
+        LEFT JOIN themes      ON gt.theme_id = themes.id
+        LEFT JOIN game_player_modes gpm ON g.id = gpm.game_id
+        LEFT JOIN player_modes ON gpm.mode_id = player_modes.id
+        LEFT JOIN game_platforms gp ON g.id = gp.game_id
+        LEFT JOIN platforms    ON gp.platform_id = platforms.id
+        LEFT JOIN game_developers gd ON g.id = gd.game_id
+        LEFT JOIN developers   ON gd.developer_id = developers.id
+        LEFT JOIN game_publishers gpub ON g.id = gpub.game_id
+        LEFT JOIN publishers   ON gpub.publisher_id = publishers.id
+        LEFT JOIN game_companies gc ON g.id = gc.game_id
+        LEFT JOIN companies    ON gc.company_id = companies.id
+        LEFT JOIN lists_referencing lr ON g.id = lr.game_id
+        WHERE g.id = ?
+        GROUP BY g.id
+        """
+        self.cursor.execute(query, (game_id,))
+        return self.cursor.fetchone()
+
+    def get_full_game_info_by_title(self, title):
+        """
+        Get full denormalized info for a single game by its title.
+        """
+        query = """
+        SELECT g.id FROM games g WHERE g.title = ?
+        """
+        self.cursor.execute(query, (title,))
+        row = self.cursor.fetchone()
+        if row:
+            return self.get_full_game_info_by_id(row[0])
+        return None
+
+    def get_full_game_info_by_igdb_id(self, igdb_id):
+        """
+        Get full denormalized info for a single game by its IGDB ID.
+        """
+        query = """
+        SELECT g.id FROM games g WHERE g.igdb_id = ?
+        """
+        self.cursor.execute(query, (igdb_id,))
+        row = self.cursor.fetchone()
+        if row:
+            return self.get_full_game_info_by_id(row[0])
+        return None
 
     def get_top_n_games(self, n=10):
         """
