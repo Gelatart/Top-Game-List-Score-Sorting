@@ -1,7 +1,5 @@
 import sqlite3
 
-#SQL_CLI seems to indicate the table is getting created but a lot of the fields are not populating properly
-
 from .create_schema import create_schema
 from .game_object import GameObject
 #Use try, except, finally logic to deal with errors and close the connection?
