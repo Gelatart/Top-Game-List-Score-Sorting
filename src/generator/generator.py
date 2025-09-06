@@ -1046,15 +1046,6 @@ def run_generator():
         excel_count += 1
     wb.save(check_for_src('reports/Sorted Database.xls'))
 
-    games_pulled = mon_col.find().limit(5)
-    for game in games_pulled:
-        print("Here is a game")
-        print(game)
-        if (game["Main Platform"] == "Wii"):
-            print("We found one!")
-            print(game)
-        print()
-
     # Close connection to open up socket (seemed to cause problems when running generator then trying printreports?)
     mon_client.close()
     # Close cursors too?

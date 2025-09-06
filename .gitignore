@@ -1,7 +1,39 @@
+#Do I go back and delete things already put into the repo
+#that I don't want there anymore at this point?
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+.venv/
 .env
-.idea/
 var.env
-.idea\workspace.xml
 *.env
+*.log
+
+# Testing
+.pytest_cache/
+.mypy_cache/
+.coverage
+
+# SQLite data
+/data/
+games.db
+
+# Mongo data
+/mongo_data/
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Misc
+.idea/
+.idea\workspace.xml
 .idea/workspace.xml
 .idea/workspace.xml

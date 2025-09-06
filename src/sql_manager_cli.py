@@ -34,6 +34,9 @@ def main():
     subparsers.add_parser("list_games", help="List all games in the database")
 
     subparsers.add_parser("list_games_full", help="List all games in the database and all of their data from all tables")
+    subparsers.add_parser("show_game_id", help="Get full denormalized info for a single game by internal game_id")
+    #PUT IN THE REST OF THE NEW FUNCTIONS HERE!!!
+    #...
 
     # Get top N games
     top_parser = subparsers.add_parser("top_games", help="Get top N games by ranked score")
@@ -172,7 +175,7 @@ def run_command(db, command, args):
         print_rows(db.get_all_full_game_info(), db.cursor)
 
     elif command == "show_game_id":
-        pass
+        print_rows(db.get_full_game_info_by_id(args.id), db.cursor)
 
     elif command == "show_game_title":
         pass

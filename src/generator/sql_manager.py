@@ -7,7 +7,7 @@ from .game_object import GameObject
 #Use try, except, finally logic to deal with errors and close the connection?
 
 class SQLManager:
-    def __init__(self, db_path="games.db"):
+    def __init__(self, db_path="data/games.db"):
         self.conn = sqlite3.connect(db_path)
         #Clear table at the start so we avoid any issues with unique constraints (should mongo do similar?)
         #Expand this to clear other tables later on so all is a blank slate?

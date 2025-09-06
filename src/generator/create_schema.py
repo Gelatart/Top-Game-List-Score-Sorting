@@ -1,6 +1,6 @@
 import sqlite3
 
-def create_schema(conn, db_path="games.db"):
+def create_schema(conn, db_path="data/games.db"):
     #conn = sqlite3.connect(db_path)
     cursor = conn.cursor()
 
