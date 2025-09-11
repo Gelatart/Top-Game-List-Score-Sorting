@@ -8,7 +8,8 @@ __pycache__/
 *.pyd
 *.sqlite3
 *.db
-.venv/
+.vent/
+venv/
 .env
 var.env
 *.env
