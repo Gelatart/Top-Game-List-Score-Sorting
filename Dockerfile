@@ -40,5 +40,9 @@ CMD ["python", "main.py"]
 #docker run -it --rm `
 #  -v ${PWD}\games.db:/app/games.db `
 #  top-game-sorter
+
 #Docker compose
 #docker-compose up --build
+#If testing: docker compose build --progress=plain --no-cache
+#--progress=plain -> shows each build step in plain text (instead of "fancy" UI)
+#--no-cache: forces everything to rebuild, so see every step

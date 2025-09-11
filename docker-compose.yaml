@@ -1,4 +1,4 @@
-version: "3.9"
+#version: "3.9"
 services:
   app:
     build: .
@@ -10,7 +10,7 @@ services:
       - SQLITE_PATH=/app/data/games.db
     depends_on:
       - mongo
-    command: python src/generator/runner.py
+    command: python main.py
 
   mongo:
     image: mongo:6.0
