@@ -46,3 +46,16 @@ CMD ["python", "main.py"]
 #If testing: docker compose build --progress=plain --no-cache
 #--progress=plain -> shows each build step in plain text (instead of "fancy" UI)
 #--no-cache: forces everything to rebuild, so see every step
+
+#docker-compose up → starts all services (app, mongo, mongo-express). Good for your full stack.
+#docker-compose run → starts only the service you specify. Useful for running the app interactively or running 
+#commands inside it without starting everything else.
+
+#TO RUN THE IMAGE:
+#AFTER HAVING MADE ANY PROJECT CHANGES, WILL WANT TO BUILD:
+#First: docker-compose build
+#Then: docker-compose up -d mongo mongo-express (To have mongo set up in the background)
+#Then for interactive input: docker-compose run --rm -it app 
+#--rm = remove container when done
+#-it = interactive terminal (so input() works)
+#IF JUST RUNNING AGAIN, JUST SKIP THE BUILD STEP
