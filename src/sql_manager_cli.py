@@ -35,6 +35,7 @@ def main():
 
     subparsers.add_parser("list_games_full", help="List all games in the database and all of their data from all tables")
     subparsers.add_parser("show_game_id", help="Get full denormalized info for a single game by internal game_id")
+    subparsers.add_parser("show_game_title", help="Get full denormalized info for a single game by its title")
     #PUT IN THE REST OF THE NEW FUNCTIONS HERE!!!
     #...
 
@@ -146,6 +147,8 @@ def interactive_menu(db):
         # Ask for arguments interactively
         if command == "show_game_id":
             args.id = int(input("Enter game_id: "))
+        elif command == "show_game_title":
+            args.title = input("Enter title: ")
         elif command == "top_games":
             args.n = int(input("Enter N: "))
         elif command == "games_by_platform":
@@ -178,7 +181,7 @@ def run_command(db, command, args):
         print_rows(db.get_full_game_info_by_id(args.id), db.cursor)
 
     elif command == "show_game_title":
-        pass
+        print_rows(db.get_full_game_info_by_title(args.title), db.cursor)
 
     elif command == "show_game_igdb":
         pass
