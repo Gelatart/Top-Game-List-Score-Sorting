@@ -390,5 +390,272 @@
         "name": "Open world"
       }
     ]
+  },
+  "248636": {
+    "id": 248636,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 5,
+        "name": "Shooter"
+      },
+      {
+        "id": 8,
+        "name": "Platform"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 221876,
+        "company": {
+          "id": 112,
+          "name": "Sega"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 221877,
+        "company": {
+          "id": 781,
+          "name": "M2"
+        },
+        "developer": true,
+        "publisher": false
+      }
+    ],
+    "name": "Gunstar Heroes",
+    "platforms": [
+      {
+        "id": 35,
+        "name": "Sega Game Gear"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 488301,
+        "date": 796003200
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      }
+    ]
+  },
+  "152752": {
+    "id": 152752,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 8,
+        "name": "Platform"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 139536,
+        "company": {
+          "id": 771,
+          "name": "Rare"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 139592,
+        "company": {
+          "id": 70,
+          "name": "Nintendo"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 224882,
+        "company": {
+          "id": 812,
+          "name": "Gradiente"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Donkey Kong Country",
+    "platforms": [
+      {
+        "id": 22,
+        "name": "Game Boy Color"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 498918,
+        "date": 974678400
+      },
+      {
+        "id": 498919,
+        "date": 974419200
+      },
+      {
+        "id": 498920,
+        "date": 978220800
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      }
+    ]
+  },
+  "162427": {
+    "id": 162427,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 8,
+        "name": "Platform"
+      },
+      {
+        "id": 9,
+        "name": "Puzzle"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 144203,
+        "company": {
+          "id": 26263,
+          "name": "SMW Central"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 144204,
+        "company": {
+          "id": 36583,
+          "name": "zacmario"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 144205,
+        "company": {
+          "id": 25918,
+          "name": "Mario Fan Games Galaxy"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Captain Toad Treasure Tracker",
+    "platforms": [
+      {
+        "id": 19,
+        "name": "Super Nintendo Entertainment System"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 302086,
+        "date": 1481760000
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      }
+    ]
+  },
+  "145201": {
+    "id": 145201,
+    "involved_companies": [
+      {
+        "id": 122888,
+        "company": {
+          "id": 37,
+          "name": "Capcom"
+        },
+        "developer": true,
+        "publisher": true
+      }
+    ],
+    "name": "Resident Evil 4 and Resident Evil Code: Veronica X Bundle",
+    "platforms": [
+      {
+        "id": 9,
+        "name": "PlayStation 3"
+      },
+      {
+        "id": 8,
+        "name": "PlayStation 2"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 236056,
+        "date": 1363132800
+      },
+      {
+        "id": 236058,
+        "date": 1253145600
+      },
+      {
+        "id": 236057,
+        "date": 1363132800
+      }
+    ]
+  },
+  "88645": {
+    "id": 88645,
+    "genres": [
+      {
+        "id": 5,
+        "name": "Shooter"
+      },
+      {
+        "id": 8,
+        "name": "Platform"
+      }
+    ],
+    "name": "Mega Man X",
+    "platforms": [
+      {
+        "id": 39,
+        "name": "iOS"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 150515,
+        "date": 1324425600
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      }
+    ]
   }
 }

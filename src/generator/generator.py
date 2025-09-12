@@ -17,6 +17,7 @@ import json
 import pandas
 import re
 import datetime
+from pathlib import Path
 
 import sqlite3
 
@@ -78,7 +79,9 @@ def run_generator():
     #Find way to track what type of list it is?
     games_lists = []
 
-    completed_titles = set(read_attributed_games("game_lists\Completions.txt"))
+    #completed_titles = set(read_attributed_games("game_lists\Completions.txt"))
+    #file_path = Path("game_lists") / "Completions.txt"
+    completed_titles = set(read_attributed_games(Path("game_lists") / "Completions.txt"))
 
     ranked_file_count = 0
     unranked_file_count = 0
@@ -824,7 +827,6 @@ def run_generator():
 
     print("INSERTING INTO MONGODB!")
     for game, details in itertools.islice(game_DB.items(), 0, mongo_limit):
-        print(game_DB.items().__class__)
         print(details.__class__)
         # If they're all from scratch, details is a gameobject, otherwise it's a dict
         if (isinstance(details, GameObject)):

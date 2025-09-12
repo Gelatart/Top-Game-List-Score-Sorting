@@ -36,6 +36,7 @@ def main():
     subparsers.add_parser("list_games_full", help="List all games in the database and all of their data from all tables")
     subparsers.add_parser("show_game_id", help="Get full denormalized info for a single game by internal game_id")
     subparsers.add_parser("show_game_title", help="Get full denormalized info for a single game by its title")
+    subparsers.add_parser("show_game_igdb", help="Get full denormalized info for a single game by its IGDB ID")
     #PUT IN THE REST OF THE NEW FUNCTIONS HERE!!!
     #...
 
@@ -149,6 +150,8 @@ def interactive_menu(db):
             args.id = int(input("Enter game_id: "))
         elif command == "show_game_title":
             args.title = input("Enter title: ")
+        elif command == "show_game_igdb":
+            args.igdb_id = input("Enter IGDB ID: ")
         elif command == "top_games":
             args.n = int(input("Enter N: "))
         elif command == "games_by_platform":
@@ -184,7 +187,7 @@ def run_command(db, command, args):
         print_rows(db.get_full_game_info_by_title(args.title), db.cursor)
 
     elif command == "show_game_igdb":
-        pass
+        print_rows(db.get_full_game_info_by_igdb_id(args.igdb_id), db.cursor)
 
     elif command == "insert_preid":
         game = GameObject(

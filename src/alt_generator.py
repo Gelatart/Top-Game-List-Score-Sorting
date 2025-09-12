@@ -21,6 +21,7 @@ import json
 
 # assign directory
 directory = r'GameLists\Ranked'
+#Path("game_lists") / "Ranked"
 #then do unranked and former
 
 #LOOK INTO PANDAS FOR DEALING WITH TABULAR DATA IN PYTHON

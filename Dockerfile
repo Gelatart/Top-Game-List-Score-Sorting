@@ -59,3 +59,10 @@ CMD ["python", "main.py"]
 #--rm = remove container when done
 #-it = interactive terminal (so input() works)
 #IF JUST RUNNING AGAIN, JUST SKIP THE BUILD STEP
+
+#TO PUSH CHANGES TO DOCKER REPO (FOR SINGLE TOP-GAME-SORTER IMAGE):
+#Rebuilding image: docker build -t gelatart/top-game-sorter:latest .
+#To version: docker build -t gelatart/top-game-sorter:v2 .
+#To push to registry: docker push gelatart/top-game-sorter:latest
+#Pull updated image on other machine: docker pull gelatart/top-game-sorter:latest
+#Run updated image on other machine: docker run -it gelatart/top-game-sorter:latest

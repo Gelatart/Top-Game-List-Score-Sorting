@@ -28,7 +28,7 @@ class IGDB_Client:
             print(cached)
             return cached
 
-        query = f'fields id, name, genres.name, themes, game_modes, platforms.name, release_dates.date, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1; where id = {igdb_id};'
+        query = f'fields id, name, genres.name, themes.name, game_modes.name, platforms.name, release_dates.date, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1; where id = {igdb_id};'
         response = self.wrapper.api_request("games", query)
         games_data = json.loads(response.decode("utf-8"))
         result = games_data[0] if games_data else {}
