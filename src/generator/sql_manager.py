@@ -343,6 +343,20 @@ class SQLManager:
             return self.get_full_game_info_by_id(row[0])
         return None
 
+    def get_custom_columns(self, columns, limit=20):
+        """
+        Fetch custom-selected columns from the games table.
+        :param columns: list of column names to select
+        :param limit: max rows to return
+        """
+        if not columns:
+            raise ValueError("You must provide at least one column.")
+
+        col_str = ", ".join(columns)
+        query = f"SELECT {col_str} FROM games LIMIT ?"
+        self.cursor.execute(query, (limit,))
+        return self.cursor.fetchall()
+
     def get_top_n_games(self, n=10):
         """
         Example of ORDER BY + LIMIT
