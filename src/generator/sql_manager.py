@@ -357,6 +357,57 @@ class SQLManager:
         self.cursor.execute(query, (limit,))
         return self.cursor.fetchall()
 
+    def get_custom_columns_with_joins(self, columns, limit=20):
+        """
+        Dynamically build a SELECT query with optional joins if columns
+        from related tables are requested (genres, themes, etc).
+        :param columns: list of column names (e.g. ["title", "ranked_score", "genres.name"])
+        :param limit: max rows
+        """
+        if not columns:
+            raise ValueError("You must provide at least one column.")
+
+        base_cols = []
+        joins = []
+        join_map = {
+            "genres": ("game_genres", "genre_id", "genres"),
+            "themes": ("game_themes", "theme_id", "themes"),
+            "player_modes": ("game_player_modes", "mode_id", "player_modes"),
+            "platforms": ("game_platforms", "platform_id", "platforms"),
+            "developers": ("game_developers", "developer_id", "developers"),
+            "publishers": ("game_publishers", "publisher_id", "publishers"),
+            "companies": ("game_companies", "company_id", "companies"),
+        }
+
+        # Check each column
+        for col in columns:
+            if "." in col:  # e.g. "genres.name"
+                table, field = col.split(".", 1)
+                if table in join_map:
+                    link_table, fk, ref_table = join_map[table]
+                    join_stmt = f"""
+                    LEFT JOIN {link_table} ON games.id = {link_table}.game_id
+                    LEFT JOIN {ref_table} ON {link_table}.{fk} = {ref_table}.id
+                    """
+                    if join_stmt not in joins:
+                        joins.append(join_stmt)
+                    base_cols.append(f"{ref_table}.{field} AS {table}_{field}")
+                else:
+                    raise ValueError(f"Unknown related table: {table}")
+            else:
+                base_cols.append(f"games.{col}")
+
+        col_str = ", ".join(base_cols)
+        join_str = " ".join(joins)
+        query = f"""
+        SELECT {col_str}
+        FROM games
+        {join_str}
+        LIMIT ?
+        """
+        self.cursor.execute(query, (limit,))
+        return self.cursor.fetchall()
+
     def get_top_n_games(self, n=10):
         """
         Example of ORDER BY + LIMIT

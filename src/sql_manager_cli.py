@@ -12,6 +12,7 @@ COMMANDS = [
     ("Show a game's full info (by ID)", "show_game_id"),
     ("Show a game's full info (by Title)", "show_game_title"),
     ("Show a game's full info (by IGDB ID)", "show_game_igdb"),
+    ("Custom SELECT (choose columns)", "custom_columns"),
     ("Insert/Update game (pre-ID)", "insert_preid"),
     ("Insert/Update game (with IGDB ID)", "insert_id"),
     ("Get top N games by ranked score", "top_games"),
@@ -37,6 +38,7 @@ def main():
     subparsers.add_parser("show_game_id", help="Get full denormalized info for a single game by internal game_id")
     subparsers.add_parser("show_game_title", help="Get full denormalized info for a single game by its title")
     subparsers.add_parser("show_game_igdb", help="Get full denormalized info for a single game by its IGDB ID")
+    subparsers.add_parser("custom_columns", help="Fetch custom-selected columns from the games table")
     #PUT IN THE REST OF THE NEW FUNCTIONS HERE!!!
     #...
 
@@ -152,6 +154,11 @@ def interactive_menu(db):
             args.title = input("Enter title: ")
         elif command == "show_game_igdb":
             args.igdb_id = input("Enter IGDB ID: ")
+        elif command == "custom_columns":
+            args.cols = input("Enter column names separated by commas: ").strip().split(",")
+            args.cols = [c.strip() for c in args.cols if c.strip()]
+            args.limit = input("Limit results (default 20): ").strip()
+            args.limit = int(args.limit) if args.limit.isdigit() else 20
         elif command == "top_games":
             args.n = int(input("Enter N: "))
         elif command == "games_by_platform":
@@ -188,6 +195,9 @@ def run_command(db, command, args):
 
     elif command == "show_game_igdb":
         print_rows(db.get_full_game_info_by_igdb_id(args.igdb_id), db.cursor)
+
+    elif command == "custom_columns":
+        print_rows(db.get_custom_columns(args.cols, args.limit), db.cursor)
 
     elif command == "insert_preid":
         game = GameObject(
