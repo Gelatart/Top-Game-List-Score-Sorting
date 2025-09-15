@@ -13,6 +13,8 @@ COMMANDS = [
     ("Show a game's full info (by Title)", "show_game_title"),
     ("Show a game's full info (by IGDB ID)", "show_game_igdb"),
     ("Custom SELECT (choose columns)", "custom_columns"),
+    ("Custom SELECT (choose columns) (with joins)", "custom_columns_joins"),
+    ("Preset queries (genres, themes, platforms, etc.)", "preset_queries"),
     ("Insert/Update game (pre-ID)", "insert_preid"),
     ("Insert/Update game (with IGDB ID)", "insert_id"),
     ("Get top N games by ranked score", "top_games"),
@@ -39,6 +41,8 @@ def main():
     subparsers.add_parser("show_game_title", help="Get full denormalized info for a single game by its title")
     subparsers.add_parser("show_game_igdb", help="Get full denormalized info for a single game by its IGDB ID")
     subparsers.add_parser("custom_columns", help="Fetch custom-selected columns from the games table")
+    subparsers.add_parser("custom_columns_joins", help="Dynamically build a SELECT query with optional joins if columns from related tables are requested (genres, themes, etc)")
+    subparsers.add_parser("preset_queries", help="Preset queries (genres, themes, platforms, etc.)")
     #PUT IN THE REST OF THE NEW FUNCTIONS HERE!!!
     #...
 
@@ -159,6 +163,34 @@ def interactive_menu(db):
             args.cols = [c.strip() for c in args.cols if c.strip()]
             args.limit = input("Limit results (default 20): ").strip()
             args.limit = int(args.limit) if args.limit.isdigit() else 20
+        elif command == "custom_columns_joins":
+            args.cols = input("Enter column names (comma-separated, e.g. title, ranked_score, genres.name): ").strip().split(",")
+            args.cols = [c.strip() for c in args.cols if c.strip()]
+            args.limit = input("Limit results (default 20): ").strip()
+            args.limit = int(args.limit) if args.limit.isdigit() else 20
+        elif command == "preset_queries":
+            print("Choose a preset query:")
+            print("1. Games with genres")
+            print("2. Games with themes")
+            print("3. Games with platforms")
+            print("4. Games with developers")
+            print("5. Games with publishers")
+            print("6. Games with companies")
+            preset = input("> ").strip()
+
+            presets_map = {
+                "1": ["title", "ranked_score", "genres.name"],
+                "2": ["title", "themes.name"],
+                "3": ["title", "platforms.name"],
+                "4": ["title", "developers.name"],
+                "5": ["title", "publishers.name"],
+                "6": ["title", "companies.name"],
+            }
+
+            if preset not in presets_map:
+                print("Invalid choice.")
+            else:
+                args.cols = presets_map[preset]
         elif command == "top_games":
             args.n = int(input("Enter N: "))
         elif command == "games_by_platform":
@@ -198,6 +230,17 @@ def run_command(db, command, args):
 
     elif command == "custom_columns":
         print_rows(db.get_custom_columns(args.cols, args.limit), db.cursor)
+
+    elif command == "custom_columns_joins":
+        try:
+            print(f"Selected columns: {args.cols}")
+            print_rows(db.get_custom_columns_with_joins(args.cols, args.limit), db.cursor)
+        except Exception as e:
+            print(f"Error: {e}")
+
+    elif command == "preset_queries":
+        print(f"Preset query results for {args.cols}:")
+        print_rows(db.get_custom_columns_with_joins(args.cols, args.limit), db.cursor)
 
     elif command == "insert_preid":
         game = GameObject(
