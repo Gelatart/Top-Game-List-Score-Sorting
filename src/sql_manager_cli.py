@@ -26,6 +26,32 @@ COMMANDS = [
     ("Run a custom SQL query", "run_sql"),
 ]
 
+def get_filters_from_user():
+    """
+    Interactive filter builder for WHERE clauses.
+    Returns dict like: {"ranked_score": (">", 80)}
+    """
+    filters = {}
+    print("\nAdd filters? (y/n)")
+    if input("> ").strip().lower() != "y":
+        return filters
+
+    while True:
+        col = input("Column name (or 'done'): ").strip()
+        if col.lower() == "done":
+            break
+        op = input("Operator (=, !=, >, <, >=, <=: ").strip()
+        #Keep to the more basic ones for now, have like and such be separate?
+        val = input("Value: ").strip()
+
+        # If numeric, convert to int
+        if val.isdigit():
+            val = int(val)
+
+        filters[col] = (op, val)
+
+    return filters
+
 def main():
     parser = argparse.ArgumentParser(
         description="Command line interface for interacting with the SQL Manager."
@@ -43,6 +69,7 @@ def main():
     subparsers.add_parser("custom_columns", help="Fetch custom-selected columns from the games table")
     subparsers.add_parser("custom_columns_joins", help="Dynamically build a SELECT query with optional joins if columns from related tables are requested (genres, themes, etc)")
     subparsers.add_parser("preset_queries", help="Preset queries (genres, themes, platforms, etc.)")
+    #^preset_parser = subparsers.add_parser...
     #PUT IN THE REST OF THE NEW FUNCTIONS HERE!!!
     #...
 
@@ -69,6 +96,8 @@ def main():
     # Run a freeform SQL query
     query_parser = subparsers.add_parser("run_sql", help="Run a custom SQL query")
     query_parser.add_argument("sql", help="SQL query string to execute")
+
+    #preset_parser.add_argument("filters")
 
     # --- Insert/Update Commands ---
     insert_preid_parser = subparsers.add_parser("insert_preid", help="Insert/Update a game (before IGDB ID)")
@@ -180,17 +209,26 @@ def interactive_menu(db):
 
             presets_map = {
                 "1": ["title", "ranked_score", "genres.name"],
-                "2": ["title", "themes.name"],
-                "3": ["title", "platforms.name"],
-                "4": ["title", "developers.name"],
-                "5": ["title", "publishers.name"],
-                "6": ["title", "companies.name"],
+                "2": ["title", "ranked_score", "themes.name"],
+                "3": ["title", "ranked_score",  "platforms.name"],
+                "4": ["title", "ranked_score",  "developers.name"],
+                "5": ["title", "ranked_score",  "publishers.name"],
+                "6": ["title", "ranked_score",  "companies.name"],
             }
 
             if preset not in presets_map:
                 print("Invalid choice.")
             else:
-                args.cols = presets_map[preset]
+                #args.cols = presets_map[preset]
+                table, column = presets_map[preset]
+                print(f"Do you want to filter by a specific {table[:-1]} name? (y/n)")
+                filter_choice = input("> ").strip().lower()
+
+                if filter_choice == "y":
+                    args.filters = get_filters_from_user()
+
+                args.limit = input("Limit results (default 20): ").strip()
+                args.limit = int(args.limit) if args.limit.isdigit() else 20
         elif command == "top_games":
             args.n = int(input("Enter N: "))
         elif command == "games_by_platform":
@@ -234,13 +272,13 @@ def run_command(db, command, args):
     elif command == "custom_columns_joins":
         try:
             print(f"Selected columns: {args.cols}")
-            print_rows(db.get_custom_columns_with_joins(args.cols, args.limit), db.cursor)
+            print_rows(db.get_custom_columns_with_joins(args.cols, args.filters, args.limit), db.cursor)
         except Exception as e:
             print(f"Error: {e}")
 
     elif command == "preset_queries":
         print(f"Preset query results for {args.cols}:")
-        print_rows(db.get_custom_columns_with_joins(args.cols, args.limit), db.cursor)
+        print_rows(db.get_custom_columns_with_joins(args.cols, args.filters, args.limit), db.cursor)
 
     elif command == "insert_preid":
         game = GameObject(

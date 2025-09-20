@@ -237,7 +237,6 @@ def run_generator():
             # wrapper = IGDBWrapper("YOUR_CLIENT_ID", "YOUR_APP_ACCESS_TOKEN")
             received = json.loads(page.text)
             access_token = received["access_token"]
-            print(access_token)
             wrapper = IGDBWrapper(client_id, access_token)
 
             from igdb.igdbapi_pb2 import GameResult
@@ -505,22 +504,7 @@ def run_generator():
                             genre_type = new_genres[0].name
                             game_DB[game].genres.append(genre_type)
                     # ADD THEMES
-                    themes = earliest_game.themes
-                    if (len(themes) > 0):
-                        for theme in themes:
-                            theme_type = None
-                            sub_query = 'fields name; where id=' + str(theme.id) + ';'
-                            sub_request = wrapper.api_request(
-                                'themes.pb',  # Note the '.pb' suffix at the endpoint
-                                sub_query
-                            )
-                            themes_message = ThemeResult()
-                            themes_message.ParseFromString(
-                                sub_request)  # Fills the protobuf message object with the response
-                            new_themes = themes_message.themes
-                            theme_type = new_themes[0].name
-                            game_DB[game].themes.append(theme_type)
-                    game_DB[game].order_inserted = order_of_insert
+                    # REMOVING THIS PART
                 elif (len(games) == 1):
                     try:
                         current_game = games[0]

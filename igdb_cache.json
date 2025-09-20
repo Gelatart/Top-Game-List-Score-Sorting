@@ -657,5 +657,3260 @@
         "name": "Action"
       }
     ]
+  },
+  "5418": {
+    "id": 5418,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 16,
+        "name": "Turn-based strategy (TBS)"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 254913,
+        "company": {
+          "id": 250,
+          "name": "Square"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 254914,
+        "company": {
+          "id": 26,
+          "name": "Square Enix"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 162311,
+        "company": {
+          "id": 70,
+          "name": "Nintendo"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 224537,
+        "company": {
+          "id": 33804,
+          "name": "Playtronic"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 226962,
+        "company": {
+          "id": 32350,
+          "name": "Hyundai"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Super Mario RPG: Legend of the Seven Stars",
+    "platforms": [
+      {
+        "id": 19,
+        "name": "Super Nintendo Entertainment System"
+      },
+      {
+        "id": 5,
+        "name": "Wii"
+      },
+      {
+        "id": 41,
+        "name": "Wii U"
+      },
+      {
+        "id": 58,
+        "name": "Super Famicom"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 548988,
+        "date": 836179200
+      },
+      {
+        "id": 527288,
+        "date": 831945600
+      },
+      {
+        "id": 527289,
+        "date": 851990400
+      },
+      {
+        "id": 527293,
+        "date": 1219363200
+      },
+      {
+        "id": 527291,
+        "date": 1220227200
+      },
+      {
+        "id": 527295,
+        "date": 1450915200
+      },
+      {
+        "id": 527297,
+        "date": 1451001600
+      },
+      {
+        "id": 527286,
+        "date": 826329600
+      },
+      {
+        "id": 527290,
+        "date": 1214265600
+      },
+      {
+        "id": 527292,
+        "date": 1219363200
+      },
+      {
+        "id": 527294,
+        "date": 1438732800
+      },
+      {
+        "id": 527296,
+        "date": 1467244800
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 17,
+        "name": "Fantasy"
+      },
+      {
+        "id": 27,
+        "name": "Comedy"
+      },
+      {
+        "id": 35,
+        "name": "Kids"
+      }
+    ]
+  },
+  "290273": {
+    "id": 290273,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 8,
+        "name": "Platform"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      },
+      {
+        "id": 33,
+        "name": "Arcade"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 257297,
+        "company": {
+          "id": 11247,
+          "name": "Mindscape, Inc."
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 257298,
+        "company": {
+          "id": 1746,
+          "name": "Atari Games"
+        },
+        "developer": true,
+        "publisher": false
+      }
+    ],
+    "name": "Indiana Jones and the Temple of Doom",
+    "platforms": [
+      {
+        "id": 18,
+        "name": "Nintendo Entertainment System"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 571217,
+        "date": 596937600
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 17,
+        "name": "Fantasy"
+      },
+      {
+        "id": 22,
+        "name": "Historical"
+      }
+    ]
+  },
+  "8124": {
+    "id": 8124,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      },
+      {
+        "id": 3,
+        "name": "Co-operative"
+      }
+    ],
+    "genres": [
+      {
+        "id": 8,
+        "name": "Platform"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 227824,
+        "company": {
+          "id": 23993,
+          "name": "Tec Toy"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 239633,
+        "company": {
+          "id": 4981,
+          "name": "Sega Enterprises, Ltd."
+        },
+        "developer": true,
+        "publisher": true
+      }
+    ],
+    "name": "World of Illusion Starring Mickey Mouse and Donald Duck",
+    "platforms": [
+      {
+        "id": 29,
+        "name": "Sega Mega Drive/Genesis"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 22415,
+        "date": 724550400
+      },
+      {
+        "id": 22416,
+        "date": 724723200
+      },
+      {
+        "id": 507104,
+        "date": 723168000
+      },
+      {
+        "id": 22417,
+        "date": 724636800
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 27,
+        "name": "Comedy"
+      }
+    ]
+  },
+  "4230": {
+    "id": 4230,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 4,
+        "name": "Fighting"
+      },
+      {
+        "id": 8,
+        "name": "Platform"
+      },
+      {
+        "id": 25,
+        "name": "Hack and slash/Beat 'em up"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 10952,
+        "company": {
+          "id": 37,
+          "name": "Capcom"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 10953,
+        "company": {
+          "id": 2055,
+          "name": "Clover Studio"
+        },
+        "developer": true,
+        "publisher": false
+      }
+    ],
+    "name": "Viewtiful Joe 2",
+    "platforms": [
+      {
+        "id": 21,
+        "name": "Nintendo GameCube"
+      },
+      {
+        "id": 8,
+        "name": "PlayStation 2"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 731136,
+        "date": 1112313600
+      },
+      {
+        "id": 731137,
+        "date": 1102464000
+      },
+      {
+        "id": 731134,
+        "date": 1103155200
+      },
+      {
+        "id": 731135,
+        "date": 1100736000
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 27,
+        "name": "Comedy"
+      }
+    ]
+  },
+  "1035": {
+    "id": 1035,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 9,
+        "name": "Puzzle"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 199230,
+        "company": {
+          "id": 70,
+          "name": "Nintendo"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 200284,
+        "company": {
+          "id": 660,
+          "name": "Capcom Production Studio 1"
+        },
+        "developer": true,
+        "publisher": false
+      }
+    ],
+    "name": "The Legend of Zelda: The Minish Cap",
+    "platforms": [
+      {
+        "id": 37,
+        "name": "Nintendo 3DS"
+      },
+      {
+        "id": 41,
+        "name": "Wii U"
+      },
+      {
+        "id": 24,
+        "name": "Game Boy Advance"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 496338
+      },
+      {
+        "id": 528974,
+        "date": 1099526400
+      },
+      {
+        "id": 528976,
+        "date": 1100217600
+      },
+      {
+        "id": 528977,
+        "date": 1105315200
+      },
+      {
+        "id": 528975,
+        "date": 1112832000
+      },
+      {
+        "id": 528978,
+        "date": 1323993600
+      },
+      {
+        "id": 528979,
+        "date": 1323993600
+      },
+      {
+        "id": 528980,
+        "date": 1401321600
+      },
+      {
+        "id": 528981,
+        "date": 1398816000
+      },
+      {
+        "id": 528982,
+        "date": 1401926400
+      },
+      {
+        "id": 528983,
+        "date": 1401321600
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 17,
+        "name": "Fantasy"
+      }
+    ]
+  },
+  "1887": {
+    "id": 1887,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      },
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      },
+      {
+        "id": 3,
+        "name": "Co-operative"
+      }
+    ],
+    "genres": [
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 24,
+        "name": "Tactical"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 14475,
+        "company": {
+          "id": 1,
+          "name": "Electronic Arts"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 52039,
+        "company": {
+          "id": 222,
+          "name": "BioWare Edmonton"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 52038,
+        "company": {
+          "id": 2,
+          "name": "BioWare"
+        },
+        "developer": false,
+        "publisher": false
+      }
+    ],
+    "name": "Dragon Age: Inquisition",
+    "platforms": [
+      {
+        "id": 9,
+        "name": "PlayStation 3"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 12,
+        "name": "Xbox 360"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 19624,
+        "date": 1416268800
+      },
+      {
+        "id": 23648,
+        "date": 1416268800
+      },
+      {
+        "id": 19626,
+        "date": 1416268800
+      },
+      {
+        "id": 19623,
+        "date": 1416268800
+      },
+      {
+        "id": 23647,
+        "date": 1416268800
+      },
+      {
+        "id": 19629,
+        "date": 1416528000
+      },
+      {
+        "id": 23655,
+        "date": 1417046400
+      },
+      {
+        "id": 23652,
+        "date": 1417046400
+      },
+      {
+        "id": 23651,
+        "date": 1417046400
+      },
+      {
+        "id": 19625,
+        "date": 1416268800
+      },
+      {
+        "id": 19631,
+        "date": 1416528000
+      },
+      {
+        "id": 23646,
+        "date": 1416268800
+      },
+      {
+        "id": 23653,
+        "date": 1417046400
+      },
+      {
+        "id": 23649,
+        "date": 1416268800
+      },
+      {
+        "id": 102644,
+        "date": 1416268800
+      },
+      {
+        "id": 19628,
+        "date": 1416528000
+      },
+      {
+        "id": 23650,
+        "date": 1416268800
+      },
+      {
+        "id": 102645,
+        "date": 1416528000
+      },
+      {
+        "id": 23654,
+        "date": 1417046400
+      },
+      {
+        "id": 19630,
+        "date": 1416528000
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 17,
+        "name": "Fantasy"
+      },
+      {
+        "id": 22,
+        "name": "Historical"
+      },
+      {
+        "id": 38,
+        "name": "Open world"
+      }
+    ]
+  },
+  "345365": {
+    "id": 345365,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 16,
+        "name": "Turn-based strategy (TBS)"
+      }
+    ],
+    "name": "Bound Destiny 2: Destiny's Requiem",
+    "platforms": [
+      {
+        "id": 24,
+        "name": "Game Boy Advance"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 746620,
+        "date": 1701820800
+      }
+    ],
+    "themes": [
+      {
+        "id": 17,
+        "name": "Fantasy"
+      },
+      {
+        "id": 31,
+        "name": "Drama"
+      }
+    ]
+  },
+  "3025": {
+    "id": 3025,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 25,
+        "name": "Hack and slash/Beat 'em up"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 18435,
+        "company": {
+          "id": 407,
+          "name": "Monolith Productions"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 96763,
+        "company": {
+          "id": 23,
+          "name": "Feral Interactive"
+        },
+        "developer": false,
+        "publisher": false
+      },
+      {
+        "id": 96762,
+        "company": {
+          "id": 50,
+          "name": "WB Games"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 51831,
+        "company": {
+          "id": 1260,
+          "name": "Behaviour Interactive"
+        },
+        "developer": false,
+        "publisher": false
+      }
+    ],
+    "name": "Middle-earth: Shadow of Mordor",
+    "platforms": [
+      {
+        "id": 9,
+        "name": "PlayStation 3"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 3,
+        "name": "Linux"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 14,
+        "name": "Mac"
+      },
+      {
+        "id": 12,
+        "name": "Xbox 360"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 21147,
+        "date": 1412726400
+      },
+      {
+        "id": 21151,
+        "date": 1416528000
+      },
+      {
+        "id": 108068,
+        "date": 1412035200
+      },
+      {
+        "id": 117713,
+        "date": 1438214400
+      },
+      {
+        "id": 20649,
+        "date": 1416268800
+      },
+      {
+        "id": 20647,
+        "date": 1416268800
+      },
+      {
+        "id": 21148,
+        "date": 1419465600
+      },
+      {
+        "id": 21152,
+        "date": 1416960000
+      },
+      {
+        "id": 21141,
+        "date": 1412294400
+      },
+      {
+        "id": 20650,
+        "date": 1412035200
+      },
+      {
+        "id": 113811,
+        "date": 1438214400
+      },
+      {
+        "id": 113810,
+        "date": 1438214400
+      },
+      {
+        "id": 21153,
+        "date": 1419465600
+      },
+      {
+        "id": 21142,
+        "date": 1412726400
+      },
+      {
+        "id": 21144,
+        "date": 1412726400
+      },
+      {
+        "id": 21146,
+        "date": 1412294400
+      },
+      {
+        "id": 21145,
+        "date": 1419465600
+      },
+      {
+        "id": 108067,
+        "date": 1412294400
+      },
+      {
+        "id": 21150,
+        "date": 1416960000
+      },
+      {
+        "id": 21140,
+        "date": 1412035200
+      },
+      {
+        "id": 21149,
+        "date": 1416528000
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 17,
+        "name": "Fantasy"
+      },
+      {
+        "id": 23,
+        "name": "Stealth"
+      },
+      {
+        "id": 38,
+        "name": "Open world"
+      }
+    ]
+  },
+  "2368": {
+    "id": 2368,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      },
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      },
+      {
+        "id": 3,
+        "name": "Co-operative"
+      }
+    ],
+    "genres": [
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 7769,
+        "company": {
+          "id": 1012,
+          "name": "FromSoftware"
+        },
+        "developer": true,
+        "publisher": true
+      },
+      {
+        "id": 7770,
+        "company": {
+          "id": 248,
+          "name": "Bandai Namco Entertainment"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Dark Souls II",
+    "platforms": [
+      {
+        "id": 9,
+        "name": "PlayStation 3"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 12,
+        "name": "Xbox 360"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 206131,
+        "date": 1394668800
+      },
+      {
+        "id": 102354,
+        "date": 1394496000
+      },
+      {
+        "id": 102355,
+        "date": 1394755200
+      },
+      {
+        "id": 206129,
+        "date": 1398384000
+      },
+      {
+        "id": 122507,
+        "date": 1394496000
+      },
+      {
+        "id": 206130,
+        "date": 1394668800
+      },
+      {
+        "id": 206128,
+        "date": 1394755200
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 17,
+        "name": "Fantasy"
+      }
+    ]
+  },
+  "164801": {
+    "id": 164801,
+    "name": "Far Cry 4 + Far Cry: Primal Bundle",
+    "platforms": [
+      {
+        "id": 49,
+        "name": "Xbox One"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 304797,
+        "date": 1461196800
+      }
+    ]
+  },
+  "197779": {
+    "id": 197779,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 170281,
+        "company": {
+          "id": 111,
+          "name": "The Creative Assembly"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 337898,
+        "company": {
+          "id": 23,
+          "name": "Feral Interactive"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Alien: Isolation",
+    "platforms": [
+      {
+        "id": 34,
+        "name": "Android"
+      },
+      {
+        "id": 39,
+        "name": "iOS"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 357127,
+        "date": 1639612800
+      },
+      {
+        "id": 353386,
+        "date": 1639612800
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Science fiction"
+      },
+      {
+        "id": 19,
+        "name": "Horror"
+      },
+      {
+        "id": 20,
+        "name": "Thriller"
+      },
+      {
+        "id": 21,
+        "name": "Survival"
+      },
+      {
+        "id": 23,
+        "name": "Stealth"
+      }
+    ]
+  },
+  "239064": {
+    "id": 239064,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      },
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      },
+      {
+        "id": 3,
+        "name": "Co-operative"
+      }
+    ],
+    "genres": [
+      {
+        "id": 5,
+        "name": "Shooter"
+      },
+      {
+        "id": 33,
+        "name": "Arcade"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 310634,
+        "company": {
+          "id": 365,
+          "name": "Rockstar North"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 313452,
+        "company": {
+          "id": 29,
+          "name": "Rockstar Games"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Grand Theft Auto V",
+    "platforms": [
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 662518,
+        "date": 1657843200
+      },
+      {
+        "id": 662519,
+        "date": 1657843200
+      },
+      {
+        "id": 662521,
+        "date": 1655251200
+      },
+      {
+        "id": 662520,
+        "date": 1655251200
+      },
+      {
+        "id": 747077,
+        "date": 1428969600
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 38,
+        "name": "Open world"
+      }
+    ]
+  },
+  "47452": {
+    "id": 47452,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      },
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      },
+      {
+        "id": 3,
+        "name": "Co-operative"
+      },
+      {
+        "id": 4,
+        "name": "Split screen"
+      }
+    ],
+    "genres": [
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 15,
+        "name": "Strategy"
+      },
+      {
+        "id": 25,
+        "name": "Hack and slash/Beat 'em up"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 52620,
+        "company": {
+          "id": 51,
+          "name": "Blizzard Entertainment"
+        },
+        "developer": true,
+        "publisher": true
+      }
+    ],
+    "name": "Diablo III: Reaper of Souls - Ultimate Evil Edition",
+    "platforms": [
+      {
+        "id": 9,
+        "name": "PlayStation 3"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 12,
+        "name": "Xbox 360"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 760322,
+        "date": 1408406400
+      },
+      {
+        "id": 760319,
+        "date": 1408406400
+      },
+      {
+        "id": 760320,
+        "date": 1408406400
+      },
+      {
+        "id": 760321,
+        "date": 1408406400
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 17,
+        "name": "Fantasy"
+      },
+      {
+        "id": 19,
+        "name": "Horror"
+      }
+    ]
+  },
+  "1279": {
+    "id": 1279,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      },
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      }
+    ],
+    "genres": [
+      {
+        "id": 15,
+        "name": "Strategy"
+      },
+      {
+        "id": 16,
+        "name": "Turn-based strategy (TBS)"
+      },
+      {
+        "id": 35,
+        "name": "Card & Board Game"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 21591,
+        "company": {
+          "id": 51,
+          "name": "Blizzard Entertainment"
+        },
+        "developer": true,
+        "publisher": true
+      }
+    ],
+    "name": "Hearthstone",
+    "platforms": [
+      {
+        "id": 34,
+        "name": "Android"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 39,
+        "name": "iOS"
+      },
+      {
+        "id": 14,
+        "name": "Mac"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 13678,
+        "date": 1394496000
+      },
+      {
+        "id": 13677,
+        "date": 1394496000
+      },
+      {
+        "id": 15483,
+        "date": 1397692800
+      },
+      {
+        "id": 26171,
+        "date": 1418601600
+      }
+    ],
+    "themes": [
+      {
+        "id": 17,
+        "name": "Fantasy"
+      }
+    ]
+  },
+  "7327": {
+    "id": 7327,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 8,
+        "name": "Platform"
+      },
+      {
+        "id": 9,
+        "name": "Puzzle"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 207120,
+        "company": {
+          "id": 104,
+          "name": "Ubisoft Entertainment"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 207121,
+        "company": {
+          "id": 702,
+          "name": "Ubisoft Montpellier"
+        },
+        "developer": true,
+        "publisher": false
+      }
+    ],
+    "name": "Valiant Hearts: The Great War",
+    "platforms": [
+      {
+        "id": 9,
+        "name": "PlayStation 3"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 34,
+        "name": "Android"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 39,
+        "name": "iOS"
+      },
+      {
+        "id": 12,
+        "name": "Xbox 360"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      },
+      {
+        "id": 130,
+        "name": "Nintendo Switch"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 248404,
+        "date": 1541635200
+      },
+      {
+        "id": 373975,
+        "date": 1403654400
+      },
+      {
+        "id": 136432,
+        "date": 1403654400
+      },
+      {
+        "id": 20783,
+        "date": 1409788800
+      },
+      {
+        "id": 298717,
+        "date": 1403654400
+      },
+      {
+        "id": 552214,
+        "date": 1403654400
+      },
+      {
+        "id": 298718,
+        "date": 1403654400
+      },
+      {
+        "id": 298719,
+        "date": 1403568000
+      },
+      {
+        "id": 373976,
+        "date": 1403654400
+      },
+      {
+        "id": 130304,
+        "date": 1403654400
+      },
+      {
+        "id": 776140,
+        "date": 1416960000
+      },
+      {
+        "id": 20189,
+        "date": 1403654400
+      }
+    ],
+    "themes": [
+      {
+        "id": 22,
+        "name": "Historical"
+      },
+      {
+        "id": 34,
+        "name": "Educational"
+      },
+      {
+        "id": 39,
+        "name": "Warfare"
+      }
+    ]
+  },
+  "113598": {
+    "id": 113598,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      },
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      }
+    ],
+    "genres": [
+      {
+        "id": 5,
+        "name": "Shooter"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 101641,
+        "company": {
+          "id": 19,
+          "name": "Arkane Studios"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 101640,
+        "company": {
+          "id": 16565,
+          "name": "Bethesda Softworks"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Deathloop",
+    "platforms": [
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 389818,
+        "date": 1663632000
+      },
+      {
+        "id": 237614,
+        "date": 1631577600
+      },
+      {
+        "id": 237613,
+        "date": 1631577600
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Science fiction"
+      },
+      {
+        "id": 23,
+        "name": "Stealth"
+      }
+    ]
+  },
+  "134582": {
+    "id": 134582,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 5,
+        "name": "Shooter"
+      },
+      {
+        "id": 8,
+        "name": "Platform"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 113736,
+        "company": {
+          "id": 834,
+          "name": "Insomniac Games"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 113737,
+        "company": {
+          "id": 10100,
+          "name": "Sony Interactive Entertainment"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 217661,
+        "company": {
+          "id": 291,
+          "name": "Nixxes Software"
+        },
+        "developer": false,
+        "publisher": false
+      }
+    ],
+    "name": "Ratchet & Clank: Rift Apart",
+    "platforms": [
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 539823,
+        "date": 1690329600
+      },
+      {
+        "id": 539824,
+        "date": 1623369600
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Science fiction"
+      }
+    ]
+  },
+  "14741": {
+    "id": 14741,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 8,
+        "name": "Platform"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 104597,
+        "company": {
+          "id": 85,
+          "name": "Double Fine Productions"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 316583,
+        "company": {
+          "id": 85,
+          "name": "Double Fine Productions"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 316581,
+        "company": {
+          "id": 17966,
+          "name": "Xbox Game Studios"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 316582,
+        "company": {
+          "id": 5214,
+          "name": "The Molasses Flood"
+        },
+        "developer": false,
+        "publisher": false
+      }
+    ],
+    "name": "Psychonauts 2",
+    "platforms": [
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 3,
+        "name": "Linux"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      },
+      {
+        "id": 14,
+        "name": "Mac"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 792429,
+        "date": 1629849600
+      },
+      {
+        "id": 792430,
+        "date": 1629849600
+      },
+      {
+        "id": 792426,
+        "date": 1629849600
+      },
+      {
+        "id": 792427,
+        "date": 1629849600
+      },
+      {
+        "id": 792428,
+        "date": 1635897600
+      },
+      {
+        "id": 792424,
+        "date": 1629763200
+      },
+      {
+        "id": 792425,
+        "date": 1629763200
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 27,
+        "name": "Comedy"
+      }
+    ]
+  },
+  "140502": {
+    "id": 140502,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 5,
+        "name": "Shooter"
+      },
+      {
+        "id": 9,
+        "name": "Puzzle"
+      },
+      {
+        "id": 24,
+        "name": "Tactical"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 111900,
+        "company": {
+          "id": 290,
+          "name": "IO Interactive"
+        },
+        "developer": true,
+        "publisher": true
+      }
+    ],
+    "name": "Hitman 3: Cloud Version",
+    "platforms": [
+      {
+        "id": 130,
+        "name": "Nintendo Switch"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 226026,
+        "date": 1611100800
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 23,
+        "name": "Stealth"
+      },
+      {
+        "id": 33,
+        "name": "Sandbox"
+      }
+    ]
+  },
+  "103281": {
+    "id": 103281,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      },
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      },
+      {
+        "id": 3,
+        "name": "Co-operative"
+      }
+    ],
+    "genres": [
+      {
+        "id": 5,
+        "name": "Shooter"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 104506,
+        "company": {
+          "id": 4355,
+          "name": "Skybox Labs"
+        },
+        "developer": false,
+        "publisher": false
+      },
+      {
+        "id": 104507,
+        "company": {
+          "id": 17966,
+          "name": "Xbox Game Studios"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 104508,
+        "company": {
+          "id": 722,
+          "name": "343 Industries"
+        },
+        "developer": true,
+        "publisher": false
+      }
+    ],
+    "name": "Halo Infinite",
+    "platforms": [
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 506240,
+        "date": 1638921600
+      },
+      {
+        "id": 506243,
+        "date": 1638921600
+      },
+      {
+        "id": 506242,
+        "date": 1636934400
+      },
+      {
+        "id": 506244,
+        "date": 1636934400
+      },
+      {
+        "id": 506241,
+        "date": 1638921600
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Science fiction"
+      },
+      {
+        "id": 38,
+        "name": "Open world"
+      },
+      {
+        "id": 39,
+        "name": "Warfare"
+      }
+    ]
+  },
+  "117266": {
+    "id": 117266,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      },
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      },
+      {
+        "id": 3,
+        "name": "Co-operative"
+      }
+    ],
+    "genres": [
+      {
+        "id": 9,
+        "name": "Puzzle"
+      },
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      },
+      {
+        "id": 32,
+        "name": "Indie"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 290042,
+        "company": {
+          "id": 9786,
+          "name": "22nd Century Toys"
+        },
+        "developer": false,
+        "publisher": false
+      },
+      {
+        "id": 218895,
+        "company": {
+          "id": 5462,
+          "name": "Finji"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 218896,
+        "company": {
+          "id": 47927,
+          "name": "Wishes Ultd."
+        },
+        "developer": true,
+        "publisher": false
+      }
+    ],
+    "name": "Chicory: A Colorful Tale",
+    "platforms": [
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      },
+      {
+        "id": 14,
+        "name": "Mac"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      },
+      {
+        "id": 130,
+        "name": "Nintendo Switch"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 475766,
+        "date": 1685404800
+      },
+      {
+        "id": 475767,
+        "date": 1685404800
+      },
+      {
+        "id": 539842,
+        "date": 1623283200
+      },
+      {
+        "id": 539843,
+        "date": 1639526400
+      },
+      {
+        "id": 539844,
+        "date": 1623283200
+      },
+      {
+        "id": 539845,
+        "date": 1623283200
+      },
+      {
+        "id": 539846,
+        "date": 1623283200
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 17,
+        "name": "Fantasy"
+      },
+      {
+        "id": 33,
+        "name": "Sandbox"
+      },
+      {
+        "id": 35,
+        "name": "Kids"
+      }
+    ]
+  },
+  "142813": {
+    "id": 142813,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 5,
+        "name": "Shooter"
+      },
+      {
+        "id": 9,
+        "name": "Puzzle"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 117813,
+        "company": {
+          "id": 37,
+          "name": "Capcom"
+        },
+        "developer": true,
+        "publisher": true
+      }
+    ],
+    "name": "Resident Evil Village & Resident Evil 7 Complete Bundle",
+    "platforms": [
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      },
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 226220,
+        "date": 1620345600
+      },
+      {
+        "id": 226218,
+        "date": 1620345600
+      },
+      {
+        "id": 226217,
+        "date": 1620345600
+      },
+      {
+        "id": 226216,
+        "date": 1620345600
+      },
+      {
+        "id": 226219,
+        "date": 1620345600
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 19,
+        "name": "Horror"
+      },
+      {
+        "id": 21,
+        "name": "Survival"
+      }
+    ]
+  },
+  "135243": {
+    "id": 135243,
+    "game_modes": [
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      },
+      {
+        "id": 3,
+        "name": "Co-operative"
+      },
+      {
+        "id": 4,
+        "name": "Split screen"
+      }
+    ],
+    "genres": [
+      {
+        "id": 8,
+        "name": "Platform"
+      },
+      {
+        "id": 9,
+        "name": "Puzzle"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 187543,
+        "company": {
+          "id": 1,
+          "name": "Electronic Arts"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 187544,
+        "company": {
+          "id": 12901,
+          "name": "Hazelight Studios"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 296397,
+        "company": {
+          "id": 59778,
+          "name": "Turn Me Up Games"
+        },
+        "developer": false,
+        "publisher": false
+      }
+    ],
+    "name": "It Takes Two",
+    "platforms": [
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      },
+      {
+        "id": 130,
+        "name": "Nintendo Switch"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 539826,
+        "date": 1616630400
+      },
+      {
+        "id": 539828,
+        "date": 1616716800
+      },
+      {
+        "id": 539830,
+        "date": 1616716800
+      },
+      {
+        "id": 539825,
+        "date": 1667520000
+      },
+      {
+        "id": 539827,
+        "date": 1616716800
+      },
+      {
+        "id": 539829,
+        "date": 1616716800
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      }
+    ]
+  },
+  "104967": {
+    "id": 104967,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      },
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      },
+      {
+        "id": 3,
+        "name": "Co-operative"
+      }
+    ],
+    "genres": [
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      },
+      {
+        "id": 32,
+        "name": "Indie"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 137322,
+        "company": {
+          "id": 24024,
+          "name": "Iron Gate Studios"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 137323,
+        "company": {
+          "id": 12186,
+          "name": "Coffee Stain Publishing"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Valheim",
+    "platforms": [
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 3,
+        "name": "Linux"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 14,
+        "name": "Mac"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 460200,
+        "date": 1663286400
+      },
+      {
+        "id": 602690,
+        "date": 1612224000
+      },
+      {
+        "id": 602691,
+        "date": 1717977600
+      },
+      {
+        "id": 460199,
+        "date": 1663286400
+      },
+      {
+        "id": 554536,
+        "date": 1612224000
+      },
+      {
+        "id": 454056,
+        "date": 1678752000
+      },
+      {
+        "id": 454055,
+        "date": 1678752000
+      },
+      {
+        "id": 554537
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 21,
+        "name": "Survival"
+      },
+      {
+        "id": 33,
+        "name": "Sandbox"
+      },
+      {
+        "id": 38,
+        "name": "Open world"
+      }
+    ]
+  },
+  "200836": {
+    "id": 200836,
+    "involved_companies": [
+      {
+        "id": 178174,
+        "company": {
+          "id": 552,
+          "name": "Crystal Dynamics"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 178175,
+        "company": {
+          "id": 27,
+          "name": "Eidos Montréal"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 178173,
+        "company": {
+          "id": 26,
+          "name": "Square Enix"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Marvel's Guardians of the Galaxy + Marvel's Avengers",
+    "platforms": [
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 358466,
+        "date": 1652140800
+      },
+      {
+        "id": 358467,
+        "date": 1652140800
+      },
+      {
+        "id": 371645,
+        "date": 1652140800
+      },
+      {
+        "id": 371646
+      },
+      {
+        "id": 371647
+      }
+    ]
+  },
+  "144765": {
+    "id": 144765,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 142289,
+        "company": {
+          "id": 12931,
+          "name": "Deck Nine"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 142290,
+        "company": {
+          "id": 26,
+          "name": "Square Enix"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Life is Strange: True Colors",
+    "platforms": [
+      {
+        "id": 170,
+        "name": "Google Stadia"
+      },
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      },
+      {
+        "id": 130,
+        "name": "Nintendo Switch"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 234428,
+        "date": 1631232000
+      },
+      {
+        "id": 239754,
+        "date": 1631232000
+      },
+      {
+        "id": 234431,
+        "date": 1631232000
+      },
+      {
+        "id": 314540,
+        "date": 1633046400
+      },
+      {
+        "id": 314542,
+        "date": 1633046400
+      },
+      {
+        "id": 314541,
+        "date": 1633046400
+      },
+      {
+        "id": 314539,
+        "date": 1633046400
+      },
+      {
+        "id": 234432,
+        "date": 1631232000
+      },
+      {
+        "id": 314538,
+        "date": 1633046400
+      },
+      {
+        "id": 326508,
+        "date": 1631232000
+      },
+      {
+        "id": 234429,
+        "date": 1631232000
+      },
+      {
+        "id": 314543,
+        "date": 1633046400
+      },
+      {
+        "id": 234427,
+        "date": 1631232000
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 17,
+        "name": "Fantasy"
+      },
+      {
+        "id": 20,
+        "name": "Thriller"
+      },
+      {
+        "id": 31,
+        "name": "Drama"
+      },
+      {
+        "id": 43,
+        "name": "Mystery"
+      },
+      {
+        "id": 44,
+        "name": "Romance"
+      }
+    ]
+  },
+  "134588": {
+    "id": 134588,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      },
+      {
+        "id": 32,
+        "name": "Indie"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 326730,
+        "company": {
+          "id": 26293,
+          "name": "Ember Lab"
+        },
+        "developer": true,
+        "publisher": true
+      }
+    ],
+    "name": "Kena: Bridge of Spirits",
+    "platforms": [
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 600069,
+        "date": 1723680000
+      },
+      {
+        "id": 707238,
+        "date": 1632182400
+      },
+      {
+        "id": 707239,
+        "date": 1632182400
+      },
+      {
+        "id": 600070,
+        "date": 1723680000
+      },
+      {
+        "id": 711632,
+        "date": 1632182400
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 17,
+        "name": "Fantasy"
+      }
+    ]
+  },
+  "267447": {
+    "id": 267447,
+    "genres": [
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 15,
+        "name": "Strategy"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      },
+      {
+        "id": 32,
+        "name": "Indie"
+      }
+    ],
+    "name": "Return or No Return",
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      }
+    ]
+  },
+  "323061": {
+    "id": 323061,
+    "involved_companies": [
+      {
+        "id": 296866,
+        "company": {
+          "id": 59881,
+          "name": "Kaizaran"
+        },
+        "developer": true,
+        "publisher": true
+      }
+    ],
+    "name": "Metroid Dread",
+    "platforms": [
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 669618
+      }
+    ],
+    "themes": [
+      {
+        "id": 18,
+        "name": "Science fiction"
+      }
+    ]
+  },
+  "171270": {
+    "id": 171270,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      },
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      },
+      {
+        "id": 3,
+        "name": "Co-operative"
+      }
+    ],
+    "genres": [
+      {
+        "id": 10,
+        "name": "Racing"
+      },
+      {
+        "id": 14,
+        "name": "Sport"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 154819,
+        "company": {
+          "id": 17966,
+          "name": "Xbox Game Studios"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 154820,
+        "company": {
+          "id": 1432,
+          "name": "Playground Games"
+        },
+        "developer": true,
+        "publisher": false
+      }
+    ],
+    "name": "Forza Horizon 5: Premium Edition",
+    "platforms": [
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 322272,
+        "date": 1635984000
+      },
+      {
+        "id": 330701,
+        "date": 1636070400
+      },
+      {
+        "id": 322273,
+        "date": 1635984000
+      },
+      {
+        "id": 709962,
+        "date": 1745539200
+      },
+      {
+        "id": 330702,
+        "date": 1636070400
+      },
+      {
+        "id": 322274,
+        "date": 1635984000
+      }
+    ],
+    "themes": [
+      {
+        "id": 38,
+        "name": "Open world"
+      }
+    ]
+  },
+  "126290": {
+    "id": 126290,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      },
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      },
+      {
+        "id": 3,
+        "name": "Co-operative"
+      }
+    ],
+    "genres": [
+      {
+        "id": 5,
+        "name": "Shooter"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 103975,
+        "company": {
+          "id": 847,
+          "name": "Ubisoft Toronto"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 264653,
+        "company": {
+          "id": 104,
+          "name": "Ubisoft Entertainment"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Far Cry 6",
+    "platforms": [
+      {
+        "id": 170,
+        "name": "Google Stadia"
+      },
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 246924,
+        "date": 1633564800
+      },
+      {
+        "id": 246925,
+        "date": 1633564800
+      },
+      {
+        "id": 246922,
+        "date": 1633564800
+      },
+      {
+        "id": 318163,
+        "date": 1633564800
+      },
+      {
+        "id": 246923,
+        "date": 1633564800
+      },
+      {
+        "id": 246926,
+        "date": 1633564800
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 21,
+        "name": "Survival"
+      },
+      {
+        "id": 38,
+        "name": "Open world"
+      }
+    ]
+  },
+  "55029": {
+    "id": 55029,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      },
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      },
+      {
+        "id": 3,
+        "name": "Co-operative"
+      }
+    ],
+    "genres": [
+      {
+        "id": 11,
+        "name": "Real Time Strategy (RTS)"
+      },
+      {
+        "id": 15,
+        "name": "Strategy"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 53376,
+        "company": {
+          "id": 196,
+          "name": "Relic Entertainment"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 77181,
+        "company": {
+          "id": 17966,
+          "name": "Xbox Game Studios"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 87247,
+        "company": {
+          "id": 22619,
+          "name": "World's Edge"
+        },
+        "developer": false,
+        "publisher": false
+      }
+    ],
+    "name": "Age of Empires IV",
+    "platforms": [
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 571955,
+        "date": 1635379200
+      }
+    ],
+    "themes": [
+      {
+        "id": 22,
+        "name": "Historical"
+      },
+      {
+        "id": 39,
+        "name": "Warfare"
+      }
+    ]
+  },
+  "116156": {
+    "id": 116156,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 8,
+        "name": "Platform"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      },
+      {
+        "id": 32,
+        "name": "Indie"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 108256,
+        "company": {
+          "id": 11662,
+          "name": "Annapurna Interactive"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 108257,
+        "company": {
+          "id": 4998,
+          "name": "Heart Machine"
+        },
+        "developer": true,
+        "publisher": false
+      }
+    ],
+    "name": "Solar Ash",
+    "platforms": [
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      },
+      {
+        "id": 130,
+        "name": "Nintendo Switch"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 415956,
+        "date": 1638403200
+      },
+      {
+        "id": 319735,
+        "date": 1638403200
+      },
+      {
+        "id": 319737,
+        "date": 1638403200
+      },
+      {
+        "id": 512189,
+        "date": 1694649600
+      },
+      {
+        "id": 512190,
+        "date": 1694649600
+      },
+      {
+        "id": 512191,
+        "date": 1694649600
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Science fiction"
+      }
+    ]
   }
 }

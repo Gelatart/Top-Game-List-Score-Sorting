@@ -1,4 +1,4 @@
-Laptop environment tends to lag behind now, Desktop now leading the charge
+Windows Laptop environment tends to lag behind now, Desktop and Borrowed MacBook now leading the charge
 
 (Whenever have to clone repo again, take special consideration to .env file)
 
@@ -10,6 +10,9 @@ GRABBING FROM AI CLASS (UVU CS 4470):
 -We named our environment "GameListScore"?
 -Would have created it with something like "conda create --name cs4470 python=3.9"?
 
+MAC VENV ACTIVATION: source venv/bin/activate
+-To deactivate: deactivate
+
 HOW TO WORK GENERATOR.PY:
 -Run the Anaconda Prompt program from Laptop? In pinned programs at bottom?
 --Should have (base) at the beginning
@@ -18,6 +21,8 @@ HOW TO WORK GENERATOR.PY:
 --"python -V" will show the version (as of writing it is Python 3.10.9)
 --"conda deactivate" will exit out of conda environment
 --"python Generator.py" should run it properly once in the environment
+
+I NOW HAVE A MAIN.PY IN THE ROOT FOLDER WHERE I TRY TO RUN FILES OFF OF
 
 SCORING PROCESSES:
 -Ranked: 

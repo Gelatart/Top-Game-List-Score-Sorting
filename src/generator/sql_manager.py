@@ -52,6 +52,28 @@ class SQLManager:
         self.cursor.execute(f"SELECT id FROM {table} WHERE name=?", (name,))
         return self.cursor.fetchone()[0]
 
+    def build_where_clause(self, filters):
+        """
+        Build a WHERE clause with operators.
+        filters = {
+            "ranked_score": (">", 80),
+            "main_platform": ("!=", "PC"),
+            "release_date": (">=", "2010-01-01")
+        }
+        """
+        clauses = []
+        params = []
+        print(filters)
+        print(type(filters))
+        for column, (op, value) in filters.items():
+            if op not in ["=", "!=", ">", "<", ">=", "<="]:
+                raise ValueError(f"Unsupported operator: {op}")
+            clauses.append(f"{column} {op} ?")
+            params.append(value)
+
+        where_clause = " AND ".join(clauses)
+        return f"WHERE {where_clause}" if clauses else "", params
+
     def insert_or_update_game_pre_ID(self, game: GameObject):
         self.cursor.execute("""
         INSERT INTO games (title, ranked_score, list_source, total_count)
@@ -353,11 +375,11 @@ class SQLManager:
             raise ValueError("You must provide at least one column.")
 
         col_str = ", ".join(columns)
-        query = f"SELECT {col_str} FROM games LIMIT ?"
+        query = f"SELECT {col_str} FROM games ORDER BY g.ranked_score DESC LIMIT ?"
         self.cursor.execute(query, (limit,))
         return self.cursor.fetchall()
 
-    def get_custom_columns_with_joins(self, columns, limit=20):
+    def get_custom_columns_with_joins(self, columns, filters=None, limit=20):
         """
         Dynamically build a SELECT query with optional joins if columns
         from related tables are requested (genres, themes, etc).
@@ -399,13 +421,19 @@ class SQLManager:
 
         col_str = ", ".join(base_cols)
         join_str = " ".join(joins)
+        where_clause, params = self.build_where_clause(filters)
+        limit_clause = f" LIMIT {limit}" if limit else ""
         query = f"""
         SELECT {col_str}
         FROM games
         {join_str}
+        {where_clause}
+        ORDER BY g.ranked_score DESC
         LIMIT ?
         """
-        self.cursor.execute(query, (limit,))
+        #replace limit ? with limit_clause
+        #self.cursor.execute(query, (limit,))
+        self.cursor.execute(query, params)
         return self.cursor.fetchall()
 
     def get_top_n_games(self, n=10):
