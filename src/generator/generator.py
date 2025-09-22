@@ -488,21 +488,7 @@ def run_generator():
                                 game_DB[game].list_publishers.append(dev_name)
                         # game_DB[game].list_developers = developers  # Will this grab the most definitive list?
                     # ADD GENRES
-                    genres = earliest_game.genres
-                    if (len(genres) > 0):
-                        for genre in genres:
-                            genre_type = None
-                            sub_query = 'fields name; where id=' + str(genre.id) + ';'
-                            sub_request = wrapper.api_request(
-                                'genres.pb',  # Note the '.pb' suffix at the endpoint
-                                sub_query
-                            )
-                            genres_message = GenreResult()
-                            genres_message.ParseFromString(
-                                sub_request)  # Fills the protobuf message object with the response
-                            new_genres = genres_message.genres
-                            genre_type = new_genres[0].name
-                            game_DB[game].genres.append(genre_type)
+                    # REMOVING THIS PART
                     # ADD THEMES
                     # REMOVING THIS PART
                 elif (len(games) == 1):
@@ -664,22 +650,7 @@ def run_generator():
                                 genre_type = new_genres[0].name
                                 game_DB[game].genres.append(genre_type)
                         # ADD THEMES
-                        # theme seems to be pulling in too many results right now, unrelated?
-                        themes = earliest_game.themes
-                        if (len(themes) > 0):
-                            for theme in themes:
-                                theme_type = None
-                                sub_query = 'fields name; where id=' + str(theme.id) + ';'
-                                sub_request = wrapper.api_request(
-                                    'themes.pb',  # Note the '.pb' suffix at the endpoint
-                                    sub_query
-                                )
-                                themes_message = ThemeResult()
-                                themes_message.ParseFromString(
-                                    sub_request)  # Fills the protobuf message object with the response
-                                new_themes = themes_message.themes
-                                theme_type = new_themes[0].name
-                                game_DB[game].themes.append(theme_type)
+                        # REMOVING THIS PART
                         game_DB[game].order_inserted = order_of_insert
                     except Exception as e:
                         print("An error has occurred:", e)
