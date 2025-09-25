@@ -1,12 +1,20 @@
+import os
+
 from .mongo_manager import MongoManager
 from .sql_manager import SQLManager
 from .game_object import GameObject
 
 class DatabaseInterface:
     def __init__(self, use_mongo=False, use_sql=True):
-        self.mongo = MongoManager() if use_mongo else None
-        self.sql = SQLManager() if use_sql else None
-        if use_sql:
+        self.use_sql = use_sql
+        self.use_mongo = use_mongo
+
+        self.mongo = MongoManager() if use_mongo else None #should it be self.use_mongo?
+        #self.sql = SQLManager() if use_sql else None
+        if self.use_sql:
+            sqlite_path = os.getenv("SQLITE_PATH", "data/games.db")
+            os.makedirs(os.path.dirname(sqlite_path), exist_ok=True)
+            self.sql = SQLManager(sqlite_path)
             self.sql.clear_table()
 
     def insert_game_pre_ID(self, game: GameObject):
@@ -26,11 +34,11 @@ class DatabaseInterface:
         if self.mongo:
             #have mongo have a split between full and minimum? unnecessary?
             self.mongo.insert_or_update_game(game)
-            print("Inserting game into MongoDB")
+            #print("Inserting game into MongoDB")
         if self.sql:
             #self.sql.insert_or_update_game_full(game)
             self.sql.insert_or_update_game_full_with_relations(game)
-            print("Inserting game into SQLite")
+            #print("Inserting game into SQLite")
 
     def get_all_games(self):
         #split into mongo and sql functions so don't return both at same time?

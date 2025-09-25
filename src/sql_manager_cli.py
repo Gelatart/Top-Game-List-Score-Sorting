@@ -68,8 +68,6 @@ def main():
     subparsers.add_parser("show_game_igdb", help="Get full denormalized info for a single game by its IGDB ID")
     subparsers.add_parser("custom_columns", help="Fetch custom-selected columns from the games table")
     subparsers.add_parser("custom_columns_joins", help="Dynamically build a SELECT query with optional joins if columns from related tables are requested (genres, themes, etc)")
-    subparsers.add_parser("preset_queries", help="Preset queries (genres, themes, platforms, etc.)")
-    #^preset_parser = subparsers.add_parser...
     #PUT IN THE REST OF THE NEW FUNCTIONS HERE!!!
     #...
 
@@ -97,7 +95,9 @@ def main():
     query_parser = subparsers.add_parser("run_sql", help="Run a custom SQL query")
     query_parser.add_argument("sql", help="SQL query string to execute")
 
-    #preset_parser.add_argument("filters")
+    preset_parser = subparsers.add_parser("preset_queries", help="Preset queries (genres, themes, platforms, etc.)")
+    # ^preset_parser = subparsers.add_parser...
+    preset_parser.add_argument("filters", help="Filters for WHERE clause, format: column,operator,value")
 
     # --- Insert/Update Commands ---
     insert_preid_parser = subparsers.add_parser("insert_preid", help="Insert/Update a game (before IGDB ID)")
@@ -115,7 +115,9 @@ def main():
 
     args = parser.parse_args()
 
-    db = SQLManager("games.db")
+    db = SQLManager("data/games.db")
+    #input("Test")
+    #print(db.db_path)
 
     # Make SQLite rows behave like dicts
     db.conn.row_factory = sqlite3.Row
@@ -219,18 +221,19 @@ def interactive_menu(db):
             if preset not in presets_map:
                 print("Invalid choice.")
             else:
-                #args.cols = presets_map[preset]
-                table, column = presets_map[preset]
-                print(f"Do you want to filter by a specific {table[:-1]} name? (y/n)")
+                args.cols = presets_map[preset]
+                print(f"Do you want to add filters? (y/n)")
                 filter_choice = input("> ").strip().lower()
 
                 if filter_choice == "y":
                     args.filters = get_filters_from_user()
+                    print(args.filters)
 
                 args.limit = input("Limit results (default 20): ").strip()
                 args.limit = int(args.limit) if args.limit.isdigit() else 20
         elif command == "top_games":
             args.n = int(input("Enter N: "))
+            args.filters = get_filters_from_user()
         elif command == "games_by_platform":
             args.platform = input("Enter platform: ")
         elif command == "run_sql":
@@ -278,7 +281,8 @@ def run_command(db, command, args):
 
     elif command == "preset_queries":
         print(f"Preset query results for {args.cols}:")
-        print_rows(db.get_custom_columns_with_joins(args.cols, args.filters, args.limit), db.cursor)
+        filters = getattr(args, "filters", None) or {}
+        print_rows(db.get_custom_columns_with_joins(args.cols, filters, args.limit), db.cursor)
 
     elif command == "insert_preid":
         game = GameObject(
@@ -302,7 +306,7 @@ def run_command(db, command, args):
         print(f"Inserted/Updated game (IGDB-ID): {args.title}")
 
     elif command == "top_games":
-        print_rows(db.get_top_n_games(args.n), db.cursor)
+        print_rows(db.get_top_n_games(args.n, args.filters), db.cursor)
 
     elif command == "games_by_platform":
         print_rows(db.get_games_by_main_platform(args.platform), db.cursor)

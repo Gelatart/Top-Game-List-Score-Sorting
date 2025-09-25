@@ -1,5 +1,6 @@
 import sqlite3
 
+from .config import get_env_var
 from .create_schema import create_schema
 from .game_object import GameObject
 #Use try, except, finally logic to deal with errors and close the connection?
@@ -249,21 +250,15 @@ class SQLManager:
         return self.cursor.fetchall()
 
     #def get_all_full_game_info(self, limit=25):
-    def get_all_full_game_info(self):
+    def get_all_full_game_info(self, filters=None, limit=None):
         """
         Return a denormalized view of ALL games, joining related tables into comma-separated lists (with GROUP_CONCAT for related fields).
         Make a version that is limited to `limit` rows by default.
         """
-        query = """
+        base_query = """
         SELECT
-            g.id,
-            g.title,
-            g.igdb_id,
-            g.ranked_score,
-            g.total_count,
-            g.release_date,
-            g.main_platform,
-            g.list_source,
+            g.id, g.title, g.igdb_id, g.ranked_score, g.total_count, g.release_date,
+            g.main_platform, g.list_source,
             GROUP_CONCAT(DISTINCT genres.name) AS genres,
             GROUP_CONCAT(DISTINCT themes.name) AS themes,
             GROUP_CONCAT(DISTINCT player_modes.name) AS player_modes,
@@ -288,11 +283,15 @@ class SQLManager:
         LEFT JOIN game_companies    gc   ON g.id = gc.game_id
         LEFT JOIN companies         ON gc.company_id = companies.id
         LEFT JOIN lists_referencing lr   ON g.id = lr.game_id
-        GROUP BY g.id
         """
+        where_clause, params = self.build_where_clause(filters or {})
+        group_by = " GROUP BY g.id"
+        limit_clause = f" LIMIT {limit}" if limit else ""
         #LIMIT ?
         #self.cursor.execute(query, (limit,))
-        self.cursor.execute(query)
+        query = f"{base_query} {where_clause} {group_by} {limit_clause}"
+        self.cursor.execute(query, params)
+        print(query)
         return self.cursor.fetchall()
 
     def get_full_game_info_by_id(self, game_id):
@@ -337,6 +336,7 @@ class SQLManager:
         GROUP BY g.id
         """
         self.cursor.execute(query, (game_id,))
+        print(query)
         return self.cursor.fetchone()
 
     def get_full_game_info_by_title(self, title):
@@ -349,6 +349,7 @@ class SQLManager:
         self.cursor.execute(query, (title,))
         row = self.cursor.fetchone()
         if row:
+            print(query)
             return self.get_full_game_info_by_id(row[0])
         return None
 
@@ -362,6 +363,7 @@ class SQLManager:
         self.cursor.execute(query, (igdb_id,))
         row = self.cursor.fetchone()
         if row:
+            print(query)
             return self.get_full_game_info_by_id(row[0])
         return None
 
@@ -377,6 +379,7 @@ class SQLManager:
         col_str = ", ".join(columns)
         query = f"SELECT {col_str} FROM games ORDER BY g.ranked_score DESC LIMIT ?"
         self.cursor.execute(query, (limit,))
+        print(query)
         return self.cursor.fetchall()
 
     def get_custom_columns_with_joins(self, columns, filters=None, limit=20):
@@ -428,24 +431,30 @@ class SQLManager:
         FROM games
         {join_str}
         {where_clause}
-        ORDER BY g.ranked_score DESC
-        LIMIT ?
+        ORDER BY games.ranked_score DESC
+        {limit_clause}
         """
         #replace limit ? with limit_clause
         #self.cursor.execute(query, (limit,))
+        print(query)
         self.cursor.execute(query, params)
         return self.cursor.fetchall()
 
-    def get_top_n_games(self, n=10):
+    def get_top_n_games(self, n=10, filters=None):
         """
         Example of ORDER BY + LIMIT
         """
-        self.cursor.execute("""
+        base_query = """
             SELECT title, igdb_id, ranked_score
             FROM games
-            ORDER BY ranked_score DESC
-            LIMIT ?
-        """, (n,))
+        """
+        where_clause, params = self.build_where_clause(filters or {})
+        #limit_clause = f" LIMIT {n}" if n else ""
+        #^Put this in
+        query = f"{base_query} {where_clause} ORDER BY ranked_score DESC LIMIT ?"
+        params.append(n)
+        self.cursor.execute(query, params)
+        print(query)
         return self.cursor.fetchall()
 
     def get_games_by_main_platform(self, platform_name):

@@ -309,7 +309,6 @@ def run_generator():
                 # Also dealing with compilation games? Add points to individual games? Create field to track subgames in a compilation?
                 # check_string += ';'
                 print(check_string)
-                print(details.lists_referencing)
                 igdb_request = wrapper.api_request(
                     'games.pb',  # Note the '.pb' suffix at the endpoint
                     check_string
@@ -337,7 +336,6 @@ def run_generator():
                             earliest_game = result
                             # input(earliest_release)
                         # print(result)
-                    # print(earliest_game.id)
                     # print(earliest_game.platforms)
                     # print(earliest_release)
                     # Time to put the IGDB attributes into the game we are putting out to the cluster
@@ -633,22 +631,7 @@ def run_generator():
                                 if (is_pub):
                                     game_DB[game].list_publishers.append(dev_name)
                         # ADD GENRES
-                        # genre seems to be pulling in too many results right now, unrelated?
-                        genres = earliest_game.genres
-                        if (len(genres) > 0):
-                            for genre in genres:
-                                genre_type = None
-                                sub_query = 'fields name; where id=' + str(genre.id) + ';'
-                                sub_request = wrapper.api_request(
-                                    'genres.pb',  # Note the '.pb' suffix at the endpoint
-                                    sub_query
-                                )
-                                genres_message = GenreResult()
-                                genres_message.ParseFromString(
-                                    sub_request)  # Fills the protobuf message object with the response
-                                new_genres = genres_message.genres
-                                genre_type = new_genres[0].name
-                                game_DB[game].genres.append(genre_type)
+                        # REMOVING THIS PART
                         # ADD THEMES
                         # REMOVING THIS PART
                         game_DB[game].order_inserted = order_of_insert
@@ -718,7 +701,7 @@ def run_generator():
             break
         else:
             print("Invalid choice. Please enter 1 or 2.")
-    for game in game_DB.values():
+    for i, game in enumerate(game_DB.values(), start=1):
         #enumerate or whatever so I can keep track of how many insertions are being done so progress is more clear on CLI
         #Use the pre-ID option in other cases? But here we should already have it?
         #Have the option to save to database before we bother to grab IGDB data? And then update with what we have gotten?
@@ -727,6 +710,10 @@ def run_generator():
             db.insert_game_full(game)
         else:
             db.insert_game(game)
+        if(db.sql):
+            print(f"Inserting game {i} into SQLite")
+        if(db.mongo):
+            print(f"Inserting game {i} into MongoDB")
     db.close() #close later on? like when program concludes? or when user sets they want to close connections?
     #or just set database manager whenever we want to connect to do stuff again and don't leave open?
 
@@ -736,6 +723,9 @@ def run_generator():
     # WHAT I NEED AND REPLACING WHAT I DON'T
 
     input("FROM THIS PART ONWARD CLEAR MONGO BITS, ONLY ATTEMPT MONGO CONNECTION IF WE INTEND SO")
+
+    input("This is a test, program going to break for now. Goodbye!")
+    exit()
 
     mon_col = monDB["games"]
     list_col = monDB["lists"]
