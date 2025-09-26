@@ -75,6 +75,40 @@ class SQLManager:
         where_clause = " AND ".join(clauses)
         return f"WHERE {where_clause}" if clauses else "", params
 
+    def calculate_column_expression(self, expression, filters=None, limit=None):
+        """
+        Calculate an arithmetic expression across columns.
+
+        Example:
+            expression = "ranked_score + list_count"
+            expression = "ranked_score * 1.5"
+            expression = "(total_count - list_count) / 2"
+
+        filters = { "main_platform": ("=", "PC") }
+        """
+        base_query = f"""
+            SELECT g.id, g.title, g.igdb_id, {expression} AS result
+            FROM games g
+        """
+        where_clause, params = self.build_where_clause(filters or {})
+        limit_clause = f" LIMIT {limit}" if limit else ""
+
+        query = f"{base_query} {where_clause} {limit_clause}"
+        self.cursor.execute(query, params)
+        return self.cursor.fetchall()
+
+    def calculate_aggregate_expression(self, expression, filters=None):
+        """
+        Run an aggregate arithmetic expression.
+        Example: "AVG(ranked_score)", "SUM(total_count)", "MAX(ranked_score) - MIN(ranked_score)"
+        """
+        base_query = f"SELECT {expression} AS result FROM games g"
+        where_clause, params = self.build_where_clause(filters or {})
+
+        query = f"{base_query} {where_clause}"
+        self.cursor.execute(query, params)
+        return self.cursor.fetchone()[0]
+
     def insert_or_update_game_pre_ID(self, game: GameObject):
         self.cursor.execute("""
         INSERT INTO games (title, ranked_score, list_source, total_count)
