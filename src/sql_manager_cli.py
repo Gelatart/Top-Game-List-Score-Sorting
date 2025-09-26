@@ -41,7 +41,7 @@ def get_filters_from_user():
         if col.lower() == "done":
             break
         op = input("Operator (=, !=, >, <, >=, <=: ").strip()
-        #Keep to the more basic ones for now, have like and such be separate?
+        #Keep to the more basic ones for now, have like and such be separate? actually include the new ones?
         val = input("Value: ").strip()
 
         # If numeric, convert to int
