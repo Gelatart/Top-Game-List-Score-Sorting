@@ -53,27 +53,38 @@ class SQLManager:
         self.cursor.execute(f"SELECT id FROM {table} WHERE name=?", (name,))
         return self.cursor.fetchone()[0]
 
-    def build_where_clause(self, filters):
+    def build_where_clause(self, filters: dict) -> tuple[str, list]:
         """
         Build a WHERE clause with operators.
         filters = {
             "ranked_score": (">", 80),
             "main_platform": ("!=", "PC"),
-            "release_date": (">=", "2010-01-01")
+            "release_date": (">=", "2010-01-01"),
+            "title": ("LIKE", "%Mario%"),
+            "main_platform": ("IN", ["PC", "Switch"])
         }
         """
         clauses = []
         params = []
         print(filters)
         print(type(filters))
-        for column, (op, value) in filters.items():
-            if op not in ["=", "!=", ">", "<", ">=", "<="]:
+        for col, (op, val) in filters.items():
+            op = op.upper()
+            print(val)
+            print(type(val))
+            #if op == "IN" and isinstance(val, (list, tuple)):
+            if op == "IN":
+                placeholders = ",".join(["?"] * len(val))
+                clauses.append(f"{col} IN ({placeholders})")
+                params.extend(val)
+            elif op in ["=", "!=", ">", "<", ">=", "<="]:
+                clauses.append(f"{col} {op} ?")
+                params.append(val)
+            else:
                 raise ValueError(f"Unsupported operator: {op}")
-            clauses.append(f"{column} {op} ?")
-            params.append(value)
 
-        where_clause = " AND ".join(clauses)
-        return f"WHERE {where_clause}" if clauses else "", params
+        where_clause = "WHERE " + " AND ".join(clauses) if clauses else ""
+        return where_clause, params
 
     def calculate_column_expression(self, expression, filters=None, limit=None):
         """

@@ -40,12 +40,13 @@ def get_filters_from_user():
         col = input("Column name (or 'done'): ").strip()
         if col.lower() == "done":
             break
-        op = input("Operator (=, !=, >, <, >=, <=: ").strip()
+        op = input("Operator (=, !=, >, <, >=, <= ) for basics or (IN) for advanced: ").strip()
         #Keep to the more basic ones for now, have like and such be separate? actually include the new ones?
-        val = input("Value: ").strip()
-
+        val = input("Value (for IN, separate with commas): ").strip()
+        if op.upper() == "IN":
+            val = [v.strip() for v in val.split(",")]
         # If numeric, convert to int
-        if val.isdigit():
+        elif val.isdigit():
             val = int(val)
 
         filters[col] = (op, val)

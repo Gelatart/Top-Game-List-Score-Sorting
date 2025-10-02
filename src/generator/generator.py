@@ -291,7 +291,6 @@ def run_generator():
                     # Maybe grab the name from IGDB here, to update the name before it gets sent to the cluster?
                     # Otherwise it might have <ID> in front of the name there?
                     # modified_DB[modified_title] = details
-                    # input(modified_DB[modified_title])
                 else:
                     check_string += 'where name = "'
                     check_string += game.strip()
@@ -674,9 +673,6 @@ def run_generator():
         else:
             print("Answer not understood, try again.")
             print()
-
-    for game, details in itertools.islice(game_DB.items(), 0, 3):
-        print(details)
 
     # Step 6: Save to database
     #Doing basic insert to mongo at this point, and then we can add other values later on? After IGDB pulling?

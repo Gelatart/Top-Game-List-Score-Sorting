@@ -1385,7 +1385,6 @@ while(answer_check_main == False):
                 new_query = {"Average Score": target_score}
                 queries.append(new_query)
                 """
-                #add_misc_query("Average Score", int(target_score))
                 add_misc_query("Average Score", float(target_score))
                 print("Query added!")
                 input("When you are ready, press Enter to go back to the main print menu\n")
