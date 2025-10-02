@@ -55,13 +55,14 @@ class SQLManager:
 
     def build_where_clause(self, filters: dict) -> tuple[str, list]:
         """
-        Build a WHERE clause with operators.
+        Build a WHERE clause with filters.
         filters = {
             "ranked_score": (">", 80),
             "main_platform": ("!=", "PC"),
             "release_date": (">=", "2010-01-01"),
             "title": ("LIKE", "%Mario%"),
-            "main_platform": ("IN", ["PC", "Switch"])
+            "main_platform": ("IN", ["PC", "Switch"]),
+            "release_date": ("BETWEEN", ("2000-01-01", "2010-12-31"))
         }
         """
         clauses = []
@@ -73,9 +74,16 @@ class SQLManager:
             print(val)
             print(type(val))
             #if op == "IN" and isinstance(val, (list, tuple)):
-            if op == "IN":
+            if op == "LIKE":
+                #LOOK AT LIKE FUNCTION I SET UP BEFORE
+                clauses.append(f"{col} LIKE ?")
+                params.append(val)
+            elif op == "IN": #and isinstance(val, (list, tuple)):
                 placeholders = ",".join(["?"] * len(val))
                 clauses.append(f"{col} IN ({placeholders})")
+                params.extend(val)
+            elif op == "BETWEEN" and isinstance(val, (tuple, list)) and len(val) == 2:
+                clauses.append(f"{col} BETWEEN ? AND ?")
                 params.extend(val)
             elif op in ["=", "!=", ">", "<", ">=", "<="]:
                 clauses.append(f"{col} {op} ?")
@@ -382,7 +390,8 @@ class SQLManager:
         """
         self.cursor.execute(query, (game_id,))
         print(query)
-        return self.cursor.fetchone()
+        #return self.cursor.fetchone()
+        return self.cursor.fetchall()  # <-- ensures list of tuples
 
     def get_full_game_info_by_title(self, title):
         """
@@ -393,10 +402,11 @@ class SQLManager:
         """
         self.cursor.execute(query, (title,))
         row = self.cursor.fetchone()
-        if row:
-            print(query)
-            return self.get_full_game_info_by_id(row[0])
-        return None
+        if not row:
+            return [] #return None?
+        print(query)
+        game_id = row[0]
+        return self.get_full_game_info_by_id(game_id)
 
     def get_full_game_info_by_igdb_id(self, igdb_id):
         """

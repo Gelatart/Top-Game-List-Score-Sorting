@@ -40,14 +40,23 @@ def get_filters_from_user():
         col = input("Column name (or 'done'): ").strip()
         if col.lower() == "done":
             break
-        op = input("Operator (=, !=, >, <, >=, <= ) for basics or (IN) for advanced: ").strip()
+        op = input("Operator (=, !=, >, <, >=, <= ) for basics or (LIKE, IN, BETWEEN) for advanced: ").strip()
         #Keep to the more basic ones for now, have like and such be separate? actually include the new ones?
-        val = input("Value (for IN, separate with commas): ").strip()
-        if op.upper() == "IN":
+        #val = input("Value (for IN, separate with commas): ").strip()
+        if op.upper() == "LIKE":
+            val = input("Value: ").strip()
+            #LOOK AT LIKE FUNCTION I SET UP BEFORE
+        elif op.upper() == "IN":
+            val = input("Value (for IN, separate with commas): ").strip()
             val = [v.strip() for v in val.split(",")]
+        elif op.upper() == "BETWEEN":
+            start = input("Start value: ").strip()
+            end = input("End value: ").strip()
+            val = (start, end)
         # If numeric, convert to int
-        elif val.isdigit():
-            val = int(val)
+        if not isinstance(val, (list, tuple)):
+            if val.isdigit():
+                val = int(val)
 
         filters[col] = (op, val)
 

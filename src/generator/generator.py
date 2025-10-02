@@ -256,7 +256,6 @@ def run_generator():
             games_message = GameResult()
             games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
             games = games_message.games
-            print(games)
 
             # Figure out if I can be more efficient with endpoints to make it take quicker? taking very long now
             print("Time to go looking around")
@@ -425,7 +424,6 @@ def run_generator():
                     if (len(modes) > 0):
                         for mode in modes:
                             mode_type = None
-                            # sub_query = 'fields *;'
                             sub_query = 'fields name; where id=' + str(mode.id) + ';'
                             sub_request = wrapper.api_request(
                                 'game_modes.pb',  # Note the '.pb' suffix at the endpoint
@@ -448,7 +446,6 @@ def run_generator():
                             dev_name = None
                             # FIX THE REST OF THIS!!! (involved company, company?)
                             # first query to look at involved companies
-                            # sub_query = 'fields *;'
                             # sub_query_1 = 'fields *; where id=' + str(dev.id) + ' & developer=true;'
                             sub_query_1 = 'fields *; where id=' + str(dev.id) + ';'
                             sub_request_1 = wrapper.api_request(
@@ -464,7 +461,6 @@ def run_generator():
                             # second query to look at the company specifically
                             is_dev = inv_companies[0].developer
                             is_pub = inv_companies[0].publisher
-                            print(is_pub)
                             sub_query_2 = 'fields name; where id=' + str(inv_companies[0].company.id) + ';'
                             sub_request_2 = wrapper.api_request(
                                 'companies.pb',  # Note the '.pb' suffix at the endpoint
@@ -575,6 +571,7 @@ def run_generator():
                         if (len(list_plats) > 0):
                             game_DB[game].list_platforms = list_plats
 
+                        #MODES
                         modes = current_game.game_modes
                         if (len(modes) > 0):
                             for mode in modes:
@@ -773,7 +770,6 @@ def run_generator():
         if (isinstance(details, GameObject)):
             print("This one's a game object!")
             details = json.loads(json.dumps(details.__dict__))
-        print(details.__class__)
         # insertion = mon_col.insert_one(details)
         # insertion = mon_col.insert_one(game_DB[game])
         export_dict = {}
@@ -811,7 +807,6 @@ def run_generator():
         # export_dict = dict('Title' = game, 'IGDB ID' = details.igdb_ID, 'Ranked Score' = details.ranked_score)
         insertion = mon_col.insert_one(export_dict)
 
-    # insertion = mon_col.insert_many(game_DB)
     # insertion = mon_col.insert_many(export)
     print("TIME TO INSERT THE LISTS INTO MONGODB!")
     for game_list in games_lists:
@@ -961,7 +956,6 @@ def run_generator():
         """
         game_platforms = game['List of Platforms']
         #print(len(game_platforms))
-        #input("Here are the number of platforms")
         platforms_string = ""
         plat_next = 1
         #Replacing this approach with the newly discovered join() approach?

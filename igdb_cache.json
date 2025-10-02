@@ -3912,5 +3912,221 @@
         "name": "Science fiction"
       }
     ]
+  },
+  "25935": {
+    "id": 25935,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 7,
+        "name": "Music"
+      },
+      {
+        "id": 8,
+        "name": "Platform"
+      },
+      {
+        "id": 9,
+        "name": "Puzzle"
+      },
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      },
+      {
+        "id": 32,
+        "name": "Indie"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 162380,
+        "company": {
+          "id": 11662,
+          "name": "Annapurna Interactive"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 162381,
+        "company": {
+          "id": 27256,
+          "name": "Beethoven & Dinosaur"
+        },
+        "developer": true,
+        "publisher": false
+      }
+    ],
+    "name": "The Artful Escape",
+    "platforms": [
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      },
+      {
+        "id": 130,
+        "name": "Nintendo Switch"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 300991,
+        "date": 1631145600
+      },
+      {
+        "id": 337247,
+        "date": 1643068800
+      },
+      {
+        "id": 300992,
+        "date": 1631145600
+      },
+      {
+        "id": 300993,
+        "date": 1631145600
+      },
+      {
+        "id": 337248,
+        "date": 1643068800
+      },
+      {
+        "id": 337249,
+        "date": 1643068800
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Science fiction"
+      }
+    ]
+  },
+  "24417": {
+    "id": 24417,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 13,
+        "name": "Simulator"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      },
+      {
+        "id": 32,
+        "name": "Indie"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 83111,
+        "company": {
+          "id": 11011,
+          "name": "Pixpil Studio"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 83110,
+        "company": {
+          "id": 1418,
+          "name": "Chucklefish Games"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Eastward",
+    "platforms": [
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 14,
+        "name": "Mac"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      },
+      {
+        "id": 130,
+        "name": "Nintendo Switch"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 314563,
+        "date": 1637798400
+      },
+      {
+        "id": 308433,
+        "date": 1631750400
+      },
+      {
+        "id": 303243,
+        "date": 1631750400
+      },
+      {
+        "id": 428635,
+        "date": 1669852800
+      },
+      {
+        "id": 303244,
+        "date": 1631750400
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Science fiction"
+      }
+    ]
   }
 }
