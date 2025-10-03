@@ -29,7 +29,8 @@ COMMANDS = [
 def get_filters_from_user():
     """
     Interactive filter builder for WHERE clauses.
-    Returns dict like: {"ranked_score": (">", 80)}
+    Returns dict like:
+    {"ranked_score": (">", 80), "title": ("LIKE", "%Mario%"), "platform": ("IN", ["PC", "Switch"])}
     """
     filters = {}
     print("\nAdd filters? (y/n)")
@@ -40,25 +41,29 @@ def get_filters_from_user():
         col = input("Column name (or 'done'): ").strip()
         if col.lower() == "done":
             break
-        op = input("Operator (=, !=, >, <, >=, <= ) for basics or (LIKE, IN, BETWEEN) for advanced: ").strip()
+        op = input("Operator (=, !=, >, <, >=, <= ) for basics\nOperator (LIKE, IN, BETWEEN) for advanced (NOT toggle comes later): ").strip().upper()
         #Keep to the more basic ones for now, have like and such be separate? actually include the new ones?
         #val = input("Value (for IN, separate with commas): ").strip()
-        if op.upper() == "LIKE":
-            val = input("Value: ").strip()
+        if op == "LIKE":
             #LOOK AT LIKE FUNCTION I SET UP BEFORE
-        elif op.upper() == "IN":
-            val = input("Value (for IN, separate with commas): ").strip()
-            val = [v.strip() for v in val.split(",")]
-        elif op.upper() == "BETWEEN":
+            val = input("Enter pattern (use % as wildcard, e.g. %Mario%): ").strip()
+            filters[col] = (op, val)
+        elif op == "IN":
+            raw = input("Enter comma-separated values: ").strip()
+            vals = [v.strip() for v in raw.split(",")]
+            filters[col] = (op, vals)
+        elif op == "BETWEEN":
             start = input("Start value: ").strip()
             end = input("End value: ").strip()
-            val = (start, end)
-        # If numeric, convert to int
-        if not isinstance(val, (list, tuple)):
+            #val = (start, end)
+            filters[col] = (op, (start, end))
+        else:
+            val = input("Value: ").strip()
             if val.isdigit():
+                # If numeric, convert to int
                 val = int(val)
-
-        filters[col] = (op, val)
+            filters[col] = (op, val)
+        #filters[col] = (op, val)
 
     return filters
 

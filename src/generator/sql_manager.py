@@ -74,16 +74,17 @@ class SQLManager:
             print(val)
             print(type(val))
             #if op == "IN" and isinstance(val, (list, tuple)):
-            if op == "LIKE":
+            if op in ["LIKE", "NOT LIKE"]:
                 #LOOK AT LIKE FUNCTION I SET UP BEFORE
-                clauses.append(f"{col} LIKE ?")
+                #otherwise see if can be folded in with other ops?
+                clauses.append(f"{col} {op} ?")
                 params.append(val)
-            elif op == "IN": #and isinstance(val, (list, tuple)):
+            elif op in ["IN", "NOT IN"]: #and isinstance(val, (list, tuple)):
                 placeholders = ",".join(["?"] * len(val))
-                clauses.append(f"{col} IN ({placeholders})")
+                clauses.append(f"{col} {op} ({placeholders})")
                 params.extend(val)
-            elif op == "BETWEEN" and isinstance(val, (tuple, list)) and len(val) == 2:
-                clauses.append(f"{col} BETWEEN ? AND ?")
+            elif op in ["BETWEEN", "NOT BETWEEN"] and isinstance(val, (tuple, list)) and len(val) == 2:
+                clauses.append(f"{col} {op} ? AND ?")
                 params.extend(val)
             elif op in ["=", "!=", ">", "<", ">=", "<="]:
                 clauses.append(f"{col} {op} ?")

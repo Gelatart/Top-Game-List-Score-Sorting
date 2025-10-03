@@ -811,8 +811,6 @@ def run_generator():
     print("TIME TO INSERT THE LISTS INTO MONGODB!")
     for game_list in games_lists:
         # could keep track of what type of list it is, other variables?
-        # list_dict = {}
-        # list_dict["Title"] = list
         list_dict = dict(Title=game_list)
         print(list_dict)
         list_insert = list_col.insert_one(list_dict)
