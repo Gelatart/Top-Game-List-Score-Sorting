@@ -230,7 +230,6 @@ def run_generator():
             client_secret = get_env_var('CLIENT_SECRET')
             post = f'https://id.twitch.tv/oauth2/token?client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials'
 
-            # page = requests.get(post) #404
             page = requests.post(post)  # gives access token we can use
             print(page.text)
 
@@ -622,10 +621,8 @@ def run_generator():
                                 companies = companies_message.companies
                                 dev_name = companies[0].name
                                 game_DB[game].list_companies.append(dev_name)
-                                if (is_dev):
-                                    game_DB[game].list_developers.append(dev_name)
-                                if (is_pub):
-                                    game_DB[game].list_publishers.append(dev_name)
+                                #APPEND TO DEVELOPERS OR PUBLISHERS IF IS_DEV OR IS_PUB
+                                # REMOVING THIS PART
                         # ADD GENRES
                         # REMOVING THIS PART
                         # ADD THEMES
