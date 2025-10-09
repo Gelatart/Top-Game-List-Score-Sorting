@@ -213668,5 +213668,156 @@
         "name": "Science fiction"
       }
     ]
+  },
+  "372053": {
+    "id": 372053,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      },
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      },
+      {
+        "id": 3,
+        "name": "Co-operative"
+      }
+    ],
+    "genres": [
+      {
+        "id": 12,
+        "name": "Role-playing (RPG)"
+      },
+      {
+        "id": 25,
+        "name": "Hack and slash/Beat 'em up"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 352041,
+        "company": {
+          "id": 51,
+          "name": "Blizzard Entertainment"
+        },
+        "developer": true,
+        "publisher": true
+      }
+    ],
+    "name": "Diablo IV: Season of Infernal Chaos",
+    "platforms": [
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 816607,
+        "date": 1758585600
+      },
+      {
+        "id": 816608,
+        "date": 1758585600
+      },
+      {
+        "id": 816609,
+        "date": 1758585600
+      },
+      {
+        "id": 816605,
+        "date": 1758585600
+      },
+      {
+        "id": 816606,
+        "date": 1758585600
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 17,
+        "name": "Fantasy"
+      },
+      {
+        "id": 19,
+        "name": "Horror"
+      }
+    ]
+  },
+  "341890": {
+    "id": 341890,
+    "game_modes": [
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      }
+    ],
+    "genres": [
+      {
+        "id": 33,
+        "name": "Arcade"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 318028,
+        "company": {
+          "id": 2312,
+          "name": "Raw Thrills"
+        },
+        "developer": true,
+        "publisher": true
+      },
+      {
+        "id": 318029,
+        "company": {
+          "id": 58362,
+          "name": "Ice"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Frogger",
+    "platforms": [
+      {
+        "id": 52,
+        "name": "Arcade"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 733893,
+        "date": 1325289600
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      }
+    ]
   }
 }

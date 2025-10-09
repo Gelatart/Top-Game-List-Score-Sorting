@@ -56,7 +56,8 @@ class SQLManager:
     def build_where_clause(self, filters: dict) -> tuple[str, list]:
         """
         Build a WHERE clause with filters.
-        filters = {
+        Supports =, !=, >, <, >=, <=, LIKE / NOT LIKE, IN / NOT IN, BETWEEN / NOT BETWEEN, IS NULL / IS NOT NULL
+        EX: filters = {
             "ranked_score": (">", 80),
             "main_platform": ("!=", "PC"),
             "release_date": (">=", "2010-01-01"),
@@ -73,10 +74,15 @@ class SQLManager:
             op = op.upper()
             print(val)
             print(type(val))
+            if op in ["IS NULL", "IS NOT NULL"]:
+                clauses.append(f"{col} {op}")
+                # no params needed
             #if op == "IN" and isinstance(val, (list, tuple)):
-            if op in ["LIKE", "NOT LIKE"]:
+            elif op in ["LIKE", "NOT LIKE"]:
                 #LOOK AT LIKE FUNCTION I SET UP BEFORE
                 #otherwise see if can be folded in with other ops?
+                #CONSIDER: ci_clause = " COLLATE NOCASE" if case_insensitive else ""
+                #^If tackle that, could have case_insensitive=True added as a function argument? Ask in CLI?
                 clauses.append(f"{col} {op} ?")
                 params.append(val)
             elif op in ["IN", "NOT IN"]: #and isinstance(val, (list, tuple)):
@@ -93,6 +99,7 @@ class SQLManager:
                 raise ValueError(f"Unsupported operator: {op}")
 
         where_clause = "WHERE " + " AND ".join(clauses) if clauses else ""
+        #Do I need to bother with a limit_clause? or handle that elsewhere?
         return where_clause, params
 
     def calculate_column_expression(self, expression, filters=None, limit=None):

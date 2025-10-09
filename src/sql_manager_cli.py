@@ -39,24 +39,46 @@ def get_filters_from_user():
 
     while True:
         col = input("Column name (or 'done'): ").strip()
+        #Put in ability for it to interpret columns simply like "player_modes" and not having to indicate the table it's from?
+        #Add functionality for joins to be pulled in if the column calls for it?
         if col.lower() == "done":
             break
-        op = input("Operator (=, !=, >, <, >=, <= ) for basics\nOperator (LIKE, IN, BETWEEN) for advanced (NOT toggle comes later): ").strip().upper()
+        op = input("Operator (=, !=, >, <, >=, <= ) for basics\nOperator (LIKE, IN, BETWEEN, IS NULL) for advanced (NOT toggle comes later): ").strip().upper()
         #Keep to the more basic ones for now, have like and such be separate? actually include the new ones?
         #val = input("Value (for IN, separate with commas): ").strip()
         if op == "LIKE":
             #LOOK AT LIKE FUNCTION I SET UP BEFORE
+            not_toggle = input("Use NOT LIKE instead? (y/n): ").strip().lower()
+            if not_toggle == "y":
+                op = "NOT LIKE"
+
             val = input("Enter pattern (use % as wildcard, e.g. %Mario%): ").strip()
+            #CONSIDER: ci = input("Case-insensitive? (y/n): ").strip().lower() == "y"
+            #limit handled elsewhere?
             filters[col] = (op, val)
         elif op == "IN":
+            not_toggle = input("Use NOT IN instead? (y/n): ").strip().lower()
+            if not_toggle == "y":
+                op = "NOT IN"
+
             raw = input("Enter comma-separated values: ").strip()
             vals = [v.strip() for v in raw.split(",")]
             filters[col] = (op, vals)
         elif op == "BETWEEN":
+            not_toggle = input("Use NOT BETWEEN instead? (y/n): ").strip().lower()
+            if not_toggle == "y":
+                op = "NOT BETWEEN"
+
             start = input("Start value: ").strip()
             end = input("End value: ").strip()
             #val = (start, end)
             filters[col] = (op, (start, end))
+        elif op == "IS NULL":
+            not_toggle = input("Use NOT NULL  instead? (y/n): ").strip().lower()
+            if not_toggle == "y":
+                op = "IS NOT NULL"
+
+            filters[col] = (op, None)
         else:
             val = input("Value: ").strip()
             if val.isdigit():

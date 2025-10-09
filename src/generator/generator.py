@@ -1,4 +1,5 @@
 # import required module
+import datetime
 import dotenv
 from dotenv import load_dotenv
 import itertools
@@ -12,14 +13,14 @@ import xlwt
 from xlwt import Workbook
 from bs4 import BeautifulSoup
 import requests
-from igdb.wrapper import IGDBWrapper
 import json
 import pandas
 import re
-import datetime
-from pathlib import Path
-
 import sqlite3
+import time
+
+from igdb.wrapper import IGDBWrapper
+from pathlib import Path
 
 from .config import check_for_src, get_env_var
 from .database_interface import DatabaseInterface
@@ -119,6 +120,7 @@ def run_generator():
     # eventually try for functionality where we only update the games that have updated scores? or new games?
 
     # Step 5: Enrich with IGDB Data
+    #pulling wrong data on some fields, might need to further develop?
     igdb_check = False
     while (igdb_check == False):
         igdb_answer = input("Would you like to pull data from IGDB right now or do it later? Answer True or False to continue: ")
@@ -164,12 +166,21 @@ def run_generator():
             else:
                 print("Invalid choice. Please enter 1 or 2.")
         # Iterate with optional limit
+        # Seems like right now need to keep mac terminal in focus for this to stay working?
         for i, game in enumerate(game_DB.values(), start=1):
-            if(full_answer == True):
-                client.enrich_game_object(game)
-            print(f"Processed {i}/{limit_number if limit_number else len(game_DB)} games")
-            if limit_number and i >= limit_number:
-                break
+            try:
+                if (full_answer == True):
+                    client.enrich_game_object(game)
+                print(f"Processed {i}/{limit_number if limit_number else len(game_DB)} games")
+                if limit_number and i >= limit_number:
+                    break
+                time.sleep(0.25)  # 4 requests per second; adjust as needed
+            except requests.exceptions.HTTPError as e:
+                if e.response.status_code == 429:
+                    print("Hit IGDB rate limit, waiting 10 seconds...")
+                    time.sleep(10)
+                else:
+                    raise
 
     #THIS IS THE OLD SETUP FOR THE IGDB PROCESS, INVOLVES CHECKING AND SUCH,
     # VERY COMPLEX AND LENGTHY, CONSIDER TAKING FROM BUT REPLACING WITH NEW MORE
@@ -440,45 +451,15 @@ def run_generator():
                     # ^consider a check for developer boolean? porting? supporting?
                     # do we count publishers?
                     # consider more categories for game objects later like publishers
-                    if (len(developers) > 0):
-                        for dev in developers:
-                            dev_name = None
-                            # FIX THE REST OF THIS!!! (involved company, company?)
-                            # first query to look at involved companies
-                            # sub_query_1 = 'fields *; where id=' + str(dev.id) + ' & developer=true;'
-                            sub_query_1 = 'fields *; where id=' + str(dev.id) + ';'
-                            sub_request_1 = wrapper.api_request(
-                                'involved_companies.pb',  # Note the '.pb' suffix at the endpoint
-                                sub_query_1
-                            )
-                            inv_companies_message = InvolvedCompanyResult()
-                            inv_companies_message.ParseFromString(
-                                sub_request_1)  # Fills the protobuf message object with the response
-                            inv_companies = inv_companies_message.involvedcompanies
-                            if (len(inv_companies) == 0):
-                                continue
-                            # second query to look at the company specifically
-                            is_dev = inv_companies[0].developer
-                            is_pub = inv_companies[0].publisher
-                            sub_query_2 = 'fields name; where id=' + str(inv_companies[0].company.id) + ';'
-                            sub_request_2 = wrapper.api_request(
-                                'companies.pb',  # Note the '.pb' suffix at the endpoint
-                                sub_query_2
-                            )
-                            companies_message = CompanyResult()
-                            companies_message.ParseFromString(
-                                sub_request_2)  # Fills the protobuf message object with the response
-                            companies = companies_message.companies
-                            dev_name = companies[0].name
-                            game_DB[game].list_companies.append(dev_name)
-                            # if dev true: add to devs
-                            # if pub true: add to pubs
-                            # also consider supporting boolean in addition to developer and publisher? porting?
-                            if (is_dev):
-                                game_DB[game].list_developers.append(dev_name)
-                            if (is_pub):
-                                game_DB[game].list_publishers.append(dev_name)
-                        # game_DB[game].list_developers = developers  # Will this grab the most definitive list?
+
+                    # first query to look at involved companies
+                    # REMOVING THIS PART
+                    # second query to look at the company specifically
+                    # REMOVING THIS PART
+                    # if dev true: add to devs
+                    # if pub true: add to pubs
+                    # also consider supporting boolean in addition to developer and publisher? porting?
+
                     # ADD GENRES
                     # REMOVING THIS PART
                     # ADD THEMES
@@ -643,7 +624,6 @@ def run_generator():
             # Example: The ID we want to use for Super Mario World is 1070
             # retitle: a link to the past and other zelda games
             # ID for Final Fantasy VII: 427
-            # ID for Ms. Pac-Man: 7452
             # investigate ways to test for what is the most parent version?
             # when multiple options to go with, for now go with the one that has
             # the most total_rating_count? earliest release date?
@@ -714,8 +694,10 @@ def run_generator():
 
     input("FROM THIS PART ONWARD CLEAR MONGO BITS, ONLY ATTEMPT MONGO CONNECTION IF WE INTEND SO")
 
-    input("This is a test, program going to break for now. Goodbye!")
-    exit()
+    #input("This is a test, program going to break for now. Goodbye!")
+    #Do I need to close files at this point for writes? or do i even have anything open?
+    #use with open in some cases to avoid needing to close?
+    #exit()
 
     mon_col = monDB["games"]
     list_col = monDB["lists"]
