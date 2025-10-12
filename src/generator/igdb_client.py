@@ -133,8 +133,7 @@ class IGDB_Client:
 
         platforms = igdb_data.get("platforms", [])
         game_obj.list_platforms = [p.get("name") for p in platforms if p.get("name")]
-        if game_obj.list_platforms:
-            game_obj.main_platform = game_obj.list_platforms[0]
+        #derive a main_platform?
 
         genres = igdb_data.get("genres", [])
         #input(genres)

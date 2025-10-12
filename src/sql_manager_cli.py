@@ -140,14 +140,12 @@ def main():
     insert_preid_parser = subparsers.add_parser("insert_preid", help="Insert/Update a game (before IGDB ID)")
     insert_preid_parser.add_argument("title", help="Game title")
     insert_preid_parser.add_argument("ranked_score", type=int, help="Ranked score")
-    insert_preid_parser.add_argument("list_source", help="Source file")
     insert_preid_parser.add_argument("total_count", type=int, help="Total count")
 
     insert_id_parser = subparsers.add_parser("insert_id", help="Insert/Update a game with IGDB ID")
     insert_id_parser.add_argument("igdb_id", type=int, help="IGDB ID")
     insert_id_parser.add_argument("title", help="Game title")
     insert_id_parser.add_argument("ranked_score", type=int, help="Ranked score")
-    insert_id_parser.add_argument("list_source", help="Source file")
     insert_id_parser.add_argument("total_count", type=int, help="Total count")
 
     args = parser.parse_args()
@@ -278,13 +276,11 @@ def interactive_menu(db):
         elif command == "insert_preid":
             args.title = input("Title: ")
             args.ranked_score = int(input("Ranked score: "))
-            args.list_source = input("List source: ")
             args.total_count = int(input("Total count: "))
         elif command == "insert_full":
             args.igdb_id = int(input("IGDB ID: "))
             args.title = input("Title: ")
             args.ranked_score = int(input("Ranked score: "))
-            args.list_source = input("List source: ")
             args.total_count = int(input("Total count: "))
 
         run_command(db, command, args)
@@ -325,7 +321,6 @@ def run_command(db, command, args):
         game = GameObject(
             title=args.title,
             ranked_score=args.ranked_score,
-            list_source=args.list_source,
             total_count=args.total_count
         )
         db.insert_or_update_game_pre_ID(game)
@@ -336,7 +331,6 @@ def run_command(db, command, args):
             igdb_ID=args.igdb_id,
             title=args.title,
             ranked_score=args.ranked_score,
-            list_source=args.list_source,
             total_count=args.total_count
         )
         db.insert_or_update_game(game)
@@ -345,6 +339,7 @@ def run_command(db, command, args):
     elif command == "top_games":
         print_rows(db.get_top_n_games(args.n, args.filters), db.cursor)
 
+    #WE WILL WANT TO FIX THIS COMMAND TO GO WITH MORE DERIVED LOGIC RATHER THAN JUST HAVING FIELD FOR IT
     elif command == "games_by_platform":
         print_rows(db.get_games_by_main_platform(args.platform), db.cursor)
 

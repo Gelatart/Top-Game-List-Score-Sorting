@@ -1858,7 +1858,6 @@ REFERENCES:
 Putting python variables into mongo queries: https://stackoverflow.com/questions/37707033/mongo-query-in-python-if-i-use-variable-as-value
 Building up queries dynamically in pymongo: https://stackoverflow.com/questions/11269680/dynamically-building-queries-in-pymongo
 Getting dictionary keys as variables: https://stackoverflow.com/questions/3545331/how-can-i-get-dictionary-key-as-variable-directly-in-python-not-by-searching-fr
-Creating datetime objects: https://www.w3schools.com/python/python_datetime.asp
 Ask user for input until get valid response: https://www.python-engineer.com/posts/ask-user-for-input/
 Building queries with AND and OR: https://stackoverflow.com/questions/11196101/mongodb-queries-both-with-and-and-or
 How to query for specific year among datetime: https://stackoverflow.com/questions/49174399/mongodb-find-query-by-year

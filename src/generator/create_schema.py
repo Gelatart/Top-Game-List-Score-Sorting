@@ -15,10 +15,7 @@ def create_schema(conn, db_path="data/games.db"):
         list_count INTEGER,
         total_count INTEGER,
         completed BOOLEAN,
-        release_date TEXT,
-        main_platform TEXT,
-        list_source TEXT,
-        order_inserted INTEGER
+        release_date TEXT
     )
     """)
 

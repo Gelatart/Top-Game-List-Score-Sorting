@@ -56,7 +56,7 @@ def load_list(files, file_count, game_DB, games_lists, type: ListType):
         file_count += 1
         for title, score, total in read_game_list(filepath, type):
             if title not in game_DB:
-                game_DB[title] = GameObject(title, ranked_score=score, list_source=filepath, total_count=total)
+                game_DB[title] = GameObject(title, ranked_score=score, total_count=total)
             else:
                 game = game_DB[title]
                 game.ranked_score += score
@@ -121,7 +121,9 @@ def run_generator():
 
     # Step 5: Enrich with IGDB Data
     #pulling wrong data on some fields, might need to further develop?
+    #Figure out how to derive a main_platform, perhaps by going through all of the release dates of all the platforms, and having some sort of way to break ties?
     igdb_check = False
+    full_answer = False
     while (igdb_check == False):
         igdb_answer = input("Would you like to pull data from IGDB right now or do it later? Answer True or False to continue: ")
         if(igdb_answer == "True" or igdb_answer == "False"):
@@ -129,7 +131,7 @@ def run_generator():
         else:
             print("Sorry, please enter correct input")
     if(igdb_answer == "True"):
-        full_answer = False
+        #full_answer = False
         while True:
             #Add options to mix and match eventually
             #start with games table but later make sure all tables are getting all fields they need
@@ -388,7 +390,6 @@ def run_generator():
                         input(platformfamilies)
                         """
                         plat_counter += 1
-                    # game_DB[game].main_platform = earliest_game.platforms[0]
                     earliest_plat_release = None
                     earliest_plat_date = datetime.datetime.now()
                     for release in earliest_game.release_dates:
@@ -423,30 +424,13 @@ def run_generator():
                     platforms = platforms_message.platforms
                     # main_plat = platforms[0].name
                     """
-
-                    game_DB[game].main_platform = main_plat  # Will this always pull best choice?
-                    # ^Seriously consider revising this to pull the first format with the earliest release date
-                    # Because platform ID's are overruling too much (ex. wii is an early ID so overrides earlier releases)
-                    # game_DB[game].list_platforms = earliest_game.platforms
                     if (len(list_plats) > 0):
                         game_DB[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
-                    modes = earliest_game.game_modes
-                    if (len(modes) > 0):
-                        for mode in modes:
-                            mode_type = None
-                            sub_query = 'fields name; where id=' + str(mode.id) + ';'
-                            sub_request = wrapper.api_request(
-                                'game_modes.pb',  # Note the '.pb' suffix at the endpoint
-                                sub_query
-                            )
-                            modes_message = GameModeResult()
-                            modes_message.ParseFromString(
-                                sub_request)  # Fills the protobuf message object with the response
-                            new_modes = modes_message.gamemodes
-                            mode_type = new_modes[0].name
-                            game_DB[game].player_counts.append(mode_type)
-                        # game_DB[game].player_counts = modes # Changes approach but for the better?
+                    # ADD MODES
+                    # REMOVING THIS PART
                     # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
+
+                    # ADD COMPANIES, DEVELOPERS PUBLISHERS
                     developers = earliest_game.involved_companies
                     # ^consider a check for developer boolean? porting? supporting?
                     # do we count publishers?
@@ -493,7 +477,6 @@ def run_generator():
                         if (plat_counter == 0):
                             main_plat = plat_name
                         list_plats.append(plat_name)
-                        game_DB[game].main_platform = plat_name
                         list_plats = []
                         list_plats.append(plat_name)
                         game_DB[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
@@ -547,7 +530,6 @@ def run_generator():
                         platforms_message.ParseFromString(
                             sub_request)  # Fills the protobuf message object with the response
                         platforms = platforms_message.platforms
-                        game_DB[game].main_platform = main_plat
                         if (len(list_plats) > 0):
                             game_DB[game].list_platforms = list_plats
 
@@ -608,7 +590,6 @@ def run_generator():
                         # REMOVING THIS PART
                         # ADD THEMES
                         # REMOVING THIS PART
-                        game_DB[game].order_inserted = order_of_insert
                     except Exception as e:
                         print("An error has occurred:", e)
                         # it starts hitting errors when it gets to some of the new games featured in metacritic user scores?
@@ -655,22 +636,39 @@ def run_generator():
     # See if we want to connect to Mongo cluster right now, so we can shut down that aspect if we don't want to deal with it
     db = None
     while True:
+        #local_connect = True
         print("Would you like to connect to Mongo at this time or just local SQLite?")
         print("1. Connect to both")
         print("2. Only connect to SQLite")
         choice = input("> ").strip()
         if (choice == "1"):
-            db = DatabaseInterface(use_mongo=True, use_sql=True)
+            while True:
+                print("Would you like to connect to the Atlas web instance or just local MongoDB?")
+                print("1. Connect to Atlas")
+                print("2. Connect to local MongoDB")
+                local_choice = input("> ").strip()
+                if(local_choice == "1"):
+                    local_connect = False
+                    break
+                if (local_choice == "2"):
+                    local_connect = True
+                    break
+                else:
+                    print("Invalid choice. Please enter 1 or 2.")
+            print(local_connect)
+            db = DatabaseInterface(use_mongo=True, use_sql=True, local_connect=local_connect)
             # First testing the mongo connection and notifying user
             # Try adding try, catch, except logic to mongo connection attempts?
-            input("About to attempt connection to Mongo, press ENTER when you are ready")
-            mongo_connect()
+            if not local_connect:
+                input("About to attempt connection to Mongo, press ENTER when you are ready")
+                mongo_connect()
             break
         elif (choice == "2"):
             db = DatabaseInterface(use_mongo=False, use_sql=True)
             break
         else:
             print("Invalid choice. Please enter 1 or 2.")
+    print(full_answer)
     for i, game in enumerate(game_DB.values(), start=1):
         #enumerate or whatever so I can keep track of how many insertions are being done so progress is more clear on CLI
         #Use the pre-ID option in other cases? But here we should already have it?
@@ -770,7 +768,6 @@ def run_generator():
         export_dict["Average Score"] = average_score
         export_dict["List of References"] = details['lists_referencing']
         export_dict["Completed"] = details['completed']
-        export_dict["Main Platform"] = details['main_platform']
         export_dict["List of Platforms"] = details['list_platforms']
         export_dict["Release Date"] = details['release_date']
         export_dict["Player Counts"] = details['player_counts']
@@ -780,7 +777,6 @@ def run_generator():
         export_dict["Genres"] = details['genres']
         export_dict["Themes"] = details['themes']
         export_dict["Total Count"] = details['total_count']
-        export_dict["Order Inserted"] = details['order_inserted']
         # export_dict = dict(game)
         # ^need to expand and clarify more?
         # export_dict = dict('Title' = game, 'IGDB ID' = details.igdb_ID, 'Ranked Score' = details.ranked_score)

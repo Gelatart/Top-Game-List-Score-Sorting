@@ -38,14 +38,10 @@ class SQLManager:
             list_count INTEGER,
             total_count INTEGER,
             completed BOOLEAN,
-            release_date TEXT,
-            main_platform TEXT,
-            list_source TEXT,
-            order_inserted INTEGER
+            release_date TEXT
         );
         """)
         #Make release_date a datetime value instead?
-        #Do I actually want an order_inserted value? Is it useful?
         self.conn.commit()
 
     def get_or_create_id(self, table, name):
@@ -59,10 +55,10 @@ class SQLManager:
         Supports =, !=, >, <, >=, <=, LIKE / NOT LIKE, IN / NOT IN, BETWEEN / NOT BETWEEN, IS NULL / IS NOT NULL
         EX: filters = {
             "ranked_score": (">", 80),
-            "main_platform": ("!=", "PC"),
+            "main_platform": ("!=", "PC"), [MAIN_PLATFORM IS DEPRECATED]
             "release_date": (">=", "2010-01-01"),
             "title": ("LIKE", "%Mario%"),
-            "main_platform": ("IN", ["PC", "Switch"]),
+            "main_platform": ("IN", ["PC", "Switch"]), [MAIN_PLATFORM IS DEPRECATED]
             "release_date": ("BETWEEN", ("2000-01-01", "2010-12-31"))
         }
         """
@@ -111,7 +107,7 @@ class SQLManager:
             expression = "ranked_score * 1.5"
             expression = "(total_count - list_count) / 2"
 
-        filters = { "main_platform": ("=", "PC") }
+        filters = { "main_platform": ("=", "PC") } [MAIN_PLATFORM DEPRECATED]
         """
         base_query = f"""
             SELECT g.id, g.title, g.igdb_id, {expression} AS result
@@ -138,48 +134,43 @@ class SQLManager:
 
     def insert_or_update_game_pre_ID(self, game: GameObject):
         self.cursor.execute("""
-        INSERT INTO games (title, ranked_score, list_source, total_count)
-        VALUES (?, ?, ?, ?)
+        INSERT INTO games (title, ranked_score, total_count)
+        VALUES (?, ?, ?)
         ON CONFLICT(title) DO UPDATE SET
             ranked_score=excluded.ranked_score,
-            list_source=excluded.list_source,
             total_count=excluded.total_count
         """, (
             game.title,
             game.ranked_score,
-            game.list_source,
             game.total_count
         ))
         self.conn.commit()
 
     def insert_or_update_game(self, game: GameObject):
         self.cursor.execute("""
-        INSERT INTO games (igdb_id, title, ranked_score, list_source, total_count)
-        VALUES (?, ?, ?, ?, ?)
+        INSERT INTO games (igdb_id, title, ranked_score, total_count)
+        VALUES (?, ?, ?, ?)
         ON CONFLICT(igdb_id) DO UPDATE SET
             igdb_id=excluded.igdb_id,
             title=excluded.title,
             ranked_score=excluded.ranked_score,
-            list_source=excluded.list_source,
             total_count=excluded.total_count
         """, (
             game.igdb_ID,
             game.title,
             game.ranked_score,
-            game.list_source,
             game.total_count
         ))
         self.conn.commit()
 
     def insert_or_update_game_full(self, game: GameObject):
         #right now only does the games table, expand this for the other tables too
-        #ignore order_inserted for now because I don't know if we handle this or how we should
-        #put function logic later for determining main_platform in terms of a tie? any way to determine best candidate?
+        #put function logic later for figuring out how to determine a main_platform? earliest platform release_date, tie_break on some other logic?
         #make a function at some point that examines for suspect values in fields (ex: release dates on 1970)
         #print(game)
         self.cursor.execute("""
-        INSERT INTO games (igdb_id, title, igdb_found, ranked_score, list_count, total_count, completed, release_date, main_platform, list_source)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO games (igdb_id, title, igdb_found, ranked_score, list_count, total_count, completed, release_date)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         ON CONFLICT(igdb_id) DO UPDATE SET
             igdb_id=excluded.igdb_id,
             title=excluded.title,
@@ -188,9 +179,7 @@ class SQLManager:
             list_count=excluded.list_count,
             total_count=excluded.total_count,
             completed = excluded.completed,
-            release_date = excluded.release_date,
-            main_platform = excluded.main_platform,
-            list_source=excluded.list_source
+            release_date = excluded.release_date
         """, (
             game.igdb_ID,
             game.title,
@@ -199,17 +188,15 @@ class SQLManager:
             game.list_count,
             game.total_count,
             game.completed,
-            game.release_date,
-            game.main_platform,
-            game.list_source
+            game.release_date
         ))
         self.conn.commit()
 
     def insert_or_update_game_full_with_relations(self, game: GameObject):
         # 1. Insert/update game row
         self.cursor.execute("""
-        INSERT INTO games (igdb_id, title, igdb_found, ranked_score, list_count, total_count, completed, release_date, main_platform, list_source)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO games (igdb_id, title, igdb_found, ranked_score, list_count, total_count, completed, release_date)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         ON CONFLICT(igdb_id) DO UPDATE SET
             igdb_id=excluded.igdb_id,
             title=excluded.title,
@@ -218,9 +205,7 @@ class SQLManager:
             list_count=excluded.list_count,
             total_count=excluded.total_count,
             completed = excluded.completed,
-            release_date = excluded.release_date,
-            main_platform = excluded.main_platform,
-            list_source=excluded.list_source
+            release_date = excluded.release_date
         """, (
             game.igdb_ID,
             game.title,
@@ -229,9 +214,7 @@ class SQLManager:
             game.list_count,
             game.total_count,
             game.completed,
-            game.release_date,
-            game.main_platform,
-            game.list_source
+            game.release_date
         ))
         self.conn.commit()
 
@@ -286,8 +269,6 @@ class SQLManager:
             self.cursor.execute("INSERT OR IGNORE INTO game_companies (game_id, company_id) VALUES (?, ?)", (game_id, comp_id))
 
         # 10. Lists Referencing
-        # If game.list_source is a single string, you could normalize it here
-        #sources = game.list_source if isinstance(game.list_source, list) else [game.list_source]
         #for src in sources:
         for ref_list in game.lists_referencing:
             self.cursor.execute("""
@@ -319,7 +300,6 @@ class SQLManager:
         base_query = """
         SELECT
             g.id, g.title, g.igdb_id, g.ranked_score, g.total_count, g.release_date,
-            g.main_platform, g.list_source,
             GROUP_CONCAT(DISTINCT genres.name) AS genres,
             GROUP_CONCAT(DISTINCT themes.name) AS themes,
             GROUP_CONCAT(DISTINCT player_modes.name) AS player_modes,
@@ -367,8 +347,6 @@ class SQLManager:
             g.ranked_score,
             g.total_count,
             g.release_date,
-            g.main_platform,
-            g.list_source,
             GROUP_CONCAT(DISTINCT genres.name) AS genres,
             GROUP_CONCAT(DISTINCT themes.name) AS themes,
             GROUP_CONCAT(DISTINCT player_modes.name) AS player_modes,
@@ -520,6 +498,7 @@ class SQLManager:
         print(query)
         return self.cursor.fetchall()
 
+    #MAIN_PLATFORM IS DEPRECATED, ALTER THIS!
     def get_games_by_main_platform(self, platform_name):
         """
         Example of filtering results with WHERE
@@ -547,6 +526,7 @@ class SQLManager:
         """
         Example of aggregation with GROUP BY
         """
+        #MAIN_PLATFORM IS DEPRECATED, ALTER THIS!
         self.cursor.execute("""
             SELECT main_platform, COUNT(*) AS game_count, AVG(ranked_score) AS avg_score
             FROM games
@@ -562,7 +542,7 @@ class SQLManager:
         self.cursor.execute("""
             SELECT title FROM games WHERE ranked_score >= 90
             UNION
-            SELECT title FROM games WHERE main_platform = 'PC'
+            SELECT title FROM games WHERE title LIKE '%Mario%'
         """)
         return self.cursor.fetchall()
 
