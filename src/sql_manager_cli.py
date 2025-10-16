@@ -14,6 +14,7 @@ COMMANDS = [
     ("Show a game's full info (by IGDB ID)", "show_game_igdb"),
     ("Custom SELECT (choose columns)", "custom_columns"),
     ("Custom SELECT (choose columns) (with joins)", "custom_columns_joins"),
+    ("Select a group of columns as aliases", "alias_columns"),
     ("Preset queries (genres, themes, platforms, etc.)", "preset_queries"),
     ("Insert/Update game (pre-ID)", "insert_preid"),
     ("Insert/Update game (with IGDB ID)", "insert_id"),
@@ -105,6 +106,7 @@ def main():
     subparsers.add_parser("show_game_igdb", help="Get full denormalized info for a single game by its IGDB ID")
     subparsers.add_parser("custom_columns", help="Fetch custom-selected columns from the games table")
     subparsers.add_parser("custom_columns_joins", help="Dynamically build a SELECT query with optional joins if columns from related tables are requested (genres, themes, etc)")
+    subparsers.add_parser("alias_columns", help="Fetch custom-selected columns from the games table, with user-selected aliases")
     #PUT IN THE REST OF THE NEW FUNCTIONS HERE!!!
     #...
 
@@ -234,6 +236,26 @@ def interactive_menu(db):
             args.cols = [c.strip() for c in args.cols if c.strip()]
             args.limit = input("Limit results (default 20): ").strip()
             args.limit = int(args.limit) if args.limit.isdigit() else 20
+        elif command == "alias_columns":
+            args.cols = input("Enter columns (comma-separated): ").strip().split(",")
+            args.cols = [c.strip() for c in args.cols]
+
+            alias_choice = input("Do you want aliases? (y/n): ").strip().lower()
+            args.aliases = None
+            if alias_choice == "y":
+                args.aliases = input("Enter aliases (comma-separated): ").strip().split(",")
+                args.aliases = [a.strip() for a in args.aliases]
+
+            args.joins = []
+            add_joins = input("Do you want to add JOINs? (y/n): ").strip().lower()
+            while add_joins == "y":
+                table = input("Enter join table: ").strip()
+                condition = input(f"Enter join condition (e.g., games.id = {table}.game_id): ").strip()
+                args.joins.append((table, condition))
+                add_joins = input("Add another JOIN? (y/n): ").strip().lower()
+
+            args.limit = input("Enter limit (optional): ").strip()
+            args.limit = int(args.limit) if args.limit.isdigit() else None
         elif command == "preset_queries":
             print("Choose a preset query:")
             print("1. Games with genres")
@@ -311,6 +333,9 @@ def run_command(db, command, args):
             print_rows(db.get_custom_columns_with_joins(args.cols, args.filters, args.limit), db.cursor)
         except Exception as e:
             print(f"Error: {e}")
+
+    elif command == "alias_columns":
+        print_rows(db.alias_select(args.cols, args.aliases, args.joins, args.limit), db.cursor)
 
     elif command == "preset_queries":
         print(f"Preset query results for {args.cols}:")

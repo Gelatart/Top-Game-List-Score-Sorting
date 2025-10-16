@@ -26,6 +26,8 @@ class GameObject:
 
     def __post_init__(self):
         #self.lists_referencing.append(self.list_source)
+        #Should we put something else here? still have it?
+        pass
 
     def to_dict(self) -> dict:
         return self.__dict__

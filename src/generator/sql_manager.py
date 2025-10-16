@@ -129,6 +129,8 @@ class SQLManager:
         where_clause, params = self.build_where_clause(filters or {})
 
         query = f"{base_query} {where_clause}"
+        print(query)
+        print(params)
         self.cursor.execute(query, params)
         return self.cursor.fetchone()[0]
 
@@ -481,6 +483,33 @@ class SQLManager:
         self.cursor.execute(query, params)
         return self.cursor.fetchall()
 
+    def alias_select(self, columns, aliases=None, joins=None, limit=None):
+        """
+        Run a custom SELECT with optional aliases.
+        Example: columns=["title", "ranked_score"], aliases=["Game", "Score"]
+
+        Also trying to spin off join test functionality into this function as well
+        """
+        #This acts as a test of alias functionality, we might want to add alias support for already existing functions
+        if aliases and len(columns) == len(aliases):
+            select_parts = [f"{col} AS {alias}" for col, alias in zip(columns, aliases)]
+        else:
+            select_parts = columns
+
+        query = f"SELECT {', '.join(select_parts)} FROM games"
+
+        # Add JOINs if provided
+        if joins:
+            for table, condition in joins:
+                query += f" JOIN {table} ON {condition}"
+
+        if limit:
+            query += f" LIMIT {limit}"
+
+        print(query)
+        self.cursor.execute(query)
+        return self.cursor.fetchall()
+
     def get_top_n_games(self, n=10, filters=None):
         """
         Example of ORDER BY + LIMIT
@@ -496,6 +525,7 @@ class SQLManager:
         params.append(n)
         self.cursor.execute(query, params)
         print(query)
+        print(params)
         return self.cursor.fetchall()
 
     #MAIN_PLATFORM IS DEPRECATED, ALTER THIS!

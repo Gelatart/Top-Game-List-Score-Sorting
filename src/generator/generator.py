@@ -534,23 +534,7 @@ def run_generator():
                             game_DB[game].list_platforms = list_plats
 
                         #MODES
-                        modes = current_game.game_modes
-                        if (len(modes) > 0):
-                            for mode in modes:
-                                mode_type = None
-                                # sub_query = 'fields *;'
-                                sub_query = 'fields name; where id=' + str(mode.id) + ';'
-                                sub_request = wrapper.api_request(
-                                    'game_modes.pb',  # Note the '.pb' suffix at the endpoint
-                                    sub_query
-                                )
-                                modes_message = GameModeResult()
-                                modes_message.ParseFromString(
-                                    sub_request)  # Fills the protobuf message object with the response
-                                new_modes = modes_message.gamemodes
-                                mode_type = new_modes[0].name
-                                game_DB[game].player_counts.append(mode_type)
-                            # game_DB[game].player_counts = modes # Changes approach but for the better?
+                        # REMOVING THIS PART
                         # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
                         developers = current_game.involved_companies
                         if (len(developers) > 0):
