@@ -213819,5 +213819,624 @@
         "name": "Action"
       }
     ]
+  },
+  "372067": {
+    "id": 372067,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 32,
+        "name": "Indie"
+      },
+      {
+        "id": 34,
+        "name": "Visual Novel"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 353617,
+        "company": {
+          "id": 70428,
+          "name": "Tableaux Theory"
+        },
+        "developer": true,
+        "publisher": true
+      }
+    ],
+    "name": "Everything I Know, and Everything I'm Ever Gonna Know",
+    "platforms": [
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 820450
+      }
+    ]
+  },
+  "365702": {
+    "id": 365702,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 8,
+        "name": "Platform"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      }
+    ],
+    "name": "Hollow Knight",
+    "platforms": [
+      {
+        "id": 46,
+        "name": "PlayStation Vita"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 797427,
+        "date": 1699833600
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 17,
+        "name": "Fantasy"
+      }
+    ]
+  },
+  "1083": {
+    "id": 1083,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      },
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      }
+    ],
+    "genres": [
+      {
+        "id": 10,
+        "name": "Racing"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 48760,
+        "company": {
+          "id": 806,
+          "name": "Tantalus Interactive"
+        },
+        "developer": false,
+        "publisher": false
+      },
+      {
+        "id": 326986,
+        "company": {
+          "id": 764,
+          "name": "Psygnosis"
+        },
+        "developer": true,
+        "publisher": false
+      },
+      {
+        "id": 326987,
+        "company": {
+          "id": 13634,
+          "name": "Sony Computer Entertainment"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 326988,
+        "company": {
+          "id": 764,
+          "name": "Psygnosis"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "Wipeout",
+    "platforms": [
+      {
+        "id": 9,
+        "name": "PlayStation 3"
+      },
+      {
+        "id": 34,
+        "name": "Android"
+      },
+      {
+        "id": 13,
+        "name": "DOS"
+      },
+      {
+        "id": 32,
+        "name": "Sega Saturn"
+      },
+      {
+        "id": 7,
+        "name": "PlayStation"
+      },
+      {
+        "id": 38,
+        "name": "PlayStation Portable"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 761426,
+        "date": 1188432000
+      },
+      {
+        "id": 761431,
+        "date": 1307318400
+      },
+      {
+        "id": 761428,
+        "date": 1194480000
+      },
+      {
+        "id": 761416,
+        "date": 812505600
+      },
+      {
+        "id": 761419,
+        "date": 1178150400
+      },
+      {
+        "id": 761420,
+        "date": 1194480000
+      },
+      {
+        "id": 761429,
+        "date": 825984000
+      },
+      {
+        "id": 761417,
+        "date": 815184000
+      },
+      {
+        "id": 761418,
+        "date": 827452800
+      },
+      {
+        "id": 761421,
+        "date": 1188432000
+      },
+      {
+        "id": 761422,
+        "date": 1194480000
+      },
+      {
+        "id": 761423,
+        "date": 1194480000
+      },
+      {
+        "id": 761424,
+        "date": 1178150400
+      },
+      {
+        "id": 761425,
+        "date": 1194480000
+      },
+      {
+        "id": 761427,
+        "date": 1194480000
+      },
+      {
+        "id": 761430,
+        "date": 828057600
+      },
+      {
+        "id": 761432,
+        "date": 1368662400
+      },
+      {
+        "id": 593018,
+        "date": 812332800
+      },
+      {
+        "id": 593019,
+        "date": 816912000
+      }
+    ],
+    "themes": [
+      {
+        "id": 18,
+        "name": "Science fiction"
+      }
+    ]
+  },
+  "8750": {
+    "id": 8750,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      },
+      {
+        "id": 2,
+        "name": "Multiplayer"
+      },
+      {
+        "id": 3,
+        "name": "Co-operative"
+      }
+    ],
+    "genres": [
+      {
+        "id": 8,
+        "name": "Platform"
+      },
+      {
+        "id": 9,
+        "name": "Puzzle"
+      },
+      {
+        "id": 32,
+        "name": "Indie"
+      },
+      {
+        "id": 33,
+        "name": "Arcade"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 129842,
+        "company": {
+          "id": 4679,
+          "name": "Metanet Software"
+        },
+        "developer": true,
+        "publisher": true
+      }
+    ],
+    "name": "N++",
+    "platforms": [
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 3,
+        "name": "Linux"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 14,
+        "name": "Mac"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      },
+      {
+        "id": 130,
+        "name": "Nintendo Switch"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 406787,
+        "date": 1472083200
+      },
+      {
+        "id": 406788,
+        "date": 1472083200
+      },
+      {
+        "id": 406789,
+        "date": 1472083200
+      },
+      {
+        "id": 396256,
+        "date": 1507075200
+      },
+      {
+        "id": 37166,
+        "date": 1438041600
+      },
+      {
+        "id": 533130,
+        "date": 1527120000
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 18,
+        "name": "Science fiction"
+      }
+    ]
+  },
+  "115289": {
+    "id": 115289,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 8,
+        "name": "Platform"
+      },
+      {
+        "id": 31,
+        "name": "Adventure"
+      },
+      {
+        "id": 32,
+        "name": "Indie"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 341345,
+        "company": {
+          "id": 7263,
+          "name": "Team Cherry"
+        },
+        "developer": true,
+        "publisher": true
+      }
+    ],
+    "name": "Hollow Knight: Silksong",
+    "platforms": [
+      {
+        "id": 169,
+        "name": "Xbox Series X|S"
+      },
+      {
+        "id": 48,
+        "name": "PlayStation 4"
+      },
+      {
+        "id": 3,
+        "name": "Linux"
+      },
+      {
+        "id": 508,
+        "name": "Nintendo Switch 2"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 167,
+        "name": "PlayStation 5"
+      },
+      {
+        "id": 14,
+        "name": "Mac"
+      },
+      {
+        "id": 49,
+        "name": "Xbox One"
+      },
+      {
+        "id": 130,
+        "name": "Nintendo Switch"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 789226,
+        "date": 1756944000
+      },
+      {
+        "id": 789227,
+        "date": 1756944000
+      },
+      {
+        "id": 789229,
+        "date": 1756944000
+      },
+      {
+        "id": 789230,
+        "date": 1756944000
+      },
+      {
+        "id": 789234,
+        "date": 1756944000
+      },
+      {
+        "id": 789228,
+        "date": 1756944000
+      },
+      {
+        "id": 789231,
+        "date": 1756944000
+      },
+      {
+        "id": 789232,
+        "date": 1756944000
+      },
+      {
+        "id": 789233,
+        "date": 1756944000
+      }
+    ],
+    "themes": [
+      {
+        "id": 1,
+        "name": "Action"
+      },
+      {
+        "id": 17,
+        "name": "Fantasy"
+      }
+    ]
+  },
+  "36278": {
+    "id": 36278,
+    "game_modes": [
+      {
+        "id": 1,
+        "name": "Single player"
+      }
+    ],
+    "genres": [
+      {
+        "id": 31,
+        "name": "Adventure"
+      },
+      {
+        "id": 32,
+        "name": "Indie"
+      },
+      {
+        "id": 34,
+        "name": "Visual Novel"
+      }
+    ],
+    "involved_companies": [
+      {
+        "id": 98671,
+        "company": {
+          "id": 2909,
+          "name": "FuRyu"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 98670,
+        "company": {
+          "id": 5188,
+          "name": "MangaGamer"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 98672,
+        "company": {
+          "id": 25436,
+          "name": "Gengosha"
+        },
+        "developer": false,
+        "publisher": true
+      },
+      {
+        "id": 269240,
+        "company": {
+          "id": 15686,
+          "name": "NOVECT"
+        },
+        "developer": true,
+        "publisher": true
+      },
+      {
+        "id": 313111,
+        "company": {
+          "id": 20661,
+          "name": "Crunchyroll Games"
+        },
+        "developer": false,
+        "publisher": true
+      }
+    ],
+    "name": "The House in Fata Morgana",
+    "platforms": [
+      {
+        "id": 37,
+        "name": "Nintendo 3DS"
+      },
+      {
+        "id": 34,
+        "name": "Android"
+      },
+      {
+        "id": 6,
+        "name": "PC (Microsoft Windows)"
+      },
+      {
+        "id": 39,
+        "name": "iOS"
+      }
+    ],
+    "release_dates": [
+      {
+        "id": 719548,
+        "date": 1742947200
+      },
+      {
+        "id": 719549,
+        "date": 1742947200
+      },
+      {
+        "id": 600489,
+        "date": 1356912000
+      },
+      {
+        "id": 603604,
+        "date": 1463097600
+      },
+      {
+        "id": 195455,
+        "date": 1400198400
+      },
+      {
+        "id": 195456,
+        "date": 1469577600
+      },
+      {
+        "id": 195457,
+        "date": 1526515200
+      }
+    ],
+    "themes": [
+      {
+        "id": 19,
+        "name": "Horror"
+      },
+      {
+        "id": 20,
+        "name": "Thriller"
+      },
+      {
+        "id": 31,
+        "name": "Drama"
+      },
+      {
+        "id": 43,
+        "name": "Mystery"
+      }
+    ]
   }
 }

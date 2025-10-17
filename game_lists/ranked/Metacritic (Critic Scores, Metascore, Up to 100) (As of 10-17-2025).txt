@@ -49,6 +49,7 @@ Persona 5 Royal
 The Last of Us Remastered
 Red Dead Redemption
 Portal 2
+Hades II
 Astro Bot
 Final Fantasy IX
 <19560> God of War [2018]
@@ -70,10 +71,10 @@ Call of Duty 4: Modern Warfare
 BioShock Infinite
 Halo 3
 Ninja Gaiden Black
-Super Mario Advance 4: Super Mario Bros. 3
-Jet Set Radio
 Metal Gear Solid
+Super Mario Advance 4: Super Mario Bros. 3
 Grim Fandango
+Jet Set Radio
 Tom Clancy's Splinter Cell: Chaos Theory
 <112875> God of War Ragnarok
 Resident Evil Code: Veronica
@@ -98,4 +99,3 @@ Half-Life: Alyx
 Divinity: Original Sin II
 Unreal Tournament 2004
 Braid
-God of War II

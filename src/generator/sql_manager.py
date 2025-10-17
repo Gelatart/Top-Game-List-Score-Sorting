@@ -5,6 +5,17 @@ from .create_schema import create_schema
 from .game_object import GameObject
 #Use try, except, finally logic to deal with errors and close the connection?
 
+RELATION_MAP = {
+    "genres": [("game_genres", "games.id = game_genres.game_id AND game_genres.genre_id = genres.id")],
+    "themes": [("game_themes", "games.id = game_themes.game_id AND game_themes.theme_id = themes.id")],
+    "platforms": [("game_platforms", "games.id = game_platforms.game_id AND game_platforms.platform_id = platforms.id")],
+    "developers": [("game_developers", "games.id = game_developers.game_id AND game_developers.developer_id = developers.id")],
+    "publishers": [("game_publishers", "games.id = game_publishers.game_id AND game_publishers.publisher_id = publishers.id")],
+    "companies": [("game_companies", "games.id = game_companies.game_id AND game_companies.company_id = companies.id")],
+    "lists_referencing": [("lists_referencing", "games.id = lists_referencing.game_id")],
+}
+
+
 class SQLManager:
     def __init__(self, db_path="data/games.db"):
         self.conn = sqlite3.connect(db_path)
@@ -289,8 +300,11 @@ class SQLManager:
 
     #make functions for inserting specific fields? have a base version needed and functions for all the others?
 
-    def get_all_games(self):
-        self.cursor.execute("SELECT * FROM games")
+    def get_all_games(self, limit=None):
+        limit_clause = f" LIMIT {limit}" if limit else ""
+        query = f"SELECT * FROM games {limit_clause}"
+        print(query)
+        self.cursor.execute(query)
         return self.cursor.fetchall()
 
     #def get_all_full_game_info(self, limit=25):
@@ -492,6 +506,7 @@ class SQLManager:
         """
         #This acts as a test of alias functionality, we might want to add alias support for already existing functions
         if aliases and len(columns) == len(aliases):
+            print("Time for aliases!")
             select_parts = [f"{col} AS {alias}" for col, alias in zip(columns, aliases)]
         else:
             select_parts = columns
@@ -503,6 +518,37 @@ class SQLManager:
             for table, condition in joins:
                 query += f" JOIN {table} ON {condition}"
 
+        if limit:
+            query += f" LIMIT {limit}"
+
+        print(query)
+        self.cursor.execute(query)
+        return self.cursor.fetchall()
+
+    def auto_custom_select(self, columns, limit=None):
+        """
+        Automatically build SELECT query with JOINs based on requested columns.
+        """
+        select_parts = []
+        joins = []
+        joined_tables = set()
+
+        for col in columns:
+            table, col_name = col.split(".", 1) if "." in col else ("games", col)
+
+            select_parts.append(col)
+            if table != "games":
+                if table in RELATION_MAP:
+                    for join_table, condition in RELATION_MAP[table]:
+                        if join_table not in joined_tables:
+                            joins.append(f"JOIN {join_table} ON {condition}")
+                            joined_tables.add(join_table)
+                        # Also join the target table itself if needed
+                        if table not in joined_tables:
+                            joins.append(f"JOIN {table} ON {condition.split('AND')[-1].strip()}")
+                            joined_tables.add(table)
+
+        query = f"SELECT {', '.join(select_parts)} FROM games " + " ".join(joins)
         if limit:
             query += f" LIMIT {limit}"
 
@@ -557,6 +603,7 @@ class SQLManager:
         Example of aggregation with GROUP BY
         """
         #MAIN_PLATFORM IS DEPRECATED, ALTER THIS!
+        #Add limit clause support?
         self.cursor.execute("""
             SELECT main_platform, COUNT(*) AS game_count, AVG(ranked_score) AS avg_score
             FROM games

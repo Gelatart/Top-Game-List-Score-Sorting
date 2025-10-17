@@ -5,11 +5,14 @@ from .config import get_env_var
 from .game_object import GameObject
 
 class MongoManager:
-    def __init__(self, uri=None, db_name="GameSorting", collection_name="games"):
+    def __init__(self, uri=None, db_name="GameSorting", collection_name="games", list_name="lists"):
         self.uri = uri or get_env_var("MONGO_URI")
         self.client = MongoClient(self.uri, server_api=ServerApi('1'))
         self.db = self.client[db_name]
+        # mon_col = monDB["games"]
         self.collection = self.db[collection_name]
+        # list_col = monDB["lists"]
+        self.list_collection = self.db[list_name]
 
     def insert_or_update_game(self, game: GameObject):
         game_dict = game.to_dict()

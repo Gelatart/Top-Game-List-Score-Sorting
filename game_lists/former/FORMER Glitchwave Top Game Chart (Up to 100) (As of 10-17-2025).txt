@@ -7,7 +7,6 @@ Danganronpa 2: Goodbye Despair
 Danganronpa V3: Killing Harmony
 Dark Souls: Artorias of the Abyss
 Demon's Souls
-Devil May Cry 3: Dante's Awakening
 Diablo II: Lord of Destruction
 Doom
 Doom II: Hell on Earth
@@ -29,10 +28,12 @@ The Last of Us
 The Legend of Zelda: A Link to the Past
 The Legend of Zelda: Collector's Edition
 Like a Dragon: Infinite Wealth
+Mass Effect 2
 Metal Gear Solid HD Collection
 Metroid Dread
 Metroid Prime: Trilogy
 Monkey Island 2: LeChuck's Revenge
+NieR: Automata
 Omori
 The Orange Box
 Paper Mario
@@ -47,7 +48,8 @@ Riven: The Sequel to Myst
 The Secret of Monkey Island
 <37094> Shadow of the Colossus [2018]
 Shenmue II
-Silent Hill
+Sonic the Hedgehog 3 & Knuckles
+Star Wars: Knights of the Old Republic II - The Sith Lords
 StarCraft: Brood War
 Suikoden II
 Super Mario All-Stars

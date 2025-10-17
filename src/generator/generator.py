@@ -431,7 +431,6 @@ def run_generator():
                     # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
 
                     # ADD COMPANIES, DEVELOPERS PUBLISHERS
-                    developers = earliest_game.involved_companies
                     # ^consider a check for developer boolean? porting? supporting?
                     # do we count publishers?
                     # consider more categories for game objects later like publishers
@@ -440,8 +439,7 @@ def run_generator():
                     # REMOVING THIS PART
                     # second query to look at the company specifically
                     # REMOVING THIS PART
-                    # if dev true: add to devs
-                    # if pub true: add to pubs
+                    # APPEND TO DEVELOPERS OR PUBLISHERS IF IS_DEV OR IS_PUB
                     # also consider supporting boolean in addition to developer and publisher? porting?
 
                     # ADD GENRES
@@ -536,40 +534,19 @@ def run_generator():
                         #MODES
                         # REMOVING THIS PART
                         # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
-                        developers = current_game.involved_companies
-                        if (len(developers) > 0):
-                            for dev in developers:
-                                dev_name = None
-                                # FIX THE REST OF THIS!!! (involved company, company?)
-                                # first query to look at involved companies
-                                # sub_query_1 = 'fields *; where id=' + str(dev.id) + ' & developer=true;'
-                                sub_query_1 = 'fields *; where id=' + str(dev.id) + ';'
-                                sub_request_1 = wrapper.api_request(
-                                    'involved_companies.pb',  # Note the '.pb' suffix at the endpoint
-                                    sub_query_1
-                                )
-                                inv_companies_message = InvolvedCompanyResult()
-                                inv_companies_message.ParseFromString(
-                                    sub_request_1)  # Fills the protobuf message object with the response
-                                inv_companies = inv_companies_message.involvedcompanies
-                                if (len(inv_companies) == 0):
-                                    continue
-                                # second query to look at the company specifically
-                                is_dev = inv_companies[0].developer
-                                is_pub = inv_companies[0].publisher
-                                sub_query_2 = 'fields name; where id=' + str(inv_companies[0].company.id) + ';'
-                                sub_request_2 = wrapper.api_request(
-                                    'companies.pb',  # Note the '.pb' suffix at the endpoint
-                                    sub_query_2
-                                )
-                                companies_message = CompanyResult()
-                                companies_message.ParseFromString(
-                                    sub_request_2)  # Fills the protobuf message object with the response
-                                companies = companies_message.companies
-                                dev_name = companies[0].name
-                                game_DB[game].list_companies.append(dev_name)
-                                #APPEND TO DEVELOPERS OR PUBLISHERS IF IS_DEV OR IS_PUB
-                                # REMOVING THIS PART
+
+                        # ADD COMPANIES, DEVELOPERS PUBLISHERS
+                        # ^consider a check for developer boolean? porting? supporting?
+                        # do we count publishers?
+                        # consider more categories for game objects later like publishers
+
+                        # first query to look at involved companies
+                        # REMOVING THIS PART
+                        # second query to look at the company specifically
+                        # REMOVING THIS PART
+                        # APPEND TO DEVELOPERS OR PUBLISHERS IF IS_DEV OR IS_PUB
+                        # also consider supporting boolean in addition to developer and publisher? porting?
+
                         # ADD GENRES
                         # REMOVING THIS PART
                         # ADD THEMES
@@ -681,11 +658,8 @@ def run_generator():
     #use with open in some cases to avoid needing to close?
     #exit()
 
-    mon_col = monDB["games"]
-    list_col = monDB["lists"]
-
     # Create index on title so can do partial title searching, don't mark as unique because some titles won't be
-    mon_col.create_index('Title')
+    """mon_col.create_index('Title')"""
 
     # INSERT ALL GAMES INTO DATABASE
     # Clear database to begin with?
@@ -768,12 +742,14 @@ def run_generator():
 
     # insertion = mon_col.insert_many(export)
     print("TIME TO INSERT THE LISTS INTO MONGODB!")
+    """
     for game_list in games_lists:
         # could keep track of what type of list it is, other variables?
         list_dict = dict(Title=game_list)
         print(list_dict)
         list_insert = list_col.insert_one(list_dict)
          # list_dict["Title"].append(list)
+    """
 
     # after printed out everything to excel, then make three printed sorted lists?
      # each time, sort excel a certain way, then print out excel factors to list?

@@ -15,6 +15,7 @@ COMMANDS = [
     ("Custom SELECT (choose columns)", "custom_columns"),
     ("Custom SELECT (choose columns) (with joins)", "custom_columns_joins"),
     ("Select a group of columns as aliases", "alias_columns"),
+    ("Select columns from any table and have joins automatically determined", "auto_columns"),
     ("Preset queries (genres, themes, platforms, etc.)", "preset_queries"),
     ("Insert/Update game (pre-ID)", "insert_preid"),
     ("Insert/Update game (with IGDB ID)", "insert_id"),
@@ -107,6 +108,7 @@ def main():
     subparsers.add_parser("custom_columns", help="Fetch custom-selected columns from the games table")
     subparsers.add_parser("custom_columns_joins", help="Dynamically build a SELECT query with optional joins if columns from related tables are requested (genres, themes, etc)")
     subparsers.add_parser("alias_columns", help="Fetch custom-selected columns from the games table, with user-selected aliases")
+    subparsers.add_parser("auto_columns",help="Automatically build SELECT query with JOINs based on requested columns.")
     #PUT IN THE REST OF THE NEW FUNCTIONS HERE!!!
     #...
 
@@ -220,7 +222,10 @@ def interactive_menu(db):
         args = argparse.Namespace(command=command)
 
         # Ask for arguments interactively
-        if command == "show_game_id":
+        if command == "list_games":
+            args.limit = input("Enter limit (optional): ").strip()
+            args.limit = int(args.limit) if args.limit.isdigit() else None
+        elif command == "show_game_id":
             args.id = int(input("Enter game_id: "))
         elif command == "show_game_title":
             args.title = input("Enter title: ")
@@ -253,6 +258,12 @@ def interactive_menu(db):
                 condition = input(f"Enter join condition (e.g., games.id = {table}.game_id): ").strip()
                 args.joins.append((table, condition))
                 add_joins = input("Add another JOIN? (y/n): ").strip().lower()
+
+            args.limit = input("Enter limit (optional): ").strip()
+            args.limit = int(args.limit) if args.limit.isdigit() else None
+        elif command == "auto_columns":
+            args.cols = input("Enter columns (comma-separated): ").strip().split(",")
+            args.cols = [c.strip() for c in args.cols]
 
             args.limit = input("Enter limit (optional): ").strip()
             args.limit = int(args.limit) if args.limit.isdigit() else None
@@ -309,7 +320,7 @@ def interactive_menu(db):
 
 def run_command(db, command, args):
     if command == "list_games":
-        print_rows(db.get_all_games(), db.cursor)
+        print_rows(db.get_all_games(args.limit), db.cursor)
 
     #make a version of this that actually does take a limit, in between all and one
     elif command == "list_games_full":
@@ -336,6 +347,9 @@ def run_command(db, command, args):
 
     elif command == "alias_columns":
         print_rows(db.alias_select(args.cols, args.aliases, args.joins, args.limit), db.cursor)
+
+    elif command == "auto_columns":
+        print_rows(db.auto_custom_select(args.cols, args.limit), db.cursor)
 
     elif command == "preset_queries":
         print(f"Preset query results for {args.cols}:")
