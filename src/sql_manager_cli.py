@@ -304,6 +304,12 @@ def interactive_menu(db):
             args.filters = get_filters_from_user()
         elif command == "games_by_platform":
             args.platform = input("Enter platform: ")
+        elif command == "games_with_developers":
+            args.limit = input("Limit results (default 20): ").strip()
+            args.limit = int(args.limit) if args.limit.isdigit() else 20
+        elif command == "union_example":
+            args.limit = input("Limit results (default 20): ").strip()
+            args.limit = int(args.limit) if args.limit.isdigit() else 20
         elif command == "run_sql":
             args.sql = input("Enter SQL query: ")
         elif command == "insert_preid":
@@ -383,13 +389,13 @@ def run_command(db, command, args):
         print_rows(db.get_games_by_main_platform(args.platform), db.cursor)
 
     elif command == "games_with_developers":
-        print_rows(db.get_games_with_developers(), db.cursor)
+        print_rows(db.get_games_with_developers(args.limit), db.cursor)
 
     elif command == "score_stats":
         print_rows(db.get_score_statistics(), db.cursor)
 
     elif command == "union_example":
-        print_rows(db.union_example(), db.cursor)
+        print_rows(db.union_example(args.limit), db.cursor)
 
     elif command == "clear":
         confirm = input("Are you sure you want to clear all games? (y/n): ")

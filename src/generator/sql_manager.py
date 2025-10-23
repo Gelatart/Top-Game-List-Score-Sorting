@@ -587,15 +587,14 @@ class SQLManager:
         """, (platform_name,))
         return self.cursor.fetchall()
 
-    def get_games_with_developers(self):
+    def get_games_with_developers(self, limit=None):
         """
         Example of JOIN — assuming you have a 'developers' table
         """
-        self.cursor.execute("""
-            SELECT g.title, g.igdb_id, d.name AS developer
-            FROM games g
-            JOIN developers d ON g.developer_id = d.id
-        """)
+        limit_clause = f" LIMIT {limit}" if limit else ""
+        query = f"SELECT g.title, g.igdb_id, d.name AS developer FROM games g JOIN game_developers gd ON g.id = gd.game_id JOIN developers d ON gd.developer_id = d.id {limit_clause}"
+        print(query)
+        self.cursor.execute(query)
         return self.cursor.fetchall()
 
     def get_score_statistics(self):
@@ -611,16 +610,16 @@ class SQLManager:
         """)
         return self.cursor.fetchall()
 
-    def union_example(self):
+    def union_example(self, limit=None):
         #Seemingly not very helpful, just a random example I can build on?
+        #Change from main_platform
         """
         Example of UNION — combine two queries
         """
-        self.cursor.execute("""
-            SELECT title FROM games WHERE ranked_score >= 90
-            UNION
-            SELECT title FROM games WHERE title LIKE '%Mario%'
-        """)
+        limit_clause = f" LIMIT {limit}" if limit else ""
+        query = f"SELECT title FROM games WHERE ranked_score >= 90 UNION SELECT title FROM games WHERE main_platform = 'PC' {limit_clause}"
+        print(query)
+        self.cursor.execute(query)
         return self.cursor.fetchall()
 
     def clear_table(self):

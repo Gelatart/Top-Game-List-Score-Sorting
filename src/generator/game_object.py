@@ -30,7 +30,13 @@ class GameObject:
         pass
 
     def to_dict(self) -> dict:
-        return self.__dict__
+        #See if this causes issues anywhere where we would still like to keep lists?
+        #In that case, bring this functionality more to the part where we export lists to excel
+        result = self.__dict__
+        for k, v in result.items():
+            if isinstance(v, list):
+                result[k] = ", ".join(map(str, v))
+        return result
 
 """
 OLD GAMEOBJECT IMPLEMENTATION:

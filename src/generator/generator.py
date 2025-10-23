@@ -519,17 +519,9 @@ def run_generator():
                                 earliest_plat_release = curr_release
                                 earliest_plat_date = curr_release.date
                                 main_plat = curr_release.platform
-                        sub_query = 'fields name; where id=' + str(main_plat) + ';'
-                        sub_request = wrapper.api_request(
-                            'platforms.pb',  # Note the '.pb' suffix at the endpoint
-                            sub_query
-                        )
-                        platforms_message = PlatformResult()
-                        platforms_message.ParseFromString(
-                            sub_request)  # Fills the protobuf message object with the response
-                        platforms = platforms_message.platforms
-                        if (len(list_plats) > 0):
-                            game_DB[game].list_platforms = list_plats
+
+                        #PLATFORMS
+                        # REMOVING THIS PART
 
                         #MODES
                         # REMOVING THIS PART
@@ -738,7 +730,7 @@ def run_generator():
         # export_dict = dict(game)
         # ^need to expand and clarify more?
         # export_dict = dict('Title' = game, 'IGDB ID' = details.igdb_ID, 'Ranked Score' = details.ranked_score)
-        insertion = mon_col.insert_one(export_dict)
+        """insertion = mon_col.insert_one(export_dict)"""
 
     # insertion = mon_col.insert_many(export)
     print("TIME TO INSERT THE LISTS INTO MONGODB!")
@@ -779,10 +771,10 @@ def run_generator():
 
     print()
     print("Time to grab the games from the database!")
-    games_pulled = mon_col.find()
-    games_pulled_ranked = mon_col.find().sort("Ranked Score", -1)
-    games_pulled_inclusion = mon_col.find().sort("Inclusion Score", -1)
-    games_pulled_average = mon_col.find().sort("Average Score", -1)
+    """games_pulled = mon_col.find()"""
+    """games_pulled_ranked = mon_col.find().sort("Ranked Score", -1)"""
+    """games_pulled_inclusion = mon_col.find().sort("Inclusion Score", -1)"""
+    """games_pulled_average = mon_col.find().sort("Average Score", -1)"""
 
     # Opening the files that we are going to be writing to
     file_ranked = open(check_for_src("reports/Sorted by Ranked.txt"), "w", encoding="utf-8")
@@ -793,7 +785,7 @@ def run_generator():
                                       encoding="utf-8")
     file_average_uncompleted = open(check_for_src("reports/Sorted by Average (Uncompleted).txt"), "w", encoding="utf-8")
 
-    for game in games_pulled_ranked:
+    """for game in games_pulled_ranked:
         entry = ""
         completed = game["Completed"]
         if (completed == True):
@@ -808,9 +800,9 @@ def run_generator():
         file_ranked.write("\n")
         if (completed == False):
             file_ranked_uncompleted.write(entry)
-            file_ranked_uncompleted.write("\n")
+            file_ranked_uncompleted.write("\n")"""
 
-    for game in games_pulled_inclusion:
+    """for game in games_pulled_inclusion:
         entry = ""
         completed = game["Completed"]
         if (completed == True):
@@ -825,9 +817,9 @@ def run_generator():
         file_inclusion.write("\n")
         if (completed == False):
             file_inclusion_uncompleted.write(entry)
-            file_inclusion_uncompleted.write("\n")
+            file_inclusion_uncompleted.write("\n")"""
 
-    for game in games_pulled_average:
+    """for game in games_pulled_average:
         entry = ""
         completed = game["Completed"]
         if (completed == True):
@@ -842,7 +834,7 @@ def run_generator():
         file_average.write("\n")
         if (completed == False):
             file_average_uncompleted.write(entry)
-            file_average_uncompleted.write("\n")
+            file_average_uncompleted.write("\n")"""
 
     # Writing to excel using new approach from MongoDB Atlas
     bold_style = xlwt.easyxf('font: bold 1;')
@@ -865,7 +857,7 @@ def run_generator():
     sheet1.write(0, 15, 'THEMES', bold_style)
     excel_count = 1
 
-    for game in games_pulled:
+    """for game in games_pulled:
         ranked_score = game['Ranked Score']
         inclusion_score = game['Inclusion Score']
         average_score = ranked_score / game['Total Count']
@@ -886,18 +878,6 @@ def run_generator():
         sheet1.write(excel_count, 6, completion_status)
         sheet1.write(excel_count, 7, game['Main Platform'])
         #Create a loop to deal with printing the platforms in a comma approach
-        """
-        game_platforms = game['List of Platforms']
-        #print(len(game_platforms))
-        platforms_string = ""
-        plat_next = 1
-        #Replacing this approach with the newly discovered join() approach?
-        for platform in game_platforms:
-            platforms_string += platform
-            if(plat_next < len(game_platforms)):
-                platforms_string += ", "
-            plat_next += 1
-        """
         platforms_string = ', '.join(game['List of Platforms'])
         sheet1.write(excel_count, 8, platforms_string)
         #sheet1.write(excel_count, 7, game['Release Date'].strip())
@@ -915,16 +895,16 @@ def run_generator():
         sheet1.write(excel_count, 14, genres_string)
         themes_string = ', '.join(game['Themes'])
         sheet1.write(excel_count, 15, themes_string)
-        excel_count += 1
+        excel_count += 1"""
     wb.save(check_for_src('reports/Sorted Database.xls'))
 
     # Close connection to open up socket (seemed to cause problems when running generator then trying printreports?)
-    mon_client.close()
+    """mon_client.close()"""
     # Close cursors too?
-    games_pulled.close()
+    """games_pulled.close()
     games_pulled_ranked.close()
     games_pulled_average.close()
-    games_pulled_inclusion.close()
+    games_pulled_inclusion.close()"""
 
     #COMPLETION OF NEW PROCESS
 
