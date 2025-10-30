@@ -23,6 +23,8 @@ COMMANDS = [
     ("Get games by main platform", "games_by_platform"),
     ("Get games with developers", "games_with_developers"),
     ("Show score statistics grouped by platform", "score_stats"),
+    ("Calculate arithmetic expression across columns (per row)s", "build_arithmetic"),
+    ("Calculate aggregate expression (AVG, SUM, etc.)", "build_aggregate"),
     ("Run UNION example query", "union_example"),
     ("Clear all games", "clear"),
     ("Run a custom SQL query", "run_sql"),
@@ -90,6 +92,28 @@ def get_filters_from_user():
         #filters[col] = (op, val)
 
     return filters
+def build_arithmetic_expression():
+    """
+    Interactive builder for arithmetic expressions.
+    """
+    print("\n=== Arithmetic Expression Builder ===")
+    print("You can build expressions like: ranked_score + list_count")
+    print("Available operators: +, -, *, /")
+    print("Type 'done' when finished.\n")
+
+    #Add better support for aggregate expression building? Spin off separate similar function for that?
+
+    tokens = []
+    while True:
+        token = input("Enter column name, number, or operator (+ - * /): ").strip()
+        if token.lower() == "done":
+            break
+        tokens.append(token)
+
+    expression = " ".join(tokens)
+    print(f"\nFinal expression: {expression}")
+    return expression
+
 
 def main():
     parser = argparse.ArgumentParser(
@@ -125,6 +149,12 @@ def main():
 
     # Get score statistics (GROUP BY / aggregation)
     subparsers.add_parser("score_stats", help="Show score statistics grouped by platform")
+
+    #Build arithmetic expressions
+    subparsers.add_parser("build_arithmetic", help="Calculate arithmetic expression across columns (per row)")
+
+    # Build aggregate expressions
+    subparsers.add_parser("build_aggregate", help="Calculate aggregate expression (AVG, SUM, etc.)")
 
     # Run a UNION example
     subparsers.add_parser("union_example", help="Run UNION example query")
@@ -225,6 +255,10 @@ def interactive_menu(db):
         if command == "list_games":
             args.limit = input("Enter limit (optional): ").strip()
             args.limit = int(args.limit) if args.limit.isdigit() else None
+        elif command == "list_games_full":
+            args.limit = input("Limit results? (leave blank for no limit): ").strip()
+            args.limit = int(args.limit) if args.limit.isdigit() else None
+            args.filters = get_filters_from_user()
         elif command == "show_game_id":
             args.id = int(input("Enter game_id: "))
         elif command == "show_game_title":
@@ -300,13 +334,23 @@ def interactive_menu(db):
                 args.limit = input("Limit results (default 20): ").strip()
                 args.limit = int(args.limit) if args.limit.isdigit() else 20
         elif command == "top_games":
-            args.n = int(input("Enter N: "))
+            args.n = int(input("How many top games?: "))
             args.filters = get_filters_from_user()
         elif command == "games_by_platform":
             args.platform = input("Enter platform: ")
         elif command == "games_with_developers":
             args.limit = input("Limit results (default 20): ").strip()
             args.limit = int(args.limit) if args.limit.isdigit() else 20
+        elif command == "build_arithmetic":
+            args.expression = build_arithmetic_expression()
+            args.filters = get_filters_from_user()
+            args.limit = input("Limit results (default 20): ").strip()
+            args.limit = int(args.limit) if args.limit.isdigit() else None
+        elif command == "build_aggregate":
+            args.expression = build_arithmetic_expression()
+            args.filters = get_filters_from_user()
+            args.limit = input("Limit results (default 20): ").strip()
+            args.limit = int(args.limit) if args.limit.isdigit() else None
         elif command == "union_example":
             args.limit = input("Limit results (default 20): ").strip()
             args.limit = int(args.limit) if args.limit.isdigit() else 20
@@ -330,7 +374,7 @@ def run_command(db, command, args):
 
     #make a version of this that actually does take a limit, in between all and one
     elif command == "list_games_full":
-        print_rows(db.get_all_full_game_info(), db.cursor)
+        print_rows(db.get_all_full_game_info(filters=args.filters,limit=args.limit), db.cursor)
 
     elif command == "show_game_id":
         print_rows(db.get_full_game_info_by_id(args.id), db.cursor)
@@ -393,6 +437,13 @@ def run_command(db, command, args):
 
     elif command == "score_stats":
         print_rows(db.get_score_statistics(), db.cursor)
+
+    elif command == "build_arithmetic":
+        print_rows(db.calculate_column_expression(args.expression,filters=args.filters,limit=args.limit), db.cursor)
+
+    elif command == "build_aggregate":
+        result = db.calculate_aggregate_expression(args.expression,filters=args.filters,limit=args.limit)
+        print("Aggregate result:", result)
 
     elif command == "union_example":
         print_rows(db.union_example(args.limit), db.cursor)

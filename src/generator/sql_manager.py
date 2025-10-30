@@ -128,18 +128,20 @@ class SQLManager:
         limit_clause = f" LIMIT {limit}" if limit else ""
 
         query = f"{base_query} {where_clause} {limit_clause}"
+        print(query)
         self.cursor.execute(query, params)
         return self.cursor.fetchall()
 
-    def calculate_aggregate_expression(self, expression, filters=None):
+    def calculate_aggregate_expression(self, expression, filters=None, limit=None):
         """
         Run an aggregate arithmetic expression.
         Example: "AVG(ranked_score)", "SUM(total_count)", "MAX(ranked_score) - MIN(ranked_score)"
         """
         base_query = f"SELECT {expression} AS result FROM games g"
         where_clause, params = self.build_where_clause(filters or {})
+        limit_clause = f" LIMIT {limit}" if limit else ""
 
-        query = f"{base_query} {where_clause}"
+        query = f"{base_query} {where_clause} {limit_clause}"
         print(query)
         print(params)
         self.cursor.execute(query, params)
@@ -347,8 +349,8 @@ class SQLManager:
         #LIMIT ?
         #self.cursor.execute(query, (limit,))
         query = f"{base_query} {where_clause} {group_by} {limit_clause}"
-        self.cursor.execute(query, params)
         print(query)
+        self.cursor.execute(query, params)
         return self.cursor.fetchall()
 
     def get_full_game_info_by_id(self, game_id):

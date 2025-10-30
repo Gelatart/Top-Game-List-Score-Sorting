@@ -328,8 +328,6 @@ def run_generator():
                 games = games_message.games
                 if (len(games) > 1):
                     versions_counter = 0
-                    # earliest_release = int(round(games[0].first_release_date))
-                    # earliest_release = games[0].first_release_date.to_pydatetime()
                     earliest_release = games[0].first_release_date.ToDatetime()
                     earliest_game = games[0]
                     # print(earliest_release)
@@ -353,43 +351,13 @@ def run_generator():
                     game_DB[game].igdb_found = True
                     # game_DB[game].release_date = earliest_release
                     game_DB[game].release_date = earliest_release.isoformat()  # To make Json serializable?
-                    # print("Time to go through platforms")
-                    # Spin this while loop off into its own function eventually?
-                    plat_counter = 0
-                    # plat_counter not defined error?
-                    main_plat = None
-                    plat_name = None
-                    list_plats = []
-                    # REPLACE THIS WITH A REQUEST THAT LOOKS AT THE ID AND THEN CONSULTS PLATFORMS ENDPOINT?
-                    while (plat_counter < len(earliest_game.platforms)):
-                        # plat_next = plat_counter + 1
-                        plat_ID = earliest_game.platforms[plat_counter]
-                        # match plat_ID:
-                        sub_query = 'fields name; where id=' + str(plat_ID.id) + ';'
-                        sub_request = wrapper.api_request(
-                            'platforms.pb',  # Note the '.pb' suffix at the endpoint
-                            sub_query
-                        )
-                        platforms_message = PlatformResult()
-                        platforms_message.ParseFromString(
-                            sub_request)  # Fills the protobuf message object with the response
-                        platforms = platforms_message.platforms
-                        plat_name = platforms[0].name
-                        if (plat_counter == 0):
-                            main_plat = plat_name
-                        list_plats.append(plat_name)
-                        """
-                        sub_query = 'fields name; where id=' + str(plat_ID.platform_family) + ';'
-                        sub_request = wrapper.api_request(
-                            'platform_families.pb',  # Note the '.pb' suffix at the endpoint
-                            sub_query
-                        )
-                        platforms_message = PlatformFamilyModeResult()
-                        platforms_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
-                        platformfamilies = platforms_message.platformfamilies
-                        input(platformfamilies)
-                        """
-                        plat_counter += 1
+
+                    #ADD PLATFORMS
+                    # REMOVING THIS PART
+                    # Originally went through all of the platforms for the earliest game and added them
+                    # Set the first one to the main platform, might want better logic going forward for main_plat
+                    #Support for platform_families?
+
                     earliest_plat_release = None
                     earliest_plat_date = datetime.datetime.now()
                     for release in earliest_game.release_dates:
