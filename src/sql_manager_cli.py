@@ -374,6 +374,9 @@ def run_command(db, command, args):
 
     #make a version of this that actually does take a limit, in between all and one
     elif command == "list_games_full":
+        #Seems this can take a real long time except if more filtered down?
+        #Might end up hanging?
+        #Provide a way to show progress to user, whether it is making progress or just getting stuck
         print_rows(db.get_all_full_game_info(filters=args.filters,limit=args.limit), db.cursor)
 
     elif command == "show_game_id":

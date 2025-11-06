@@ -1851,9 +1851,3 @@ mon_client.close()
 games_pulled.close()
 
 print("Successfully completed! Have a good day!")
-
-"""
-REFERENCES:
-(EXCLUDING THE ONES ALREADY REFERENCED IN GENERATOR.PY)
-Building queries with AND and OR: https://stackoverflow.com/questions/11196101/mongodb-queries-both-with-and-and-or
-"""

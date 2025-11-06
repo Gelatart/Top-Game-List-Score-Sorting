@@ -344,7 +344,6 @@ def run_generator():
                             earliest_game = result
                             # input(earliest_release)
                         # print(result)
-                    # print(earliest_game.platforms)
                     # print(earliest_release)
                     # Time to put the IGDB attributes into the game we are putting out to the cluster
                     game_DB[game].igdb_ID = earliest_game.id
@@ -358,25 +357,9 @@ def run_generator():
                     # Set the first one to the main platform, might want better logic going forward for main_plat
                     #Support for platform_families?
 
-                    earliest_plat_release = None
-                    earliest_plat_date = datetime.datetime.now()
-                    for release in earliest_game.release_dates:
-                        print("Going through releases")
-                        release_ID = None
-                        sub_query = 'fields name; where id=' + str(release) + ';'
-                        sub_request = wrapper.api_request(
-                            'release_dates.pb',  # Note the '.pb' suffix at the endpoint
-                            sub_query
-                        )
-                        releases_message = ReleaseDateResult()
-                        releases_message.ParseFromString(
-                            sub_request)  # Fills the protobuf message object with the response
-                        releases = releases_message.releasedates
-                        curr_release = releases[0]
-                        if earliest_plat_release == None or earliest_plat > curr_release.date:
-                            earliest_plat_release = curr_release
-                            earliest_plat_date = curr_release.date
-                            main_plat = curr_release.platform
+                    #DETERMINING EARLIEST RELEASE DATE OF EARLIEST GAME RELEASE
+                    # REMOVING THIS PART
+                    # Originally looped through them all, if none so far then accept, if find one that was earlier replace with that
 
                     #Is this below section even needed? Seems to crash with a bad request, and main_plat already giving a string name value when it does?
                     """

@@ -18,6 +18,7 @@ def create_schema(conn, db_path="data/games.db"):
         release_date TEXT
     )
     """)
+    #Spinning off release date into its own tables?
 
     # === List File References ===
     cursor.execute("""
@@ -28,6 +29,20 @@ def create_schema(conn, db_path="data/games.db"):
     )
     """)
     #Any other fields needed? How do I indicate which files list what games?
+
+    # Normalized release_dates table
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS release_dates (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        game_id INTEGER NOT NULL,
+        platform_id INTEGER,
+        region TEXT,
+        release_date TEXT,
+        human_readable TEXT,
+        FOREIGN KEY (game_id) REFERENCES games(id),
+        FOREIGN KEY (platform_id) REFERENCES platforms(id)
+    )
+    """)
 
     # === Normalized Text Tables ===
     for table in ["genres", "themes", "player_modes", "platforms", "developers", "publishers", "companies"]:
