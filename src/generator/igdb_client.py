@@ -3,6 +3,7 @@ import json
 import re
 import requests
 import unicodedata
+from datetime import datetime
 from igdb.wrapper import IGDBWrapper
 
 from .config import get_env_var
@@ -20,6 +21,21 @@ class IGDB_Client:
         self.access_token = received["access_token"]
         self.wrapper = IGDBWrapper(self.client_id, self.access_token)
         self.cache = CacheManager()
+
+    def parse_igdb_release_dates(self, raw_dates, platform_lookup, region_lookup):
+        release_dates = []
+        for rd in raw_dates:
+            platform_name = platform_lookup.get(rd.get("platform"))
+            region_name = region_lookup.get(rd.get("region"))
+            date_str = datetime.utcfromtimestamp(rd["date"]).strftime("%Y-%m-%d") if rd.get("date") else None
+
+            release_dates.append({
+                "platform": platform_name,
+                "region": region_name,
+                "release_date": date_str,
+                "human_readable": rd.get("human")
+            })
+        return release_dates
 
     def search_game_by_ID(self, igdb_id: int) -> dict:
         cached = self.cache.get(igdb_id)

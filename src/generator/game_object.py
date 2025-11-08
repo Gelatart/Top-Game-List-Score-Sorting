@@ -15,7 +15,9 @@ class GameObject:
     lists_referencing: list[str] = field(default_factory=list)
     completed: bool = False
     list_platforms: list[str] = field(default_factory=list)
-    release_date: str = 'Unknown' #can this be a date value?
+    #release_date: str = 'Unknown' #can this be a date value?
+    #^replacing with a list of dictionaries to better align with IGDB setup and new release_dates table
+    release_dates = list[dict]
     player_counts: list[str] = field(default_factory=list)
     #update player_counts to a more fitting name like player_modes? game_modes?
     list_developers: list[str] = field(default_factory=list)

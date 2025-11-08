@@ -36,12 +36,21 @@ def create_schema(conn, db_path="data/games.db"):
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         game_id INTEGER NOT NULL,
         platform_id INTEGER,
-        region TEXT,
+        region_id INTEGER,
         release_date TEXT,
         human_readable TEXT,
         FOREIGN KEY (game_id) REFERENCES games(id),
-        FOREIGN KEY (platform_id) REFERENCES platforms(id)
-    )
+        FOREIGN KEY (platform_id) REFERENCES platforms(id),
+        FOREIGN KEY (region_id) REFERENCES regions(id)
+    );
+    """)
+
+    #regions table (optional part of release_dates setup)
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS regions (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT UNIQUE
+    );
     """)
 
     # === Normalized Text Tables ===

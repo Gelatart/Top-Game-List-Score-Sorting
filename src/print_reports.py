@@ -15,6 +15,8 @@ import datetime
 #give option to go back once selected menu option? either type break or numbered option?
 
 #option to clear off built queries?
+
+#Take these spun-off functions, and import them from a separate file so we can prevent this one file from being too big
 def print_platforms():
     #Lists all of the platform options available to us
     print("Here are all the platforms that there are!")
@@ -396,25 +398,6 @@ while True:
         print("I'm sorry, I don't understand that selection. You'll have to choose one of the valid options.\n")
         print()
         continue
-
-#test_query = {"Main Platform": "Wii"}
-#test_query = {"Main Platform": {"$exists": True}}
-#test_query = {"Ranked Score": { "$gt": 2400 } }
-
-#print("Time to grab the games!")
-#games_pulled = mon_db.mon_col.find().limit(15)
-#games_pulled = mon_col.find().limit(10)
-#games_pulled = GameSorting.games.find().limit(10)
-#games_pulled = mon_db.find().limit(15)
-#games_pulled = mon_col.find({},{"Title": 1, "Main Platform": 1}).limit(10)
-#games_pulled_query = mon_col.find(test_query, { "List of References": 0, "Total Count": 0}).limit(10)
-#games_pulled_ranked = mon_col.find(test_query).sort("Ranked Score", -1)
-#games_pulled_inclusion = mon_col.find(test_query).sort("Inclusion Score", -1)
-#games_pulled_average = mon_col.find(test_query).sort("Average Score", -1)
-
-#print(games_pulled_query)
-
-#input("Brief pause\n")
 
 print("Now it's time for us to pick some options in generating a report")
 print()
