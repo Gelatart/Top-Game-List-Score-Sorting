@@ -59,6 +59,60 @@ class SQLManager:
         self.cursor.execute(f"INSERT OR IGNORE INTO {table}(name) VALUES (?)", (name,))
         self.cursor.execute(f"SELECT id FROM {table} WHERE name=?", (name,))
         return self.cursor.fetchone()[0]
+    
+    def get_or_create_region_id(self, region_id):
+        """
+        Get or create a region by IGDB region ID.
+        IGDB region IDs: 1=Europe, 2=North America, 3=Australia, 4=New Zealand, 5=Japan, 6=China, 7=Asia, 8=Worldwide
+        """
+        if region_id is None:
+            return None
+        
+        region_names = {
+            1: "Europe",
+            2: "North America", 
+            3: "Australia",
+            4: "New Zealand",
+            5: "Japan",
+            6: "China",
+            7: "Asia",
+            8: "Worldwide"
+        }
+        
+        region_name = region_names.get(region_id, f"Unknown Region {region_id}")
+        self.cursor.execute("INSERT OR IGNORE INTO regions(name) VALUES (?)", (region_name,))
+        self.cursor.execute("SELECT id FROM regions WHERE name=?", (region_name,))
+        return self.cursor.fetchone()[0]
+    
+    def get_platform_id_by_name(self, platform_name):
+        """
+        Get platform ID from our platforms table by name.
+        Returns None if not found.
+        """
+        if not platform_name:
+            return None
+        self.cursor.execute("SELECT id FROM platforms WHERE name=?", (platform_name,))
+        result = self.cursor.fetchone()
+        return result[0] if result else None
+    
+    def get_release_dates_for_game(self, game_id):
+        """
+        Get all release dates for a specific game with platform and region names.
+        """
+        query = """
+        SELECT 
+            rd.release_date,
+            p.name as platform,
+            r.name as region,
+            rd.human_readable
+        FROM release_dates rd
+        LEFT JOIN platforms p ON rd.platform_id = p.id
+        LEFT JOIN regions r ON rd.region_id = r.id
+        WHERE rd.game_id = ?
+        ORDER BY rd.release_date
+        """
+        self.cursor.execute(query, (game_id,))
+        return self.cursor.fetchall()
 
     def build_where_clause(self, filters: dict) -> tuple[str, list]:
         """
@@ -284,12 +338,26 @@ class SQLManager:
             self.cursor.execute("INSERT OR IGNORE INTO game_companies (game_id, company_id) VALUES (?, ?)", (game_id, comp_id))
 
         # 10. Lists Referencing
-        #for src in sources:
         for ref_list in game.lists_referencing:
             self.cursor.execute("""
                 INSERT OR IGNORE INTO lists_referencing (game_id, source_file)
                 VALUES (?, ?)
             """, (game_id, ref_list))
+
+        # 11. Release Dates (normalized table)
+        for rd in game.release_dates:
+            platform_id = None
+            platform_name = rd.get("platform_name")
+            if platform_name:
+                # Look up or create the platform in our platforms table
+                platform_id = self.get_or_create_id("platforms", platform_name)
+            
+            region_id = self.get_or_create_region_id(rd.get("region_id"))
+            
+            self.cursor.execute("""
+                INSERT OR IGNORE INTO release_dates (game_id, platform_id, region_id, release_date, human_readable)
+                VALUES (?, ?, ?, ?, ?)
+            """, (game_id, platform_id, region_id, rd.get("release_date"), rd.get("human_readable")))
 
         #themes and game_themes, player_modes and game_player_modes not properly grabbing?
 

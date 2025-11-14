@@ -22,16 +22,25 @@ class IGDB_Client:
         self.wrapper = IGDBWrapper(self.client_id, self.access_token)
         self.cache = CacheManager()
 
-    def parse_igdb_release_dates(self, raw_dates, platform_lookup, region_lookup):
+    def parse_igdb_release_dates(self, raw_dates):
+        """
+        Parse IGDB release_dates array into a list of dicts.
+        Each release date from IGDB has: date (unix timestamp), platform (object with id/name), region (id), human (string)
+        """
         release_dates = []
         for rd in raw_dates:
-            platform_name = platform_lookup.get(rd.get("platform"))
-            region_name = region_lookup.get(rd.get("region"))
-            date_str = datetime.utcfromtimestamp(rd["date"]).strftime("%Y-%m-%d") if rd.get("date") else None
-
+            date_timestamp = rd.get("date")
+            date_str = datetime.utcfromtimestamp(date_timestamp).strftime("%Y-%m-%d") if date_timestamp else None
+            
+            # Platform can be either an ID or an object with name
+            platform_data = rd.get("platform")
+            platform_name = None
+            if isinstance(platform_data, dict):
+                platform_name = platform_data.get("name")
+            
             release_dates.append({
-                "platform": platform_name,
-                "region": region_name,
+                "platform_name": platform_name,
+                "region_id": rd.get("region"),
                 "release_date": date_str,
                 "human_readable": rd.get("human")
             })
@@ -44,7 +53,7 @@ class IGDB_Client:
             print(cached)
             return cached
 
-        query = f'fields id, name, genres.name, themes.name, game_modes.name, platforms.name, release_dates.date, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1; where id = {igdb_id};'
+        query = f'fields id, name, genres.name, themes.name, game_modes.name, platforms.name, release_dates.date, release_dates.platform.name, release_dates.region, release_dates.human, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1; where id = {igdb_id};'
         response = self.wrapper.api_request("games", query)
         games_data = json.loads(response.decode("utf-8"))
         result = games_data[0] if games_data else {}
@@ -83,7 +92,7 @@ class IGDB_Client:
 
             #If it's not cached, time for an API call
             #Come up with functionality where if this normalized version isn't found, bring it to user's attention? So we can know to use IGDB ID instead?
-            query = f'search "{normalized_title}"; fields id, name, genres.name, themes.name, game_modes.name, platforms.name, release_dates.date, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1;'
+            query = f'search "{normalized_title}"; fields id, name, genres.name, themes.name, game_modes.name, platforms.name, release_dates.date, release_dates.platform.name, release_dates.region, release_dates.human, involved_companies.company.name, involved_companies.developer, involved_companies.publisher; limit 1;'
             #print(title)
             #query = f'search "{title}"; fields id, name; limit 1;'
             print(query)
@@ -141,11 +150,20 @@ class IGDB_Client:
             return
 
         game_obj.igdb_ID = igdb_data.get("id")
-        #consider doing get("id", "N/A") instead?
         game_obj.igdb_found = True
-        game_obj.release_date = str(igdb_data.get("release_dates", [{}])[0].get("date", "Unknown"))
-        #^consider giving a null value or clearly wrong datetime if not date found?
-        #try to make it some format other than string?
+        
+        # Parse release dates
+        raw_release_dates = igdb_data.get("release_dates", [])
+        if raw_release_dates:
+            game_obj.release_dates = self.parse_igdb_release_dates(raw_release_dates)
+            # Set the earliest release date as the main release_date for backward compatibility
+            earliest = min((rd for rd in game_obj.release_dates if rd.get("release_date")), 
+                          key=lambda x: x["release_date"], default=None)
+            # How do we settle tie-breakers?
+            #Make sure that we also account for only doing games that actually released so we don't get 1970 values
+            game_obj.release_date = earliest["release_date"] if earliest else "Unknown"
+        else:
+            game_obj.release_date = "Unknown"
 
         platforms = igdb_data.get("platforms", [])
         game_obj.list_platforms = [p.get("name") for p in platforms if p.get("name")]

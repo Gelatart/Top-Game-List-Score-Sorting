@@ -327,29 +327,8 @@ def run_generator():
                 games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
                 games = games_message.games
                 if (len(games) > 1):
-                    versions_counter = 0
-                    earliest_release = games[0].first_release_date.ToDatetime()
-                    earliest_game = games[0]
-                    # print(earliest_release)
-                    # input("Here is a release!")
-                    for result in games:
-                        # how do I compare timestamps?
-                        potential_release = result.first_release_date.ToDatetime()
-                        if (potential_release < earliest_release and result.status != 6):
-                            # Also check for parent_game field?
-                            # print("New earliest release!")
-                            # print(result.status)
-                            # earliest_release = result.first_release_date
-                            earliest_release = potential_release
-                            earliest_game = result
-                            # input(earliest_release)
-                        # print(result)
-                    # print(earliest_release)
-                    # Time to put the IGDB attributes into the game we are putting out to the cluster
-                    game_DB[game].igdb_ID = earliest_game.id
-                    game_DB[game].igdb_found = True
-                    # game_DB[game].release_date = earliest_release
-                    game_DB[game].release_date = earliest_release.isoformat()  # To make Json serializable?
+                    #FINDING EARLIEST RELEASE
+                    # REMOVING THIS PART
 
                     #ADD PLATFORMS
                     # REMOVING THIS PART
