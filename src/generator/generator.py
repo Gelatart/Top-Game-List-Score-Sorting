@@ -80,7 +80,6 @@ def run_generator():
     #Find way to track what type of list it is?
     games_lists = []
 
-    #completed_titles = set(read_attributed_games("game_lists\Completions.txt"))
     #file_path = Path("game_lists") / "Completions.txt"
     completed_titles = set(read_attributed_games(Path("game_lists") / "Completions.txt"))
 

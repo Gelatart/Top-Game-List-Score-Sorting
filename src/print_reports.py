@@ -1530,7 +1530,6 @@ while(answer_check_main == False):
             input("File created\n")
             print(games_pulled.next())
             for game in games_pulled:
-                # print(game)
                 entry = ""
                 completed = game["Completed"]
                 if (completed == True):

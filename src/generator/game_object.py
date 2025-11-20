@@ -14,6 +14,10 @@ class GameObject:
     list_count: int = 1
     lists_referencing: list[str] = field(default_factory=list)
     completed: bool = False
+    seasonal_spring: bool = False
+    seasonal_summer: bool = False
+    seasonal_fall_halloween: bool = False
+    seasonal_winter_christmas: bool = False
     list_platforms: list[str] = field(default_factory=list)
     release_date: str = 'Unknown'  # Kept for backward compatibility - earliest release date
     release_dates: list[dict] = field(default_factory=list)  # Full release date info from IGDB
