@@ -57,6 +57,11 @@ def read_attributed_games(file_path: str) -> List[str]:
     """
     Return a list of game titles from a .txt file.
     This will start with Completions.txt, but could encompass other custom files with custom fields.
+    Returns empty list if file doesn't exist.
     """
-    with open(check_for_src(file_path), 'r', encoding='utf-8') as f:
+    full_path = check_for_src(file_path)
+    if not os.path.exists(full_path):
+        return []
+    
+    with open(full_path, 'r', encoding='utf-8') as f:
         return [line.strip() for line in f if line.strip()]

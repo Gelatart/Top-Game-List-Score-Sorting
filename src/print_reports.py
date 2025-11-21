@@ -125,7 +125,6 @@ while True:
         # Start connecting to Mongo cluster
         print("Alright! Let's try out the connection")
         mon_client = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
-        # mon_client = pymongo.MongoClient(mon_connect)
         mon_db = mon_client["GameSorting"]
         try:
             mon_client.admin.command('ping')

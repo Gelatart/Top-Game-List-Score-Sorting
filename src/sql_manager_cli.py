@@ -6,6 +6,15 @@ from generator.sql_manager import SQLManager
 
 #Create an input interface where I can write out commands and keep running them
 
+#Do we have the options to selectively build out AND/OR conditions?
+#Does like support matching with single characters with _?
+#Provide support for DISTINCT functionality?
+#Provide support for ORDER BY functionality?
+#Make sure all commands allow for limits where that makes sense?
+#Provide support for OFFSET functionality?
+#Make sure we support different join types?
+#-Already done inner join? Because equivalent to standard join?
+
 COMMANDS = [
     ("Show all games (basic)", "list_games"),
     ("Show all games (full joined info)", "list_games_full"),

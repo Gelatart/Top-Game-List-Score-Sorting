@@ -81,5 +81,14 @@
         "name": "Open world"
       }
     ]
+  },
+  "12345": {
+    "id": 12345,
+    "name": "Untitled Test Game",
+    "genres": [
+      {
+        "name": "Adventure"
+      }
+    ]
   }
 }

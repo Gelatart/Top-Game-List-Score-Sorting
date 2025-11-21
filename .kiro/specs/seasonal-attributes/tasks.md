@@ -6,7 +6,7 @@
   - Verify to_dict() method includes seasonal attributes automatically
   - _Requirements: 1.1, 1.2, 1.3, 1.4_
 
-- [ ] 2. Update file_loader to handle missing files gracefully
+- [x] 2. Update file_loader to handle missing files gracefully
   - Modify read_attributed_games() to check if file exists before opening
   - Return empty list if file doesn't exist
   - Import os module if not already imported

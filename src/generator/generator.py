@@ -1,25 +1,13 @@
 # import required module
-import datetime
-import dotenv
-from dotenv import load_dotenv
-import itertools
-import os
-import math
+import json
 import pymongo
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
+import requests
+import time
 # Writing to an excel sheet using Python
 import xlwt
 from xlwt import Workbook
-from bs4 import BeautifulSoup
-import requests
-import json
-import pandas
-import re
-import sqlite3
-import time
-
-from igdb.wrapper import IGDBWrapper
 from pathlib import Path
 
 from .config import check_for_src, get_env_var
@@ -28,8 +16,6 @@ from .exporter import export_to_json, export_to_excel, export_to_text
 from .file_loader import ListType, get_files_in_dir, read_game_list, read_attributed_games
 from .game_object import GameObject
 from .igdb_client import IGDB_Client
-
-#See if some of these imports aren't needed anymore, so they can be removed from requirements.txt
 
 def mongo_connect():
     #Replace the part where this originally happened later in the code with this function?
@@ -353,8 +339,8 @@ def run_generator():
                     platforms = platforms_message.platforms
                     # main_plat = platforms[0].name
                     """
-                    if (len(list_plats) > 0):
-                        game_DB[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
+                    #ADDING LIST OF PLATFORMS
+                    # REMOVING THIS PART
                     # ADD MODES
                     # REMOVING THIS PART
                     # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
