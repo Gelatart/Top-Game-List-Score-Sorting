@@ -14,6 +14,7 @@ from generator.sql_manager import SQLManager
 #Provide support for OFFSET functionality?
 #Make sure we support different join types?
 #-Already done inner join? Because equivalent to standard join?
+#Add support for left join, right join, full join
 
 COMMANDS = [
     ("Show all games (basic)", "list_games"),

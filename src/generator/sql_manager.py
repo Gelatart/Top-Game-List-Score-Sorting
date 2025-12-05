@@ -238,8 +238,9 @@ class SQLManager:
         #make a function at some point that examines for suspect values in fields (ex: release dates on 1970)
         #print(game)
         self.cursor.execute("""
-        INSERT INTO games (igdb_id, title, igdb_found, ranked_score, list_count, total_count, completed, release_date)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO games (igdb_id, title, igdb_found, ranked_score, list_count, total_count, completed, release_date,
+                           seasonal_spring, seasonal_summer, seasonal_fall_halloween, seasonal_winter_christmas)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ON CONFLICT(igdb_id) DO UPDATE SET
             igdb_id=excluded.igdb_id,
             title=excluded.title,
@@ -248,7 +249,11 @@ class SQLManager:
             list_count=excluded.list_count,
             total_count=excluded.total_count,
             completed = excluded.completed,
-            release_date = excluded.release_date
+            release_date = excluded.release_date,
+            seasonal_spring = excluded.seasonal_spring,
+            seasonal_summer = excluded.seasonal_summer,
+            seasonal_fall_halloween = excluded.seasonal_fall_halloween,
+            seasonal_winter_christmas = excluded.seasonal_winter_christmas
         """, (
             game.igdb_ID,
             game.title,
@@ -257,15 +262,20 @@ class SQLManager:
             game.list_count,
             game.total_count,
             game.completed,
-            game.release_date
+            game.release_date,
+            game.seasonal_spring,
+            game.seasonal_summer,
+            game.seasonal_fall_halloween,
+            game.seasonal_winter_christmas
         ))
         self.conn.commit()
 
     def insert_or_update_game_full_with_relations(self, game: GameObject):
         # 1. Insert/update game row
         self.cursor.execute("""
-        INSERT INTO games (igdb_id, title, igdb_found, ranked_score, list_count, total_count, completed, release_date)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+        INSERT INTO games (igdb_id, title, igdb_found, ranked_score, list_count, total_count, completed, release_date,
+                           seasonal_spring, seasonal_summer, seasonal_fall_halloween, seasonal_winter_christmas)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
         ON CONFLICT(igdb_id) DO UPDATE SET
             igdb_id=excluded.igdb_id,
             title=excluded.title,
@@ -274,7 +284,11 @@ class SQLManager:
             list_count=excluded.list_count,
             total_count=excluded.total_count,
             completed = excluded.completed,
-            release_date = excluded.release_date
+            release_date = excluded.release_date,
+            seasonal_spring = excluded.seasonal_spring,
+            seasonal_summer = excluded.seasonal_summer,
+            seasonal_fall_halloween = excluded.seasonal_fall_halloween,
+            seasonal_winter_christmas = excluded.seasonal_winter_christmas
         """, (
             game.igdb_ID,
             game.title,
@@ -283,7 +297,11 @@ class SQLManager:
             game.list_count,
             game.total_count,
             game.completed,
-            game.release_date
+            game.release_date,
+            game.seasonal_spring,
+            game.seasonal_summer,
+            game.seasonal_fall_halloween,
+            game.seasonal_winter_christmas
         ))
         self.conn.commit()
 
@@ -386,6 +404,7 @@ class SQLManager:
         base_query = """
         SELECT
             g.id, g.title, g.igdb_id, g.ranked_score, g.total_count, g.release_date,
+            g.seasonal_spring, g.seasonal_summer, g.seasonal_fall_halloween, g.seasonal_winter_christmas,
             GROUP_CONCAT(DISTINCT genres.name) AS genres,
             GROUP_CONCAT(DISTINCT themes.name) AS themes,
             GROUP_CONCAT(DISTINCT player_modes.name) AS player_modes,
@@ -433,6 +452,10 @@ class SQLManager:
             g.ranked_score,
             g.total_count,
             g.release_date,
+            g.seasonal_spring,
+            g.seasonal_summer,
+            g.seasonal_fall_halloween,
+            g.seasonal_winter_christmas,
             GROUP_CONCAT(DISTINCT genres.name) AS genres,
             GROUP_CONCAT(DISTINCT themes.name) AS themes,
             GROUP_CONCAT(DISTINCT player_modes.name) AS player_modes,

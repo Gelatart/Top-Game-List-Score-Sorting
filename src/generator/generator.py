@@ -98,6 +98,28 @@ def run_generator():
         if title in game_DB:
             game_DB[title].completed = True
 
+    # Step 4.5: Mark seasonal games
+    spring_titles = set(read_attributed_games(Path("game_lists") / "Spring.txt"))
+    summer_titles = set(read_attributed_games(Path("game_lists") / "Summer.txt"))
+    fall_titles = set(read_attributed_games(Path("game_lists") / "Fall-Halloween.txt"))
+    winter_titles = set(read_attributed_games(Path("game_lists") / "Winter-Christmas.txt"))
+
+    for title in spring_titles:
+        if title in game_DB:
+            game_DB[title].seasonal_spring = True
+
+    for title in summer_titles:
+        if title in game_DB:
+            game_DB[title].seasonal_summer = True
+
+    for title in fall_titles:
+        if title in game_DB:
+            game_DB[title].seasonal_fall_halloween = True
+
+    for title in winter_titles:
+        if title in game_DB:
+            game_DB[title].seasonal_winter_christmas = True
+
     #JSON LOADING AND PULLING BEFORE IGDB CHECKING
 
     import_DB = {}

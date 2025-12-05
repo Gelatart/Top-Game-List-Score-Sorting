@@ -15,7 +15,11 @@ def create_schema(conn, db_path="data/games.db"):
         list_count INTEGER,
         total_count INTEGER,
         completed BOOLEAN,
-        release_date TEXT
+        release_date TEXT,
+        seasonal_spring BOOLEAN DEFAULT 0,
+        seasonal_summer BOOLEAN DEFAULT 0,
+        seasonal_fall_halloween BOOLEAN DEFAULT 0,
+        seasonal_winter_christmas BOOLEAN DEFAULT 0
     )
     """)
     #Spinning off release date into its own tables?
