@@ -1,0 +1,9 @@
+{
+  "hooks": [
+    {
+      "id": "database-test-runner",
+      "file": "database-test-runner.json",
+      "enabled": true
+    }
+  ]
+}

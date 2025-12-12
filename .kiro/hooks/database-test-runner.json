@@ -1,0 +1,25 @@
+{
+  "id": "database-test-runner",
+  "name": "Database Test Runner",
+  "description": "Automatically run database-related tests when core database files are modified",
+  "trigger": {
+    "type": "file_save",
+    "filePatterns": [
+      "src/generator/sql_manager.py",
+      "src/generator/generator.py", 
+      "src/generator/create_schema.py",
+      "src/generator/database_interface.py",
+      "src/generator/mongo_manager.py"
+    ]
+  },
+  "action": {
+    "type": "shell_command",
+    "command": "./run_database_tests.sh",
+    "workingDirectory": ".",
+    "showOutput": true,
+    "timeout": 60000
+  },
+  "enabled": true,
+  "runInBackground": false,
+  "cooldown": 5000
+}

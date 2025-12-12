@@ -15,6 +15,7 @@ from generator.sql_manager import SQLManager
 #Make sure we support different join types?
 #-Already done inner join? Because equivalent to standard join?
 #Add support for left join, right join, full join
+#consider data-type appropriate default values to avoid nulls? use nulls when needed? test for nulls (is null/is not null)?
 
 COMMANDS = [
     ("Show all games (basic)", "list_games"),
