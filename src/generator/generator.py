@@ -5,10 +5,13 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 import requests
 import time
+from typing import List
 # Writing to an excel sheet using Python
 import xlwt
 from xlwt import Workbook
 from pathlib import Path
+
+import itertools
 
 from .config import check_for_src, get_env_var
 from .database_interface import DatabaseInterface
@@ -51,6 +54,67 @@ def load_list(files, file_count, game_DB, games_lists, type: ListType):
                 game.lists_referencing.append(filepath)
             print(f"Score of {score}: {title}")
         games_lists.append(filepath)
+
+def generate_sorted_reports(games: List[GameObject]):
+    """Generate sorted text reports for ranked, inclusion, and average scores"""
+    from .config import check_for_src
+    
+
+    # Sort games by different criteria
+    games_by_ranked = sorted(games, key=lambda g: g.ranked_score, reverse=True)
+    games_by_inclusion = sorted(games, key=lambda g: g.list_count, reverse=True)
+    games_by_average = sorted(games, key=lambda g: g.ranked_score / g.list_count, reverse=True)
+    
+    # Generate ranked score report
+    with open(check_for_src("reports/Sorted by Ranked.txt"), "w", encoding="utf-8") as f_ranked, \
+         open(check_for_src("reports/Sorted by Ranked (Uncompleted).txt"), "w", encoding="utf-8") as f_ranked_uncompleted:
+        
+        for game in games_by_ranked:
+            entry = ""
+            if game.completed:
+                entry += "[x]"
+            entry += game.title.strip()
+            if game.igdb_ID:
+                entry += f" [IGDB ID: {game.igdb_ID}]"
+            entry += f" --> {game.ranked_score}"
+            
+            f_ranked.write(entry + "\n")
+            if not game.completed:
+                f_ranked_uncompleted.write(entry + "\n")
+    
+    # Generate inclusion score report
+    with open(check_for_src("reports/Sorted by Inclusion.txt"), "w", encoding="utf-8") as f_inclusion, \
+         open(check_for_src("reports/Sorted by Inclusion (Uncompleted).txt"), "w", encoding="utf-8") as f_inclusion_uncompleted:
+        
+        for game in games_by_inclusion:
+            entry = ""
+            if game.completed:
+                entry += "[x]"
+            entry += game.title.strip()
+            if game.igdb_ID:
+                entry += f" [IGDB ID: {game.igdb_ID}]"
+            entry += f" --> {game.list_count}"
+            
+            f_inclusion.write(entry + "\n")
+            if not game.completed:
+                f_inclusion_uncompleted.write(entry + "\n")
+    
+    # Generate average score report
+    with open(check_for_src("reports/Sorted by Average.txt"), "w", encoding="utf-8") as f_average, \
+         open(check_for_src("reports/Sorted by Average (Uncompleted).txt"), "w", encoding="utf-8") as f_average_uncompleted:
+        
+        for game in games_by_average:
+            entry = ""
+            if game.completed:
+                entry += "[x]"
+            entry += game.title.strip()
+            if game.igdb_ID:
+                entry += f" [IGDB ID: {game.igdb_ID}]"
+            entry += f" --> {game.ranked_score / game.list_count}"
+            
+            f_average.write(entry + "\n")
+            if not game.completed:
+                f_average_uncompleted.write(entry + "\n")
 
 def run_generator():
     """
@@ -688,75 +752,17 @@ def run_generator():
     export_to_json(export_list, "reports/games.json")
     export_to_excel(export_list, "reports/games.xlsx")
     export_to_text(export_list, "reports/games.txt")
+    
+    # Generate sorted reports
+    generate_sorted_reports(export_list)
 
     #OLD EXPORT PROCESS
 
     print()
     print("Time to grab the games from the database!")
-    """games_pulled = mon_col.find()"""
-    """games_pulled_ranked = mon_col.find().sort("Ranked Score", -1)"""
-    """games_pulled_inclusion = mon_col.find().sort("Inclusion Score", -1)"""
-    """games_pulled_average = mon_col.find().sort("Average Score", -1)"""
 
-    # Opening the files that we are going to be writing to
-    file_ranked = open(check_for_src("reports/Sorted by Ranked.txt"), "w", encoding="utf-8")
-    file_inclusion = open(check_for_src("reports/Sorted by Inclusion.txt"), "w", encoding="utf-8")
-    file_average = open(check_for_src("reports/Sorted by Average.txt"), "w", encoding="utf-8")
-    file_ranked_uncompleted = open(check_for_src("reports/Sorted by Ranked (Uncompleted).txt"), "w", encoding="utf-8")
-    file_inclusion_uncompleted = open(check_for_src("reports/Sorted by Inclusion (Uncompleted).txt"), "w",
-                                      encoding="utf-8")
-    file_average_uncompleted = open(check_for_src("reports/Sorted by Average (Uncompleted).txt"), "w", encoding="utf-8")
-
-    """for game in games_pulled_ranked:
-        entry = ""
-        completed = game["Completed"]
-        if (completed == True):
-            entry += "[x]"
-        entry += game['Title'].strip()
-        if (igdb_answer == 'Y' or igdb_answer == 'Yes'):
-            #Needed while we are using timespeedup
-            if(game['IGDB ID'] != None):
-                entry += " [IGDB ID: " + str(game['IGDB ID']) + "]"
-        entry += " --> " + str(game['Ranked Score'])
-        file_ranked.write(entry)
-        file_ranked.write("\n")
-        if (completed == False):
-            file_ranked_uncompleted.write(entry)
-            file_ranked_uncompleted.write("\n")"""
-
-    """for game in games_pulled_inclusion:
-        entry = ""
-        completed = game["Completed"]
-        if (completed == True):
-            entry += "[x]"
-        entry += game['Title'].strip()
-        if (igdb_answer == 'Y' or igdb_answer == 'Yes'):
-            # Needed while we are using timespeedup
-            if (game['IGDB ID'] != None):
-                entry += " [IGDB ID: " + str(game['IGDB ID']) + "]"
-        entry += " --> " + str(game['Inclusion Score'])
-        file_inclusion.write(entry)
-        file_inclusion.write("\n")
-        if (completed == False):
-            file_inclusion_uncompleted.write(entry)
-            file_inclusion_uncompleted.write("\n")"""
-
-    """for game in games_pulled_average:
-        entry = ""
-        completed = game["Completed"]
-        if (completed == True):
-            entry += "[x]"
-        entry += game['Title'].strip()
-        if (igdb_answer == 'Y' or igdb_answer == 'Yes'):
-            # Needed while we are using timespeedup
-            if (game['IGDB ID'] != None):
-                entry += " [IGDB ID: " + str(game['IGDB ID']) + "]"
-        entry += " --> " + str(game['Average Score'])
-        file_average.write(entry)
-        file_average.write("\n")
-        if (completed == False):
-            file_average_uncompleted.write(entry)
-            file_average_uncompleted.write("\n")"""
+    # Generate sorted reports
+    generate_sorted_reports(export_list)
 
     # Writing to excel using new approach from MongoDB Atlas
     bold_style = xlwt.easyxf('font: bold 1;')
