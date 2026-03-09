@@ -455,6 +455,8 @@ Paper Mario: The Thousand-Year Door [2024]: IGDB ID: 266690
 Perfect Dark GBC: IGDB ID: 1464
 Pokemon Black Version (what about white?): IGDB ID: 1521
 Pokemon Black Version 2 (what about white 2?): IGDB ID: 8284
+Pokemon Colosseum: IGDB ID: 2725
+Pokemon Conquest: IGDB ID: 2288
 Pokemon Crystal Version: IGDB ID: 1514
 Pokemon Diamond Version (what about pearl?): IGDB ID: 1560
 Pokemon Emerald Version): IGDB ID: 1517
@@ -462,16 +464,20 @@ Pokemon Fire Red Version (what about leaf green?): IGDB ID: 1559
 Pokemon GO: IGDB ID: 12515
 Pokemon Gold Version (what about silver?): IGDB ID: 1558
 Pokemon Heart Gold Version (what about soul silver?): IGDB ID: 1556
+Pokemon Legends: Arceus: IGDB ID: 144054
 Pokemon: Let's Go, Pikachu! (what about eevee?): IGDB ID: 25877
+Pokemon Mystery Dungeon: Blue Rescue Team: IGDB ID: 2320
 Pokemon Mystery Dungeon: Explorers of Sky: IGDB ID: 2323
 Pokemon Pinball: IGDB ID: 4068
 Pokemon Platinum: IGBD ID: 1519
 Pokemon Puzzle Challenge: IGDB ID: 49857
 Pokemon Puzzle League: IGDB ID: 3574
+Pokemon Ranger: IGDB ID: 14606
 Pokemon Red Version (what about blue?): IGDB ID: 1561
 Pokemon Ruby Version (what about Sapphire?): IGDB ID: 1557
 Pokemon SNAP: IGDB ID: 2324
 Pokemon Stadium: IGDB ID: 2289
+Pokemon Stadium 2: IGDB ID: 2290
 Pokemon Sun Version: IGDB ID: 18100
 Pokemon Trading Card Game GBC: IGDB ID: 4567
 Pokemon Ultra Sun (what about ultra moon?): IGDB ID: 36792

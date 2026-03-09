@@ -40,7 +40,7 @@ R-The 50 Best Video Games of All Time - TIME - 8-23-2016
 R-Top 10 Video Games - CNET - 7-5-2008
 
 SCORE AGGREGATION (CRITICS):
-R-Metacritic (Critic Scores, Metascore, Up to 100) (As of 10-17-2025)
+R-Metacritic (Critic Scores, Metascore, Up to 100) (As of 3-9-2026)
 	F-+ FORMER
 
 SCORE AGGREGATION (USERS):
@@ -120,6 +120,9 @@ R-The 10 Best Post-Apocalyptic Video Games Ranked - Maxim - 8-31-2016
 TOP THEMATIC GENRE ALL TIME (PREHISTORIC):
 U-The 10 Best Prehistoric Video Games - Paste Magazine - 2-10-2016
 R-12 Best Prehistoric Video Games, Ranked - GameRant - 12-14-2022
+
+TOP FRANCHISE ALL TIME (POKEMON):
+R-The 10 Best Pokemon Spin-off Games - IGN - 3-9-2026
 
 TOP FRANCHISE ALL TIME (STAR WARS):
 U-The Best and Worst Star Wars Video Games - Yahoo Tech - 12-10-2015

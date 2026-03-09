@@ -20,6 +20,8 @@ from .file_loader import ListType, get_files_in_dir, read_game_list, read_attrib
 from .game_object import GameObject
 from .igdb_client import IGDB_Client
 
+#Seems like new files I add might not be integrating yet into the general process? Make sure they do
+
 def mongo_connect():
     #Replace the part where this originally happened later in the code with this function?
     mon_connect = get_env_var('MONGO_URI')

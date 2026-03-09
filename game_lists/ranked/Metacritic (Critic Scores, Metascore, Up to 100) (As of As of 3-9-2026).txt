@@ -5,8 +5,8 @@ Grand Theft Auto IV
 Super Mario Galaxy
 Super Mario Galaxy 2
 The Legend of Zelda: Breath of the Wild
-Tony Hawk's Pro Skater 3
 Perfect Dark
+Tony Hawk's Pro Skater 3
 Red Dead Redemption 2
 Grand Theft Auto V
 Metroid Prime
@@ -40,21 +40,21 @@ LittleBigPlanet
 The Legend of Zelda: Collector's Edition
 Gran Turismo 3: A-Spec
 Halo 2
-The Legend of Zelda: A Link to the Past & Four Swords
 The Legend of Zelda: Majora's Mask
+The Legend of Zelda: A Link to the Past & Four Swords
 The Last of Us
 The Legend of Zelda: Twilight Princess
 Madden NFL 2003
+Hades II
 Persona 5 Royal
 The Last of Us Remastered
 Red Dead Redemption
 Portal 2
-Hades II
 Astro Bot
 Final Fantasy IX
 <19560> God of War [2018]
-Tony Hawk's Pro Skater 4
 Elden Ring: Shadow of the Erdtree
+Tony Hawk's Pro Skater 4
 Devil May Cry
 Madden NFL 2002
 Batman: Arkham City
@@ -71,9 +71,9 @@ Call of Duty 4: Modern Warfare
 BioShock Infinite
 Halo 3
 Ninja Gaiden Black
-Metal Gear Solid
 Super Mario Advance 4: Super Mario Bros. 3
 Grim Fandango
+Metal Gear Solid
 Jet Set Radio
 Tom Clancy's Splinter Cell: Chaos Theory
 <112875> God of War Ragnarok

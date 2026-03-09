@@ -50,14 +50,14 @@
 [None] The Elder Scrolls V: Skyrim: 1846
 [None] The Legend of Zelda: Breath of the Wild: 1741
 [None] Final Fantasy VII: 2229
-[None] Red Dead Redemption: 1987
+[None] Red Dead Redemption: 1986
 [None] BioShock: 2142
 [None] Bloodborne: 1593
 [None] Chrono Trigger: 2496
 [None] Dark Souls: 2213
 [None] Final Fantasy VI: 2108
 [None] The Legend of Zelda: A Link to the Past: 2705
-[None] Metal Gear Solid: 1928
+[None] Metal Gear Solid: 1926
 [None] Shadow of the Colossus: 2228
 [None] Mass Effect: 1130
 [None] Kingdom Hearts II: 682
@@ -73,9 +73,9 @@
 [None] Overwatch: 1174
 [None] The Legend of Zelda: The Wind Waker: 1676
 [None] Halo 3: 1557
-[None] Portal 2: 2386
+[None] Portal 2: 2385
 [None] Final Fantasy X: 777
-[None] The Legend of Zelda: Majora's Mask: 1563
+[None] The Legend of Zelda: Majora's Mask: 1564
 [None] Persona 5: 797
 [None] Fallout: New Vegas: 1101
 [None] Super Mario Bros. 3: 2148
@@ -166,7 +166,7 @@
 [None] The Last Guardian: 294
 [None] Final Fantasy XI Online: 173
 [None] Undertale: 1135
-[None] Perfect Dark: 737
+[None] Perfect Dark: 738
 [None] Monster Hunter: World: 368
 [None] Age of Empires II: The Age of Kings: 724
 [None] Grand Theft Auto: Vice City: 1297
@@ -179,7 +179,7 @@
 [None] Ratchet & Clank: Going Commando: 211
 [None] Fable II: 567
 [None] Chrono Cross: 627
-[None] Grim Fandango: 847
+[None] Grim Fandango: 848
 [None] <1514> Pokemon Crystal Version: 246
 [None] Final Fantasy IV: 551
 [None] Battlefield: Bad Company 2: 174
@@ -476,7 +476,7 @@
 [None] Half-Minute Hero: 1
 [None] Gran Turismo 4: 251
 [None] Burnout 3: Takedown: 725
-[None] Tony Hawk's Pro Skater 4: 55
+[None] Tony Hawk's Pro Skater 4: 54
 [None] Katamari Damacy: 914
 [None] SSX Tricky: 5
 [None] SoulCalibur II: 601
@@ -617,7 +617,7 @@
 [None] Yakuza: Like a Dragon: 148
 [None] Bugsnax: 147
 [None] Crash Bandicoot 4: It's About Time: 4
-[None] Persona 5 Royal: 200
+[None] Persona 5 Royal: 199
 [None] Teardown: 2
 [None] Kentucky Route Zero: TV Edition: 1
 [None] Far Cry 3: 224
@@ -789,7 +789,7 @@
 [None] Wipeout XL: 207
 [None] Street Fighter IV: 370
 [None] Tony Hawk's Pro Skater: 601
-[None] Tony Hawk's Pro Skater 3: 612
+[None] Tony Hawk's Pro Skater 3: 611
 [None] <19686> Resident Evil 2: 123
 [None] Unreal Tournament: 655
 [None] <103337> Divinity: Original Sin II - Definitive Edition: 17
@@ -832,7 +832,7 @@
 [None] Rhythm Heaven Fever: 34
 [None] <19686> Resident Evil 2 [2019]: 198
 [None] Silent Hill 3: 138
-[None] Hades II: 73
+[None] Hades II: 77
 [None] Balatro: 22
 [None] Cruelty Squad: 21
 [None] Kirby Super Star Ultra: 15
@@ -940,23 +940,6 @@
 [None] Trauma Center: Under the Knife: 4
 [None] World Soccer Winning Eleven 8 International: 3
 [None] Crazy Taxi: 170
-[None] The House in Fata Morgana: Dreams of the Revenants Edition: 76
-[None] Portal: Companion Collection: 68
-[None] The Legend of Zelda: Collector's Edition: 132
-[None] The Legend of Zelda: A Link to the Past & Four Swords: 83
-[None] Madden NFL 2003: 55
-[None] The Last of Us Remastered: 55
-[None] Elden Ring: Shadow of the Erdtree: 45
-[None] Madden NFL 2002: 43
-[None] Metroid Prime Remastered: 41
-[None] Metaphor: ReFantazio: 33
-[None] Super Mario Advance 4: Super Mario Bros. 3: 116
-[None] <112875> God of War Ragnarok: 116
-[None] Virtua Fighter 4: 13
-[None] Tom Clancy's Splinter Cell: Pandora Tomorrow: 9
-[None] Pac-Man: Championship Edition DX: 354
-[None] Dwarf Fortress: 565
-[None] Unreal Tournament 2004: 4
 [None] Tom Clancy's Rainbow Six 3: Raven Shield: 50
 [None] The Chronicles of Riddick: Escape from Butcher Bay: 221
 [None] NCAA Football 2003: 12
@@ -1041,6 +1024,7 @@
 [None] SimCity: 746
 [None] FIFA Soccer 12: 478
 [None] Rogue: 502
+[None] Dwarf Fortress: 565
 [None] Hero's Quest: So You Want to Be a Hero: 453
 [None] Defense of the Ancients: 476
 [None] Football Manager: 449
@@ -1062,6 +1046,7 @@
 [None] Vampire: The Masquerade - Redemption: 370
 [None] Kirby's Adventure: 489
 [None] The Operative: No One Lives Forever: 360
+[None] Pac-Man: Championship Edition DX: 354
 [None] Brothers: A Tale of Two Sons: 445
 [None] Castlevania: Aria of Sorrow: 368
 [None] Crusader Kings II: 342
@@ -1315,6 +1300,21 @@
 [None] The Binding of Isaac: 56
 [None] Three Fourths Home: 53
 [None] The Talos Principle: 29
+[None] The House in Fata Morgana: Dreams of the Revenants Edition: 76
+[None] Portal: Companion Collection: 68
+[None] The Legend of Zelda: Collector's Edition: 132
+[None] The Legend of Zelda: A Link to the Past & Four Swords: 82
+[None] Madden NFL 2003: 55
+[None] The Last of Us Remastered: 54
+[None] Elden Ring: Shadow of the Erdtree: 46
+[None] Madden NFL 2002: 43
+[None] Metroid Prime Remastered: 41
+[None] Metaphor: ReFantazio: 33
+[None] Super Mario Advance 4: Super Mario Bros. 3: 117
+[None] <112875> God of War Ragnarok: 116
+[None] Virtua Fighter 4: 13
+[None] Tom Clancy's Splinter Cell: Pandora Tomorrow: 9
+[None] Unreal Tournament 2004: 4
 [None] <22007> Daytona USA 2001: 17
 [None] Dead or Alive 2: 11
 [None] NBA 2K: 10

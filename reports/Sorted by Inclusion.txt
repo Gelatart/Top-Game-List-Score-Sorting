@@ -308,8 +308,8 @@ Thief II: The Metal Age --> 6
 Wolfenstein 3D --> 6
 Night in the Woods --> 6
 Wolfenstein: The New Order --> 6
-Dwarf Fortress --> 6
 Burnout Paradise --> 6
+Dwarf Fortress --> 6
 Star Wars --> 6
 Warcraft II: Tides of Darkness --> 6
 Battlefield 1942 --> 6
@@ -600,12 +600,6 @@ Skate 2 --> 3
 Virtua Tennis --> 3
 Star Wars: Rogue Squadron II - Rogue Leader --> 3
 Dead Rising --> 3
-The Legend of Zelda: Collector's Edition --> 3
-The Legend of Zelda: A Link to the Past & Four Swords --> 3
-[x]The Last of Us Remastered --> 3
-Super Mario Advance 4: Super Mario Bros. 3 --> 3
-<112875> God of War Ragnarok --> 3
-Unreal Tournament 2004 --> 3
 Madden NFL 2005 --> 3
 Professor Layton and the Unwound Future --> 3
 [x]Pikmin 2 --> 3
@@ -644,6 +638,12 @@ F-Zero --> 3
 Bubble Bobble --> 3
 Lode Runner --> 3
 The Talos Principle --> 3
+The Legend of Zelda: Collector's Edition --> 3
+The Legend of Zelda: A Link to the Past & Four Swords --> 3
+[x]The Last of Us Remastered --> 3
+Super Mario Advance 4: Super Mario Bros. 3 --> 3
+<112875> God of War Ragnarok --> 3
+Unreal Tournament 2004 --> 3
 Gears 5 --> 3
 Super Star Wars: The Empire Strikes Back --> 3
 <18100> Pokemon Sun Version --> 3
@@ -827,9 +827,6 @@ Madden NFL 2004 --> 2
 Shadow Complex --> 2
 [x]LEGO Star Wars: The Complete Saga --> 2
 Assassin's Creed --> 2
-Portal: Companion Collection --> 2
-Tom Clancy's Splinter Cell: Pandora Tomorrow --> 2
-Pac-Man: Championship Edition DX --> 2
 Tom Clancy's Rainbow Six 3: Raven Shield --> 2
 MVP Baseball 2005 --> 2
 Panzer Dragoon Orta --> 2
@@ -854,6 +851,7 @@ Rogue --> 2
 Defense of the Ancients --> 2
 Harvest Moon --> 2
 The Sentinel --> 2
+Pac-Man: Championship Edition DX --> 2
 Castlevania: Aria of Sorrow --> 2
 DEFCON --> 2
 Red Faction: Guerrilla --> 2
@@ -928,6 +926,8 @@ MechWarrior 2: 31st Century Combat --> 2
 Street Fighter II Turbo: Hyper Fighting --> 2
 The Binding of Isaac --> 2
 Three Fourths Home --> 2
+Portal: Companion Collection --> 2
+Tom Clancy's Splinter Cell: Pandora Tomorrow --> 2
 Star Wars Jedi: Fallen Order --> 2
 Apex Legends --> 2
 Call of Duty: Modern Warfare --> 2
@@ -1287,13 +1287,6 @@ Twisted Metal: Black --> 1
 Hitman: Codename 47 --> 1
 Trauma Center: Under the Knife --> 1
 World Soccer Winning Eleven 8 International --> 1
-The House in Fata Morgana: Dreams of the Revenants Edition --> 1
-Madden NFL 2003 --> 1
-Elden Ring: Shadow of the Erdtree --> 1
-Madden NFL 2002 --> 1
-Metroid Prime Remastered --> 1
-Metaphor: ReFantazio --> 1
-Virtua Fighter 4 --> 1
 NCAA Football 2003 --> 1
 Mercenaries: Playground of Destruction --> 1
 Crimson Skies: High Road to Revenge --> 1
@@ -1476,6 +1469,13 @@ Astyanax --> 1
 <86386> Teenage Mutant Ninja Turtles --> 1
 Rush'n Attack --> 1
 Ice Hockey --> 1
+The House in Fata Morgana: Dreams of the Revenants Edition --> 1
+Madden NFL 2003 --> 1
+Elden Ring: Shadow of the Erdtree --> 1
+Madden NFL 2002 --> 1
+Metroid Prime Remastered --> 1
+Metaphor: ReFantazio --> 1
+Virtua Fighter 4 --> 1
 <22007> Daytona USA 2001 --> 1
 Dead or Alive 2 --> 1
 NBA 2K --> 1
