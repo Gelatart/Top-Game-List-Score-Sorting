@@ -1,4 +1,5 @@
 1
+Alan Wake II
 Bayonetta 2
 The Binding of Isaac: Rebirth
 Blood
@@ -25,10 +26,11 @@ Half-Life
 Higurashi When They Cry Kai
 Kentucky Route Zero
 The Last of Us
+The Legend of Heroes: Trails in the Sky SC
 The Legend of Zelda: A Link to the Past
 The Legend of Zelda: Collector's Edition
+The Legend of Zelda: Tears of the Kingdom
 Like a Dragon: Infinite Wealth
-Mass Effect 2
 Metal Gear Solid HD Collection
 Metroid Dread
 Metroid Prime: Trilogy
@@ -48,7 +50,6 @@ Riven: The Sequel to Myst
 The Secret of Monkey Island
 <37094> Shadow of the Colossus [2018]
 Shenmue II
-Sonic the Hedgehog 3 & Knuckles
 Star Wars: Knights of the Old Republic II - The Sith Lords
 StarCraft: Brood War
 Suikoden II
@@ -57,6 +58,7 @@ Super Mario All-Stars + Super Mario World
 Super Mario Bros. 3
 Super Smash Bros. Ultimate
 Thief: The Dark Project
+The Witcher 3: Wild Hunt
 The Witcher 3: Wild Hunt - Blood and Wine
 The Witcher 3: Wild Hunt - Hearts of Stone
 Wonderful Everyday: Down the Rabbit-Hole

@@ -3,8 +3,6 @@
 Ace Combat 5: The Unsung War
 Advance Wars
 Advance Wars 2: Black Hole Rising
-Age of Empires II: The Age of Kings
-Age of Empires II: The Conquerors
 Age of Empires IV: Anniversary Edition
 Age of Wonders
 AI: The Somnium Files
@@ -12,46 +10,59 @@ Alundra
 Angry stone
 Anito Legends
 Anomaly Agent
+Astro's Playroom
+Atelier Marie Remake: The Alchemist of Salburg
 Atelier Sophie 2: The Alchemist of the Mysterious Dream
-Baldur's Gate II: Shadows of Amn
-Banjo-Kazooie
 Banjo-Tooie
 <21704> Batman: Arkham City - Game of the Year Edition
-Bayonetta 2
+Batman: Arkham Collection
+Bayonetta & Vanquish 10th Anniversary Bundle
+BioShock
+BioShock 2: Minerva's Den
 Bitcoin or Bomb?
+Black & White 2: Battle of the Gods
 Black Zork
 Bloodborne
 Bloodborne: Complete Edition Bundle
+Bloodborne: The Old Hunters Edition
 Bopl Battle
 Buck Bumble
 Buckshot Roulette
 Bully
+Burnout Revenge
 Burnout 3: Takedown
 Car Battler Joe
 Castlevania: Symphony of the Night
-<20398> Chrono Trigger [DS]
+Cold Fear
 Command & Conquer
 Command & Conquer: Generals - Zero Hour
 Content Warning
 Conker's Bad Fur Day
 Counter-Strike
-Crash Bandicoot: Warped
+Crystar
 Cubethon
-The Curse of Monkey Island
+Cuphead: Physical Edition
+<277807> Cyberpunk 2077: Ultimate Edition
 Dark Cloud 2
+Dark Souls III
 Day of Defeat
 Day of Defeat: Source
+Dead or Alive 1 Ultimate
 Dead or Alive 6
 Demolition Racer
+Devil May Cry 5th Anniversary Collection
+Devil May Cry 3: Dante's Awakening
 Devil May Cry 3: Dante's Awakening - Special Edition
 Devil May Cry 4: Special Edition
 Devil May Cry HD Collection
-Diablo II: Lord of Destruction
+Digimon World
 Dino Crisis
 Dino Crisis 2
 Dissidia 012 Final Fantasy
 Donkey Kong Country: Tropical Freeze
+Don't Escape: 4 Days to Survive
 <259941> Doom [GBA]
+The Ultimate Doom
 <202120> Doom II: Hell on Earth [GBA]
 Doom 3: Resurrection of Evil
 Dragon Ball Z: Budokai Tenkaichi 3
@@ -61,11 +72,14 @@ Dungeon Keeper 2
 Dynasty Warriors 9
 Dynasty Warriors 9: Empires
 Eternal End
+Eternal Poison
 Everlasting Summer
+The Evil Within: The Assignment
+The Evil Within: The Consequence
 The Evil Within 2
-Fallout 2
 Fatal Frame II: Crimson Butterfly
 Fatal Frame: Maiden of Black Water
+Fate/Samurai Remnant
 Final Fantasy: 20th Anniversary Edition
 <399> Final Fantasy IV [2008]
 Final Fantasy IV: The Complete Collection
@@ -73,19 +87,20 @@ Final Fantasy VI Advance
 Final Fantasy VII
 Final Fantasy IX
 Final Fantasy X/X-2 HD Remaster
-Final Fantasy XIV: Endwalker
 Final Fantasy XIV: Heavensward
 Final Fantasy XIV: Stormblood
+Final Fantasy XV: Episode Ignis
 Final Fantasy Chronicles
 Final Fantasy: Crystal Chronicles
 Final Fantasy Tactics
 Final Fantasy Tactics Advance
-Fire Emblem: The Blazing Blade
+Final Fantasy Tactics: The War of the Lions
 Fire Emblem: The Sacred Stones
+Flower, Sun, and Rain: Murder and Mystery in Paradise
 Football Manager 2010
 Gears of War 2: Game of the Year Edition
 Ghost Trick: Phantom Detective
-<19560> God of War [2018]
+God Hand
 God of War II
 God of War: Ghost of Sparta
 God of War Saga
@@ -93,16 +108,13 @@ Golden Sun
 Golden Sun: The Lost Age
 GoldenEye 007
 Gothic II
-Grand Theft Auto: San Andreas
 Grim Fandango
 Gun
 Hades
-Half-Life 2
+Half-Life
+Halo 2: Multiplayer Map Pack
 Harvest Moon: Friends of Mineral Town
 Haunting Ground
-Heroes of Might and Magic III: The Restoration of Erathia
-Heroes of Might and Magic III: Armageddon's Blade
-Heroes of Might and Magic III: The Shadow of Death
 Hi-Fi Rush
 Hitman 2
 Hogwarts Legacy
@@ -111,21 +123,21 @@ I Expect You to Die 3
 Insurgency: Sandstorm
 It Takes Two
 Jagged Alliance 2
+Jagged Alliance 2: Wildfire
 Justice League Heroes
+Kessen III
+The King of Fighters '98: Ultimate Match
 The King of Fighters Collection: The Orochi Saga
 Kingdom Hearts HD 2.5 Remix
 Kirby's Dream Collection Special Edition
 Klonoa 2: Lunatea's Veil
 Knights of Honor
-The Last of Us Remastered
 Left 4 Dead
 The Legend of Dragoon
+The Legend of Zelda: Collector's Edition
 The Legend of Zelda: A Link Between Worlds
-The Legend of Zelda: A Link to the Past & Four Swords
 The Legend of Zelda: Majora's Mask 3D
-The Legend of Zelda: Ocarina of Time
 The Legend of Zelda: Twilight Princess
-The Legend of Zelda: The Wind Waker HD
 Life is Strange: Episode 3 - Chaos Theory
 Lost in Hell
 Madison
@@ -137,43 +149,48 @@ Mario Kart 8: DLC Pack Two
 Master of Orion II: Battle at Antares
 Max Payne
 Max Payne 2: The Fall of Max Payne
+Medieval II: Total War
 Mega Man Legacy Collection 2
-Metal Gear Solid
-Metal Gear Solid 3: Snake Eater
-Metal Gear Solid 3: Subsistence
-Metal Gear Solid HD Collection
+Metal Torrent
 Metroid Fusion
-Metroid Prime
+Metroid: Zero Mission
 Midnight Club 3: DUB Edition
+Monster Rancher 1 & 2 DX
 Mother 3
 MVP 07: NCAA Baseball
+Nier: Automata - Become as Gods Edition
+Nier: Automata - Game of the Yorha Edition
 Nioh Remastered: Complete Edition
 Nobunaga's Ambition: Rise to Power
+<1271> Okami
 OneShot
 The Orange Box
-Outer Wilds: Echoes of the Eye
 Paper Mario
-Paper Mario: The Thousand-Year Door
+<266690> Paper Mario: The Thousand-Year Door [2024]
 Parasite Eve II
-Persona 4 Golden
 Persona 5
 Phoenix Wright: Ace Attorney
 The Pirate Queen: A Forgotten Legend
 Pitfall: The Lost Expedition
-Planescape: Torment
 Platinum Demo: Final Fantasy XV
 P.N.03
+<1556> Pokemon Heart Gold Version
+<2323> Pokemon Mystery Dungeon: Explorers of Sky
 <1519> Pokemon Platinum Version
 <36792> Pokemon Ultra Sun Version
 Portal
+Portal: Still Alive
 Portal 2
 Portal: Companion Collection
 Predator: Concrete Jungle
 Professor Layton and the Unwound Future
+Progressbar95
 Project Warlock
 Ratchet & Clank: Going Commando
 <1773> Ratchet & Clank: Up Your Arsenal
 Raw Danger!
+Red Dead Redemption
+Resident Evil
 Resident Evil 2
 <19686> Resident Evil 2
 Resident Evil 3: Nemesis
@@ -184,11 +201,10 @@ The Secret of Monkey Island: Special Edition
 Sekiro: Shadows Die Twice
 Shadow Hearts: Covenant
 Shadow of the Colossus
-Shenmue
-Shenmue II
 Silent Hill
-Silent Hill 2
+Sly 2: Band of Thieves
 The Sly Collection
+Snowbreak: Containment Zone
 Snufkin: Melody of Moominvalley
 Sonic Mania Plus
 Splatoon 3: Side Order
@@ -197,20 +213,25 @@ Spyro 2: Ripto's Rage!
 SSX 3
 Star Wars: Battlefront II
 Star Wars: Knights of the Old Republic
-StarCraft: Brood War
+StarCraft
+Steins;Gate
 The Suffering
 Suikoden V
 Super Mario 3D World
 Super Mario 64
+Super Mario Advance 4: Super Mario Bros. 3
+Super Mario Bros. Wonder
+Super Mario Galaxy
 Super Mario World: Super Mario Advance 2
+Super Mombo Quest
 Super Smash Bros. for Wii U
-Super Smash Bros. Melee
 Superliminal
-System Shock 2
+Systematic Insanity
 Tales of Symphonia
 Tales of Vesperia
 The Talos Principle II
 Team Fortress 2
+Tekken 3
 Tengami
 Theatrhythm Final Fantasy: Curtain Call
 TimeSplitters: Future Perfect
@@ -219,21 +240,23 @@ Touken Ranbu Warriors
 TrackMania United
 Ultra Kaiju Monster Rancher
 Umineko When They Cry: Question Arcs
+Uncover the Smoking Gun
 Valkyrie Profile 2: Silmeria
 Vampire: The Masquerade - Bloodlines
+Vanquish
 Virtua Tennis
+<127782> Warcraft II: Battle.net Edition
 Warcraft II: Beyond the Dark Portal
 Warcraft II: Tides of Darkness
-Warcraft III: Reign of Chaos
-Warcraft III: The Frozen Throne
+Widow in the Endless Labyrinth
 Wild Earth: African Safari
 Winning Eleven: Pro Evolution Soccer 2007
-The Witcher 3: Wild Hunt
 World War ToonZ
+WWE Smackdown! Here Comes the Pain
 X-COM: UFO Defense
 Xenoblade Chronicles
-Xenogears
+Xenoblade Chronicles 3: Future Redeemed
+Xenoblade Chronicles X
 Yggdra Union: We'll Never Fight Alone
-Yoshi's Island: Super Mario Advance 3
 Zeno Clash: Ultimate Edition
 Z.H.P. Unlosing Ranger vs. Darkdeath Evilman

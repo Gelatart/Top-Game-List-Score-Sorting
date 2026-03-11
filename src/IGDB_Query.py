@@ -500,6 +500,7 @@ Samurai Showdown 2019: IGDB ID: 109277
 Sapiens 2022: IGDB ID: 117186
 Shadow of the Colossus [2018]: IGDB ID: 37094
 Shadowrun SNES: IGDB ID: 7640
+Silent Hill 2 [2024]: IGDB ID: 222341
 SimCity SNES: IGDB ID: 180001
 Singstar 2007 (had in my list that we had a 2008 one?): IGDB ID: 15180
 Spider-Man [PlayStation]: IGDB ID: 3603
