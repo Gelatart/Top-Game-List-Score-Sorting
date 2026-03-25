@@ -40,14 +40,15 @@ def mongo_connect():
 
 def load_list(files, file_count, game_DB, games_lists, type: ListType):
     """
-    Function for loading and processing different directories of lists, rather than rewriting the logic multiple times slightly differently
+    Load and process a directory of game lists into game_DB.
+    Returns the updated file count.
     """
-    #Do I make some of these variables global? Declared outside any specific functions?
     for filepath in files:
         file_count += 1
         for title, score, total in read_game_list(filepath, type):
             if title not in game_DB:
                 game_DB[title] = GameObject(title, ranked_score=score, total_count=total)
+                game_DB[title].lists_referencing.append(filepath)  # track first appearance
             else:
                 game = game_DB[title]
                 game.ranked_score += score
@@ -56,6 +57,7 @@ def load_list(files, file_count, game_DB, games_lists, type: ListType):
                 game.lists_referencing.append(filepath)
             print(f"Score of {score}: {title}")
         games_lists.append(filepath)
+    return file_count
 
 def generate_sorted_reports(games: List[GameObject]):
     """Generate sorted text reports for ranked, inclusion, and average scores"""
@@ -149,15 +151,13 @@ def run_generator():
     sheet1 = wb.add_sheet('Sheet 1')
 
     # Step 1: Load and process ranked lists
-    load_list(get_files_in_dir("game_lists/ranked"), ranked_file_count, game_DB, games_lists, ListType.RANKED)
+    ranked_file_count = load_list(get_files_in_dir("game_lists/ranked"), ranked_file_count, game_DB, games_lists, ListType.RANKED)
 
     # Step 2: Load and process unranked lists
-    #unranked_files = get_files_in_dir("game_lists/unranked")
-    load_list(get_files_in_dir("game_lists/unranked"), unranked_file_count, game_DB, games_lists, ListType.UNRANKED)
+    unranked_file_count = load_list(get_files_in_dir("game_lists/unranked"), unranked_file_count, game_DB, games_lists, ListType.UNRANKED)
 
     # Step 3: Load and process former lists
-    #former_files = get_files_in_dir("game_lists/former")
-    load_list(get_files_in_dir("game_lists/former"), former_file_count, game_DB, games_lists, ListType.FORMER)
+    former_file_count = load_list(get_files_in_dir("game_lists/former"), former_file_count, game_DB, games_lists, ListType.FORMER)
 
     # Step 4: Mark completed games
     for title in completed_titles:
@@ -193,382 +193,70 @@ def run_generator():
     # eventually try for functionality where we only update the games that have updated scores? or new games?
 
     # Step 5: Enrich with IGDB Data
+    # IGDB_Client handles <ID> prefix, caching, unicode normalization, and all fields
+    # (platforms, release_dates, genres, themes, game_modes, involved_companies)
+
     #pulling wrong data on some fields, might need to further develop?
     #Figure out how to derive a main_platform, perhaps by going through all of the release dates of all the platforms, and having some sort of way to break ties?
-    igdb_check = False
     full_answer = False
-    while (igdb_check == False):
-        igdb_answer = input("Would you like to pull data from IGDB right now or do it later? Answer True or False to continue: ")
-        if(igdb_answer == "True" or igdb_answer == "False"):
-            igdb_check = True
-        else:
-            print("Sorry, please enter correct input")
-    if(igdb_answer == "True"):
-        #full_answer = False
-        while True:
-            #Add options to mix and match eventually
-            #start with games table but later make sure all tables are getting all fields they need
-            print("Would you like to store all potential data on games or just the minimum")
-            print("1. Just the minimum")
-            print("2. All potential data")
-            data_option = input("> ").strip()
-            if (data_option == "1"):
-                full_answer = False
-                break
-            elif (data_option == "2"):
-                full_answer = True
-                break
-            else:
-                print("Invalid choice. Please enter 1 or 2.")
-        #could elaborate so limit only applies to games missing igdb data?
-        limit_number = None #Defaults to no limit
-        while True:
-            print("Would you like to set a limit on how many games to grab info for, to save time?")
-            print("1. Set a limit")
-            print("2. Just try for all games")
-            limit_option = input("> ").strip()
-            if (limit_option == "1"):
-                while True:
-                    limit_set = input("Enter a positive number: ").strip()
-                    if (limit_set.isnumeric() and int(limit_set) > 0):
-                        limit_number = int(limit_set)
-                        break
-                    else:
-                        print("Please enter a valid positive number")
-                break
-            elif (limit_option == "2"):
-                break
-            else:
-                print("Invalid choice. Please enter 1 or 2.")
-        # Iterate with optional limit
-        # Seems like right now need to keep mac terminal in focus for this to stay working?
-        for i, game in enumerate(game_DB.values(), start=1):
-            try:
-                if (full_answer == True):
-                    client.enrich_game_object(game)
-                print(f"Processed {i}/{limit_number if limit_number else len(game_DB)} games")
-                if limit_number and i >= limit_number:
-                    break
-                time.sleep(0.25)  # 4 requests per second; adjust as needed
-            except requests.exceptions.HTTPError as e:
-                if e.response.status_code == 429:
-                    print("Hit IGDB rate limit, waiting 10 seconds...")
-                    time.sleep(10)
-                else:
-                    raise
-
-    #THIS IS THE OLD SETUP FOR THE IGDB PROCESS, INVOLVES CHECKING AND SUCH,
-    # VERY COMPLEX AND LENGTHY, CONSIDER TAKING FROM BUT REPLACING WITH NEW MORE
-    # CONDENSED STUFF THAT WORKS BETTER
-
-    # This is where the user sets whether they want to grab from the IGDB API or not
-    # Set a series of flags on whether to pull certain attributes or not into the database?
-    # Set specific functions for every potential attribute to grab?
-    # Try to find ways to make IGDB pulling run in the background so I can work on other things while it's going
-    igdb_check = False
-    igdb_answer = None
-    scratch_answer = False
-    limit_number = 0
-
-    while (igdb_check == False):
-        print("Would you like to grab additional game data from the IGDB API at this moment? Y or N")
-        igdb_answer = input("Make your selection: ")
-        if (igdb_answer == 'Y' or igdb_answer == 'Yes'):
+    while True:
+        igdb_answer = input("Would you like to pull data from IGDB right now? Y or N: ").strip()
+        if igdb_answer in ('Y', 'y', 'Yes', 'yes'):
             while True:
-                print(
-                    "Would you like to start from scratch? Or only deal with games that don't already have IGDB information?")
-                print("1. Start from scratch")
-                print("2. Only deal with games without IGDB info already")
-                scratch_option = input()
-                if (scratch_option == "1"):
-                    scratch_answer = True
+                #Add options to mix and match eventually
+                #start with games table but later make sure all tables are getting all fields they need
+                print("Would you like to store all potential data on games or just the minimum?")
+                print("1. Just the minimum")
+                print("2. All potential data")
+                data_option = input("> ").strip()
+                if data_option == "1":
+                    full_answer = False
                     break
-                elif (scratch_option == "2"):
-                    scratch_answer = False
+                elif data_option == "2":
+                    full_answer = True
                     break
                 else:
-                    print("Please enter a valid response")
-                    print()
-                    continue
-
-            # START SCRAPING FOR ATTRIBUTES
-            # (Look into close-enough matches that can match when it’s not exact?)
-            # (Have the option to replace data manually when database info isn’t good enough or is missing?)
-            """
-            Most of the requests to the API will use the POST method
-            The base URL is: https://api.igdb.com/v4
-            You define which endpoint you wish to query by appending /{endpoint name} to the base URL eg. https://api.igdb.com/v4/games
-            Include your Client ID and Access Token in the HEADER of your request so that your headers look like the following.
-                Client-ID: Client ID
-                Authorization: Bearer access_token
-            Take special care of the capitalisation. Bearer should be hard-coded infront of your access_token
-            You use the BODY of your request to specify the fields you want to retrieve as well as any other filters, sorting etc
-
-            Example
-            If your Client ID is abcdefg12345 and your access_token is access12345token, a simple request to get information about 10 games would be.
-                POST: https://api.igdb.com/v4/games
-                Client-ID: abcdefg12345
-                Authorization: Bearer access12345token
-                Body: "fields *;"
-
-            """
-            client_id = get_env_var('CLIENT_ID')
-            client_secret = get_env_var('CLIENT_SECRET')
-            post = f'https://id.twitch.tv/oauth2/token?client_id={client_id}&client_secret={client_secret}&grant_type=client_credentials'
-
-            page = requests.post(post)  # gives access token we can use
-            print(page.text)
-
-            # wrapper = IGDBWrapper("YOUR_CLIENT_ID", "YOUR_APP_ACCESS_TOKEN")
-            received = json.loads(page.text)
-            access_token = received["access_token"]
-            wrapper = IGDBWrapper(client_id, access_token)
-
-            from igdb.igdbapi_pb2 import GameResult
-            from igdb.igdbapi_pb2 import GameModeResult
-            from igdb.igdbapi_pb2 import PlatformResult
-            from igdb.igdbapi_pb2 import PlatformFamilyResult
-            from igdb.igdbapi_pb2 import InvolvedCompanyResult
-            from igdb.igdbapi_pb2 import CompanyResult
-            from igdb.igdbapi_pb2 import GenreResult
-            from igdb.igdbapi_pb2 import ThemeResult
-            from igdb.igdbapi_pb2 import ReleaseDateResult
-
-            igdb_request = wrapper.api_request(
-                'games.pb',  # Note the '.pb' suffix at the endpoint
-                'fields name, rating; limit 5; offset 0;'
-            )
-            games_message = GameResult()
-            games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
-            games = games_message.games
-
-            # Figure out if I can be more efficient with endpoints to make it take quicker? taking very long now
-            print("Time to go looking around")
-            order_of_insert = 1
-            # resets every time we start the process partway through? any workaround for this?
-            for game, details in itertools.islice(game_DB.items(), 0, limit_number):
-                if (scratch_answer == False and game in import_DB):
-                    print("Hey, we already got this one!")
-                    game_DB[game] = import_DB[game]
-                    continue
-                check_string = 'fields *; exclude age_ratings, aggregated_rating, aggregated_rating_count, alternative_names, '
-                check_string += 'artworks, bundles, checksum, collection, collections, cover, created_at, expanded_games, '
-                check_string += 'external_games, follows, franchises, game_localizations, '
-                check_string += 'keywords, language_supports, player_perspectives, '
-                check_string += 'rating, rating_count, release_dates, screenshots, similar_games, standalone_expansions, '
-                check_string += 'storyline, tags, total_rating, total_rating_count, updated_at, videos, websites; '
-                # Check if <> comes first, where we use ID instead of name, for titles hard to specify
-                if (game.startswith('<')):
-                    print(game.strip())
-                    # input("Turns out this is a special case!\n")
-                    game_title = game.strip()
-                    # pull the ID from the <> part of the string
-                    check_string += 'where id = '
-                    pattern_match = r'[0-9]+'
-                    substring = re.findall(pattern_match, game_title)
-                    title_ID = substring[0]
-                    # Try to use some info from the substring so we can grab the name of the game better for logging?
-                    # consider string.replace() function?
-                    removal = '<' + title_ID + '> '
-                    modified_title = game_title.strip(removal)
-                    check_string += title_ID
-                    # Maybe grab the name from IGDB here, to update the name before it gets sent to the cluster?
-                    # Otherwise it might have <ID> in front of the name there?
-                    # modified_DB[modified_title] = details
+                    print("Invalid choice. Please enter 1 or 2.")
+            #could elaborate so limit only applies to games missing igdb data?
+            limit_number = None  # defaults to no limit
+            while True:
+                print("Would you like to set a limit on how many games to grab info for?")
+                print("1. Set a limit")
+                print("2. No limit, try all games")
+                limit_option = input("> ").strip()
+                if limit_option == "1":
+                    while True:
+                        limit_set = input("Enter a positive number: ").strip()
+                        if limit_set.isnumeric() and int(limit_set) > 0:
+                            limit_number = int(limit_set)
+                            break
+                        else:
+                            print("Please enter a valid positive number")
+                    break
+                elif limit_option == "2":
+                    break
                 else:
-                    check_string += 'where name = "'
-                    check_string += game.strip()
-                    check_string += '"'
-                check_string += ' & (status = (0,2,3,4,5,8) | status = null)'
-                check_string += '; '
-                check_string += 'offset 0;'  # 6 is cancelled,  & status != 6
-                # Had & version_parent = null in the check_string before, but probably won't work in cases we do want port, might just want
-                # more specificity in some cases
-                # | category = 3  (attempted to insert this into the query)
-                # Category is an enum, 3 means it's a bundle, is | the right way to do an or?
-                # Exclude versions that aren't the parent
-                # Exclude cancelled, unreleased, TBD versions?
-                # Figure out how to deal with children versions? How to give points and pass on points to parent too?
-                # Also dealing with compilation games? Add points to individual games? Create field to track subgames in a compilation?
-                # check_string += ';'
-                print(check_string)
-                igdb_request = wrapper.api_request(
-                    'games.pb',  # Note the '.pb' suffix at the endpoint
-                    check_string
-                )
-                games_message = GameResult()
-                games_message.ParseFromString(igdb_request)  # Fills the protobuf message object with the response
-                games = games_message.games
-                if (len(games) > 1):
-                    #FINDING EARLIEST RELEASE
-                    # REMOVING THIS PART
-
-                    #ADD PLATFORMS
-                    # REMOVING THIS PART
-                    # Originally went through all of the platforms for the earliest game and added them
-                    # Set the first one to the main platform, might want better logic going forward for main_plat
-                    #Support for platform_families?
-
-                    #DETERMINING EARLIEST RELEASE DATE OF EARLIEST GAME RELEASE
-                    # REMOVING THIS PART
-                    # Originally looped through them all, if none so far then accept, if find one that was earlier replace with that
-
-                    #Is this below section even needed? Seems to crash with a bad request, and main_plat already giving a string name value when it does?
-                    """
-                    sub_query = 'fields name; where id=' + str(main_plat) + ';'
-                    input(f"{sub_query}, {main_plat}, {plat_counter}")
-                    sub_request = wrapper.api_request(
-                        'platforms.pb',  # Note the '.pb' suffix at the endpoint
-                        sub_query
-                    )
-                    platforms_message = PlatformResult()
-                    platforms_message.ParseFromString(
-                        sub_request)  # Fills the protobuf message object with the response
-                    platforms = platforms_message.platforms
-                    # main_plat = platforms[0].name
-                    """
-                    #ADDING LIST OF PLATFORMS
-                    # REMOVING THIS PART
-                    # ADD MODES
-                    # REMOVING THIS PART
-                    # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
-
-                    # ADD COMPANIES, DEVELOPERS PUBLISHERS
-                    # ^consider a check for developer boolean? porting? supporting?
-                    # do we count publishers?
-                    # consider more categories for game objects later like publishers
-
-                    # first query to look at involved companies
-                    # REMOVING THIS PART
-                    # second query to look at the company specifically
-                    # REMOVING THIS PART
-                    # APPEND TO DEVELOPERS OR PUBLISHERS IF IS_DEV OR IS_PUB
-                    # also consider supporting boolean in addition to developer and publisher? porting?
-
-                    # ADD GENRES
-                    # REMOVING THIS PART
-                    # ADD THEMES
-                    # REMOVING THIS PART
-                elif (len(games) == 1):
-                    try:
-                        current_game = games[0]
-                        try:
-                            game_DB[game].igdb_ID = current_game.id
-                        except IndexError as e:
-                            print("Error:", e)
-                            # print("Index", i, "is out of range")
-                        game_DB[game].igdb_found = True
-                        game_DB[game].release_date = current_game.first_release_date.ToDatetime().isoformat()
-                        # ^To make JSON serializable?
-
-                        # this version gave animal crossing: new horizons switch and n64
-                        # current approach giving that game nothing for platforms?
-                        """
-                        plat_ID = current_game.platforms[0]
-                        plat_name = None
-                        sub_query = 'fields name; where id=' + str(plat_ID.id) + ';'
-                        sub_request = wrapper.api_request(
-                            'platforms.pb',  # Note the '.pb' suffix at the endpoint
-                            sub_query
-                        )
-                        platforms_message = PlatformResult()
-                        platforms_message.ParseFromString(sub_request)  # Fills the protobuf message object with the response
-                        platforms = platforms_message.platforms
-                        plat_name = platforms[0].name
-                        if (plat_counter == 0):
-                            main_plat = plat_name
-                        list_plats.append(plat_name)
-                        list_plats = []
-                        list_plats.append(plat_name)
-                        game_DB[game].list_platforms = list_plats  # Will only pull ID's for now, need to tackle later?
-                        """
-                        # PASTED FROM ABOVE WITHOUT COMMENTS
-                        plat_counter = 0
-                        main_plat = None
-                        plat_name = None
-                        list_plats = []
-                        while (plat_counter < len(current_game.platforms)):
-                            plat_ID = current_game.platforms[plat_counter]
-                            sub_query = 'fields name; where id=' + str(plat_ID.id) + ';'
-                            sub_request = wrapper.api_request(
-                                'platforms.pb',  # Note the '.pb' suffix at the endpoint
-                                sub_query
-                            )
-                            platforms_message = PlatformResult()
-                            platforms_message.ParseFromString(
-                                sub_request)  # Fills the protobuf message object with the response
-                            platforms = platforms_message.platforms
-                            plat_name = platforms[0].name
-                            if (plat_counter == 0):
-                                main_plat = plat_name
-                            list_plats.append(plat_name)
-                            plat_counter += 1
-
-                        # DETERMINING EARLIEST RELEASE DATE OF EARLIEST GAME RELEASE
-                        # REMOVING THIS PART
-                        # Originally looped through them all, if none so far then accept, if find one that was earlier replace with that
-
-                        #PLATFORMS
-                        # REMOVING THIS PART
-
-                        #MODES
-                        # REMOVING THIS PART
-                        # ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
-
-                        # ADD COMPANIES, DEVELOPERS PUBLISHERS
-                        # ^consider a check for developer boolean? porting? supporting?
-                        # do we count publishers?
-                        # consider more categories for game objects later like publishers
-
-                        # first query to look at involved companies
-                        # REMOVING THIS PART
-                        # second query to look at the company specifically
-                        # REMOVING THIS PART
-                        # APPEND TO DEVELOPERS OR PUBLISHERS IF IS_DEV OR IS_PUB
-                        # also consider supporting boolean in addition to developer and publisher? porting?
-
-                        # ADD GENRES
-                        # REMOVING THIS PART
-                        # ADD THEMES
-                        # REMOVING THIS PART
-                    except Exception as e:
-                        print("An error has occurred:", e)
-                        # it starts hitting errors when it gets to some of the new games featured in metacritic user scores?
-                else:
-                    print("Not found with that name!")
-                    input("Maybe you need to alter the title somehow?\n")
-                order_of_insert += 1
-
-            # When there is ID confusion, need to clarify ID when putting entries
-            # Have a process that runs through when generating databases and pauses
-            # when there are multiple options, so we can try to narrow down on that title
-            # Use <> to contain ID number (from IGDB database)
-            # Example: The ID we want to use for Super Mario World is 1070
-            # retitle: a link to the past and other zelda games
-            # ID for Final Fantasy VII: 427
-            # investigate ways to test for what is the most parent version?
-            # when multiple options to go with, for now go with the one that has
-            # the most total_rating_count? earliest release date?
-
-            # For now, Pokemon versions need to pick one over the other,for simplicity we go for the one that tends to be listed first
-            # Pokémon Red Version seems to break the api request, probably the accented e
-            # Doesn't get found with the title "Pokemon Red Version" either though
-            # exit()
-
-            """
-            MEDIUM EXAMPLE:
-            URL = 'https://www.bookdepository.com/top-new-releases'
-            page = requests.get(URL)
-            soup = BeautiulSoup(page.content, "html.parser")
-            books = soup.find_all("div", class_ = "book-item")
-            """
-            igdb_check = True
-        elif (igdb_answer == 'N' or igdb_answer == 'No'):
-            print("Understood, skipping to next step.")
-            igdb_check = True
+                    print("Invalid choice. Please enter 1 or 2.")
+            # Iterate with optional limit
+            for i, game in enumerate(game_DB.values(), start=1):
+                try:
+                    client.enrich_game_object(game)
+                    print(f"Processed {i}/{limit_number if limit_number else len(game_DB)}: {game.title}")
+                    if limit_number and i >= limit_number:
+                        break
+                    time.sleep(0.25)  # ~4 requests per second, adjust as needed
+                except requests.exceptions.HTTPError as e:
+                    if e.response.status_code == 429:
+                        print("Hit IGDB rate limit, waiting 10 seconds...")
+                        time.sleep(10)
+                    else:
+                        raise
+            break
+        elif igdb_answer in ('N', 'n', 'No', 'no'):
+            print("Understood, skipping IGDB enrichment.")
+            break
         else:
-            print("Answer not understood, try again.")
-            print()
+            print("Please enter Y or N.")
 
     # Step 6: Save to database
     #Doing basic insert to mongo at this point, and then we can add other values later on? After IGDB pulling?
@@ -848,3 +536,64 @@ def main():
 "Where we start the main function"
 if __name__ == "__main__":
     main()
+
+"""
+OLD COMMENTS FOR FURTHER REVIEW (FROM OLD IGDB PROCESS):
+# This is where the user sets whether they want to grab from the IGDB API or not
+    # Set a series of flags on whether to pull certain attributes or not into the database?
+    # Set specific functions for every potential attribute to grab?
+    # Try to find ways to make IGDB pulling run in the background so I can work on other things while it's going
+
+            # START SCRAPING FOR ATTRIBUTES
+            # (Look into close-enough matches that can match when it’s not exact?)
+            # (Have the option to replace data manually when database info isn’t good enough or is missing?)
+
+#Stripping out <ID> to have a modified name (modified_DB?)
+
+# Had & version_parent = null in the check_string before, but probably won't work in cases we do want port, might just want
+                # more specificity in some cases
+                # | category = 3  (attempted to insert this into the query)
+                # Category is an enum, 3 means it's a bundle, is | the right way to do an or?
+                # Exclude versions that aren't the parent
+                # Exclude cancelled, unreleased, TBD versions?
+                # Figure out how to deal with children versions? How to give points and pass on points to parent too?
+                # Also dealing with compilation games? Add points to individual games? Create field to track subgames in a compilation?
+                # check_string += ';'
+
+#ADD PLATFORMS
+# Originally went through all of the platforms for the earliest game and added them
+                    # Set the first one to the main platform, might want better logic going forward for main_plat
+                    #Support for platform_families?
+
+#EARLIEST RELEASE
+#DETERMINING EARLIEST RELEASE DATE OF EARLIEST GAME RELEASE
+                    # REMOVING THIS PART
+                    # Originally looped through them all, if none so far then accept, if find one that was earlier replace with that
+
+#ADD MODES
+# ^Also consider multiplayer_modes? (they use more of a boolean/integer approach?)
+
+# ADD COMPANIES, DEVELOPERS PUBLISHERS
+                    # ^consider a check for developer boolean? porting? supporting?
+                    # do we count publishers?
+                    # consider more categories for game objects later like publishers
+
+# APPEND TO DEVELOPERS OR PUBLISHERS IF IS_DEV OR IS_PUB
+                    # also consider supporting boolean in addition to developer and publisher? porting?
+
+# When there is ID confusion, need to clarify ID when putting entries
+            # Have a process that runs through when generating databases and pauses
+            # when there are multiple options, so we can try to narrow down on that title
+            # Use <> to contain ID number (from IGDB database)
+            # Example: The ID we want to use for Super Mario World is 1070
+            # retitle: a link to the past and other zelda games
+            # ID for Final Fantasy VII: 427
+            # investigate ways to test for what is the most parent version?
+            # when multiple options to go with, for now go with the one that has
+            # the most total_rating_count? earliest release date?
+
+            # For now, Pokemon versions need to pick one over the other,for simplicity we go for the one that tends to be listed first
+            # Pokémon Red Version seems to break the api request, probably the accented e
+            # Doesn't get found with the title "Pokemon Red Version" either though
+            # exit()
+"""

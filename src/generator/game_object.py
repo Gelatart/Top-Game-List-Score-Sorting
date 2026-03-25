@@ -37,7 +37,7 @@ class GameObject:
     def to_dict(self) -> dict:
         #See if this causes issues anywhere where we would still like to keep lists?
         #In that case, bring this functionality more to the part where we export lists to excel
-        result = self.__dict__
+        result = dict(self.__dict__)  # copy to avoid mutating the object
         for k, v in result.items():
             if isinstance(v, list):
                 result[k] = ", ".join(map(str, v))
