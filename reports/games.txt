@@ -1,7 +1,7 @@
 [None] Gunstar Heroes: 577
 [None] Donkey Kong Country: 856
 [None] Captain Toad: Treasure Tracker: 33
-[None] Resident Evil 4: 2716
+[None] Resident Evil 4: 2714
 [None] Mega Man X: 931
 [None] Super Mario RPG: Legend of the Seven Stars: 877
 [None] Indiana Jones and the Temple of Doom: 4
@@ -14,7 +14,7 @@
 [None] Dark Souls II: 451
 [None] Far Cry 4: 398
 [None] Alien: Isolation: 373
-[None] Grand Theft Auto V: 1964
+[None] Grand Theft Auto V: 1965
 [None] Diablo III: Reaper of Souls - Ultimate Evil Edition: 3
 [None] Hearthstone: 780
 [None] Valiant Hearts: The Great War: 32
@@ -25,7 +25,7 @@
 [None] Halo Infinite: 163
 [None] Chicory: A Colorful Tale: 20
 [None] Resident Evil Village: 255
-[None] It Takes Two: 60
+[None] It Takes Two: 55
 [None] Valheim: 28
 [None] Marvel's Guardians of the Galaxy: 16
 [None] Life is Strange: True Colors: 20
@@ -43,82 +43,82 @@
 [None] Death's Door: 10
 [None] The Forgotten City: 2
 [None] Unpacking: 5
-[None] The Witcher 3: Wild Hunt: 1993
-[None] The Last of Us: 2138
-[None] The Legend of Zelda: Ocarina of Time: 3028
-[None] Mass Effect 2: 2275
-[None] The Elder Scrolls V: Skyrim: 1846
-[None] The Legend of Zelda: Breath of the Wild: 1737
-[None] Final Fantasy VII: 2231
-[None] Red Dead Redemption: 1956
-[None] BioShock: 2119
-[None] Bloodborne: 1593
-[None] Chrono Trigger: 2496
-[None] Dark Souls: 2213
-[None] Final Fantasy VI: 2109
-[None] The Legend of Zelda: A Link to the Past: 2705
-[None] Metal Gear Solid: 2031
-[None] Shadow of the Colossus: 2228
-[None] Mass Effect: 1130
-[None] Kingdom Hearts II: 640
+[None] The Witcher 3: Wild Hunt: 1994
+[None] The Last of Us: 2139
+[None] The Legend of Zelda: Ocarina of Time: 3029
+[None] Mass Effect 2: 2274
+[None] The Elder Scrolls V: Skyrim: 1848
+[None] The Legend of Zelda: Breath of the Wild: 1736
+[None] Final Fantasy VII: 2166
+[None] Red Dead Redemption: 1959
+[None] BioShock: 2120
+[None] Bloodborne: 1591
+[None] Chrono Trigger: 2498
+[None] Dark Souls: 2218
+[None] Final Fantasy VI: 2111
+[None] The Legend of Zelda: A Link to the Past: 2707
+[None] Metal Gear Solid: 2033
+[None] Shadow of the Colossus: 2229
+[None] Mass Effect: 1132
+[None] Kingdom Hearts II: 641
 [None] The Elder Scrolls IV: Oblivion: 843
-[None] Star Wars: Knights of the Old Republic: 1814
+[None] Star Wars: Knights of the Old Republic: 1808
 [None] Fallout 3: 1229
 [None] Halo: Combat Evolved: 2126
-[None] Uncharted 2: Among Thieves: 1728
+[None] Uncharted 2: Among Thieves: 1732
 [None] Super Metroid: 2667
-[None] Super Mario World: 2540
-[None] Metal Gear Solid 3: Snake Eater: 1732
-[None] Horizon Zero Dawn: 410
+[None] Super Mario World: 2537
+[None] Metal Gear Solid 3: Snake Eater: 1742
+[None] Horizon Zero Dawn: 408
 [None] Overwatch: 1174
-[None] The Legend of Zelda: The Wind Waker: 1638
+[None] The Legend of Zelda: The Wind Waker: 1632
 [None] Halo 3: 1557
-[None] Portal 2: 2386
+[None] Portal 2: 2383
 [None] Final Fantasy X: 777
-[None] The Legend of Zelda: Majora's Mask: 1642
+[None] The Legend of Zelda: Majora's Mask: 1653
 [None] Persona 5: 797
-[None] Fallout: New Vegas: 1104
-[None] Super Mario Bros. 3: 2148
-[None] Super Mario 64: 2688
+[None] Fallout: New Vegas: 1105
+[None] Super Mario Bros. 3: 2149
+[None] Super Mario 64: 2691
 [None] World of Warcraft: 1821
-[None] Half-Life 2: 2504
+[None] Half-Life 2: 2508
 [None] Kingdom Hearts: 879
 [None] BioShock Infinite: 762
 [None] Mass Effect 3: 552
 [None] Persona 4: 644
-[None] Uncharted 4: A Thief's End: 627
-[None] Dragon Age: Origins: 535
+[None] Uncharted 4: A Thief's End: 631
+[None] Dragon Age: Origins: 537
 [None] The Legend of Zelda: Twilight Princess: 889
 [None] Final Fantasy IX: 945
-[None] Batman: Arkham City: 1282
+[None] Batman: Arkham City: 1283
 [None] Final Fantasy XV: 271
 [None] Borderlands 2: 616
 [None] The Elder Scrolls III: Morrowind: 1118
 [None] Halo 2: 1276
-[None] Castlevania: Symphony of the Night: 2155
-[None] Super Smash Bros. Melee: 1514
+[None] Castlevania: Symphony of the Night: 2159
+[None] Super Smash Bros. Melee: 1520
 [None] The Legend of Zelda: 1321
-[None] Metroid Prime: 2019
-[None] Super Mario Galaxy: 1709
-[None] Silent Hill 2: 1782
+[None] Metroid Prime: 2017
+[None] Super Mario Galaxy: 1748
+[None] Silent Hill 2: 1783
 [None] Xenoblade Chronicles: 680
 [None] <1271> Okami: 1080
 [None] Fallout 4: 353
-[None] Grand Theft Auto: San Andreas: 1545
+[None] Grand Theft Auto: San Andreas: 1547
 [None] <1561> Pokemon Red Version: 1404
-[None] NieR: Automata: 818
+[None] NieR: Automata: 817
 [None] Call of Duty 4: Modern Warfare: 1669
-[None] Metal Gear Solid 2: Sons of Liberty: 1239
+[None] Metal Gear Solid 2: Sons of Liberty: 1242
 [None] Super Mario Odyssey: 1128
 [None] Life is Strange: 270
-[None] Deus Ex: 1322
+[None] Deus Ex: 1312
 [None] Minecraft: 2008
 [None] Persona 3: 534
-[None] Assassin's Creed II: 1073
+[None] Assassin's Creed II: 1078
 [None] Resident Evil: 909
-[None] <1558> Pokemon Gold Version: 915
+[None] <1558> Pokemon Gold Version: 887
 [None] Call of Duty: Modern Warfare 2: 371
-[None] Metal Gear Solid 4: Guns of the Patriots: 728
+[None] Metal Gear Solid 4: Guns of the Patriots: 734
 [None] Alan Wake: 253
 [None] Xenogears: 560
 [None] Metal Gear Solid V: The Phantom Pain: 893
@@ -127,22 +127,22 @@
 [None] Final Fantasy Tactics: 1395
 [None] <1773> Ratchet & Clank: Up Your Arsenal: 231
 [None] Grand Theft Auto IV: 1352
-[None] Portal: 1827
+[None] Portal: 1828
 [None] Batman: Arkham Asylum: 829
-[None] Half-Life: 1589
+[None] Half-Life: 1586
 [None] God of War III: 494
 [None] Halo: Reach: 480
-[None] Dark Souls III: 452
+[None] Dark Souls III: 450
 [None] Resident Evil 2: 913
-[None] Paper Mario: The Thousand-Year Door: 986
+[None] Paper Mario: The Thousand-Year Door: 985
 [None] Final Fantasy VIII: 511
 [None] Super Mario Bros.: 1437
 [None] The World Ends with You: 800
 [None] Star Wars: Battlefront II: 321
 [None] StarCraft: 1787
-[None] Star Wars: Knights of the Old Republic II - The Sith Lords: 424
+[None] Star Wars: Knights of the Old Republic II - The Sith Lords: 415
 [None] GoldenEye 007: 1883
-[None] Super Mario Galaxy 2: 1584
+[None] Super Mario Galaxy 2: 1586
 [None] Secret of Mana: 1264
 [None] Doom: 1754
 [None] <41623> The Walking Dead: The Complete First Season: 544
@@ -159,17 +159,17 @@
 [None] Gears of War 3: 250
 [None] EarthBound: 1855
 [None] Kingdom Hearts HD 2.5 Remix: 180
-[None] Stardew Valley: 931
+[None] Stardew Valley: 932
 [None] Donkey Kong Country 2: Diddy's Kong Quest: 515
 [None] Batman: Arkham Knight: 368
 [None] Journey: 1656
 [None] The Last Guardian: 294
 [None] Final Fantasy XI Online: 173
-[None] Undertale: 1132
+[None] Undertale: 1131
 [None] Perfect Dark: 738
 [None] Monster Hunter: World: 368
 [None] Age of Empires II: The Age of Kings: 750
-[None] Grand Theft Auto: Vice City: 1297
+[None] Grand Theft Auto: Vice City: 1296
 [None] Guild Wars 2: 586
 [None] Jak and Daxter: The Precursor Legacy: 270
 [None] Suikoden II: 969
@@ -265,8 +265,8 @@
 [None] Tales from the Borderlands: 79
 [None] Sonic Mania: 320
 [None] The Legend of Zelda: Link's Awakening: 703
-[None] Super Mario World 2: Yoshi's Island: 1360
-[None] Planescape: Torment: 1091
+[None] Super Mario World 2: Yoshi's Island: 1367
+[None] Planescape: Torment: 1077
 [None] Command & Conquer: Red Alert 2: 68
 [None] Prince of Persia: The Sands of Time: 1009
 [None] Final Fantasy XII: 314
@@ -292,7 +292,7 @@
 [None] Splatoon: 264
 [None] Xenoblade Chronicles 2: 144
 [None] Crash Bandicoot 2: Cortex Strikes Back: 138
-[None] Heroes of Might and Magic III: The Restoration of Erathia: 533
+[None] Heroes of Might and Magic III: The Restoration of Erathia: 536
 [None] Galaga: 678
 [None] Valkyria Chronicles: 485
 [None] Team Fortress 2: 815
@@ -307,7 +307,7 @@
 [None] Final Fantasy XIII: 51
 [None] EverQuest: 637
 [None] Sid Meier's Pirates!: 287
-[None] Ori and the Blind Forest: 86
+[None] Ori and the Blind Forest: 85
 [None] Star Wars: The Old Republic: 169
 [None] Call of Duty: WWII: 36
 [None] Gears of War 4: 167
@@ -318,7 +318,7 @@
 [None] Rome: Total War: 337
 [None] Ico: 923
 [None] Membrane: 18
-[None] Fallout 2: 890
+[None] Fallout 2: 889
 [None] Xenosaga Episode III: Also sprach Zarathustra: 45
 [None] Shenmue II: 118
 [None] Catherine: 72
@@ -345,7 +345,7 @@
 [None] Kentucky Route Zero: 582
 [None] <12515> Pokemon Go: 358
 [None] P.T.: 407
-[None] Return of the Obra Dinn: 215
+[None] Return of the Obra Dinn: 219
 [None] Gone Home: 713
 [None] Super Mario 3D World: 730
 [None] Everything: 91
@@ -353,7 +353,7 @@
 [None] Her Story: 503
 [None] Counter-Strike: Global Offensive: 280
 [None] TowerFall: 424
-[None] Outer Wilds: 304
+[None] Outer Wilds: 295
 [None] Dishonored 2: 444
 [None] <7351> Doom [2016]: 238
 [None] Florence: 90
@@ -362,9 +362,9 @@
 [None] Tetris Effect: 98
 [None] Red Dead Redemption & Red Dead Redemption 2 Bundle: 66
 [None] Titanfall 2: 221
-[None] <19560> God of War [2018]: 914
+[None] <19560> God of War [2018]: 908
 [None] Firewatch: 157
-[None] Celeste: 428
+[None] Celeste: 426
 [None] NBA 2K12: 268
 [None] <17034> The Works of Michael Brough [868-Hack]: 59
 [None] SuperHot: 231
@@ -376,7 +376,7 @@
 [None] Inside & Limbo Bundle: 50
 [None] Death Stranding: 284
 [None] <386> Final Fantasy XIV Online [A Realm Reborn]: 64
-[None] Hollow Knight: 439
+[None] Hollow Knight: 438
 [None] Into the Breach: 72
 [None] Sid Meier's Civilization VI: 63
 [None] Subsurface Circular: 43
@@ -518,7 +518,7 @@
 [None] Mother 3: 913
 [None] Sonic the Hedgehog: 904
 [None] Sid Meier's Civilization II: 1067
-[None] Red Dead Redemption 2: 1071
+[None] Red Dead Redemption 2: 1073
 [None] Super Smash Bros. Ultimate: 448
 [None] Tekken 3: 733
 [None] Wii Sports: 850
@@ -533,7 +533,7 @@
 [None] Gran Turismo 3: A-Spec: 577
 [None] Twisted Metal: 29
 [None] Dungeon Master: 250
-[None] Day of the Tentacle: 542
+[None] Day of the Tentacle: 537
 [None] Manic Miner: 409
 [None] Sensible World of Soccer: 172
 [None] Lemmings: 416
@@ -562,7 +562,7 @@
 [None] Tempest 2000: 409
 [None] Pac-Man Vs.: 41
 [None] Manhunt: 40
-[None] System Shock 2: 983
+[None] System Shock 2: 981
 [None] Darwinia: 36
 [None] F-Zero GX: 282
 [None] Geometry Wars: Retro Evolved: 402
@@ -595,12 +595,12 @@
 [None] Hotline Miami 2: Wrong Number: 1
 [None] Wolfenstein II: The New Colossus: 13
 [None] Mario + Rabbids Kingdom Battle: 18
-[None] Hades: 401
-[None] The Last of Us Part II: 199
+[None] Hades: 395
+[None] The Last of Us Part II: 190
 [None] Assassin's Creed Valhalla: 259
 [None] Marvel's Spider-Man: Miles Morales: 128
 [None] Animal Crossing: New Horizons: 358
-[None] Ghost of Tsushima: 241
+[None] Ghost of Tsushima: 240
 [None] Call of Duty: Warzone: 161
 [None] Fall Guys: 160
 [None] Doom Eternal: 160
@@ -652,7 +652,7 @@
 [None] Tearaway: 59
 [None] Puzzle & Dragons: 44
 [None] Pac-Man Championship Edition: 61
-[None] StarCraft II: Wings of Liberty: 732
+[None] StarCraft II: Wings of Liberty: 731
 [None] Elite: Dangerous: 175
 [None] Resogun: 22
 [None] Super Hexagon: 7
@@ -713,7 +713,7 @@
 [None] Super Mario 3D Land: 301
 [None] Bit.Trip Flux: 2
 [None] Rage: 5
-[None] Clair Obscur: Expedition 33: 245
+[None] Clair Obscur: Expedition 33: 233
 [None] Resident Evil Requiem: 100
 [None] Cory in the House: 94
 [None] The Witcher 3: Wild Hunt - Blood and Wine: 100
@@ -778,7 +778,7 @@
 [None] Deus Ex: Human Revolution - Director's Cut: 4
 [None] ZombiU: 3
 [None] LEGO City Undercover: 11
-[None] Marvel's Spider-Man: 90
+[None] Marvel's Spider-Man: 93
 [None] Subnautica: 17
 [None] RimWorld: 3
 [None] Donut County: 10
@@ -856,11 +856,11 @@
 [None] Metal Slug 2: 3
 [None] Kirby's Epic Yarn: 121
 [None] Rachet & Clank: Going Commando: 1
-[None] Disco Elysium: 535
+[None] Disco Elysium: 542
 [None] Umineko When They Cry: Answer Arcs: 92
-[None] Hollow Knight: Silksong: 90
-[None] Sekiro: Shadows Die Twice: 402
-[None] Elden Ring: 682
+[None] Hollow Knight: Silksong: 174
+[None] Sekiro: Shadows Die Twice: 401
+[None] Elden Ring: 681
 [None] Pathologic 2: 75
 [None] <132181> Resident Evil 4 [2023]: 244
 [None] Umineko no Naku Koro ni: Episode 1 - Legend of the Golden Witch: 73
@@ -899,6 +899,18 @@
 [None] Call of Duty 2: 591
 [None] Angry Birds: 272
 [None] King's Quest III: To Heir is Human: 1
+[None] Baldur's Gate III: 269
+[None] Half-Life Alyx: 95
+[None] The Legend of Zelda: Tears of the Kingdom: 284
+[None] Steins;Gate: 92
+[None] Mass Effect Trilogy: 87
+[None] Sid Meier's Civilization: 374
+[None] <112875> God of War Ragnarok: 116
+[None] Mass Effect Legendary Edition: 210
+[None] Indiana Jones and the Fate of Atlantis: 365
+[None] Monkey Island 2: LeChuck's Revenge: 612
+[None] The Legend of Zelda: A Link Between Worlds: 241
+[None] Mafia: 8
 [None] Tom Clancy's The Division: 104
 [None] Metal Gear 2: Solid Snake: 59
 [None] Yakuza: 23
@@ -1026,7 +1038,6 @@
 [None] Pikmin 3 Deluxe: 7
 [None] Doraemon Story of Seasons: 3
 [None] New Super Lucky's Tale: 2
-[None] The Legend of Zelda: Tears of the Kingdom: 283
 [None] Chibi-Robo!: 81
 [None] Danganronpa 2: Goodbye Despair: 77
 [None] Danganronpa: Trigger Happy Havoc: 98
@@ -1113,7 +1124,6 @@
 [None] WarioWare: Twisted!: 310
 [None] Burnout Revenge: 284
 [None] A Mind Forever Voyaging: 280
-[None] Monkey Island 2: LeChuck's Revenge: 613
 [None] Virtua Racing: 487
 [None] Warcraft II: Tides of Darkness: 532
 [None] Flashback: The Quest for Identity: 458
@@ -1143,7 +1153,6 @@
 [None] Sonic CD: 206
 [None] Super Mario Bros. 2: 288
 [None] Thief: Deadly Shadows: 203
-[None] The Legend of Zelda: A Link Between Worlds: 250
 [None] Microsoft Flight Simulator: 201
 [None] Age of Empires: 364
 [None] Split/Second: 335
@@ -1211,7 +1220,6 @@
 [None] Sam & Max Hit the Road: 315
 [None] Bejeweled: 72
 [None] Galaxian: 92
-[None] Indiana Jones and the Fate of Atlantis: 365
 [None] WWF No Mercy: 85
 [None] <3193> Need for Speed: Most Wanted: 61
 [None] Super Castlevania IV: 345
@@ -1352,7 +1360,6 @@
 [None] Metroid Prime Remastered: 41
 [None] Metaphor: ReFantazio: 33
 [None] Super Mario Advance 4: Super Mario Bros. 3: 44
-[None] <112875> God of War Ragnarok: 116
 [None] Virtua Fighter 4: 13
 [None] Tom Clancy's Splinter Cell: Pandora Tomorrow: 9
 [None] Unreal Tournament 2004: 4
@@ -1511,7 +1518,6 @@
 [None] Forza Horizon 4: 156
 [None] Call of Duty: Black Ops 4: 18
 [None] Shadow of the Tomb Raider: 154
-[None] Sid Meier's Civilization: 373
 [None] Resident Evil 3: Nemesis: 41
 [None] Killer Instinct: 57
 [None] Teenage Mutant Ninja Turtles: Turtles in Time: 35
@@ -1553,12 +1559,6 @@
 [None] Scramble: 5
 [None] 3D Deathchase: 2
 [None] Raid on Bungeling Bay: 1
-[None] Baldur's Gate III: 269
-[None] Mass Effect Trilogy: 97
-[None] Steins;Gate: 97
-[None] Half-Life Alyx: 91
-[None] Mass Effect Legendary Edition: 210
-[None] Mafia: 8
 [None] Stray: 165
 [None] Horizon Forbidden West: 22
 [None] Immortality: 21
@@ -2433,8 +2433,6 @@
 [None] Galactic Civilizations II: Dark Avatar: 1
 [None] Typeshift: 1
 [None] Tacoma: 1
-[None] Black Mesa: 1
-[None] The Last of Us Part I: 1
 [None] Chameleon Run: 1
 [None] Tower of Guns: 1
 [None] Everybody's Golf: 1
@@ -2454,5 +2452,7 @@
 [None] Rumbleverse: 70
 [None] Spellbreak: 70
 [None] Transformers: Devastation: 70
+[None] Black Mesa: 1
+[None] The Last of Us Part I: 1
 [None] Tetris Effect: Connected: 1
 [None] The Witcher 3: Wild Hunt - Complete Edition: 1

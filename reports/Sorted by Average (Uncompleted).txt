@@ -314,7 +314,7 @@ Demon Attack --> 121.0
 Beatmania --> 121.0
 <386> Final Fantasy XIV Online: A Realm Reborn --> 120.66666666666667
 Micro Machines --> 119.5
-Super Mario Bros. 3 --> 119.33333333333333
+Super Mario Bros. 3 --> 119.38888888888889
 Hunt the Wumpus --> 119.0
 MVP Baseball 2005 --> 118.5
 Devil's Crush --> 118.0
@@ -342,7 +342,7 @@ Grand Theft Auto IV --> 112.66666666666667
 Wasteland --> 112.0
 Burnout Paradise --> 111.66666666666667
 Paradroid --> 111.0
-Fallout: New Vegas --> 110.4
+Fallout: New Vegas --> 110.5
 Maniac Mansion --> 110.33333333333333
 Pillars of Eternity --> 110.0
 Final Fantasy --> 109.66666666666667
@@ -350,9 +350,8 @@ Doom --> 109.625
 Pong --> 109.5
 Diablo III --> 109.0
 Quake --> 108.42857142857143
-The Legend of Zelda: A Link to the Past --> 108.2
+The Legend of Zelda: A Link to the Past --> 108.28
 Age of Empires II: The Age of Kings --> 107.14285714285714
-Dragon Age: Origins --> 107.0
 Syberia --> 107.0
 Tom Clancy's Splinter Cell: Chaos Theory --> 106.85714285714286
 Dragon Quest VIII: Journey of the Cursed King --> 106.71428571428571
@@ -360,7 +359,7 @@ MechWarrior 2: 31st Century Combat --> 106.5
 EverQuest --> 106.16666666666667
 Mega Man Legends --> 106.0
 Plants vs. Zombies --> 106.0
-Super Mario World --> 105.83333333333333
+Super Mario World --> 105.70833333333333
 Proteus --> 105.5
 Mortal Kombat II --> 105.44444444444444
 Mass Effect Legendary Edition --> 105.0
@@ -369,8 +368,8 @@ Zero Escape: Virtue's Last Reward --> 104.66666666666667
 Total Annihilation --> 104.5
 Computer Space --> 104.0
 Asteroids --> 103.71428571428571
+Metal Gear Solid 2: Sons of Liberty --> 103.5
 Super Smash Bros. --> 103.33333333333333
-Metal Gear Solid 2: Sons of Liberty --> 103.25
 Super Mario Kart --> 103.0
 NBA Jam --> 102.88888888888889
 Baldur's Gate --> 102.75
@@ -389,23 +388,22 @@ The World Ends with You --> 100.0
 Wizardry: Proving Grounds of the Mad Overlord --> 99.66666666666667
 Puzzle Quest: Challenge of the Warlords --> 99.5
 StarCraft --> 99.27777777777777
-Planescape: Torment --> 99.18181818181819
 Marvel vs. Capcom 2: New Age of Heroes --> 98.8
 Super Metroid --> 98.77777777777777
+Assassin's Creed II --> 98.0
 Xenosaga Episode I: Der Wille zur Macht --> 98.0
 Tiger Woods PGA Tour 12 --> 98.0
 Star Fox --> 98.0
-Assassin's Creed II --> 97.54545454545455
+Planescape: Torment --> 97.9090909090909
 Assassin's Creed Brotherhood --> 97.5
 Secret of Mana --> 97.23076923076923
 Rez --> 97.125
 Kentucky Route Zero --> 97.0
-Mass Effect Trilogy --> 97.0
 XCOM: Enemy Unknown --> 96.875
 Left 4 Dead --> 96.71428571428571
 Grand Theft Auto --> 96.5
 Star Wars --> 96.33333333333333
-Chrono Trigger --> 96.0
+Chrono Trigger --> 96.07692307692308
 WarioWare, Inc.: Mega Microgame$! --> 96.0
 Super Bomberman --> 96.0
 Marble Madness --> 96.0
@@ -414,10 +412,11 @@ Sid Meier's Pirates! --> 95.66666666666667
 The Legend of Dragoon --> 95.5
 Jet Set Radio --> 95.5
 Ms. Pac-Man --> 95.42857142857143
+Half-Life Alyx --> 95.0
 I Have No Mouth, and I Must Scream --> 95.0
 Deus Ex Machina --> 95.0
 Death Stranding --> 94.66666666666667
-Mass Effect --> 94.16666666666667
+Mass Effect --> 94.33333333333333
 Dwarf Fortress --> 94.16666666666667
 Cory in the House --> 94.0
 Batman Arkham Origins --> 94.0
@@ -488,9 +487,9 @@ Payday 2 --> 94.0
 Carrion: Greatest Time of Year --> 94.0
 Twisted Metal 2 --> 94.0
 Spelunky --> 93.5
+Sid Meier's Civilization --> 93.5
 Warcraft III: The Frozen Throne --> 93.33333333333333
 Command & Conquer: Red Alert --> 93.33333333333333
-Sid Meier's Civilization --> 93.25
 Streets of Rage 2 --> 93.14285714285714
 RollerCoaster Tycoon --> 93.0
 80 Days --> 92.75
@@ -499,63 +498,63 @@ Silent Hill 2: Restless Dreams --> 92.0
 Umineko When They Cry: Answer Arcs --> 92.0
 Madden NFL 10 --> 92.0
 Final Fantasy IV --> 91.83333333333333
-Final Fantasy VI --> 91.69565217391305
+Final Fantasy VI --> 91.78260869565217
 <210484> Ninja Gaiden [NES] --> 91.6
-Ultima IV: Quest of the Avatar --> 91.25
 Indiana Jones and the Fate of Atlantis --> 91.25
-Half-Life Alyx --> 91.0
+Ultima IV: Quest of the Avatar --> 91.25
 Metal Slug 3 --> 91.0
 Dota 2 --> 90.91666666666667
 SoulCalibur --> 90.8
-Star Wars: Knights of the Old Republic --> 90.7
 Bubble Bobble --> 90.66666666666667
 Centipede --> 90.5
+Star Wars: Knights of the Old Republic --> 90.4
+Disco Elysium --> 90.33333333333333
 Kingdom Hearts HD 2.5 Remix --> 90.0
 Jak and Daxter: The Precursor Legacy --> 90.0
 Dishonored --> 90.0
 Arcanum: of Steamworks and Magick Obscura --> 90.0
-Hollow Knight: Silksong --> 90.0
 Ghosts 'n Goblins --> 90.0
 Power Stone --> 90.0
 Fez --> 89.75
 GoldenEye 007 --> 89.66666666666667
 Demon's Souls --> 89.66666666666667
 Phoenix Wright: Ace Attorney --> 89.625
-Disco Elysium --> 89.16666666666667
+Dragon Age: Origins --> 89.5
 Gone Home --> 89.125
 Kingdom Rush --> 89.0
 Worms --> 89.0
 The Sims 2 --> 89.0
+Dark Souls --> 88.72
 Warcraft II: Tides of Darkness --> 88.66666666666667
-Dark Souls --> 88.52
 Daytona USA --> 88.5
 Castlevania --> 88.25
+Super Mario Galaxy 2 --> 88.11111111111111
 Suikoden II --> 88.0909090909091
-Super Mario Galaxy 2 --> 88.0
 R.C. Pro-Am --> 88.0
-Metroid Prime --> 87.78260869565217
 Mike Tyson's Punch-Out!! --> 87.77777777777777
+Metroid Prime --> 87.69565217391305
 Max Payne --> 87.55555555555556
 Final Fantasy Tactics --> 87.1875
 Fortnite --> 87.125
+Metal Gear Solid 3: Snake Eater --> 87.1
 Battlefield: Bad Company 2 --> 87.0
 Mass Effect: Andromeda --> 87.0
+Hollow Knight: Silksong --> 87.0
+Mass Effect Trilogy --> 87.0
 NBA 2K2 --> 87.0
 Rhythm Heaven --> 87.0
 Assassin's Creed IV Black Flag --> 86.75
-Metal Gear Solid 3: Snake Eater --> 86.6
 Star Wars: Jedi Knight - Dark Forces II --> 86.5
-Grand Theft Auto: Vice City --> 86.46666666666667
-The Legend of Zelda: Majora's Mask --> 86.42105263157895
+Grand Theft Auto: Vice City --> 86.4
+Castlevania: Symphony of the Night --> 86.36
 Assassin's Creed Valhalla --> 86.33333333333333
 Super Castlevania IV --> 86.25
-Castlevania: Symphony of the Night --> 86.2
 Sensible World of Soccer --> 86.0
 Tetris Attack --> 86.0
 Counter-Strike --> 85.84615384615384
 Arkanoid --> 85.5
-Grand Theft Auto V --> 85.3913043478261
-Elden Ring --> 85.25
+Grand Theft Auto V --> 85.43478260869566
+Elden Ring --> 85.125
 Resident Evil Village --> 85.0
 Street Fighter Anniversary Collection --> 85.0
 Battlefield 1942 --> 85.0
@@ -563,12 +562,12 @@ Final Fight --> 85.0
 The Sims --> 84.88888888888889
 The Stanley Parable --> 84.75
 Joust --> 84.75
-Metal Gear Solid --> 84.625
+Metal Gear Solid --> 84.70833333333333
 Star Wars: The Old Republic --> 84.5
 LittleBigPlanet --> 84.42857142857143
 The Elder Scrolls IV: Oblivion --> 84.3
-Mass Effect 2 --> 84.25925925925925
 Max Payne 2: The Fall of Max Payne --> 84.25
+Mass Effect 2 --> 84.22222222222223
 Baldur's Gate 3 --> 84.0
 Super Punch-Out!! --> 84.0
 Minecraft --> 83.66666666666667
@@ -577,9 +576,9 @@ Gears of War 4 --> 83.5
 Sid Meier's Civilization IV --> 83.15384615384616
 Borderlands --> 83.0
 Super Street Fighter II Turbo --> 83.0
+The Legend of Zelda: Majora's Mask --> 82.65
 SimCity 2000 --> 82.63636363636364
-Deus Ex --> 82.625
-Shadow of the Colossus --> 82.51851851851852
+Shadow of the Colossus --> 82.55555555555556
 Gran Turismo 4 --> 82.5
 Drop7 --> 82.5
 Mega Man --> 82.5
@@ -587,12 +586,12 @@ Stray --> 82.5
 Tony Hawk's Pro Skater 2 --> 82.44444444444444
 God of War III --> 82.33333333333333
 Hitman 3 --> 82.0
+Deus Ex --> 82.0
 Perfect Dark --> 82.0
 Punch-Out!! --> 82.0
 Shenmue --> 81.72727272727273
-Clair Obscur: Expedition 33 --> 81.66666666666667
 Halo Infinite --> 81.5
-Grand Theft Auto: San Andreas --> 81.3157894736842
+Grand Theft Auto: San Andreas --> 81.42105263157895
 Sonic the Hedgehog 3 --> 81.0
 Chibi-Robo! --> 81.0
 Kid Icarus --> 81.0
@@ -604,12 +603,11 @@ Valkyria Chronicles --> 80.83333333333333
 EarthBound --> 80.65217391304348
 Call of Duty: Warzone --> 80.5
 Star Wars: Battlefront II --> 80.25
-Kingdom Hearts II --> 80.0
+Kingdom Hearts II --> 80.125
 Fall Guys --> 80.0
 Forza Motorsport 4 --> 80.0
 Military Madness --> 80.0
-The Witcher 3: Wild Hunt --> 79.72
-Final Fantasy VII --> 79.67857142857143
+The Witcher 3: Wild Hunt --> 79.76
 Diablo IV --> 79.5
 Call of Duty 4: Modern Warfare --> 79.47619047619048
 Gauntlet --> 79.0
@@ -618,24 +616,26 @@ Blaster Master --> 79.0
 Gears 5 --> 79.0
 Journey --> 78.85714285714286
 Sam & Max Hit the Road --> 78.75
-Uncharted 2: Among Thieves --> 78.54545454545455
+Uncharted 2: Among Thieves --> 78.72727272727273
+BioShock --> 78.51851851851852
 Frogger --> 78.5
 Cyberpunk 2077 --> 78.5
-BioShock --> 78.48148148148148
 Age of Empires II: The Conquerors --> 78.0
 The Magical Quest Starring Mickey Mouse --> 78.0
 Persona 4 Golden --> 77.85714285714286
 Final Fantasy X --> 77.7
+Clair Obscur: Expedition 33 --> 77.66666666666667
 Shadow Hearts: Covenant --> 77.66666666666667
 Returnal --> 77.5
 Tony Hawk's Pro Skater 1+2 --> 77.5
-Day of the Tentacle --> 77.42857142857143
+Final Fantasy VII --> 77.35714285714286
 Archon --> 77.33333333333333
+The Elder Scrolls V: Skyrim --> 77.0
 <1773> Ratchet & Clank: Up Your Arsenal --> 77.0
 Far Cry: Primal --> 77.0
-The Elder Scrolls V: Skyrim --> 76.91666666666667
-Monkey Island 2: LeChuck's Revenge --> 76.625
+Day of the Tentacle --> 76.71428571428571
 Forza Horizon 5 --> 76.5
+Monkey Island 2: LeChuck's Revenge --> 76.5
 Panzer Dragoon Orta --> 76.5
 Starfield --> 76.5
 Katamari Damacy --> 76.33333333333333
@@ -648,7 +648,7 @@ Mega Man 11 --> 76.0
 Sifu --> 75.5
 Armored Core VI: Fires of Rubicon --> 75.5
 Donkey Kong --> 75.38461538461539
-Red Dead Redemption --> 75.23076923076923
+Red Dead Redemption --> 75.34615384615384
 SoulCalibur II --> 75.125
 Terraria --> 75.0
 The Secret of Monkey Island --> 75.0
@@ -676,8 +676,8 @@ Monster Hunter Rise --> 73.5
 Bugsnax --> 73.5
 Tempest --> 73.33333333333333
 Ikaruga --> 73.25
-StarCraft II: Wings of Liberty --> 73.2
-Hollow Knight --> 73.16666666666667
+StarCraft II: Wings of Liberty --> 73.1
+Hollow Knight --> 73.0
 Umineko no Naku Koro ni: Episode 1 - Legend of the Golden Witch --> 73.0
 The Wolf Among Us --> 73.0
 Peggle --> 73.0
@@ -704,15 +704,14 @@ Yume 2kki --> 71.0
 Fight Night Round 3 --> 71.0
 The Lost Vikings --> 71.0
 Fable II --> 70.875
-Star Wars: Knights of the Old Republic II - The Sith Lords --> 70.66666666666667
 TowerFall --> 70.66666666666667
 Destiny --> 70.5
 Virtua Fighter 5 --> 70.5
-Paper Mario: The Thousand-Year Door --> 70.42857142857143
+Paper Mario: The Thousand-Year Door --> 70.35714285714286
 Ratchet & Clank: Going Commando --> 70.33333333333333
 Myst --> 70.27272727272727
-System Shock 2 --> 70.21428571428571
 <7351> Doom --> 70.2
+System Shock 2 --> 70.07142857142857
 Xenogears --> 70.0
 Counter-Strike: Global Offensive --> 70.0
 Heroes of Might and Magic III: The Shadow of Death --> 70.0
@@ -733,6 +732,7 @@ Spellbreak --> 70.0
 Transformers: Devastation --> 70.0
 Chrono Cross --> 69.66666666666667
 Lemmings --> 69.33333333333333
+Star Wars: Knights of the Old Republic II - The Sith Lords --> 69.16666666666667
 Overwatch --> 69.05882352941177
 Mass Effect 3 --> 69.0
 Crash Bandicoot 2: Cortex Strikes Back --> 69.0
@@ -745,8 +745,8 @@ Bayonetta --> 68.875
 Prince of Persia --> 68.8
 Shin Megami Tensei: Strange Journey --> 68.5
 Mega Man 6 --> 68.5
-The Legend of Zelda: The Wind Waker --> 68.25
-Super Mario World 2: Yoshi's Island --> 68.0
+Super Mario World 2: Yoshi's Island --> 68.35
+The Legend of Zelda: The Wind Waker --> 68.0
 Command & Conquer: Red Alert 2 --> 68.0
 Angry Birds --> 68.0
 International Karate + --> 68.0
@@ -758,14 +758,14 @@ Final Fantasy IX --> 67.5
 Sly 2: Band of Thieves --> 67.5
 Tecmo Bowl --> 67.5
 Rome: Total War --> 67.4
+Heroes of Might and Magic III: The Restoration of Erathia --> 67.0
 Christmas Nights into Dreams --> 67.0
-Sekiro: Shadows Die Twice --> 67.0
 Gradius --> 67.0
+Sekiro: Shadows Die Twice --> 66.83333333333333
 Street Fighter Alpha 3 --> 66.8
 Tekken 3 --> 66.63636363636364
-Heroes of Might and Magic III: The Restoration of Erathia --> 66.625
 Baldur's Gate II: Shadows of Amn --> 66.53846153846153
-Bloodborne --> 66.375
+Bloodborne --> 66.29166666666667
 Red Dead Redemption & Red Dead Redemption 2 Bundle --> 66.0
 Grand Theft Auto: Double Pack --> 66.0
 StarTropics --> 66.0
@@ -800,15 +800,14 @@ Alan Wake --> 63.25
 <186207> Contra [NES] --> 63.0
 Life Force --> 63.0
 Kirby's Dream Course --> 63.0
-NieR: Automata --> 62.92307692307692
+NieR: Automata --> 62.84615384615385
 Super Mario Land 2: 6 Golden Coins --> 62.666666666666664
 Gears of War 3 --> 62.5
 Lunar: Silver Star Story Complete --> 62.5
-The Legend of Zelda: A Link Between Worlds --> 62.5
 River City Ransom --> 62.5
 Rocket League --> 62.45454545454545
 Super Mario Maker --> 62.44444444444444
-Stardew Valley --> 62.06666666666667
+Stardew Valley --> 62.13333333333333
 Crisis Core: Final Fantasy VII --> 62.0
 The Bard's Tale --> 62.0
 Company of Heroes --> 62.0
@@ -823,22 +822,23 @@ Duke Nukem 3D --> 61.5
 <3193> Need for Speed: Most Wanted --> 61.0
 Earthworm Jim 2 --> 61.0
 Race Driver: Grid --> 61.0
-Outer Wilds --> 60.8
 Wipeout --> 60.333333333333336
 God of War II --> 60.285714285714285
+The Legend of Zelda: A Link Between Worlds --> 60.25
 <222341> Silent Hill 2 [2024] --> 60.0
 <193314> Rayman 2: The Great Escape [DC] --> 60.0
 Forza Horizon 3 --> 60.0
 Teenage Mutant Ninja Turtles II: The Arcade Game --> 60.0
 FIFA 09 --> 60.0
 <12515> Pokemon Go --> 59.666666666666664
+Red Dead Redemption 2 --> 59.611111111111114
 <7351> Doom [2016] --> 59.5
-Red Dead Redemption 2 --> 59.5
 Shovel Knight --> 59.4
 Prince of Persia: The Sands of Time --> 59.35294117647059
-Fallout 2 --> 59.333333333333336
 Metal Gear Rising: Revengeance --> 59.333333333333336
+Fallout 2 --> 59.266666666666666
 Radiata Stories --> 59.0
+Outer Wilds --> 59.0
 <17034> The Works of Michael Brough [868-Hack] --> 59.0
 The Sims 3 --> 59.0
 Digimon Story: Time Stranger --> 59.0
@@ -860,23 +860,23 @@ Beyond Good & Evil --> 57.666666666666664
 <24220> Fire Emblem Fates: Birthright and Conquest and Revelation --> 57.5
 Twisted Metal III --> 57.5
 Rock Band 3 --> 57.416666666666664
-Hades --> 57.285714285714285
 Final Fantasy XIV: Endwalker --> 57.0
 FIFA Soccer 09 --> 57.0
 Psi-Ops: The Mindgate Conspiracy --> 57.0
 Klax --> 57.0
 Demon's Crest --> 57.0
 Tom Clancy's Splinter Cell --> 57.0
-The Legend of Zelda: Tears of the Kingdom --> 56.6
+The Legend of Zelda: Tears of the Kingdom --> 56.8
 X-COM: UFO Defense --> 56.53846153846154
-Dark Souls III --> 56.5
 PUBG: Battlegrounds --> 56.5
 Vampire: The Masquerade - Bloodlines --> 56.5
 Mario Kart 8 Deluxe --> 56.5
+Metal Gear Solid 4: Guns of the Patriots --> 56.46153846153846
 Thief: The Dark Project --> 56.42857142857143
+Hades --> 56.42857142857143
 Limbo --> 56.375
 Vanquish --> 56.333333333333336
-Metal Gear Solid 4: Guns of the Patriots --> 56.0
+Dark Souls III --> 56.25
 FIFA 17 --> 56.0
 Astral Chain --> 56.0
 Fester's Quest --> 56.0
@@ -893,7 +893,7 @@ Super Mario RPG: Legend of the Seven Stars --> 54.8125
 Stephen's Sausage Roll --> 54.5
 Qix --> 54.5
 The Legend of Zelda: Ocarina of Time 3D --> 54.4
-The Legend of Zelda: Breath of the Wild --> 54.28125
+The Legend of Zelda: Breath of the Wild --> 54.25
 Auto Chess --> 54.0
 LittleBigPlanet 3 --> 54.0
 Championship Manager 4 --> 54.0
@@ -914,9 +914,9 @@ Phoenix Wright: Ace Attorney - Trials and Tribulations --> 53.0
 The Walking Dead: Season One - Episode 5: No Time Left --> 53.0
 <180278> Tetris [Tengen] --> 53.0
 Zombies Ate My Neighbors --> 53.0
+Uncharted 4: A Thief's End --> 52.583333333333336
 Inside --> 52.411764705882355
 Missile Command --> 52.333333333333336
-Uncharted 4: A Thief's End --> 52.25
 Sea of Thieves --> 52.0
 Trials Fusion --> 52.0
 Paranormasight: The Seven Mysteries of Honjo --> 52.0
@@ -927,8 +927,8 @@ God Hand --> 51.8
 FTL: Faster Than Light --> 51.666666666666664
 Hi-Fi Rush --> 51.666666666666664
 Shadow of the Tomb Raider --> 51.333333333333336
-Horizon Zero Dawn --> 51.25
 Sega Rally Championship --> 51.2
+Horizon Zero Dawn --> 51.0
 Final Fantasy III --> 51.0
 Jak 3 --> 51.0
 Mount & Blade: Warband --> 51.0
@@ -955,7 +955,6 @@ Call of Duty: Black Ops II --> 50.0
 Super Ghouls 'n Ghosts --> 50.0
 PowerWash Simulator --> 50.0
 Mega Man 2 --> 49.75
-The Last of Us Part II --> 49.75
 Persona 5 Royal --> 49.75
 Axiom Verge --> 49.666666666666664
 Daze Before Christmas --> 49.5
@@ -979,16 +978,16 @@ R-Type --> 48.6
 Xenoblade Chronicles --> 48.57142857142857
 World of Illusion Starring Mickey Mouse and Donald Duck --> 48.5
 Saints Row IV: How the Saints Save Christmas --> 48.5
-Steins;Gate --> 48.5
-Ghost of Tsushima --> 48.2
 Shining Force II --> 48.0
 Xenoblade Chronicles 2 --> 48.0
 Pole Position --> 48.0
+Ghost of Tsushima --> 48.0
 Disney's DuckTales --> 48.0
 Breath of Fire II --> 48.0
 Crash Bandicoot --> 47.8
 TimeSplitters 2 --> 47.8
 <19686> Resident Evil 2 [2019] --> 47.75
+The Last of Us Part II --> 47.5
 Viscera Cleanup Detail: Santa's Rampage --> 47.5
 Phantasy Star II --> 47.5
 <1289> Ratchet & Clank --> 47.333333333333336
@@ -1010,6 +1009,7 @@ Monster Hunter: World --> 46.0
 Metal Gear Solid: Peace Walker --> 46.0
 StarCraft: Brood War --> 46.0
 Tactics Ogre: Let Us Cling Together --> 46.0
+Steins;Gate --> 46.0
 Galaxian --> 46.0
 Double Dragon III: The Sacred Stones --> 46.0
 Elden Ring: Shadow of the Erdtree --> 46.0
@@ -1039,11 +1039,11 @@ Rad Racer --> 44.0
 Destiny 2 --> 43.8
 Elite: Dangerous --> 43.75
 Parasite Eve --> 43.75
-<19560> God of War [2018] --> 43.523809523809526
 Winning Eleven: Pro Evolution Soccer 2007 --> 43.5
 Metro 2033 --> 43.5
 The Orange Box --> 43.5
 ActRaiser --> 43.5
+<19560> God of War [2018] --> 43.23809523809524
 Subsurface Circular --> 43.0
 The Witcher 3: Wild Hunt - Hearts of Stone --> 43.0
 Madden NFL 2002 --> 43.0
@@ -1150,15 +1150,15 @@ Ironsword: Wizards & Warriors II --> 37.0
 Wario Land 4 --> 37.0
 International Superstar Soccer --> 37.0
 <1164> Tomb Raider [2013] --> 36.666666666666664
+Return of the Obra Dinn --> 36.5
 Street Fighter V --> 36.5
 Grand Theft Auto Online --> 36.0
 Darwinia --> 36.0
 <5972> Ninja Gaiden [2004] --> 36.0
 Stinger --> 36.0
 R-Type III: The Third Lightning --> 36.0
-Return of the Obra Dinn --> 35.833333333333336
-Celeste --> 35.666666666666664
 <11157> Hitman [2016] --> 35.6
+Celeste --> 35.5
 New Super Mario Bros. U --> 35.333333333333336
 Super Meat Boy --> 35.25
 Kirby Air Riders --> 35.0
@@ -1551,7 +1551,6 @@ Tetris DX --> 15.5
 Kentucky Route Zero: Act III --> 15.5
 Mario Party 2 --> 15.5
 DmC: Devil May Cry --> 15.5
-It Takes Two --> 15.0
 <152752> Donkey Kong Country [GBC] --> 15.0
 Cave Story 3D --> 15.0
 Gran Turismo 2 --> 15.0
@@ -1599,6 +1598,7 @@ Sparkster --> 14.0
 Panel de Pon --> 14.0
 Saints Row IV --> 14.0
 Blood --> 14.0
+It Takes Two --> 13.75
 Golden Sun --> 13.75
 XCOM 2 --> 13.5
 Tales of Vesperia --> 13.5
@@ -1733,9 +1733,9 @@ Kirby and the Forgotten Land --> 11.0
 Forza Horizon --> 11.0
 Blackthorne --> 11.0
 <3035> The Stanley Parable [2013] --> 11.0
-Ori and the Blind Forest --> 10.75
 Valiant Hearts: The Great War --> 10.666666666666666
 <2323> Pokemon Mystery Dungeon: Explorers of Sky --> 10.666666666666666
+Ori and the Blind Forest --> 10.625
 Uncharted 3: Drake's Deception --> 10.25
 Titanfall --> 10.25
 Never Alone --> 10.25
@@ -1836,8 +1836,8 @@ Forza Motorsport --> 8.5
 The Evil Within --> 8.5
 Space Channel 5 --> 8.5
 Kentucky Route Zero: Act IV --> 8.5
+Marvel's Spider-Man --> 8.454545454545455
 Divinity: Original Sin --> 8.25
-Marvel's Spider-Man --> 8.181818181818182
 Solar Ash --> 8.0
 Total War: Three Kingdoms --> 8.0
 Ape Escape: On the Loose --> 8.0
@@ -2083,6 +2083,7 @@ Treasure Island Dizzy --> 4.0
 Driver --> 4.0
 Deus Ex: Human Revolution - Director's Cut --> 4.0
 World Soccer Winning Eleven 7 International --> 4.0
+Mafia --> 4.0
 Trauma Center: Under the Knife --> 4.0
 Puyo Puyo Tetris --> 4.0
 Sonic Rush --> 4.0
@@ -2098,7 +2099,6 @@ Fantasy Life --> 4.0
 <117186> Sapiens 2022 --> 4.0
 46 Okunen Monogatari: The Shinka Ron --> 4.0
 Pac-Man: Special Color Edition --> 4.0
-Mafia --> 4.0
 Fight Night Champion --> 4.0
 NBA 2K11 --> 4.0
 Horizon Call of the Mountain --> 4.0
@@ -2388,8 +2388,6 @@ Wonderful Everyday: Down the Rabbit-Hole --> 1.0
 Galactic Civilizations II: Dark Avatar --> 1.0
 Typeshift --> 1.0
 Tacoma --> 1.0
-Black Mesa --> 1.0
-The Last of Us Part I --> 1.0
 Chameleon Run --> 1.0
 Tower of Guns --> 1.0
 Everybody's Golf --> 1.0
@@ -2397,5 +2395,7 @@ Myst IV: Revelation --> 1.0
 Outcast --> 1.0
 America's Army --> 1.0
 Spyro 2: Ripto's Rage --> 1.0
+Black Mesa --> 1.0
+The Last of Us Part I --> 1.0
 Tetris Effect: Connected --> 1.0
 The Witcher 3: Wild Hunt - Complete Edition --> 1.0

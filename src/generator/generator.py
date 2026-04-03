@@ -259,165 +259,48 @@ def run_generator():
             print("Please enter Y or N.")
 
     # Step 6: Save to database
-    #Doing basic insert to mongo at this point, and then we can add other values later on? After IGDB pulling?
-    #Have the user be able to set a flag if they want use_mongo at this point, so they don't have to deal with trying to connect?
-
-    # See if we want to connect to Mongo cluster right now, so we can shut down that aspect if we don't want to deal with it
     db = None
     while True:
-        #local_connect = True
         print("Would you like to connect to Mongo at this time or just local SQLite?")
         print("1. Connect to both")
         print("2. Only connect to SQLite")
         choice = input("> ").strip()
-        if (choice == "1"):
+        if choice == "1":
             while True:
                 print("Would you like to connect to the Atlas web instance or just local MongoDB?")
                 print("1. Connect to Atlas")
                 print("2. Connect to local MongoDB")
                 local_choice = input("> ").strip()
-                if(local_choice == "1"):
+                if local_choice == "1":
                     local_connect = False
                     break
-                if (local_choice == "2"):
+                elif local_choice == "2":
                     local_connect = True
                     break
                 else:
                     print("Invalid choice. Please enter 1 or 2.")
-            print(local_connect)
-            db = DatabaseInterface(use_mongo=True, use_sql=True, local_connect=local_connect)
-            # First testing the mongo connection and notifying user
-            # Try adding try, catch, except logic to mongo connection attempts?
             if not local_connect:
                 input("About to attempt connection to Mongo, press ENTER when you are ready")
-                mongo_connect()
+            db = DatabaseInterface(use_mongo=True, use_sql=True, local_connect=local_connect)
             break
-        elif (choice == "2"):
+        elif choice == "2":
             db = DatabaseInterface(use_mongo=False, use_sql=True)
             break
         else:
             print("Invalid choice. Please enter 1 or 2.")
-    print(full_answer)
     for i, game in enumerate(game_DB.values(), start=1):
-        #enumerate or whatever so I can keep track of how many insertions are being done so progress is more clear on CLI
-        #Use the pre-ID option in other cases? But here we should already have it?
-        #Have the option to save to database before we bother to grab IGDB data? And then update with what we have gotten?
-        #Give option to set limit on how many records to put out to databases?
-        if(full_answer):
+        if full_answer:
             db.insert_game_full(game)
         else:
             db.insert_game(game)
-        if(db.sql):
+        if db.sql:
             print(f"Inserting game {i} into SQLite")
-        if(db.mongo):
+        if db.mongo:
             print(f"Inserting game {i} into MongoDB")
     db.close() #close later on? like when program concludes? or when user sets they want to close connections?
     #or just set database manager whenever we want to connect to do stuff again and don't leave open?
 
     print(f"Successfully processed {len(game_DB)} games.")
-
-    # THIS IS THE OLD SETUP FOR THE MONGO DATABASE PROCESS, SEE ABOUT PULLING
-    # WHAT I NEED AND REPLACING WHAT I DON'T
-
-    input("FROM THIS PART ONWARD CLEAR MONGO BITS, ONLY ATTEMPT MONGO CONNECTION IF WE INTEND SO")
-
-    #input("This is a test, program going to break for now. Goodbye!")
-    #Do I need to close files at this point for writes? or do i even have anything open?
-    #use with open in some cases to avoid needing to close?
-    #exit()
-
-    # Create index on title so can do partial title searching, don't mark as unique because some titles won't be
-    """mon_col.create_index('Title')"""
-
-    # INSERT ALL GAMES INTO DATABASE
-    # Clear database to begin with?
-    while True:
-        print("Would you like to clear the database to start? Y or N")
-        clear_option = input()
-        if (clear_option == "Y" or clear_option == "y"):
-            print("Ok, clearing the game and list collections")
-            mon_col.drop()
-            list_col.drop()
-            break
-        elif (clear_option == "N" or clear_option == "n"):
-            print("Ok, leaving it as is")
-            break
-        else:
-            print("I'm sorry, I don't understand. Please enter valid input")
-            continue
-    mongo_limit = len(game_DB.items())
-    while True:
-        print("Would you like to set a limit on how many records to put into Mongo?")
-        print("1. Same limit as for IGDB pulling")
-        print("2. New set limit")
-        print("3. No limit")
-        mongo_option = input()
-        if (mongo_option == '1'):
-            mongo_limit = limit_number
-            break
-        elif (mongo_option == '2'):
-            print("Set your limit here")
-            # add input verification
-            mongo_limit = int(input())
-            break
-        elif (mongo_option == '3'):
-            break
-        else:
-            print("I'm sorry, I don't understand. Please enter valid input")
-            continue
-
-    print("INSERTING INTO MONGODB!")
-    for game, details in itertools.islice(game_DB.items(), 0, mongo_limit):
-        print(details.__class__)
-        # If they're all from scratch, details is a gameobject, otherwise it's a dict
-        if (isinstance(details, GameObject)):
-            print("This one's a game object!")
-            details = json.loads(json.dumps(details.__dict__))
-        # insertion = mon_col.insert_one(details)
-        # insertion = mon_col.insert_one(game_DB[game])
-        export_dict = {}
-        if (game.startswith('<')):
-            # If I successfully improve how titles get put out to mongo cluster, make the IGDB ID the key I use there for ID
-            print(game)
-            pattern_match = r'[0-9]+'
-            substring = re.findall(pattern_match, game)
-            title_ID = substring[0]
-            removal = '<' + title_ID + '> '
-            modified_title = game.strip(removal)
-            export_dict["Title"] = modified_title
-        else:
-            export_dict["Title"] = game
-        export_dict["IGDB ID"] = details['igdb_ID']
-        export_dict["Ranked Score"] = details['ranked_score']
-        export_dict["Inclusion Score"] = details['list_count']
-        average_score = details['ranked_score'] / details['total_count']
-        export_dict["Average Score"] = average_score
-        export_dict["List of References"] = details['lists_referencing']
-        export_dict["Completed"] = details['completed']
-        export_dict["List of Platforms"] = details['list_platforms']
-        export_dict["Release Date"] = details['release_date']
-        export_dict["Player Counts"] = details['player_counts']
-        export_dict["Developers"] = details['list_developers']
-        export_dict["Publishers"] = details['list_publishers']
-        export_dict["Companies"] = details['list_companies']
-        export_dict["Genres"] = details['genres']
-        export_dict["Themes"] = details['themes']
-        export_dict["Total Count"] = details['total_count']
-        # export_dict = dict(game)
-        # ^need to expand and clarify more?
-        # export_dict = dict('Title' = game, 'IGDB ID' = details.igdb_ID, 'Ranked Score' = details.ranked_score)
-        """insertion = mon_col.insert_one(export_dict)"""
-
-    # insertion = mon_col.insert_many(export)
-    print("TIME TO INSERT THE LISTS INTO MONGODB!")
-    """
-    for game_list in games_lists:
-        # could keep track of what type of list it is, other variables?
-        list_dict = dict(Title=game_list)
-        print(list_dict)
-        list_insert = list_col.insert_one(list_dict)
-         # list_dict["Title"].append(list)
-    """
 
     # after printed out everything to excel, then make three printed sorted lists?
      # each time, sort excel a certain way, then print out excel factors to list?
@@ -446,87 +329,6 @@ def run_generator():
     # Generate sorted reports
     generate_sorted_reports(export_list)
 
-    #OLD EXPORT PROCESS
-
-    print()
-    print("Time to grab the games from the database!")
-
-    # Generate sorted reports
-    generate_sorted_reports(export_list)
-
-    # Writing to excel using new approach from MongoDB Atlas
-    bold_style = xlwt.easyxf('font: bold 1;')
-    crossed_style = xlwt.easyxf('font: struck_out 1;')
-    sheet1.write(0, 0, 'TITLE', bold_style)
-    sheet1.write(0, 1, 'IGDB ID', bold_style)
-    sheet1.write(0, 2, 'RANKED SCORE', bold_style)
-    sheet1.write(0, 3, 'INCLUSION SCORE', bold_style)
-    sheet1.write(0, 4, 'AVERAGE SCORE', bold_style)
-    sheet1.write(0, 5, 'LISTS INCLUDED ON', bold_style)
-    sheet1.write(0, 6, 'COMPLETED', bold_style)
-    sheet1.write(0, 7, 'MAIN PLATFORM', bold_style)
-    sheet1.write(0, 8, 'LIST OF PLATFORMS', bold_style)
-    sheet1.write(0, 9, 'RELEASE DATE', bold_style)
-    sheet1.write(0, 10, 'PLAYER COUNTS', bold_style)
-    sheet1.write(0, 11, 'DEVELOPERS', bold_style)
-    sheet1.write(0, 12, 'PUBLISHERS', bold_style)
-    sheet1.write(0, 13, 'COMPANIES', bold_style)
-    sheet1.write(0, 14, 'GENRES', bold_style)
-    sheet1.write(0, 15, 'THEMES', bold_style)
-    excel_count = 1
-
-    """for game in games_pulled:
-        ranked_score = game['Ranked Score']
-        inclusion_score = game['Inclusion Score']
-        average_score = ranked_score / game['Total Count']
-        completion_status = game['Completed']
-        if (completion_status == True):
-            sheet1.write(excel_count, 0, game['Title'], crossed_style)
-        else:
-            sheet1.write(excel_count, 0, game['Title'])
-        if (igdb_answer == 'Y' or igdb_answer == 'Yes'):
-            # Needed while we are using timespeedup
-            if (game['IGDB ID'] != None):
-                sheet1.write(excel_count, 1, game['IGDB ID'])
-        sheet1.write(excel_count, 2, ranked_score)
-        sheet1.write(excel_count, 3, inclusion_score)
-        sheet1.write(excel_count, 4, average_score)
-        output_lists = ', '.join(game['List of References'])
-        sheet1.write(excel_count, 5, output_lists)
-        sheet1.write(excel_count, 6, completion_status)
-        sheet1.write(excel_count, 7, game['Main Platform'])
-        #Create a loop to deal with printing the platforms in a comma approach
-        platforms_string = ', '.join(game['List of Platforms'])
-        sheet1.write(excel_count, 8, platforms_string)
-        #sheet1.write(excel_count, 7, game['Release Date'].strip())
-        #^Try to strip escape chars out earlier or the items themselves
-        sheet1.write(excel_count, 9, game['Release Date'])
-        players_string = ', '.join(game['Player Counts'])
-        sheet1.write(excel_count, 10, players_string)
-        devs_string = ', '.join(game['Developers'])
-        sheet1.write(excel_count, 11, devs_string)
-        pubs_string = ', '.join(game['Publishers'])
-        sheet1.write(excel_count, 12, pubs_string)
-        comps_string = ', '.join(game['Companies'])
-        sheet1.write(excel_count, 13, comps_string)
-        genres_string = ', '.join(game['Genres'])
-        sheet1.write(excel_count, 14, genres_string)
-        themes_string = ', '.join(game['Themes'])
-        sheet1.write(excel_count, 15, themes_string)
-        excel_count += 1"""
-    wb.save(check_for_src('reports/Sorted Database.xls'))
-
-    # Close connection to open up socket (seemed to cause problems when running generator then trying printreports?)
-    """mon_client.close()"""
-    # Close cursors too?
-    """games_pulled.close()
-    games_pulled_ranked.close()
-    games_pulled_average.close()
-    games_pulled_inclusion.close()"""
-
-    #COMPLETION OF NEW PROCESS
-
-    input(print(f"Successfully processed and stored {len(export_list)} games."))
 
 def main():
     run_generator()
