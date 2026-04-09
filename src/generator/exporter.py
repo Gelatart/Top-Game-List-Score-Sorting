@@ -18,6 +18,8 @@ and then json.dump export_DB
 """
 
 def export_to_excel(games: List[GameObject], output_path: str):
+    #Start with some built-in sorting, do some formatting like crossing out for completed games?
+
     wb = Workbook()
     ws = wb.active
     ws.title = "Game List"

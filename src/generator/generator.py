@@ -127,14 +127,11 @@ def run_generator():
 
     "game_DB is a dict of string titles and game object values"
     game_DB = {}
-    "modified_DB is meant to hold modified entries that originally had <> names, and put back into game_DB later"
-    modified_DB = {}
 
     "Start collecting the lists used in a list, put to a new collection in MongoDB"
     #Find way to track what type of list it is?
     games_lists = []
 
-    #file_path = Path("game_lists") / "Completions.txt"
     completed_titles = set(read_attributed_games(Path("game_lists") / "Completions.txt"))
 
     ranked_file_count = 0
@@ -142,13 +139,6 @@ def run_generator():
     former_file_count = 0
 
     client = IGDB_Client()
-    db = None
-
-    # Workbook is created
-    wb = Workbook()
-
-    # add_sheet is used to create sheet.
-    sheet1 = wb.add_sheet('Sheet 1')
 
     # Step 1: Load and process ranked lists
     ranked_file_count = load_list(get_files_in_dir("game_lists/ranked"), ranked_file_count, game_DB, games_lists, ListType.RANKED)
@@ -186,15 +176,12 @@ def run_generator():
         if title in game_DB:
             game_DB[title].seasonal_winter_christmas = True
 
-    #JSON LOADING AND PULLING BEFORE IGDB CHECKING
-
-    import_DB = {}
-
-    # eventually try for functionality where we only update the games that have updated scores? or new games?
-
     # Step 5: Enrich with IGDB Data
     # IGDB_Client handles <ID> prefix, caching, unicode normalization, and all fields
     # (platforms, release_dates, genres, themes, game_modes, involved_companies)
+
+    #solution for storing before we do IGDB checking? JSON?
+    # eventually try for functionality where we only update the games that have updated scores? or new games?
 
     #pulling wrong data on some fields, might need to further develop?
     #Figure out how to derive a main_platform, perhaps by going through all of the release dates of all the platforms, and having some sort of way to break ties?
@@ -302,13 +289,8 @@ def run_generator():
 
     print(f"Successfully processed {len(game_DB)} games.")
 
-    # after printed out everything to excel, then make three printed sorted lists?
-     # each time, sort excel a certain way, then print out excel factors to list?
-
-    # further sort by keys after sorted by values?
-
     # Files to mark additional personal statuses of games so far:
-    # Completed
+        # Completed
 
     # Prints total counts of lists used for each category
     print(f"Ranked Lists: {ranked_file_count}")
@@ -398,4 +380,9 @@ OLD COMMENTS FOR FURTHER REVIEW (FROM OLD IGDB PROCESS):
             # Pokémon Red Version seems to break the api request, probably the accented e
             # Doesn't get found with the title "Pokemon Red Version" either though
             # exit()
+
+#GAME ENUMERATE LOOP
+#Use the pre-ID option in other cases? But here we should already have it?
+        #Have the option to save to database before we bother to grab IGDB data? And then update with what we have gotten?
+        #Give option to set limit on how many records to put out to databases?
 """
