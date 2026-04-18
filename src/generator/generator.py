@@ -1,17 +1,7 @@
-# import required module
-import json
-import pymongo
-from pymongo.mongo_client import MongoClient
-from pymongo.server_api import ServerApi
 import requests
 import time
 from typing import List
-# Writing to an excel sheet using Python
-import xlwt
-from xlwt import Workbook
 from pathlib import Path
-
-import itertools
 
 from .config import check_for_src, get_env_var
 from .database_interface import DatabaseInterface
@@ -20,23 +10,6 @@ from .file_loader import ListType, get_files_in_dir, read_game_list, read_attrib
 from .game_object import GameObject
 from .igdb_client import IGDB_Client
 
-#Seems like new files I add might not be integrating yet into the general process? Make sure they do
-
-def mongo_connect():
-    #Replace the part where this originally happened later in the code with this function?
-    mon_connect = get_env_var('MONGO_URI')
-    mon_client = pymongo.MongoClient(mon_connect, server_api=ServerApi('1'))
-    monDB = mon_client["GameSorting"]
-    #^Have this part happen before the function actually goes?
-    connect_message = ""
-    try:
-        mon_client.admin.command('ping')
-        connect_message = "Pinged your deployment. You successfully connected to MongoDB!"
-        print(connect_message)
-    except Exception as e:
-        print(e)
-        connect_message = e
-    return connect_message
 
 def load_list(files, file_count, game_DB, games_lists, type: ListType):
     """

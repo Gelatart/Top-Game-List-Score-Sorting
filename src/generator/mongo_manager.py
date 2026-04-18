@@ -14,6 +14,19 @@ class MongoManager:
         # list_col = monDB["lists"]
         self.list_collection = self.db[list_name]
 
+    #TRANSFERRED FROM GENERATOR, IS THIS USEFUL?
+    def mongo_connect(self):
+        #Replaced section made redundant by MongoManager's init function
+        connect_message = ""
+        try:
+            mon_client.admin.command('ping')
+            connect_message = "Pinged your deployment. You successfully connected to MongoDB!"
+            print(connect_message)
+        except Exception as e:
+            print(e)
+            connect_message = e
+        return connect_message
+
     def insert_or_update_game(self, game: GameObject):
         game_dict = game.to_dict()
         self.collection.update_one(
